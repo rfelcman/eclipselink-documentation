@@ -39,16 +39,16 @@
         <maven.site.skip>true</maven.site.skip>
         <asciidoctorj.version>2.5.6</asciidoctorj.version>
         <asciidoctorj.pdf.version>2.3.0</asciidoctorj.pdf.version>
+        <!--JRuby this version works with asciidoctorj-pdf-->
         <jruby.version>9.2.21.0</jruby.version>
-<!--        <jruby.version>9.3.8.0</jruby.version>-->
         <status>DRAFT</status>
     </properties>
 
     <!--TODO to be specified-->
     <scm>
-        <connection>scm:git:git@github.com:eclipse-ee4j/jakarta-xml-binding.git</connection>
-        <developerConnection>scm:git:git@github.com:eclipse-ee4j/jakarta-xml-binding.git</developerConnection>
-        <url>https://github.com/eclipse-ee4j/jakarta-xml-binding</url>
+        <connection>scm:git:git@github.com:eclipse-ee4j/eclipselink.git</connection>
+        <developerConnection>scm:git:git@github.com:eclipse-ee4j/eclipselink.git</developerConnection>
+        <url>https://github.com/eclipse-ee4j/eclipselink</url>
         <tag>HEAD</tag>
     </scm>
 

@@ -1,22 +1,9 @@
-Jakarta XML Binding Specification
+EclipseLink Documentation - JPA Extensions
 =================================
 
-This project generates the Jakarta XML Binding Specification.
-
-Building
---------
-
-Prerequisites:
-
-* JDK8+
-* Maven 3.0.3+
-
-Run the full build:
-
-`mvn install`
 
 Locate the html files:
-- target/generated-docs/XMLBinding.html
+- target/generated-docs/<!--TODO-->
 
 Locate the PDF files:
-- target/generated-docs/XMLBinding.pdf
+- target/generated-docs/<!--TODO-->

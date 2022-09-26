@@ -34,7 +34,8 @@
 
     <distributionManagement>
         <site>
-            <url>scm:git:git@github.com:eclipse-ee4j/jakarta-xml-binding.git</url>
+            <!--TODO to be changed-->
+            <url>scm:git:git@github.com:eclipse-ee4j/eclipselink.git</url>
         </site>
     </distributionManagement>
 

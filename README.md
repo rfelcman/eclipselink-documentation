@@ -1,22 +1,16 @@
-Jakarta XML Binding Specification
+EclipseLink Documentation
 =================================
 
-This project generates the Jakarta XML Binding Specification.
+This project generates the EclipseLink documentation.
 
 Building
 --------
 
 Prerequisites:
 
-* JDK8+
-* Maven 3.0.3+
+* JDK11+
+* Maven 3.6.3+
 
 Run the full build:
 
 `mvn install`
-
-Locate the html files:
-- target/generated-docs/XMLBinding.html
-
-Locate the PDF files:
-- target/generated-docs/XMLBinding.pdf
