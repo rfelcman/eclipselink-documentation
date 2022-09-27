@@ -37,6 +37,7 @@
     <properties>
         <site.output.dir>${project.build.directory}/staging</site.output.dir>
         <maven.site.skip>true</maven.site.skip>
+        <version.plugin.helidon-build-tools>3.0.1</version.plugin.helidon-build-tools>
         <asciidoctorj.version>2.5.6</asciidoctorj.version>
         <asciidoctorj.pdf.version>2.3.0</asciidoctorj.pdf.version>
         <!--JRuby this version works with asciidoctorj-pdf-->
@@ -53,7 +54,7 @@
     </scm>
 
     <modules>
-        <module>jpa/extensions</module>
+        <module>docs/jpa/extensions</module>
     </modules>
 
     <build>
@@ -103,6 +104,16 @@
                     <artifactId>maven-assembly-plugin</artifactId>
                     <version>3.1.1</version>
                 </plugin>
+                <plugin>
+                    <groupId>io.helidon.build-tools</groupId>
+                    <artifactId>sitegen-maven-plugin</artifactId>
+                    <version>${version.plugin.helidon-build-tools}</version>
+                    <inherited>false</inherited>
+                    <configuration>
+                        <siteSourceDirectory>docs</siteSourceDirectory>
+                        <siteConfigFile>docs/sitegen.yaml</siteConfigFile>
+                    </configuration>
+                </plugin>
             </plugins>
         </pluginManagement>
 
@@ -128,6 +139,30 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <inherited>false</inherited>
+                <configuration>
+                    <skip>false</skip>
+                    <siteDirectory>docs</siteDirectory>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>io.helidon.build-tools</groupId>
+                        <artifactId>sitegen-maven-plugin</artifactId>
+                        <version>${version.plugin.helidon-build-tools}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+            <plugin>
+                <groupId>io.helidon.build-tools</groupId>
+                <artifactId>sitegen-maven-plugin</artifactId>
+                <configuration>
+                    <siteSourceDirectory>docs</siteSourceDirectory>
+                    <siteConfigFile>docs/sitegen.yaml</siteConfigFile>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
