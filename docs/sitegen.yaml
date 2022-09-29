@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2021, 2022 Oracle and/or its affiliates. All rights reserved.
+# Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 #
 # This program and the accompanying materials are made available under the
 # terms of the Eclipse Public License v. 2.0 which is available at
@@ -13,8 +13,8 @@
 options:
   strict-xref: false
   fail-on: "WARN"
-  strict-templates: false
-  strict-images: false
+  strict-templates: true
+  strict-images: true
 engine:
   asciidoctor:
     images-dir: "./images"
@@ -27,7 +27,7 @@ assets:
       - "images/**/*"
 header:
   favicon:
-    path: "images/favicon.png"
+    path: "images/ellogo.png"
     type: "png"
   stylesheets:
     - path: "css/styles.css"
@@ -38,22 +38,25 @@ pages:
       - "includes/**"
 backend:
   name: "vuetify"
-  homePage: "home.adoc"
+  homePage: "introduction.adoc"
   releases:
     - "${project.version}"
   navigation:
     type: "ROOT"
     title: "EclipseLink"
     items:
+      - type: "PAGE"
+        title: "Introduction"
+        source: "introduction.adoc"
       - type: "GROUPS"
         items:
           - type: "GROUP"
             title: "JPA Extensions"
-            dir: "se"
-#            items:
-#              - type: "PAGE"
-#                title: "Introduction"
-#                source: "introduction.adoc"
-#                glyph:
-#                  type: "icon"
-#                  value: "lightbulb"
+            dir: "jpa/extensions"
+            items:
+              - type: "PAGE"
+                title: "Introduction"
+                source: "introduction.adoc"
+              - type: "PAGE"
+                title: "Annotation Extensions Reference"
+                source: "annotations_ref.adoc"

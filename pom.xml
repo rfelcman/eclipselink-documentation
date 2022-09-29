@@ -54,7 +54,7 @@
     </scm>
 
     <modules>
-        <module>docs/jpa/extensions</module>
+        <!--        <module>docs/jpa/extensions</module>-->
     </modules>
 
     <build>
@@ -141,38 +141,110 @@
                 </executions>
             </plugin>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-site-plugin</artifactId>
-                <inherited>false</inherited>
-                <configuration>
-                    <skip>false</skip>
-                    <siteDirectory>docs</siteDirectory>
-                </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>io.helidon.build-tools</groupId>
-                        <artifactId>sitegen-maven-plugin</artifactId>
-                        <version>${version.plugin.helidon-build-tools}</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
-            <plugin>
                 <groupId>io.helidon.build-tools</groupId>
                 <artifactId>sitegen-maven-plugin</artifactId>
-                <configuration>
-                    <siteSourceDirectory>docs</siteSourceDirectory>
-                    <siteConfigFile>docs/sitegen.yaml</siteConfigFile>
-                </configuration>
+                <executions>
+                    <execution>
+                        <id>generate-pages-helidon</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <siteSourceDirectory>docs</siteSourceDirectory>
+                            <siteConfigFile>docs/sitegen.yaml</siteConfigFile>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
+            <!--
+                        <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-release-plugin</artifactId>
+                            <version>2.5.2</version>
+                            <configuration>
+                                <mavenExecutorId>forked-path</mavenExecutorId>
+                                <useReleaseProfile>false</useReleaseProfile>
+                                <arguments>${release.arguments}</arguments>
+                            </configuration>
+                        </plugin>
+
+
+                        <plugin>
+                            <groupId>org.asciidoctor</groupId>
+                            <artifactId>asciidoctor-maven-plugin</artifactId>
+                            <executions>
+                                <execution>
+                                    <id>asciidoc-to-html</id>
+                                    <phase>generate-resources</phase>
+                                    <goals>
+                                        <goal>process-asciidoc</goal>
+                                    </goals>
+                                    <configuration>
+                                        <backend>xhtml</backend>
+                                        <attributes>
+                                            <doctype>book</doctype>
+                                            <status>${status}</status>
+                                            <data-uri />
+                                            <toc>left</toc>
+                                            <icons>font</icons>
+                                            <sectanchors>true</sectanchors>
+                                            <idprefix />
+                                            <idseparator>-</idseparator>
+                                            <docinfo1>true</docinfo1>
+                                        </attributes>
+                                    </configuration>
+                                </execution>
+                                <execution>
+                                    <id>asciidoc-to-pdf</id>
+                                    <phase>generate-resources</phase>
+                                    <goals>
+                                        <goal>process-asciidoc</goal>
+                                    </goals>
+                                    <configuration>
+                                        <backend>pdf</backend>
+                                        <attributes>
+                                            <pdf-stylesdir>${project.basedir}/src/theme</pdf-stylesdir>
+                                            <pdf-style>jakartaee</pdf-style>
+                                            <doctype>book</doctype>
+                                            <status>${status}</status>
+                                            <data-uri />
+                                            <icons>font</icons>
+                                            <pagenums />
+                                            <toc />
+                                            <icons>font</icons>
+                                            <sectanchors>true</sectanchors>
+                                            <idprefix />
+                                            <idseparator>-</idseparator>
+                                            <docinfo1>true</docinfo1>
+                                            <embedAssets>true</embedAssets>
+                                        </attributes>
+                                    </configuration>
+                                </execution>
+                            </executions>
+                        </plugin>
+                        -->
+            <!--
+                This is the rule that builds the zip file for download.
+            -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-release-plugin</artifactId>
-                <version>2.5.2</version>
-                <configuration>
-                    <mavenExecutorId>forked-path</mavenExecutorId>
-                    <useReleaseProfile>false</useReleaseProfile>
-                    <arguments>${release.arguments}</arguments>
-                </configuration>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <inherited>false</inherited>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <appendAssemblyId>false</appendAssemblyId>
+                            <descriptors>
+                                <descriptor>assembly.xml</descriptor>
+                            </descriptors>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

@@ -1,3 +1,0 @@
-= EclipseLink
-
-== What is EclipseLink
