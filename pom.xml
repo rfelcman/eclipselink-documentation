@@ -53,10 +53,6 @@
         <tag>HEAD</tag>
     </scm>
 
-    <modules>
-        <!--        <module>docs/jpa/extensions</module>-->
-    </modules>
-
     <build>
         <pluginManagement>
             <plugins>
@@ -87,33 +83,6 @@
                         </dependency>
                     </dependencies>
                 </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-release-plugin</artifactId>
-                    <version>2.5.2</version>
-                    <dependencies>
-                        <dependency>
-                            <groupId>org.apache.maven.scm</groupId>
-                            <artifactId>maven-scm-provider-gitexe</artifactId>
-                            <version>1.9.4</version>
-                        </dependency>
-                    </dependencies>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-assembly-plugin</artifactId>
-                    <version>3.1.1</version>
-                </plugin>
-                <plugin>
-                    <groupId>io.helidon.build-tools</groupId>
-                    <artifactId>sitegen-maven-plugin</artifactId>
-                    <version>${version.plugin.helidon-build-tools}</version>
-                    <inherited>false</inherited>
-                    <configuration>
-                        <siteSourceDirectory>docs</siteSourceDirectory>
-                        <siteConfigFile>docs/sitegen.yaml</siteConfigFile>
-                    </configuration>
-                </plugin>
             </plugins>
         </pluginManagement>
 
@@ -140,90 +109,58 @@
                     </execution>
                 </executions>
             </plugin>
+
             <plugin>
-                <groupId>io.helidon.build-tools</groupId>
-                <artifactId>sitegen-maven-plugin</artifactId>
+                <groupId>org.asciidoctor</groupId>
+                <artifactId>asciidoctor-maven-plugin</artifactId>
+                <configuration>
+                    <attributes>
+                        <doctype>book</doctype>
+                        <status>${status}</status>
+                        <data-uri/>
+                        <icons>font</icons>
+                        <sectanchors>true</sectanchors>
+                        <idprefix/>
+                        <idseparator>-</idseparator>
+                        <docinfo1>true</docinfo1>
+                    </attributes>
+                </configuration>
                 <executions>
                     <execution>
-                        <id>generate-pages-helidon</id>
-                        <phase>package</phase>
+                        <id>asciidoc-to-html-jpa</id>
+                        <phase>generate-resources</phase>
                         <goals>
-                            <goal>generate</goal>
+                            <goal>process-asciidoc</goal>
                         </goals>
                         <configuration>
-                            <siteSourceDirectory>docs</siteSourceDirectory>
-                            <siteConfigFile>docs/sitegen.yaml</siteConfigFile>
+                            <backend>html5</backend>
+                            <sourceDocumentName>jpa/extensions/jpa-extensions.adoc</sourceDocumentName>
+                            <attributes>
+                                <toc>left</toc>
+                            </attributes>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>asciidoc-to-pdf-jpa</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>process-asciidoc</goal>
+                        </goals>
+                        <configuration>
+                            <backend>pdf</backend>
+                            <sourceDocumentName>jpa/extensions/jpa-extensions.adoc</sourceDocumentName>
+                            <attributes>
+                                <pdf-stylesdir>${project.basedir}/src/theme</pdf-stylesdir>
+                                <pdf-style>jakartaee</pdf-style>
+                                <pagenums/>
+                                <toc/>
+                                <icons>font</icons>
+                                <embedAssets>true</embedAssets>
+                            </attributes>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
-            <!--
-                        <plugin>
-                            <groupId>org.apache.maven.plugins</groupId>
-                            <artifactId>maven-release-plugin</artifactId>
-                            <version>2.5.2</version>
-                            <configuration>
-                                <mavenExecutorId>forked-path</mavenExecutorId>
-                                <useReleaseProfile>false</useReleaseProfile>
-                                <arguments>${release.arguments}</arguments>
-                            </configuration>
-                        </plugin>
-
-
-                        <plugin>
-                            <groupId>org.asciidoctor</groupId>
-                            <artifactId>asciidoctor-maven-plugin</artifactId>
-                            <executions>
-                                <execution>
-                                    <id>asciidoc-to-html</id>
-                                    <phase>generate-resources</phase>
-                                    <goals>
-                                        <goal>process-asciidoc</goal>
-                                    </goals>
-                                    <configuration>
-                                        <backend>xhtml</backend>
-                                        <attributes>
-                                            <doctype>book</doctype>
-                                            <status>${status}</status>
-                                            <data-uri />
-                                            <toc>left</toc>
-                                            <icons>font</icons>
-                                            <sectanchors>true</sectanchors>
-                                            <idprefix />
-                                            <idseparator>-</idseparator>
-                                            <docinfo1>true</docinfo1>
-                                        </attributes>
-                                    </configuration>
-                                </execution>
-                                <execution>
-                                    <id>asciidoc-to-pdf</id>
-                                    <phase>generate-resources</phase>
-                                    <goals>
-                                        <goal>process-asciidoc</goal>
-                                    </goals>
-                                    <configuration>
-                                        <backend>pdf</backend>
-                                        <attributes>
-                                            <pdf-stylesdir>${project.basedir}/src/theme</pdf-stylesdir>
-                                            <pdf-style>jakartaee</pdf-style>
-                                            <doctype>book</doctype>
-                                            <status>${status}</status>
-                                            <data-uri />
-                                            <icons>font</icons>
-                                            <pagenums />
-                                            <toc />
-                                            <icons>font</icons>
-                                            <sectanchors>true</sectanchors>
-                                            <idprefix />
-                                            <idseparator>-</idseparator>
-                                            <docinfo1>true</docinfo1>
-                                            <embedAssets>true</embedAssets>
-                                        </attributes>
-                                    </configuration>
-                                </execution>
-                            </executions>
-                        </plugin>
-                        -->
             <!--
                 This is the rule that builds the zip file for download.
             -->
@@ -240,7 +177,7 @@
                         <configuration>
                             <appendAssemblyId>false</appendAssemblyId>
                             <descriptors>
-                                <descriptor>assembly.xml</descriptor>
+                                <descriptor>${project.basedir}/src/assembly/assembly.xml</descriptor>
                             </descriptors>
                         </configuration>
                     </execution>

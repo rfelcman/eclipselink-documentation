@@ -1,31 +1,40 @@
-///////////////////////////////////////////////////////////////////////////////
+[[cse]][[top]]
 
-    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
+[width="100%",cols="<50%,>50%",]
+|=======================================================================
+a|
+Jakarta Persistence API (JPA) Extensions Reference for EclipseLink,
+Release 3.0
 
-    This program and the accompanying materials are made available under the
-    terms of the Eclipse Public License v. 2.0, which is available at
-    http://www.eclipse.org/legal/epl-2.0.
+ a|
+[cols=",^,,^,,^,^",]
+|=======================================================================
+|  |image:../../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../../[image:../../../dcommon/images/search.png[Search] +
+] | 
+|link:../../eclipselink_jpa_extensions.pdf[image:../../../dcommon/images/pdf_icon.png[PDF]]
+|link:#disqus_thread[image:../../../dcommon/images/comments.png[Comments] +
+Comments]
+|=======================================================================
 
-    This Source Code may also be made available under the following Secondary
-    Licenses when the conditions for such availability set forth in the
-    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
-    version 2 with the GNU Classpath Exception, which is available at
-    https://www.gnu.org/software/classpath/license.html.
+|=======================================================================
 
-    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+'''''
 
-///////////////////////////////////////////////////////////////////////////////
+[cols="^,^,",]
+|=======================================================================
+|link:preface.htm[image:../../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:annotations_ref.htm[image:../../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|=======================================================================
 
-= Introduction
-:description: EclipseLink
-:keywords: eclipselink, java, jpa, persistence, introduction
-:rootdir: {docdir}/../..
+[[TLJPA0302]] [[sthref6]]
 
-include::{rootdir}/includes/attributes.adoc[]
+1 Introduction
+--------------
 
-== Jakarta Persistence API (JPA) Extensions Reference for EclipseLink, Release 3.0
-
-== Introduction
+[[TLJPA54052]]
 
 This chapter introduces EclipseLink. EclipseLink is an advanced,
 object-persistence and object-transformation framework that provides
@@ -34,11 +43,13 @@ maintenance efforts, and increase enterprise application functionality.
 
 This chapter includes the following sections:
 
-* <<About EclipseLink, About EclipseLink>>
-* <<About This Documentation, About This Documentation>>
-* <<Other Resources, Other Resources>>
+* link:#CEGHCAJB[About EclipseLink]
+* link:#CHDEJIEC[About This Documentation]
 
-== About EclipseLink
+[[CEGHCAJB]][[TLJPA303]]
+
+About EclipseLink
+~~~~~~~~~~~~~~~~~
 
 EclipseLink is suitable for use with a wide range of Java Enterprise
 Edition (Jakarta EE) and Java application architectures. Use EclipseLink
@@ -95,7 +106,10 @@ metadata with a simple session facade that provides in-depth support for
 standard APIs such as JPA, and JAXB as well as EclipseLink-specific
 extensions to those standards.
 
-== About This Documentation
+[[CHDEJIEC]][[TLJPA304]]
+
+About This Documentation
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 EclipseLink is the reference implementation of the Java Persistence
 Architecture (JPA) 2.0 specification It also includes many enhancements
@@ -106,7 +120,12 @@ JPA. Please refer to the JPA specification for full documentation of
 core JPA. Where appropriate, this documentation provides links to the
 pertinent section of the specification.
 
-== Other Resources
+[[TLJPA305]]
+
+[[sthref7]]
+
+Other Resources
+^^^^^^^^^^^^^^^
 
 For more information, see:
 
@@ -133,3 +152,35 @@ help you implement JPA 2.0 applications.
 * Java Persistence, a wiki-based "open book" about JPA
 2.0`http://en.wikibooks.org/wiki/Java_Persistence`
 
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|=======================================================================
+a|
+[width="96%",cols=",^50%,^50%",]
+|=======================================================================
+| 
+|link:preface.htm[image:../../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:annotations_ref.htm[image:../../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|=======================================================================
+
+
+|http://www.eclipse.org/eclipselink/[image:../../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[cols=",^,,^,,^,^",]
+|=======================================================================
+|  |image:../../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../../[image:../../../dcommon/images/search.png[Search] +
+] | 
+|link:../../eclipselink_jpa_extensions.pdf[image:../../../dcommon/images/pdf_icon.png[PDF]]
+|link:#disqus_thread[image:../../../dcommon/images/comments.png[Comments] +
+Comments]
+|=======================================================================
+
+|=======================================================================
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

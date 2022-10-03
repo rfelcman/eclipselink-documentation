@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!--
  
-    Copyright (c) 2017, 2019 Oracle and/or its affiliates. All rights reserved.
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
  
     This program and the accompanying materials are made available under the
     terms of the Eclipse Public License v. 2.0, which is available at
@@ -18,14 +18,14 @@
 -->
 
 <assembly>
-    <id>spec</id>
+    <id>doc</id>
     <formats>
 	<format>zip</format>
     </formats>
-    <baseDirectory>docs</baseDirectory>
+    <baseDirectory>eclipselink-docs</baseDirectory>
     <fileSets>
 	<fileSet>
-	    <directory>target/site</directory>
+	    <directory>target/generated-docs</directory>
 	    <outputDirectory></outputDirectory>
 	</fileSet>
     </fileSets>

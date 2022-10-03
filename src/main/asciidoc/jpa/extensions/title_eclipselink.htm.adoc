@@ -1,0 +1,89 @@
+[[cse]][[top]]
+
+[width="100%",cols="<50%,>50%",]
+|=======================================================================
+a|
+Jakarta Persistence API (JPA) Extensions Reference for EclipseLink,
+Release 3.0
+
+ a|
+[cols=",^,,^,,^,^",]
+|=======================================================================
+|  |image:../../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../../[image:../../../dcommon/images/search.png[Search] +
+] | 
+|link:../../eclipselink_jpa_extensions.pdf[image:../../../dcommon/images/pdf_icon.png[PDF]]
+|link:#disqus_thread[image:../../../dcommon/images/comments.png[Comments] +
+Comments]
+|=======================================================================
+
+|=======================================================================
+
+'''''
+
+[cols="^,^,",]
+|=======================================================================
+|link:loe.htm[image:../../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:preface.htm[image:../../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|=======================================================================
+
+EclipseLink
+-----------
+
+Jakarta Persistence API (JPA) Extensions Reference for EclipseLink
+
+Release 3.0
+
+'''''
+
+June 2014
+
+*EclipseLink Jakarta Persistence API (JPA) Extensions Reference for
+EclipseLink*
+
+Copyright © 2014 by The Eclipse Foundation under the Eclipse Public
+License (EPL)
+
+`http://www.eclipse.org/org/documents/epl-v10.php`
+
+The initial contribution of this content was based on work copyrighted
+by Oracle and was submitted with permission.
+
+Print date: June 10, 2014
+
+``
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|=======================================================================
+a|
+[width="96%",cols=",^50%,^50%",]
+|=======================================================================
+| 
+|link:loe.htm[image:../../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:preface.htm[image:../../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|=======================================================================
+
+
+|http://www.eclipse.org/eclipselink/[image:../../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[cols=",^,,^,,^,^",]
+|=======================================================================
+|  |image:../../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../../[image:../../../dcommon/images/search.png[Search] +
+] | 
+|link:../../eclipselink_jpa_extensions.pdf[image:../../../dcommon/images/pdf_icon.png[PDF]]
+|link:#disqus_thread[image:../../../dcommon/images/comments.png[Comments] +
+Comments]
+|=======================================================================
+
+|=======================================================================
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

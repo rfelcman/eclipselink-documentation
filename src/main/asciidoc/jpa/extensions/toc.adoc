@@ -1,0 +1,415 @@
+[[cse]][[top]]
+
+[width="100%",cols="<50%,>50%",]
+|=======================================================================
+a|
+Jakarta Persistence API (JPA) Extensions Reference for EclipseLink,
+Release 3.0
+
+ a|
+[cols="",]
+|====
+| 
+|====
+
+|=======================================================================
+
+'''''
+
+[cols="^,",]
+|=======================================================================
+|link:loe.htm[image:../../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|=======================================================================
+
+[cols=",^,,^,^",]
+|=======================================================================
+|  |link:../../../[image:../../../dcommon/images/search.png[Search] +
+] | 
+|link:../../eclipselink_jpa_extensions.pdf[image:../../../dcommon/images/pdf_icon.png[PDF]]
+|link:#disqus_thread[image:../../../dcommon/images/comments.png[Comments] +
+Comments]
+|=======================================================================
+
+Contents
+--------
+
+link:loe.htm[List of Examples]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+link:title_eclipselink.htm[Title and Copyright Information]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+link:preface.htm#sthref1[Preface]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* link:preface.htm#sthref2[Audience]
+* link:preface.htm#sthref4[Related Documents]
+* link:preface.htm#sthref5[Conventions]
+
+link:intro.htm#sthref6[1 Introduction]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* link:intro.htm#CEGHCAJB[About EclipseLink]
+* link:intro.htm#CHDEJIEC[About This Documentation]
+** link:intro.htm#sthref7[Other Resources]
+
+link:annotations_ref.htm#sthref8[2 Annotation Extensions Reference]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* link:annotations_ref.htm#CACGDIBI[Functional Listing of Annotation
+Extensions]
+** link:annotations_ref.htm#CACFGAIC[Mapping Annotations]
+** link:annotations_ref.htm#CACGCEIJ[Entity Annotations]
+** link:annotations_ref.htm#CACDIEID[Converter Annotations]
+** link:annotations_ref.htm#CACGIACB[Caching Annotations]
+** link:annotations_ref.htm#CACJHFEC[Customization and Optimization
+Annotations]
+** link:annotations_ref.htm#CACDCCEG[Copy Policy Annotations]
+** link:annotations_ref.htm#CACGFGED[Returning Policy Annotations]
+** link:annotations_ref.htm#CACCBFFE[Stored Procedure and Function
+Annotations]
+** link:annotations_ref.htm#CACHIHIB[Partitioning Annotations]
+** link:annotations_ref.htm#CACDIHJI[Non-relational (NoSQL) Annotations]
+* link:annotations_ref.htm#CACBGBJG[Alphabetical Listing of Annotation
+Extensions]
+* link:annotations_ref.htm#additionalcriteria[@AdditionalCriteria]
+* link:annotations_ref.htm#CHDDDFDA[@Array]
+* link:annotations_ref.htm#CHDCCIDA[@BatchFetch]
+* link:annotations_ref.htm#CHDBBIHE[@Cache]
+* link:annotations_ref.htm#CEGFEJCH[@CacheIndex]
+* link:annotations_ref.htm#BABIJDDB[@CacheIndexes]
+* link:annotations_ref.htm#BABJGDGB[@CacheInterceptor]
+* link:annotations_ref.htm#CIABIIEB[@CascadeOnDelete]
+* link:annotations_ref.htm#CEGCCCCJ[@ChangeTracking]
+* link:annotations_ref.htm#BGBHAADB[@ClassExtractor]
+* link:annotations_ref.htm#CDDJGFHA[@CloneCopyPolicy]
+* link:annotations_ref.htm#BGBHHCJH[@CompositeMember]
+* link:annotations_ref.htm#CBBJAJCH[@ConversionValue]
+* link:annotations_ref.htm#BEHGJHCD[@Convert]
+* link:annotations_ref.htm#CHDEHJEB[@Converter]
+* link:annotations_ref.htm#CIHEBAFB[@Converters]
+* link:annotations_ref.htm#BGBDGCDJ[@CopyPolicy]
+* link:annotations_ref.htm#CHDCCDGC[@Customizer]
+* link:annotations_ref.htm#BABDDGFG[@DeleteAll]
+* link:annotations_ref.htm#CIHGDDED[@DiscriminatorClass]
+* link:annotations_ref.htm#BEICFBDD[@ExcludeDefaultMappings]
+* link:annotations_ref.htm#BABICJEJ[@ExistenceChecking]
+* link:annotations_ref.htm#BABCHIGE[@FetchAttribute]
+* link:annotations_ref.htm#BABJBDEG[@FetchGroup]
+* link:annotations_ref.htm#CHDIEBGG[@FetchGroups]
+* link:annotations_ref.htm#CBHHCHAC[@Field]
+* link:annotations_ref.htm#CEGBDBEG[@HashPartitioning]
+* link:annotations_ref.htm#BABGIFEC[@Index]
+* link:annotations_ref.htm#CHDHGAIE[@Indexes]
+* link:annotations_ref.htm#CHDCJEIG[@InstantiationCopyPolicy]
+* link:annotations_ref.htm#CEGFFHHA[@JoinFetch]
+* link:annotations_ref.htm#CIHCAFEI[@JoinField]
+* link:annotations_ref.htm#BEIFHJJE[@JoinFields]
+* link:annotations_ref.htm#BEHBBCDB[@MapKeyConvert]
+* link:annotations_ref.htm#BABIEJGD[@Multitenant]
+** link:annotations_ref.htm#BABICDGI[Single-Table Multitenancy]
+*** link:annotations_ref.htm#sthref189[Examples]
+** link:annotations_ref.htm#BABEGBIJ[Table-Per-Tenanat Multitenancy]
+*** link:annotations_ref.htm#sthref192[Examples]
+** link:annotations_ref.htm#CHDBFBGI[VPD Multitenancy]
+*** link:annotations_ref.htm#sthref195[Examples]
+* link:annotations_ref.htm#CHDIFIJF[@Mutable]
+* link:annotations_ref.htm#BGBDHGJE[@NamedPLSQLStoredFunctionQueries]
+* link:annotations_ref.htm#CHDIAEFF[@NamedPLSQLStoredFunctionQuery]
+* link:annotations_ref.htm#BABJCEJH3[@NamedPLSQLStoredProcedureQueries]
+* link:annotations_ref.htm#BGBDHGJE2[@NamedPLSQLStoredProcedureQuery]
+* link:annotations_ref.htm#CIHJFFDI[@NamedStoredFunctionQueries]
+* link:annotations_ref.htm#BABFBIFE[@NamedStoredFunctionQuery]
+* link:annotations_ref.htm#BABJCEJH[@NamedStoredProcedureQueries]
+* link:annotations_ref.htm#BGBGAEFF[@NamedStoredProcedureQuery]
+* link:annotations_ref.htm#CHDGEFGD[@Noncacheable]
+* link:annotations_ref.htm#BJEIEBHC[@NoSql]
+* link:annotations_ref.htm#BGBBDGAI[@ObjectTypeConverter]
+* link:annotations_ref.htm#CHDCHJHF[@ObjectTypeConverters]
+* link:annotations_ref.htm#BCGIACHD[@OptimisticLocking]
+* link:annotations_ref.htm#CACGHFJB[@OracleArray]
+* link:annotations_ref.htm#CACCIBAB[@OracleArrays]
+* link:annotations_ref.htm#CACEBEGE[@OracleObject]
+* link:annotations_ref.htm#CACFFCEE[@OracleObjects]
+* link:annotations_ref.htm#CHDDIBJF[@OrderCorrection]
+* link:annotations_ref.htm#CHDDAHEB[@Partitioned]
+* link:annotations_ref.htm#CEGDCFDA[@Partitioning]
+* link:annotations_ref.htm#BCGIIAFB[@PinnedPartitioning]
+* link:annotations_ref.htm#CHDDEBEC[@PLSQLParameter]
+* link:annotations_ref.htm#CHDBGAED[@PLSQLRecord]
+* link:annotations_ref.htm#CHDBGAED4[@PLSQLRecords]
+* link:annotations_ref.htm#CACJBHHF[@PLSQLTable]
+* link:annotations_ref.htm#CACCBFBC[@PLSQLTables]
+* link:annotations_ref.htm#BGEBBFJE[@PrimaryKey]
+* link:annotations_ref.htm#CHDDDDAI[@PrivateOwned]
+* link:annotations_ref.htm#BABJHAFD[@Properties]
+* link:annotations_ref.htm#BGBCHEDG[@Property]
+* link:annotations_ref.htm#CIHCGHGA[@QueryRedirectors]
+* link:annotations_ref.htm#BABCFDAJ[@RangePartition]
+* link:annotations_ref.htm#BCGCGEIH[@RangePartitioning]
+* link:annotations_ref.htm#BGBGEFBD[@ReadOnly]
+* link:annotations_ref.htm#CHDGHHBA[@ReadTransformer]
+* link:annotations_ref.htm#BABJEFJH[@ReplicationPartitioning]
+* link:annotations_ref.htm#CIHHEGJE[@ReturnInsert]
+* link:annotations_ref.htm#CACHDFCF[@ReturnUpdate]
+* link:annotations_ref.htm#BCGBJGFF[@RoundRobinPartitioning]
+* link:annotations_ref.htm#CACDCCIA[@SerializedObject]
+* link:annotations_ref.htm#CHDDEBEC6[@StoredProcedureParameter]
+* link:annotations_ref.htm#CBBDCAHG[@Struct]
+* link:annotations_ref.htm#BGBJEBBB[@StructConverter]
+* link:annotations_ref.htm#CHDCJCDE[@StructConverters]
+* link:annotations_ref.htm#CACIJAFA[@Structure]
+* link:annotations_ref.htm#CHECIDGH[@TenantDiscriminatorColumn]
+* link:annotations_ref.htm#CECBEBEA[@TenantDiscriminatorColumns]
+* link:annotations_ref.htm#CHDFJJEC[@TenantTableDiscriminator]
+* link:annotations_ref.htm#BGBGACHC[@TimeOfDay]
+* link:annotations_ref.htm#BABCJGIG[@Transformation]
+* link:annotations_ref.htm#CHDHCCJF[@TypeConverter]
+* link:annotations_ref.htm#BCFBEIAE[@TypeConverters]
+* link:annotations_ref.htm#BCGEJFAH[@UnionPartitioning]
+* link:annotations_ref.htm#CFAFIIFC[@UuidGenerator]
+* link:annotations_ref.htm#sthref461[@UnionPartitioning]
+* link:annotations_ref.htm#CJHFCGEJ[@ValuePartition]
+* link:annotations_ref.htm#CEGHFJDJ[@ValuePartitioning]
+* link:annotations_ref.htm#CHDDFDGF[@VariableOneToOne]
+* link:annotations_ref.htm#CIHFBCFI[@VirtualAccessMethods]
+* link:annotations_ref.htm#BGBGGAEA[@WriteTransformer]
+* link:annotations_ref.htm#BCFCCEJF[@WriteTransformers]
+
+link:jpql.htm#BABCIECD[3 Java Persistence Query Language Extensions]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* link:jpql.htm#BABEJJHG[Special Operators]
+* link:jpql.htm#BABEAIIA[EclipseLink Query Language]
+* link:jpql.htm#cast[CAST]
+* link:jpql.htm#column[COLUMN]
+* link:jpql.htm#except[EXCEPT]
+* link:jpql.htm#extract[EXTRACT]
+* link:jpql.htm#func[FUNCTION]
+* link:jpql.htm#intersect[INTERSECT]
+* link:jpql.htm#on[ON]
+* link:jpql.htm#operator[OPERATOR]
+* link:jpql.htm#CIHGBAEC[REGEXP]
+* link:jpql.htm#sql[SQL]
+* link:jpql.htm#table[TABLE]
+* link:jpql.htm#treat[TREAT]
+* link:jpql.htm#union[UNION]
+
+link:queryhints.htm#sthref533[4 JPA Query Customization Extensions]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* link:queryhints.htm#batch[batch]
+* link:queryhints.htm#BABHCJIH[batch.size]
+* link:queryhints.htm#BABFGHAA[batch.type]
+* link:queryhints.htm#cacheusage[cache-usage]
+* link:queryhints.htm#BABDBIDI[cache-usage.indirection-policy]
+* link:queryhints.htm#BABBGFJA[cursor]
+* link:queryhints.htm#CHDDFIDC[composite-unit.member]
+* link:queryhints.htm#CHDJJCHG[cursor.initial-size]
+* link:queryhints.htm#CACIGJGE[cursor.page-size]
+* link:queryhints.htm#BABJFGGC[exclusive-connection]
+* link:queryhints.htm#CBHFHGEB[flush]
+* link:queryhints.htm#CACDJCBE[history.as-of]
+* link:queryhints.htm#BDCBGEJG[history.as-of.scn]
+* link:queryhints.htm#BABEDHJB[inheritance.outer-join]
+* link:queryhints.htm#bindparameters[jdbc.bind-parameters]
+* link:queryhints.htm#BABCHAFD[jdbc.cache-statement]
+* link:queryhints.htm#fetchsize[jdbc.fetch-size]
+* link:queryhints.htm#BHAGGAIA[jdbc.first-result]
+* link:queryhints.htm#maxrows[jdbc.max-rows]
+* link:queryhints.htm#CACCHBBG[jdbc.native-connection]
+* link:queryhints.htm#CHDEBFHE[jdbc.parameter-delimiter]
+* link:queryhints.htm#timeout[jdbc.timeout]
+* link:queryhints.htm#fetch[join-fetch]
+* link:queryhints.htm#CHDEFDDC[left-join-fetch]
+* link:queryhints.htm#BABIJCGD[load-group]
+* link:queryhints.htm#CACEDHDG[load-group.attribute]
+* link:queryhints.htm#maintaincache[maintain-cache]
+* link:queryhints.htm#pessimisticlock[pessimistic-lock]
+* link:queryhints.htm#CHDGDECH[prepare]
+* link:queryhints.htm#CHDGEADJ[query-results-cache]
+* link:queryhints.htm#BABHGIHG[query-results-cache.expiry]
+* link:queryhints.htm#CBAFBFJA[query-results-cache.expiry-time-of-day]
+* link:queryhints.htm#CHDHGGBD[query-results-cache.ignore-null]
+* link:queryhints.htm#BEIGHCEF[query-results-cache.randomize-expiry]
+* link:queryhints.htm#CACJDDDG[query-results-cache.size]
+* link:queryhints.htm#CACCFFDA[query-results-cache.type]
+* link:queryhints.htm#querytype[query-type]
+* link:queryhints.htm#readonly[read-only]
+* link:queryhints.htm#refresh[refresh]
+* link:queryhints.htm#refreshcache[refresh.cascade]
+* link:queryhints.htm#BABCJADG[result-collection-type]
+* link:queryhints.htm#CIHHAEDE[sql.hint]
+
+link:persistenceproperties_ref.htm#sthref733[5 Persistence Property
+Extensions Reference]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* link:persistenceproperties_ref.htm#CACGDIBI2[Functional Listing of
+Persistence Property Extensions]
+** link:persistenceproperties_ref.htm#CACGCEIJ2[Weaving]
+** link:persistenceproperties_ref.htm#CACDIEID2[Customizers]
+** link:persistenceproperties_ref.htm#CACJHFEC2[Validation and
+Optimization]
+** link:persistenceproperties_ref.htm#sthref734[Logging]
+** link:persistenceproperties_ref.htm#CACDCCEG2[Caching]
+** link:persistenceproperties_ref.htm#CHDBDCHB2[Mapping]
+** link:persistenceproperties_ref.htm#CHDFDDBF[Schema generation]
+** link:persistenceproperties_ref.htm#CHDICECH2[JDBC configuration]
+** link:persistenceproperties_ref.htm#CHDFDDBF1[Concurrency manager]
+* link:persistenceproperties_ref.htm#CACBGBJG2[Alphabetical Listing of
+Persistence Property Extensions]
+* link:persistenceproperties_ref.htm#CACHGDEJ[application-location]
+* link:persistenceproperties_ref.htm#BABGBAEC[cache.coordination.channel]
+* link:persistenceproperties_ref.htm#BABJGCIF[cache.coordination.jms.factory]
+* link:persistenceproperties_ref.htm#BABJGJGI[cache.coordination.jms.host]
+* link:persistenceproperties_ref.htm#CHDHJECA[cache.coordination.jms.reuse-topic-publisher]
+* link:persistenceproperties_ref.htm#BABHEFCJ[cache.coordination.jms.topic]
+* link:persistenceproperties_ref.htm#BABFBHGI[cache.coordination.jndi.initial-context-factory]
+* link:persistenceproperties_ref.htm#BABJBCCF[cache.coordination.jndi.password]
+* link:persistenceproperties_ref.htm#BABGAEHE[cache.coordination.jndi.user]
+* link:persistenceproperties_ref.htm#BABIEEBH[cache.coordination.naming-service]
+* link:persistenceproperties_ref.htm#BABDFGGD[cache.coordination.propagate-asynchronously]
+* link:persistenceproperties_ref.htm#cachecoordinationprotocol[cache.coordination.protocol]
+* link:persistenceproperties_ref.htm#BABIEJED[cache.coordination.remove-connection-on-error]
+* link:persistenceproperties_ref.htm#BABDGCDE[cache.coordination.rmi.announcement-delay]
+* link:persistenceproperties_ref.htm#BABDGFEI[cache.coordination.rmi.multicast-group]
+* link:persistenceproperties_ref.htm#sthref810[cache.coordination.rmi.multicast-group.port]
+* link:persistenceproperties_ref.htm#BABFBDBJ[cache.coordination.rmi.packet-time-to-live]
+* link:persistenceproperties_ref.htm#BABCJIFC[cache.coordination.rmi.url]
+* link:persistenceproperties_ref.htm#BABFJGIF[cache.coordination.thread.pool.size]
+* link:persistenceproperties_ref.htm#CCHEEFGA[cache.database-event-listener]
+* link:persistenceproperties_ref.htm#CHDEJCJJ[cache.shared]
+* link:persistenceproperties_ref.htm#CHDIGIEC[cache.size]
+* link:persistenceproperties_ref.htm#CHDGDIEI[cache.type]
+* link:persistenceproperties_ref.htm#classloader[classloader]
+* link:persistenceproperties_ref.htm#BIICFIDB[composite-unit]
+* link:persistenceproperties_ref.htm#CHDHCIDH[composite-unit.member]
+* link:persistenceproperties_ref.htm#CIHGHJGA[composite-unit.properties]
+* link:persistenceproperties_ref.htm#concurrency.manager.waittime[concurrency.manager.waittime]
+* link:persistenceproperties_ref.htm#concurrency.manager.maxsleeptime[concurrency.manager.maxsleeptime]
+* concurrency.manager.maxfrequencytodumptinymessage
+* concurrency.manager.maxfrequencytodumpmassivemessage
+* concurrency.manager.allow.interruptedexception
+* concurrency.manager.allow.concurrencyexception
+* concurrency.manager.allow.readlockstacktrace
+* link:persistenceproperties_ref.htm#connectionpool[connection-pool]
+* link:persistenceproperties_ref.htm#CHDDIIFD[connection-pool.read]
+* link:persistenceproperties_ref.htm#BABIDAGH[connection-pool.sequence]
+* link:persistenceproperties_ref.htm#createddljdbcfilename[create-ddl-jdbc-file-name]
+* link:persistenceproperties_ref.htm#BABHEJJI[ddl-generation]
+* link:persistenceproperties_ref.htm#BABCDHBB[ddl-generation.output-mode]
+* link:persistenceproperties_ref.htm#BEHBIEJG[ddl.table-creation-suffix]
+* link:persistenceproperties_ref.htm#delayonstartup[deploy-on-startup]
+* link:persistenceproperties_ref.htm#CCHIEAIA[descriptor.customizer]
+* link:persistenceproperties_ref.htm#BABFEBCG[drop-ddl-jdbc-file-name]
+* link:persistenceproperties_ref.htm#CCHCJCDJ[exception-handler]
+* link:persistenceproperties_ref.htm#CHDBIAAC[exclude-eclipselink-orm]
+* link:persistenceproperties_ref.htm#CDEJGBEI[flush-clear.cache]
+* link:persistenceproperties_ref.htm#CACEEGCC[id-validation]
+* link:persistenceproperties_ref.htm#CIHHJBFB[jdbc.allow-native-sql-queries]
+* link:persistenceproperties_ref.htm#CIHIAGAF[jdbc.batch-writing]
+* link:persistenceproperties_ref.htm#CIHJADHF[jdbc.batch-writing.size]
+* link:persistenceproperties_ref.htm#CHDHAFAA[jdbc.cache-statements]
+* link:persistenceproperties_ref.htm#CACBICGG[jdbc.cache-statements.size]
+* link:persistenceproperties_ref.htm#CFAJHIJA[jdbc.connector]
+* link:persistenceproperties_ref.htm#CHDCJIBF[jdbc.exclusive-connection.is-lazy]
+* link:persistenceproperties_ref.htm#CACBICGG2[jdbc.exclusive-connection.mode]
+* link:persistenceproperties_ref.htm#CIHEACBE[jdbc.native-sql]
+* link:persistenceproperties_ref.htm#CIHHJHHD[jdbc.property]
+* link:persistenceproperties_ref.htm#CIHBHCID[jdbc.sql-cast]
+* link:persistenceproperties_ref.htm#CIHIIAFD[jdbc.uppercase-columns]
+* link:persistenceproperties_ref.htm#CHDFJAAC[jpql.parser]
+* link:persistenceproperties_ref.htm#CHDJGCBD[jpa.uppercase-column-names]
+* link:persistenceproperties_ref.htm#BCFGFEFB3[jpql.validation]
+* link:persistenceproperties_ref.htm#CHDJCBIF[logging.connection]
+* link:persistenceproperties_ref.htm#BEIFJBIE[logging.exceptions]
+* link:persistenceproperties_ref.htm#BEIHGBBC[logging.file]
+* link:persistenceproperties_ref.htm#CHDGFDDH[logging.level]
+* link:persistenceproperties_ref.htm#sthref1021[logging.logger]
+* link:persistenceproperties_ref.htm#sthref1026[logging.parameters]
+* link:persistenceproperties_ref.htm#BEIHGGHH[logging.session]
+* link:persistenceproperties_ref.htm#BEIFFGGB[logging.thread]
+* link:persistenceproperties_ref.htm#BEIJCEBJ[logging.timestamp]
+* link:persistenceproperties_ref.htm#CHDJDEDE[metadata-source]
+* link:persistenceproperties_ref.htm#CHDEFFGG2[metadata-source.properties.file]
+* link:persistenceproperties_ref.htm#CHDICFHG[metadata-source.send-refresh-command]
+* link:persistenceproperties_ref.htm#CHDDJHIC[metadata-source.xml.file]
+* link:persistenceproperties_ref.htm#CHDBFJEB[metadata-source.xml.url]
+* link:persistenceproperties_ref.htm#sthref1071[multitenant.tenants-share-cache]
+* link:persistenceproperties_ref.htm#sthref1077[multitenant.tenants-share-emf]
+* link:persistenceproperties_ref.htm#BGBEDEJC[nosql.connection-factory]
+* link:persistenceproperties_ref.htm#BCGEBECD[nosql.connection-spec]
+* link:persistenceproperties_ref.htm#BABJAJAI[nosql.property]
+* link:persistenceproperties_ref.htm#CDEFJEGI[oracle.proxy-type]
+* link:persistenceproperties_ref.htm#orm.throw.exceptions[orm.throw.exceptions]
+* link:persistenceproperties_ref.htm#CHDIFJDB[orm.validate.schema]
+* link:persistenceproperties_ref.htm#partitioning[partitioning]
+* link:persistenceproperties_ref.htm#BJFEFCFC[partitioning.callback]
+* link:persistenceproperties_ref.htm#BABDGGHE[persistence-context.close-on-commit]
+* link:persistenceproperties_ref.htm#BABCHJJA[persistence-context.commit-without-persist-rules]
+* link:persistenceproperties_ref.htm#BABDHEEB[persistence-context.flush-mode]
+* link:persistenceproperties_ref.htm#BABGCAGC[persistence-context.persist-on-commit]
+* link:persistenceproperties_ref.htm#BABIAJAI[persistence-context.reference-mode]
+* link:persistenceproperties_ref.htm#persistenceunits[persistenceunits]
+* link:persistenceproperties_ref.htm#persistencexml[persistencexml]
+* link:persistenceproperties_ref.htm#CHDEGCBC[persisencexml.default]
+* link:persistenceproperties_ref.htm#profiler[profiler]
+* link:persistenceproperties_ref.htm#session.customizer[session.customizer]
+* link:persistenceproperties_ref.htm#CHDFDJJD[session.include.descriptor.queries]
+* link:persistenceproperties_ref.htm#session-event-listener[session-event-listener]
+* link:persistenceproperties_ref.htm#CHDFHEAC[session-name]
+* link:persistenceproperties_ref.htm#sessions-xml[sessions-xml]
+* link:persistenceproperties_ref.htm#target-database[target-database]
+* link:persistenceproperties_ref.htm#target-server[target-server]
+* link:persistenceproperties_ref.htm#CHDHJBEE[temporal.mutable]
+* link:persistenceproperties_ref.htm#CHDHBGIE[tenant-id]
+* link:persistenceproperties_ref.htm#CIHEAICB[transaction.join-existing]
+* link:persistenceproperties_ref.htm#CHDGFIGB[tuning]
+* link:persistenceproperties_ref.htm#validate-existence[validate-existence]
+* link:persistenceproperties_ref.htm#validation-only[validation-only]
+* link:persistenceproperties_ref.htm#weaving[weaving]
+* link:persistenceproperties_ref.htm#CHDCEEFC[weaving.changetracking]
+* link:persistenceproperties_ref.htm#BABGGCGC[weaving.eager]
+* link:persistenceproperties_ref.htm#CHDDIFGE[weaving.fetchgroups]
+* link:persistenceproperties_ref.htm#BABJICDJ[weaving.internal]
+* link:persistenceproperties_ref.htm#BABDBIFE[weaving.lazy]
+
+link:schema.htm#sthref1245[6 eclipselink-orm.xml Schema Reference]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* link:schema.htm#BGBBEIEA[Overriding and Merging]
+** link:schema.htm#BGBJBFDH[Rules for Overriding and Merging]
+*** link:schema.htm#BGBFCDBF[Persistence Unit Metadata]
+*** link:schema.htm#BGBDIICB[Entity Mappings]
+*** link:schema.htm#BGBIAAAH[Mapped Superclasses]
+*** link:schema.htm#BGBJAIBF[Entity override and merging rules]
+*** link:schema.htm#BGBIJGGA[Embeddable]
+** link:schema.htm#BGBGFDDF[Examples of Overriding and Merging]
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|=======================================================================
+a|
+[width="48%",cols=",^100%",]
+|=======================================================================
+| 
+|link:loe.htm[image:../../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|=======================================================================
+
+
+|http://www.eclipse.org/eclipselink/[image:../../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[cols="",]
+|====
+| 
+|====
+
+|=======================================================================
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

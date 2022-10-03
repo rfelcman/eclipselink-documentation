@@ -1,31 +1,43 @@
-///////////////////////////////////////////////////////////////////////////////
+[[cse]][[top]]
 
-    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
+[width="100%",cols="<50%,>50%",]
+|=======================================================================
+a|
+Jakarta Persistence API (JPA) Extensions Reference for EclipseLink,
+Release 3.0
 
-    This program and the accompanying materials are made available under the
-    terms of the Eclipse Public License v. 2.0, which is available at
-    http://www.eclipse.org/legal/epl-2.0.
+ a|
+[cols=",^,,^,,^,^",]
+|=======================================================================
+|  |image:../../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../../[image:../../../dcommon/images/search.png[Search] +
+] | 
+|link:../../eclipselink_jpa_extensions.pdf[image:../../../dcommon/images/pdf_icon.png[PDF]]
+|link:#disqus_thread[image:../../../dcommon/images/comments.png[Comments] +
+Comments]
+|=======================================================================
 
-    This Source Code may also be made available under the following Secondary
-    Licenses when the conditions for such availability set forth in the
-    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
-    version 2 with the GNU Classpath Exception, which is available at
-    https://www.gnu.org/software/classpath/license.html.
+|=======================================================================
 
-    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+'''''
 
-///////////////////////////////////////////////////////////////////////////////
+[cols="^,^,",]
+|=======================================================================
+|link:intro.htm[image:../../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:jpql.htm[image:../../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|=======================================================================
 
-= Annotation Extensions Reference
-:description: EclipseLink
-:keywords: eclipselink, java, jpa, persistence, introduction
-:rootdir: {docdir}/../..
+The script content on this page is for navigation purposes only and does
+not alter the content in any way.
 
-include::{rootdir}/includes/attributes.adoc[]
+[[TLJPA306]] [[sthref8]]
 
-== Jakarta Persistence API (JPA) Extensions Reference for EclipseLink, Release 3.0
+2 Annotation Extensions Reference
+---------------------------------
 
-== Annotation Extensions Reference
+[[TLJPA54053]]
 
 This chapter includes information on the EclipseLink extensions to the
 Jakarta Persistence API (JPA) annotations. EclipseLink supports the
@@ -34,157 +46,191 @@ enhancements and extensions.
 
 This chapter includes the following sections:
 
-* <<Functional Listing of Annotation Extensions, Functional Listing of Annotation Extensions>>
-* <<Alphabetical Listing of Annotation Extensions, Alphabetical Listing of Annotation Extensions>>
+* link:#CACGDIBI[Functional Listing of Annotation Extensions]
+* link:#CACBGBJG[Alphabetical Listing of Annotation Extensions]
 
-=== Functional Listing of Annotation Extensions
+[[CACGDIBI]][[TLJPA307]]
+
+Functional Listing of Annotation Extensions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The following lists the EclipseLink annotation extensions, categorized
 by function:
 
-* <<Mapping Annotations, Mapping Annotations>>
-* <<Entity Annotations, Entity Annotations>>
-* <<Converter Annotations, Converter Annotations>>
-* <<Caching Annotations, Caching Annotations>>
-* <<Customization and Optimization Annotations, Customization and Optimization Annotations>>
-* <<Copy Policy Annotations, Copy Policy Annotations>>
-* <<Returning Policy Annotations, Returning Policy Annotations>>
-* <<Stored Procedure and Function Annotations, Stored Procedure and Function Annotations>>
-* <<Partitioning Annotations, Partitioning Annotations>>
-* <<Non-relational (NoSQL) Annotations, Non-relational (NoSQL) Annotations>>
+* link:#CACFGAIC[Mapping Annotations]
+* link:#CACGCEIJ[Entity Annotations]
+* link:#CACDIEID[Converter Annotations]
+* link:#CACGIACB[Caching Annotations]
+* link:#CACJHFEC[Customization and Optimization Annotations]
+* link:#CACDCCEG[Copy Policy Annotations]
+* link:#CACGFGED[Returning Policy Annotations]
+* link:#CACCBFFE[Stored Procedure and Function Annotations]
+* link:#CACHIHIB[Partitioning Annotations]
+* link:#CACDIHJI[Non-relational (NoSQL) Annotations]
 
-=== Mapping Annotations
+[[CACFGAIC]][[TLJPA308]]
+
+Mapping Annotations
+^^^^^^^^^^^^^^^^^^^
 
 EclipseLink includes the following annotation extensions for mappings:
 
-* <<@PrivateOwned, @PrivateOwned>>
-* <<@JoinFetch, @JoinFetch>>
-* <<@Mutable, @Mutable>>
-* <<@Property, @Property>>
-* <<@Transformation, @Transformation>>
-* <<@ReadTransformer, @ReadTransformer>>
-* <<@WriteTransformer, @WriteTransformer>>
-* <<@WriteTransformers, @WriteTransformers>>
+* link:#CHDDDDAI[@PrivateOwned]
+* link:#CEGFFHHA[@JoinFetch]
+* link:#CHDIFIJF[@Mutable]
+* link:#BGBCHEDG[@Property]
+* link:#BABCJGIG[@Transformation]
+* link:#CHDGHHBA[@ReadTransformer]
+* link:#BGBGGAEA[@WriteTransformer]
+* link:#BCFCCEJF[@WriteTransformers]
 
-=== Entity Annotations
+[[CACGCEIJ]][[TLJPA309]]
+
+Entity Annotations
+^^^^^^^^^^^^^^^^^^
 
 EclipseLink includes the following annotation extensions for entities:
 
-* <<@AdditionalCriteria, @AdditionalCriteria>>
-* <<@ExcludeDefaultMappings, @ExcludeDefaultMappings>>
-* <<@Multitenant, @Multitenant>>
-* <<@OptimisticLocking, @OptimisticLocking>>
-* <<@ReadOnly, @ReadOnly>>
-* <<@SerializedObject, @SerializedObject>>
-* <<@TenantDiscriminatorColumns, @TenantDiscriminatorColumns>>
-* <<@TenantDiscriminatorColumn, @TenantDiscriminatorColumn>>
-* <<@TenantTableDiscriminator, @TenantTableDiscriminator>>
-* <<@Struct, @Struct>>
+* link:#additionalcriteria[@AdditionalCriteria]
+* link:#BEICFBDD[@ExcludeDefaultMappings]
+* link:#BABIEJGD[@Multitenant]
+* link:#BCGIACHD[@OptimisticLocking]
+* link:#BGBGEFBD[@ReadOnly]
+* link:#CACDCCIA[@SerializedObject]
+* link:#CECBEBEA[@TenantDiscriminatorColumns]
+* link:#CHECIDGH[@TenantDiscriminatorColumn]
+* link:#CHDFJJEC[@TenantTableDiscriminator]
+* link:#CBBDCAHG[@Struct]
 
-=== Converter Annotations
+[[CACDIEID]][[TLJPA310]]
+
+Converter Annotations
+^^^^^^^^^^^^^^^^^^^^^
 
 EclipseLink includes the following annotation extensions for converting
 data:
 
-* <<@Convert, @Convert>>
-* <<@Converter, @Converter>>
-* <<@Converters, @Converters>>
-* <<@TypeConverter, @TypeConverter>>
-* <<@TypeConverters, @TypeConverters>>
-* <<@ObjectTypeConverter, @ObjectTypeConverter>>
-* <<@ObjectTypeConverters, @ObjectTypeConverters>>
-* <<@StructConverter, @StructConverter>>
-* <<@StructConverters, @StructConverters>>
+* link:#BEHGJHCD[@Convert]
+* link:#CHDEHJEB[@Converter]
+* link:#CIHEBAFB[@Converters]
+* link:#CHDHCCJF[@TypeConverter]
+* link:#BCFBEIAE[@TypeConverters]
+* link:#BGBBDGAI[@ObjectTypeConverter]
+* link:#CHDCHJHF[@ObjectTypeConverters]
+* link:#BGBJEBBB[@StructConverter]
+* link:#CHDCJCDE[@StructConverters]
 
-=== Caching Annotations
+[[CACGIACB]][[TLJPA311]]
+
+Caching Annotations
+^^^^^^^^^^^^^^^^^^^
 
 EclipseLink includes the following annotation extensions for caching:
 
-* <<@Cache, @Cache>>
-* <<@CacheIndex, @CacheIndex>>
-* <<@CacheIndexes, @CacheIndexes>>
-* <<@CacheInterceptor, @CacheInterceptor>>
-* <<@TimeOfDay, @TimeOfDay>>
-* <<@ExistenceChecking, @ExistenceChecking>>
+* link:#CHDBBIHE[@Cache]
+* link:#CEGFEJCH[@CacheIndex]
+* link:#BABIJDDB[@CacheIndexes]
+* link:#BABJGDGB[@CacheInterceptor]
+* link:#BGBGACHC[@TimeOfDay]
+* link:#BABICJEJ[@ExistenceChecking]
 
-=== Customization and Optimization Annotations
+[[CACJHFEC]][[TLJPA312]]
+
+Customization and Optimization Annotations
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 EclipseLink includes the following annotation extensions for
 customization and optimization.
 
-* <<@Customizer, @Customizer>>
-* <<@ChangeTracking, @ChangeTracking>>
+* link:#CHDCCDGC[@Customizer]
+* link:#CEGCCCCJ[@ChangeTracking]
 
-=== Copy Policy Annotations
+[[CACDCCEG]][[TLJPA313]]
+
+Copy Policy Annotations
+^^^^^^^^^^^^^^^^^^^^^^^
 
 EclipseLink includes the following annotation extensions for copy
 policies:
 
-* <<@CloneCopyPolicy, @CloneCopyPolicy>>
-* <<@CopyPolicy, @CopyPolicy>>
-* <<@InstantiationCopyPolicy, @InstantiationCopyPolicy>>
+* link:#CDDJGFHA[@CloneCopyPolicy]
+* link:#BGBDGCDJ[@CopyPolicy]
+* link:#CHDCJEIG[@InstantiationCopyPolicy]
 
-=== Returning Policy Annotations
+[[CACGFGED]][[TLJPA314]]
+
+Returning Policy Annotations
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 EclipseLink includes the following annotation extensions for returning
 policies:
 
-* <<@ReturnInsert, @ReturnInsert>>
-* <<@ReturnUpdate, @ReturnUpdate>>
+* link:#CIHHEGJE[@ReturnInsert]
+* link:#CACHDFCF[@ReturnUpdate]
 
-=== Stored Procedure and Function Annotations
+[[CACCBFFE]][[TLJPA315]]
+
+Stored Procedure and Function Annotations
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 EclipseLink includes the following annotation extensions for stored
 procedures and stored functions:
 
-* <<@NamedPLSQLStoredFunctionQueries, @NamedPLSQLStoredFunctionQueries>>
-* <<@NamedPLSQLStoredFunctionQuery, @NamedPLSQLStoredFunctionQuery>>
-* <<@NamedPLSQLStoredProcedureQueries, @NamedPLSQLStoredProcedureQueries>>
-* <<@NamedPLSQLStoredProcedureQuery, @NamedPLSQLStoredProcedureQuery>>
-* <<@NamedStoredFunctionQueries, @NamedStoredFunctionQueries>>
-* <<@NamedStoredFunctionQuery, @NamedStoredFunctionQuery>>
-* <<@NamedStoredProcedureQueries, @NamedStoredProcedureQueries>>
-* <<@NamedStoredProcedureQuery, @NamedStoredProcedureQuery>>
-* <<@OracleArray, @OracleArray>>
-* <<@OracleArrays, @OracleArrays>>
-* <<@OracleObject, @OracleObject>>
-* <<@OracleObjects, @OracleObjects>>
-* <<@PLSQLParameter, @PLSQLParameter>>
-* <<@PLSQLRecord, @PLSQLRecord>>
-* <<@PLSQLRecords, @PLSQLRecords>>
-* <<@PLSQLTable, @PLSQLTable>>
-* <<@PLSQLTables, @PLSQLTables>>
-* <<@StoredProcedureParameter, @StoredProcedureParameter>>
+* link:#BGBDHGJE[@NamedPLSQLStoredFunctionQueries]
+* link:#CHDIAEFF[@NamedPLSQLStoredFunctionQuery]
+* link:#BABJCEJH3[@NamedPLSQLStoredProcedureQueries]
+* link:#BGBDHGJE2[@NamedPLSQLStoredProcedureQuery]
+* link:#CIHJFFDI[@NamedStoredFunctionQueries]
+* link:#BABFBIFE[@NamedStoredFunctionQuery]
+* link:#BABJCEJH[@NamedStoredProcedureQueries]
+* link:#BGBGAEFF[@NamedStoredProcedureQuery]
+* link:#CACGHFJB[@OracleArray]
+* link:#CACCIBAB[@OracleArrays]
+* link:#CACEBEGE[@OracleObject]
+* link:#CACFFCEE[@OracleObjects]
+* link:#CHDDEBEC[@PLSQLParameter]
+* link:#CHDBGAED[@PLSQLRecord]
+* link:#CHDBGAED4[@PLSQLRecords]
+* link:#CACJBHHF[@PLSQLTable]
+* link:#CACCBFBC[@PLSQLTables]
+* link:#CHDDEBEC6[@StoredProcedureParameter]
 
-=== Partitioning Annotations
+[[CACHIHIB]][[TLJPA316]]
+
+Partitioning Annotations
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 EclipseLink includes the following annotation extensions for using
 partitions:
 
-* <<@HashPartitioning, @HashPartitioning>>
-* <<@Partitioned, @Partitioned>>
-* <<@Partitioning, @Partitioning>>
-* <<@PinnedPartitioning, @PinnedPartitioning>>
-* <<@RangePartition, @RangePartition>
-* <<@RangePartitioning, @RangePartitioning>>
-* <<@ReplicationPartitioning, @ReplicationPartitioning>>
-* <<@RoundRobinPartitioning, @RoundRobinPartitioning>>
-* <<@UnionPartitioning, @UnionPartitioning>>
-* <<@ValuePartitioning, @ValuePartitioning>>
+* link:#CEGBDBEG[@HashPartitioning]
+* link:#CHDDAHEB[@Partitioned]
+* link:#CEGDCFDA[@Partitioning]
+* link:#BCGIIAFB[@PinnedPartitioning]
+* link:#BABCFDAJ[@RangePartition]
+* link:#BCGCGEIH[@RangePartitioning]
+* link:#BABJEFJH[@ReplicationPartitioning]
+* link:#BCGBJGFF[@RoundRobinPartitioning]
+* link:#BCGEJFAH[@UnionPartitioning]
+* link:#CEGHFJDJ[@ValuePartitioning]
 
-=== Non-relational (NoSQL) Annotations
+[[CACDIHJI]][[TLJPA54001]]
+
+Non-relational (NoSQL) Annotations
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 EclipseLink includes the following annotation extensions for
 non-relational datasources:
 
-* <<@Field, @Field>>
-* <<@JoinField, @JoinField>>
-* <<@JoinFields, @JoinFields>>
-* <<@NoSql, @NoSql>>
+* link:#CBHHCHAC[@Field]
+* link:#CIHCAFEI[@JoinField]
+* link:#BEIFHJJE[@JoinFields]
+* link:#BJEIEBHC[@NoSql]
 
-=== Alphabetical Listing of Annotation Extensions
+[[CACBGBJG]][[TLJPA317]]
 
-////
+Alphabetical Listing of Annotation Extensions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The following lists the EclipseLink annotation extensions:
 
@@ -283,8 +329,11 @@ The following lists the EclipseLink annotation extensions:
 * link:#BGBGGAEA[@WriteTransformer]
 * link:#BCFCCEJF[@WriteTransformers]
 
+[[additionalcriteria]][[TLJPA318]]
 
-==== @AdditionalCriteria
+'''''
+
+@AdditionalCriteria
 ~~~~~~~~~~~~~~~~~~~
 
 Use `@AdditionalCriteria` to define parameterized views on data.
@@ -558,9 +607,8 @@ For more information, see:
 
 '''''
 
-////
-
-==== @Array
+@Array
+~~~~~~
 
 Use `@Array` to define object-relational data types supported by
 specific databases, such as Oracle `VARRAY` types or PostgreSQL JDBC
@@ -670,7 +718,6 @@ For more information, see the following:
 
 '''''
 
-////
 @BatchFetch
 ~~~~~~~~~~~
 
@@ -10549,5 +10596,3 @@ Comments]
 Copyright © 2014 by The Eclipse Foundation under the
 http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
 (EPL)] +
-
-////
