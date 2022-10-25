@@ -1,0 +1,75 @@
+[[cse]][[top]]
+
+[width="100%",cols="<50%,>50%",]
+|=======================================================================
+a|
+Understanding EclipseLink, *3.0* +
+
+ a|
+[cols=",^,,^,,^",]
+|=======================================================================
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|=======================================================================
+
+|=======================================================================
+
+'''''
+
+[cols="^,^,",]
+|=======================================================================
+|link:nosql006.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:app_tl_ext001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|=======================================================================
+
+[[OTLCG94452]] [[sthref69]]
+
+A Database and Application Server Support
+-----------------------------------------
+
+[[OTLCG94453]]
+
+This appendix describes the database platforms and application servers
+supported by EclipseLink.
+
+This appendix includes the following sections:
+
+* link:app_tl_ext001.htm#A1095976[Database Support]
+* link:app_tl_ext002.htm#A1115041[Application Server Support]
+* link:app_tl_ext003.htm#CJAECHBD[Non-SQL Standard Database Support:
+NoSQL]
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|=======================================================================
+a|
+[width="96%",cols=",^50%,^50%",]
+|=======================================================================
+| 
+|link:nosql006.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:app_tl_ext001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|=======================================================================
+
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[cols=",^,,^,,^",]
+|=======================================================================
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|=======================================================================
+
+|=======================================================================
+
+[[copyright]]
+Copyright © 2012 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

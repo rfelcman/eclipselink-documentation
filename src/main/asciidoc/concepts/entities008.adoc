@@ -1,0 +1,93 @@
+[[cse]][[top]]
+
+[width="100%",cols="<50%,>50%",]
+|=======================================================================
+a|
+Understanding EclipseLink, *3.0* +
+
+ a|
+[cols=",^,,^,,^",]
+|=======================================================================
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|=======================================================================
+
+|=======================================================================
+
+'''''
+
+[cols="^,^,",]
+|=======================================================================
+|link:entities007.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:descriptors.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|=======================================================================
+
+[[BABEJFDH]]
+
+Extensible Entities
+-------------------
+
+JPA entities and JAXB beans can be made extensible by adding or
+modifying mappings externally. There is no need to modify the entity or
+bean source file nor do you have to redeploy the persistence unit.
+
+Extensible entities are useful in a multi-tenant (or SaaS) architecture
+where a shared, generic application can be used by multiple clients
+(tenants). Tenants have private access to their own data, and to data
+shared with other tenants.
+
+Using extensible entities, you can:
+
+* Build an application where some mappings are common to all users and
+some mappings are user-specific.
+* Add mappings to an application after it is made available to a
+customer (even post-deployment).
+* Use the same `EntityManagerFactory` interface to work with data after
+mappings have changed.
+* Provide an additional source of metadata to be used by an application.
+
+Use the `@VirtualAccessMethods` annotation to specify that a JPA entity
+is extensible and use the `@XmlVirtualAccessMethods` annotation to
+specify that a JAXB bean is extensible. In both cases, you use virtual
+properties to specify external mappings. This allows you to modify the
+mappings without modifying source files and without redeploying the
+persistence unit.
+
+For information on how to make JPA entities and JAXB beans extensible,
+see "Making JPA Entities and JAXB Beans Extensible" in _Solutions Guide
+for EclipseLink_.
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|=======================================================================
+a|
+[width="96%",cols=",^50%,^50%",]
+|=======================================================================
+| 
+|link:entities007.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:descriptors.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|=======================================================================
+
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[cols=",^,,^,,^",]
+|=======================================================================
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|=======================================================================
+
+|=======================================================================
+
+[[copyright]]
+Copyright © 2012 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

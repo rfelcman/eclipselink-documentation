@@ -1,0 +1,87 @@
+[[cse]][[top]]
+
+[width="100%",cols="<50%,>50%",]
+|=======================================================================
+a|
+Understanding EclipseLink, *3.0* +
+
+ a|
+[cols=",^,,^,,^",]
+|=======================================================================
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|=======================================================================
+
+|=======================================================================
+
+'''''
+
+[cols="^,^,",]
+|=======================================================================
+|link:entities001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:entities003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|=======================================================================
+
+[[BGBBIEHE]][[OTLCG94280]]
+
+Entities and Persistent Identity
+--------------------------------
+
+Every entity must have a persistent identity, which is an equivalent of
+a primary key in a database table that stores the entity state.
+
+By default, the EclipseLink persistence provider assumes that each
+entity has at least one field or property that serves as a primary key.
+
+You can generate and/or configure the identity of your entities by using
+the following annotations:
+
+* `@Id`
+* `@IdClass`
+* `@EmbeddedId`
+* `@GeneratedValue`
+* `@TableGenerator`
+* `@SequenceGenerator`
+* `@UuidGenerator`
+
+You can also use these annotations to fine-tune how your database
+maintains the identity of your entities. For more information on these
+annotations, see http://jcp.org/en/jsr/detail?id=338["Metadata for
+Object/Relational Mapping" in the JPA Specification].
+
+`http://jcp.org/en/jsr/detail?id=338`
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|=======================================================================
+a|
+[width="96%",cols=",^50%,^50%",]
+|=======================================================================
+| 
+|link:entities001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:entities003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|=======================================================================
+
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[cols=",^,,^,,^",]
+|=======================================================================
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|=======================================================================
+
+|=======================================================================
+
+[[copyright]]
+Copyright © 2012 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

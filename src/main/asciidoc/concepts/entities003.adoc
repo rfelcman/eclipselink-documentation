@@ -1,0 +1,74 @@
+[[cse]][[top]]
+
+[width="100%",cols="<50%,>50%",]
+|=======================================================================
+a|
+Understanding EclipseLink, *3.0* +
+
+ a|
+[cols=",^,,^,,^",]
+|=======================================================================
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|=======================================================================
+
+|=======================================================================
+
+'''''
+
+[cols="^,^,",]
+|=======================================================================
+|link:entities002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:entities004.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|=======================================================================
+
+[[BABCCFHI]][[OTLCG94281]]
+
+Entities and Database Tables
+----------------------------
+
+Every entity class maps to a specific table or set of tables in the
+database. By default, the entity's table name is defaulted as its entity
+name as uppercase, which defaults to the entity's short class name. An
+entity normally maps to a single table, but can also map to multiple
+tables, or even a view.
+
+You can customize an entity's tables using the following annotations:
+
+* `@Table`
+* `@SecondaryTable`
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|=======================================================================
+a|
+[width="96%",cols=",^50%,^50%",]
+|=======================================================================
+| 
+|link:entities002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:entities004.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|=======================================================================
+
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[cols=",^,,^,,^",]
+|=======================================================================
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|=======================================================================
+
+|=======================================================================
+
+[[copyright]]
+Copyright © 2012 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

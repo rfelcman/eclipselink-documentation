@@ -1,0 +1,78 @@
+[[cse]][[top]]
+
+[width="100%",cols="<50%,>50%",]
+|=======================================================================
+a|
+Understanding EclipseLink, *3.0* +
+
+ a|
+[cols=",^,,^,,^",]
+|=======================================================================
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|=======================================================================
+
+|=======================================================================
+
+'''''
+
+[cols="^,^,",]
+|=======================================================================
+|link:cache010.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:cache012.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|=======================================================================
+
+[[CHDGGCBB]]
+
+Clustering and Cache Consistency
+--------------------------------
+
+EclipseLink applications that are deployed to an application server
+cluster benefit from cluster scalability, load balancing, and failover.
+These capabilities ensure that EclipseLink applications are highly
+available and scale as application demand increases. EclipseLink
+applications are deployed the same way in application server clusters as
+they are in standalone server environments. However, additional planning
+and configuration is required to ensure cache consistency in an
+application server cluster.
+
+To ensure cache consistency you perform tasks such as disabling entity
+caching, refreshing the cache, setting entity expiration, and setting
+optimistic locking on the cache. For more information on these topics,
+see "Task 1: Configure Cache Consistency" in _Solutions Guide for
+EclipseLink_.
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|=======================================================================
+a|
+[width="96%",cols=",^50%,^50%",]
+|=======================================================================
+| 
+|link:cache010.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:cache012.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|=======================================================================
+
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[cols=",^,,^,,^",]
+|=======================================================================
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|=======================================================================
+
+|=======================================================================
+
+[[copyright]]
+Copyright © 2012 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

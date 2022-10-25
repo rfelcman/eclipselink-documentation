@@ -4231,9 +4231,8 @@ link:#CHECIDGH["@TenantDiscriminatorColumn"].
 
 [[TLJPA710]][[sthref189]]
 
- +
-Examples
-++++++++
+* +
+Examples*
 
 The following example uses `@Multitenant`, `@TenantDiscriminatorColumn`,
 and a context property to define single-table multitenancy on an entity:
@@ -4309,9 +4308,8 @@ types, see link:#CHDFJJEC["@TenantTableDiscriminator"].
 
 [[TLJPA714]][[sthref192]]
 
- +
-Examples
-++++++++
+* +
+Examples*
 
 The following example shows the `@Multitenant` annotation used to define
 table-per-tenant multitenancy on an entity.
@@ -4372,9 +4370,8 @@ superclass, using `@Multitenant` and `@TenantDiscriminatorColumn`:
 
 [[TLJPA718]][[sthref195]]
 
- +
-Examples
-++++++++
+* +
+Examples*
 
 link:#CHDIEFCF[Example 2-63] shows VPD multitenancy defined on an
 entity. As noted above, VPD in the database must also be configured to

@@ -1,0 +1,94 @@
+[[cse]][[top]]
+
+[width="100%",cols="<50%,>50%",]
+|=======================================================================
+a|
+Understanding EclipseLink, *3.0* +
+
+ a|
+[cols=",^,,^,,^",]
+|=======================================================================
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|=======================================================================
+
+|=======================================================================
+
+'''''
+
+[cols="^,^,",]
+|=======================================================================
+|link:cache005.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:cache007.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|=======================================================================
+
+[[A8003897]][[OTLCG94335]]
+
+About Cache Indexes
+-------------------
+
+The EclipseLink cache is indexed by the entity's Id. This allows the
+`find()` operation, relationships, and queries by Id to obtain cache
+hits and avoid database access. The cache is not used by default for any
+non-Id query. All non-Id queries will access the database then resolve
+with the cache for each row returned in the result-set.
+
+Applications tend to have other unique keys in their model in addition
+to their Id. This is quite common when a generated Id is used. The
+application frequently queries on these unique keys, and it is desirable
+to be able to obtain cache hits to avoid database access on these
+queries.
+
+Cache indexes allow an in-memory index to be created in the EclipseLink
+cache to allow cache hits on non-Id fields. The cache index can be on a
+single field, or on a set of fields. The indexed fields can be
+updateable, and although they should be unique, this is not a
+requirement. Queries that contain the indexed fields will be able to
+obtain cache hits. Only single results can be obtained from indexed
+queries.
+
+Cache indexes can be configured using the `@CacheIndex` and
+`@CacheIndexes` annotations and `<cache-index>` XML element. A
+`@CacheIndex` can be defined on the entity, or on an attribute to index
+the attribute. Indexes defined on the entity must define the
+`columnNames` used for the index. An index can be configured to be
+re-indexed when the object is updated using the updateable attribute.
+
+It is still possible to cache query results for non-indexed queries
+using the query result cache. For more information, see
+link:cache008.htm#CDEBGAHD[About Query Results Cache.]
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|=======================================================================
+a|
+[width="96%",cols=",^50%,^50%",]
+|=======================================================================
+| 
+|link:cache005.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:cache007.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|=======================================================================
+
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[cols=",^,,^,,^",]
+|=======================================================================
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|=======================================================================
+
+|=======================================================================
+
+[[copyright]]
+Copyright © 2012 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

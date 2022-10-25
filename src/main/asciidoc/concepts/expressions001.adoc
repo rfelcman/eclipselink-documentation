@@ -1,0 +1,89 @@
+[[cse]][[top]]
+
+[width="100%",cols="<50%,>50%",]
+|=======================================================================
+a|
+Understanding EclipseLink, *3.0* +
+
+ a|
+[cols=",^,,^,,^",]
+|=======================================================================
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|=======================================================================
+
+|=======================================================================
+
+'''''
+
+[cols="^,^,",]
+|=======================================================================
+|link:expressions.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:expressions002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|=======================================================================
+
+[[CJACHEAD]][[OTLCG94240]]
+
+About the Expression Framework
+------------------------------
+
+The EclipseLink expression framework provides methods through the
+following classes:
+
+* The `Expression` class provides most general functions, such as
+`toUpperCase`.
+* The `ExpressionMath` class supplies mathematical methods.
+
+This division of functionality enables EclipseLink expressions to
+provide similar mathematical functionality to the `java.lang.Math`
+class, but keeps both the `Expression` and `ExpressionMath` classes from
+becoming unnecessarily complex.
+
+Expressions offer the following advantages over SQL when you access a
+database:
+
+* Expressions are easier to maintain because the database is abstracted.
+* Changes to descriptors or database tables do not affect the querying
+structures in the application.
+* Expressions enhance readability by standardizing the `Query` interface
+so that it looks similar to traditional Java calling conventions.
+* Expressions allow read queries to transparently query between two
+classes that share a relationship. If these classes are stored in
+multiple tables in the database, EclipseLink automatically generates the
+appropriate join statements to return information from both tables.
+* Expressions simplify complex operations.
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|=======================================================================
+a|
+[width="96%",cols=",^50%,^50%",]
+|=======================================================================
+| 
+|link:expressions.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:expressions002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|=======================================================================
+
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[cols=",^,,^,,^",]
+|=======================================================================
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|=======================================================================
+
+|=======================================================================
+
+[[copyright]]
+Copyright © 2012 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

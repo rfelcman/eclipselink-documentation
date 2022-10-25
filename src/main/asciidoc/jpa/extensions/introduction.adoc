@@ -16,11 +16,10 @@
 
 ///////////////////////////////////////////////////////////////////////////////
 
-= Introduction
 :description: EclipseLink
 :keywords: eclipselink, java, jpa, persistence, introduction
 
-== Jakarta Persistence API (JPA) Extensions Reference for EclipseLink, Release 3.0
+= Jakarta Persistence API (JPA) Extensions Reference for EclipseLink, Release 3.0
 
 == Introduction
 

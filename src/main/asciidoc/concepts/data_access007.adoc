@@ -1,0 +1,77 @@
+[[cse]][[top]]
+
+[width="100%",cols="<50%,>50%",]
+|=======================================================================
+a|
+Understanding EclipseLink, *3.0* +
+
+ a|
+[cols=",^,,^,,^",]
+|=======================================================================
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|=======================================================================
+
+|=======================================================================
+
+'''''
+
+[cols="^,^,",]
+|=======================================================================
+|link:data_access006.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:data_access008.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|=======================================================================
+
+[[A1104999]][[OTLCG94320]]
+
+About Data Partitioning Policies
+--------------------------------
+
+Data partitioning allows an application to scale its data across more
+than a single database machine. For more information on data
+partitioning, see "Using Data Partitioning to Scale Data" in _Solutions
+Guide for EclipseLink_.
+
+Some databases support clustering the database across multiple machines.
+Oracle RAC allows for a single database to span multiple different
+server nodes. Oracle RAC also supports table and node partitioning of
+data. A database cluster allows for any of the data to be accessed from
+any node in the cluster. However, it is generally more efficient to
+partition the data access to specific nodes, to reduce cross node
+communication. For more information, see "Clustered Databases and Oracle
+RAC" in _Solutions Guide for EclipseLink_.
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|=======================================================================
+a|
+[width="96%",cols=",^50%,^50%",]
+|=======================================================================
+| 
+|link:data_access006.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:data_access008.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|=======================================================================
+
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[cols=",^,,^,,^",]
+|=======================================================================
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|=======================================================================
+
+|=======================================================================
+
+[[copyright]]
+Copyright © 2012 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

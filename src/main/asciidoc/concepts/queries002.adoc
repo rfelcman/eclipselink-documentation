@@ -1,0 +1,137 @@
+[[cse]][[top]]
+
+[width="100%",cols="<50%,>50%",]
+|=======================================================================
+a|
+Understanding EclipseLink, *3.0* +
+
+ a|
+[cols=",^,,^,,^",]
+|=======================================================================
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|=======================================================================
+
+|=======================================================================
+
+'''''
+
+[cols="^,^,",]
+|=======================================================================
+|link:queries001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:queries003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|=======================================================================
+
+[[CHDJHGFI]][[OTLCG94000]]
+
+About JPQL Queries
+------------------
+
+The Java Persistence Query Language (JPQL) is the query language defined
+by JPA. JPQL is similar to SQL, but operates on objects, attributes and
+relationships instead of tables and columns. JPQL can be used for
+reading (`SELECT`), as well as bulk updates (`UPDATE`) and deletes
+(`DELETE`). JPQL can be used in a `NamedQuery` (through annotations or
+XML) or in dynamic queries using the `EntityManager` `createQuery()`
+API.
+
+The disadvantage of JPQL is that dynamic queries require performing
+string concatenations to build queries dynamically from web forms or
+dynamic content. JPQL is also not checked until runtime, making
+typographical errors more common. These disadvantages are reduced by
+using the query Criteria API, described
+link:queries004.htm#A7714964[About the Criteria API.]
+
+[[CIHFHJBE]][[OTLCG94375]]
+
+EclipseLink Extensions to JPQL
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+EclipseLink supports all of the statements and clauses described in
+"Query Language" in the JPA Specification, including `SELECT` queries,
+update and delete statements, `WHERE` clauses, literal values, and
+database functions. For more information, see the JPA Specification.
+
+`http://jcp.org/en/jsr/detail?id=338`
+
+EclipseLink provides many extensions to the standard JPA JPQL. These
+extensions provide access to additional database features many of which
+are part of the SQL standard, provide access to native database features
+and functions, and provide access to EclipseLink specific features.
+
+EclipseLink's JPQL extensions include:
+
+* Less restrictions than JPQL, allows sub-selects and functions within
+operations such as `LIKE`, `IN`, `ORDER` `BY`, constructors, functions
+etc.
+* Allow != in place of <>
+* `FUNCTION` operation to call database specific functions
+* `TREAT` operation to downcast related entities with inheritance
+* `OPERATOR` operation to call EclipseLink database independent
+functions
+* `SQL` operation to mix `SQL` with JPQL
+* `CAST` and `EXTRACT` functions
+* `REGEXP` function for regular expression querying
+* Usage of sub-selects in the `SELECT` and `FROM` clause
+* `ON` clause support for defining `JOIN` and `LEFT` `JOIN` conditions
+* Joins between independent entities
+* Usage of an alias on a `JOIN` `FETCH`
+* `COLUMN` operation to allow querying on nonmapped columns
+* `TABLE` operation to allow querying on non mapped tables
+* `UNION`, `INTERSECT`, `EXCEPT` support
+* Usage of object variables in =, <>, `IN`, `IS` `NULL`, and `ORDER`
+`BY`
+
+For descriptions of these extensions, see "EclipseLink Query Language"
+in _Jakarta Persistence API (JPA) Extensions Reference for EclipseLink_.
+
+[[CIHBIDFG]][[OTLCG94374]]
+
+EclipseLink Special Operators in JPQL
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+EclipseLink defines several special JPQL operators that allow performing
+database operations that are not possible in basic JPQL. These include:
+
+* `COLUMN`
+* `FUNCTION`
+* `OPERATOR`
+* `SQL`
+
+For descriptions of these operators, see "Special Operators" in _Jakarta
+Persistence API (JPA) Extensions Reference for EclipseLink_.
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|=======================================================================
+a|
+[width="96%",cols=",^50%,^50%",]
+|=======================================================================
+| 
+|link:queries001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:queries003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|=======================================================================
+
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[cols=",^,,^,,^",]
+|=======================================================================
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|=======================================================================
+
+|=======================================================================
+
+[[copyright]]
+Copyright © 2012 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

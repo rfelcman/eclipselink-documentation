@@ -13,4 +13,4 @@ Prerequisites:
 
 Run the full build:
 
-`mvn install`
+`mvn clean package`

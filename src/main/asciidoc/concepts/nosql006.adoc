@@ -1,0 +1,82 @@
+[[cse]][[top]]
+
+[width="100%",cols="<50%,>50%",]
+|=======================================================================
+a|
+Understanding EclipseLink, *3.0* +
+
+ a|
+[cols=",^,,^,,^",]
+|=======================================================================
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|=======================================================================
+
+|=======================================================================
+
+'''''
+
+[cols="^,^,",]
+|=======================================================================
+|link:nosql005.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:app_tl_ext.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|=======================================================================
+
+[[BJECGBHH]][[OTLCG94443]]
+
+About Transactions and the NoSQL Platform
+-----------------------------------------
+
+The JPA transaction API is supported with NoSQL data-sources. Some NoSQL
+data-sources might not support transactions, so the level of transaction
+support is dependent on the NoSQL platform. JTA persistence units and
+transactions are also supported, but unless the NoSQL adapter is
+integrated with JTA, no XA or transaction support will be available.
+
+If the NoSQL data-source does not support transactions, then any
+database change such as `flush()` will be committed directly to the
+database, and `rollback()` will not have any affect. A commit operation
+that fails will not roll back any successful changes written before the
+error. JPA normally does not write to the database until commit or
+`flush()` are called, so there will still be some level of transaction
+support offered by the persistence context.
+
+JPA operations `persist()`, `merge()`, and `remove()` are supported.
+
+* MongoDB—Transactions are not supported.
+* Oracle NoSQL—Transactions are not supported.
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|=======================================================================
+a|
+[width="96%",cols=",^50%,^50%",]
+|=======================================================================
+| 
+|link:nosql005.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:app_tl_ext.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|=======================================================================
+
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[cols=",^,,^,,^",]
+|=======================================================================
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|=======================================================================
+
+|=======================================================================
+
+[[copyright]]
+Copyright © 2012 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

@@ -1,0 +1,129 @@
+[[cse]][[top]]
+
+[width="100%",cols="<50%,>50%",]
+|=======================================================================
+a|
+Understanding EclipseLink, *3.0* +
+
+ a|
+[cols=",^,,^,,^",]
+|=======================================================================
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|=======================================================================
+
+|=======================================================================
+
+'''''
+
+[cols="^,^,",]
+|=======================================================================
+|link:app_tl_ext001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:app_tl_ext003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|=======================================================================
+
+[[A1115041]][[OTLCG94456]]
+
+Application Server Support
+--------------------------
+
+EclipseLink can be used with any Jakarta EE application server that
+meets the software requirements through the EclipseLink API.
+
+link:#BABFGEEC[Table A-2] lists the application servers for which
+EclipseLink provides integration support. The classes listed in the
+table are concrete subclasses of the EclipseLink
+`org.eclipse.persistence.platform.server.ServerPlatformBase` class,
+which is responsible for representing server-specific behavior. These
+classes determine the following behavior for the server:
+
+* Which external transaction controller to use
+* Whether to enable JTA (external transaction control)
+* How to register or unregister for runtime services (JMX or MBean)
+* Whether to enable runtime services
+* How to launch container Threads
+
+For more information on the Java classes listed in the table, see _Java
+API Reference for EclipseLink._
+
+[[OTLCG94457]][[sthref71]][[BABFGEEC]]
+
+*_Table A-2 Supported Application Servers_*
+
+[width="26%",cols="<100%,<",options="header",]
+|=======================================================================
+|*Server Name* |*Java Classes*
+|IBM WebSphere Application Server a|
+* `org.eclipse.persistence.platform.server.was.WebSphere_6_1_Platform`
+* `org.eclipse.persistence.platform.server.was.WebSphere_7_Platform`
+* `org.eclipse.persistence.platform.server.was.WebSpherePlatform`
+
+|JBoss Application Server a|
+* `org.eclipse.persistence.platform.server.jboss.JBossPlatform`
+
+|Oracle Containers for J2EE (OC4J) a|
+* `org.eclipse.persistence.platform.server.oc4j.Oc4jPlatform`
+
+|Oracle Sun Application Server a|
+* `org.eclipse.persistence.platform.server.sunas`
+
+|Oracle WebLogic Server a|
+* `org.eclipse.persistence.platform.server.wls.WebLogic_10_Platform`
+* `org.eclipse.persistence.platform.server.wls.WebLogic_9_Platform`
+* `org.eclipse.persistence.platform.server.wls.WebLogicPlatform`
+
+|SAP NetWeaver Application Server a|
+* `org.eclipse.persistence.platform.server.sap.SAPNetWeaver_7_1_Platform`
+
+|=======================================================================
+
+ +
+
+[[sthref72]]
+
+EclipseLink MOXy as the JAXB Provider for Application Servers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+EclipseLink MOXy is integrated into the GlassFish and WebLogic
+application servers as the JAXB provider. For more information, see the
+following links:
+
+* GlassFish Server:
+`http://blog.bdoughan.com/2012/02/glassfish-312-is-full-of-moxy.html`
+* WebLogic Server:
+`http://blog.bdoughan.com/2011/12/eclipselink-moxy-is-jaxb-provider-in.html`
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|=======================================================================
+a|
+[width="96%",cols=",^50%,^50%",]
+|=======================================================================
+| 
+|link:app_tl_ext001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:app_tl_ext003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|=======================================================================
+
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[cols=",^,,^,,^",]
+|=======================================================================
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|=======================================================================
+
+|=======================================================================
+
+[[copyright]]
+Copyright © 2012 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

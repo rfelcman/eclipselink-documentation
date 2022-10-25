@@ -1,0 +1,88 @@
+[[cse]][[top]]
+
+[width="100%",cols="<50%,>50%",]
+|=======================================================================
+a|
+Understanding EclipseLink, *3.0* +
+
+ a|
+[cols=",^,,^,,^",]
+|=======================================================================
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|=======================================================================
+
+|=======================================================================
+
+'''''
+
+[cols="^,^,",]
+|=======================================================================
+|link:data_access.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:data_access002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|=======================================================================
+
+[[CHDBIBBJ]][[OTLCG93599]]
+
+About Externally Managed Transactional Data Sources
+---------------------------------------------------
+
+EclipseLink transactional data sources are _externally managed_ if the
+connection pool is managed by a transaction service (such as an
+application server controlled transaction or a JTA transaction). A JTA
+managed data source or connection pool is commonly used in Jakarta EE
+applications and normally required in EJB applications. Use an
+externally-managed connection pool as follows:
+
+* Configure the session to use an `ExternalTransactionController` to
+integrate EclipseLink's persistence unit with the external transaction
+service. Use the `eclipselink.target-server persistence` unit property
+to configure the name of the class that implements the
+`ExternalTransactionController` interface.
+* Use the boolean `external-transaction-controller` option on the
+persistence unit to indicate that the transaction is managed by a
+transaction manager and should not be managed by EclipseLink. This can
+also be used if the datasource does not support transactions to specify
+the connection's login and inform EclipseLink that the connection is
+maintained by the external controller.
+* You may need to configure the EclipseLink read connection pool or
+sequence connection pool to use a non-JTA connection pool in order to
+avoid transactional overhead. For more information, see
+link:data_access006.htm#CHDJGAJE["Default (Write) and Read Connection
+Pools"] and link:data_access006.htm#CHDEFJHH["Sequence Connection
+Pools"].
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|=======================================================================
+a|
+[width="96%",cols=",^50%,^50%",]
+|=======================================================================
+| 
+|link:data_access.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:data_access002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|=======================================================================
+
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[cols=",^,,^,,^",]
+|=======================================================================
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|=======================================================================
+
+|=======================================================================
+
+[[copyright]]
+Copyright © 2012 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

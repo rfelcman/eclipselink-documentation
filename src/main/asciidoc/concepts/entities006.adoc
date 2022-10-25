@@ -1,0 +1,98 @@
+[[cse]][[top]]
+
+[width="100%",cols="<50%,>50%",]
+|=======================================================================
+a|
+Understanding EclipseLink, *3.0* +
+
+ a|
+[cols=",^,,^,,^",]
+|=======================================================================
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|=======================================================================
+
+|=======================================================================
+
+'''''
+
+[cols="^,^,",]
+|=======================================================================
+|link:entities005.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:entities007.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|=======================================================================
+
+[[BGBCGGDE]][[OTLCG94284]]
+
+Entities and Sequence Generation
+--------------------------------
+
+Many databases support an internal mechanism for id generation called
+sequences. You can use a database sequence to generate identifiers when
+the underlying database supports them.
+
+* `@SequenceGenerator`—If you use the `@GeneratedValue` annotation to
+specify a primary key generator of type `SEQUENCE`, then you can use the
+`@SequenceGenerator` annotation to fine-tune this primary key generator
+to do the following:
+** change the allocation size to match your application requirements or
+database performance parameters
+** change the initial value to match an existing data model (for
+example, if you are building on an existing data set for which a range
+of primary key values has already been assigned or reserved)
+** use a predefined sequence in an existing data model
+* `@TableGenerator`—If you use the `@GeneratedValue` annotation to
+specify a primary key generator of type `TABLE`, then you can use the
+`@TableGenerator` annotation to fine-tune this primary key generator to
+do the following:
+** change the name of the primary key generator's table, because the
+name is awkward, a reserved word, incompatible with a preexisting data
+model, or invalid as a table name in your database
+** change the allocation size to match your application requirements or
+database performance parameters
+** change the initial value to match an existing data model (for
+example, if you are building on an existing data set, for which a range
+of primary key values has already been assigned or reserved)
+** configure the primary key generator's table with a specific catalog
+or schema
+** configure a unique constraint on one or more columns of the primary
+key generator's table
+
+For more information and examples of these annotations, see
+http://jcp.org/en/jsr/detail?id=338["Metadata for Object/Relational
+Mapping" in the JPA Specification].
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|=======================================================================
+a|
+[width="96%",cols=",^50%,^50%",]
+|=======================================================================
+| 
+|link:entities005.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:entities007.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|=======================================================================
+
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[cols=",^,,^,,^",]
+|=======================================================================
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|=======================================================================
+
+|=======================================================================
+
+[[copyright]]
+Copyright © 2012 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

@@ -1,0 +1,74 @@
+///////////////////////////////////////////////////////////////////////////////
+
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
+
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
+
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
+
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+
+///////////////////////////////////////////////////////////////////////////////
+
+= Introduction
+:description: EclipseLink
+:keywords: eclipselink, java, jpa, persistence, concepts, understanding
+:rootdir: {docdir}/concepts
+
+// == List of Examples
+:sectnums:
+include::{rootdir}/loe.adoc[]
+
+// == Preface
+:sectnums:
+include::{rootdir}/preface.adoc[]
+
+// == Overview of EclipseLink
+:sectnums:
+include::{rootdir}/general.adoc[]
+
+// == Understanding Object-Relational and MOXy Internals
+:sectnums:
+include::{rootdir}/blocks.adoc[]
+
+// == Understanding the Persistence Unit
+:sectnums:
+include::{rootdir}/app_dev.adoc[]
+
+// == Understanding Entities
+:sectnums:
+include::{rootdir}/entities.adoc[]
+
+// == Understanding Descriptors
+:sectnums:
+include::{rootdir}/descriptors.adoc[]
+
+// == Understanding Mappings
+:sectnums:
+include::{rootdir}/mappingintro.adoc[]
+
+// == Understanding Data Access
+:sectnums:
+include::{rootdir}/data_access.adoc[]
+
+// == Understanding Caching
+:sectnums:
+include::{rootdir}/cache.adoc[]
+
+// == Understanding Queries
+:sectnums:
+include::{rootdir}/queries.adoc[]
+
+// == Understanding EclipseLink Expressions
+:sectnums:
+include::{rootdir}/expressions.adoc[]
+
+// == Understanding Non-relational Data Sources
+:sectnums:
+include::{rootdir}/nosql.adoc[]

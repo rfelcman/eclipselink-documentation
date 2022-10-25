@@ -1,0 +1,83 @@
+[[cse]][[top]]
+
+[width="100%",cols="<50%,>50%",]
+|=======================================================================
+a|
+Understanding EclipseLink, *3.0* +
+
+ a|
+[cols=",^,,^,,^",]
+|=======================================================================
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|=======================================================================
+
+|=======================================================================
+
+'''''
+
+[cols="^,^,",]
+|=======================================================================
+|link:data_access008.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:cache.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|=======================================================================
+
+[[BEICGJIF]]
+
+About Heterogeneous Batch Writing
+---------------------------------
+
+The current release provides persistence unit properties to optimize
+transactions with multiple writes. The `eclipselink.jdbc.batch-writing`
+property configures the use of batch writing to optimize transactions
+with multiple writes. Batch writing allows multiple heterogeneous
+dynamic SQL statements to be sent to the database as a single execution,
+or multiple homogeneous parameterized SQL statements to be executed as a
+single batch execution.Note that not all JDBC drivers, or databases
+support batch writing.
+
+The `eclipselink.jdbc.batch-writing.size` property configures the batch
+size used for batch writing. For parameterized batch writing this is the
+number of statements to batch, default 100. For dynamic batch writing,
+this is the size of the batched SQL buffer, default 32k.
+
+The `eclipselink.jdbc.batch-writing` persistence property can also be
+used with query hints to configure if a modify query can be batched
+through batch writing. Some types of queries cannot be batched, such as
+DDL on some databases. Disabling batch writing will also allow the row
+count to be returned.
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|=======================================================================
+a|
+[width="96%",cols=",^50%,^50%",]
+|=======================================================================
+| 
+|link:data_access008.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:cache.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|=======================================================================
+
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[cols=",^,,^,,^",]
+|=======================================================================
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|=======================================================================
+
+|=======================================================================
+
+[[copyright]]
+Copyright © 2012 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

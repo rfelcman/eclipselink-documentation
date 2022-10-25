@@ -1,0 +1,82 @@
+[[cse]][[top]]
+
+[width="100%",cols="<50%,>50%",]
+|=======================================================================
+a|
+Understanding EclipseLink, *3.0* +
+
+ a|
+[cols=",^,,^,,^",]
+|=======================================================================
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|=======================================================================
+
+|=======================================================================
+
+'''''
+
+[cols="^,^,",]
+|=======================================================================
+|link:data_access004.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:data_access006.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|=======================================================================
+
+[[CHDJBIGE]][[OTLCG93610]]
+
+About Connections
+-----------------
+
+A connection is an object that provides access to a data source by way
+of the driver you configure your application to use. Relational projects
+use JDBC to connect to the data source; EIS projects use JCA.
+EclipseLink uses the interface
+`org.eclipse.persistence.internal.databaseaccess.Accessor` to wrap data
+source connections. This interface is accessible from certain events.
+
+Typically, when using a server session, EclipseLink uses a different
+connection for both reading and writing. This lets you use
+nontransactional connections for reading and avoid maintaining
+connections when not required.
+
+By default, an EclipseLink server session acquires connections lazily:
+that is, only during the commit operation of a persistence unit.
+Alternatively, you can configure EclipseLink to acquire a write
+connections at the time you acquire a client sessions.
+
+Connections can be allocated from internal or external connection pools.
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|=======================================================================
+a|
+[width="96%",cols=",^50%,^50%",]
+|=======================================================================
+| 
+|link:data_access004.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:data_access006.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|=======================================================================
+
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[cols=",^,,^,,^",]
+|=======================================================================
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|=======================================================================
+
+|=======================================================================
+
+[[copyright]]
+Copyright © 2012 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

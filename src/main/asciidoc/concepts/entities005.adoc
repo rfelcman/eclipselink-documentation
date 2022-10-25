@@ -1,0 +1,77 @@
+[[cse]][[top]]
+
+[width="100%",cols="<50%,>50%",]
+|=======================================================================
+a|
+Understanding EclipseLink, *3.0* +
+
+ a|
+[cols=",^,,^,,^",]
+|=======================================================================
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|=======================================================================
+
+|=======================================================================
+
+'''''
+
+[cols="^,^,",]
+|=======================================================================
+|link:entities004.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:entities006.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|=======================================================================
+
+[[BABGBFDG]][[OTLCG94283]]
+
+Entities and Embedded Objects
+-----------------------------
+
+You can use the `@Embeddable` annotation to map an embedded class. An
+embeddable is a special type of class that is not directly persistent,
+but persisted only with its parent entity. An embeddable can be
+referenced from an entity or another embeddable using the `@Embedded`
+annotation for a single reference, `@EmbeddedId` for an embedded id, or
+the `@ElementCollection` annotation for a `Collection` or `Map`
+reference. An embeddable can also be used in any `Map` key using the
+`@MapKeyClass` annotation.
+
+* `@Embeddable`
+* `@EmbeddedId`
+* `@Embedded`
+* `@ElementCollection`
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|=======================================================================
+a|
+[width="96%",cols=",^50%,^50%",]
+|=======================================================================
+| 
+|link:entities004.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:entities006.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|=======================================================================
+
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[cols=",^,,^,,^",]
+|=======================================================================
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|=======================================================================
+
+|=======================================================================
+
+[[copyright]]
+Copyright © 2012 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +
