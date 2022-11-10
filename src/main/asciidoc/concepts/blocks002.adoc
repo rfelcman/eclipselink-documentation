@@ -1,35 +1,22 @@
-[[cse]][[top]]
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|=======================================================================
-a|
-Understanding EclipseLink, *3.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
- a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|=======================================================================
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|=======================================================================
-|link:blocks001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:blocks003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|=======================================================================
+///////////////////////////////////////////////////////////////////////////////
 
-[[CHDDJCHD]][[OTLCG135]]
-
-About the Object-Relational Solution
-------------------------------------
+=== About the Object-Relational Solution
 
 EclipseLink provides a complete, JPA-compliant JPA implementation. It
 provides complete compliance for all of the mandatory features and many
@@ -53,8 +40,7 @@ The following sections describe many of these features.
 
 [[CHDHIEDE]][[OTLCG136]]
 
-Understanding Object-Relational Entity Architecture
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Understanding Object-Relational Entity Architecture
 
 The entity architecture is composed of entities, persistence units,
 persistence contexts, entity manager factories, and entity managers.
@@ -70,18 +56,14 @@ elements:
 
 *_Figure 2-2 Relationships Between Entity Architecture Elements_*
 
-image:img/otlcg_jd_001.gif[Relationships between entity architectue
-elements,title="Relationships between entity architectue elements"] +
-link:img_text/otlcg_jd_001.htm[Description of "Figure 2-2 Relationships
-Between Entity Architecture Elements"] +
- +
+image:concepts/img/otlcg_jd_001.gif[Relationships between entity architectue elements,title="Relationships between entity architectue elements"] +
+xref:concepts/img_text/otlcg_jd_001.adoc[Description of "Figure 2-2 Relationships Between Entity Architecture Elements"] +
 
 [[OTLCG138]]
 
 [[sthref14]]
 
-Entities
-^^^^^^^^
+===== Entities
 
 An entity is any application-defined object with the following
 characteristics:
@@ -125,8 +107,7 @@ for EclipseLink_.
 
 [[sthref15]]
 
-Persistence and Persistence Units
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===== Persistence and Persistence Units
 
 Persistence is a characteristic of an entity. This means that the entity
 can be represented in a data store, and it can be accessed at a later
@@ -143,8 +124,7 @@ manager factory inherit the properties defined in the persistence unit.
 
 [[sthref16]]
 
-Entity Managers
-^^^^^^^^^^^^^^^
+===== Entity Managers
 
 An entity manager enables API calls to perform operations on an entity.
 Until an entity manager is used to create, read, or write an entity, the
@@ -173,8 +153,7 @@ request a specific configuration to be bound to an
 
 [[CHDIADII]][[OTLCG141]]
 
-Adding Metadata Using Annotations
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Adding Metadata Using Annotations
 
 An annotation is a simple, expressive means of decorating Java source
 code with metadata that is compiled into the corresponding Java class
@@ -218,8 +197,7 @@ owned by other entities.
 
 [[sthref17]]
 
-Advantages and Disadvantages of Using Annotations
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===== Advantages and Disadvantages of Using Annotations
 
 Using annotations provides several advantages:
 
@@ -234,8 +212,7 @@ and recompiling the source code.
 
 [[CHDIEIFJ]][[OTLCG142]]
 
-About Configuration Basics
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== About Configuration Basics
 
 The following sections describe some of the key configuration files in
 an Object Relational Mapping project.
@@ -244,8 +221,7 @@ an Object Relational Mapping project.
 
 [[sthref18]]
 
-Default Annotation Values
-^^^^^^^^^^^^^^^^^^^^^^^^^
+===== Default Annotation Values
 
 Each annotation has a default value (consult the JPA specification for
 defaults). A persistence engine defines defaults that apply to the
@@ -254,19 +230,8 @@ to override the default value. Therefore, having to supply a
 configuration value is not a requirement, but the exception to the rule.
 This is known as configuration by exception.
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-You should be familiar with the defaults to be able to change the
+NOTE: You should be familiar with the defaults to be able to change the
 behavior when necessary.
-
-|=======================================================================
-
- +
 
 The default values are described in _Jakarta Persistence API (JPA)
 Extensions Reference for EclipseLink_. See also Chapter 10, "Metadata
@@ -281,8 +246,7 @@ one of the configuration files, then a default value is used.
 
 [[sthref19]]
 
-Configuring Persistence Units Using persistence.xml
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===== Configuring Persistence Units Using persistence.xml
 
 A persistence unit defines the details that are required when you
 acquire an entity manager. You specify a persistence unit by name when
@@ -300,8 +264,7 @@ in _Jakarta Persistence API (JPA) Extensions Reference for EclipseLink_.
 
 [[CHDFGGBB]][[OTLCG130]]
 
-Object-Relational Data Type Mappings
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===== Object-Relational Data Type Mappings
 
 Object-relational data type mappings transform certain object data
 member types to structured data source representations optimized for
@@ -317,8 +280,7 @@ Reference for EclipseLink_.
 
 [[CHDFFBHD]][[OTLCG146]]
 
-About Data Sources
-~~~~~~~~~~~~~~~~~~
+==== About Data Sources
 
 An important part of the definition of the persistence unit is the
 location where the provider can find data to read and write. This is
@@ -350,8 +312,7 @@ Outside a Container" in _Solutions Guide for EclipseLink_.
 
 [[CHDGGEID]][[OTLCG147]]
 
-About EclipseLink Caches
-~~~~~~~~~~~~~~~~~~~~~~~~
+==== About EclipseLink Caches
 
 By default, EclipseLink uses a shared object cache that caches a subset
 of all objects read and persisted for the persistence unit. The shared
@@ -397,8 +358,7 @@ For more information, see link:cache.htm#CDEFHHEH[Chapter 8,
 
 [[sthref20]]
 
-Defining Cache Behavior
-^^^^^^^^^^^^^^^^^^^^^^^
+===== Defining Cache Behavior
 
 EclipseLink provides an `@Cache` annotation which lets you define cache
 properties. The properties include cache type, size, and refresh rules,
@@ -409,8 +369,7 @@ for EclipseLink_.
 
 [[sthref21]]
 
-Caching in Clustered Environments
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===== Caching in Clustered Environments
 
 Caching in a clustered environment can have problems because changes
 made on one server are not reflected on objects cached in other servers.
@@ -431,8 +390,7 @@ Cache Coordination].
 
 [[CHDFGCJB]][[OTLCG150]]
 
-About Database Queries
-~~~~~~~~~~~~~~~~~~~~~~
+==== About Database Queries
 
 The object-relational component of EclipseLink supports a variety of
 queries.
@@ -448,34 +406,3 @@ queries.
 
 For information on these queries, see link:queries.htm#CHDGGCJB[Chapter
 9, "Understanding Queries."]
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|=======================================================================
-a|
-[width="96%",cols=",^50%,^50%",]
-|=======================================================================
-| 
-|link:blocks001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:blocks003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|=======================================================================
-
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
-
-|=======================================================================
-
-[[copyright]]
-Copyright © 2012 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

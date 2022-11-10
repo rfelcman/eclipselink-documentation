@@ -20,55 +20,59 @@
 :description: EclipseLink
 :keywords: eclipselink, java, jpa, persistence, concepts, understanding
 :rootdir: {docdir}/concepts
+include::attributes.adoc[]
 
 // == List of Examples
-:sectnums:
+:sectnums!:
 include::{rootdir}/loe.adoc[]
 
+// == Title and Copyright Information
+include::{rootdir}/title_eclipselink.adoc[]
+
 // == Preface
-:sectnums:
 include::{rootdir}/preface.adoc[]
 
 // == Overview of EclipseLink
 :sectnums:
+:sectnumlevels: 1
 include::{rootdir}/general.adoc[]
 
 // == Understanding Object-Relational and MOXy Internals
-:sectnums:
+// :sectnums:
 include::{rootdir}/blocks.adoc[]
 
 // == Understanding the Persistence Unit
-:sectnums:
+// :sectnums:
 include::{rootdir}/app_dev.adoc[]
 
 // == Understanding Entities
-:sectnums:
+// :sectnums:
 include::{rootdir}/entities.adoc[]
 
 // == Understanding Descriptors
-:sectnums:
+// :sectnums:
 include::{rootdir}/descriptors.adoc[]
 
 // == Understanding Mappings
-:sectnums:
+// :sectnums:
 include::{rootdir}/mappingintro.adoc[]
 
 // == Understanding Data Access
-:sectnums:
+// :sectnums:
 include::{rootdir}/data_access.adoc[]
 
 // == Understanding Caching
-:sectnums:
+// :sectnums:
 include::{rootdir}/cache.adoc[]
 
 // == Understanding Queries
-:sectnums:
+// :sectnums:
 include::{rootdir}/queries.adoc[]
 
 // == Understanding EclipseLink Expressions
-:sectnums:
+// :sectnums:
 include::{rootdir}/expressions.adoc[]
 
 // == Understanding Non-relational Data Sources
-:sectnums:
+// :sectnums:
 include::{rootdir}/nosql.adoc[]

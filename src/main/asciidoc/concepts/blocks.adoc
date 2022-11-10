@@ -20,7 +20,7 @@
 :keywords: eclipselink, java, jpa, persistence, concepts, orm, moxy
 :rootdir: {docdir}/concepts
 
-= Understanding Object-Relational and MOXy Internals
+== Understanding Object-Relational and MOXy Internals
 
 This chapter describes the features of the Object-Relational and MOXy
 architecture.
@@ -28,13 +28,10 @@ architecture.
 This chapter includes the following sections:
 
 // == About Metadata
-:sectnums:
 include::{rootdir}/blocks001.adoc[]
 
 // == About the Object-Relational Solution
-:sectnums:
 include::{rootdir}/blocks002.adoc[]
 
 // == About the MOXy Solution
-:sectnums:
 include::{rootdir}/blocks003.adoc[]

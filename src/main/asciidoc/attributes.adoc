@@ -16,20 +16,4 @@
 
 ///////////////////////////////////////////////////////////////////////////////
 
-=== EclipseLink
-
-Understanding EclipseLink {release-version}
-
-December 2022
-
-*Understanding EclipseLink (Concepts Guide*)
-
-Copyright © 2022 by The Eclipse Foundation under the Eclipse Public
-License (EPL)
-
-`http://www.eclipse.org/org/documents/epl-v10.php`
-
-The initial contribution of this content was based on work copyrighted
-by Oracle and was submitted with permission.
-
-Print date: December, 2022
+:release-version: 4.0.0

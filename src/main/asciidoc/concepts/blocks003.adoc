@@ -1,35 +1,22 @@
-[[cse]][[top]]
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|=======================================================================
-a|
-Understanding EclipseLink, *3.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
- a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|=======================================================================
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|=======================================================================
-|link:blocks002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:app_dev.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|=======================================================================
+///////////////////////////////////////////////////////////////////////////////
 
-[[CHDJGIEF]][[OTLCG155]]
-
-About the MOXy Solution
------------------------
+=== About the MOXy Solution
 
 The MOXy component, supplied by EclipseLink, enables you to efficiently
 bind Java classes to XML schemas. MOXy implements JAXB, enabling you to
@@ -61,8 +48,7 @@ The following sections describe many of these features.
 
 [[CHDBGGJD]][[OTLCG156]]
 
-Using EclipseLink MOXy as the JAXB Provider
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Using EclipseLink MOXy as the JAXB Provider
 
 To use MOXy as your JAXB provider, you must identify the entry point to
 the JAXB runtime. This entry point is the EclipseLink
@@ -82,8 +68,7 @@ classes.
 
 [[CHDBDFCI]][[OTLCG157]]
 
-Understanding MOXy Architecture
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Understanding MOXy Architecture
 
 In the sample MOXy architecture illustrated in link:#CHDCBEEE[Figure
 2-3], the starting point is an XML schema. A binding compiler binds the
@@ -100,16 +85,12 @@ instance in the XML.
 
 *_Figure 2-3 A Sample MOXy Architecture_*
 
-image:img/jaxb_overview.png[Process in an Object-XML
-project.,title="Process in an Object-XML project."] +
-link:img_text/jaxb_overview.htm[Description of "Figure 2-3 A Sample MOXy
-Architecture"] +
- +
+image:concepts/img/jaxb_overview.png[Process in an Object-XML project.,title="Process in an Object-XML project."] +
+xref:concepts/img_text/jaxb_overview.adoc[Description of "Figure 2-3 A Sample MOXy Architecture"] +
 
 [[CHDDHHEI]][[OTLCG159]]
 
-JAXB Contexts and JAXB Context Factories
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===== JAXB Contexts and JAXB Context Factories
 
 The `JAXBContextFactory` class is the entry point into the EclipseLink
 JAXB runtime. It provides the required factory methods and can create
@@ -138,8 +119,7 @@ mappings for your Java classes
 
 [[CHDIJADI]][[OTLCG160]]
 
-Serving Metadata for MOXy
-~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Serving Metadata for MOXy
 
 In addition to the input options described in link:#CHDDHHEI[JAXB
 Contexts and JAXB Context Factories,] MOXy provides the concept of a
@@ -151,8 +131,7 @@ Applications EclipseLink MOXy_.
 
 [[CHDCHHHI]][[OTLCG161]]
 
-About XML Bindings
-~~~~~~~~~~~~~~~~~~
+==== About XML Bindings
 
 XML binding is how you represent information in an XML document as an
 object in computer memory. This allows applications to access the data
@@ -183,42 +162,10 @@ MOXy_.
 
 [[CHDDHJAJ]][[OTLCG163]]
 
-Querying Objects by XPath
-~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Querying Objects by XPath
 
 In addition to using conventional Java access methods to get and set
 your object's values, EclipseLink MOXy also lets you access values using
 an XPath statement. There are special APIs on EclipseLink's
 `JAXBContext` object that enable you to get and set values by XPath. For
 more information, see _Developing JAXB Applications EclipseLink MOXy_.
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|=======================================================================
-a|
-[width="96%",cols=",^50%,^50%",]
-|=======================================================================
-| 
-|link:blocks002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:app_dev.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|=======================================================================
-
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
-
-|=======================================================================
-
-[[copyright]]
-Copyright © 2012 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

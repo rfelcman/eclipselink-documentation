@@ -1,35 +1,22 @@
-[[cse]][[top]]
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|=======================================================================
-a|
-Understanding EclipseLink, *3.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
- a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|=======================================================================
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|=======================================================================
-|link:general003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:general005.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|=======================================================================
+///////////////////////////////////////////////////////////////////////////////
 
-[[CHDIEEHG]][[OTLCG114]]
-
-Key Components
---------------
+=== Key Components
 
 link:#CHDGIFIA[Figure 1-1] illustrates the components contained by
 EclipseLink. The following sections describe the components.
@@ -38,18 +25,14 @@ EclipseLink. The following sections describe the components.
 
 *_Figure 1-1 EclipseLink Components_*
 
-image:img/otlcg_jd_002_eclipselink.png[This figure is described in the
-text.,title="This figure is described in the text."] +
-link:img_text/otlcg_jd_002_eclipselink.htm[Description of "Figure 1-1
-EclipseLink Components"] +
- +
+image:concepts/img/otlcg_jd_002_eclipselink.png[This figure is described in the text.,title="This figure is described in the text."] +
+xref:concepts/img_text/otlcg_jd_002_eclipselink.adoc[Description of "Figure 1-1 EclipseLink Components"]
 
 [[OTLCG116]]
 
 [[sthref8]]
 
-EclipseLink Core and API
-~~~~~~~~~~~~~~~~~~~~~~~~
+==== EclipseLink Core and API
 
 The EclipseLink Core provides the runtime component. Access to the
 runtime can be obtained directly through the EclipseLink API. The
@@ -73,8 +56,7 @@ support for JAXB.
 
 [[sthref9]]
 
-Object-Relational (JPA 2.2) Component
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Object-Relational (JPA 2.2) Component
 
 JPA simplifies Java persistence. It provides an object-relational
 mapping approach that lets you declaratively define how to map Java
@@ -95,8 +77,7 @@ features included in the 2.2 JPA update are:
 
 [[CIHGBECC]]
 
-JAXB Component
-~~~~~~~~~~~~~~
+==== JAXB Component
 
 JAXB is a Java API that allows a Java program to access an XML document
 by presenting that document to the program in a Java format. This
@@ -124,8 +105,7 @@ For more information about JAXB, see "Java Architecture for XML Binding
 
 [[CIHJDGEC]][[OTLCG118]]
 
-MOXy Component
-~~~~~~~~~~~~~~
+==== MOXy Component
 
 _MOXy_ (also known as Object-XML) is the EclipseLink JAXB
 implementation. This component enables you to bind Java classes to XML
@@ -182,8 +162,7 @@ access to the source to add annotations.
 
 [[sthref10]]
 
-SDO Component
-^^^^^^^^^^^^^
+==== SDO Component
 
 The Service Data Objects (SDO) component provides the reference
 implementation of Service Data Objects version 2.1.1. The reference
@@ -210,8 +189,7 @@ EclipseLink documentation:
 
 [[CHDIGIDF]][[OTLCG120]]
 
-Database Web Services Component
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Database Web Services Component
 
 Database Web Services (DBWS) enables simple and efficient access to
 relational database artifacts by using a web service. It provides
@@ -226,34 +204,3 @@ the database and the XML SOAP Messages used by web service clients. For
 information on DBWS architecture, see _Developing Persistence
 Architectures Using EclipseLink Database Web Services Developer's
 Guide_.
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|=======================================================================
-a|
-[width="96%",cols=",^50%,^50%",]
-|=======================================================================
-| 
-|link:general003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:general005.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|=======================================================================
-
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
-
-|=======================================================================
-
-[[copyright]]
-Copyright © 2012 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

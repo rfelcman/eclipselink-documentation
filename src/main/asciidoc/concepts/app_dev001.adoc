@@ -1,35 +1,22 @@
-[[cse]][[top]]
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|=======================================================================
-a|
-Understanding EclipseLink, *3.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
- a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|=======================================================================
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|=======================================================================
-|link:app_dev.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:app_dev002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|=======================================================================
+///////////////////////////////////////////////////////////////////////////////
 
-[[BABHCJDG]][[OTLCG94288]]
-
-About the Persistence Unit
---------------------------
+=== About the Persistence Unit
 
 A persistence unit defines the details that are required when you
 acquire an entity manager. To package your EclipseLink JPA application,
@@ -59,8 +46,7 @@ on EclipseLink extensions to the `persistence.xml` file, see
 
 [[BGBCGCBI]][[OTLCG94291]]
 
-About the Persistence Unit Name
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== About the Persistence Unit Name
 
 If you are developing your application in a Jakarta EE environment,
 ensure that the persistence unit name is unique within each module. For
@@ -72,8 +58,7 @@ the JPA Specification].
 
 [[sthref23]]
 
-About the Persistence Provider
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== About the Persistence Provider
 
 The persistence provider defines the implementation of JPA. It is
 defined in the `provider` element of the `persistence.xml` file.
@@ -82,8 +67,7 @@ EclipseLink is `org.eclipse.persistence.jpa.PersistenceProvider`.
 
 [[BGBJGFGJ]][[OTLCG94292]]
 
-About the Transaction Type Data Source
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== About the Transaction Type Data Source
 
 If you are developing your application in a Jakarta EE environment, use
 the default transaction type: `JTA` (for Java Transaction API) and
@@ -108,8 +92,7 @@ Specification].
 
 [[sthref24]]
 
-About Logging
-~~~~~~~~~~~~~
+==== About Logging
 
 EclipseLink provides a logging utility even though logging is not part
 of the JPA specification. Hence, the information provided by the log is
@@ -161,8 +144,7 @@ EclipseLink_.
 
 [[BGBBEFAC]][[OTLCG94295]]
 
-About Vendor Properties
-~~~~~~~~~~~~~~~~~~~~~~~
+==== About Vendor Properties
 
 The last section in the `persistence.xml` file is the `properties`
 section. The `properties` element gives you the chance to supply
@@ -173,8 +155,7 @@ _Jakarta Persistence API (JPA) Extensions Reference for EclipseLink_.
 
 [[BGBEGAEA]][[OTLCG94293]]
 
-About Mapping Files
-~~~~~~~~~~~~~~~~~~~
+==== About Mapping Files
 
 Apply the metadata to the persistence unit. This metadata is a union of
 all the mapping files and the annotations (if there is no
@@ -192,8 +173,7 @@ exclude-unlisted-classes" in the JPA Specification].
 
 [[BGBHFFAG]][[OTLCG94294]]
 
-About Managed Classes
-~~~~~~~~~~~~~~~~~~~~~
+==== About Managed Classes
 
 Typically, you put all of the entities and other managed classes in a
 single JAR file, along with the `persistence.xml` file in the `META-INF`
@@ -214,15 +194,8 @@ be included if it is one of the following:
 unit in which its `persistence.xml` file was packaged. For more
 information, see http://jcp.org/en/jsr/detail?id=338["Entity" in the JPA
 Specification].
-+
- +
 
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-If you are deploying your application in the Jakarta EE environment, the
+NOTE: If you are deploying your application in the Jakarta EE environment, the
 application server itself, not the EclipseLink persistence provider,
 will discover local classes. In the Java SE environment, you can use the
 `exclude-unlisted-classes` element to `false` to enable this
@@ -231,9 +204,6 @@ local classes if you set this element to false. See
 http://jcp.org/en/jsr/detail?id=338["mapping-file, jar-file, class,
 exclude-unlisted-classes" in the JPA Specification].
 
-|=======================================================================
-
- +
 * Classes in mapping files: the classes that have mapping entries, such
 as entity (see http://jcp.org/en/jsr/detail?id=338["entity" in the JPA
 Specification]), mapped-superclass or embeddable, in an XML mapping
@@ -247,7 +217,6 @@ already be on the classpath. If they are not, you must explicitly
 include them in the classpath.
 * Explicitly listed classes: the classes that are listed as class
 elements in the `persistence.xml` file.
-+
 Consider listing classes explicitly if one of the following applies:
 ** there are additional classes that are not local to the deployment
 unit JAR. For example, there is an embedded object class in a different
@@ -288,8 +257,7 @@ manifest file.
 
 [[BGBDCBJJ]][[OTLCG94296]]
 
-About the Deployment Classpath
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== About the Deployment Classpath
 
 To be accessible to the EJB JAR, WAR, or EAR file, a class or a JAR file
 must be on the deployment classpath. You can achieve this in one of the
@@ -311,8 +279,7 @@ descriptor.
 
 [[BGBJGHBG]][[OTLCG94297]]
 
-About Persistence Unit Packaging Options
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== About Persistence Unit Packaging Options
 
 Jakarta EE allows for persistence support in a variety of packaging
 configurations. You can deploy your application to the following module
@@ -346,8 +313,7 @@ JPA Specification].
 
 [[BGBCJBGD]][[OTLCG94298]]
 
-About the Persistence Unit Scope
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== About the Persistence Unit Scope
 
 You can define any number of persistence units in single
 `persistence.xml` file. The following are the rules for using defined
@@ -363,8 +329,7 @@ Specification].
 
 [[CHDBJIEH]]
 
-About Composite Persistence Units
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== About Composite Persistence Units
 
 You can expose multiple persistence units (each with unique sets of
 entity types) as a single persistence context by using a composite
@@ -395,42 +360,8 @@ the `member2.jar` file.
 
 *_Figure 3-1 A Simple Composite Persistence Unit_*
 
-image:img/composite_persistence_units.gif[Description of Figure 3-1
-follows,title="Description of Figure 3-1 follows"] +
-link:img_text/composite_persistence_units.htm[Description of "Figure 3-1
-A Simple Composite Persistence Unit"] +
- +
+image:concepts/img/composite_persistence_units.gif[Description of Figure 3-1 follows,title="Description of Figure 3-1 follows"] +
+xref:concepts/img_text/composite_persistence_units.adoc[Description of "Figure 3-1 A Simple Composite Persistence Unit"]
 
 For more information, see "Using Multiple Databases with a Composite
 Persistence Unit" in _Solutions Guide for EclipseLink_.
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|=======================================================================
-a|
-[width="96%",cols=",^50%,^50%",]
-|=======================================================================
-| 
-|link:app_dev.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:app_dev002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|=======================================================================
-
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
-
-|=======================================================================
-
-[[copyright]]
-Copyright © 2012 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

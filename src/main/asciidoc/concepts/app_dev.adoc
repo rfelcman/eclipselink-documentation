@@ -20,7 +20,7 @@
 :keywords: eclipselink, java, jpa, persistence, concepts, orm, mapping
 :rootdir: {docdir}/concepts
 
-= Understanding the Persistence Unit
+== Understanding the Persistence Unit
 
 This chapter describes details about the persistence unit and the
 persistence layer.
@@ -28,21 +28,16 @@ persistence layer.
 This chapter includes the following sections:
 
 // == About the Persistence Unit
-:sectnums:
 include::{rootdir}/app_dev001.adoc[]
 
 // == Building and Using the Persistence Layer
-:sectnums:
 include::{rootdir}/app_dev002.adoc[]
 
 // == About Persisting Objects
-:sectnums:
 include::{rootdir}/app_dev003.adoc[]
 
 // == Migrating Applications to the EclipseLink Persistence Manager
-:sectnums:
 include::{rootdir}/app_dev004.adoc[]
 
 // == About Weaving
-:sectnums:
 include::{rootdir}/app_dev005.adoc[]

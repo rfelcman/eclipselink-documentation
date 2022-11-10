@@ -1,35 +1,22 @@
-[[cse]][[top]]
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|=======================================================================
-a|
-Understanding EclipseLink, *3.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
- a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|=======================================================================
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|=======================================================================
-|link:general002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:general004.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|=======================================================================
+///////////////////////////////////////////////////////////////////////////////
 
-[[CHDBJDEC]][[OTLCG94460]]
-
-Key Concepts
-------------
+=== Key Concepts
 
 This section provides a brief introduction to several of the key
 concepts described in this documentation. The key concepts highlighted
@@ -48,8 +35,7 @@ in this section are as follows:
 
 [[CHDBJIJE]][[OTLCG113]]
 
-EclipseLink Metadata
-~~~~~~~~~~~~~~~~~~~~
+==== EclipseLink Metadata
 
 EclipseLink metadata is the bridge between the development of an
 application and its deployed runtime environment. You can capture the
@@ -90,8 +76,7 @@ documentation.
 
 [[CHDGEFJG]][[OTLCG94461]]
 
-Entities
-~~~~~~~~
+==== Entities
 
 An entity is a persistence domain object. Typically, an entity
 represents a table in a relational database, and each entity instance
@@ -107,8 +92,7 @@ See link:entities.htm#CIHGAJCF[Chapter 4, "Understanding Entities."]
 
 [[CHDBABAD]][[OTLCG94462]]
 
-Descriptors
-~~~~~~~~~~~
+==== Descriptors
 
 Descriptors describe how a Java class relates to a data source
 representation. They relate object classes to the data source at the
@@ -126,8 +110,7 @@ Descriptors."]
 
 [[CHDFGCJF]][[OTLCG94463]]
 
-Mappings
-~~~~~~~~
+==== Mappings
 
 Mappings describe how individual object attributes relate to a data
 source representation. Mappings can involve a complex transformation or
@@ -142,8 +125,7 @@ See link:mappingintro.htm#CHDFEJIJ[Chapter 6, "Understanding Mappings."]
 
 [[CHDFFJIA]][[OTLCG94464]]
 
-Data Access
-~~~~~~~~~~~
+==== Data Access
 
 A data source platform includes options specific to a particular data
 source including binding, use of native SQL, use of batch writing, and
@@ -154,8 +136,7 @@ Access."]
 
 [[CHDEEBFG]][[OTLCG94465]]
 
-Caching
-~~~~~~~
+==== Caching
 
 The EclipseLink cache is an in-memory repository that stores recently
 read or written objects based on class and primary key values. The cache
@@ -167,8 +148,7 @@ See link:cache.htm#CDEFHHEH[Chapter 8, "Understanding Caching."]
 
 [[CHDBJIEA]][[OTLCG94466]]
 
-Queries
-~~~~~~~
+==== Queries
 
 You can to create, read, update, and delete persistent objects or data
 using queries in both Jakarta EE and non-Jakarta EE applications for
@@ -185,8 +165,7 @@ See link:queries.htm#CHDGGCJB[Chapter 9, "Understanding Queries."]
 
 [[CHDJJFCE]][[OTLCG94467]]
 
-Expression Framework
-~~~~~~~~~~~~~~~~~~~~
+==== Expression Framework
 
 By using the EclipseLink Expressions framework, you can specify query
 search criteria based on your domain object model. Expressions offer a
@@ -201,8 +180,7 @@ Expressions."]
 
 [[CHDGCGDD]][[OTLCG94468]]
 
-NoSQL Databases
-~~~~~~~~~~~~~~~
+==== NoSQL Databases
 
 NoSQL is a classification of database systems that do not support the
 SQL standard. These include document databases, key-value stores, and
@@ -215,8 +193,7 @@ Data Sources."]
 
 [[CHDBIEJD]][[OTLCG94469]]
 
-Performance Monitoring and Profiling
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Performance Monitoring and Profiling
 
 A diverse set of features is provided to measure and optimize
 application performance. You can enable or disable most features in the
@@ -225,34 +202,3 @@ Tools are provided for performance profiling and performance, fetch
 group, and query monitoring.
 
 See "Enhancing Performance" in _Solutions Guide for EclipseLink_.
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|=======================================================================
-a|
-[width="96%",cols=",^50%,^50%",]
-|=======================================================================
-| 
-|link:general002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:general004.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|=======================================================================
-
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
-
-|=======================================================================
-
-[[copyright]]
-Copyright © 2012 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

@@ -1,35 +1,22 @@
-[[cse]][[top]]
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|=======================================================================
-a|
-Understanding EclipseLink, *3.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
- a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|=======================================================================
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|=======================================================================
-|link:blocks.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:blocks002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|=======================================================================
+///////////////////////////////////////////////////////////////////////////////
 
-[[CHEDICEE]][[OTLCG91207]]
-
-About Metadata
---------------
+=== About Metadata
 
 The EclipseLink metadata is the bridge between the development of an
 application and its deployed run-time environment. Capture the metadata
@@ -53,11 +40,8 @@ Persistence API (JPA) Extensions Reference for EclipseLink.
 
 *_Figure 2-1 EclipseLink Metadata_*
 
-image:img/meta.gif[Description of Figure 2-1
-follows,title="Description of Figure 2-1 follows"] +
-link:img_text/meta.htm[Description of "Figure 2-1 EclipseLink
-Metadata"] +
- +
+image:concepts/img/meta.gif[Description of Figure 2-1 follows,title="Description of Figure 2-1 follows"] +
+xref:concepts/img_text/meta.htm[Description of "Figure 2-1 EclipseLink Metadata"]
 
 This section describes the following:
 
@@ -67,8 +51,7 @@ This section describes the following:
 
 [[BABDDBIJ]][[OTLCG91209]]
 
-Advantages of the Metadata Architecture
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Advantages of the Metadata Architecture
 
 The EclipseLink metadata architecture provides many important benefits,
 including the following:
@@ -93,8 +76,7 @@ and `persistence.xml` property extensions.
 
 [[BABEECEF]][[OTLCG91210]]
 
-Creating Project Metadata
-~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Creating Project Metadata
 
 A project contains the mapping metadata that the EclipseLink runtime
 uses to map objects to a data source. The project is the primary object
@@ -117,8 +99,7 @@ in _Jakarta Persistence API (JPA) Extensions Reference for EclipseLink_.
 
 [[BABIECAI]][[OTLCG91211]]
 
-Entity Mappings
-^^^^^^^^^^^^^^^
+===== Entity Mappings
 
 EclipseLink maps persistent entities to the database in the application.
 There are several approaches to project development, including the
@@ -146,8 +127,7 @@ For more information, see link:descriptors.htm#CHECEAAE[Chapter 5,
 
 [[BABIEAJE]][[OTLCG91213]]
 
-Data Source Login Information
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===== Data Source Login Information
 
 For POJO projects, you configure a session login in the session metadata
 that specifies the information required to access the data source.
@@ -156,8 +136,7 @@ For more information, see link:#BABHHGDE[Creating Session Metadata.]
 
 [[BABHHGDE]][[OTLCG91214]]
 
-Creating Session Metadata
-~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Creating Session Metadata
 
 A EclipseLink session contains the information required to access the
 data source. The session is the primary object used by your application
@@ -168,34 +147,3 @@ session based on any combination of JPA and EclipseLink annotations, JPA
 persistence properties (in the `persistence.xml` file), and EclipseLink
 property extensions. See "Overriding and Merging" in _Jakarta
 Persistence API (JPA) Extensions Reference for EclipseLink_.
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|=======================================================================
-a|
-[width="96%",cols=",^50%,^50%",]
-|=======================================================================
-| 
-|link:blocks.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:blocks002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|=======================================================================
-
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
-
-|=======================================================================
-
-[[copyright]]
-Copyright © 2012 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +
