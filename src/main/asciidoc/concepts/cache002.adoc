@@ -1,35 +1,22 @@
-[[cse]][[top]]
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|=======================================================================
-a|
-Understanding EclipseLink, *3.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
- a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|=======================================================================
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|=======================================================================
-|link:cache001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:cache003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|=======================================================================
-
-[[CHEFCFEG]][[OTLCG00011]]
-
-About Cache Type and Size
--------------------------
+///////////////////////////////////////////////////////////////////////////////
+[[CACHE002]]
+=== About Cache Type and Size
 
 EclipseLink provides several different cache types which have different
 memory requirements. The size of the cache (in number of cached objects)
@@ -64,36 +51,13 @@ options described in link:#CHEJBDHH[Table 8-1].
 
 *_Table 8-1 Cache and Identity Map Options_*
 
-[width="58%",cols="<1%,<24%,<44%,<31%",options="header",]
 |========================================================
 |*Option* |*Caching* |*Guaranteed Identity* |*Memory Use*
-a|
-link:#CHEHGEEB[FULL Cache Type]
-
- +
-
- |Yes |Yes |Very High
-a|
-link:#CHEGIBAC[WEAK Cache Type]
-
- +
-
- |Yes |Yes |Low
-a|
-link:#CACHBJGE[SOFT Cache Type]
-
- +
-
- |Yes |Yes |High
-a|
-link:#CHEJDCBH[SOFT_WEAK and HARD_WEAK Cache Type]
-
- +
-
- |Yes |Yes |Medium-high
+a|link:#CHEHGEEB[FULL Cache Type]|Yes |Yes |Very High
+a|link:#CHEGIBAC[WEAK Cache Type]|Yes |Yes |Low
+a|link:#CACHBJGE[SOFT Cache Type]|Yes |Yes |High
+a|link:#CHEJDCBH[SOFT_WEAK and HARD_WEAK Cache Type]|Yes |Yes |Medium-high
 |========================================================
-
- +
 
 There are two other options, `NONE`, and `CACHE`. These options are not
 recommend.
@@ -104,8 +68,7 @@ persistence unit properties: `eclipselink.cache.type.<`__ENTITY__`>` and
 
 [[CHEHGEEB]][[OTLCG00180]]
 
-FULL Cache Type
-~~~~~~~~~~~~~~~
+==== FULL Cache Type
 
 This option provides full caching and guaranteed identity: objects are
 never flushed from memory unless they are deleted.
@@ -120,8 +83,7 @@ small and memory is in large supply.
 
 [[CHEGIBAC]][[OTLCG00181]]
 
-WEAK Cache Type
-~~~~~~~~~~~~~~~
+==== WEAK Cache Type
 
 This option only caches objects that have not been garbage collected.
 Any object still referenced by the application will still be cached.
@@ -134,8 +96,7 @@ within the server JVM).
 
 [[CACHBJGE]][[OTLCG93800]]
 
-SOFT Cache Type
-~~~~~~~~~~~~~~~
+==== SOFT Cache Type
 
 This option is similar to the weak cache type, except that the cache
 uses soft references instead of weak references. Any object still
@@ -147,8 +108,7 @@ still allowing the JVM to garbage collect the objects if memory is low.
 
 [[CHEJDCBH]][[OTLCG00182]]
 
-SOFT_WEAK and HARD_WEAK Cache Type
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== SOFT_WEAK and HARD_WEAK Cache Type
 
 These options are similar to the weak cache except that they maintain a
 most frequently used sub-cache. The sub-cache uses soft or hard
@@ -168,8 +128,7 @@ control memory used by the cache.
 
 [[CHEEBFCI]][[OTLCG00183]]
 
-NONE and CACHE
-~~~~~~~~~~~~~~
+==== NONE and CACHE
 
 `NONE` and `CACHE` options do not preserve object identity and should
 only be used in very specific circumstances. `NONE` does not cache any
@@ -183,8 +142,7 @@ instead.
 
 [[sthref60]]
 
-Guidelines for Configuring the Cache and Identity Maps
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Guidelines for Configuring the Cache and Identity Maps
 
 Use the following guidelines when configuring your cache type:
 
@@ -195,43 +153,21 @@ Hard Cache Types.].
 * For objects with a short life span, use a `WEAK` cache type.
 * For objects with a long life span, that have few instances, such as
 reference data, use a `FULL` cache type.
-+
- +
 
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-Use the `FULL` cache type only if the class has a small number of finite
+NOTE: Use the `FULL` cache type only if the class has a small number of finite
 instances. Otherwise, a memory leak will occur.
 
-|=======================================================================
-
- +
 * If caching is not required or desired, disable the shared cache by
 setting the cache isolation to `ISOLATED`.
-+
- +
 
-[width="100%",cols="<100%",]
-|=====================================================================
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-Oracle does not recommend the use of `CACHE` and `NONE` cache types.
-
-|=====================================================================
-
- +
+NOTE: Oracle does not recommend the use of `CACHE` and `NONE` cache types.
 
 See link:#CDEJFBEH[About the Internals of Weak, Soft, and Hard Cache
 Types.]
 
 [[CDEJFBEH]][[OTLCG94333]]
 
-About the Internals of Weak, Soft, and Hard Cache Types
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===== About the Internals of Weak, Soft, and Hard Cache Types
 
 The `WEAK` and `SOFT` cache types use JVM weak and soft references to
 ensure that any object referenced by the application is held in the
@@ -277,34 +213,3 @@ reference cache, it gets put in the weak cache. Although it is still
 cached, EclipseLink cannot guarantee that it will be there for any
 length of time because the JVM can decide to garbage-collect weak
 references at anytime.
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|=======================================================================
-a|
-[width="96%",cols=",^50%,^50%",]
-|=======================================================================
-| 
-|link:cache001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:cache003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|=======================================================================
-
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
-
-|=======================================================================
-
-[[copyright]]
-Copyright © 2012 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

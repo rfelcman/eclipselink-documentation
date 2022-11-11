@@ -1,35 +1,22 @@
-[[cse]][[top]]
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|=======================================================================
-a|
-Understanding EclipseLink, *3.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
- a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|=======================================================================
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|=======================================================================
-|link:data_access002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:data_access004.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|=======================================================================
-
-[[CHDIICCF]][[OTLCG00006]]
-
-About Data Source Platform Types
---------------------------------
+///////////////////////////////////////////////////////////////////////////////
+[[DATA_ACCESS003]]
+=== About Data Source Platform Types
 
 EclipseLink abstracts the details of your underlying data source using
 data source platform classes. A data source platform is owned by your
@@ -63,11 +50,11 @@ EclipseLink provides a variety of database-specific platforms that let
 you customize your project for your target database. For a list of
 supported database platforms, see
 `org.eclipse.persistence.config.TargetDatabase` class and
-link:app_tl_ext001.htm#A1095976[Database Support.]
+xref:app_tl_ext001.adoc#A1095976[Database Support.]
 
 A list of supported application servers can be found in
 `org.eclipse.persistence.config.TargetServer` and
-link:app_tl_ext002.htm#A1115041[Application Server Support.] The name of
+xref:app_tl_ext002.adoc#A1115041[Application Server Support.] The name of
 the application server you wish to use can be specified with the
 `eclipselink.target-server.persistence` unit property.
 
@@ -75,34 +62,3 @@ The `datasource-login` persistence unit option contains other data
 source properties you can configure, such as user name, password,
 connection pooling, and so on. You can implement the `Login` class, and
 then set properties specific to database.
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|=======================================================================
-a|
-[width="96%",cols=",^50%,^50%",]
-|=======================================================================
-| 
-|link:data_access002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:data_access004.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|=======================================================================
-
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
-
-|=======================================================================
-
-[[copyright]]
-Copyright © 2012 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

@@ -18,9 +18,8 @@
 
 :description: EclipseLink
 :keywords: eclipselink, java, jpa, persistence, data access
-:rootdir: {docdir}/concepts
 
-= Understanding Data Access
+== Understanding Data Access
 
 This chapter describes one of the most important functions of a session,
 which is to provide access to a data source. This chapter describes the
@@ -29,38 +28,39 @@ EclipseLink.
 
 This chapter includes the following sections:
 
+* link:#DATA_ACCESS001[About Externally Managed Transactional Data Sources]
+* link:#DATA_ACCESS002[About Data Source Login Types]
+* link:#DATA_ACCESS003[About Data Source Platform Types]
+* link:#DATA_ACCESS004[About Authentication]
+* link:#DATA_ACCESS005[About Connections]
+* link:#DATA_ACCESS006[About Connection Pools]
+* link:#DATA_ACCESS007[About Data Partitioning Policies]
+* link:#DATA_ACCESS008[About Tenant Isolation]
+* link:#DATA_ACCESS009[About Heterogeneous Batch Writing]
+
 // == About Externally Managed Transactional Data Sources
-:sectnums:
 include::{rootdir}/data_access001.adoc[]
 
 // == About Data Source Login Types
-:sectnums:
 include::{rootdir}/data_access002.adoc[]
 
 // == About Data Source Platform Types
-:sectnums:
 include::{rootdir}/data_access003.adoc[]
 
 // == About Authentication
-:sectnums:
 include::{rootdir}/data_access004.adoc[]
 
 // == About Connections
-:sectnums:
 include::{rootdir}/data_access005.adoc[]
 
 // == About Connection Pools
-:sectnums:
 include::{rootdir}/data_access006.adoc[]
 
 // == About Data Partitioning Policies
-:sectnums:
 include::{rootdir}/data_access007.adoc[]
 
 // == About Tenant Isolation
-:sectnums:
 include::{rootdir}/data_access008.adoc[]
 
 // == About Heterogeneous Batch Writing
-:sectnums:
 include::{rootdir}/data_access009.adoc[]

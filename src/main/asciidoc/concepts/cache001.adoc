@@ -1,35 +1,22 @@
-[[cse]][[top]]
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|=======================================================================
-a|
-Understanding EclipseLink, *3.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
- a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|=======================================================================
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|=======================================================================
-|link:cache.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:cache002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|=======================================================================
-
-[[CHECCJJD]][[OTLCG93795]]
-
-About Cache Architecture
-------------------------
+///////////////////////////////////////////////////////////////////////////////
+[[CACHE001]]
+=== About Cache Architecture
 
 EclipseLink uses two types of cache: the shared *persistence unit cache*
 (L2) maintains objects retrieved from and written to the data source;
@@ -59,16 +46,12 @@ object life cycle relies on these mechanisms.
 
 *_Figure 8-1 Object Life Cycle and the EclipseLink Caches_*
 
-image:img/cacharch.gif[Description of Figure 8-1
-follows,title="Description of Figure 8-1 follows"] +
-link:img_text/cacharch.htm[Description of "Figure 8-1 Object Life Cycle
-and the EclipseLink Caches"] +
- +
+image:{imagesrelativedir}/cacharch.gif[Description of Figure 8-1 follows,title="Description of Figure 8-1 follows"] +
+xref:{imagestextrelativedir}/cacharch.adoc[Description of "Figure 8-1 Object Life Cycle and the EclipseLink Caches"] +
 
 [[CACHIFGC]][[OTLCG93797]]
 
-Persistence Unit Cache
-~~~~~~~~~~~~~~~~~~~~~~
+==== Persistence Unit Cache
 
 The persistence unit cache is a shared cache (L2) that services clients
 attached to a given persistence unit. When you read objects from or
@@ -106,8 +89,7 @@ cache.
 
 [[sthref55]]
 
-Persistence Context Cache
-~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Persistence Context Cache
 
 The persistence context cache is an isolated cache (L1) that services
 operations within an EntityManager. It maintains and isolates objects
@@ -115,20 +97,9 @@ from the persistence unit cache, and writes changed or new objects to
 the persistence unit cache after the persistence context commits changes
 to the data source.
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-Only committed changes are merged into the shared persistence unit
+NOTE: Only committed changes are merged into the shared persistence unit
 cache, flush or other operations do not affect the persistence unit
 cache until the transaction is committed.
-
-|=======================================================================
-
- +
 
 The life-cycle for the persistence context cache differs between
 application managed, and container managed persistence contexts. The
@@ -142,8 +113,7 @@ the data source.
 
 [[sthref56]]
 
-Application Managed Persistence Contexts
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===== Application Managed Persistence Contexts
 
 An application managed persistence context is created by the application
 from an `EntityManagerFactory`. The application managed persistence
@@ -167,8 +137,7 @@ link:#CDEJAHDJ[Weak Reference Mode.]
 
 [[sthref57]]
 
-Container Managed Persistence Contexts
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===== Container Managed Persistence Contexts
 
 A container managed persistence context is typically injected into a
 `SessionBean` or other managed object by a Jakarta EE container, or
@@ -178,24 +147,12 @@ read in a transaction will become detached after the completion of the
 transaction and will require merging or editing in subsequent
 transactions.
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-EclipseLink supports accessing an entity's LAZY relationships after the
+NOTE: EclipseLink supports accessing an entity's LAZY relationships after the
 persistence context has been closed.
-
-|=======================================================================
-
- +
 
 [[CDEEGICF]][[OTLCG94326]]
 
-Shared, Isolated, Protected, Weak, and Read-only Caches
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Shared, Isolated, Protected, Weak, and Read-only Caches
 
 EclipseLink defines three cache isolation levels. The cache isolation
 level defines how caching for an entity is performed by the persistence
@@ -215,8 +172,7 @@ Cache.]
 
 [[CDEBIHCH]][[OTLCG94327]]
 
-Isolated Cache
-^^^^^^^^^^^^^^
+===== Isolated Cache
 
 The isolated cache (L1) is the cache stored in the persistence context.
 It is a transactional or user session based cache. Setting the cache
@@ -247,27 +203,15 @@ exclusive connection. Using an exclusive connection provides improved
 user-based security for reads and writes. Specific queries can also be
 configured to use the persistence context's exclusive connection.
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-If an `EntityManager` contains an exclusive connection, you must close
+NOTE: If an `EntityManager` contains an exclusive connection, you must close
 the `EntityManager` when you are finished using it. We do not recommend
 relying on the finalizer to release the connection when the
 `EntityManager` is garbage-collected. If you are using a managed
 persistence context, then you do not need to close it.
 
-|=======================================================================
-
- +
-
 [[CDEEIBAC]][[OTLCG94328]]
 
-Shared Cache
-^^^^^^^^^^^^
+===== Shared Cache
 
 The shared cache (L2) is the cache stored in the persistence unit. It is
 a shared object cache for the entire persistence unit. Setting the cache
@@ -304,8 +248,7 @@ invalidate or clear the cache.
 
 [[CDEHCDJD]][[OTLCG94329]]
 
-Protected Cache
-^^^^^^^^^^^^^^^
+===== Protected Cache
 
 The protected cache option allows for shared objects to reference
 isolated objects. Setting the cache isolation to `protected` for an
@@ -332,8 +275,7 @@ are always copied into the isolated cache, but are not change tracked.
 
 [[CDEJAHDJ]][[OTLCG94330]]
 
-Weak Reference Mode
-^^^^^^^^^^^^^^^^^^^
+===== Weak Reference Mode
 
 EclipseLink offers a specialized persistence context cache for
 long-lived persistence contexts. Normally it is best to keep persistence
@@ -372,8 +314,7 @@ garbage collection, causing any changes to be lost.
 
 [[sthref58]]
 
-Read-Only Entities
-^^^^^^^^^^^^^^^^^^
+===== Read-Only Entities
 
 An entity can be configured as read-only using the `@ReadOnly`
 annotation or the `read-only` XML attribute. A read-only entity will not
@@ -400,34 +341,3 @@ isolated copy returned from the persistence context. This gives some
 improvement in performance and memory usage because it does not track
 the object for changes, but it is not as significant as `shared`
 entities.
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|=======================================================================
-a|
-[width="96%",cols=",^50%,^50%",]
-|=======================================================================
-| 
-|link:cache.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:cache002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|=======================================================================
-
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
-
-|=======================================================================
-
-[[copyright]]
-Copyright © 2012 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

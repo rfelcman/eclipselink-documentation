@@ -1,35 +1,22 @@
-[[cse]][[top]]
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|=======================================================================
-a|
-Understanding EclipseLink, *3.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
- a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|=======================================================================
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|=======================================================================
-|link:mappingintro001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:mappingintro003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|=======================================================================
-
-[[CEGDCCDH]]
-
-Object-Relational Mapping Concepts
-----------------------------------
+///////////////////////////////////////////////////////////////////////////////
+[[MAPPINGINTRO002]]
+=== Object-Relational Mapping Concepts
 
 This section describes concepts for relational mappings that are unique
 to EclipseLink:
@@ -44,8 +31,7 @@ to EclipseLink:
 
 [[CHDJAHDC]][[OTLCG00083]]
 
-Indirection (Lazy Loading)
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Indirection (Lazy Loading)
 
 By default, when EclipseLink retrieves a persistent object, it retrieves
 all of the dependent objects to which it refers. When you configure
@@ -63,13 +49,8 @@ mappings. Not only does this lets you optimize data source access, but
 it also allows EclipseLink to optimize the persistence unit processing,
 cache access, and concurrency.
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-*Notes:*
-
+[NOTE]
+====
 * The use of indirection is especially important for providing a proper
 maintenance of bidirectional relationships. In this case, you must use
 indirection. If you are operating with collections, you must use
@@ -78,10 +59,7 @@ transparent indirection (see link:#CEGGCCGA[Transparent Indirection]).
 Serializing entities and merging those entities back into a persistence
 context may not be interoperable across vendors when lazy properties or
 fields and/or relationships are used.
-
-|=======================================================================
-
- +
+====
 
 link:#i1102721[Figure 6-8] shows an indirection example. Without
 indirection, reading the `Order` object also reads the dependent
@@ -96,11 +74,8 @@ attribute.
 
 *_Figure 6-8 EclipseLink Indirection_*
 
-image:img/indirctn.gif[Description of Figure 6-8
-follows,title="Description of Figure 6-8 follows"] +
-link:img_text/indirctn.htm[Description of "Figure 6-8 EclipseLink
-Indirection"] +
- +
+image:{imagesrelativedir}/indirctn.gif[Description of Figure 6-8 follows,title="Description of Figure 6-8 follows"] +
+xref:{imagestextrelativedir}/indirctn.adoc[Description of "Figure 6-8 EclipseLink Indirection"] +
 
 EclipseLink supports the following types of indirection:
 
@@ -115,8 +90,7 @@ Detachment].
 
 [[CHDEEIBD]][[OTLCG92119]]
 
-Indirection, Serialization, and Detachment
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Indirection, Serialization, and Detachment
 
 When using indirection (lazy loading), it is likely that a graph of
 persistent objects will contain untriggered indirection objects. Because
@@ -148,8 +122,7 @@ Byte-code Weaving].
 
 [[CEGHBHEA]][[OTLCG92107]]
 
-Value Holder Indirection
-~~~~~~~~~~~~~~~~~~~~~~~~
+==== Value Holder Indirection
 
 Persistent classes that use indirection must replace relationship
 attributes with value holder attributes. A value holder is an instance
@@ -173,11 +146,8 @@ unless it is accessed.
 
 *_Figure 6-9 Address Object Not Read_*
 
-image:img/vhstep1.gif[Description of Figure 6-9
-follows,title="Description of Figure 6-9 follows"] +
-link:img_text/vhstep1.htm[Description of "Figure 6-9 Address Object Not
-Read"] +
- +
+image:{imagesrelativedir}/vhstep1.gif[Description of Figure 6-9 follows,title="Description of Figure 6-9 follows"] +
+xref:{imagestextrelativedir}/vhstep1.adoc[Description of "Figure 6-9 Address Object Not Read"] +
 
 The first time the address is accessed, as in link:#i1102751[Figure
 6-10], the `ValueHolder` reads and returns the `Address` object.
@@ -186,11 +156,8 @@ The first time the address is accessed, as in link:#i1102751[Figure
 
 *_Figure 6-10 Initial Request_*
 
-image:img/vhstep2.gif[Description of Figure 6-10
-follows,title="Description of Figure 6-10 follows"] +
-link:img_text/vhstep2.htm[Description of "Figure 6-10 Initial
-Request"] +
- +
+image:{imagesrelativedir}/vhstep2.gif[Description of Figure 6-10 follows,title="Description of Figure 6-10 follows"] +
+xref:{imagestextrelativedir}/vhstep2.adoc[Description of "Figure 6-10 Initial Request"] +
 
 Subsequent requests for the address do not access the database, as shown
 in link:#i1102759[Figure 6-11].
@@ -199,11 +166,8 @@ in link:#i1102759[Figure 6-11].
 
 *_Figure 6-11 Subsequent Requests_*
 
-image:img/vhstep3.gif[Description of Figure 6-11
-follows,title="Description of Figure 6-11 follows"] +
-link:img_text/vhstep3.htm[Description of "Figure 6-11 Subsequent
-Requests"] +
- +
+image:{imagesrelativedir}/vhstep3.gif[Description of Figure 6-11 follows,title="Description of Figure 6-11 follows"] +
+xref:{imagestextrelativedir}/vhstep3.adoc[Description of "Figure 6-11 Subsequent Requests"] +
 
 If you are using method access, the get and set methods specified in the
 mapping must access the instance of `ValueHolderInterface`, rather than
@@ -213,8 +177,7 @@ usage of value holders.
 
 [[CEGGCCGA]][[OTLCG92112]]
 
-Transparent Indirection
-~~~~~~~~~~~~~~~~~~~~~~~
+==== Transparent Indirection
 
 Transparent indirection lets you declare any relationship attribute of a
 persistent class that holds a collection of related objects as any of
@@ -238,13 +201,12 @@ if their attribute _is not_ a `ValueHolderInterface`.
 You can configure EclipseLink to automatically weave transparent
 indirect container indirection for JPA entities and Plain Old Java
 Object (POJO) classes. For more information, see
-link:app_dev002.htm#CCHGGAGE[Using Java Byte-code Weaving] and
-link:app_dev005.htm#CCHJEDFH[About Weaving.]
+xref:concepts/app_dev002.adoc#CCHGGAGE[Using Java Byte-code Weaving] and
+xref:concepts/app_dev005.adoc#CCHJEDFH[About Weaving.]
 
 [[CEGDCAIG]][[OTLCG92114]]
 
-Proxy Indirection
-~~~~~~~~~~~~~~~~~
+==== Proxy Indirection
 
 The Java class `Proxy` lets you use dynamic proxy objects as
 place-holders for a defined interface. Certain EclipseLink mappings can
@@ -272,8 +234,7 @@ amendment method.
 
 [[CEGGDDJB]][[OTLCG92115]]
 
-Proxy Indirection Restrictions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===== Proxy Indirection Restrictions
 
 Proxy objects in Java are only able to intercept messages sent. If a
 primitive operation such as `==`, `instanceof`, or `getClass` is used on
@@ -287,8 +248,7 @@ a call to a getter on the source object clone.
 
 [[CHDBJGII]][[OTLCG92116]]
 
-Weaved Indirection
-~~~~~~~~~~~~~~~~~~
+==== Weaved Indirection
 
 For JPA entities or POJO classes that you configure for weaving,
 EclipseLink weaves value holder indirection for one-to-one mappings. If
@@ -298,13 +258,11 @@ must configure all collection mappings to use transparent indirect
 container indirection only (you may not configure your collection
 mappings to use eager loading nor value holder indirection).
 
-For more information, see link:app_dev002.htm#CCHGGAGE[Using Java
-Byte-code Weaving].
+For more information, see xref:concepts/app_dev002.adoc#CCHGGAGE[Using Java Byte-code Weaving].
 
 [[A7964325]][[OTLCG94305]]
 
-About JPA Mapping Types
-~~~~~~~~~~~~~~~~~~~~~~~
+==== About JPA Mapping Types
 
 To map entity classes to relational tables you must configure a mapping
 per persistent field. The following sections describe EclipeLink's JPA
@@ -317,8 +275,7 @@ mapping types:
 
 [[CEGGDAJJ]][[OTLCG94306]]
 
-Basic Mappings
-^^^^^^^^^^^^^^
+===== Basic Mappings
 
 Simple Java types are mapped as part of the immediate state of an entity
 in its fields or properties. Mappings of simple Java types are called
@@ -355,8 +312,7 @@ For more information on these annotations, see _Jakarta Persistence API
 
 [[CEGJFEAH]][[OTLCG94307]]
 
-Default Conversions and Converters
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===== Default Conversions and Converters
 
 The section "Converter Annotations" in _Jakarta Persistence API (JPA)
 Extensions Reference for EclipseLink_ provides a list of the converter
@@ -375,8 +331,7 @@ define converters at the class, field and property level)
 
 [[CEGGABIA]][[OTLCG94308]]
 
-Collection Mappings
-^^^^^^^^^^^^^^^^^^^
+===== Collection Mappings
 
 You can access additional advanced mappings and mapping options through
 the EclipseLink descriptor and mapping API using a
@@ -388,8 +343,7 @@ the EclipseLink descriptor and mapping API using a
 
 [[CEGIGCIJ]][[OTLCG94309]]
 
-One-to-Many Mapping
-+++++++++++++++++++
+====== One-to-Many Mapping
 
 One-to-many mappings are used to represent the relationship between a
 single source object and a collection of target objects. They are a good
@@ -405,33 +359,18 @@ implementation to make querying more efficient.
 
 *_Figure 6-12 One-to-Many Relationships_*
 
-image:img/onetomany_map_fig.gif[This figure illustrates the one-to-many
-relationship.,title="This figure illustrates the one-to-many relationship."] +
-link:img_text/onetomany_map_fig.htm[Description of "Figure 6-12
-One-to-Many Relationships"] +
- +
+image:{imagesrelativedir}/onetomany_map_fig.gif[This figure illustrates the one-to-many relationship.,title="This figure illustrates the one-to-many relationship."] +
+xref:{imagestextrelativedir}/onetomany_map_fig.adoc[Description of "Figure 6-12 One-to-Many Relationships"] +
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-The phone attribute shown in the One-to-Many Relationships is of type
+NOTE: The phone attribute shown in the One-to-Many Relationships is of type
 Vector. You can use a Collection interface (or any class that implements
 the Collection interface) for declaring the collection attribute.
-
-|=======================================================================
-
- +
 
 [[OTLCG94311]]
 
 [[sthref47]]
 
-JPA Mapping
-+++++++++++
+====== JPA Mapping
 
 By default, JPA automatically defines a OneToMany mapping for a
 many-valued association with one-to-many multiplicity.
@@ -458,8 +397,7 @@ JPA Specification.
 
 [[CEGJCHEB]][[OTLCG94312]]
 
-Many-to-Many Mapping
-++++++++++++++++++++
+====== Many-to-Many Mapping
 
 Many-to-many mappings represent the relationships between a collection
 of source objects and a collection of target objects. They require the
@@ -473,31 +411,16 @@ and in relational database tables.
 
 *_Figure 6-13 Many-to-Many Relationships_*
 
-image:img/mmmapfig.gif[Many-to-many
-Relationships,title="Many-to-many Relationships"] +
-link:img_text/mmmapfig.htm[Description of "Figure 6-13 Many-to-Many
-Relationships"] +
- +
+image:{imagesrelativedir}/mmmapfig.gif[Many-to-many Relationships,title="Many-to-many Relationships"] +
+xref:{imagestextrelativedir}/mmmapfig.adoc[Description of "Figure 6-13 Many-to-Many Relationships"] +
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-For the projects attribute shown in the Many-to-many Relationships you
+NOTE: For the projects attribute shown in the Many-to-many Relationships you
 can use a `Collection` interface (or any class that implements the
 `Collection` interface) for declaring the collection attribute.
 
-|=======================================================================
-
- +
-
 [[CEGFEIFF]][[OTLCG94314]]
 
-JPA Mapping
-+++++++++++
+====== JPA Mapping
 
 By default, JPA automatically defines a many-to-many mapping for a
 many-valued association with many-to-many multiplicity.
@@ -520,8 +443,7 @@ the Java Persistence specification:
 
 [[CEGBCJAG]][[OTLCG94303]]
 
-Using Indirection with Collections
-++++++++++++++++++++++++++++++++++
+====== Using Indirection with Collections
 
 JPA specifies that lazy loading is a hint to the persistence provider
 that data should be fetched lazily when it is first accessed, if
@@ -557,7 +479,6 @@ type.
 
 *_Table 6-1 Support for Lazy Loading by Mapping Type_*
 
-[width="59%",cols="<31%,<69%,<",options="header",]
 |=======================================================================
 |*Mapping* |*Jakarta EE* |*Java SE*
 |Many-to-many |Lazy loading is performed when the `fetch` attribute is
@@ -583,12 +504,9 @@ ignored and default `jakarta.persistence.FetchType.EAGER` applies
 and default `jakarta.persistence.FetchType.EAGER` applies
 |=======================================================================
 
- +
-
 [[CEGDIIIB]][[OTLCG94315]]
 
-Using Optimistic Locking
-^^^^^^^^^^^^^^^^^^^^^^^^
+===== Using Optimistic Locking
 
 Oracle recommends using optimistic locking. With optimistic locking, all
 users have read access to the data. When a user attempts to write a
@@ -599,8 +517,7 @@ the user read the data.
 
 [[sthref50]]
 
-Optimistic Locking in a Stateless Environment
-+++++++++++++++++++++++++++++++++++++++++++++
+====== Optimistic Locking in a Stateless Environment
 
 In a stateless environment, take care to avoid processing out-of-date
 (stale) data. A common strategy for avoiding stale data is to implement
@@ -620,8 +537,7 @@ policies. Oracle recommends using version locking policies.
 
 [[sthref51]]
 
-Optimistic Version Locking
-++++++++++++++++++++++++++
+====== Optimistic Version Locking
 
 Use the `@Version` annotation to enable the JPA-managed optimistic
 locking by specifying the version field or property of an entity class
@@ -639,20 +555,10 @@ Specification.
 
 `http://jcp.org/en/jsr/detail?id=338`
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-The field or property type must either be a numeric type (such as
+ NOTE: The field or property type must either be a numeric type (such as
 `Number`, `long`, `int`, `BigDecimal`, and so on), or a
 `java.sql.Timestamp`. EclipseLink recommends using a numeric type.
 
-|=======================================================================
-
- +
 
 The `@Version` annotation does not have attributes. The `@Version`
 annotation allows you to use EclipseLink converters. See
@@ -662,34 +568,3 @@ For more information, see Section 11.1.9 "Column Annotation" in the JPA
 Specification.
 
 `http://jcp.org/en/jsr/detail?id=338`
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|=======================================================================
-a|
-[width="96%",cols=",^50%,^50%",]
-|=======================================================================
-| 
-|link:mappingintro001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:mappingintro003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|=======================================================================
-
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
-
-|=======================================================================
-
-[[copyright]]
-Copyright © 2012 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

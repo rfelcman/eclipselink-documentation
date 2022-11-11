@@ -15,7 +15,7 @@
     SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
 ///////////////////////////////////////////////////////////////////////////////
-
+[[BLOCKS003]]
 === About the MOXy Solution
 
 The MOXy component, supplied by EclipseLink, enables you to efficiently
@@ -85,8 +85,8 @@ instance in the XML.
 
 *_Figure 2-3 A Sample MOXy Architecture_*
 
-image:concepts/img/jaxb_overview.png[Process in an Object-XML project.,title="Process in an Object-XML project."] +
-xref:concepts/img_text/jaxb_overview.adoc[Description of "Figure 2-3 A Sample MOXy Architecture"] +
+image:{imagesrelativedir}/jaxb_overview.png[Process in an Object-XML project.,title="Process in an Object-XML project."] +
+xref:{imagestextrelativedir}/jaxb_overview.adoc[Description of "Figure 2-3 A Sample MOXy Architecture"] +
 
 [[CHDDHHEI]][[OTLCG159]]
 

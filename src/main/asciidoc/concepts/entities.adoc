@@ -18,9 +18,8 @@
 
 :description: EclipseLink
 :keywords: eclipselink, java, jpa, persistence, entity
-:rootdir: {docdir}/concepts
 
-= Understanding Entities
+== Understanding Entities
 
 This chapter introduces and describes entities. An entity is a
 lightweight persistence domain object. Typically, an entity represents a
@@ -38,34 +37,35 @@ technique and sequence generation options for your entity.
 
 This chapter includes the following sections:
 
+* link:#ENTITIES001[Identifying Entities]
+* link:#ENTITIES002[Entities and Persistent Identity]
+* link:#ENTITIES003[Entities and Database Tables]
+* link:#ENTITIES004[Entities and Inheritance]
+* link:#ENTITIES005[Entities and Embedded Objects]
+* link:#ENTITIES006[Entities and Sequence Generation]
+* link:#ENTITIES007[Entities and Locking]
+* link:#ENTITIES008[Extensible Entities]
+
 // == Identifying Entities
-:sectnums:
 include::{rootdir}/entities001.adoc[]
 
 // == Entities and Persistent Identity
-:sectnums:
 include::{rootdir}/entities002.adoc[]
 
 // == Entities and Database Tables
-:sectnums:
 include::{rootdir}/entities003.adoc[]
 
 // == Entities and Inheritance
-:sectnums:
 include::{rootdir}/entities004.adoc[]
 
 // == Entities and Embedded Objects
-:sectnums:
 include::{rootdir}/entities005.adoc[]
 
 // == Entities and Sequence Generation
-:sectnums:
 include::{rootdir}/entities006.adoc[]
 
 // == Entities and Locking
-:sectnums:
 include::{rootdir}/entities007.adoc[]
 
 // == Extensible Entities
-:sectnums:
 include::{rootdir}/entities008.adoc[]

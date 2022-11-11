@@ -19,7 +19,10 @@
 = Introduction
 :description: EclipseLink
 :keywords: eclipselink, java, jpa, persistence, concepts, understanding
-:rootdir: {docdir}/concepts
+:relativedir: concepts
+:imagesrelativedir: {relativedir}/img
+:imagestextrelativedir: {relativedir}/img_text
+:rootdir: {docdir}/{relativedir}
 include::attributes.adoc[]
 
 // == List of Examples
@@ -38,41 +41,31 @@ include::{rootdir}/preface.adoc[]
 include::{rootdir}/general.adoc[]
 
 // == Understanding Object-Relational and MOXy Internals
-// :sectnums:
 include::{rootdir}/blocks.adoc[]
 
 // == Understanding the Persistence Unit
-// :sectnums:
 include::{rootdir}/app_dev.adoc[]
 
 // == Understanding Entities
-// :sectnums:
 include::{rootdir}/entities.adoc[]
 
 // == Understanding Descriptors
-// :sectnums:
 include::{rootdir}/descriptors.adoc[]
 
 // == Understanding Mappings
-// :sectnums:
 include::{rootdir}/mappingintro.adoc[]
 
 // == Understanding Data Access
-// :sectnums:
 include::{rootdir}/data_access.adoc[]
 
 // == Understanding Caching
-// :sectnums:
 include::{rootdir}/cache.adoc[]
 
 // == Understanding Queries
-// :sectnums:
 include::{rootdir}/queries.adoc[]
 
 // == Understanding EclipseLink Expressions
-// :sectnums:
 include::{rootdir}/expressions.adoc[]
 
 // == Understanding Non-relational Data Sources
-// :sectnums:
 include::{rootdir}/nosql.adoc[]

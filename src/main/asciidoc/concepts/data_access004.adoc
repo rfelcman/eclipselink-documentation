@@ -1,35 +1,22 @@
-[[cse]][[top]]
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|=======================================================================
-a|
-Understanding EclipseLink, *3.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
- a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|=======================================================================
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|=======================================================================
-|link:data_access003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:data_access005.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|=======================================================================
-
-[[CHDBFFGG]][[OTLCG93605]]
-
-About Authentication
---------------------
+///////////////////////////////////////////////////////////////////////////////
+[[DATA_ACCESS004]]
+=== About Authentication
 
 *Authentication* is the means by which a data source validates a user's
 identity and determines whether the user has sufficient privileges to
@@ -47,8 +34,7 @@ The following sections describe the different authentication strategies:
 
 [[CHDEIDHF]][[OTLCG93606]]
 
-Simple JDBC Authentication
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Simple JDBC Authentication
 
 When you configure an EclipseLink database login with a user name and
 password, EclipseLink provides these credentials to the JDBC driver that
@@ -58,26 +44,13 @@ By default, EclipseLink reads passwords from the `persistence.xml` file.
 
 [[CHDFACHD]][[OTLCG93607]]
 
-Oracle Database Proxy Authentication
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Oracle Database Proxy Authentication
 
 EclipseLink supports proxy authentication with Oracle Database in Java
 SE applications and Jakarta EE applications with the Oracle JDBC driver
 and external connection pools only.
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-EclipseLink does not support Oracle Database proxy authentication with
-JTA.
-
-|=======================================================================
-
- +
+NOTE: EclipseLink does not support Oracle Database proxy authentication with JTA.
 
 Oracle Database proxy authentication delivers the following security
 benefits:
@@ -95,19 +68,8 @@ real user.
 the database, and in which users are merely "application users" of which
 the database has no awareness.
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-Oracle Database supports proxy authentication in three-tiers only; it
+NOTE: Oracle Database supports proxy authentication in three-tiers only; it
 does not support it across multiple middle tiers.
-
-|=======================================================================
-
- +
 
 For more information about authentication in Oracle Database, see
 "Preserving User Identity in Multitiered Environments" in the _Oracle
@@ -129,8 +91,7 @@ procedures
 
 [[CHDFCJDB]][[OTLCG93608]]
 
-Auditing
-~~~~~~~~
+==== Auditing
 
 Regardless of what type of authentication you choose, EclipseLink logs
 the name of the user associated with all database operations.
@@ -157,34 +118,3 @@ Consult your database server documentation for details.
 
 Alternatively, you may consider using the EclipseLink persistence unit
 in conjunction with your database schema for auditing purposes.
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|=======================================================================
-a|
-[width="96%",cols=",^50%,^50%",]
-|=======================================================================
-| 
-|link:data_access003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:data_access005.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|=======================================================================
-
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
-
-|=======================================================================
-
-[[copyright]]
-Copyright © 2012 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

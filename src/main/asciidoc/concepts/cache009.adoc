@@ -1,35 +1,22 @@
-[[cse]][[top]]
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|=======================================================================
-a|
-Understanding EclipseLink, *3.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
- a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|=======================================================================
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|=======================================================================
-|link:cache008.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:cache010.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|=======================================================================
-
-[[CDEIBJCE]][[OTLCG94339]]
-
-About Cache Coordination
-------------------------
+///////////////////////////////////////////////////////////////////////////////
+[[CACHE009]]
+=== About Cache Coordination
 
 The need to maintain up-to-date data for all applications is a key
 design challenge for building a distributed application. The difficulty
@@ -62,30 +49,16 @@ session to broadcast object changes among each other so that each
 session's cache is either kept up-to-date or notified that the cache
 must update an object from the data source the next time it is read.
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-You cannot use isolated client sessions with cache coordination. For
-more information, see link:cache001.htm#CDEEGICF[Shared, Isolated,
+NOTE: You cannot use isolated client sessions with cache coordination. For
+more information, see xref:#CDEEGICF[Shared, Isolated,
 Protected, Weak, and Read-only Caches.]
-
-|=======================================================================
-
- +
 
 [[CDEIJFHB]][[OTLCG94340]]
 
 *_Figure 8-2 Coordinated Persistence Unit (Session) Caches_*
 
-image:img/cachcord.gif[Description of Figure 8-2
-follows,title="Description of Figure 8-2 follows"] +
-link:img_text/cachcord.htm[Description of "Figure 8-2 Coordinated
-Persistence Unit (Session) Caches"] +
- +
+image:{imagesrelativedir}/cachcord.gif[Description of Figure 8-2 follows,title="Description of Figure 8-2 follows"] +
+xref:{imagestextrelativedir}/cachcord.htm[Description of "Figure 8-2 Coordinated Persistence Unit (Session) Caches"] +
 
 When sessions are distributed, that is, when an application contains
 multiple sessions (in the same JVM, in multiple JVMs, possibly on
@@ -94,12 +67,11 @@ interconnected on the network, sessions can participate in cache
 coordination. Coordinated cache types that require discovery services
 also require the servers to support User Datagram Protocol (UDP)
 communication and multicast configuration. For more information, see
-link:cache010.htm#CHDCJEFJ[Coordinating JMS and RMI Caches.]
+xref:#CHDCJEFJ[Coordinating JMS and RMI Caches.]
 
 [[CDEDBJCJ]][[OTLCG94341]]
 
-When to Use Cache Coordination
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== When to Use Cache Coordination
 
 Cache coordination can enhance performance and reduce the likelihood of
 stale data for applications that have the following characteristics:
@@ -113,35 +85,4 @@ To maximize performance, avoid cache coordination for applications that
 do not have these characteristics.
 
 For other options to reduce the likelihood of stale data, see
-link:cache004.htm#CHEEACDJ[About Handling Stale Data.]
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|=======================================================================
-a|
-[width="96%",cols=",^50%,^50%",]
-|=======================================================================
-| 
-|link:cache008.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:cache010.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|=======================================================================
-
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
-
-|=======================================================================
-
-[[copyright]]
-Copyright © 2012 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +
+xref:#CACHE004[About Handling Stale Data.]

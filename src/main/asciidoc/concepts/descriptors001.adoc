@@ -1,35 +1,22 @@
-[[cse]][[top]]
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|=======================================================================
-a|
-Understanding EclipseLink, *3.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
- a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|=======================================================================
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|=======================================================================
-|link:descriptors.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:descriptors002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|=======================================================================
-
-[[CHEBFJEC]][[OTLCG92055]]
-
-Common Descriptor Concepts
---------------------------
+///////////////////////////////////////////////////////////////////////////////
+[[DESCRIPTORS001]]
+=== Common Descriptor Concepts
 
 The following sections describe the concepts that are common to
 Object-Relational and MOXy descriptors.
@@ -43,8 +30,7 @@ Object-Relational and MOXy descriptors.
 
 [[CHEJJGIE]][[OTLCG92056]]
 
-Descriptor Architecture
-~~~~~~~~~~~~~~~~~~~~~~~
+==== Descriptor Architecture
 
 A *descriptor* stores all the information describing how an instance of
 a particular object class can be represented in a data source. The
@@ -72,8 +58,7 @@ type of mappings that you can define.
 
 [[CHEEDJEH]][[OTLCG92058]]
 
-Descriptors and Inheritance
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Descriptors and Inheritance
 
 *Inheritance* describes how a derived (child) class inherits the
 characteristics of its superclass (parent). You can use descriptors to
@@ -93,11 +78,8 @@ class contains a leaf class: `Car` and `Bicycle`, respectively.
 
 *_Figure 5-1 Example Inheritance Hierarchy_*
 
-image:img/javainhr.gif[Description of Figure 5-1
-follows,title="Description of Figure 5-1 follows"] +
-link:img_text/javainhr.htm[Description of "Figure 5-1 Example
-Inheritance Hierarchy "] +
- +
+image:{imagesrelativedir}/javainhr.gif[Description of Figure 5-1 follows,title="Description of Figure 5-1 follows"] +
+xref:{imagestextrelativedir}/javainhr.adoc[Description of "Figure 5-1 Example Inheritance Hierarchy "] +
 
 EclipseLink recognizes the following three types of classes in an
 inheritance hierarchy:
@@ -138,8 +120,7 @@ This section includes information on the following topics:
 
 [[CHEEIAEA]][[OTLCG92071]]
 
-Specifying a Class Indicator
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===== Specifying a Class Indicator
 
 When configuring inheritance, you configure the root class descriptor
 with the means of determining which subclasses it should instantiate.
@@ -149,25 +130,13 @@ You can do this in one of the following ways:
 * link:#CHEFDEDA[Using Class Indicator Fields]
 * link:#CHEJDAID[Using Class Extraction Methods]
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-**Note*:*
-
-All leaf classes in the hierarchy must have a class indicator and they
+NOTE: All leaf classes in the hierarchy must have a class indicator and they
 must have the same type of class indicator (field or class extraction
 method).
 
-|=======================================================================
-
- +
-
 [[CHEFDEDA]][[OTLCG92072]]
 
-Using Class Indicator Fields
-++++++++++++++++++++++++++++
+====== Using Class Indicator Fields
 
 You can use a persistent attribute of a class to indicate which subclass
 should be instantiated. For example, in a relational descriptor, you can
@@ -175,19 +144,8 @@ use a class indicator field in the root class table. The indicator field
 should not have an associated direct mapping unless it is set to
 read-only.
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-**Note*:*
-
-If the indicator field is part of the primary key, define a write-only
+NOTE: If the indicator field is part of the primary key, define a write-only
 transformation mapping for the indicator field.
-
-|=======================================================================
-
- +
 
 You can use strings or numbers as values in the class indicator field.
 
@@ -196,8 +154,7 @@ indicator field translates into the class to be instantiated.
 
 [[CHEJDAID]][[OTLCG92074]]
 
-Using Class Extraction Methods
-++++++++++++++++++++++++++++++
+====== Using Class Extraction Methods
 
 You can define a Java method to compute the class indicator based on any
 available information in the object's data source record. Such a method
@@ -226,8 +183,7 @@ EclipseLink does not generate SQL for queries on the root class.
 
 [[CHECJEGE]][[OTLCG92078]]
 
-Inheritance and Primary Keys
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Inheritance and Primary Keys
 
 For relational projects, EclipseLink assumes that all of the classes in
 an inheritance hierarchy have the same primary key, as set in the root
@@ -235,16 +191,14 @@ descriptor.
 
 [[CHEJGFGH]][[OTLCG92079]]
 
-Single and Multi-Table Inheritance
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Single and Multi-Table Inheritance
 
 In a relational project, you can map your inheritance hierarchy to a
 single table or to multiple tables.
 
 [[CHEEDCIJ]][[OTLCG92080]]
 
-Aggregate and Composite Descriptors and Inheritance
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Aggregate and Composite Descriptors and Inheritance
 
 You can designate relational descriptors as aggregates. XML descriptors
 are always composites (see link:#CHEIIIBJ[Descriptors and Aggregation]).
@@ -260,8 +214,7 @@ inheritance.
 
 [[CHEIIIBJ]][[OTLCG92063]]
 
-Descriptors and Aggregation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Descriptors and Aggregation
 
 Two objects—a source (parent or owning) object and a target (child or
 owned) object—are related by aggregation if there is a strict one-to-one
@@ -278,8 +231,7 @@ The EJB 3.0 specification does not support nested aggregates).
 
 [[CACGEBJF]][[OTLCG00184]]
 
-Descriptor Customization
-~~~~~~~~~~~~~~~~~~~~~~~~
+==== Descriptor Customization
 
 You can customize a descriptor at run time by specifying a descriptor
 customizer—a Java class that implements the
@@ -292,8 +244,7 @@ a descriptor. See link:#CHEIGIHG[Amendment Methods].
 
 [[CHEIGIHG]][[OTLCG00186]]
 
-Amendment Methods
-~~~~~~~~~~~~~~~~~
+==== Amendment Methods
 
 You can associate a static Java method that is called when a descriptor
 is loaded at run time. This method can amend the run-time descriptor
@@ -311,8 +262,7 @@ object-relational data type descriptors, and XML descriptors.
 
 [[CHEDDDJF]][[OTLCG00050]]
 
-Descriptor Event Manager
-~~~~~~~~~~~~~~~~~~~~~~~~
+==== Descriptor Event Manager
 
 In relational projects, EclipseLink raises various instances of
 `DescriptorEvent` during the persistence life cycle. Each descriptor
@@ -332,34 +282,3 @@ frameworks
 an object changes
 * Implement complex mappings or optimizations not directly supported by
 EclipseLink mappings
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|=======================================================================
-a|
-[width="96%",cols=",^50%,^50%",]
-|=======================================================================
-| 
-|link:descriptors.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:descriptors002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|=======================================================================
-
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
-
-|=======================================================================
-
-[[copyright]]
-Copyright © 2012 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

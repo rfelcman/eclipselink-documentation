@@ -18,9 +18,8 @@
 
 :description: EclipseLink
 :keywords: eclipselink, java, jpa, persistence, concepts, mapping
-:rootdir: {docdir}/concepts
 
-= Understanding Mappings
+== Understanding Mappings
 
 This chapter introduces and describes mappings. EclipseLink can
 transform data between an object representation and a representation
@@ -34,18 +33,19 @@ object and data source.
 
 This chapter includes the following sections:
 
+* link:#MAPPINGINTRO001[Common Mapping Concepts]
+* link:#MAPPINGINTRO002[Object-Relational Mapping Concepts]
+* link:#MAPPINGINTRO003[MOXy Mapping Concepts]
+* link:#MAPPINGINTRO004[Object-JSON Mapping Concepts]
+
 // == Common Mapping Concepts
-:sectnums:
 include::{rootdir}/mappingintro001.adoc[]
 
 // == Object-Relational Mapping Concepts
-:sectnums:
 include::{rootdir}/mappingintro002.adoc[]
 
 // == MOXy Mapping Concepts
-:sectnums:
 include::{rootdir}/mappingintro003.adoc[]
 
 // == Object-JSON Mapping Concepts
-:sectnums:
 include::{rootdir}/mappingintro004.adoc[]

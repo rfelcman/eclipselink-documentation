@@ -1,35 +1,22 @@
-[[cse]][[top]]
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|=======================================================================
-a|
-Understanding EclipseLink, *3.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
- a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|=======================================================================
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|=======================================================================
-|link:app_dev002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:app_dev004.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|=======================================================================
-
-[[BABFEDHA]][[OTLCG91195]]
-
-About Persisting Objects
-------------------------
+///////////////////////////////////////////////////////////////////////////////
+[[APPDEV003]]
+=== About Persisting Objects
 
 This section includes a brief description of relational mapping and
 provides information and restrictions to guide object and relational
@@ -51,8 +38,7 @@ This section includes information on the following:
 
 [[BABEIFFG]][[OTLCG91196]]
 
-Application Object Model
-~~~~~~~~~~~~~~~~~~~~~~~~
+==== Application Object Model
 
 Object modeling refers to the design of the Java classes that represent
 your application objects. You can use your favorite integrated
@@ -63,13 +49,12 @@ Any class that registers a descriptor with EclipseLink database sessions
 is called a persistent class. EclipseLink does not require that
 persistent classes provide public accessor methods for any private or
 protected attributes stored in the database. Refer to
-link:app_dev002.htm#BABDHDIA[Persistent Class Requirements] for more
+xref:concepts/app_dev002.adoc#BABDHDIA[Persistent Class Requirements] for more
 information.
 
 [[BABBIABD]][[OTLCG91197]]
 
-Data Storage Schema
-~~~~~~~~~~~~~~~~~~~
+==== Data Storage Schema
 
 Your data storage schema refers to the design that you implement to
 organize the persistent data in your application. This schema refers to
@@ -85,8 +70,7 @@ necessary schema.
 
 [[BABDCJDH]][[OTLCG91198]]
 
-Primary Keys and Object Identity
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Primary Keys and Object Identity
 
 When making objects persistent, each object requires an _identity_ to
 uniquely identify it for storage and retrieval. Object identity is
@@ -101,19 +85,18 @@ retrievals of the same object return references to the same object
 instance—not multiple copies of the same object.
 
 EclipseLink supports multiple identity maps to maintain object identity
-(including composite primary keys). See link:cache002.htm#CHEFCFEG[About
+(including composite primary keys). See xref:concepts/cache002.adoc#CHEFCFEG[About
 Cache Type and Size] for additional information.
 
 [[BABFEIHF]][[OTLCG91199]]
 
-Mappings
-~~~~~~~~
+==== Mappings
 
 EclipseLink uses metadata to describe how objects and beans map to the
 data source. This approach isolates persistence information from the
 object model—you are free to design their ideal object model, and DBAs
 are free to design their ideal schema. For more information, see
-link:blocks001.htm#CHEDICEE[About Metadata].
+xref:concepts/blocks001.adoc#CHEDICEE[About Metadata].
 
 At run time, EclipseLink uses the metadata to seamlessly and dynamically
 interact with the data source, as required by the application.
@@ -121,12 +104,11 @@ interact with the data source, as required by the application.
 EclipseLink provides an extensive mapping hierarchy that supports the
 wide variety of data types and references that an object model might
 contain. For more information, see
-link:mappingintro.htm#CHDFEJIJ[Chapter 6, "Understanding Mappings."]
+xref:concepts/mappingintro.adoc#CHDFEJIJ[Chapter 6, "Understanding Mappings."]
 
 [[BABEEJHA]][[OTLCG91200]]
 
-Foreign Keys and Object Relationships
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Foreign Keys and Object Relationships
 
 A *foreign key* can be one or more columns that reference a unique key,
 usually the primary key, in another table. Foreign keys can be any
@@ -143,8 +125,7 @@ information to find an address for a particular `Employee`.
 
 [[BABBAIFB]][[OTLCG91201]]
 
-Inheritance
-~~~~~~~~~~~
+==== Inheritance
 
 Object-oriented systems allow classes to be defined in terms of other
 classes. For example: motorcycles, sedans, and vans are all _kinds of
@@ -166,8 +147,7 @@ while allowing you to complete the details with specialized subclasses.
 
 [[BABEDGBH]][[OTLCG91202]]
 
-Concurrency
-~~~~~~~~~~~
+==== Concurrency
 
 To have concurrent clients logged in at the same time, the server must
 spawn a dedicated thread of execution for each client. Jakarta EE
@@ -185,12 +165,11 @@ Isolation, Durability) transaction principles as a database transaction.
 EclipseLink supports configurable optimistic and pessimistic locking
 strategies to let you customize the type of locking that the EclipseLink
 concurrency manager uses. For more information, see
-link:descriptors002.htm#CHEEEIEA[Descriptors and Locking.]
+xref:concepts/descriptors002.adoc#CHEEEIEA[Descriptors and Locking.]
 
 [[BABBBCAC]][[OTLCG91203]]
 
-Caching
-~~~~~~~
+==== Caching
 
 EclipseLink caching improves application performance by automatically
 storing data returned as objects from the database for future use. This
@@ -207,13 +186,12 @@ cache
 EclipseLink supports several caching polices to provide extensive
 flexibility. You can fine-tune the cache for maximum performance, based
 on individual application performance. Refer to
-link:cache.htm#CDEFHHEH[Chapter 8, "Understanding Caching"] for more
+xref:concepts/cache.adoc#CDEFHHEH[Chapter 8, "Understanding Caching"] for more
 information.
 
 [[BABGFFJF]][[OTLCG91204]]
 
-Nonintrusive Persistence
-~~~~~~~~~~~~~~~~~~~~~~~~
+==== Nonintrusive Persistence
 
 The EclipseLink nonintrusive approach of achieving persistence through a
 metadata architecture means that there are almost no object model
@@ -227,14 +205,13 @@ following:
 * Special persistence methods
 * Generating source code into or wrapping the object model
 
-See link:app_dev002.htm#BABCCAHJ[Building and Using the Persistence
+See xref:concepts/app_dev002.adoc#BABCCAHJ[Building and Using the Persistence
 Layer] for additional information on this nonintrusive approach. See
-also link:blocks001.htm#CHEDICEE[About Metadata.]
+also xref:concepts/blocks001.adoc#CHEDICEE[About Metadata.]
 
 [[BABCCDGC]][[OTLCG91205]]
 
-Indirection
-~~~~~~~~~~~
+==== Indirection
 
 An indirection object takes the place of an application object so the
 application object is not read from the database until it is needed.
@@ -247,30 +224,18 @@ Without indirection, each time the application retrieves a persistent
 object, it also retrieves _all_ the objects referenced by that object.
 This may result in lower performance for some applications.
 
- +
-
-[width="100%",cols="<100%",]
-|=====================================================================
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-Oracle strongly recommends that you always use indirection.
-
-|=====================================================================
-
- +
+NOTE: Oracle strongly recommends that you always use indirection.
 
 EclipseLink provides several indirection models, such as proxy
 indirection, transparent indirection, and value holder indirection.
 
-See link:mappingintro002.htm#CEGBCJAG[Using Indirection with
-Collections] and link:mappingintro002.htm#CHDJAHDC[Indirection (Lazy
+See xref:concepts/mappingintro002.adoc#CEGBCJAG[Using Indirection with
+Collections] and xref:concepts/mappingintro002.adoc#CHDJAHDC[Indirection (Lazy
 Loading)] for more information.
 
 [[CCHBBHDH]][[OTLCG91206]]
 
-Mutability
-~~~~~~~~~~
+==== Mutability
 
 Mutability is a property of a complex field that specifies whether the
 field value may be changed or not changed as opposed to replaced.
@@ -315,37 +280,6 @@ improve performance by configuring the mapping as immutable.
 Mutability also affects weaving. EclipseLink can only weave an attribute
 change tracking policy for immutable mappings.
 
-For more information, see link:app_dev005.htm#CCHJEDFH[About Weaving].
+For more information, see xref:concepts/app_dev005.htm#CCHJEDFH[About Weaving].
 See also the description of the `@Mutable` annotation in _Jakarta
 Persistence API (JPA) Extensions Reference for EclipseLink_.
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|=======================================================================
-a|
-[width="96%",cols=",^50%,^50%",]
-|=======================================================================
-| 
-|link:app_dev002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:app_dev004.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|=======================================================================
-
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
-
-|=======================================================================
-
-[[copyright]]
-Copyright © 2012 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

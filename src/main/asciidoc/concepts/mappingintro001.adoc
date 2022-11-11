@@ -1,35 +1,22 @@
-[[cse]][[top]]
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|=======================================================================
-a|
-Understanding EclipseLink, *3.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
- a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|=======================================================================
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|=======================================================================
-|link:mappingintro.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:mappingintro002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|=======================================================================
-
-[[CHDGIHEJ]][[OTLCG75016]]
-
-Common Mapping Concepts
------------------------
+///////////////////////////////////////////////////////////////////////////////
+[[MAPPINGINTRO001]]
+=== Common Mapping Concepts
 
 This section describes concepts for relational and nonrelational
 mappings that are unique to EclipseLink:
@@ -43,8 +30,7 @@ mappings that are unique to EclipseLink:
 
 [[CHDEDGDF]][[OTLCG92097]]
 
-Mapping Architecture
-~~~~~~~~~~~~~~~~~~~~
+==== Mapping Architecture
 
 To define a mapping, you draw upon the following components:
 
@@ -54,19 +40,8 @@ store the object's data.
 * A descriptor for a particular object class.
 * An object class to map.
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-A mapping is the same regardless of whether your project is persistent
+NOTE: A mapping is the same regardless of whether your project is persistent
 or nonpersistent.
-
-|=======================================================================
-
- +
 
 For an example of a typical EclipseLink mapping, see
 link:#CHDGGFCH[Mapping Examples].
@@ -85,8 +60,7 @@ link:descriptors.htm#CHECEAAE[Chapter 5, "Understanding Descriptors"].
 
 [[CHDGGFCH]][[OTLCG92098]]
 
-Mapping Examples
-~~~~~~~~~~~~~~~~
+==== Mapping Examples
 
 Although EclipseLink supports more complex mappings, most EclipseLink
 classes map to a single database table or XML element that defines the
@@ -107,11 +81,8 @@ well as any other instances of *Class_X*.
 
 *_Figure 6-1 How Classes and Objects Map to a Database Table_*
 
-image:img/example_map1.gif[Description of Figure 6-1
-follows,title="Description of Figure 6-1 follows"] +
-link:img_text/example_map1.htm[Description of "Figure 6-1 How Classes
-and Objects Map to a Database Table"] +
- +
+image:{imagesrelativedir}/example_map1.gif[Description of Figure 6-1 follows,title="Description of Figure 6-1 follows"] +
+xref:{imagestextrelativedir}/example_map1.adoc[Description of "Figure 6-1 How Classes and Objects Map to a Database Table"] +
 
 EclipseLink provides you with the tools to build these mappings, from
 the simple mappings illustrated in link:#CHDHADEG[Figure 6-1], to
@@ -122,8 +93,7 @@ link:#i1025794[Figure 6-2, "Serialized Object Converter (relational)"].
 
 [[CHDJJHJD]][[OTLCG92121]]
 
-Mapping Converters
-~~~~~~~~~~~~~~~~~~
+==== Mapping Converters
 
 If existing EclipseLink mappings do not meet your needs, you can create
 custom mappings using mapping extensions. These extensions include the
@@ -133,26 +103,14 @@ following:
 * link:#BABEHFGH[Type Conversion Converter]
 * link:#BABBCAIH[Object Type Converter]
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-Except for simple type translation, you can use the mapping converters
+NOTE: Except for simple type translation, you can use the mapping converters
 and transformers regardless of whether your data source is relational or
 nonrelational. Simple type translation is applicable only to XML
 projects.
 
-|=======================================================================
-
- +
-
 [[BABHCBJA]][[OTLCG00042]]
 
-Serialized Object Converter
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===== Serialized Object Converter
 
 The serialized object converter can be used with direct and direct
 collection mappings, allowing you to map complex objects into binary
@@ -169,11 +127,8 @@ the `JOB_DESC` field of the database.
 
 *_Figure 6-2 Serialized Object Converter (relational)_*
 
-image:img/serobjfg.gif[Description of Figure 6-2
-follows,title="Description of Figure 6-2 follows"] +
-link:img_text/serobjfg.htm[Description of "Figure 6-2 Serialized Object
-Converter (relational)"] +
- +
+image:{imagesrelativedir}/serobjfg.gif[Description of Figure 6-2 follows,title="Description of Figure 6-2 follows"] +
+xref:{imagestextrelativedir}/serobjfg.adoc[Description of "Figure 6-2 Serialized Object Converter (relational)"] +
 
 link:#CEGGDDEC[Figure 6-3] demonstrates an example of a nonrelational
 mapping that uses a serialized object converter. The attribute
@@ -184,11 +139,8 @@ stores in the `JOB DESCRIPTION` element of an XML schema.
 
 *_Figure 6-3 Serialized Object Converter (nonrelational)_*
 
-image:img/otlcg_dt_002.png[Description of Figure 6-3
-follows,title="Description of Figure 6-3 follows"] +
-link:img_text/otlcg_dt_002.htm[Description of "Figure 6-3 Serialized
-Object Converter (nonrelational)"] +
- +
+image:{imagesrelativedir}/otlcg_dt_002.png[Description of Figure 6-3 follows,title="Description of Figure 6-3 follows"] +
+xref:{imagestextrelativedir}/otlcg_dt_002.adoc[Description of "Figure 6-3 Serialized Object Converter (nonrelational)"] +
 
 The serialized object converter relies on the Java serializer. Before
 you map a domain object with the serialized object converter, ensure
@@ -198,8 +150,7 @@ transient.
 
 [[BABEHFGH]][[OTLCG00043]]
 
-Type Conversion Converter
-^^^^^^^^^^^^^^^^^^^^^^^^^
+===== Type Conversion Converter
 
 The type conversion converter can be used with direct and direct
 collection mappings, allowing you to map complex objects into binary
@@ -217,11 +168,8 @@ databases have a single date data type that can store any date or time).
 
 *_Figure 6-4 Type Conversion Mapping (relational)_*
 
-image:img/tcmapfig.gif[Description of Figure 6-4
-follows,title="Description of Figure 6-4 follows"] +
-link:img_text/tcmapfig.htm[Description of "Figure 6-4 Type Conversion
-Mapping (relational) "] +
- +
+image:{imagesrelativedir}/tcmapfig.gif[Description of Figure 6-4 follows,title="Description of Figure 6-4 follows"] +
+xref:{imagestextrelativedir}/tcmapfig.adoc[Description of "Figure 6-4 Type Conversion Mapping (relational) "] +
 
 link:#CHDBJHEI[Figure 6-5] illustrates a type conversion mapping
 (nonrelational). `java.util.Date` object is mapped to a String in a XML
@@ -231,11 +179,8 @@ schema.
 
 *_Figure 6-5 Type Conversion Mapping (nonrelational)_*
 
-image:img/tcmapxml.gif[Description of Figure 6-5
-follows,title="Description of Figure 6-5 follows"] +
-link:img_text/tcmapxml.htm[Description of "Figure 6-5 Type Conversion
-Mapping (nonrelational)"] +
- +
+image:{imagesrelativedir}/tcmapxml.gif[Description of Figure 6-5 follows,title="Description of Figure 6-5 follows"] +
+xref:{imagestextrelativedir}/tcmapxml.adoc[Description of "Figure 6-5 Type Conversion Mapping (nonrelational)"] +
 
 You can use a type conversion converter to specify the specific database
 type when that type must be handled specially for the database. This
@@ -276,8 +221,7 @@ EclipseLink_.
 
 [[BABBCAIH]][[OTLCG00044]]
 
-Object Type Converter
-^^^^^^^^^^^^^^^^^^^^^
+===== Object Type Converter
 
 The object type converter can be used with direct and direct collection
 mappings allowing you to match a fixed number of values to Java objects.
@@ -293,11 +237,8 @@ the XML element as `F`.
 
 *_Figure 6-6 Object Type XML Converter_*
 
-image:img/obxmlfig.gif[Description of Figure 6-6
-follows,title="Description of Figure 6-6 follows"] +
-link:img_text/obxmlfig.htm[Description of "Figure 6-6 Object Type XML
-Converter"] +
- +
+image:{imagesrelativedir}/obxmlfig.gif[Description of Figure 6-6 follows,title="Description of Figure 6-6 follows"] +
+xref:{imagestextrelativedir}/obxmlfig.adoc[Description of "Figure 6-6 Object Type XML Converter"] +
 
 You can also perform object type transformations by using the
 `@ObjectTypeConverter` annotation. This annotation specifies an
@@ -311,8 +252,7 @@ _Jakarta Persistence API (JPA) Extensions Reference for EclipseLink_.
 
 [[CHDDBJJJ]][[OTLCG00040]]
 
-Transformation Mapping
-~~~~~~~~~~~~~~~~~~~~~~
+==== Transformation Mapping
 
 In some special circumstances, existing mapping types and their default
 Java to data source type handling may be insufficient. In these special
@@ -320,20 +260,9 @@ cases, you can consider using a transformation mapping to perform
 specialized translations between how a value is represented in Java and
 in the data source.
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-**Tip*:*
-
-Because of the complexity of transformation mappings, it is often easier
+TIP: Because of the complexity of transformation mappings, it is often easier
 to perform the transformation with a converter or getter and setter
 methods of a direct-to-field mapping.
-
-|=======================================================================
-
- +
 
 link:#i1054846[Figure 6-7] illustrates a transformation mapping. The
 values from the `B_DATE` and `B_TIME` fields are used to create a
@@ -343,11 +272,8 @@ values from the `B_DATE` and `B_TIME` fields are used to create a
 
 *_Figure 6-7 Transformation Mappings_*
 
-image:img/trmapfig.gif[Description of Figure 6-7
-follows,title="Description of Figure 6-7 follows"] +
-link:img_text/trmapfig.htm[Description of "Figure 6-7 Transformation
-Mappings"] +
- +
+image:{imagesrelativedir}/trmapfig.gif[Description of Figure 6-7 follows,title="Description of Figure 6-7 follows"] +
+xref:{imagestextrelativedir}/trmapfig.adoc[Description of "Figure 6-7 Transformation Mappings"] +
 
 A transformation mapping is made up of the following two components:
 
@@ -391,34 +317,3 @@ interface. For more information on these annotations, see the
 descriptions of the `@Transformation`, `@ReadTransformer`, and
 `@WriteTransformer` in _Jakarta Persistence API (JPA) Extensions
 Reference for EclipseLink_.
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|=======================================================================
-a|
-[width="96%",cols=",^50%,^50%",]
-|=======================================================================
-| 
-|link:mappingintro.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:mappingintro002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|=======================================================================
-
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
-
-|=======================================================================
-
-[[copyright]]
-Copyright © 2012 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

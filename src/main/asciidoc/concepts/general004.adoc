@@ -15,7 +15,7 @@
     SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
 ///////////////////////////////////////////////////////////////////////////////
-
+[[GENERAL004]]
 === Key Components
 
 link:#CHDGIFIA[Figure 1-1] illustrates the components contained by
@@ -25,8 +25,8 @@ EclipseLink. The following sections describe the components.
 
 *_Figure 1-1 EclipseLink Components_*
 
-image:concepts/img/otlcg_jd_002_eclipselink.png[This figure is described in the text.,title="This figure is described in the text."] +
-xref:concepts/img_text/otlcg_jd_002_eclipselink.adoc[Description of "Figure 1-1 EclipseLink Components"]
+image:{imagesrelativedir}/otlcg_jd_002_eclipselink.png[This figure is described in the text.,title="This figure is described in the text."] +
+xref:{imagestextrelativedir}/otlcg_jd_002_eclipselink.adoc[Description of "Figure 1-1 EclipseLink Components"]
 
 [[OTLCG116]]
 

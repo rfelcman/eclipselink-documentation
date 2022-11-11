@@ -20,7 +20,7 @@
 :keywords: eclipselink, java, jpa, persistence, cache
 :rootdir: {docdir}/concepts
 
-= Understanding Caching
+== Understanding Caching
 
 This chapter introduces and describes caching. The EclipseLink cache is
 an in-memory repository that stores recently read or written objects
@@ -41,51 +41,51 @@ Reference for EclipseLink_.
 
 This chapter includes the following sections:
 
+* link:#CACHE001[About Cache Architecture]
+* link:#CACHE002[About Cache Type and Size]
+* link:#CACHE003[About Queries and the Cache]
+* link:#CACHE004[About Handling Stale Data]
+* link:#CACHE005[About Explicit Query Refreshes]
+* link:#CACHE006[About Cache Indexes]
+* link:#CACHE007[Database Event Notification and Oracle CQN]
+* link:#CACHE008[About Query Results Cache]
+* link:#CACHE009[About Cache Coordination]
+* link:#CACHE010[Clustering and Cache Coordination]
+* link:#CACHE011[Clustering and Cache Consistency]
+* link:#CACHE012[Cache Interceptors]
+
 // == About Cache Architecture
-:sectnums:
 include::{rootdir}/cache001.adoc[]
 
 // == About Cache Type and Size
-:sectnums:
 include::{rootdir}/cache002.adoc[]
 
 // == About Queries and the Cache
-:sectnums:
 include::{rootdir}/cache003.adoc[]
 
 // == About Handling Stale Data
-:sectnums:
 include::{rootdir}/cache004.adoc[]
 
 // == About Explicit Query Refreshes
-:sectnums:
 include::{rootdir}/cache005.adoc[]
 
 // == About Cache Indexes
-:sectnums:
 include::{rootdir}/cache006.adoc[]
 
 // == Database Event Notification and Oracle CQN
-:sectnums:
 include::{rootdir}/cache007.adoc[]
 
 // == About Query Results Cache
-:sectnums:
 include::{rootdir}/cache008.adoc[]
 
 // == About Cache Coordination
-:sectnums:
 include::{rootdir}/cache009.adoc[]
 
 // == Clustering and Cache Coordination
-:sectnums:
 include::{rootdir}/cache010.adoc[]
 
 // == Clustering and Cache Consistency
-:sectnums:
 include::{rootdir}/cache011.adoc[]
 
 // == Cache Interceptors
-:sectnums:
 include::{rootdir}/cache012.adoc[]
-

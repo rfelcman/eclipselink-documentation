@@ -1,35 +1,22 @@
-[[cse]][[top]]
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|=======================================================================
-a|
-Understanding EclipseLink, *3.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
- a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|=======================================================================
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|=======================================================================
-|link:descriptors001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:descriptors003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|=======================================================================
-
-[[CHDIJDHB]]
-
-Object-Relational Descriptor Concepts
--------------------------------------
+///////////////////////////////////////////////////////////////////////////////
+[[DESCRIPTORS002]]
+=== Object-Relational Descriptor Concepts
 
 The following sections describe the concepts specific to
 Object-Relational descriptors.
@@ -41,8 +28,7 @@ Object-Relational descriptors.
 
 [[CHEJJCCG]][[OTLCG92062]]
 
-Fetch Groups
-~~~~~~~~~~~~
+==== Fetch Groups
 
 By default, when you execute an object-level read query for a particular
 object class, EclipseLink returns all the persistent attributes mapped
@@ -88,8 +74,7 @@ entity
 
 [[sthref27]]
 
-AttributeGroup Types and Operations
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== AttributeGroup Types and Operations
 
 The following sections describe the possible `AttributeGroup` types and
 operations.
@@ -105,8 +90,7 @@ operations.
 
 [[CHDCHCHI]]
 
-FetchGroup
-^^^^^^^^^^
+==== FetchGroup
 
 The `FetchGroup` defines which attributes should be fetched (selected
 from the database) when the entity is retrieved as the result of a query
@@ -121,8 +105,7 @@ an associated `LoadGroup` on the query.
 
 [[CHDBHDBG]]
 
-Default FetchGroup
-^^^^^^^^^^^^^^^^^^
+==== Default FetchGroup
 
 `FetchGroup` also has the notion of named and default `FetchGroup` which
 are managed by the `FetchGroupManager`. A default `FetchGroup` is
@@ -134,16 +117,14 @@ explicit `FetchGroup` or named `FetchGroup` is configured.
 
 [[CHDDIGEH]]
 
-Named FetchGroup
-^^^^^^^^^^^^^^^^
+==== Named FetchGroup
 
 A named `FetchGroup` can be defined for an entity using `@FetchGroup`
 annotation or within the `eclipselink-orm.xml` file.
 
 [[CHDHFEIB]]
 
-Full FetchGroup
-^^^^^^^^^^^^^^^
+==== Full FetchGroup
 
 A `FetchGroup` when first created is assumed to be empty. The user must
 add the attributes to the `FetchGroup`. If a `FetchGroup` is required
@@ -152,24 +133,21 @@ with all of the attributes then the
 
 [[CHDFADCE]]
 
-Load/LoadAll with FetchGroup
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Load/LoadAll with FetchGroup
 
 A `FetchGroup` can also be configured to perform a load operation of
 relationship mappings and nested relationship mappings.
 
 [[CHDJHHGD]]
 
-LoadGroup
-^^^^^^^^^
+==== LoadGroup
 
 A `LoadGroup` is used to force a specified set of relationship
 attributes to be populated in a query result.
 
 [[CHDCJDIE]]
 
-CopyGroup
-^^^^^^^^^
+==== CopyGroup
 
 The `CopyGroup` replaces the deprecated `ObjectCopyPolicy` being used to
 define how a entity is copied. In addition to specifying the attributes
@@ -188,8 +166,7 @@ to its default value in the copies. Default is `false`.
 
 [[CHDIIBAJ]]
 
-Merging
-^^^^^^^
+==== Merging
 
 When a partial entity is merged into a persistence context that has an
 `AttributeGroup` associated with it defining which attributes are
@@ -199,8 +176,7 @@ settings.
 
 [[CHEFCCBD]][[OTLCG92064]]
 
-Descriptor Query Manager
-~~~~~~~~~~~~~~~~~~~~~~~~
+==== Descriptor Query Manager
 
 Each relational descriptor provides an instance of
 `DescriptorQueryManager` that you can use to configure the following:
@@ -211,8 +187,7 @@ Each relational descriptor provides an instance of
 
 [[CHECGEFD]][[OTLCG92065]]
 
-Descriptors and Sequencing
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Descriptors and Sequencing
 
 An essential part of maintaining object identity is managing the
 assignment of unique values (that is, a specific sequence) to
@@ -230,8 +205,7 @@ the primary key, with its own sequence.
 
 [[CHEEEIEA]][[OTLCG00086]]
 
-Descriptors and Locking
-~~~~~~~~~~~~~~~~~~~~~~~
+==== Descriptors and Locking
 
 With object-relational mapping, you can configure a descriptor with any
 of the following locking policies to control concurrent access to a
@@ -257,8 +231,7 @@ EclipseLink supports, including the following:
 
 [[CIHJCGBA]][[OTLCG00029]]
 
-Optimistic Version Locking Policies
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Optimistic Version Locking Policies
 
 With optimistic locking, all users have read access to the data. When a
 user attempts to make a change, the application checks to ensure the
@@ -289,24 +262,13 @@ policies:
 For descriptions of these locking policies, see "Setting Optimistic
 Locking" in _Solutions Guide for EclipseLink_.
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-In general, Oracle recommends numeric version locking because of the
+NOTE: In general, Oracle recommends numeric version locking because of the
 following:
 
 * accessing the timestamp from the data source can have a negative
 impact on performance;
 * time stamp locking is limited to the precision that the database
 stores for timestamps.
-
-|=======================================================================
-
- +
 
 Whenever any update fails because optimistic locking has been violated,
 EclipseLink throws an `OptimisticLockException`. This should be handled
@@ -339,8 +301,7 @@ to access the translation row could be used for other locking policies.
 
 [[CHECICGH]][[OTLCG92082]]
 
-Optimistic Version Locking Policies and Cascading
-+++++++++++++++++++++++++++++++++++++++++++++++++
+===== Optimistic Version Locking Policies and Cascading
 
 If your database schema is such that both a parent object and its
 privately owned child object are stored in the same table, then if you
@@ -378,11 +339,8 @@ Consider the example object graph shown in link:#CHEEBGIH[Figure 5-2]
 
 *_Figure 5-2 Optimistic Version Locking Policies and Cascading Example_*
 
-image:img/oplckcas.gif[Description of Figure 5-2
-follows,title="Description of Figure 5-2 follows"] +
-link:img_text/oplckcas.htm[Description of "Figure 5-2 Optimistic Version
-Locking Policies and Cascading Example"] +
- +
+image:{imagesrelativedir}/oplckcas.gif[Description of Figure 5-2 follows,title="Description of Figure 5-2 follows"] +
+xref:{imagestextrelativedir}/oplckcas.adoc[Description of "Figure 5-2 Optimistic Version Locking Policies and Cascading Example"] +
 
 In this example, `ObjectA` privately owns `ObjectB`, and `ObjectB`
 privately owns `ObjectC`, and `ObjectC` privately owns `ObjectD`.
@@ -406,8 +364,7 @@ though it has no changes to its corresponding table.
 
 [[CACIAHGG]][[OTLCG92084]]
 
-Optimistic Locking and Rollbacks
-++++++++++++++++++++++++++++++++
+===== Optimistic Locking and Rollbacks
 
 With optimistic locking, use the `UnitOfWork` method
 `commitAndResumeOnFailure` to rollback a locked object's value, if you
@@ -420,8 +377,7 @@ unit of work.
 
 [[CIHCFEIB]][[OTLCG92085]]
 
-Optimistic Field Locking Policies
-+++++++++++++++++++++++++++++++++
+===== Optimistic Field Locking Policies
 
 Optimistic field locking policies enforce optimistic locking by using
 one or more of the fields that currently exist in the table to determine
@@ -447,8 +403,7 @@ Locking" in _Solutions Guide for EclipseLink_.
 
 [[CIHCFBJG]][[OTLCG92086]]
 
-Pessimistic Locking Policies
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Pessimistic Locking Policies
 
 With pessimistic locking, the first user who accesses the data with the
 purpose of updating it locks the data until completing the update.
@@ -485,8 +440,7 @@ optimization.
 
 [[BCGDJHAF]][[OTLCG92087]]
 
-Applying Locking in an Application
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Applying Locking in an Application
 
 To correctly lock an object in an application, you must obtain the lock
 before the object is sent to the client for editing.
@@ -495,8 +449,7 @@ before the object is sent to the client for editing.
 
 [[BCGCBAFE]]
 
-Applying Optimistic Locking in an Application
-+++++++++++++++++++++++++++++++++++++++++++++
+===== Applying Optimistic Locking in an Application
 
 If you are using optimistic locking, you have the following two choices
 for locking objects correctly:
@@ -531,42 +484,10 @@ stateless application.
 
 [[sthref29]]
 
-Applying Pessimistic Locking in an Application
-++++++++++++++++++++++++++++++++++++++++++++++
+===== Applying Pessimistic Locking in an Application
 
 If you are using pessimistic locking, you must use the unit of work to
 start a database transaction before the object is read. You must hold
 this unit of work and database transaction while the client is editing
 the object and until the client updates the object. You must use this
 same unit of work to update the object.
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|=======================================================================
-a|
-[width="96%",cols=",^50%,^50%",]
-|=======================================================================
-| 
-|link:descriptors001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:descriptors003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|=======================================================================
-
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
-
-|=======================================================================
-
-[[copyright]]
-Copyright © 2012 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

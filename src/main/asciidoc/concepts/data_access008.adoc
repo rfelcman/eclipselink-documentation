@@ -1,35 +1,22 @@
-[[cse]][[top]]
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|=======================================================================
-a|
-Understanding EclipseLink, *3.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
- a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|=======================================================================
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|=======================================================================
-|link:data_access007.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:data_access009.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|=======================================================================
-
-[[BEIJCHHH]]
-
-About Tenant Isolation
-----------------------
+///////////////////////////////////////////////////////////////////////////////
+[[DATA_ACCESS008]]
+=== About Tenant Isolation
 
 EclipseLink offers considerable flexibility in how you can design and
 implement features for isolating tenants. Possibilities include the
@@ -69,8 +56,7 @@ See link:#BEIJCDEA[VPD Multi-Tenancy.]
 
 [[BEIBAJBE]]
 
-Single Table Multi-Tenancy
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Single Table Multi-Tenancy
 
 With single-table multi-tenancy, any table (`Table` or `SecondaryTable`)
 to which an entity or mapped superclass maps can include rows for
@@ -90,8 +76,7 @@ subentities unless they specify their own multi-tenant metadata.
 
 [[BEIHJCBG]]
 
-Table-Per-Tenant Multi-Tenancy
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Table-Per-Tenant Multi-Tenancy
 
 Table-per-tenant multi-tenancy allows multiple tenants of an application
 to isolate their data in one or more tenant-specific tables. Multiple
@@ -140,8 +125,7 @@ EclipseLink_.
 
 [[BEIJCDEA]]
 
-VPD Multi-Tenancy
-~~~~~~~~~~~~~~~~~
+==== VPD Multi-Tenancy
 
 A Virtual Private Database (VPD) uses security controls to restrict
 access to database objects based on various parameters.
@@ -180,34 +164,3 @@ annotations.
 For more information on constructing VPD Multi-Tenancy, see
 "link:olinkTLADG501[Using VPD Multi-Tenancy]" in _Solutions Guide for
 EclipseLink_.
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|=======================================================================
-a|
-[width="96%",cols=",^50%,^50%",]
-|=======================================================================
-| 
-|link:data_access007.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:data_access009.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|=======================================================================
-
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
-
-|=======================================================================
-
-[[copyright]]
-Copyright © 2012 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

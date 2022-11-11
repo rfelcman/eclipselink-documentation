@@ -18,9 +18,8 @@
 
 :description: EclipseLink
 :keywords: eclipselink, java, jpa, persistence, descriptor
-:rootdir: {docdir}/concepts
 
-= Understanding Descriptors
+== Understanding Descriptors
 
 This chapter introduces and describes descriptors. EclipseLink uses
 descriptors to store the information that describes how an instance of a
@@ -32,14 +31,15 @@ its data source representation.
 
 This chapter includes the following sections:
 
+* link:#DESCRIPTORS001[Common Descriptor Concepts]
+* link:#DESCRIPTORS002[Object-Relational Descriptor Concepts]
+* link:#DESCRIPTORS003[Descriptor Files]
+
 // == Common Descriptor Concepts
-:sectnums:
 include::{rootdir}/descriptors001.adoc[]
 
 // == Object-Relational Descriptor Concepts
-:sectnums:
 include::{rootdir}/descriptors002.adoc[]
 
 // == Descriptor Files
-:sectnums:
 include::{rootdir}/descriptors003.adoc[]

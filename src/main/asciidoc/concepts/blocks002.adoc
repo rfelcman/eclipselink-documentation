@@ -15,7 +15,7 @@
     SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
 ///////////////////////////////////////////////////////////////////////////////
-
+[[BLOCKS002]]
 === About the Object-Relational Solution
 
 EclipseLink provides a complete, JPA-compliant JPA implementation. It
@@ -56,8 +56,8 @@ elements:
 
 *_Figure 2-2 Relationships Between Entity Architecture Elements_*
 
-image:concepts/img/otlcg_jd_001.gif[Relationships between entity architectue elements,title="Relationships between entity architectue elements"] +
-xref:concepts/img_text/otlcg_jd_001.adoc[Description of "Figure 2-2 Relationships Between Entity Architecture Elements"] +
+image:{imagesrelativedir}/otlcg_jd_001.gif[Relationships between entity architectue elements,title="Relationships between entity architectue elements"] +
+xref:{imagestextrelativedir}/otlcg_jd_001.adoc[Description of "Figure 2-2 Relationships Between Entity Architecture Elements"] +
 
 [[OTLCG138]]
 

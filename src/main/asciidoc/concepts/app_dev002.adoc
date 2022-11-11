@@ -1,35 +1,22 @@
-[[cse]][[top]]
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|=======================================================================
-a|
-Understanding EclipseLink, *3.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
- a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|=======================================================================
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|=======================================================================
-|link:app_dev001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:app_dev003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|=======================================================================
-
-[[BABCCAHJ]][[OTLCG91175]]
-
-Building and Using the Persistence Layer
-----------------------------------------
+///////////////////////////////////////////////////////////////////////////////
+[[APPDEV002]]
+=== Building and Using the Persistence Layer
 
 EclipseLink requires that classes must meet certain minimum requirements
 before they can become persistent. EclipseLink also provides
@@ -45,8 +32,7 @@ This section includes the following information:
 
 [[BABBGDHH]][[OTLCG91176]]
 
-Implementation Options
-~~~~~~~~~~~~~~~~~~~~~~
+==== Implementation Options
 
 When implementing your persistence layer using EclipseLink, consider the
 following options:
@@ -58,8 +44,7 @@ following options:
 
 [[CCHGEJEA]][[OTLCG91177]]
 
-Using EclipseLink JPA Metatdata, Annotations, and XML
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===== Using EclipseLink JPA Metatdata, Annotations, and XML
 
 When using JPA, you can specify persistence layer components using any
 combination of standard JPA annotations and `persistence.xml`,
@@ -71,8 +56,7 @@ Configuration Basics].
 
 [[CCHHEIFG]][[OTLCG91179]]
 
-Using EclipseLink Metadata Java API
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===== Using EclipseLink Metadata Java API
 
 Persistence layer components can be coded or generated as Java. To use
 Java code, you must manually write code for each element of the project
@@ -82,8 +66,7 @@ on code generation.
 
 [[CCHJBHDG]][[OTLCG91180]]
 
-Using Method and Direct Field Access
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===== Using Method and Direct Field Access
 
 You can access the fields (data members) of a class by using a
 getter/setter method (also known as property access) or by accessing the
@@ -127,8 +110,7 @@ EclipseLink_.
 
 [[CCHGGAGE]][[OTLCG91181]]
 
-Using Java Byte-code Weaving
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===== Using Java Byte-code Weaving
 
 Weaving is a technique of manipulating the byte-code of compiled Java
 classes.
@@ -141,8 +123,7 @@ For more information, see link:app_dev005.htm#CCHJEDFH[About Weaving].
 
 [[BABDHDIA]][[OTLCG91182]]
 
-Persistent Class Requirements
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Persistent Class Requirements
 
 When you create persistent Java objects, use direct access on private or
 protected attributes.
@@ -154,8 +135,7 @@ more information on indirection and transparent indirection.
 
 [[BABCCJCC]][[OTLCG91183]]
 
-Persistence Layer Components
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Persistence Layer Components
 
 The purpose of your application's persistence layer is to use a session
 at run time to associate mapping metadata and a data source (see
@@ -172,8 +152,7 @@ components:
 
 [[BABFEEGF]][[OTLCG91184]]
 
-Mapping Metadata
-^^^^^^^^^^^^^^^^
+===== Mapping Metadata
 
 The EclipseLink application metadata model is based on the project. The
 project includes descriptors, mappings, and various policies that
@@ -189,8 +168,7 @@ For more information, see the following:
 
 [[BABBGFHF]][[OTLCG91186]]
 
-Cache
-^^^^^
+===== Cache
 
 By default, EclipseLink sessions provide an object-level cache that
 guarantees object identity and enhances performance by reducing the
@@ -208,8 +186,7 @@ For more information, see link:cache.htm#CDEFHHEH[Chapter 8,
 
 [[BABJDGGH]][[OTLCG91187]]
 
-Queries and Expressions
-^^^^^^^^^^^^^^^^^^^^^^^
+===== Queries and Expressions
 
 For Object-relational architectures, EclipseLink provides several object
 and data query types, and offers flexible options for query selection
@@ -231,51 +208,9 @@ For Object-relational architectures, you are free to use any of the
 query options regardless of the persistent entity type. Alternatively,
 you can build queries in code, using the EclipseLink API.
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-These query techniques cannot be used with MOXy (OXM, JAXB) mapping.
+NOTE: These query techniques cannot be used with MOXy (OXM, JAXB) mapping.
 However you can perform queries when using legacy EIS XML projects.
-
-|=======================================================================
-
- +
 
 For more information, see link:queries.htm#CHDGGCJB[Chapter 9,
 "Understanding Queries"] and link:expressions.htm#CHDCAIGD[Chapter 10,
 "Understanding EclipseLink Expressions."]
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|=======================================================================
-a|
-[width="96%",cols=",^50%,^50%",]
-|=======================================================================
-| 
-|link:app_dev001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:app_dev003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|=======================================================================
-
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
-
-|=======================================================================
-
-[[copyright]]
-Copyright © 2012 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

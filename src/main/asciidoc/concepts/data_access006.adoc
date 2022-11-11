@@ -1,35 +1,22 @@
-[[cse]][[top]]
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|=======================================================================
-a|
-Understanding EclipseLink, *3.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
- a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|=======================================================================
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|=======================================================================
-|link:data_access005.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:data_access007.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|=======================================================================
-
-[[CHDBGIHH]][[OTLCG00007]]
-
-About Connection Pools
-----------------------
+///////////////////////////////////////////////////////////////////////////////
+[[DATA_ACCESS006]]
+=== About Connection Pools
 
 A *connection pool* is a service that creates and maintains a shared
 collection (pool) of data source connections on behalf of one or more
@@ -63,8 +50,7 @@ This section describes the following types of connection pools:
 
 [[CHDHEIJE]][[OTLCG93611]]
 
-Internal Connection Pools
-~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Internal Connection Pools
 
 For non-Jakarta EE applications, you typically use _internal_ connection
 pools. By default, EclipseLink sessions use internal connection pools.
@@ -81,8 +67,7 @@ additional connection pools for object identity or any other purpose.
 
 [[CHDCAIEJ]][[OTLCG93612]]
 
-External Connection Pools
-~~~~~~~~~~~~~~~~~~~~~~~~~
+==== External Connection Pools
 
 For Jakarta EE applications, you typically use _external_ connection
 pools. An external connection pool is a collection of reusable
@@ -108,8 +93,7 @@ the same data source.
 
 [[CHDJGAJE]][[OTLCG93613]]
 
-Default (Write) and Read Connection Pools
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Default (Write) and Read Connection Pools
 
 A server session provides a read connection pool and a write connection
 pool. These could be different pools, or if you use external connection
@@ -134,12 +118,11 @@ Persistence API (JPA) Extensions Reference for EclipseLink_.
 
 [[CHDEFJHH]][[OTLCG93614]]
 
-Sequence Connection Pools
-~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Sequence Connection Pools
 
 An essential part of maintaining object identity is sequencing–managing
 the assignment of unique values to distinguish one instance from
-another. For more information, see link:cache002.htm#CHEFCFEG[About
+another. For more information, see xref:cache002.adoc#CHEFCFEG[About
 Cache Type and Size].
 
 Sequencing involves reading and writing a special sequence resource
@@ -161,19 +144,8 @@ request for a new object identifier outside of the transaction from
 which the request originates. This allows EclipseLink to immediately
 commit an update to the sequence resource, which avoids deadlocks.
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-**Note*:*
-
-If you use a sequence connection pool and the original transaction
+NOTE: If you use a sequence connection pool and the original transaction
 fails, the sequence operation does not roll back.
-
-|=======================================================================
-
- +
 
 You should use a sequence connection pool, if the following applies:
 
@@ -196,8 +168,7 @@ _Jakarta Persistence API (JPA) Extensions Reference for EclipseLink_.
 
 [[CHDDGHGA]][[OTLCG93615]]
 
-Application-Specific Connection Pools
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Application-Specific Connection Pools
 
 When you use internal EclipseLink connection pools in a session, you can
 create one or more connection pools that you can use for any application
@@ -208,34 +179,3 @@ Typically, use these named connection pools to provide pools of
 different security levels. For example, the "default" connection pool
 may only allow access to specific tables but the "admin" connection pool
 may allow access to all tables.
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|=======================================================================
-a|
-[width="96%",cols=",^50%,^50%",]
-|=======================================================================
-| 
-|link:data_access005.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:data_access007.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|=======================================================================
-
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
-
-|=======================================================================
-
-[[copyright]]
-Copyright © 2012 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

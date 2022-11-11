@@ -15,7 +15,7 @@
     SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
 ///////////////////////////////////////////////////////////////////////////////
-
+[[BLOCKS001]]
 === About Metadata
 
 The EclipseLink metadata is the bridge between the development of an
@@ -40,8 +40,8 @@ Persistence API (JPA) Extensions Reference for EclipseLink.
 
 *_Figure 2-1 EclipseLink Metadata_*
 
-image:concepts/img/meta.gif[Description of Figure 2-1 follows,title="Description of Figure 2-1 follows"] +
-xref:concepts/img_text/meta.htm[Description of "Figure 2-1 EclipseLink Metadata"]
+image:{imagesrelativedir}/meta.gif[Description of Figure 2-1 follows,title="Description of Figure 2-1 follows"] +
+xref:{imagestextrelativedir}/meta.htm[Description of "Figure 2-1 EclipseLink Metadata"]
 
 This section describes the following:
 

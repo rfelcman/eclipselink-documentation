@@ -18,7 +18,6 @@
 
 :description: EclipseLink
 :keywords: eclipselink, java, jpa, persistence, concepts, understanding
-:rootdir: {docdir}/concepts
 
 == Overview of EclipseLink
 
@@ -27,6 +26,12 @@ that are included with EclipseLink, metadata, application architectures,
 mappings, and the API.
 
 This chapter includes the following sections:
+
+* link:#GENERAL001[Understanding EclipseLink]
+* link:#GENERAL002[Key Features]
+* link:#GENERAL003[Key Concepts]
+* link:#GENERAL004[Key Components]
+* link:#GENERAL005[Key Tools]
 
 // == Understanding EclipseLink
 include::{rootdir}/general001.adoc[]
