@@ -25,47 +25,53 @@
 :rootdir: {docdir}/{relativedir}
 include::attributes.adoc[]
 
-// == List of Examples
+//List of Examples
 :sectnums!:
 include::{rootdir}/loe.adoc[]
 
-// == Title and Copyright Information
+//Title and Copyright Information
 include::{rootdir}/title_eclipselink.adoc[]
 
-// == Preface
+//Preface
+[preface]
 include::{rootdir}/preface.adoc[]
 
-// == Overview of EclipseLink
+//Overview of EclipseLink
 :sectnums:
 :sectnumlevels: 1
 include::{rootdir}/general.adoc[]
 
-// == Understanding Object-Relational and MOXy Internals
+//Understanding Object-Relational and MOXy Internals
 include::{rootdir}/blocks.adoc[]
 
-// == Understanding the Persistence Unit
+//Understanding the Persistence Unit
 include::{rootdir}/app_dev.adoc[]
 
-// == Understanding Entities
+//Understanding Entities
 include::{rootdir}/entities.adoc[]
 
-// == Understanding Descriptors
+//Understanding Descriptors
 include::{rootdir}/descriptors.adoc[]
 
-// == Understanding Mappings
+//Understanding Mappings
 include::{rootdir}/mappingintro.adoc[]
 
-// == Understanding Data Access
+//Understanding Data Access
 include::{rootdir}/data_access.adoc[]
 
-// == Understanding Caching
+//Understanding Caching
 include::{rootdir}/cache.adoc[]
 
-// == Understanding Queries
+//Understanding Queries
 include::{rootdir}/queries.adoc[]
 
-// == Understanding EclipseLink Expressions
+//Understanding EclipseLink Expressions
 include::{rootdir}/expressions.adoc[]
 
-// == Understanding Non-relational Data Sources
+//Understanding Non-relational Data Sources
 include::{rootdir}/nosql.adoc[]
+
+//A Database and Application Server Support
+[appendix]
+include::{rootdir}/app_tl_ext.adoc[]
+

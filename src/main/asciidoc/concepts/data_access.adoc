@@ -38,29 +38,29 @@ This chapter includes the following sections:
 * link:#DATA_ACCESS008[About Tenant Isolation]
 * link:#DATA_ACCESS009[About Heterogeneous Batch Writing]
 
-// == About Externally Managed Transactional Data Sources
+//About Externally Managed Transactional Data Sources
 include::{rootdir}/data_access001.adoc[]
 
-// == About Data Source Login Types
+//About Data Source Login Types
 include::{rootdir}/data_access002.adoc[]
 
-// == About Data Source Platform Types
+//About Data Source Platform Types
 include::{rootdir}/data_access003.adoc[]
 
-// == About Authentication
+//About Authentication
 include::{rootdir}/data_access004.adoc[]
 
-// == About Connections
+//About Connections
 include::{rootdir}/data_access005.adoc[]
 
-// == About Connection Pools
+//About Connection Pools
 include::{rootdir}/data_access006.adoc[]
 
-// == About Data Partitioning Policies
+//About Data Partitioning Policies
 include::{rootdir}/data_access007.adoc[]
 
-// == About Tenant Isolation
+//About Tenant Isolation
 include::{rootdir}/data_access008.adoc[]
 
-// == About Heterogeneous Batch Writing
+//About Heterogeneous Batch Writing
 include::{rootdir}/data_access009.adoc[]

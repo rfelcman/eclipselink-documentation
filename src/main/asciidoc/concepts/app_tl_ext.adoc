@@ -1,75 +1,40 @@
-[[cse]][[top]]
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|=======================================================================
-a|
-Understanding EclipseLink, *3.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
- a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|=======================================================================
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|=======================================================================
-|link:nosql006.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:app_tl_ext001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|=======================================================================
+///////////////////////////////////////////////////////////////////////////////
 
-[[OTLCG94452]] [[sthref69]]
+:description: EclipseLink
+:keywords: eclipselink, java, jpa, persistence, concepts, application server
 
-A Database and Application Server Support
------------------------------------------
-
-[[OTLCG94453]]
+== Database and Application Server Support
 
 This appendix describes the database platforms and application servers
 supported by EclipseLink.
 
 This appendix includes the following sections:
 
-* link:app_tl_ext001.htm#A1095976[Database Support]
-* link:app_tl_ext002.htm#A1115041[Application Server Support]
-* link:app_tl_ext003.htm#CJAECHBD[Non-SQL Standard Database Support:
-NoSQL]
+* link:#APP_TL_EXT001[Database Support]
+* link:#APP_TL_EXT002[Application Server Support]
+* link:#APP_TL_EXT003[Non-SQL Standard Database Support: NoSQL]
 
-'''''
+//Database Support
+include::{rootdir}/app_tl_ext001.adoc[]
 
-[width="66%",cols="50%,^,>50%",]
-|=======================================================================
-a|
-[width="96%",cols=",^50%,^50%",]
-|=======================================================================
-| 
-|link:nosql006.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:app_tl_ext001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|=======================================================================
+//Application Server Support
+include::{rootdir}/app_tl_ext002.adoc[]
 
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
-
-|=======================================================================
-
-[[copyright]]
-Copyright © 2012 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +
+//Non-SQL Standard Database Support: NoSQL
+include::{rootdir}/app_tl_ext003.adoc[]

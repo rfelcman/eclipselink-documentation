@@ -1,35 +1,22 @@
-[[cse]][[top]]
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|=======================================================================
-a|
-Understanding EclipseLink, *3.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
- a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|=======================================================================
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|=======================================================================
-|link:queries.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:queries002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|=======================================================================
-
-[[CACIGEIH]][[OTLCG93989]]
-
-Query Concepts
---------------
+///////////////////////////////////////////////////////////////////////////////
+[[QUERY001]]
+=== Query Concepts
 
 In general, querying a data source means performing an action on or
 interacting with the contents of the data source. To do this, you must
@@ -53,8 +40,7 @@ the following:
 
 [[CACJBFHJ]][[OTLCG93990]]
 
-Call Objects
-~~~~~~~~~~~~
+==== Call Objects
 
 The `Call` object encapsulates an operation or action on a data source.
 The EclipseLink API provides a variety of `Call` types such as
@@ -66,8 +52,7 @@ You can execute a `Call` directly or in the context of the EclipseLink
 
 [[CACFBJBF]][[OTLCG93991]]
 
-DatabaseQuery Objects
-~~~~~~~~~~~~~~~~~~~~~
+==== DatabaseQuery Objects
 
 A `DatabaseQuery` object is an abstraction that associates additional
 customization and optimization options with the action encapsulated by a
@@ -76,8 +61,7 @@ provide sophisticated query capabilities across all `Call` types.
 
 [[CACIAFDF]][[OTLCG93992]]
 
-Data-Level and Object-Level Queries
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Data-Level and Object-Level Queries
 
 Queries can be defined for objects or data, as follows:
 
@@ -90,8 +74,7 @@ are an appropriate way to work with unmapped data.
 
 [[CACJGHBC]][[OTLCG93993]]
 
-Summary Queries
-~~~~~~~~~~~~~~~
+==== Summary Queries
 
 While data-level queries return raw data and object-level queries return
 objects in your domain model, summary queries return data about objects.
@@ -102,8 +85,7 @@ objects.
 
 [[CACDCDFD]][[OTLCG93994]]
 
-Descriptor Query Manager
-~~~~~~~~~~~~~~~~~~~~~~~~
+==== Descriptor Query Manager
 
 In addition to storing named queries applicable to a particular class,
 you can also use the `DescriptorQueryManager` to override the default
@@ -111,8 +93,7 @@ action that EclipseLink defines for common data source operations.
 
 [[CACJAEDA]][[OTLCG93996]]
 
-Query Keys
-~~~~~~~~~~
+==== Query Keys
 
 A query key is a schema-independent alias for a database field name.
 Using a query key, you can refer to a field using a schema-independent
@@ -126,34 +107,3 @@ one-to-one mappings.
 
 By default, EclipseLink creates query keys for all mapped attributes,
 but in some scenarios you may find it beneficial to add your own.
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|=======================================================================
-a|
-[width="96%",cols=",^50%,^50%",]
-|=======================================================================
-| 
-|link:queries.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:queries002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|=======================================================================
-
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
-
-|=======================================================================
-
-[[copyright]]
-Copyright © 2012 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

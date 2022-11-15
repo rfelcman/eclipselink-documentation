@@ -1,35 +1,22 @@
-[[cse]][[top]]
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|=======================================================================
-a|
-Understanding EclipseLink, *3.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
- a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|=======================================================================
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|=======================================================================
-|link:expressions001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:nosql.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|=======================================================================
-
-[[CJAJIGEE]][[OTLCG94244]]
-
-About Expression Components
----------------------------
+///////////////////////////////////////////////////////////////////////////////
+[[EXPRESSION002]]
+=== About Expression Components
 
 A simple expression usually consists of the following three parts:
 
@@ -63,8 +50,7 @@ Relationships]
 
 [[CJABDJIC]][[OTLCG94245]]
 
-Boolean Logic
-~~~~~~~~~~~~~
+==== Boolean Logic
 
 Expressions use standard boolean operators, such as `AND`, `OR`, and
 `NOT`, and you can combine multiple expressions to form more complex
@@ -72,8 +58,7 @@ expressions.
 
 [[CJAEGFGE]][[OTLCG94247]]
 
-Database Functions and Operators
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Database Functions and Operators
 
 EclipseLink supports many database functions using standard operator
 names that are translated to different databases. EclipseLink operators
@@ -88,18 +73,7 @@ define more flexible queries. You can use these functions in either a
 report query using a `SELECT` clause, or with comparisons in a query's
 selection criteria using a `WHERE` clause.
 
- +
-
-[width="100%",cols="<100%",]
-|=====================================================================
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-Some functions may be database platform-specific.
-
-|=====================================================================
-
- +
+NOTE: Some functions may be database platform-specific.
 
 Operators are relational operations that compare two values. EclipseLink
 expression operators are described in the `ExpressionOperator` class.
@@ -110,8 +84,7 @@ provided by the Java class `java.lang.Math`.
 
 [[CJADHIHG]][[OTLCG94254]]
 
-Oracle XMLType Functions
-^^^^^^^^^^^^^^^^^^^^^^^^
+===== Oracle XMLType Functions
 
 You can use the following operators when constructing queries against
 data mapped to Oracle Database `XMLType` column:
@@ -130,8 +103,7 @@ Evaluates to 1 if the document is a fragment.
 
 [[CJAGJAGI]][[OTLCG94256]]
 
-Platform and User-Defined Functions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Platform and User-Defined Functions
 
 You can use the `Expression` method `getFunction` to access database
 functions that EclipseLink does not support directly. The `Expression`
@@ -141,8 +113,7 @@ more information, see _Java API Reference for EclipseLink_.
 
 [[CJAGEJBC]][[OTLCG94258]]
 
-Expressions for One-to-One and Aggregate Object Relationships
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Expressions for One-to-One and Aggregate Object Relationships
 
 Expressions can include an attribute that has a one-to-one relationship
 with another persistent class. A one-to-one relationship translates
@@ -150,8 +121,7 @@ naturally into an SQL join that returns a single row.
 
 [[CJAIJIIF]][[OTLCG94260]]
 
-Expressions for Joining and Complex Relationships
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Expressions for Joining and Complex Relationships
 
 You can query against complex relationships, such as one-to-many,
 many-to-many, direct collection, and aggregate collection relationships.
@@ -166,8 +136,7 @@ This section describes the following:
 
 [[CJABCJII]][[OTLCG94261]]
 
-About Joins
-^^^^^^^^^^^
+===== About Joins
 
 A *join* is a relational database query that combines rows from two or
 more tables. Relational databases perform a join whenever multiple
@@ -236,8 +205,7 @@ database drivers. EclipseLink supports outer joins for most databases.
 
 [[CJAJIHBJ]][[OTLCG94262]]
 
-Using EclipseLink Expression API for Joins
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===== Using EclipseLink Expression API for Joins
 
 You can use joins anywhere expressions are used, including:
 selection-criteria, ordering, report queries, partial objects,
@@ -250,7 +218,6 @@ inner and outer join expressions.
 
 *_Table 10-1 Expression API for Joins_*
 
-[width="60%",cols="<1%,<43%,<56%",options="header",]
 |=====================================================
 |*Expression API* |*Type of Join* |*Type of Mapping*
 |`get` |inner |one-to-one
@@ -259,40 +226,7 @@ inner and outer join expressions.
 |`anyOfAllowingNone` |outer |one-to-many, many-to-many
 |=====================================================
 
- +
-
 To query across a one-to-many or many-to-many relationship, use the
 `anyOf` operation. As its name suggests, this operation supports queries
 that return all items on the "many" side of the relationship that
 satisfy the query criteria.
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|=======================================================================
-a|
-[width="96%",cols=",^50%,^50%",]
-|=======================================================================
-| 
-|link:expressions001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:nosql.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|=======================================================================
-
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
-
-|=======================================================================
-
-[[copyright]]
-Copyright © 2012 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

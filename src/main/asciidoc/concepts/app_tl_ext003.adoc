@@ -1,34 +1,22 @@
-[[cse]][[top]]
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|=======================================================================
-a|
-Understanding EclipseLink, *3.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
- a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|=======================================================================
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,",]
-|=======================================================================
-|link:app_tl_ext002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-| 
-|=======================================================================
-
-[[CJAECHBD]][[OTLCG94458]]
-
-Non-SQL Standard Database Support: NoSQL
-----------------------------------------
+///////////////////////////////////////////////////////////////////////////////
+[[APP_TL_EXT003]]
+=== Non-SQL Standard Database Support: NoSQL
 
 EclipseLink JPA can be used with NoSQL databases. A Java class can be
 mapped to a NoSQL datasource using the `@NoSQL` annotation or `<no-sql>`
@@ -60,7 +48,6 @@ listed in the table, see _Java API Reference for EclipseLink_.
 
 *_Table A-3 Supported NoSQL and EIS Platforms_*
 
-[width="48%",cols="<34%,<66%,<",options="header",]
 |=======================================================================
 |*Data-source* |*Java Class* |*Features*
 |MongoDB |`org.eclipse.persistence.nosql.adapters.mongo.MongoPlatform`
@@ -103,35 +90,3 @@ Provides support for persistence through Oracle AQ messaging:
 * `enqueue`/`dequeue` operations
 
 |=======================================================================
-
- +
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|=======================================================================
-a|
-[width="48%",cols=",^100%",]
-|=======================================================================
-| 
-|link:app_tl_ext002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|=======================================================================
-
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
-
-|=======================================================================
-
-[[copyright]]
-Copyright © 2012 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

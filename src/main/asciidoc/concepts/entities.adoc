@@ -46,26 +46,26 @@ This chapter includes the following sections:
 * link:#ENTITIES007[Entities and Locking]
 * link:#ENTITIES008[Extensible Entities]
 
-// == Identifying Entities
+//Identifying Entities
 include::{rootdir}/entities001.adoc[]
 
-// == Entities and Persistent Identity
+//Entities and Persistent Identity
 include::{rootdir}/entities002.adoc[]
 
-// == Entities and Database Tables
+//Entities and Database Tables
 include::{rootdir}/entities003.adoc[]
 
-// == Entities and Inheritance
+//Entities and Inheritance
 include::{rootdir}/entities004.adoc[]
 
-// == Entities and Embedded Objects
+//Entities and Embedded Objects
 include::{rootdir}/entities005.adoc[]
 
-// == Entities and Sequence Generation
+//Entities and Sequence Generation
 include::{rootdir}/entities006.adoc[]
 
-// == Entities and Locking
+//Entities and Locking
 include::{rootdir}/entities007.adoc[]
 
-// == Extensible Entities
+//Extensible Entities
 include::{rootdir}/entities008.adoc[]

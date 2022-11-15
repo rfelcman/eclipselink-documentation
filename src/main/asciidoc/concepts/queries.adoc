@@ -18,9 +18,8 @@
 
 :description: EclipseLink
 :keywords: eclipselink, java, jpa, persistence, query
-:rootdir: {docdir}/concepts
 
-= Understanding Queries
+== Understanding Queries
 
 This chapter describes how EclipseLink enables you to create, read,
 update, and delete persistent objects or data using queries in both
@@ -29,34 +28,35 @@ nonrelational data sources.
 
 This chapter includes the following sections:
 
-// == Query Concepts
-:sectnums:
+* link:#QUERY001[Query Concepts]
+* link:#QUERY002[About JPQL Queries]
+* link:#QUERY003[About SQL Query Language]
+* link:#QUERY004[About the Criteria API]
+* link:#QUERY005[About Native SQL Queries, EclipseLink Extensions to Native Query Support]
+* link:#QUERY006[About Query Hints]
+* link:#QUERY007[About Query Casting]
+* link:#QUERY008[About Oracle Extensions for Queries]
+
+//Query Concepts
 include::{rootdir}/queries001.adoc[]
 
-// == About JPQL Queries
-:sectnums:
+//About JPQL Queries
 include::{rootdir}/queries002.adoc[]
 
-// == About SQL Query Language
-:sectnums:
+//About SQL Query Language
 include::{rootdir}/queries003.adoc[]
 
-// == About the Criteria API
-:sectnums:
+//About the Criteria API
 include::{rootdir}/queries004.adoc[]
 
-// == About Native SQL Queries, EclipseLink Extensions to Native Query Support
-:sectnums:
+//About Native SQL Queries, EclipseLink Extensions to Native Query Support
 include::{rootdir}/queries005.adoc[]
 
-// == About Query Hints
-:sectnums:
+//About Query Hints
 include::{rootdir}/queries006.adoc[]
 
-// == About Query Casting
-:sectnums:
+//About Query Casting
 include::{rootdir}/queries007.adoc[]
 
-// == About Oracle Extensions for Queries
-:sectnums:
+//About Oracle Extensions for Queries
 include::{rootdir}/queries008.adoc[]

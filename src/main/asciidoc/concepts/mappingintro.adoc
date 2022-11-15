@@ -38,14 +38,14 @@ This chapter includes the following sections:
 * link:#MAPPINGINTRO003[MOXy Mapping Concepts]
 * link:#MAPPINGINTRO004[Object-JSON Mapping Concepts]
 
-// == Common Mapping Concepts
+//Common Mapping Concepts
 include::{rootdir}/mappingintro001.adoc[]
 
-// == Object-Relational Mapping Concepts
+//Object-Relational Mapping Concepts
 include::{rootdir}/mappingintro002.adoc[]
 
-// == MOXy Mapping Concepts
+//MOXy Mapping Concepts
 include::{rootdir}/mappingintro003.adoc[]
 
-// == Object-JSON Mapping Concepts
+//Object-JSON Mapping Concepts
 include::{rootdir}/mappingintro004.adoc[]

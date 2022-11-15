@@ -33,17 +33,17 @@ This chapter includes the following sections:
 * link:#GENERAL004[Key Components]
 * link:#GENERAL005[Key Tools]
 
-// == Understanding EclipseLink
+//Understanding EclipseLink
 include::{rootdir}/general001.adoc[]
 
-// == Key Features
+//Key Features
 include::{rootdir}/general002.adoc[]
 
-// == Key Concepts
+//Key Concepts
 include::{rootdir}/general003.adoc[]
 
-// == Key Components
+//Key Components
 include::{rootdir}/general004.adoc[]
 
-// == Key Tools
+//Key Tools
 include::{rootdir}/general005.adoc[]

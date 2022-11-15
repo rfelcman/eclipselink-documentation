@@ -35,11 +35,11 @@ This chapter includes the following sections:
 * link:#DESCRIPTORS002[Object-Relational Descriptor Concepts]
 * link:#DESCRIPTORS003[Descriptor Files]
 
-// == Common Descriptor Concepts
+//Common Descriptor Concepts
 include::{rootdir}/descriptors001.adoc[]
 
-// == Object-Relational Descriptor Concepts
+//Object-Relational Descriptor Concepts
 include::{rootdir}/descriptors002.adoc[]
 
-// == Descriptor Files
+//Descriptor Files
 include::{rootdir}/descriptors003.adoc[]

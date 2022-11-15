@@ -1,35 +1,22 @@
-[[cse]][[top]]
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|=======================================================================
-a|
-Understanding EclipseLink, *3.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
- a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|=======================================================================
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|=======================================================================
-|link:queries005.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:queries007.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|=======================================================================
-
-[[A7725420]][[OTLCG94401]]
-
-About Query Hints
------------------
+///////////////////////////////////////////////////////////////////////////////
+[[QUERY006]]
+=== About Query Hints
 
 You can use a query hint to customize or optimize a JPA query. The
 `NamedQuery` annotation is used to specify a named query in the Java
@@ -48,8 +35,7 @@ sections describe JPA query hints and EclipseLink query hints:
 
 [[CIHFICDB]]
 
-JPA Cache Query Hints
-~~~~~~~~~~~~~~~~~~~~~
+==== JPA Cache Query Hints
 
 The JPA query hints allow for queries or the `find()` operation to
 bypass, or refresh the shared cache. JPA cache query hints can be set on
@@ -64,8 +50,7 @@ queries interaction with the shared cache:
 
 [[CIHJEHDG]]
 
-EclipseLink Extensions to Cache Query Hints
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== EclipseLink Extensions to Cache Query Hints
 
 The EclipseLink cache query hints allow for queries or the `find()`
 operation to interact with the cache is the following ways:
@@ -122,34 +107,3 @@ the SQL locks the result rows.
 
 For descriptions of these extensions, see "EclipseLink Query Language"
 in _Jakarta Persistence API (JPA) Extensions Reference for EclipseLink_.
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|=======================================================================
-a|
-[width="96%",cols=",^50%,^50%",]
-|=======================================================================
-| 
-|link:queries005.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:queries007.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|=======================================================================
-
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
-
-|=======================================================================
-
-[[copyright]]
-Copyright © 2012 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

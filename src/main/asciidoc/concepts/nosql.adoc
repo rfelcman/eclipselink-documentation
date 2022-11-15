@@ -18,9 +18,8 @@
 
 :description: EclipseLink
 :keywords: eclipselink, java, jpa, persistence, non-relational, nosql
-:rootdir: {docdir}/concepts
 
-=  Understanding Non-relational Data Sources
+==  Understanding Non-relational Data Sources
 
 This chapter describes how to set up your JPA applications to work with
 a non-relational data source. There are many types of non-relational
@@ -34,26 +33,33 @@ API is also supported with NoSQL databases.
 
 This chapter includes the following sections:
 
-// == NoSQL Platform Concepts
+* link:#NOSQL001[NoSQL Platform Concepts]
+* link:#NOSQL002[About NoSQL Persistence Units]
+* link:#NOSQL003[About JPA Applications on the NoSQL Platform]
+* link:#NOSQL004[About Mapping NoSQL Objects]
+* link:#NOSQL005[About Queries and the NoSQL Platform]
+* link:#NOSQL006[About Transactions and the NoSQL Platform]
+
+//NoSQL Platform Concepts
 :sectnums:
 include::{rootdir}/nosql001.adoc[]
 
-// == About NoSQL Persistence Units
+//About NoSQL Persistence Units
 :sectnums:
 include::{rootdir}/nosql002.adoc[]
 
-// == About JPA Applications on the NoSQL Platform
+//About JPA Applications on the NoSQL Platform
 :sectnums:
 include::{rootdir}/nosql003.adoc[]
 
-// == About Mapping NoSQL Objects
+//About Mapping NoSQL Objects
 :sectnums:
 include::{rootdir}/nosql004.adoc[]
 
-// == About Queries and the NoSQL Platform
+//About Queries and the NoSQL Platform
 :sectnums:
 include::{rootdir}/nosql005.adoc[]
 
-// == About Transactions and the NoSQL Platform
+//About Transactions and the NoSQL Platform
 :sectnums:
 include::{rootdir}/nosql006.adoc[]

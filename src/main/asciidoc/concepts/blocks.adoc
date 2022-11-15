@@ -30,11 +30,11 @@ This chapter includes the following sections:
 * link:#BLOCKS002[About the Object-Relational Solution]
 * link:#BLOCKS003[About the MOXy Solution]
 
-// == About Metadata
+//About Metadata
 include::{rootdir}/blocks001.adoc[]
 
-// == About the Object-Relational Solution
+//About the Object-Relational Solution
 include::{rootdir}/blocks002.adoc[]
 
-// == About the MOXy Solution
+//About the MOXy Solution
 include::{rootdir}/blocks003.adoc[]

@@ -1,35 +1,22 @@
-[[cse]][[top]]
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|=======================================================================
-a|
-Understanding EclipseLink, *3.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
- a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|=======================================================================
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|=======================================================================
-|link:queries004.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:queries006.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|=======================================================================
-
-[[A7724128]][[OTLCG94397]]
-
-About Native SQL Queries
-------------------------
+///////////////////////////////////////////////////////////////////////////////
+[[QUERY005]]
+=== About Native SQL Queries
 
 JPA allows SQL to be used for querying entity objects, or data. SQL
 queries are not translated, and passed directly to the database. SQL
@@ -80,8 +67,7 @@ element. They are referenced from native SQL queries by name.
 
 [[CHDFHBJD]][[OTLCG154]]
 
-EclipseLink Extensions to Native Query Support
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== EclipseLink Extensions to Native Query Support
 
 EclipseLink expressions let you specify query search criteria based on
 your domain object model. When you execute the query, EclipseLink
@@ -102,36 +88,5 @@ You can specify a selection criterion as an `Expression` with
 takes an `Expression`.
 
 For more information about using EclipseLink expressions, see
-link:expressions.htm#CHDCAIGD[Chapter 10, "Understanding EclipseLink
+xref:expressions001.adoc#EXPRESSIONS001[Chapter 10, "Understanding EclipseLink
 Expressions"].
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|=======================================================================
-a|
-[width="96%",cols=",^50%,^50%",]
-|=======================================================================
-| 
-|link:queries004.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:queries006.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|=======================================================================
-
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
-
-|=======================================================================
-
-[[copyright]]
-Copyright © 2012 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

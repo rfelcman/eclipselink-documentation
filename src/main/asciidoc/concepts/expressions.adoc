@@ -18,19 +18,19 @@
 
 :description: EclipseLink
 :keywords: eclipselink, java, jpa, persistence, expression
-:rootdir: {docdir}/concepts
 
-= Understanding EclipseLink Expressions
+== Understanding EclipseLink Expressions
 
 this chapter describes how to use the EclipseLink expressions framework
 to specify query search criteria based on your domain object model.
 
 This chapter includes the following sections:
 
-// == About the Expression Framework
-:sectnums:
+* link:#EXPRESSION001[About the Expression Framework]
+* link:#EXPRESSION002[About Expression Components]
+
+//About the Expression Framework
 include::{rootdir}/expressions001.adoc[]
 
-// == About Expression Components
-:sectnums:
+//About Expression Components
 include::{rootdir}/expressions002.adoc[]

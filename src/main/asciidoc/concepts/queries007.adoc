@@ -1,35 +1,22 @@
-[[cse]][[top]]
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|=======================================================================
-a|
-Understanding EclipseLink, *3.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
- a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|=======================================================================
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|=======================================================================
-|link:queries006.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:queries008.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|=======================================================================
-
-[[A7736691]][[OTLCG94402]]
-
-About Query Casting
--------------------
+///////////////////////////////////////////////////////////////////////////////
+[[QUERY007]]
+=== About Query Casting
 
 Use query casting to query across attributes in subclasses when using
 JPA or ORM. This feature is available in JPQL, EclipseLink Expressions,
@@ -54,8 +41,7 @@ example, in the example above, after calling
 
 [[sthref65]]
 
-EclipseLink Expression Support for Downcasting
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== EclipseLink Expression Support for Downcasting
 
 EclipseLink extends the `Criteria` API to allow a cast using
 `Expression.as(type)`. The as method checks the hierarchy; and if type
@@ -80,34 +66,3 @@ expression.
 * EclipseLink automatically appends type information for cases where the
 cast results in a single type; but for classes in the middle of a
 hierarchy, no type information is appended to the SQL.
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|=======================================================================
-a|
-[width="96%",cols=",^50%,^50%",]
-|=======================================================================
-| 
-|link:queries006.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:queries008.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|=======================================================================
-
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[cols=",^,,^,,^",]
-|=======================================================================
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|=======================================================================
-
-|=======================================================================
-
-[[copyright]]
-Copyright © 2012 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

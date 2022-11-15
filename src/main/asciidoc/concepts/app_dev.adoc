@@ -32,17 +32,17 @@ This chapter includes the following sections:
 * link:#APPDEV004[Migrating Applications to the EclipseLink Persistence Manager]
 * link:#APPDEV005[About Weaving]
 
-// == About the Persistence Unit
+//About the Persistence Unit
 include::{rootdir}/app_dev001.adoc[]
 
-// == Building and Using the Persistence Layer
+//Building and Using the Persistence Layer
 include::{rootdir}/app_dev002.adoc[]
 
-// == About Persisting Objects
+//About Persisting Objects
 include::{rootdir}/app_dev003.adoc[]
 
-// == Migrating Applications to the EclipseLink Persistence Manager
+//Migrating Applications to the EclipseLink Persistence Manager
 include::{rootdir}/app_dev004.adoc[]
 
-// == About Weaving
+//About Weaving
 include::{rootdir}/app_dev005.adoc[]

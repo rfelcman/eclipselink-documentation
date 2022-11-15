@@ -54,38 +54,38 @@ This chapter includes the following sections:
 * link:#CACHE011[Clustering and Cache Consistency]
 * link:#CACHE012[Cache Interceptors]
 
-// == About Cache Architecture
+//About Cache Architecture
 include::{rootdir}/cache001.adoc[]
 
-// == About Cache Type and Size
+//About Cache Type and Size
 include::{rootdir}/cache002.adoc[]
 
-// == About Queries and the Cache
+//About Queries and the Cache
 include::{rootdir}/cache003.adoc[]
 
-// == About Handling Stale Data
+//About Handling Stale Data
 include::{rootdir}/cache004.adoc[]
 
-// == About Explicit Query Refreshes
+//About Explicit Query Refreshes
 include::{rootdir}/cache005.adoc[]
 
-// == About Cache Indexes
+//About Cache Indexes
 include::{rootdir}/cache006.adoc[]
 
-// == Database Event Notification and Oracle CQN
+//Database Event Notification and Oracle CQN
 include::{rootdir}/cache007.adoc[]
 
-// == About Query Results Cache
+//About Query Results Cache
 include::{rootdir}/cache008.adoc[]
 
-// == About Cache Coordination
+//About Cache Coordination
 include::{rootdir}/cache009.adoc[]
 
-// == Clustering and Cache Coordination
+//Clustering and Cache Coordination
 include::{rootdir}/cache010.adoc[]
 
-// == Clustering and Cache Consistency
+//Clustering and Cache Consistency
 include::{rootdir}/cache011.adoc[]
 
-// == Cache Interceptors
+//Cache Interceptors
 include::{rootdir}/cache012.adoc[]
