@@ -85,7 +85,7 @@ retrievals of the same object return references to the same object
 instance—not multiple copies of the same object.
 
 EclipseLink supports multiple identity maps to maintain object identity
-(including composite primary keys). See xref:concepts/cache002.adoc#CHEFCFEG[About
+(including composite primary keys). See xref:concepts/cache002.adoc#CACHE002[About
 Cache Type and Size] for additional information.
 
 [[BABFEIHF]][[OTLCG91199]]
@@ -96,7 +96,7 @@ EclipseLink uses metadata to describe how objects and beans map to the
 data source. This approach isolates persistence information from the
 object model—you are free to design their ideal object model, and DBAs
 are free to design their ideal schema. For more information, see
-xref:concepts/blocks001.adoc#CHEDICEE[About Metadata].
+xref:{relativedir}/blocks001.adoc#BLOCKS001[About Metadata].
 
 At run time, EclipseLink uses the metadata to seamlessly and dynamically
 interact with the data source, as required by the application.
@@ -104,7 +104,7 @@ interact with the data source, as required by the application.
 EclipseLink provides an extensive mapping hierarchy that supports the
 wide variety of data types and references that an object model might
 contain. For more information, see
-xref:concepts/mappingintro.adoc#CHDFEJIJ[Chapter 6, "Understanding Mappings."]
+xref:{relativedir}/mappingintro.adoc#MAPPINGINTRO[Chapter 6, "Understanding Mappings."]
 
 [[BABEEJHA]][[OTLCG91200]]
 
@@ -186,7 +186,7 @@ cache
 EclipseLink supports several caching polices to provide extensive
 flexibility. You can fine-tune the cache for maximum performance, based
 on individual application performance. Refer to
-xref:concepts/cache.adoc#CDEFHHEH[Chapter 8, "Understanding Caching"] for more
+xref:{relativedir}/cache.adoc#CACHE[Chapter 8, "Understanding Caching"] for more
 information.
 
 [[BABGFFJF]][[OTLCG91204]]
@@ -205,9 +205,9 @@ following:
 * Special persistence methods
 * Generating source code into or wrapping the object model
 
-See xref:concepts/app_dev002.adoc#BABCCAHJ[Building and Using the Persistence
+See xref:{relativedir}/app_dev002.adoc#APPDEV002[Building and Using the Persistence
 Layer] for additional information on this nonintrusive approach. See
-also xref:concepts/blocks001.adoc#CHEDICEE[About Metadata.]
+also xref:{relativedir}/blocks001.adoc#BLOCKS001[About Metadata.]
 
 [[BABCCDGC]][[OTLCG91205]]
 
@@ -280,6 +280,6 @@ improve performance by configuring the mapping as immutable.
 Mutability also affects weaving. EclipseLink can only weave an attribute
 change tracking policy for immutable mappings.
 
-For more information, see xref:concepts/app_dev005.htm#CCHJEDFH[About Weaving].
+For more information, see xref:{relativedir}/app_dev005.adoc#APPDEV005[About Weaving].
 See also the description of the `@Mutable` annotation in _Jakarta
 Persistence API (JPA) Extensions Reference for EclipseLink_.

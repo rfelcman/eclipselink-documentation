@@ -121,7 +121,7 @@ object and data source representations. Mappings are used internally by
 EclipseLink, and are defined through annotations, XML, or in IDEs such
 as Eclipse, then read from XML files at run time.
 
-See link:mappingintro.htm#CHDFEJIJ[Chapter 6, "Understanding Mappings."]
+See xref:{relativedir}/mappingintro.adoc#MAPPINGINTRO[Chapter 6, "Understanding Mappings."]
 
 [[CHDFFJIA]][[OTLCG94464]]
 
@@ -144,7 +144,7 @@ is used to improve performance by avoiding unnecessary trips to the
 database, manage locking and cache isolation level, and manage object
 identity.
 
-See link:cache.htm#CDEFHHEH[Chapter 8, "Understanding Caching."]
+See xref:{relativedir}/cache.adoc#CACHE[Chapter 8, "Understanding Caching."]
 
 [[CHDBJIEA]][[OTLCG94466]]
 

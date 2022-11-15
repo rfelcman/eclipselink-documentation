@@ -19,8 +19,6 @@
 :description: EclipseLink
 :keywords: eclipselink, java, jpa, persistence, introduction
 
-= Jakarta Persistence API (JPA) Extensions Reference for EclipseLink, Release 3.0
-
 == Introduction
 
 This chapter introduces EclipseLink. EclipseLink is an advanced,
@@ -34,7 +32,7 @@ This chapter includes the following sections:
 * <<About This Documentation, About This Documentation>>
 * <<Other Resources, Other Resources>>
 
-== About EclipseLink
+=== About EclipseLink
 
 EclipseLink is suitable for use with a wide range of Java Enterprise
 Edition (Jakarta EE) and Java application architectures. Use EclipseLink
@@ -91,7 +89,7 @@ metadata with a simple session facade that provides in-depth support for
 standard APIs such as JPA, and JAXB as well as EclipseLink-specific
 extensions to those standards.
 
-== About This Documentation
+=== About This Documentation
 
 EclipseLink is the reference implementation of the Java Persistence
 Architecture (JPA) 2.0 specification It also includes many enhancements
@@ -102,7 +100,7 @@ JPA. Please refer to the JPA specification for full documentation of
 core JPA. Where appropriate, this documentation provides links to the
 pertinent section of the specification.
 
-== Other Resources
+==== Other Resources
 
 For more information, see:
 

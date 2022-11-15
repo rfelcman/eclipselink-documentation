@@ -19,7 +19,7 @@
 :description: EclipseLink
 :keywords: eclipselink, java, jpa, persistence, cache
 :rootdir: {docdir}/concepts
-
+[[CACHE]]
 == Understanding Caching
 
 This chapter introduces and describes caching. The EclipseLink cache is

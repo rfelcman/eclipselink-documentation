@@ -1,81 +1,55 @@
-[[cse]][[top]]
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|=======================================================================
-a|
-Jakarta Persistence API (JPA) Extensions Reference for EclipseLink,
-Release 3.0
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
- a|
-[cols=",^,,^,,^,^",]
-|=======================================================================
-|  |image:../../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../../[image:../../../dcommon/images/search.png[Search] +
-] | 
-|link:../../eclipselink_jpa_extensions.pdf[image:../../../dcommon/images/pdf_icon.png[PDF]]
-|link:#disqus_thread[image:../../../dcommon/images/comments.png[Comments] +
-Comments]
-|=======================================================================
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|=======================================================================
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|=======================================================================
-|link:toc.htm[image:../../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:title_eclipselink.htm[image:../../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|=======================================================================
+///////////////////////////////////////////////////////////////////////////////
+[[JPA_LOE]]
+=== List of Examples
 
-List of Examples
-----------------
-
-* link:annotations_ref.htm#CFHFACAI[2-1 Using @AdditionalCriteria
-Annotation]
+* link:annotations_ref.htm#CFHFACAI[2-1 Using @AdditionalCriteria Annotation]
 * link:annotations_ref.htm#CFHHBDFE[2-2 Using <additional-criteria> XML]
 * link:annotations_ref.htm#sthref13[2-3 Multitenancy Example 1]
 * link:annotations_ref.htm#sthref14[2-4 Multitenancy Example 2]
 * link:annotations_ref.htm#CBABHEHD[2-5 Using @Array with Oracle VARRAY]
-* link:annotations_ref.htm#CBACGBDA[2-6 Using @Array with PostgreSQL
-Struct]
+* link:annotations_ref.htm#CBACGBDA[2-6 Using @Array with PostgreSQL Struct]
 * link:annotations_ref.htm#sthref25[2-7 Using JOIN BatchFetch Type]
 * link:annotations_ref.htm#sthref26[2-8 Using EXISTS BatchFetch Type]
 * link:annotations_ref.htm#sthref27[2-9 Using IN BatchFetch Type]
 * link:annotations_ref.htm#CHDEEGCI[2-10 Using @Cache Annotation]
 * link:annotations_ref.htm#CDEJDBFJ[2-11 Using <cache> XML]
-* link:annotations_ref.htm#CACHFEFD[2-12 Specifying Caching in
-persistence.xml]
+* link:annotations_ref.htm#CACHFEFD[2-12 Specifying Caching in persistence.xml]
 * link:annotations_ref.htm#BABEECHH[2-13 Using @CacheIndex Annotation]
 * link:annotations_ref.htm#BABIHBCC[2-14 Using <cache-index> XML]
 * link:annotations_ref.htm#BABBIAGH[2-15 Caching an Index Query]
-* link:annotations_ref.htm#BGBGHHFI[2-16 Using @CacheInterceptor
-Annotation]
+* link:annotations_ref.htm#BGBGHHFI[2-16 Using @CacheInterceptor Annotation]
 * link:annotations_ref.htm#BGBEBHDH[2-17 Using <cache-interceptor> XML]
-* link:annotations_ref.htm#CHDHCIGF[2-18 Using @CascadeOnDelete
-Annotation]
+* link:annotations_ref.htm#CHDHCIGF[2-18 Using @CascadeOnDelete Annotation]
 * link:annotations_ref.htm#CHDJIBAJ[2-19 Using <cascade-on-delete> XML]
-* link:annotations_ref.htm#BCGCHJHG[2-20 Using @ChangeTracking
-Annotation]
+* link:annotations_ref.htm#BCGCHJHG[2-20 Using @ChangeTracking Annotation]
 * link:annotations_ref.htm#BCGHFGBB[2-21 Using <change-tracking> XML]
-* link:annotations_ref.htm#BCGICDII[2-22 Specifying Change Tracking in
-persistence.xml]
-* link:annotations_ref.htm#BGBEDADF[2-23 Using @ClassExtractor
-Annotation]
+* link:annotations_ref.htm#BCGICDII[2-22 Specifying Change Tracking in persistence.xml]
+* link:annotations_ref.htm#BGBEDADF[2-23 Using @ClassExtractor Annotation]
 * link:annotations_ref.htm#BABDIJEG[2-24 Using <class-extractor> XML]
-* link:annotations_ref.htm#BABEIGHC[2-25 Using @CloneCopyPolicy
-Annotation]
+* link:annotations_ref.htm#BABEIGHC[2-25 Using @CloneCopyPolicy Annotation]
 * link:annotations_ref.htm#BABJAHCB[2-26 Using <clone-copy-policy> XML]
-* link:annotations_ref.htm#sthref72[2-27 Using @CompositeMember
-Annotation]
+* link:annotations_ref.htm#sthref72[2-27 Using @CompositeMember Annotation]
 * link:annotations_ref.htm#sthref73[2-28 Using <composite-member> XML]
-* link:annotations_ref.htm#BABFEJHJ[2-29 Using @ConversionValue
-Annotation]
+* link:annotations_ref.htm#BABFEJHJ[2-29 Using @ConversionValue Annotation]
 * link:annotations_ref.htm#BABIHAFA[2-30 Using <conversion-value> XML]
 * link:annotations_ref.htm#BEHFAGHF[2-31 Using the @Convert Annotation]
-* link:annotations_ref.htm#CHDFGEFJ[2-32 Using the @Converter
-Annotation]
+* link:annotations_ref.htm#CHDFGEFJ[2-32 Using the @Converter Annotation]
 * link:annotations_ref.htm#BGBBDAAJ[2-33 Using <converter> XML]
 * link:annotations_ref.htm#BABCIIIJ[2-34 Using @CopyPolicy Annotation]
 * link:annotations_ref.htm#BABECEEG[2-35 Using <copy-policy> XML]
@@ -83,158 +57,100 @@ Annotation]
 * link:annotations_ref.htm#BABDJIFC[2-37 Using <customizer> XML]
 * link:annotations_ref.htm#CBHBIFII[2-38 Using @DeleteAll Annotation]
 * link:annotations_ref.htm#sthref107[2-39 Using <delete-all> XML]
-* link:annotations_ref.htm#BACGGFEH[2-40 Using the
-@ExcludeDefaultMappings Annotation]
-* link:annotations_ref.htm#CEGDGCHF[2-41 Using @ExistenceChecking
-Annotation]
-* link:annotations_ref.htm#BABFDFHD[2-42 Using @FetchAttribute
-Annotation]
+* link:annotations_ref.htm#BACGGFEH[2-40 Using the @ExcludeDefaultMappings Annotation]
+* link:annotations_ref.htm#CEGDGCHF[2-41 Using @ExistenceChecking Annotation]
+* link:annotations_ref.htm#BABFDFHD[2-42 Using @FetchAttribute Annotation]
 * link:annotations_ref.htm#sthref127[2-43 Using <fetch-group> XML]
 * link:annotations_ref.htm#BABGHDJB[2-44 Using @FetchGroup Annotation]
 * link:annotations_ref.htm#CACEFCDH[2-45 Using <fetch-group> XML]
-* link:annotations_ref.htm#BABGFDJA[2-46 Using a Named Fetch Group on a
-Query]
-* link:annotations_ref.htm#CHDJCEHI[2-47 Specifying Fetch Groups in
-persistence.xml]
+* link:annotations_ref.htm#BABGFDJA[2-46 Using a Named Fetch Group on a Query]
+* link:annotations_ref.htm#CHDJCEHI[2-47 Specifying Fetch Groups in persistence.xml]
 * link:annotations_ref.htm#sthref153[2-48 Using @Index Annotation]
 * link:annotations_ref.htm#sthref154[2-49 Using <index> XML]
-* link:annotations_ref.htm#CHDDBCHI[2-50 Using @InstantiationCopyPolicy
-Annotation]
-* link:annotations_ref.htm#CHDGCDAI[2-51 Using
-<instantiation-copy-policy> XML]
+* link:annotations_ref.htm#CHDDBCHI[2-50 Using @InstantiationCopyPolicy Annotation]
+* link:annotations_ref.htm#CHDGCDAI[2-51 Using <instantiation-copy-policy> XML]
 * link:annotations_ref.htm#sthref168[2-52 Using @JoinFetch Annotation]
 * link:annotations_ref.htm#CEGJIBCF[2-53 Using <join-fetch> in XML]
 * link:annotations_ref.htm#CIHCFEJH[2-54 Using @JoinField Annotation]
 * link:annotations_ref.htm#sthref174[2-55 Using <join-field> in XML]
-* link:annotations_ref.htm#BEHEHJJC[2-56 Using @MapKeyConvert
-Annotation]
+* link:annotations_ref.htm#BEHEHJJC[2-56 Using @MapKeyConvert Annotation]
 * link:annotations_ref.htm#BEHCFGDH[2-57 Using <map-key-convert> XML]
-* link:annotations_ref.htm#BABEHCGI[2-58 Minimal @Multitenant
-Annotation]
+* link:annotations_ref.htm#BABEHCGI[2-58 Minimal @Multitenant Annotation]
 * link:annotations_ref.htm#sthref190[2-59 Example Using @Multitenant]
 * link:annotations_ref.htm#sthref191[2-60 Example Using <multitenant>]
-* link:annotations_ref.htm#sthref193[2-61 Example Using @Multitenant
-with @TenantTableDiscriminator]
-* link:annotations_ref.htm#sthref194[2-62 Example Using <multitenant>
-with <tenant-table-discriminator>]
-* link:annotations_ref.htm#CHDIEFCF[2-63 Example Using
-@Multitenant(VPD)]
+* link:annotations_ref.htm#sthref193[2-61 Example Using @Multitenant with @TenantTableDiscriminator]
+* link:annotations_ref.htm#sthref194[2-62 Example Using <multitenant> with <tenant-table-discriminator>]
+* link:annotations_ref.htm#CHDIEFCF[2-63 Example Using @Multitenant(VPD)]
 * link:annotations_ref.htm#sthref196[2-64 Example Using <multitenant>]
 * link:annotations_ref.htm#CHDDJJEE[2-65 Using @Mutable Annotation]
-* link:annotations_ref.htm#CHDCDIBH[2-66 Specifying Mutable Mappings in
-persistence.xml]
-* link:annotations_ref.htm#CHDICCEF[2-67 Using
-@NamedPLSQLStoredFunctionQuery Annotation]
-* link:annotations_ref.htm#BABFCGCE[2-68 Using
-@NamedPLSQLStoredProcedureQueries Annotation]
-* link:annotations_ref.htm#BGBICFEB2[2-69 Using
-@NamedPLSQLStoredProcedureQuery Annotation]
-* link:annotations_ref.htm#CIHBJIHJ[2-70 Using
-@NamedStoredFunctionQueries Annotation]
-* link:annotations_ref.htm#BABHABEG[2-71 Using @NamedStoredFunctionQuery
-Annotation]
-* link:annotations_ref.htm#BABGJGJJ[2-72 Using
-<named-stored-function-query> XML]
-* link:annotations_ref.htm#BABIFCAJ[2-73 Using
-@NamedStoredProcedureQueries Annotation]
-* link:annotations_ref.htm#BGBJBAFD[2-74 Using
-@NamedStoredProcedureQuery Annotation]
-* link:annotations_ref.htm#BGBIHIHB[2-75 Using
-<named-stored-procedure-query> XML]
+* link:annotations_ref.htm#CHDCDIBH[2-66 Specifying Mutable Mappings in persistence.xml]
+* link:annotations_ref.htm#CHDICCEF[2-67 Using @NamedPLSQLStoredFunctionQuery Annotation]
+* link:annotations_ref.htm#BABFCGCE[2-68 Using @NamedPLSQLStoredProcedureQueries Annotation]
+* link:annotations_ref.htm#BGBICFEB2[2-69 Using @NamedPLSQLStoredProcedureQuery Annotation]
+* link:annotations_ref.htm#CIHBJIHJ[2-70 Using @NamedStoredFunctionQueries Annotation]
+* link:annotations_ref.htm#BABHABEG[2-71 Using @NamedStoredFunctionQuery Annotation]
+* link:annotations_ref.htm#BABGJGJJ[2-72 Using <named-stored-function-query> XML]
+* link:annotations_ref.htm#BABIFCAJ[2-73 Using @NamedStoredProcedureQueries Annotation]
+* link:annotations_ref.htm#BGBJBAFD[2-74 Using @NamedStoredProcedureQuery Annotation]
+* link:annotations_ref.htm#BGBIHIHB[2-75 Using <named-stored-procedure-query> XML]
 * link:annotations_ref.htm#CHDDEGCI[2-76 Using @Noncacheable Annotation]
 * link:annotations_ref.htm#CHDDFJCH[2-77 Using <noncacheable> XML]
-* link:annotations_ref.htm#BJECFBJG[2-78 Using @NoSql Annotation with
-XML]
-* link:annotations_ref.htm#BJECHGJH[2-79 Using @NoSql Annotation with
-JSON]
-* link:annotations_ref.htm#BGBFDFEJ[2-80 Using the @ObjectTypeConverter
-Annotation]
-* link:annotations_ref.htm#BGBCECGI[2-81 Using <object-type-converter>
-XML]
-* link:annotations_ref.htm#CHDBGGJB[2-82 Using @ObjectTypeConverters
-Annotation]
-* link:annotations_ref.htm#BCGJBJFJ[2-83 Using @OptimisticLocking
-Annotation]
-* link:annotations_ref.htm#sthref262[2-84 Using <optimistic-locking>
-XML]
-* link:annotations_ref.htm#CACFFDHH[2-85 Using the @OracleArray
-Annoation]
-* link:annotations_ref.htm#CACBHHBD[2-86 Using the @OracleObject
-Annotation]
-* link:annotations_ref.htm#CHDFIAIE[2-87 Using @OrderCorrection
-Annotation]
-* link:annotations_ref.htm#CHDHIFFI[2-88 Using <element-collection> in
-XML]
+* link:annotations_ref.htm#BJECFBJG[2-78 Using @NoSql Annotation with XML]
+* link:annotations_ref.htm#BJECHGJH[2-79 Using @NoSql Annotation with JSON]
+* link:annotations_ref.htm#BGBFDFEJ[2-80 Using the @ObjectTypeConverter Annotation]
+* link:annotations_ref.htm#BGBCECGI[2-81 Using <object-type-converter> XML]
+* link:annotations_ref.htm#CHDBGGJB[2-82 Using @ObjectTypeConverters Annotation]
+* link:annotations_ref.htm#BCGJBJFJ[2-83 Using @OptimisticLocking Annotation]
+* link:annotations_ref.htm#sthref262[2-84 Using <optimistic-locking> XML]
+* link:annotations_ref.htm#CACFFDHH[2-85 Using the @OracleArray Annoation]
+* link:annotations_ref.htm#CACBHHBD[2-86 Using the @OracleObject Annotation]
+* link:annotations_ref.htm#CHDFIAIE[2-87 Using @OrderCorrection Annotation]
+* link:annotations_ref.htm#CHDHIFFI[2-88 Using <element-collection> in XML]
 * link:annotations_ref.htm#CEGHAIDJ[2-89 Using Partitioning]
 * link:annotations_ref.htm#CEGJCEIH[2-90 Using @RangePartitioning]
 * link:annotations_ref.htm#CEGCEIBF[2-91 Using @Partitioning Annotation]
 * link:annotations_ref.htm#CHDJJCGF[2-92 Using @PLSQLRecord Annotation]
-* link:annotations_ref.htm#sthref317[2-93 Using the @PLSQLTable
-Annotation]
+* link:annotations_ref.htm#sthref317[2-93 Using the @PLSQLTable Annotation]
 * link:annotations_ref.htm#BGEJFGAG[2-94 Using @PrimaryKey Annotation]
 * link:annotations_ref.htm#BGEGDFHI[2-95 Using @<primary-key> XML]
 * link:annotations_ref.htm#CHDIAFFA[2-96 Using @PrivateOwned Annotation]
-* link:annotations_ref.htm#CIHDHIIH[2-97 Using @QueryRedirectors
-Annotation]
-* link:annotations_ref.htm#BCGIJGHH[2-98 Using @RangePartitioning
-Annotation]
-* link:annotations_ref.htm#sthref355[2-99 Using <range-partitioning>
-XML]
+* link:annotations_ref.htm#CIHDHIIH[2-97 Using @QueryRedirectors Annotation]
+* link:annotations_ref.htm#BCGIJGHH[2-98 Using @RangePartitioning Annotation]
+* link:annotations_ref.htm#sthref355[2-99 Using <range-partitioning> XML]
 * link:annotations_ref.htm#BGBCIIDB[2-100 Using @ReadOnly Annotation]
 * link:annotations_ref.htm#BGBCBHEE[2-101 Using <read-only> XML]
-* link:annotations_ref.htm#CIHDFAFD[2-102 Using @ReturnInsert
-Annotation]
+* link:annotations_ref.htm#CIHDFAFD[2-102 Using @ReturnInsert Annotation]
 * link:annotations_ref.htm#CIHEJAJG[2-103 Using <return-insert> XML]
-* link:annotations_ref.htm#CACBJIIH[2-104 Using @ReturnUpdate
-Annotation]
+* link:annotations_ref.htm#CACBJIIH[2-104 Using @ReturnUpdate Annotation]
 * link:annotations_ref.htm#CACJIJGE[2-105 Using <return-update> XML]
-* link:annotations_ref.htm#CACFCAFF[2-106 Specifying a Serialized Object
-Policy]
-* link:annotations_ref.htm#CACGIGIH[2-107 Preventing the Use of a
-Serialized Object Policy in a Query]
-* link:annotations_ref.htm#CACGFBHH[2-108 Preventing Search Using a
-Serialized Object Policy Property]
+* link:annotations_ref.htm#CACFCAFF[2-106 Specifying a Serialized Object Policy]
+* link:annotations_ref.htm#CACGIGIH[2-107 Preventing the Use of a Serialized Object Policy in a Query]
+* link:annotations_ref.htm#CACGFBHH[2-108 Preventing Search Using a Serialized Object Policy Property]
 * link:annotations_ref.htm#CACCGJAJ[2-109 Using @Struct Annotation]
 * link:annotations_ref.htm#CBBIEDGD[2-110 Using <struct> XML]
-* link:annotations_ref.htm#BGBJCJCC[2-111 Using @StructConverter
-Annotation]
-* link:annotations_ref.htm#CHDHGDGH[2-112 Using @StructConverters
-Annotation]
+* link:annotations_ref.htm#BGBJCJCC[2-111 Using @StructConverter Annotation]
+* link:annotations_ref.htm#CHDHGDGH[2-112 Using @StructConverters Annotation]
 * link:annotations_ref.htm#CHDHGABD[2-113 Using <struct-converters> XML]
 * link:annotations_ref.htm#CACDBBII[2-114 Using @Structure Annotation]
 * link:annotations_ref.htm#sthref411[2-115 Using <structure> XML]
-* link:annotations_ref.htm#CHEJICEF[2-116 Using
-@TenantDiscriminatorColumn Annotation]
-* link:annotations_ref.htm#CHEDCDDF[2-117 Using
-<tenant-discriminator-column> XML]
-* link:annotations_ref.htm#sthref429[2-118 Using
-@TenantTableDiscriminator Annotation]
-* link:annotations_ref.htm#sthref430[2-119 Using
-<tenant-table-discriminator> XML]
-* link:annotations_ref.htm#BABHECGF[2-120 Using @Transformation
-Annotation]
+* link:annotations_ref.htm#CHEJICEF[2-116 Using @TenantDiscriminatorColumn Annotation]
+* link:annotations_ref.htm#CHEDCDDF[2-117 Using <tenant-discriminator-column> XML]
+* link:annotations_ref.htm#sthref429[2-118 Using @TenantTableDiscriminator Annotation]
+* link:annotations_ref.htm#sthref430[2-119 Using <tenant-table-discriminator> XML]
+* link:annotations_ref.htm#BABHECGF[2-120 Using @Transformation Annotation]
 * link:annotations_ref.htm#BABHCBAG[2-121 Using <transformation> XML]
-* link:annotations_ref.htm#CHDEHGEF[2-122 Using the @TypeConverter
-Annotation]
-* link:annotations_ref.htm#BCFEHCDH[2-123 Using @TypeConverters
-Annotation]
+* link:annotations_ref.htm#CHDEHGEF[2-122 Using the @TypeConverter Annotation]
+* link:annotations_ref.htm#BCFEHCDH[2-123 Using @TypeConverters Annotation]
 * link:annotations_ref.htm#sthref450[2-124 Using <type-converters> XML]
-* link:annotations_ref.htm#CFADJAIF[2-125 Using @UuidGenerator
-Annotation]
+* link:annotations_ref.htm#CFADJAIF[2-125 Using @UuidGenerator Annotation]
 * link:annotations_ref.htm#CFAGEJHJ[2-126 Using <generated-value> XML]
-* link:annotations_ref.htm#CFAJEEEJ[2-127 Specifying Generator in
-persistence.xml]
-* link:annotations_ref.htm#CJHFDJAC[2-128 Using @ValuePartition
-Annotation]
+* link:annotations_ref.htm#CFAJEEEJ[2-127 Specifying Generator in persistence.xml]
+* link:annotations_ref.htm#CJHFDJAC[2-128 Using @ValuePartition Annotation]
 * link:annotations_ref.htm#CJHBEIGD[2-129 Using <partition> XML]
-* link:annotations_ref.htm#CHDJDIJD[2-130 Using @VariableOneToOne
-Annotation]
-* link:annotations_ref.htm#CHDCBGAF[2-131 Using <variable-one-to-one>
-XML]
-* link:annotations_ref.htm#sthref486[2-132 Using @VirtualAccessMethods
-Annotation]
-* link:annotations_ref.htm#CIHCJCJE[2-133 Using <access> and
-<access-methods> XML]
+* link:annotations_ref.htm#CHDJDIJD[2-130 Using @VariableOneToOne Annotation]
+* link:annotations_ref.htm#CHDCBGAF[2-131 Using <variable-one-to-one> XML]
+* link:annotations_ref.htm#sthref486[2-132 Using @VirtualAccessMethods Annotation]
+* link:annotations_ref.htm#CIHCJCJE[2-133 Using <access> and <access-methods> XML]
 * link:jpql.htm#CIHGHBIC[3-1 Using CAST EQL]
 * link:jpql.htm#CDCCFCBE[3-2 Using COLUMN EQL]
 * link:jpql.htm#CDCFDDGF[3-3 Using COLUMN with a Primitive Column]
@@ -692,36 +608,3 @@ in a Property Map]
 * link:schema.htm#sthref1254[6-3 Overriding/Merging Example 3]
 * link:schema.htm#sthref1255[6-4 Overriding/Merging Example 4]
 * link:schema.htm#sthref1256[6-5 Overriding/Merging Example 5]
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|=======================================================================
-a|
-[width="96%",cols=",^50%,^50%",]
-|=======================================================================
-| 
-|link:toc.htm[image:../../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:title_eclipselink.htm[image:../../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|=======================================================================
-
-
-|http://www.eclipse.org/eclipselink/[image:../../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[cols=",^,,^,,^,^",]
-|=======================================================================
-|  |image:../../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../../[image:../../../dcommon/images/search.png[Search] +
-] | 
-|link:../../eclipselink_jpa_extensions.pdf[image:../../../dcommon/images/pdf_icon.png[PDF]]
-|link:#disqus_thread[image:../../../dcommon/images/comments.png[Comments] +
-Comments]
-|=======================================================================
-
-|=======================================================================
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

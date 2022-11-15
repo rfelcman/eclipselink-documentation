@@ -122,7 +122,7 @@ Persistence API (JPA) Extensions Reference for EclipseLink_.
 
 An essential part of maintaining object identity is sequencing–managing
 the assignment of unique values to distinguish one instance from
-another. For more information, see xref:cache002.adoc#CHEFCFEG[About
+another. For more information, see xref:cache002.adoc#CACHE002[About
 Cache Type and Size].
 
 Sequencing involves reading and writing a special sequence resource

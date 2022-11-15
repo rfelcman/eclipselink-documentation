@@ -1,49 +1,33 @@
-[[cse]][[top]]
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|=======================================================================
-a|
-Jakarta Persistence API (JPA) Extensions Reference for EclipseLink,
-Release 3.0
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
- a|
-[cols=",^,,^,,^,^",]
-|=======================================================================
-|  |image:../../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../../[image:../../../dcommon/images/search.png[Search] +
-] | 
-|link:../../eclipselink_jpa_extensions.pdf[image:../../../dcommon/images/pdf_icon.png[PDF]]
-|link:#disqus_thread[image:../../../dcommon/images/comments.png[Comments] +
-Comments]
-|=======================================================================
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|=======================================================================
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|=======================================================================
-|link:loe.htm[image:../../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:preface.htm[image:../../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|=======================================================================
+///////////////////////////////////////////////////////////////////////////////
 
-EclipseLink
------------
+=== EclipseLink
 
-Jakarta Persistence API (JPA) Extensions Reference for EclipseLink
+Jakarta Persistence API (JPA) Extensions Reference for EclipseLink
 
-Release 3.0
+Release  {release-version}
 
-'''''
-
-June 2014
+December 2022
 
 *EclipseLink Jakarta Persistence API (JPA) Extensions Reference for
 EclipseLink*
 
-Copyright © 2014 by The Eclipse Foundation under the Eclipse Public
+Copyright © 2022 by The Eclipse Foundation under the Eclipse Public
 License (EPL)
 
 `http://www.eclipse.org/org/documents/epl-v10.php`
@@ -51,39 +35,4 @@ License (EPL)
 The initial contribution of this content was based on work copyrighted
 by Oracle and was submitted with permission.
 
-Print date: June 10, 2014
-
-``
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|=======================================================================
-a|
-[width="96%",cols=",^50%,^50%",]
-|=======================================================================
-| 
-|link:loe.htm[image:../../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:preface.htm[image:../../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|=======================================================================
-
-
-|http://www.eclipse.org/eclipselink/[image:../../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[cols=",^,,^,,^,^",]
-|=======================================================================
-|  |image:../../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../../[image:../../../dcommon/images/search.png[Search] +
-] | 
-|link:../../eclipselink_jpa_extensions.pdf[image:../../../dcommon/images/pdf_icon.png[PDF]]
-|link:#disqus_thread[image:../../../dcommon/images/comments.png[Comments] +
-Comments]
-|=======================================================================
-
-|=======================================================================
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +
+Print date: December, 2022

@@ -1,37 +1,25 @@
-[[cse]][[top]]
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|=======================================================================
-a|
-Jakarta Persistence API (JPA) Extensions Reference for EclipseLink,
-Release 3.0
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
- a|
-[cols=",^,,^,,^,^",]
-|=======================================================================
-|  |image:../../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../../[image:../../../dcommon/images/search.png[Search] +
-] | 
-|link:../../eclipselink_jpa_extensions.pdf[image:../../../dcommon/images/pdf_icon.png[PDF]]
-|link:#disqus_thread[image:../../../dcommon/images/comments.png[Comments] +
-Comments]
-|=======================================================================
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|=======================================================================
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,",]
-|=======================================================================
-|link:persistenceproperties_ref.htm[image:../../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-| 
-|=======================================================================
+///////////////////////////////////////////////////////////////////////////////
 
-[[TLJPA688]] [[sthref1245]]
+:description: EclipseLink
+:keywords: eclipselink, java, jpa, persistence, schema
 
-6 eclipselink-orm.xml Schema Reference
---------------------------------------
+== eclipselink-orm.xml Schema Reference
 
 [[TLJPA54097]]
 
@@ -39,20 +27,9 @@ This chapter describes how you can use EclipseLink's native metadata XML
 file, `eclipselink-orm.xml`, to override mappings defined in the JPA
 configuration file (`orm.xml`) and to provide extended ORM features.
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-Using the `eclipselink-orm.xml` mapping file enables many EclipseLink
+NOTE: Using the `eclipselink-orm.xml` mapping file enables many EclipseLink
 advanced features, but it may prevent the persistence unit from being
 portable to other JPA implementations.
-
-|=======================================================================
-
- +
 
 The `eclipselink-orm.xml` file defines object-relational mapping
 metadata for EclipseLink. It has the same basic structure as the
@@ -75,8 +52,7 @@ This chapter includes the following sections:
 
 [[BGBBEIEA]][[TLJPA689]]
 
-Overriding and Merging
-~~~~~~~~~~~~~~~~~~~~~~
+=== Overriding and Merging
 
 To override the `orm.xml` file's mapping, you must define the
 `META-INF/eclipselink-orm.xml` file in the project. When both `orm.xml`
@@ -86,20 +62,10 @@ file specified in the persistence unit. If there are overlapping
 specifications in multiple ORM files, the files are merged if they are
 no conflicting entities.
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-The order of files defined in `persistence.xml` _does not_ define the
+NOTE: The order of files defined in `persistence.xml` _does not_ define the
 order of their processing. The files are processed, merged, and
 overridden as determined by the rules.
 
-|=======================================================================
-
- +
 
 See the following sections for more information:
 
@@ -108,8 +74,7 @@ See the following sections for more information:
 
 [[BGBJBFDH]][[TLJPA690]]
 
-Rules for Overriding and Merging
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Rules for Overriding and Merging
 
 EclipseLink provides specific overriding and merging rules for the
 following elements defined in the `orm.xml` file:
@@ -122,8 +87,7 @@ following elements defined in the `orm.xml` file:
 
 [[BGBFCDBF]][[TLJPA691]]
 
-Persistence Unit Metadata
-+++++++++++++++++++++++++
+===== Persistence Unit Metadata
 
 In `eclipselink-orm.xml`, a `persistence-unit-metadata` element merges
 or overrides the values of existing `persistence-unit-metadata`
@@ -133,7 +97,6 @@ specification as defined in link:#BGBGIFHH[Table 6-1].
 
 *_Table 6-1 Overriding and Merging Persistence Unit Metadata_*
 
-[width="47%",cols="<62%,<38%,<",options="header",]
 |=======================================================================
 |*entity-mappings/ persistence-unit-metadata* |*Rule* |*Description*
 |`xml-mapping-metadata- complete` |Full override |If specified, the
@@ -163,12 +126,10 @@ setting or creates a new `cascade-persist` setting.
 `entity-listeners` from the persistence unit
 |=======================================================================
 
- +
 
 [[BGBDIICB]][[TLJPA693]]
 
-Entity Mappings
-+++++++++++++++
+===== Entity Mappings
 
 Entities, embeddables and mapped superclasses are defined within the
 `entity-mappings` section. The `eclipselink-orm.xml` entities,
@@ -179,7 +140,6 @@ defined in link:#BGBJEBHG[Table 6-2].
 
 *_Table 6-2 Overriding and Merging Entity Mappings_*
 
-[width="37%",cols="<65%,<35%,<",options="header",]
 |=======================================================================
 |*`entity-mappings/`* |*Rule* |*Description*
 |`package` |None |The `package` element specifies the package of the
@@ -243,12 +203,10 @@ entities with the same name are defined in one or across multiple
 mapping files.
 |=======================================================================
 
- +
 
 [[BGBIAAAH]][[TLJPA695]]
 
-Mapped Superclasses
-+++++++++++++++++++
+===== Mapped Superclasses
 
 A mapped-superclass can be defined completely, or with specific elements
 to provide extensions to a mapped-superclass from another mapping file.
@@ -258,7 +216,6 @@ link:#BGBBFABH[Table 6-3] lists individual override and merging rules:
 
 *_Table 6-3 Overriding and Merging Mapped Superclasses_*
 
-[width="43%",cols="<59%,<41%,<",options="header",]
 |=======================================================================
 |*`entity-mappings/mapped-superclass`* |*Rule* |*Description*
 |`id-class` |Full override |If an `id-class` exists, then the
@@ -335,12 +292,10 @@ applied. If metadata-complete setting is not specified, it will not
 override an existing setting, that is essentially turning it off.
 |=======================================================================
 
- +
 
 [[BGBJAIBF]][[TLJPA697]]
 
-Entity override and merging rules
-+++++++++++++++++++++++++++++++++
+===== Entity override and merging rules
 
 An entity can be defined completely, or with specific elements to
 provide extensions to an entity from another mapping file. The following
@@ -350,7 +305,6 @@ table lists individual override and merging rules:
 
 *_Table 6-4 Overriding and Merging Entities_*
 
-[width="52%",cols="<60%,<40%,<",options="header",]
 |=======================================================================
 |*entity-mappings/entity* |*Rule* |*Description*
 |`table` |Full override |The table definition overrides any other table
@@ -503,8 +457,7 @@ override an existing setting, that is essentially turning it off.
 
 [[BGBIJGGA]][[TLJPA699]]
 
-Embeddable
-++++++++++
+===== Embeddable
 
 An embeddable can be defined wholly or may be defined so as to provide
 extensions to an embeddable from another mapping file. Therefore, we
@@ -515,7 +468,6 @@ will allow the merging of that class' metadata. link:#BGBEDIBC[Table
 
 *_Table 6-5 Overriding and Merging Embeddable Classes_*
 
-[width="44%",cols="<48%,<52%,<",options="header",]
 |=======================================================================
 |*entity-mappings/ embeddable* |*Rule* |*Description*
 |`attributes` |Override and merge |If the attribute settings (id,
@@ -541,8 +493,7 @@ override an existing setting, that is essentially turning it off.
 
 [[BGBGFDDF]][[TLJPA701]]
 
-Examples of Overriding and Merging
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===== Examples of Overriding and Merging
 
 [[TLJPA702]][[sthref1252]]
 
@@ -630,35 +581,3 @@ Entity *A* with mappings *c* and *d*
 
 Results in an exception, due to conflicting specifications for mapping
 *c* or *d* (which ever is processed first).
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|=======================================================================
-a|
-[width="48%",cols=",^100%",]
-|=======================================================================
-| 
-|link:persistenceproperties_ref.htm[image:../../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|=======================================================================
-
-
-|http://www.eclipse.org/eclipselink/[image:../../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[cols=",^,,^,,^,^",]
-|=======================================================================
-|  |image:../../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../../[image:../../../dcommon/images/search.png[Search] +
-] | 
-|link:../../eclipselink_jpa_extensions.pdf[image:../../../dcommon/images/pdf_icon.png[PDF]]
-|link:#disqus_thread[image:../../../dcommon/images/comments.png[Comments] +
-Comments]
-|=======================================================================
-
-|=======================================================================
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

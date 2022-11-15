@@ -1,41 +1,25 @@
-[[cse]][[top]]
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|=======================================================================
-a|
-Jakarta Persistence API (JPA) Extensions Reference for EclipseLink,
-Release 3.0
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
- a|
-[cols=",^,,^,,^,^",]
-|=======================================================================
-|  |image:../../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../../[image:../../../dcommon/images/search.png[Search] +
-] | 
-|link:../../eclipselink_jpa_extensions.pdf[image:../../../dcommon/images/pdf_icon.png[PDF]]
-|link:#disqus_thread[image:../../../dcommon/images/comments.png[Comments] +
-Comments]
-|=======================================================================
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|=======================================================================
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|=======================================================================
-|link:intro.htm[image:../../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:jpql.htm[image:../../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|=======================================================================
+///////////////////////////////////////////////////////////////////////////////
 
-The script content on this page is for navigation purposes only and does
-not alter the content in any way.
+:description: EclipseLink
+:keywords: eclipselink, java, jpa, persistence, annotation
 
-[[TLJPA306]] [[sthref8]]
-
-2 Annotation Extensions Reference
----------------------------------
+== Annotation Extensions Reference
 
 [[TLJPA54053]]
 
@@ -51,8 +35,7 @@ This chapter includes the following sections:
 
 [[CACGDIBI]][[TLJPA307]]
 
-Functional Listing of Annotation Extensions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Functional Listing of Annotation Extensions
 
 The following lists the EclipseLink annotation extensions, categorized
 by function:
@@ -70,8 +53,7 @@ by function:
 
 [[CACFGAIC]][[TLJPA308]]
 
-Mapping Annotations
-^^^^^^^^^^^^^^^^^^^
+==== Mapping Annotations
 
 EclipseLink includes the following annotation extensions for mappings:
 
@@ -86,8 +68,7 @@ EclipseLink includes the following annotation extensions for mappings:
 
 [[CACGCEIJ]][[TLJPA309]]
 
-Entity Annotations
-^^^^^^^^^^^^^^^^^^
+==== Entity Annotations
 
 EclipseLink includes the following annotation extensions for entities:
 
@@ -104,8 +85,7 @@ EclipseLink includes the following annotation extensions for entities:
 
 [[CACDIEID]][[TLJPA310]]
 
-Converter Annotations
-^^^^^^^^^^^^^^^^^^^^^
+==== Converter Annotations
 
 EclipseLink includes the following annotation extensions for converting
 data:
@@ -122,8 +102,7 @@ data:
 
 [[CACGIACB]][[TLJPA311]]
 
-Caching Annotations
-^^^^^^^^^^^^^^^^^^^
+==== Caching Annotations
 
 EclipseLink includes the following annotation extensions for caching:
 
@@ -136,8 +115,7 @@ EclipseLink includes the following annotation extensions for caching:
 
 [[CACJHFEC]][[TLJPA312]]
 
-Customization and Optimization Annotations
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Customization and Optimization Annotations
 
 EclipseLink includes the following annotation extensions for
 customization and optimization.
@@ -147,8 +125,7 @@ customization and optimization.
 
 [[CACDCCEG]][[TLJPA313]]
 
-Copy Policy Annotations
-^^^^^^^^^^^^^^^^^^^^^^^
+==== Copy Policy Annotations
 
 EclipseLink includes the following annotation extensions for copy
 policies:
@@ -159,8 +136,7 @@ policies:
 
 [[CACGFGED]][[TLJPA314]]
 
-Returning Policy Annotations
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Returning Policy Annotations
 
 EclipseLink includes the following annotation extensions for returning
 policies:
@@ -170,8 +146,7 @@ policies:
 
 [[CACCBFFE]][[TLJPA315]]
 
-Stored Procedure and Function Annotations
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Stored Procedure and Function Annotations
 
 EclipseLink includes the following annotation extensions for stored
 procedures and stored functions:
@@ -197,8 +172,7 @@ procedures and stored functions:
 
 [[CACHIHIB]][[TLJPA316]]
 
-Partitioning Annotations
-^^^^^^^^^^^^^^^^^^^^^^^^
+==== Partitioning Annotations
 
 EclipseLink includes the following annotation extensions for using
 partitions:
@@ -216,8 +190,7 @@ partitions:
 
 [[CACDIHJI]][[TLJPA54001]]
 
-Non-relational (NoSQL) Annotations
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Non-relational (NoSQL) Annotations
 
 EclipseLink includes the following annotation extensions for
 non-relational datasources:
@@ -229,8 +202,7 @@ non-relational datasources:
 
 [[CACBGBJG]][[TLJPA317]]
 
-Alphabetical Listing of Annotation Extensions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Alphabetical Listing of Annotation Extensions
 
 The following lists the EclipseLink annotation extensions:
 
@@ -333,8 +305,7 @@ The following lists the EclipseLink annotation extensions:
 
 '''''
 
-@AdditionalCriteria
-~~~~~~~~~~~~~~~~~~~
+=== @AdditionalCriteria
 
 Use `@AdditionalCriteria` to define parameterized views on data.
 
@@ -346,28 +317,19 @@ the mapped superclass are ignored.
 
 [[sthref9]]
 
-* +
-Annotation Elements*
-
+*Annotation Elements*
 link:#CHDGJGDCxx[Table 2-1] describes this annotation's elements.
-
 [[TLJPA319]][[sthref10]][[CHDGJGDCxx]]
-
 *_Table 2-1 @AdditionalCriteria Annotation Elements_*
-
-[width="36%",cols="<50%,<,<50%",options="header",]
 |=======================================================================
 |*Attribute* |*Description* |*Default*
 |`value` |(Required) The JPQL fragment to use as the additional criteria
-| +
+|
 |=======================================================================
-
- +
 
 [[sthref11]]
 
-* +
-Usage*
+*Usage*
 
 Additional criteria can provide an additional filtering mechanism for
 queries. This filtering option, for example, allows you to use an
@@ -381,23 +343,11 @@ factory. Properties must be set on an entity manager before executing a
 query. Do not change the properties for the lifespan of the entity
 manager.
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-Additional criteria are not supported with native SQL queries.
-
-|=======================================================================
-
- +
+NOTE: Additional criteria are not supported with native SQL queries.
 
 [[sthref12]]
 
-* +
-Examples*
+*Examples*
 
 Specify additional criteria using the `@AdditionalCriteria` annotation
 or the `<additional-criteria>` element. The additional criteria
@@ -474,19 +424,8 @@ applications) can share database tables, but the views on the data are
 restricted so that tenants have access only to their own data. You can
 use additional criteria to configure such restrictions.
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-In most cases, you use the `@Multitenant` annotation in multitenancy
+NOTE: In most cases, you use the `@Multitenant` annotation in multitenancy
 environments instead, as shown.
-
-|=======================================================================
-
- +
 
 [[TLJPA54054]][[sthref13]]
 
@@ -557,20 +496,9 @@ table.
 @AdditionalCriteria("this.endDate is null")
 ----
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-EclipseLink also provides specific history support, via `HistoryPolicy`
+NOTE: EclipseLink also provides specific history support, via `HistoryPolicy`
 . See Tracking Changes Using History Policy at
 `http://wiki.eclipse.org/EclipseLink/Examples/JPA/History`.
-
-|=======================================================================
-
- +
 
 [[CHDEGFBA]]
 
@@ -595,12 +523,11 @@ additional criteria to filter out the checking account data.
 
 [[sthref15]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:jpql.htm#column["COLUMN"]
+* xref:jpql.adoc#column["COLUMN"]
 * link:#BABIEJGD["@Multitenant"]
 
 [[CHDDDFDA]][[TLJPA325]]

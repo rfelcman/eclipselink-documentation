@@ -201,8 +201,8 @@ if their attribute _is not_ a `ValueHolderInterface`.
 You can configure EclipseLink to automatically weave transparent
 indirect container indirection for JPA entities and Plain Old Java
 Object (POJO) classes. For more information, see
-xref:concepts/app_dev002.adoc#CCHGGAGE[Using Java Byte-code Weaving] and
-xref:concepts/app_dev005.adoc#CCHJEDFH[About Weaving.]
+xref:{relativedir}/app_dev002.adoc#CCHGGAGE[Using Java Byte-code Weaving] and
+xref:{relativedir}/app_dev005.adoc#APPDEV005[About Weaving.]
 
 [[CEGDCAIG]][[OTLCG92114]]
 

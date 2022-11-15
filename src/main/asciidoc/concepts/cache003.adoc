@@ -37,7 +37,7 @@ JPA defines standard query hints for configuring how a query interacts
 with the shared persistence unit cache (L2). EclipseLink also provides
 some additional query hints for configuring the cache usage. For
 information on JPA and EclipseLink query hints, see
-xref:#A7725420[About Query Hints.]
+xref:{relativedir}/queries006.adoc#QUERY006[About Query Hints.]
 
 Entities can be accessed through JPA using either `find()` method or
 queries. The `find()` method will first check the persistence context

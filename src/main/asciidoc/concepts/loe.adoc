@@ -16,6 +16,6 @@
 
 ///////////////////////////////////////////////////////////////////////////////
 
-=== List of Examples
+== List of Examples
 
 xref:concepts/data_access004.adoc#CHDHDDGJ[Logs with Oracle Database Proxy Authentication]

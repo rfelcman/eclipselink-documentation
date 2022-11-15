@@ -122,7 +122,7 @@ are intended only to assist in rapid initial development strategies—not
 complete round-trip application development.
 
 For more information, see link:descriptors.htm#CHECEAAE[Chapter 5,
-"Understanding Descriptors"] and link:mappingintro.htm#CHDFEJIJ[Chapter
+"Understanding Descriptors"] and xref:{relativedir}/mappingintro.adoc#MAPPINGINTRO[Chapter
 6, "Understanding Mappings"].
 
 [[BABIEAJE]][[OTLCG91213]]

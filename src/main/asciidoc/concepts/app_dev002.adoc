@@ -119,7 +119,7 @@ Weaving is used to enhance both JPA entities and Plain Old Java Object
 (POJO) classes for such things as lazy loading, change tracking, fetch
 groups, and internal optimizations.
 
-For more information, see link:app_dev005.htm#CCHJEDFH[About Weaving].
+For more information, see xref:{relativedir}/app_dev005.adoc#APPDEV005[About Weaving].
 
 [[BABDHDIA]][[OTLCG91182]]
 
@@ -129,7 +129,7 @@ When you create persistent Java objects, use direct access on private or
 protected attributes.
 
 If you are using weaving, the `ValueHolderInterface` is not required.
-For more information, see link:app_dev005.htm#CCHJEDFH[About Weaving.]
+For more information, see xref:{relativedir}/app_dev005.adoc#APPDEV005[About Weaving.]
 See link:mappingintro002.htm#CHDJAHDC[Indirection (Lazy Loading)] for
 more information on indirection and transparent indirection.
 
@@ -164,7 +164,7 @@ For more information, see the following:
 
 * link:blocks001.htm#BABEECEF[Creating Project Metadata]
 * link:descriptors.htm#CHECEAAE[Chapter 5, "Understanding Descriptors"]
-* link:mappingintro.htm#CHDFEJIJ[Chapter 6, "Understanding Mappings"]
+* xref:{relativedir}/mappingintro.adoc#MAPPINGINTRO[Chapter 6, "Understanding Mappings"]
 
 [[BABBGFHF]][[OTLCG91186]]
 
@@ -181,7 +181,7 @@ options at the persistence unit or entity level. You can also configure
 cache options on a per-query basis or on a descriptor to apply to all
 queries on the reference class.
 
-For more information, see link:cache.htm#CDEFHHEH[Chapter 8,
+For more information, see xref:{relativedir}/cache.adoc#CACHE[Chapter 8,
 "Understanding Caching."]
 
 [[BABJDGGH]][[OTLCG91187]]

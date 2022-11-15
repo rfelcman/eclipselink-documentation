@@ -351,7 +351,7 @@ object identity issues if any of the cached objects are in use, so
 invalidating is safer. If you know that none of the cached objects are
 in use, then you can clear the cache.
 
-For more information, see link:cache.htm#CDEFHHEH[Chapter 8,
+For more information, see xref:{relativedir}/cache.adoc#CACHE[Chapter 8,
 "Understanding Caching."]
 
 [[OTLCG148]]

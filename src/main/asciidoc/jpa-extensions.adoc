@@ -19,35 +19,39 @@
 = Introduction
 :description: EclipseLink
 :keywords: eclipselink, java, jpa, persistence, introduction
-:rootdir: {docdir}/jpa/extensions
+:relativedir: jpa/extensions
+:imagesrelativedir: {relativedir}/img
+:imagestextrelativedir: {relativedir}/img_text
+:rootdir: {docdir}/{relativedir}
+include::attributes.adoc[]
 
-// == List of Examples
-:sectnums:
+//List of Examples
+:sectnums!:
 include::{rootdir}/loe.adoc[]
 
-// == Preface
-:sectnums:
+//Title and Copyright Information
+include::{rootdir}/title_eclipselink.adoc[]
+
+//Preface
+[preface]
 include::{rootdir}/preface.adoc[]
 
-// == Introduction
+//Introduction
 :sectnums:
+:sectnumlevels: 1
 include::{rootdir}/introduction.adoc[]
 
-// == Annotation Extensions Reference
-:sectnums:
+//Annotation Extensions Reference
 include::{rootdir}/annotations_ref.adoc[]
 
-// == Java Persistence Query Language Extensions
-:sectnums:
+//Java Persistence Query Language Extensions
 include::{rootdir}/jpql.adoc[]
 
-// == JPA Query Customization Extensions
-:sectnums:
+//JPA Query Customization Extensions
 include::{rootdir}/queryhints.adoc[]
 
-// == Persistence Property Extensions Reference
-:sectnums:
+//Persistence Property Extensions Reference
 include::{rootdir}/persistenceproperties_ref.adoc[]
 
-// == eclipselink-orm.xml Schema Reference
+//eclipselink-orm.xml Schema Reference
 include::{rootdir}/schema.adoc[]
