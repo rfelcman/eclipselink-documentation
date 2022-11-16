@@ -1296,7 +1296,6 @@ link:#BABHJFEK[Table 4-83] describes this persistence property's values.
 parameters; depending on database support.
 |=======================================================================
 
-[[sthref834]]
 
 *Usage*
 
@@ -1306,7 +1305,6 @@ expression, EclipseLink will disable parameter binding for the whole
 query. Setting this property to 'true' will allow EclipseLink to bind
 per expression, instead of per query.
 
-[[sthref835]]
 
 *Examples*
 

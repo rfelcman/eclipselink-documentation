@@ -37,8 +37,7 @@ Extensions]
 
 [[CACGDIBI2]][[TLJPA1047]]
 
-Functional Listing of Persistence Property Extensions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Functional Listing of Persistence Property Extensions
 
 The following lists the EclipseLink persistence property
 (`persistence.xml` file) extensions, categorized by function:
@@ -54,8 +53,7 @@ The following lists the EclipseLink persistence property
 
 [[CACGCEIJ2]][[TLJPA1049]]
 
-Weaving
-^^^^^^^
+==== Weaving
 
 EclipseLink includes the following persistence property extensions for
 weaving:
@@ -69,8 +67,7 @@ weaving:
 
 [[CACDIEID2]][[TLJPA1050]]
 
-Customizers
-^^^^^^^^^^^
+==== Customizers
 
 EclipseLink includes the following persistence property extensions for
 customizing descriptors and sessions:
@@ -91,8 +88,7 @@ customizing descriptors and sessions:
 
 [[CACJHFEC2]][[TLJPA1051]]
 
-Validation and Optimization
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Validation and Optimization
 
 EclipseLink includes the following persistence property extensions for
 validation.
@@ -106,8 +102,7 @@ validation.
 
 [[sthref734]]
 
-Logging
-^^^^^^^
+==== Logging
 
 EclipseLink includes the following persistence property extensions for
 logging.
@@ -122,8 +117,7 @@ logging.
 
 [[CACDCCEG2]][[TLJPA1052]]
 
-Caching
-^^^^^^^
+==== Caching
 
 EclipseLink includes the following persistence property extensions for
 caching:
@@ -154,8 +148,7 @@ caching:
 
 [[CHDBDCHB2]][[TLJPA1053]]
 
-Mapping
-^^^^^^^
+==== Mapping
 
 EclipseLink includes the following persistence property extensions for
 mappings:
@@ -166,8 +159,7 @@ mappings:
 
 [[CHDFDDBF]][[TLJPA54051]]
 
-Schema generation
-^^^^^^^^^^^^^^^^^
+==== Schema generation
 
 EclipseLink includes the following persistence property extensions for
 mappings:
@@ -180,8 +172,7 @@ mappings:
 
 [[CHDICECH2]][[TLJPA1054]]
 
-JDBC configuration
-^^^^^^^^^^^^^^^^^^
+==== JDBC configuration
 
 EclipseLink includes the following persistence property extensions for
 configuring JDBC connections and connection pooling:
@@ -205,8 +196,7 @@ configuring JDBC connections and connection pooling:
 
 [[CHDFDDBF1]][[TLJPA540511]]
 
-Concurrency manager
-^^^^^^^^^^^^^^^^^^^
+==== Concurrency manager
 
 EclipseLink includes the following persistence property extensions for
 concurrency management:
@@ -221,8 +211,7 @@ concurrency management:
 
 [[CACBGBJG2]][[TLJPA1055]]
 
-Alphabetical Listing of Persistence Property Extensions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Alphabetical Listing of Persistence Property Extensions
 
 The following lists the EclipseLink persistence property
 (`persitence.xml` file) extensions, in alphabetical order:
@@ -340,20 +329,18 @@ The following lists the EclipseLink persistence property
 * `weaving.internal`
 * `weaving.lazy`
 
-[[CACHGDEJ]][[TLJPA1060]]
+[[applicationlocation]][[TLJPA1060]]
 
 '''''
 
-application-location
-~~~~~~~~~~~~~~~~~~~~
+=== application-location
 
 Use the `eclipselink.application-location` property to specify the file
 system directory in which EclipseLink writes (outputs) DDL files.
 
 [[sthref735]]
 
-* +
-Values*
+*Values*
 
 link:#CACBIDFB[Table 5-1] describes this persistence property's values.
 
@@ -361,27 +348,22 @@ link:#CACBIDFB[Table 5-1] describes this persistence property's values.
 
 *_Table 5-1 Valid Values for application-location_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |value |Directory location. The path must be fully qualified. For
 Windows, use a backslash. For UNIX use a slash.
 |=======================================================================
 
- +
-
 [[sthref737]]
 
-* +
-Usage*
+*Usage*
 
 You may set this option only if the value of
 `eclipselink.ddl-generation.output-mode` is `sql-script` or `both`.
 
 [[sthref738]]
 
-* +
-Examples*
+*Examples*
 
 link:#CACGJACG[Example 5-1] shows how to use this property in the
 `persistence.xml` file.
@@ -411,27 +393,24 @@ propertiesMap.put(PersistenceUnitProperties.APPLICATION_LOCATION,
 
 [[sthref739]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
 * link:#BABCDHBB["ddl-generation.output-mode"]
 
-[[BABGBAEC]][[TLJPA1062]]
+[[cachecoordinationchannel]][[TLJPA1062]]
 
 '''''
 
-cache.coordination.channel
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== cache.coordination.channel
 
 Use the `eclipselink.cache.coordination.channel` property to configure
 cache coordination for a clustered environment.
 
 [[sthref740]]
 
-* +
-Values*
+*Values*
 
 link:#BABDCBBB[Table 5-2] describes this persistence property's values.
 
@@ -439,7 +418,6 @@ link:#BABDCBBB[Table 5-2] describes this persistence property's values.
 
 *_Table 5-2 Valid Values for cache.coordination.channel_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |channel name a|
@@ -450,20 +428,16 @@ Default: `EclipseLinkCommandChannel`
 
 |=======================================================================
 
- +
-
 [[sthref742]]
 
-* +
-Usage*
+*Usage*
 
 If multiple EclipseLink deployments reside on the same network, they
 should be in different channels.
 
 [[sthref743]]
 
-* +
-Examples*
+*Examples*
 
 link:#BABBJEBD[Example 5-3] shows how to use this property in the
 `persistence.xml` file.
@@ -493,8 +467,7 @@ propertiesMap.put(PersistenceUnitProperties.CACHE_COORDINATION_CHANNEL,
 
 [[sthref744]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -503,12 +476,11 @@ For more information, see:
 * "Scaling EclipseLink Applications in Clusters" in _Solutions Guide for
 EclispeLink_
 
-[[BABJGCIF]][[TLJPA54086]]
+[[cachecoordinationjmsfactory]][[TLJPA54086]]
 
 '''''
 
-cache.coordination.jms.factory
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== cache.coordination.jms.factory
 
 Use the `eclipselink.cache.coordination.jms.factory` property to
 configure the JMS topic connection factory name, when using JMS
@@ -516,8 +488,7 @@ coordination for a clustered environment.
 
 [[sthref745]]
 
-* +
-Values*
+*Values*
 
 link:#CACBGAJC[Table 5-3] describes this persistence property's values.
 
@@ -525,7 +496,6 @@ link:#CACBGAJC[Table 5-3] describes this persistence property's values.
 
 *_Table 5-3 Valid Values for cache.coordination.jms.factory_*
 
-[width="28%",cols="<100%,<",options="header",]
 |===============================================
 |*Value* |*Description*
 |name a|
@@ -535,12 +505,9 @@ Default: `jms/EclipseLinkTopicConnectionFactory`
 
 |===============================================
 
- +
-
 [[sthref747]]
 
-* +
-Usage*
+*Usage*
 
 Use this property for JMS coordination (when
 `eclipselink.cache.coordination.protocol` = `jms`).
@@ -555,8 +522,7 @@ property.
 
 [[sthref749]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -565,12 +531,11 @@ For more information, see:
 * "Scaling EclipseLink Applications in Clusters" in _Solutions Guide for
 EclispeLink_
 
-[[BABJGJGI]][[TLJPA1066]]
+[[cachecoordinationjmshost]][[TLJPA1066]]
 
 '''''
 
-cache.coordination.jms.host
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== cache.coordination.jms.host
 
 Use the `eclipselink.cache.coordination.jms.host` property to configure
 the URL of the JMS server that hosts the topic, when using JMS
@@ -578,8 +543,7 @@ coordination for a clustered environment.
 
 [[sthref750]]
 
-* +
-Values*
+*Values*
 
 link:#BABHHADG[Table 5-4] describes this persistence property's values.
 
@@ -587,7 +551,6 @@ link:#BABHHADG[Table 5-4] describes this persistence property's values.
 
 *_Table 5-4 Valid Values for cache.coordination.jms.host_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |url a|
@@ -598,12 +561,9 @@ This is not required if the topic is distributed across the cluster
 
 |=======================================================================
 
- +
-
 [[sthref752]]
 
-* +
-Usage*
+*Usage*
 
 Use this property for JMS coordination (when
 `eclipselink.cache.coordination.protocol` = `jms`). You must use a fully
@@ -611,16 +571,14 @@ qualified URL.
 
 [[sthref753]]
 
-* +
-Examples*
+*Examples*
 
 See link:#BABHGIFC[Example 5-13] for information on how to use this
 property.
 
 [[sthref754]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -629,12 +587,11 @@ For more information, see:
 * "Scaling EclipseLink Applications in Clusters" in _Solutions Guide for
 EclispeLink_
 
-[[CHDHJECA]][[TLJPA54088]]
+[[cachecoordinationjmsreusetopicpublisher]][[TLJPA54088]]
 
 '''''
 
-cache.coordination.jms.reuse-topic-publisher
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== cache.coordination.jms.reuse-topic-publisher
 
 Use the `eclipselink.cache.coordination.jms.reuse-topic-publisher`
 property to specify if the JSM transport manager should cache a
@@ -642,8 +599,7 @@ property to specify if the JSM transport manager should cache a
 
 [[sthref755]]
 
-* +
-Values*
+*Values*
 
 link:#CACFGJBJ[Table 5-5] describes this persistence property's values.
 
@@ -652,35 +608,29 @@ link:#CACFGJBJ[Table 5-5] describes this persistence property's values.
 *_Table 5-5 Valid Values for
 cache.coordination.jms.reuse-topic-publisher_*
 
-[width="28%",cols="<100%,<",options="header",]
 |======================================================
 |*Value* |*Description*
 |`true` |Caches the topic publisher.
 |`false` |(Default) Does not cache the topic publisher.
 |======================================================
 
- +
-
 [[sthref757]]
 
-* +
-Usage*
+*Usage*
 
 Use this property for JMS coordination (when
 `eclipselink.cache.coordination.protocol` = `jms`).
 
 [[sthref758]]
 
-* +
-Examples*
+*Examples*
 
 See link:#BABHGIFC[Example 5-13] for information on how to use this
 property.
 
 [[sthref759]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -689,20 +639,18 @@ For more information, see:
 * "Scaling EclipseLink Applications in Clusters" in _Solutions Guide for
 EclispeLink_
 
-[[BABHEFCJ]][[TLJPA834]]
+[[cachecoordinationjmstopic]][[TLJPA834]]
 
 '''''
 
-cache.coordination.jms.topic
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== cache.coordination.jms.topic
 
 Use the `eclipselink.cache.coordination.jms.topic` property to set the
 JMS topic name, when using JMS coordination for a clustered environment.
 
 [[sthref760]]
 
-* +
-Values*
+*Values*
 
 link:#BABFEBJD[Table 5-6] describes this persistence property's values.
 
@@ -710,7 +658,6 @@ link:#BABFEBJD[Table 5-6] describes this persistence property's values.
 
 *_Table 5-6 Valid Values for cache.coordination.jms.topic_*
 
-[width="28%",cols="<100%,<",options="header",]
 |==============================
 |*Value* |*Description*
 |name a|
@@ -720,28 +667,23 @@ Default: `jms/EclipseLinkTopic`
 
 |==============================
 
- +
-
 [[sthref762]]
 
-* +
-Usage*
+*Usage*
 
 Use this property for JMS coordination (when
 `eclipselink.cache.coordination.protocol` = `jms`).
 
 [[sthref763]]
 
-* +
-Examples*
+*Examples*
 
 See link:#BABHGIFC[Example 5-13] for information on how to use this
 property.
 
 [[sthref764]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -750,12 +692,11 @@ For more information, see:
 * "Scaling EclipseLink Applications in Clusters" in _Solutions Guide for
 EclispeLink_
 
-[[BABFBHGI]][[TLJPA54090]]
+[[cachecoordinationjndiinitialcontextfactory]][[TLJPA54090]]
 
 '''''
 
-cache.coordination.jndi.initial-context-factory
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== cache.coordination.jndi.initial-context-factory
 
 Use the `eclipselink.cache.coordination.jndi.initial-context-factory`
 property to set the JNDI `InitialContext` factory, when using cache
@@ -763,8 +704,7 @@ coordination for a clustered environment.
 
 [[sthref765]]
 
-* +
-Values*
+*Values*
 
 link:#CACBDFGG[Table 5-7] describes this persistence property's values.
 
@@ -773,26 +713,21 @@ link:#CACBDFGG[Table 5-7] describes this persistence property's values.
 *_Table 5-7 Valid Values for
 cache.coordination.jndi.initial-context-factory_*
 
-[width="28%",cols="<100%,<",options="header",]
 |================================================
 |*Value* |*Description*
 |name |Name of the JNDI `InitialContext` factory.
 |================================================
 
- +
-
 [[sthref767]]
 
-* +
-Usage*
+*Usage*
 
 Normally, you will not need this property when connecting to the local
 server.
 
 [[sthref768]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDBIAHF[Example 5-5] shows how to use this property in the
 `persistence.xml` file.
@@ -826,8 +761,7 @@ propertyMap.put
 
 [[sthref769]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -836,12 +770,11 @@ For more information, see:
 * "Scaling EclipseLink Applications in Clusters" in _Solutions Guide for
 EclispeLink_
 
-[[BABJBCCF]][[TLJPA838]]
+[[cachecoordinationjndipassword]][[TLJPA838]]
 
 '''''
 
-cache.coordination.jndi.password
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== cache.coordination.jndi.password
 
 Use the `eclipselink.cache.coordination.jndi.password` property to set
 the password for the `cache.coordination.jndi.user`, when using cache
@@ -849,8 +782,7 @@ coordination for a clustered environment.
 
 [[sthref770]]
 
-* +
-Values*
+*Values*
 
 link:#BABCDCAB[Table 5-8] describes this persistence property's values.
 
@@ -858,26 +790,21 @@ link:#BABCDCAB[Table 5-8] describes this persistence property's values.
 
 *_Table 5-8 Valid Values for cache.coordination.jndi.password_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=====================================================================
 |*Value* |*Description*
-|value |Password for the link:#BABGAEHE[cache.coordination.jndi.user].
+|value |Password for the link:#cachecoordinationjndiuser[cache.coordination.jndi.user].
 |=====================================================================
-
- +
 
 [[sthref772]]
 
-* +
-Usage*
+*Usage*
 
 Normally, you will not need this property when connecting to the local
 server.
 
 [[sthref773]]
 
-* +
-Examples*
+*Examples*
 
 link:#BABEDFDG[Example 5-7] shows how to use this propery in the
 `persistence.xml` file.
@@ -911,23 +838,21 @@ propertyMap.put(PersistenceUnitProperties.CACHE_COORDINATION_JNDI_PASSWORD,
 
 [[sthref774]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#BABGAEHE["cache.coordination.jndi.user"]
+* link:#cachecoordinationjndiuser["cache.coordination.jndi.user"]
 * link:#cachecoordinationprotocol["cache.coordination.protocol"]
 * "Cache Coordination" in _Understanding EclipseLink_
 * "Scaling EclipseLink Applications in Clusters" in _Solutions Guide for
 EclispeLink_
 
-[[BABGAEHE]][[TLJPA841]]
+[[cachecoordinationjndiuser]][[TLJPA841]]
 
 '''''
 
-cache.coordination.jndi.user
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== cache.coordination.jndi.user
 
 Use the `eclipselink.cache.coordination.jndi.user` property to set JNDI
 naming service user, when using cache coordination for a clustered
@@ -935,8 +860,7 @@ environment.
 
 [[sthref775]]
 
-* +
-Values*
+*Values*
 
 link:#BABJECGE[Table 5-9] describes this persistence property's values.
 
@@ -944,49 +868,43 @@ link:#BABJECGE[Table 5-9] describes this persistence property's values.
 
 *_Table 5-9 Valid Values for cache.coordination.jndi.user_*
 
-[width="28%",cols="<100%,<",options="header",]
 |======================
 |*Value* |*Description*
 |value |The JNDI user.
 |======================
 
- +
 
 [[sthref777]]
 
-* +
-Usage*
+*Usage*
 
 Normally, you will not need this property when connecting to the local
 server.
 
 [[sthref778]]
 
-* +
-Examples*
+*Examples*
 
 See link:#BABHGIFC[Example 5-13] for information on how to use this
 property.
 
 [[sthref779]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#BABJBCCF["cache.coordination.jndi.password"]
+* link:#cachecoordinationjndipassword["cache.coordination.jndi.password"]
 * link:#cachecoordinationprotocol["cache.coordination.protocol"]
 * "Cache Coordination" in _Understanding EclipseLink_
 * "Scaling EclipseLink Applications in Clusters" in _Solutions Guide for
 EclispeLink_
 
-[[BABIEEBH]][[TLJPA843]]
+[[cachecoordinationnamingservice]][[TLJPA843]]
 
 '''''
 
-cache.coordination.naming-service
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== cache.coordination.naming-service
 
 Use the `eclipselink.cache.coordination.naming-service` property to
 specify the naming service to use, when using cache coordination for a
@@ -994,8 +912,7 @@ clustered environment.
 
 [[sthref780]]
 
-* +
-Values*
+*Values*
 
 link:#BABEFFAF[Table 5-10] describes this persistence property's values.
 
@@ -1003,26 +920,21 @@ link:#BABEFFAF[Table 5-10] describes this persistence property's values.
 
 *_Table 5-10 Valid Values for cache.coordination.naming-service_*
 
-[width="28%",cols="<100%,<",options="header",]
 |======================
 |*Value* |*Description*
 |`jndi` |Uses JNDI.
 |`rmi` |Configures RMI.
 |======================
 
- +
-
 [[sthref782]]
 
-* +
-Usage*
+*Usage*
 
 Cache coordination must be enabled.
 
 [[sthref783]]
 
-* +
-Examples*
+*Examples*
 
 link:#BABGAFBA[Example 5-9] shows how to use this property in the
 `persistence.xml` file.
@@ -1055,8 +967,7 @@ propertyMap.put(PersistenceUnitProperties.CACHE_COORDINATION_NAMING_SERVICE,
 
 [[sthref784]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -1065,12 +976,11 @@ For more information, see:
 * "Scaling EclipseLink Applications in Clusters" in _Solutions Guide for
 EclispeLink_
 
-[[BABDFGGD]][[TLJPA846]]
+[[cachecoordinationpropagateasynchronously]][[TLJPA846]]
 
 '''''
 
-cache.coordination.propagate-asynchronously
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== cache.coordination.propagate-asynchronously
 
 Use the `eclipselink.cache.coordination.propagate-asynchronously`
 property to specify if the coordination broadcast should occur
@@ -1083,8 +993,7 @@ the thread returns from the commit of the transaction.
 
 [[sthref785]]
 
-* +
-Values*
+*Values*
 
 link:#BABBGGGD[Table 5-11] describes this persistence property's values.
 
@@ -1093,7 +1002,6 @@ link:#BABBGGGD[Table 5-11] describes this persistence property's values.
 *_Table 5-11 Valid Values for
 cache.coordination.propagate-asynchronously_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`true` |(Default) EclipseLink will broadcast asynchronously. The
@@ -1103,12 +1011,9 @@ committing the transaction.
 |`false` |EclipseLink will broadcast synchronously.
 |=======================================================================
 
- +
-
 [[sthref787]]
 
-* +
-Usage*
+*Usage*
 
 JMS cache coordination is always asynchronous, regardless of this
 setting.
@@ -1119,8 +1024,7 @@ ensure that all servers are updated before the request returns.
 
 [[sthref788]]
 
-* +
-Examples*
+*Examples*
 
 link:#BABCBHJG[Example 5-11] shows how to use this property in the
 `persistence.xml` file.
@@ -1154,8 +1058,7 @@ propertyMap.put
 
 [[sthref789]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -1168,8 +1071,7 @@ EclispeLink_
 
 '''''
 
-cache.coordination.protocol
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== cache.coordination.protocol
 
 Use the `eclipselink.cache.coordination.protocol` property to specify
 the cache coordination protocol to use. Depending on the cache
@@ -1178,8 +1080,7 @@ inserts to the cluster to update or invalidate each session's cache.
 
 [[sthref790]]
 
-* +
-Values*
+*Values*
 
 link:#BABCEGFF[Table 5-12] describes this persistence property's values.
 
@@ -1187,7 +1088,6 @@ link:#BABCEGFF[Table 5-12] describes this persistence property's values.
 
 *_Table 5-12 Valid Values for cache.coordination.protocol_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`jms` |Use Java Message Service (JMS) to broadcast changes.
@@ -1204,20 +1104,16 @@ broadcast changes.
 `TransportManager` abstract class
 |=======================================================================
 
- +
-
 [[sthref792]]
 
-* +
-Usage*
+*Usage*
 
 You must specify the `cache.coordination.protocol` for every persistence
 unit and session in the cluster.
 
 [[sthref793]]
 
-* +
-Examples*
+*Examples*
 
 link:#BABHGIFC[Example 5-13] shows how configure JMS cache coordination
 in the `persistence.xml` file.
@@ -1316,39 +1212,37 @@ value="3121" />
 
 [[sthref794]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#BABGBAEC["cache.coordination.channel"]
-* link:#BABJGCIF["cache.coordination.jms.factory"]
-* link:#BABJGJGI["cache.coordination.jms.host"]
-* link:#CHDHJECA[cache.coordination.jms.reuse-topic-publisher]link:#CHDHJECA["cache.coordination.jms.reuse-topic-publisher"]
-* link:#BABHEFCJ["cache.coordination.jms.topic"]
-* link:#BABFBHGI["cache.coordination.jndi.initial-context-factory"]
-* link:#BABJBCCF["cache.coordination.jndi.password"]
-* link:#BABGAEHE["cache.coordination.jndi.user"]
-* link:#BABIEEBH["cache.coordination.naming-service"]
-* link:#BABDFGGD["cache.coordination.propagate-asynchronously"]
-* link:#BABIEJED["cache.coordination.remove-connection-on-error"]
-* link:#BABDGCDE["cache.coordination.rmi.announcement-delay"]
-* link:#BABDGFEI["cache.coordination.rmi.multicast-group"]
-* link:#BABDGFEI["cache.coordination.rmi.multicast-group"]
-* link:#BABFBDBJ["cache.coordination.rmi.packet-time-to-live"]
-* link:#BABCJIFC["cache.coordination.rmi.url"]
-* link:#BABFJGIF["cache.coordination.thread.pool.size"]
+* link:#cachecoordinationchannel["cache.coordination.channel"]
+* link:#cachecoordinationjmsfactory["cache.coordination.jms.factory"]
+* link:#cachecoordinationjmshost["cache.coordination.jms.host"]
+* link:#cachecoordinationjmsreusetopicpublisher["cache.coordination.jms.reuse-topic-publisher"]
+* link:#cachecoordinationjmstopic["cache.coordination.jms.topic"]
+* link:#cachecoordinationjndiinitialcontextfactory["cache.coordination.jndi.initial-context-factory"]
+* link:#cachecoordinationjndipassword["cache.coordination.jndi.password"]
+* link:#cachecoordinationjndiuser["cache.coordination.jndi.user"]
+* link:#cachecoordinationnamingservice["cache.coordination.naming-service"]
+* link:#cachecoordinationpropagateasynchronously["cache.coordination.propagate-asynchronously"]
+* link:#cachecoordinationremoveconnectiononerror["cache.coordination.remove-connection-on-error"]
+* link:#cachecoordinationrmiannouncementdelay["cache.coordination.rmi.announcement-delay"]
+* link:#cachecoordinationrmimulticastgroup["cache.coordination.rmi.multicast-group"]
+* link:#cachecoordinationrmimulticastgroup["cache.coordination.rmi.multicast-group"]
+* link:#cachecoordinationrmipackettimetolive["cache.coordination.rmi.packet-time-to-live"]
+* link:#cachecoordinationrmiurl["cache.coordination.rmi.url"]
+* link:#cachecoordinationthreadpoolsize["cache.coordination.thread.pool.size"]
 * Cache Coordination Examples
 `http://wiki.eclipse.org/EclipseLink/Examples/JPA/CacheCoordination`
 * "Clustering and Cache Coordination"
 `http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Caching/Coordination`
 
-[[BABIEJED]][[TLJPA852]]
+[[cachecoordinationremoveconnectiononerror]][[TLJPA852]]
 
 '''''
 
-cache.coordination.remove-connection-on-error
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== cache.coordination.remove-connection-on-error
 
 Use the `eclipselink.cache.coordination.remove-connection-on-error`
 property to specify if the connection should be removed if EclipseLink
@@ -1356,8 +1250,7 @@ encounters a communication error when coordinating the cache.
 
 [[sthref795]]
 
-* +
-Values*
+*Values*
 
 link:#CJHBHDJH[Table 5-13] describes this persistence property's values.
 
@@ -1366,7 +1259,6 @@ link:#CJHBHDJH[Table 5-13] describes this persistence property's values.
 *_Table 5-13 Valid Values for
 cache.coordination.remove-connection-on-error_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`true` |Removes the connection if a communication error occurs.
@@ -1376,20 +1268,16 @@ EclipseLink will reconnect when the server becomes available.
 error occurs.
 |=======================================================================
 
- +
-
 [[sthref797]]
 
-* +
-Usage*
+*Usage*
 
 Normally, this is used for RMI connections in the event that a server
 goes down.
 
 [[sthref798]]
 
-* +
-Examples*
+*Examples*
 
 link:#BABGBHBE[Example 5-15] shows how to use this property in the
 `persistence.xml` file.
@@ -1422,8 +1310,7 @@ propertyMap.put
 
 [[sthref799]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -1432,12 +1319,11 @@ For more information, see:
 * "Scaling EclipseLink Applications in Clusters" in _Solutions Guide for
 EclispeLink_
 
-[[BABDGCDE]][[TLJPA855]]
+[[cachecoordinationrmiannouncementdelay]][[TLJPA855]]
 
 '''''
 
-cache.coordination.rmi.announcement-delay
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== cache.coordination.rmi.announcement-delay
 
 Use the `eclipselink.cache.coordination.rmi.announcement-delay` property
 to set the time (in milliseconds) to wait for announcements from other
@@ -1445,8 +1331,7 @@ cluster members on startup.
 
 [[sthref800]]
 
-* +
-Values*
+*Values*
 
 link:#BABCEDJF[Table 5-14] describes this persistence property's values.
 
@@ -1455,7 +1340,6 @@ link:#BABCEDJF[Table 5-14] describes this persistence property's values.
 *_Table 5-14 Valid Values for
 cache.coordination.rmi.announcement-delay_*
 
-[width="28%",cols="<100%,<",options="header",]
 |============================================================
 |*Value* |*Description*
 |Numeric a|
@@ -1465,28 +1349,23 @@ Default: *1000*
 
 |============================================================
 
- +
-
 [[sthref802]]
 
-* +
-Usage*
+*Usage*
 
 Use this property for RMI coordination (when
 `eclipselink.cache.coordination.protocol` = `rmi`).
 
 [[sthref803]]
 
-* +
-Examples*
+*Examples*
 
 See link:#BABJDAIB[Example 5-14] for information on how to use this
 property.
 
 [[sthref804]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -1495,12 +1374,11 @@ For more information, see:
 * "Scaling EclipseLink Applications in Clusters" in _Solutions Guide for
 EclispeLink_
 
-[[BABDGFEI]][[TLJPA857]]
+[[cachecoordinationrmimulticastgroup]][[TLJPA857]]
 
 '''''
 
-cache.coordination.rmi.multicast-group
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== cache.coordination.rmi.multicast-group
 
 Use the `eclipselink.cache.coordination.rmi.multicast-group` property to
 set the multicast socket group address (used to find other members of
@@ -1508,8 +1386,7 @@ the cluster), when using cache coordination for a clustered environment.
 
 [[sthref805]]
 
-* +
-Values*
+*Values*
 
 link:#BABDIBJH[Table 5-15] describes this persistence property's values.
 
@@ -1517,7 +1394,6 @@ link:#BABDIBJH[Table 5-15] describes this persistence property's values.
 
 *_Table 5-15 Valid Values for cache.coordination.rmi.multicast-group_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=====================================
 |*Value* |*Description*
 |Numeric a|
@@ -1527,28 +1403,23 @@ Default: `239.192.0.0`
 
 |=====================================
 
- +
-
 [[sthref807]]
 
-* +
-Usage*
+*Usage*
 
 Use this property for RMI coordination (when
 `eclipselink.cache.coordination.protocol` = `rmi`).
 
 [[sthref808]]
 
-* +
-Examples*
+*Examples*
 
 See link:#BABJDAIB[Example 5-14] for information on how to use this
 property.
 
 [[sthref809]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -1557,14 +1428,13 @@ For more information, see:
 * "Scaling EclipseLink Applications in Clusters" in _Solutions Guide for
 EclispeLink_
 
-[[TLJPA54092]]
+[[cachecoordinationrmimulticastgroupport]]
 
 '''''
 
 [[sthref810]]
 
-cache.coordination.rmi.multicast-group.port
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== cache.coordination.rmi.multicast-group.port
 
 Use the `eclipselink.cache.coordination.rmi.multicast-group.port`
 property to set the multicast socket group port (used to find other
@@ -1573,8 +1443,7 @@ environment.
 
 [[sthref811]]
 
-* +
-Values*
+*Values*
 
 link:#CACFAGIE[Table 5-16] describes this persistence property's values.
 
@@ -1593,28 +1462,23 @@ Default: `3121`
 
 |===================================
 
- +
-
 [[sthref813]]
 
-* +
-Usage*
+*Usage*
 
 Use this property for RMI coordination (when
 `eclipselink.cache.coordination.protocol` = `rmi`).
 
 [[sthref814]]
 
-* +
-Examples*
+*Examples*
 
 See link:#BABJDAIB[Example 5-14] for information on how to use this
 property.
 
 [[sthref815]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -1623,12 +1487,11 @@ For more information, see:
 * "Scaling EclipseLink Applications in Clusters" in _Solutions Guide for
 EclispeLink_
 
-[[BABFBDBJ]][[TLJPA861]]
+[[cachecoordinationrmipackettimetolive]][[TLJPA861]]
 
 '''''
 
-cache.coordination.rmi.packet-time-to-live
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== cache.coordination.rmi.packet-time-to-live
 
 Use the `eclipselink.cache.coordination.rmi.packet-time-to-live`
 property to set the number of hops the session announcement data packets
@@ -1637,8 +1500,7 @@ members of the cluster.
 
 [[sthref816]]
 
-* +
-Values*
+*Values*
 
 link:#BABHDDBG[Table 5-17] describes this persistence property's values.
 
@@ -1647,7 +1509,6 @@ link:#BABHDDBG[Table 5-17] describes this persistence property's values.
 *_Table 5-17 Valid Values for
 cache.coordination.rmi.packet-time-to-live_*
 
-[width="17%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |Numeric a|
@@ -1658,12 +1519,9 @@ Default: `2`
 
 |=======================================================================
 
- +
-
 [[sthref818]]
 
-* +
-Usage*
+*Usage*
 
 If sessions are hosted on different LANs that are part of WAN, the
 announcement sent by one session may not reach other sessions. In this
@@ -1676,16 +1534,14 @@ Use this property for RMI coordination (when
 
 [[sthref819]]
 
-* +
-Examples*
+*Examples*
 
 See link:#BABJDAIB[Example 5-14] for information on how to use this
 property.
 
 [[sthref820]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -1698,8 +1554,7 @@ EclispeLink_
 
 '''''
 
-cache.coordination.rmi.url
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== cache.coordination.rmi.url
 
 Use the `eclipselink.cache.coordination.rmi.url` property to set the URL
 of the host server. This is the URL that other cluster member use to
@@ -1707,8 +1562,7 @@ connect to this host.
 
 [[sthref821]]
 
-* +
-Values*
+*Values*
 
 link:#BABHIFGF[Table 5-18] describes this persistence property's values.
 
@@ -1716,7 +1570,6 @@ link:#BABHIFGF[Table 5-18] describes this persistence property's values.
 
 *_Table 5-18 Valid Values for cache.coordination.rmi.url_*
 
-[width="28%",cols="<100%,<",options="header",]
 |======================
 |*Value* |*Description*
 |url a|
@@ -1726,12 +1579,9 @@ Default: `local`
 
 |======================
 
- +
-
 [[sthref823]]
 
-* +
-Usage*
+*Usage*
 
 Use this property for RMI coordination (when
 `eclipselink.cache.coordination.protocol` = `rmi`).
@@ -1743,16 +1593,14 @@ file per server.
 
 [[sthref824]]
 
-* +
-Examples*
+*Examples*
 
 See link:#BABJDAIB[Example 5-14] for information on how to use this
 property.
 
 [[sthref825]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -1761,20 +1609,18 @@ For more information, see:
 * "Scaling EclipseLink Applications in Clusters" in _Solutions Guide for
 EclispeLink_
 
-[[BABFJGIF]][[TLJPA865]]
+[[cachecoordinationthreadpoolsize]][[TLJPA865]]
 
 '''''
 
-cache.coordination.thread.pool.size
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== cache.coordination.thread.pool.size
 
 Use the `eclipselink.cache.coordination.thread.pool.size` property to
 configure the size of the thread pool, for cache coordination threads.
 
 [[sthref826]]
 
-* +
-Values*
+*Values*
 
 link:#BABIHIHC[Table 5-19] describes this persistence property's values.
 
@@ -1782,7 +1628,6 @@ link:#BABIHIHC[Table 5-19] describes this persistence property's values.
 
 *_Table 5-19 Valid Values for cache.coordination.thread.pool.size_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |Numeric a|
@@ -1793,12 +1638,9 @@ Default: `32`
 
 |=======================================================================
 
- +
-
 [[sthref828]]
 
-* +
-Usage*
+*Usage*
 
 For RMI cache coordination, EclipseLink spawns one thread per node to
 send change notifications and one thread to listen for new node
@@ -1810,8 +1652,7 @@ _process_ the change notification (unless MDB is used).
 
 [[sthref829]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDEFIEH[Example 5-17] shows how to use this property in the
 `persistence.xml` file.
@@ -1854,12 +1695,11 @@ For more information, see:
 * "Scaling EclipseLink Applications in Clusters" in _Solutions Guide for
 EclispeLink_
 
-[[CCHEEFGA]][[TLJPA867]]
+[[cachedatabaseeventlistener]][[TLJPA867]]
 
 '''''
 
-cache.database-event-listener
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== cache.database-event-listener
 
 Use the `eclipselink.cache.database-event-listener` property to
 integrate EclipseLink with a database event notification service, such
@@ -1868,8 +1708,7 @@ Notification).
 
 [[sthref831]]
 
-* +
-Values*
+*Values*
 
 link:#CCHGIFIF[Table 5-20] describes this persistence property's values.
 
@@ -1877,7 +1716,6 @@ link:#CCHGIFIF[Table 5-20] describes this persistence property's values.
 
 *_Table 5-20 Valid Values for cache.database-event-listener_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |Class a|
@@ -1889,20 +1727,15 @@ You can also use *DCN* and *QCN* for Oracle.
 
 |=======================================================================
 
- +
-
 [[sthref833]]
 
-* +
-Usage*
+*Usage*
 
 You can use this property to allow the EclipseLink cache to be
 invalidated by database change events, triggers, or other services.
 
-[[sthref834]]
 
-* +
-Examples*
+*Examples*
 
 link:#CCHGJFCG[Example 5-19] shows how to use this property with Oracle
 DCN.
@@ -1931,10 +1764,7 @@ ener"/>
 </persistence>
 ----
 
-[[sthref835]]
-
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -1949,20 +1779,18 @@ Configuring and Managing JDBC Data Sources for Oracle WebLogic Server_
 * Cache Coordination Example
 `http://wiki.eclipse.org/EclipseLink/Examples/JPA/CacheCoordination`
 
-[[CHDEJCJJ]][[TLJPA54116]]
+[[cacheshared]][[TLJPA54116]]
 
 '''''
 
-cache.shared
-~~~~~~~~~~~~
+=== cache.shared
 
 Use the `eclipselink.cache.shared` property prefix to indicate whether
 an entity's cache is shared (non-isolated).
 
 [[sthref836]]
 
-* +
-Values*
+*Values*
 
 link:#CHDGGEJH[Table 5-21] describes this persistence property prefix's
 values.
@@ -1971,7 +1799,6 @@ values.
 
 *_Table 5-21 Valid Values for cache.shared_*
 
-[width="23%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`true` |(Default) Shares an entity's cache. The value is case
@@ -1981,12 +1808,9 @@ insensitive.
 insensitive.
 |=======================================================================
 
- +
-
 [[sthref838]]
 
-* +
-Usage*
+*Usage*
 
 Form a property name by appending either a valid entity name or class
 name to `class.shared`, indicating that the property values apply only
@@ -1996,26 +1820,23 @@ that sets the default for all entities.
 
 [[sthref839]]
 
-* +
-Examples*
+*Examples*
 
 See link:annotations_ref.htm#CACHFEFD[Example 2-12] for information on
 how to use this property.
 
-[[CHDIGIEC]][[TLJPA54118]]
+[[cachesize]][[TLJPA54118]]
 
 '''''
 
-cache.size
-~~~~~~~~~~
+=== cache.size
 
 Use the `eclipselink.cache.size` property prefix to specify the cache
 size for a specific entity type.
 
 [[sthref840]]
 
-* +
-Values*
+*Values*
 
 link:#CHDFBBJC[Table 5-22] describes this persistence property prefix's
 values.
@@ -2030,12 +1851,9 @@ values.
 |integer |The size of the cache. Default: 100 Bytes.
 |===================================================
 
- +
-
 [[sthref842]]
 
-* +
-Usage*
+*Usage*
 
 Form a property name by appending either a valid entity name or class
 name to `cache.size`, indicating that the property values apply only to
@@ -2049,13 +1867,12 @@ the size is the sub-cache size. The default cache size is 100 Bytes.
 
 [[sthref843]]
 
-* +
-Examples*
+*Examples*
 
 See link:annotations_ref.htm#CACHFEFD[Example 2-12] for information on
 how to use this property.
 
-[[CHDGDIEI]][[TLJPA54120]]
+[[cachetype]][[TLJPA54120]]
 
 '''''
 
@@ -2067,8 +1884,7 @@ cache.
 
 [[sthref844]]
 
-* +
-Values*
+*Values*
 
 link:#CHDDDIGB[Table 5-23] describes this persistence property prefix's
 values
@@ -2077,7 +1893,6 @@ values
 
 *_Table 5-23 Valid values for cache.type_*
 
-[width="25%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`Weak` |Holds all objects in use by the application, and allows any
@@ -2126,12 +1941,9 @@ circular references and no indirection.
 
 |=======================================================================
 
- +
-
 [[sthref846]]
 
-* +
-Usage*
+*Usage*
 
 Form a property name by appending a valid entity name or class name to
 `cache.type`, indicating that the property values apply only to a
@@ -2146,16 +1958,14 @@ If you do not want to cache entities, set the `cache.shared` property.
 
 [[sthref847]]
 
-* +
-Examples*
+*Examples*
 
 See link:annotations_ref.htm#CACHFEFD[Example 2-12] for information
 about how to use this property.
 
 [[sthref848]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -2165,8 +1975,7 @@ For more information, see:
 
 '''''
 
-classloader
-~~~~~~~~~~~
+=== classloader
 
 Use the `eclipselink.classloader` property to create an
 `EntityMangerFactory` in the property map to be passed to
@@ -2174,8 +1983,7 @@ Use the `eclipselink.classloader` property to create an
 
 [[sthref849]]
 
-* +
-Values*
+*Values*
 
 link:#CHDEBCGE[Table 5-24] describes this persistence property's values.
 
@@ -2183,7 +1991,6 @@ link:#CHDEBCGE[Table 5-24] describes this persistence property's values.
 
 *_Table 5-24 Valid Values for classloader_*
 
-[width="25%",cols="<100%,<",options="header",]
 |==========================
 |*Value* |*Description*
 |value |Classloader to use.
@@ -2193,16 +2000,14 @@ link:#CHDEBCGE[Table 5-24] describes this persistence property's values.
 
 [[sthref851]]
 
-* +
-Usage*
+*Usage*
 
 This is a dynamic property that must be set at runtime, in the property
 map. You cannot configure this property in the `persistence.xml` file.
 
 [[sthref852]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDFCFFI[Example 5-20] shows how to use this property in a
 property map.
@@ -2216,20 +2021,18 @@ property map.
 properties.put("eclipselink.classloader", this.getClass().getClassLoader());
 ----
 
-[[BIICFIDB]][[TLJPA872]]
+[[compositeunit]][[TLJPA872]]
 
 '''''
 
-composite-unit
-~~~~~~~~~~~~~~
+=== composite-unit
 
 Use the `eclipselink.composite-unit` property to specify if the
 persistence unit is a composite persistence unit.
 
 [[sthref853]]
 
-* +
-Values*
+*Values*
 
 link:#BIIGDCGE[Table 5-25] describes this persistence property's values.
 
@@ -2237,7 +2040,6 @@ link:#BIIGDCGE[Table 5-25] describes this persistence property's values.
 
 *_Table 5-25 Valid Values for composite-unit_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`true` |Persistence unit _is_ a composite persistence unit.
@@ -2246,36 +2048,21 @@ link:#BIIGDCGE[Table 5-25] describes this persistence property's values.
 unit.
 |=======================================================================
 
- +
-
 [[sthref855]]
 
-* +
-Usage*
+*Usage*
 
 The property must be specified in `persistence.xml` of a composite
 persistence unit. The composite persistence unit must contain all
 persistence units found in JAR files specified by the `persistence.xml`
 file.
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-If this property is passed to the `createEntityManagerFactory` method or
+NOTE: If this property is passed to the `createEntityManagerFactory` method or
 if it is set in system properties, it is ignored.)
-
-|=======================================================================
-
- +
 
 [[sthref856]]
 
-* +
-Examples*
+*Examples*
 
 link:#BIIECICI[Example 5-21] shows how to use this property in the
 `persistence.xml` file.
@@ -2305,8 +2092,7 @@ link:#BIIECICI[Example 5-21] shows how to use this property in the
 
 [[sthref857]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -2317,20 +2103,18 @@ _Solutions Guide for EclispeLink_
 * "Composite Persistence Units"
 `http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Composite_Persistence_Units`
 
-[[CHDHCIDH]][[TLJPA875]]
+[[compositeunitmember]][[TLJPA875]]
 
 '''''
 
-composite-unit.member
-~~~~~~~~~~~~~~~~~~~~~
+=== composite-unit.member
 
 Use the `eclipselink.composite-unit.member` property to specify if the
 persistence unit is a _member_ composite persistence unit.
 
 [[sthref858]]
 
-* +
-Values*
+*Values*
 
 link:#CHDIGFEB[Table 5-26] describes this persistence property's values.
 
@@ -2338,7 +2122,6 @@ link:#CHDIGFEB[Table 5-26] describes this persistence property's values.
 
 *_Table 5-26 Valid Values for composite-unit.member_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`true` |The persistence unit must be a member of a composite
@@ -2348,33 +2131,22 @@ persistence unit and cannot be used as an independent persistence unit.
 a composite persistence unit.
 |=======================================================================
 
- +
-
 [[sthref860]]
 
-* +
-Usage*
+*Usage*
 
 Setting this property to `true` indicates that the persistence unit has
 dependencies on other persistence units.
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
+[NOTE]
+====
 If this property is passed to the `createEntityManagerFactory` method or
 if it is set in system properties, it is ignored.)
 
 If this property is `true`, you may still create `EntityManagerFactory`,
 but it cannot be connected. Any attempt to create an entity manger will
 cause an exception.
-
-|=======================================================================
-
- +
+====
 
 [[TLJPA877]]
 
@@ -2386,8 +2158,7 @@ persistence unit on which to execute the query.
 
 [[sthref861]]
 
-* +
-Examples*
+*Examples*
 
 link:#CACGJACG2[Example 5-22] shows how to use this property in the
 `persistence.xml` file.
@@ -2424,13 +2195,12 @@ value="org.eclipse.persistence.platform.database.MySQLPlatform"/>
 
 [[sthref862]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
 * link:annotations_ref.htm#BGBHHCJH["@CompositeMember"]
-* link:#BIICFIDB["composite-unit"]
+* link:#compositeunit["composite-unit"]
 * link:queryhints.htm#CHDDFIDC["composite-unit.member"]
 
 [[CIHGHJGA]][[TLJPA879]]
@@ -2532,15 +2302,13 @@ how much time loop wait before it try acquire lock for current thread
 again. It value is set above above 0 dead lock detection mechanism and
 related extended logging will be activated.
 
-[[sthref878]]
-
 * +
 Values*
 
 link:#concurrency.manager.waittime.tab[Table 5-30] describes this
 persistence property's values.
 
-[[TLJPA888]][[sthref879]][[concurrency.manager.waittime.tab]]
+[[concurrency.manager.waittime.tab]]
 
 *_Table 5-30 Valid Values for concurrency.manager.waittime_*
 
@@ -2579,7 +2347,6 @@ This system property in milliseconds can control thread management in
 `org.eclipse.persistence.internal.helper.ConcurrencyManager`. It control
 how long we are willing to wait before firing up an exception.
 
-[[sthref878]]
 
 * +
 Values*
@@ -2587,7 +2354,7 @@ Values*
 link:#concurrency.manager.maxsleeptime.tab[Table 5-30] describes this
 persistence property's values.
 
-[[TLJPA888]][[sthref879]][[concurrency.manager.maxsleeptime.tab]]
+[[concurrency.manager.maxsleeptime.tab]]
 
 *_Table 5-30 Valid Values for concurrency.manager.maxsleeptime_*
 
@@ -2628,7 +2395,6 @@ This system property in milliseconds can control thread management in
 `org.eclipse.persistence.internal.helper.ConcurrencyUtil`. It control
 how frequently the tiny dump log message is created.
 
-[[sthref878]]
 
 * +
 Values*
@@ -2636,7 +2402,7 @@ Values*
 link:#concurrency.manager.maxfrequencytodumptinymessage.tab[Table 5-30]
 describes this persistence property's values.
 
-[[TLJPA888]][[sthref879]][[concurrency.manager.maxfrequencytodumptinymessage.tab]]
+[[concurrency.manager.maxfrequencytodumptinymessage.tab]]
 
 *_Table 5-30 Valid Values for
 concurrency.manager.maxfrequencytodumptinymessage_*
@@ -2677,7 +2443,6 @@ This system property in milliseconds can control thread management in
 `org.eclipse.persistence.internal.helper.ConcurrencyUtil`. It control
 how frequently the massive dump log message is created.
 
-[[sthref878]]
 
 * +
 Values*
@@ -2685,7 +2450,7 @@ Values*
 link:#concurrency.manager.maxfrequencytodumpmassivemessage.tab[Table
 5-30] describes this persistence property's values.
 
-[[TLJPA888]][[sthref879]][[concurrency.manager.maxfrequencytodumpmassivemessage.tab]]
+[[concurrency.manager.maxfrequencytodumpmassivemessage.tab]]
 
 *_Table 5-30 Valid Values for
 concurrency.manager.maxfrequencytodumpmassivemessage_*
@@ -2731,7 +2496,6 @@ to for example process an MDB. However, the code spots where we use this
 constant are not as sensible as when the write lock manager is starving
 to run commit.
 
-[[sthref878]]
 
 * +
 Values*
@@ -2739,7 +2503,7 @@ Values*
 link:#concurrency.manager.allow.interruptedexception.tab[Table 5-30]
 describes this persistence property's values.
 
-[[TLJPA888]][[sthref879]][[concurrency.manager.allow.interruptedexception.tab]]
+[[concurrency.manager.allow.interruptedexception.tab]]
 
 *_Table 5-30 Valid Values for
 concurrency.manager.allow.interruptedexception_*
@@ -2781,7 +2545,6 @@ concurrency.manager.allow.concurrencyexception
 
 See valid values table.
 
-[[sthref878]]
 
 * +
 Values*
@@ -2789,7 +2552,7 @@ Values*
 link:#concurrency.manager.allow.concurrencyexception.tab[Table 5-30]
 describes this persistence property's values.
 
-[[TLJPA888]][[sthref879]][[concurrency.manager.allow.concurrencyexception.tab]]
+[[concurrency.manager.allow.concurrencyexception.tab]]
 
 *_Table 5-30 Valid Values for
 concurrency.manager.allow.concurrencyexception_*
@@ -2837,7 +2600,6 @@ concurrency.manager.allow.readlockstacktrace
 
 Collect debug/trace information during ReadLock acquisition.
 
-[[sthref878]]
 
 * +
 Values*
@@ -2845,7 +2607,7 @@ Values*
 link:#concurrency.manager.allow.readlockstacktrace.tab[Table 5-30]
 describes this persistence property's values.
 
-[[TLJPA888]][[sthref879]][[concurrency.manager.allow.readlockstacktrace.tab]]
+[[concurrency.manager.allow.readlockstacktrace.tab]]
 
 *_Table 5-30 Valid Values for
 concurrency.manager.allow.readlockstacktrace_*
@@ -3074,14 +2836,13 @@ connection-pool.sequence
 Use the `eclipselink.connection-pool.sequence` property to have the
 connection pool allocate generated IDs.
 
-[[sthref878]]
 
 * +
 Values*
 
 link:#BABGAFBI[Table 5-30] describes this persistence property's values.
 
-[[TLJPA888]][[sthref879]][[BABGAFBI]]
+[[BABGAFBI]]
 
 *_Table 5-30 Valid Values for connection-pool.sequence_*
 
@@ -4716,14 +4477,13 @@ by name.
 
  +
 
-[[sthref981]]
 
 * +
 Values*
 
 link:#CIHFHHGF[Table 5-51] describes this persistence property's values.
 
-[[TLJPA940]][[sthref982]][[CIHFHHGF]]
+[[CIHFHHGF]]
 
 *_Table 5-51 Valid Values for jdbc.naming_into_indexed_*
 
@@ -4897,14 +4657,13 @@ Normally, casting is not required. Using it may cause issues.
 
  +
 
-[[sthref981]]
 
 * +
 Values*
 
 link:#CIHFHHGF[Table 5-51] describes this persistence property's values.
 
-[[TLJPA940]][[sthref982]][[CIHFHHGF]]
+[[CIHFHHGF]]
 
 *_Table 5-51 Valid Values for jdbc.sql-cast_*
 

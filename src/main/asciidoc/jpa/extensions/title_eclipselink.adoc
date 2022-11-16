@@ -16,7 +16,7 @@
 
 ///////////////////////////////////////////////////////////////////////////////
 
-=== EclipseLink
+== EclipseLink
 
 Jakarta Persistence API (JPA) Extensions Reference for EclipseLink
 
