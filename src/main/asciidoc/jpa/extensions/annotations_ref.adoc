@@ -318,8 +318,10 @@ the mapped superclass are ignored.
 [[sthref9]]
 
 *Annotation Elements*
+
 link:#CHDGJGDCxx[Table 2-1] describes this annotation's elements.
 [[TLJPA319]][[sthref10]][[CHDGJGDCxx]]
+
 *_Table 2-1 @AdditionalCriteria Annotation Elements_*
 |=======================================================================
 |*Attribute* |*Description* |*Default*
@@ -534,8 +536,7 @@ For more information, see:
 
 '''''
 
-@Array
-~~~~~~
+=== @Array
 
 Use `@Array` to define object-relational data types supported by
 specific databases, such as Oracle `VARRAY` types or PostgreSQL JDBC
@@ -543,8 +544,7 @@ specific databases, such as Oracle `VARRAY` types or PostgreSQL JDBC
 
 [[sthref16]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CBABBAJF[Table 2-2] describes this annotation's elements.
 
@@ -552,11 +552,10 @@ link:#CBABBAJF[Table 2-2] describes this annotation's elements.
 
 *_Table 2-2 @Array Annotation Elements_*
 
-[width="46%",cols="<46%,<,<54%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`databaseType` |(Required) The name of the database array structure
-type | +
+type |
 
 |`targetClass` |(Optional only if the collection field or property is
 defined using Java generics; otherwise Required) The class (basic or
@@ -564,12 +563,10 @@ embeddable) that is the element type of the collection |Parameterized
 type of the collection.
 |=======================================================================
 
- +
 
 [[sthref18]]
 
-* +
-Usage*
+*Usage*
 
 Use `@Array` on a collection attribute that is persisted to an `Array`
 type. The collection can be of basic types or embeddable class mapped
@@ -577,8 +574,7 @@ using a `Struct`.
 
 [[sthref19]]
 
-* +
-Examples*
+*Examples*
 
 link:#CBABHEHD[Example 2-5] shows how to use this annotation with an
 Oracle `VARRAY` type.
@@ -632,8 +628,7 @@ public class Employee {
 
 [[sthref20]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see the following:
 
@@ -645,8 +640,7 @@ For more information, see the following:
 
 '''''
 
-@BatchFetch
-~~~~~~~~~~~
+=== @BatchFetch
 
 Use `@BatchFetch` to read objects related to a relationship mapping
 (such as `@OneToOne`, `@OneToMany`, `@ManyToMany`, and
@@ -654,8 +648,7 @@ Use `@BatchFetch` to read objects related to a relationship mapping
 
 [[sthref21]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CHDJBJBC[Table 2-3] describes this annotation's elements.
 
@@ -663,7 +656,6 @@ link:#CHDJBJBC[Table 2-3] describes this annotation's elements.
 
 *_Table 2-3 @BatchFetch Annotation Elements_*
 
-[width="48%",cols="<48%,<,<52%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |size |Default size of the batch fetch, used only when
@@ -683,12 +675,9 @@ source object IDs.
  |`JOIN`
 |=======================================================================
 
- +
-
 [[sthref23]]
 
-* +
-Usage*
+*Usage*
 
 Batch fetching allows for the optimal loading of a tree. Setting the
 `@BatchFetch` annotation on a _child_ relationship of a tree structure
@@ -710,8 +699,7 @@ databases, this may only work for singleton IDs.
 
 [[sthref24]]
 
-* +
-Examples*
+*Examples*
 
 The following examples show how to use this annotation (and XML) with
 different batch fetch types.
@@ -779,8 +767,7 @@ return stringMap;
 
 [[sthref28]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -792,8 +779,7 @@ For more information, see:
 
 '''''
 
-@Cache
-~~~~~~
+=== @Cache
 
 Use `@Cache` (in place of the JPA `@Cachable` annotation) to configure
 the EclipseLink object cache. By default, EclipseLink uses a shared
@@ -802,8 +788,7 @@ and options on a per class basis to allow optimal caching.
 
 [[sthref29]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CDEJJHDG[Table 2-4] describes this annotation's elements.
 
@@ -811,7 +796,6 @@ link:#CDEJJHDG[Table 2-4] describes this annotation's elements.
 
 *_Table 2-4 @Cache Annotation Elements_*
 
-[width="51%",cols="<42%,<,<58%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`type` a|
@@ -897,7 +881,7 @@ excepts it also includes any newly-created objects from the transaction
 * `NONE` – Does not cache coordination
 
 You must also configure cache coordination in your persistence unit
-properties. See link:persistenceproperties_ref.htm#CACDCCEG2["Caching"].
+properties. See xref:{relativedir}/persistenceproperties_ref.adoc#CACDCCEG2["Caching"].
 
  |`SEND_OBJECT_CHANGES`
 
@@ -912,12 +896,10 @@ listener must also be configured for the persistence unit/session.
  |`INVALIDATE`
 |=======================================================================
 
- +
 
 [[sthref31]]
 
-* +
-Usage*
+*Usage*
 
 Use the `@Cache` annotation instead of the JPA `@Cachable` annotation to
 provide additional caching configuration.
@@ -963,12 +945,11 @@ you can specify to configure the cache. These properties may compliment
 or provide an alternative to the usage of annotations.
 
 For more information, see
-link:persistenceproperties_ref.htm#CACDCCEG2["Caching"].
+xref:{relativedir}/persistenceproperties_ref.adoc#CACDCCEG2["Caching"].
 
 [[sthref32]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDEEGCI[Example 2-10] illustrates an `@Cache` annotation.
 
@@ -1057,16 +1038,14 @@ For more information, see:
 
 '''''
 
-@CacheIndex
-~~~~~~~~~~~
+=== @CacheIndex
 
 Use `@CacheIndex` to define a cached index. Cache indexes are used only
 when caching is enabled.
 
 [[sthref34]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BABFJHIC[Table 2-5] describes this annotation's elements.
 
@@ -1074,7 +1053,6 @@ link:#BABFJHIC[Table 2-5] describes this annotation's elements.
 
 *_Table 2-5 @CacheIndex Annotation Elements_*
 
-[width="41%",cols="<52%,<,<48%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`columnNames` |(Optional) The set of columns on which to define the
@@ -1088,12 +1066,10 @@ If `true`, the object will be re-indexed on each update or refresh.
  |true
 |=======================================================================
 
- +
 
 [[sthref36]]
 
-* +
-Usage*
+*Usage*
 
 A cache index allows `singleResult` queries to obtain a cache hit when
 querying on the indexed fields. A `resultList` query cannot obtain cache
@@ -1108,8 +1084,7 @@ column is defaulted when defined on a attribute.
 
 [[sthref37]]
 
-* +
-Examples*
+*Examples*
 
 link:#BABEECHH[Example 2-13] shows an example of using the `@CacheIndex`
 annotation.
@@ -1186,8 +1161,7 @@ Employee employee = (Employee)query.getSingleResult();
 
 [[sthref38]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -1198,15 +1172,13 @@ For more information, see:
 
 '''''
 
-@CacheIndexes
-~~~~~~~~~~~~~
+=== @CacheIndexes
 
 Use `@CacheIndexes` to define a set of `@CacheIndex` on an entity.
 
 [[sthref39]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CIHJDAHF[Table 2-6] describes this annotation's elements.
 
@@ -1214,26 +1186,22 @@ link:#CIHJDAHF[Table 2-6] describes this annotation's elements.
 
 *_Table 2-6 @CacheIndexes Annotation Elements_*
 
-[width="59%",cols="<53%,<,<47%",options="header",]
 |==============================================
 |*Annotation Element* |*Description* |*Default*
-|`CacheIndex[]` |An array of cache indexes | +
+|`CacheIndex[]` |An array of cache indexes |
 |==============================================
 
- +
 
 [[sthref41]]
 
-* +
-Examples*
+*Examples*
 
 See link:#CEGFEJCH["@CacheIndex"] for examples of using the
 `@CacheIndexes` annotation.
 
 [[sthref42]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -1244,8 +1212,7 @@ For more information, see:
 
 '''''
 
-@CacheInterceptor
-~~~~~~~~~~~~~~~~~
+=== @CacheInterceptor
 
 Use `@CacheInterceptor` on an entity to intercept all EclipseLink cache
 access to the entity instead of responding to cache operations through
@@ -1253,8 +1220,7 @@ an event.
 
 [[sthref43]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BGBBHFBF[Table 2-7] describes this annotation's elements.
 
@@ -1262,18 +1228,14 @@ link:#BGBBHFBF[Table 2-7] describes this annotation's elements.
 
 *_Table 2-7 @CacheInterceptor Annotation Elements_*
 
-[width="53%",cols="<46%,<,<54%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |value |The class to be used to intercept EclipseLink's cache access | +
 |=======================================================================
 
- +
-
 [[sthref45]]
 
-* +
-Usage*
+*Usage*
 
 Once set, the specified class will receive all caching calls. Existing
 EclipseLink cache settings will continue to be used, any calls allowed
@@ -1285,8 +1247,7 @@ When using with an entity in inheritance, you should define the
 
 [[sthref46]]
 
-* +
-Examples*
+*Examples*
 
 link:#BGBGHHFI[Example 2-16] shows how to integrate an external cache
 with EclipseLink.
@@ -1328,8 +1289,7 @@ link:#BGBEBHDH[Example 2-17] shows an example of using the
 
 [[sthref47]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -1342,8 +1302,7 @@ Grid_
 
 '''''
 
-@CascadeOnDelete
-~~~~~~~~~~~~~~~~
+=== @CascadeOnDelete
 
 Use the `@CascadeOnDelete` annotation to specify that a delete operation
 performed on a database object is cascaded on secondary or related
@@ -1354,15 +1313,13 @@ automatically removes the dependent rows.
 
 [[sthref48]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 There are no elements for this annotation.
 
 [[sthref49]]
 
-* +
-Usage*
+*Usage*
 
 You can place `@CascadeOnDelete` on any relationship in which the target
 is defined as foreign key to the source Entity.
@@ -1377,7 +1334,6 @@ inheritance. link:#CHDECJGE[Table 2-8] describes the affect of placing
 
 *_Table 2-8 Using @Cascade on Different Elements_*
 
-[width="31%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Element* |*Effect of @CascadeOnDelete*
 |Entity |Defines that secondary or joined inheritance tables should
@@ -1405,7 +1361,6 @@ constraint direction).
 cascaded on the database.
 |=======================================================================
 
- +
 
 `@CascadeOnDelete` has the following behavior:
 
@@ -1431,8 +1386,7 @@ in the mapping if using CascadeOnDelete.
 
 [[sthref51]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDHCIGF[Example 2-18] shows the cascading deletion of the
 Employee secondary table and all of its owned relationships.
@@ -1483,8 +1437,7 @@ as shown in link:#CHDJIBAJ[Example 2-19]
 
 [[sthref52]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -1497,8 +1450,7 @@ For more information, see:
 
 '''''
 
-@ChangeTracking
-~~~~~~~~~~~~~~~
+=== @ChangeTracking
 
 Use `@ChangeTracking` to specify the
 `org.eclipse.persistence.descriptors.changetracking.ObjectChangePolicy`.
@@ -1508,8 +1460,7 @@ calculation that have at least one changed attribute.
 
 [[sthref53]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BCGCIDCD[Table 2-9] describes this annotation's elements.
 
@@ -1517,7 +1468,6 @@ link:#BCGCIDCD[Table 2-9] describes this annotation's elements.
 
 *_Table 2-9 @ChangeTracking Annotation Elements_*
 
-[width="37%",cols="<63%,<,<37%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`ChangeTrackingType` a|
@@ -1544,38 +1494,25 @@ be determined at runtime.
  |`AUTO`
 |=======================================================================
 
- +
 
 [[sthref55]]
 
-* +
-Usage*
+*Usage*
 
 Use this annotation to configure an alternative change policy, if the
 automatic policy is having issues with your application. Using
 `@ChangeTracking` may improve commit performance for objects with few
 attributes or objects with many changed attributes.
 
- +
 
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-When using change tracking with `ATTRIBUTE` or `OBJECT`, if you modify
+NOTE: When using change tracking with `ATTRIBUTE` or `OBJECT`, if you modify
 an object's field through reflection, EclipseLink _will not_ detect the
 change. However, if you use `DEFERRED`, EclipseLink _will_ detect the
 change.
 
-|=======================================================================
-
- +
-
 [[sthref56]]
 
-* +
-Examples*
+*Examples*
 
 link:#BCGCHJHG[Example 2-20] shows how to use `@ChangeTracking` to set
 the unit of work's change policy.
@@ -1638,23 +1575,21 @@ See Also*
 
 For more information, see:
 
-* link:persistenceproperties_ref.htm#weaving["weaving"]
+* xref:{relativedir}/persistenceproperties_ref.adoc#weaving["weaving"]
 * "Enhancing Performance" in _Solutions Guide for EclispeLink_
 
 [[BGBHAADB]][[TLJPA361]]
 
 '''''
 
-@ClassExtractor
-~~~~~~~~~~~~~~~
+=== @ClassExtractor
 
 Use `@ClassExtractor` to define a custom class indicator in place of
 providing a discriminator column.
 
 [[sthref58]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BABGCAFI[Table 2-10] describes this annotation's elements.
 
@@ -1662,19 +1597,16 @@ link:#BABGCAFI[Table 2-10] describes this annotation's elements.
 
 *_Table 2-10 @ClassExtractor Annotation Elements_*
 
-[width="46%",cols="<46%,<,<54%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`java.lang.Class` |(Required) The name of the class extractor to apply
 to the entity's descriptor | +
 |=======================================================================
 
- +
 
 [[sthref60]]
 
-* +
-Usage*
+*Usage*
 
 If you are mapping to an existing database, and the tables do not have a
 discriminator column you can still define inheritance using the
@@ -1692,8 +1624,7 @@ accomplished by setting an `onlyInstancesExpression` or
 
 [[sthref61]]
 
-* +
-Examples*
+*Examples*
 
 link:#BGBEDADF[Example 2-23] shows an example of using `ClassExtractor`
 to define inheritance.
@@ -1776,8 +1707,7 @@ element in the `eclipselink-orm.xml` file.
 
 [[sthref62]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -1788,8 +1718,7 @@ For more information, see:
 
 '''''
 
-@CloneCopyPolicy
-~~~~~~~~~~~~~~~~
+=== @CloneCopyPolicy
 
 Use `@CloneCopyPolicy` to specify an
 `org.eclipse.persistence.descriptors.copying.CloneCopyPolicy` on an
@@ -1797,8 +1726,7 @@ Entity.
 
 [[sthref63]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BABFHGIH[Table 2-11] describes this annotation's elements.
 
@@ -1806,7 +1734,6 @@ link:#BABFHGIH[Table 2-11] describes this annotation's elements.
 
 *_Table 2-11 @CloneCopyPolicy Annotation Elements_*
 
-[width="43%",cols="<54%,<,<46%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`method` |(Optional) The method that will be used to create a clone for
@@ -1817,25 +1744,11 @@ used to create a clone that will be used when registering an object in
 an EclipseLink `UnitOfWork` | +
 |=======================================================================
 
- +
-
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-You must specify either a `method` or `workingCopyMenthod`.
-
-|=======================================================================
-
- +
+NOTE: You must specify either a `method` or `workingCopyMenthod`.
 
 [[sthref65]]
 
-* +
-Usage*
+*Usage*
 
 The clone `method` should perform a shallow clone of the object. This
 can be used to clone non-persistent fields from a instance in the shared
@@ -1846,8 +1759,7 @@ Embeddable class.
 
 [[sthref66]]
 
-* +
-Examples*
+*Examples*
 
 link:#BABEIGHC[Example 2-25] and link:#BABJAHCB[Example 2-26] show
 several examples of the `@CloneCopyPolicy` annotation and
@@ -1894,8 +1806,7 @@ several examples of the `@CloneCopyPolicy` annotation and
 
 [[sthref67]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -1907,8 +1818,7 @@ For more information, see:
 
 '''''
 
-@CompositeMember
-~~~~~~~~~~~~~~~~
+=== @CompositeMember
 
 Use `@CompositeMember` to indicate that a class belongs to a composite
 persistence unit.
@@ -1921,8 +1831,7 @@ databases.
 
 [[sthref68]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BABBCHAA[Table 2-12] describes this annotation's elements.
 
@@ -1938,12 +1847,9 @@ which element table belongs (if differs from source composite member
 persistence unit | +
 |=======================================================================
 
- +
-
 [[sthref70]]
 
-* +
-Usage*
+*Usage*
 
 The `@CompositeMember` annotation is ignored unless it is in a composite
 member persistence unit. It may be used in conjunction with
@@ -1951,8 +1857,7 @@ member persistence unit. It may be used in conjunction with
 
 [[sthref71]]
 
-* +
-Examples*
+*Examples*
 
 You can configure the `CompositeMember` using annotations or the
 `eclipselink-orm.xml` file, as shown in these examples.
@@ -1988,15 +1893,14 @@ public Collection<String> getResponsibilities() {
 
 [[sthref74]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
 * "Using Multiple Databases with a Composite Persistence Unit" in
 _Solutions Guide for EclispeLink_
-* link:persistenceproperties_ref.htm#BIICFIDB["composite-unit"]
-* link:persistenceproperties_ref.htm#CHDHCIDH["composite-unit.member"]
+* xref:{relativedir}/persistenceproperties_ref.adoc#BIICFIDB["composite-unit"]
+* xref:{relativedir}/persistenceproperties_ref.adoc#CHDHCIDH["composite-unit.member"]
 * "Composite Persistence Units"
 `http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Composite_Persistence_Units`
 
@@ -2004,16 +1908,14 @@ _Solutions Guide for EclispeLink_
 
 '''''
 
-@ConversionValue
-~~~~~~~~~~~~~~~~
+=== @ConversionValue
 
 Use `@ConversionValue` to specify the database and object values for an
 `ObjectTypeConverter`.
 
 [[sthref75]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BABBEGIB[Table 2-13] describes this annotation's elements.
 
@@ -2021,19 +1923,15 @@ link:#BABBEGIB[Table 2-13] describes this annotation's elements.
 
 *_Table 2-13 @ConversionValue Annotation Elements_*
 
-[width="43%",cols="<54%,<,<46%",options="header",]
 |==============================================
 |*Annotation Element* |*Description* |*Default*
 |`dataValue` |(Required) The database value | +
 |`objectValue` |(Required) The object value | +
 |==============================================
 
- +
-
 [[sthref77]]
 
-* +
-Usage*
+*Usage*
 
 The JPA specification allows you to map an `Enum` to database columns
 using the `@Enumerated` annotation, when the database value is either
@@ -2042,8 +1940,7 @@ also map an `Enum` to a coded value, using a converter.
 
 [[sthref78]]
 
-* +
-Examples*
+*Examples*
 
 In link:#BABFEJHJ[Example 2-29], the `enum` `Gender(MALE, FEMALE)` is
 mapped to a single character in the database where M=MALE and F=FEMALE.
@@ -2088,8 +1985,7 @@ link:#BABIHAFA[Example 2-30] illustrates the same function using XML.
 
 [[sthref79]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -2100,16 +1996,14 @@ For more information, see:
 
 '''''
 
-@Convert
-~~~~~~~~
+=== @Convert
 
 Use `@Convert` to specify that a named converter should be used with the
 corresponding mapped attribute.
 
 [[sthref80]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BEHICGDB[Table 2-14] describes this annotation's elements.
 
@@ -2117,18 +2011,14 @@ link:#BEHICGDB[Table 2-14] describes this annotation's elements.
 
 *_Table 2-14 @Convert Annotation Elements_*
 
-[width="38%",cols="<48%,<,<52%",options="header",]
 |================================================================
 |*Annotation Element* |*Description* |*Default*
 |`value` |(Optional) The `String` name for your converter |`none`
 |================================================================
 
- +
-
 [[sthref82]]
 
-* +
-Usage*
+*Usage*
 
 The `@Convert` has the following reserved names:
 
@@ -2144,8 +2034,7 @@ no-args constructor
 
 [[sthref83]]
 
-* +
-Examples*
+*Examples*
 
 link:#BEHFAGHF[Example 2-31] shows how to use the `@Convert` annotation
 to define the `gender` field.
@@ -2175,8 +2064,7 @@ to define the `gender` field.
 
 [[sthref84]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -2189,8 +2077,7 @@ For more information, see:
 
 '''''
 
-@Converter
-~~~~~~~~~~
+=== @Converter
 
 Use the `@Converter` annotation to specify a custom converter for
 modification of the data value(s) during the reading and writing of a
@@ -2198,8 +2085,7 @@ mapped attribute.
 
 [[sthref85]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BGBJIHHG[Table 2-15] describes this annotation's elements.
 
@@ -2222,8 +2108,7 @@ interface. |none
 
 [[sthref87]]
 
-* +
-Usage*
+*Usage*
 
 Use `@Converter` to define a named converter that can be used with
 mappings. A converter can be defined on an entity class, method, or
@@ -2270,8 +2155,7 @@ of mapping annotation.
 
 [[sthref88]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDFGEFJ[Example 2-32] shows how to use the `@Converter`
 annotation to specify a converter class for the `gender` field.
@@ -2322,8 +2206,7 @@ in the `eclipselink-orm.xml` file.
 
 [[sthref89]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -2336,15 +2219,13 @@ For more information, see:
 
 '''''
 
-@Converters
-~~~~~~~~~~~
+=== @Converters
 
 Use `@Converters` annotation to define multiple `@Converter` elements.
 
 [[sthref90]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BCFIJFIB[Table 2-16] describes this annotation's elements.
 
@@ -2352,25 +2233,20 @@ link:#BCFIJFIB[Table 2-16] describes this annotation's elements.
 
 *_Table 2-16 @Converters Annotation Elements_*
 
-[width="40%",cols="<58%,<,<42%",options="header",]
 |====================================================
 |*Annotation Element* |*Description* |*Default*
 |`Converter[]` |(Required) An array of converters | +
 |====================================================
 
- +
-
 [[sthref92]]
 
-* +
-Examples*
+*Examples*
 
 See link:#CHDEHJEB["@Converter"] for an example of this annotation.
 
 [[sthref93]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -2381,8 +2257,7 @@ For more information, see:
 
 '''''
 
-@CopyPolicy
-~~~~~~~~~~~
+=== @CopyPolicy
 
 Use `@CopyPolicy` to set an
 `org.eclipse.persistence.descriptors.copying.CopyPolicy` on an entity to
@@ -2390,8 +2265,7 @@ produce a copy of the persistent element.
 
 [[sthref94]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BABFHFGC[Table 2-17] describes this annotation's elements.
 
@@ -2399,28 +2273,23 @@ link:#BABFHFGC[Table 2-17] describes this annotation's elements.
 
 *_Table 2-17 @CopyPolicy Annotation Elements_*
 
-[width="37%",cols="<63%,<,<37%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`java.lang.Class` |(Required) The class of the copy policy. The class
 must implement `org.eclipse.persistence.descriptors.copying.CopyPolicy`.
-| +
+|
 |=======================================================================
-
- +
 
 [[sthref96]]
 
-* +
-Usage*
+*Usage*
 
 You can specify `@CopyPolicy` on an Entity, MappedSuperclass, or
 Embeddable class.
 
 [[sthref97]]
 
-* +
-Examples*
+*Examples*
 
 link:#BABCIIIJ[Example 2-34] shows how to use this annotation.
 
@@ -2456,8 +2325,7 @@ element in the `eclipselink-orm.xml` file.
 
 [[sthref98]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -2469,8 +2337,7 @@ For more information, see:
 
 '''''
 
-@Customizer
-~~~~~~~~~~~
+=== @Customizer
 
 Use `@Customizer` to specify a class that implements
 `org.eclipse.persistence.config.DescriptorCustomizer` and is to run
@@ -2479,8 +2346,7 @@ been completed.
 
 [[sthref99]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BABCJCHB[Table 2-18] describes this annotation's elements.
 
@@ -2488,19 +2354,15 @@ link:#BABCJCHB[Table 2-18] describes this annotation's elements.
 
 *_Table 2-18 @Customizer Annotation Elements_*
 
-[width="43%",cols="<54%,<,<46%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`java.lang.Class` |(Required) The name of the descriptor customizer to
-apply to the entity's descriptor | +
+apply to the entity's descriptor |
 |=======================================================================
-
- +
 
 [[sthref101]]
 
-* +
-Usage*
+*Usage*
 
 Use this annotation to customize or extend the mapping metadata through
 the EclipseLink native API. With `@Customizer`, you can access
@@ -2509,23 +2371,11 @@ additional EclipseLink functionality and configurations.
 You can specify `@Customizer` on an Entity, MappedSuperclass, or
 Embeddable class.
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-A `@Customizer` is not inherited from its parent classes.
-
-|=======================================================================
-
- +
+NOTE: A `@Customizer` is not inherited from its parent classes.
 
 [[sthref102]]
 
-* +
-Examples*
+*Examples*
 
 link:#BABBFAGB[Example 2-36] show how to use the `@Customizer`
 annotation with the following `DescriptorCustomer`:
@@ -2575,12 +2425,11 @@ in the `eclipselink-orm.xml` file.
 
 [[sthref103]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:persistenceproperties_ref.htm#CCHIEAIA["descriptor.customizer"]
+* xref:{relativedir}/persistenceproperties_ref.adoc#CCHIEAIA["descriptor.customizer"]
 * "Binding JPA Entities to XML" in _Solutions Guide for EclispeLink_
 * EclipseLink Examples
 `http://wiki.eclipse.org/EclipseLink/Examples/JPA/MappingSelectionCriteria`
@@ -2591,8 +2440,7 @@ For more information, see:
 
 '''''
 
-@DeleteAll
-~~~~~~~~~~
+=== @DeleteAll
 
 Use `@DeleteAll` to indicate that when an relationship is deleted,
 EclipseLink should use a delete all query. This typically happens if the
@@ -2601,19 +2449,14 @@ the members of the relationship will be deleted without reading them in.
 
 [[sthref104]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 There are no elements for this annotation.
 
 [[sthref105]]
 
-* +
-Usage*
+*Usage*
 
- +
-
-[width="100%",cols="<100%",]
 |=======================================================================
 a|
 *WARNING:*
@@ -2624,12 +2467,10 @@ work.*
 
 |=======================================================================
 
- +
 
 [[sthref106]]
 
-* +
-Examples*
+*Examples*
 
 link:#CBHBIFII[Example 2-38] shows how to use `@DeleteAll` on a
 relationship mapping.
@@ -2677,8 +2518,7 @@ in the `eclipselink-orm.xml` file.
 
 [[sthref108]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -2688,8 +2528,7 @@ For more information, see:
 
 '''''
 
-@DiscriminatorClass
-~~~~~~~~~~~~~~~~~~~
+=== @DiscriminatorClass
 
 Use `@DiscriminatorClass` with a `@VariableOneToOne` annotation to
 determine which entities will be added to the list of types for the
@@ -2697,8 +2536,7 @@ mapping.
 
 [[sthref109]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BABGACBF[Table 2-19] describes this annotation's elements.
 
@@ -2706,38 +2544,32 @@ link:#BABGACBF[Table 2-19] describes this annotation's elements.
 
 *_Table 2-19 @DiscriminatorClass Annotation Elements_*
 
-[width="42%",cols="<55%,<,<45%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`discriminator` |(Required) The discriminator to be stored in the
-database | +
+database |
 
 |value |(Required) The class to be instantiated with the `discriminator`
-| +
+|
 |=======================================================================
-
- +
 
 [[sthref111]]
 
-* +
-Usage*
+*Usage*
 
 The `@DiscriminatorClass` annotation can be specified only within a
 `@VariableOneToOne` mapping.
 
 [[sthref112]]
 
-* +
-Examples*
+*Examples*
 
 See link:#CHDDFDGF["@VariableOneToOne"] for an example of a variable
 one-to-one mapping with `@DiscriminatorClass`.
 
 [[sthref113]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -2748,8 +2580,7 @@ For more information, see:
 
 '''''
 
-@ExcludeDefaultMappings
-~~~~~~~~~~~~~~~~~~~~~~~
+=== @ExcludeDefaultMappings
 
 Use `@ExcludeDefaultMappings` to specify that no default mapping should
 be added to a specific class. Instead, EclipseLink will use only
@@ -2758,23 +2589,20 @@ file.
 
 [[sthref114]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 There are no elements for this annotation.
 
 [[sthref115]]
 
-* +
-Usage*
+*Usage*
 
 You can specify `@ExcludeDefaultMappings` on an Entity,
 MappedSuperclass, or Embeddable class.
 
 [[sthref116]]
 
-* +
-Examples*
+*Examples*
 
 link:#BACGGFEH[Example 2-40] shows how to use the
 `@ExcludeDefaultMapping` annotation.
@@ -2801,8 +2629,7 @@ public class Dealer {
 
 [[sthref117]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -2813,8 +2640,7 @@ EclipseLink_
 
 '''''
 
-@ExistenceChecking
-~~~~~~~~~~~~~~~~~~
+=== @ExistenceChecking
 
 Use `@ExistenceChecking` to specify how EclipseLink should check to
 determine if an entity is new or exists.
@@ -2826,8 +2652,7 @@ object will be read from the database.
 
 [[sthref118]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CEGHFAIB[Table 2-20] describes this annotation's elements.
 
@@ -2835,7 +2660,6 @@ link:#CEGHFAIB[Table 2-20] describes this annotation's elements.
 
 *_Table 2-20 @ExistenceChecking Annotation Elements_*
 
-[width="48%",cols="<48%,<,<52%",options="header",]
 |==============================================
 |*Annotation Element* |*Description* |*Default*
 |`ExistenceType` a|
@@ -2849,12 +2673,9 @@ link:#CEGHFAIB[Table 2-20] describes this annotation's elements.
  |`CHECK_CACHE`
 |==============================================
 
- +
-
 [[sthref120]]
 
-* +
-Usage*
+*Usage*
 
 You can specify `@ExistenceChecking` on an Entity or MappedSuperclass.
 
@@ -2872,8 +2693,7 @@ and it is in the cache, then it must exist.
 
 [[sthref121]]
 
-* +
-Examples*
+*Examples*
 
 link:#CEGDGCHF[Example 2-41] shows how to use this annotation.
 
@@ -2893,8 +2713,7 @@ public  class  Employee  implements  Serializable  {
 
 [[sthref122]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -2905,8 +2724,7 @@ For more information, see:
 
 '''''
 
-@FetchAttribute
-~~~~~~~~~~~~~~~
+=== @FetchAttribute
 
 Use `@FetchAttribute` to improve performance within a fetch group; it
 allows on-demand loading of a group of an object's attributes. As a
@@ -2918,8 +2736,7 @@ requires only some of the attributes.
 
 [[sthref123]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BABDFABA[Table 2-21] describes this annotation's elements.
 
@@ -2927,18 +2744,14 @@ link:#BABDFABA[Table 2-21] describes this annotation's elements.
 
 *_Table 2-21 @FetchAttribute Annotation Elements_*
 
-[width="59%",cols="<53%,<,<47%",options="header",]
 |==================================================
 |*Annotation Element* |*Description* |*Default*
 |`name` |(Required) Name of the fetch attribute | +
 |==================================================
 
- +
-
 [[sthref125]]
 
-* +
-Usage*
+*Usage*
 
 EclipseLink provides two types of fetch groups:
 
@@ -2997,8 +2810,7 @@ public class Person {
 
 [[sthref128]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -3009,8 +2821,7 @@ For more information, see:
 
 '''''
 
-@FetchGroup
-~~~~~~~~~~~
+=== @FetchGroup
 
 Use `@FetchGroup` to load a group of attributes on demand, as needed.
 
@@ -3022,8 +2833,7 @@ attribute first occurs.
 
 [[sthref129]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BABFGBBD[Table 2-22] describes this annotation's elements.
 
@@ -3031,7 +2841,6 @@ link:#BABFGBBD[Table 2-22] describes this annotation's elements.
 
 *_Table 2-22 @FetchGroup Annotation Elements_*
 
-[width="50%",cols="<62%,<,<38%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`FetchAttribute[] attributes` |(Required) The list of attributes to
@@ -3043,12 +2852,9 @@ fetch |none
 attributes specified in the fetch group should be loaded. |`false`
 |=======================================================================
 
- +
-
 [[sthref131]]
 
-* +
-Usage*
+*Usage*
 
 You should perform a careful use case analysis when using `@FetchGroup`;
 any gains realized from the deferred loading could be offset by the
@@ -3082,8 +2888,7 @@ the partial attribute loading.
 
 [[sthref132]]
 
-* +
-Examples*
+*Examples*
 
 link:#BABGHDJB[Example 2-44] shows how to use this annotation.
 
@@ -3132,8 +2937,7 @@ query.setHint(QueryHints.FETCH_GROUP_NAME, "names");
 
 [[sthref133]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -3145,15 +2949,13 @@ For more information, see:
 
 '''''
 
-@FetchGroups
-~~~~~~~~~~~~
+=== @FetchGroups
 
 Use `@FetchGroups` to define a group of `@FetchGroup`.
 
 [[sthref134]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BACDEJEJ[Table 2-23] describes this annotation's elements.
 
@@ -3161,18 +2963,14 @@ link:#BACDEJEJ[Table 2-23] describes this annotation's elements.
 
 *_Table 2-23 @FetchGroups Annotation Elements_*
 
-[width="59%",cols="<53%,<,<47%",options="header",]
 |=====================================================================
 |*Annotation Element* |*Description* |*Default*
 |`FetchGroup` |(Required) An array of fetch groups (`@FetchGroup`) | +
 |=====================================================================
 
- +
-
 [[sthref136]]
 
-* +
-Usage*
+*Usage*
 
 You can specify `@FetchGroups` on an Entity or MappedSuperclass.
 
@@ -3211,29 +3009,26 @@ propertiesMap.put(PersistenceUnitProperties.WEAVING_FETCHGROUPS, "false");
 
 [[sthref138]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
 * link:#BABJBDEG["@FetchGroup"]
 * link:#BABCHIGE["@FetchAttribute"]
-* link:persistenceproperties_ref.htm#weaving["weaving"]
+* xref:{relativedir}/persistenceproperties_ref.adoc#weaving["weaving"]
 
 [[CBHHCHAC]][[TLJPA414]]
 
 '''''
 
-@Field
-~~~~~~
+=== @Field
 
 Use `@Field` to define a structured data type's field name for an object
 mapped to NoSql data.
 
 [[sthref139]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CBHEEEGE[Table 2-24] describes this annotation's elements.
 
@@ -3247,12 +3042,9 @@ link:#CBHEEEGE[Table 2-24] describes this annotation's elements.
 |`name` |(Optional) The data type's name of the field | +
 |========================================================
 
- +
-
 [[sthref141]]
 
-* +
-Usage*
+*Usage*
 
 The `@Field` annotation is a generic form of the `@Column` annotation,
 which is not specific to relational databases. You can use `@Field` to
@@ -3260,15 +3052,13 @@ map EIS and NoSQL data.
 
 [[sthref142]]
 
-* +
-Examples*
+*Examples*
 
 See link:#BJEIEBHC["@NoSql"] for an example of the `@Field` annotation.
 
 [[sthref143]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -3278,8 +3068,7 @@ For more information, see:
 
 '''''
 
-@HashPartitioning
-~~~~~~~~~~~~~~~~~
+=== @HashPartitioning
 
 Use `@HashPartitioning` to partition access to a database cluster by the
 hash of a field value from the object (such as the object's location or
@@ -3287,8 +3076,7 @@ tenant). The hash indexes into the list of connection pools.
 
 [[sthref144]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CEGCAGJF[Table 2-25] describes this annotation's elements.
 
@@ -3296,14 +3084,13 @@ link:#CEGCAGJF[Table 2-25] describes this annotation's elements.
 
 *_Table 2-25 @HashPartitioning Annotation Elements_*
 
-[width="59%",cols="<53%,<,<47%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`name` |(Required) The name of the partition policy. The name must be
-unique within the persistence unit. | +
+unique within the persistence unit. |
 
 |`partitionColumn` |(Required) The database column or query parameter by
-which to partition queries | +
+which to partition queries |
 
 |`connectionPools` |(Optional) List of connection pool names across
 which to partition |All defined pools in the ServerSession
@@ -3313,12 +3100,9 @@ not_ contain the partition hash should be sent to every database and
 union the result. |False
 |=======================================================================
 
- +
-
 [[sthref146]]
 
-* +
-Usage*
+*Usage*
 
 All write or read requests for objects with the hash value are sent to
 the server. Queries that do not include the field as a parameter will
@@ -3344,16 +3128,14 @@ only a single node is used for a single transaction.
 
 [[sthref147]]
 
-* +
-Examples*
+*Examples*
 
 See link:#CHDDAHEB["@Partitioned"] for an example of partitioning with
 EclipseLink.
 
 [[sthref148]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -3365,8 +3147,7 @@ Partitioning"`http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Dev
 
 '''''
 
-@Index
-~~~~~~
+=== @Index
 
 An index is a database structure defined for a table, to improve query
 and look-up performance for a set of columns. Use the `@Index`
@@ -3383,8 +3164,7 @@ advanced index DDL, a DDL script or native query can be used.
 
 [[sthref149]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BABCGCDG[Table 2-26] describes this annotation's elements.
 
@@ -3392,7 +3172,6 @@ link:#BABCGCDG[Table 2-26] describes this annotation's elements.
 
 *_Table 2-26 @Index Annotation Elements_*
 
-[width="59%",cols="<53%,<,<47%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`java.lang.String catalog` |(Optional) The catalog of the `INDEX`
@@ -3417,20 +3196,16 @@ defaults to entities primary table. |The entity's primary table.
 non-unique. |`false`
 |=======================================================================
 
- +
-
 [[sthref151]]
 
-* +
-Usage*
+*Usage*
 
 Use `@Index` annotation to index any attributes or columns that will
 commonly be used in queries.
 
 [[sthref152]]
 
-* +
-Examples*
+*Examples*
 
 This example defines three indexes, one on *first name*, one on *last
 name*, and a multiple column index on *first name* _and_ *last name*.
@@ -3475,8 +3250,7 @@ annotation are also supported in the `<index>` element.
 
 [[sthref155]]
 
-* +
-See Also*
+*See Also*
 
 For more information see:
 
@@ -3486,15 +3260,13 @@ For more information see:
 
 '''''
 
-@Indexes
-~~~~~~~~
+=== @Indexes
 
 Use `@Indexes` to define a set of database indexes for an Entity.
 
 [[sthref156]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CHDHCABJ[Table 2-27] describes this annotation's elements.
 
@@ -3502,26 +3274,21 @@ link:#CHDHCABJ[Table 2-27] describes this annotation's elements.
 
 *_Table 2-27 @Indexes Annotation Elements_*
 
-[width="59%",cols="<53%,<,<47%",options="header",]
 |==============================================
 |*Annotation Element* |*Description* |*Default*
 |`Index[]` |An array of database indexes | +
 |==============================================
 
- +
-
 [[sthref158]]
 
-* +
-Examples*
+*Examples*
 
 See link:#BABGIFEC["@Index"] for an example of using the `@Index`
 annotation.
 
 [[sthref159]]
 
-* +
-See Also*
+*See Also*
 
 For more information see:
 
@@ -3533,8 +3300,7 @@ For more information see:
 
 '''''
 
-@InstantiationCopyPolicy
-~~~~~~~~~~~~~~~~~~~~~~~~
+=== @InstantiationCopyPolicy
 
 Use `@InstantiationCopyPolicy` to set an
 `org.eclipse.persistence.descriptors.copying.InstantiationCopyPolicy` on
@@ -3542,15 +3308,13 @@ an Entity.
 
 [[sthref160]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 There are no elements for this annotation.
 
 [[sthref161]]
 
-* +
-Usage*
+*Usage*
 
 The copy policy specifies how EclipseLink clones objects to and from the
 shared cache. With `@InstantiationCopyPolicy`, in order to clone an
@@ -3566,7 +3330,7 @@ use `@InstantiationCopyPolicy`.
 The default EclipseLink copy policy depends on your configuration:
 
 * When using
-link:persistenceproperties_ref.htm#BABJICDJ[weaving.internal] (and field
+xref:{relativedir}/persistenceproperties_ref.adoc#BABJICDJ[weaving.internal] (and field
 access), EclipseLink generates a specialized clone method to copy
 objects.
 * Without weaving, EclipseLink uses instantiation to copy objects.
@@ -3576,8 +3340,7 @@ MappedSuperclass, or Embeddable entity.
 
 [[sthref162]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDDBCHI[Example 2-50] shows how to use this annotation.
 
@@ -3612,43 +3375,29 @@ link:#CHDGCDAI[Example 2-51] shows how to use this extension in the
 
 [[sthref163]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
 * link:#BGBDGCDJ["@CopyPolicy"]
 * link:#CDDJGFHA["@CloneCopyPolicy"]
-* link:persistenceproperties_ref.htm#BABJICDJ["weaving.internal"]
+* xref:{relativedir}/persistenceproperties_ref.adoc#BABJICDJ["weaving.internal"]
 
 [[CEGFFHHA]][[TLJPA428]]
 
 '''''
 
-@JoinFetch
-~~~~~~~~~~
+=== @JoinFetch
 
 Use the `@JoinFetch` annotation to enable the joining and reading of the
 related objects in the same query as the source object.
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-You should set join fetching at the query level, as not all queries
+NOTE: You should set join fetching at the query level, as not all queries
 require joining.
-
-|=======================================================================
-
- +
 
 [[sthref164]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CEGFCHJB[Table 2-28] describes this annotation's elements.
 
@@ -3656,7 +3405,6 @@ link:#CEGFCHJB[Table 2-28] describes this annotation's elements.
 
 *_Table 2-28 @JoinFetch Annotation Elements_*
 
-[width="48%",cols="<48%,<,<52%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`value` a|
@@ -3678,12 +3426,10 @@ object.
  |`JoinFetchType.INNER`
 |=======================================================================
 
- +
 
 [[sthref166]]
 
-* +
-Usage*
+*Usage*
 
 You can specify the `@JoinFetch` annotation for the following mappings:
 
@@ -3698,8 +3444,7 @@ especially for collection relationships.
 
 [[sthref167]]
 
-* +
-Examples*
+*Examples*
 
 The following example shows how to use the `@JoinFetch` annotation to
 specify Employee field `managedEmployees`.
@@ -3738,8 +3483,7 @@ link:#CEGJIBCF[Example 2-53] shows how to use this extension in the
 
 [[sthref169]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -3751,16 +3495,14 @@ For more information, see:
 
 '''''
 
-@JoinField
-~~~~~~~~~~
+=== @JoinField
 
 Use `@JoinField` to define a structured data type's foreign key field
 for an object mapped to NoSql data.
 
 [[sthref170]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CIHEHJJH[Table 2-29] describes this annotation's elements.
 
@@ -3778,12 +3520,9 @@ the source record | +
 target record | +
 |=======================================================================
 
- +
-
 [[sthref172]]
 
-* +
-Usage*
+*Usage*
 
 The `@JoinField` annotation is a generic form of the `@JoinColumn`
 annotation, which is not specific to relational databases. You can use
@@ -3791,8 +3530,7 @@ annotation, which is not specific to relational databases. You can use
 
 [[sthref173]]
 
-* +
-Examples*
+*Examples*
 
 These examples show how to use this extension as an annotation and in
 XML.
@@ -3842,16 +3580,14 @@ For more information, see:
 
 '''''
 
-@JoinFields
-~~~~~~~~~~~
+=== @JoinFields
 
 Use `@JoinFields` to define a set of `@JoinField` annotations on a
 relationship.
 
 [[sthref176]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BEIBIGIJ[Table 2-30] describes this annotation's elements.
 
@@ -3859,26 +3595,21 @@ link:#BEIBIGIJ[Table 2-30] describes this annotation's elements.
 
 *_Table 2-30 @JoinFields Annotation Elements_*
 
-[width="59%",cols="<53%,<,<47%",options="header",]
 |==============================================
 |*Annotation Element* |*Description* |*Default*
 |`JoinField[]`J |An array of join fields | +
 |==============================================
 
- +
-
 [[sthref178]]
 
-* +
-Examples*
+*Examples*
 
 See link:#CIHCAFEI["@JoinField"] for an example of using the `@Index`
 annotation.
 
 [[sthref179]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -3888,16 +3619,14 @@ For more information, see:
 
 '''''
 
-@MapKeyConvert
-~~~~~~~~~~~~~~
+=== @MapKeyConvert
 
 Use `@MapKeyConvert` to specify a named converter to be used with the
 corresponding mapped attribute key column.
 
 [[sthref180]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BEHBBBEH[Table 2-31] describes this annotation's elements.
 
@@ -3919,12 +3648,9 @@ link:#BEHBBBEH[Table 2-31] describes this annotation's elements.
  |none
 |==============================================
 
- +
-
 [[sthref182]]
 
-* +
-Usage*
+*Usage*
 
 Use `@MapKeyConvert` to convert the key value used in a `@MapKeyColumn`
 to have a different type or value than the database column.
@@ -3949,8 +3675,7 @@ converter, using the `@Converter` annotation.
 
 [[sthref183]]
 
-* +
-Examples*
+*Examples*
 
 link:#BEHEHJJC[Example 2-56] shows using a `@MapKeyConvert` annotation
 to apply a converter to a map's key.
@@ -4003,8 +3728,7 @@ element in the `eclipselink-orm.xml` file.
 
 [[sthref184]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -4015,8 +3739,7 @@ For more information, see:
 
 '''''
 
-@Multitenant
-~~~~~~~~~~~~
+=== @Multitenant
 
 The `@Multitenant` annotation specifies that a given entity is shared
 among multiple tenants of an application. The multitenant type specifies
@@ -4026,8 +3749,7 @@ superclass level.
 
 [[sthref185]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CHDGJGDC[Table 2-32] describes this annotation's elements.
 
@@ -4046,12 +3768,9 @@ queries. |`true`
 `SINGLE_TABLE`, `TABLE_PER_TENANT`, or `VPD`. |`SINGLE_TABLE`
 |=======================================================================
 
- +
-
 [[sthref187]]
 
-* +
-Usage*
+*Usage*
 
 To use the `@Multitenant` annotation, include the annotation with an
 `@Entity` or `@MappedSuperclass` annotation. For example:
@@ -4115,8 +3834,7 @@ link:#CHDBFBGI["VPD Multitenancy"] for more detailed examples.
 
 '''''
 
-Single-Table Multitenancy
-^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Single-Table Multitenancy
 
 The `SINGLE_TABLE` multitenant type specifies that any table to which an
 entity or mapped superclass maps can include rows for multiple tenants.
@@ -4133,14 +3851,7 @@ insert, update, and delete operations on the table. When multitenant
 metadata is applied at the mapped superclass level, it is applied to all
 subentities unless they specify their own multitenant metadata.
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-In the context of single-table multitenancy, ”single-table” means
+NOTE: In the context of single-table multitenancy, ”single-table” means
 multiple tenants can share a single table, and each tenant's data is
 distinguished from other tenants' data via the discriminator column(s).
 It is possible to use multiple tables with single-table multitenancy;
@@ -4148,9 +3859,6 @@ but in that case, an entity's persisted data is stored in multiple
 tables (`Table` and `SecondaryTable`), and multiple tenants can share
 all the tables.
 
-|=======================================================================
-
- +
 
 For more information how to use tenant discriminator columns to
 configure single-table multitenancy, see
@@ -4158,8 +3866,7 @@ link:#CHECIDGH["@TenantDiscriminatorColumn"].
 
 [[TLJPA710]][[sthref189]]
 
-* +
-Examples*
+*Examples*
 
 The following example uses `@Multitenant`, `@TenantDiscriminatorColumn`,
 and a context property to define single-table multitenancy on an entity:
@@ -4198,8 +3905,7 @@ and therefore does not have to be specified.
 
 '''''
 
-Table-Per-Tenanat Multitenancy
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Table-Per-Tenanat Multitenancy
 
 The `TABLE_PER_TENANT` multitenant type specifies that the table(s)
 (`Table` and `SecondaryTable`) for an entity are tenant-specific tables
@@ -4235,8 +3941,7 @@ types, see link:#CHDFJJEC["@TenantTableDiscriminator"].
 
 [[TLJPA714]][[sthref192]]
 
-* +
-Examples*
+*Examples*
 
 The following example shows the `@Multitenant` annotation used to define
 table-per-tenant multitenancy on an entity.
@@ -4283,8 +3988,7 @@ table-per-tenant multitenancy.
 
 '''''
 
-VPD Multitenancy
-^^^^^^^^^^^^^^^^
+==== VPD Multitenancy
 
 The `VPD` (Virtual Private Database) multitanancy type specifies that
 the database handles the tenant filtering on all SELECT, UPDATE and
@@ -4297,8 +4001,7 @@ superclass, using `@Multitenant` and `@TenantDiscriminatorColumn`:
 
 [[TLJPA718]][[sthref195]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDIEFCF[Example 2-63] shows VPD multitenancy defined on an
 entity. As noted above, VPD in the database must also be configured to
@@ -4348,8 +4051,7 @@ The following example shows...
 
 [[sthref197]]
 
-* +
-See Also*
+*See Also*
 
 * link:#CHECIDGH["@TenantDiscriminatorColumn"]
 * link:#CECBEBEA["@TenantDiscriminatorColumns"]
@@ -4361,8 +4063,7 @@ See Also*
 
 '''''
 
-@Mutable
-~~~~~~~~
+=== @Mutable
 
 Use `@Mutable` on a `@Basic` mapping to specify if the value of a
 complex field type can be _changed_ (or not changed) instead of being
@@ -4372,8 +4073,7 @@ mappings.
 
 [[sthref198]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CHDDHGFD[Table 2-33] describes this annotation's elements.
 
@@ -4387,12 +4087,9 @@ link:#CHDDHGFD[Table 2-33] describes this annotation's elements.
 |`boolean value` |(Optional) Specifies if the mapping is mutable. |true
 |======================================================================
 
- +
-
 [[sthref200]]
 
-* +
-Usage*
+*Usage*
 
 Most basic types (such as `int`, `long`, `float`, `double`, `String`,
 and `BigDecimal`) are not mutable.
@@ -4410,8 +4107,7 @@ in the persistence unit in the `persistence.xml` file.
 
 [[sthref201]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDDJJEE[Example 2-65] shows how to use the `@Mutable` annotation
 to specify `Employee` field `hireDate`.
@@ -4462,8 +4158,7 @@ propertiesMap.put(PersistenceUnitProperties.TEMPORAL_MUTABLE, "false");
 
 [[sthref202]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -4473,16 +4168,14 @@ For more information, see:
 
 '''''
 
-@NamedPLSQLStoredFunctionQueries
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== @NamedPLSQLStoredFunctionQueries
 
 Use the `@NamedPLSQLStoredFunctionQueries` annotation to define multiple
 `NamedPLSQLStoredFunctionQuery` items.
 
 [[sthref203]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CIHJIIDJ2[Table 2-34] describes this annotation's elements.
 
@@ -4494,15 +4187,12 @@ link:#CIHJIIDJ2[Table 2-34] describes this annotation's elements.
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`NamedStoredFunctionQuery[]` |(Required) An array of named stored
-procedure query | +
+procedure query |
 |=======================================================================
-
- +
 
 [[sthref205]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -4512,16 +4202,14 @@ For more information, see:
 
 '''''
 
-@NamedPLSQLStoredFunctionQuery
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== @NamedPLSQLStoredFunctionQuery
 
 Use the `@NamedPLSQLStoredFunctionQuery` annotation to define queries
 that call Oracle PLSQL stored functions as named queries
 
 [[sthref206]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BABCHEIG3[Table 2-36] describes this annotation's elements.
 
@@ -4529,30 +4217,26 @@ link:#BABCHEIG3[Table 2-36] describes this annotation's elements.
 
 *_Table 2-35 @NamedPLSQLStoredFunctionQuery Annotation Elements_*
 
-[width="34%",cols="<62%,<,<38%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
-|`functionName` |(Required) The name of the stored function | +
+|`functionName` |(Required) The name of the stored function |
 
 |`name` |(Required) The unique name that references this stored function
-query | +
+query |
 
 |`returnParamter` |(Required) The return value of the stored function
-| +
+|
 
-|`hints` |(Optional) Query hints | +
+|`hints` |(Optional) Query hints |
 
-|`parameters` |(Optional) The parameters for the stored function | +
+|`parameters` |(Optional) The parameters for the stored function |
 
-|`resultSetMapping` |(Optional) The name of the `SQLResultMapping` | +
+|`resultSetMapping` |(Optional) The name of the `SQLResultMapping` |
 |=======================================================================
-
- +
 
 [[sthref209]]
 
-* +
-Usage*
+*Usage*
 
 This annotation adds support for complex PLSQL types such as `RECORD`
 and `TABLE`, that are not accessible from JDBC.
@@ -4562,8 +4246,7 @@ MappedSuperclass.
 
 [[sthref210]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDICCEF[Example 2-67] shows how to use this annotation.
 
@@ -4602,8 +4285,7 @@ public class Employee { ...}
 
 [[sthref211]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -4614,16 +4296,14 @@ For more information, see:
 
 '''''
 
-@NamedPLSQLStoredProcedureQueries
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== @NamedPLSQLStoredProcedureQueries
 
 Use the `@NamedPLSQLStoredProcedureQueries` annotation to define
 multiple `NamedPLSQLStoredProcedureQuery` items.
 
 [[sthref212]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BABCHEIG3[Table 2-36] describes this annotation's elements.
 
@@ -4631,18 +4311,14 @@ link:#BABCHEIG3[Table 2-36] describes this annotation's elements.
 
 *_Table 2-36 @NamedPLSQLStoredProcedureQueries Annotation Elements_*
 
-[width="40%",cols="<58%,<,<42%",options="header",]
 |================================================================
 |*Annotation Element* |*Description* |*Default*
-|`value` |(Required) An array of named stored procedure query | +
+|`value` |(Required) An array of named stored procedure query |
 |================================================================
-
- +
 
 [[sthref214]]
 
-* +
-Examples*
+*Examples*
 
 link:#BABFCGCE[Example 2-68] shows how to use this annotation.
 
@@ -4661,8 +4337,7 @@ link:#BABFCGCE[Example 2-68] shows how to use this annotation.
 
 [[sthref215]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -4677,16 +4352,14 @@ Examples`http://wiki.eclipse.org/EclipseLink/Examples/JPA/PLSQLStoredFunction`
 
 '''''
 
-@NamedPLSQLStoredProcedureQuery
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== @NamedPLSQLStoredProcedureQuery
 
 Use the `@NamedPLSQLStoredProcedureQuery` annotation to define queries
 that call Oracle PLSQL stored procedures as named queries.
 
 [[sthref216]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BGBEAJEH2[Table 2-37] describes this annotation's elements.
 
@@ -4694,29 +4367,25 @@ link:#BGBEAJEH2[Table 2-37] describes this annotation's elements.
 
 *_Table 2-37 @NamedPLSQLStoredProcedureQuery Annotation Elements_*
 
-[width="34%",cols="<62%,<,<38%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
-|`procedureName` |(Required) The name of the stored procedure | +
+|`procedureName` |(Required) The name of the stored procedure |
 
 |`name` |(Required) The unique name that references this stored
-procedure query | +
+procedure query |
 
-|`resultClass` |(Optional) The class of the result | +
+|`resultClass` |(Optional) The class of the result |
 
-|`hints` |(Optional) Query hints | +
+|`hints` |(Optional) Query hints |
 
-|`parameters` |(Optional) The parameters for the stored procedure | +
+|`parameters` |(Optional) The parameters for the stored procedure |
 
-|`resultSetMapping` |(Optional) The name of the `SQLResultMapping` | +
+|`resultSetMapping` |(Optional) The name of the `SQLResultMapping` |
 |=======================================================================
-
- +
 
 [[sthref218]]
 
-* +
-Usage*
+*Usage*
 
 This annotation adds support for complex PLSQL types such as `RECORD`
 and `TABLE`, that are not accessible from JDBC.
@@ -4726,8 +4395,7 @@ Embeddable, or MappedSuperclass.
 
 [[sthref219]]
 
-* +
-Examples*
+*Examples*
 
 link:#BGBICFEB2[Example 2-69] shows how to use this annotation.
 
@@ -4770,8 +4438,7 @@ public class Employee { ...}
 
 [[sthref220]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -4785,16 +4452,14 @@ Examples`http://wiki.eclipse.org/EclipseLink/Examples/JPA/PLSQLStoredFunction`
 
 '''''
 
-@NamedStoredFunctionQueries
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== @NamedStoredFunctionQueries
 
 Use the `@NamedStoredFunctionQueries` annotation to define multiple
 `NamedStoredFunctionQuery` items.
 
 [[sthref221]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CIHJIIDJ[Table 2-38] describes this annotation's elements.
 
@@ -4802,19 +4467,15 @@ link:#CIHJIIDJ[Table 2-38] describes this annotation's elements.
 
 *_Table 2-38 @NamedStoredFunctionQueries Annotation Elements_*
 
-[width="48%",cols="<65%,<,<35%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`NamedStoredFunctionQuery[]` |(Required) An array of named stored
 procedure query | +
 |=======================================================================
 
- +
-
 [[sthref223]]
 
-* +
-Examples*
+*Examples*
 
 link:#CIHBJIHJ[Example 2-70] shows how to use this annotation.
 
@@ -4853,16 +4514,14 @@ For more information, see:
 
 '''''
 
-@NamedStoredFunctionQuery
-~~~~~~~~~~~~~~~~~~~~~~~~~
+=== @NamedStoredFunctionQuery
 
 Use `@NamedStoredFunctionQuery` to define queries that call stored
 functions as named queries.
 
 [[sthref225]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BABFFDDG[Table 2-39] describes this annotation's elements.
 
@@ -4870,16 +4529,15 @@ link:#BABFFDDG[Table 2-39] describes this annotation's elements.
 
 *_Table 2-39 @NamedStoredFunctionQuery Annotation Elements_*
 
-[width="34%",cols="<62%,<,<38%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
-|`functionName` |(Required) The name of the stored function | +
+|`functionName` |(Required) The name of the stored function |
 
 |name |(Required) The unique name that references this stored function
-query | +
+query |
 
 |`returnParamter` |(Required) The return value of the stored function
-| +
+|
 
 |`callByIndex` a|
 (Optional) Specifies if the stored function should be called by *index*
@@ -4892,27 +4550,23 @@ procedure parameters.
 
  |false
 
-|`hints` |(Optional) Query hints | +
+|`hints` |(Optional) Query hints |
 
-|`parameters` |(Optional) The parameters for the stored function | +
+|`parameters` |(Optional) The parameters for the stored function |
 
-|`resultSetMapping` |(Optional) The name of the SQLResultMapping | +
+|`resultSetMapping` |(Optional) The name of the SQLResultMapping |
 |=======================================================================
-
- +
 
 [[sthref227]]
 
-* +
-Usage*
+*Usage*
 
 You can specify `@NamedStoredFunctionQuery` on an Entity or
 MappedSuperclass.
 
 [[sthref228]]
 
-* +
-Examples*
+*Examples*
 
 link:#BABHABEG[Example 2-71] shows how to use this annotation.
 
@@ -4955,8 +4609,7 @@ file.
 
 [[sthref229]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -4966,16 +4619,14 @@ For more information, see:
 
 '''''
 
-@NamedStoredProcedureQueries
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== @NamedStoredProcedureQueries
 
 Use the `@NamedStoredProcedureQueries` annotation to define multiple
 `NamedStoredProcedureQuery` items.
 
 [[sthref230]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BABCHEIG[Table 2-40] describes this annotation's elements.
 
@@ -4989,12 +4640,9 @@ link:#BABCHEIG[Table 2-40] describes this annotation's elements.
 |`value` |(Required) An array of named stored procedure query | +
 |================================================================
 
- +
-
 [[sthref232]]
 
-* +
-Examples*
+*Examples*
 
 link:#BABIFCAJ[Example 2-73] shows how to use this annotation.
 
@@ -5032,7 +4680,7 @@ To define multiple named stored procedure queries in the
 
 [[sthref233]]
 
-* +
+*
 See Also*
 
 For more information, see:
@@ -5044,16 +4692,14 @@ For more information, see:
 
 '''''
 
-@NamedStoredProcedureQuery
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== @NamedStoredProcedureQuery
 
 Use the `@NamedStoredProcedureQuery` annotation to define queries that
 call stored procedures as named queries.
 
 [[sthref234]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BGBHHIAB[Table 2-41] describes this annotation's elements.
 
@@ -5061,13 +4707,12 @@ link:#BGBHHIAB[Table 2-41] describes this annotation's elements.
 
 *_Table 2-41 @NamedStoredProcedureQuery Annotation Elements_*
 
-[width="40%",cols="<60%,<,<40%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`name` |(Required) Unique name that references this stored procedure
-query | +
+query |
 
-|`procedureName` |(Required) Name of the stored procedure | +
+|`procedureName` |(Required) Name of the stored procedure |
 
 |`callByIndex` a|
 (Optional) Specifies if the stored procedure should be called by name.
@@ -5079,7 +4724,7 @@ parameters.
 
  |`false`
 
-|`hints` |(Optional) An array of query hints | +
+|`hints` |(Optional) An array of query hints |
 
 |`multipleResultSets` a|
 (Optional) Specifies if the stored procedure returns multiple result
@@ -5091,11 +4736,11 @@ stored procedures.
  |`false`
 
 |`parameters` |(Optional) An array of parameters for the stored
-procedure | +
+procedure |
 
 |`resultClass` |(Optional) The class of the result |`void.class`
 
-|`resultSetMapping` |(Optional) Name of the `SQLResultMapping` | +
+|`resultSetMapping` |(Optional) Name of the `SQLResultMapping` |
 
 |`returnsResultSet` a|
 (Optional) Specifies if the stored procedure retainers a result set.
@@ -5106,20 +4751,16 @@ procedures.
  |`false`
 |=======================================================================
 
- +
-
 [[sthref236]]
 
-* +
-Usage*
+*Usage*
 
 You can specify `@NamedStoredProcedureQuery` on an Entity or MappedSuper
 class.
 
 [[sthref237]]
 
-* +
-Examples*
+*Examples*
 
 link:#BGBJBAFD[Example 2-74] shows how to use
 `@NamedStoredProcedureQuery` to define a stored procedure.
@@ -5156,8 +4797,7 @@ file.
 
 [[sthref238]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -5170,8 +4810,7 @@ For more information, see:
 
 '''''
 
-@Noncacheable
-~~~~~~~~~~~~~
+=== @Noncacheable
 
 Use `@Noncacheable` to configure caching behavior for relationships. If
 used on a relationship, that relationship _will not_ be cached, even
@@ -5179,15 +4818,13 @@ though the parent Entity may be cached.
 
 [[sthref239]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 There are no elements for this annotation.
 
 [[sthref240]]
 
-* +
-Usage*
+*Usage*
 
 Each time EclipseLink retrieves the Entity, the relationship will be
 reloaded from the datasource. This may be useful for situations where
@@ -5200,8 +4837,7 @@ cache effectively become Full.
 
 [[sthref241]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDDEGCI[Example 2-76] shows how to use `@Noncacheable` to create
 a protected cache.
@@ -5256,8 +4892,7 @@ element in the `eclipselink-orm.xml` file.
 
 [[sthref242]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -5270,8 +4905,7 @@ EclispeLink_
 
 '''''
 
-@NoSql
-~~~~~~
+=== @NoSql
 
 Use `@NoSql` to specify a non-relational (that is, no SQL) data source.
 EclipseLink can map non-relational data to objects and access that data
@@ -5279,8 +4913,7 @@ through JPA.
 
 [[sthref243]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BJEBBCFE[Table 2-42] describes this annotation's elements.
 
@@ -5288,7 +4921,6 @@ link:#BJEBBCFE[Table 2-42] describes this annotation's elements.
 
 *_Table 2-42 @NoSql Annotation Elements_*
 
-[width="41%",cols="<52%,<,<48%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`dataType` a|
@@ -5300,7 +4932,7 @@ stored to.
 * For Oracle NoSQL, it is the first part of the major key value.
 * For XML files, it is the file name. and XML messaging, use `XML`.
 
- | +
+ |
 
 |`dataFormat` a|
 (Optional) The type structure (data format) in which the data is stored
@@ -5313,19 +4945,16 @@ can be an embedded map or list.
 Use to map to key/value stores, JSON databases, and other structured
 data systems.
 * `XML` – Maps a class to an XML document.
-+
+
 Use with XML data-stores, XML files, XML messaging systems, and other
 XML systems.
 
  |XML
 |=======================================================================
 
- +
-
 [[sthref245]]
 
-* +
-Usage*
+*Usage*
 
 The `dataFormat` depends on the NoSQL platform used:
 
@@ -5353,8 +4982,7 @@ EclipseLink supports the following datasources:
 
 [[sthref246]]
 
-* +
-Examples*
+*Examples*
 
 link:#BJECFBJG[Example 2-78] shows using `@NoSql` with an XML data
 source.
@@ -5479,8 +5107,7 @@ This would produce the following JSON document:
 
 [[sthref247]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -5495,7 +5122,7 @@ Grid_
 * "Using NoSQL Databases" in _Understanding EclipseLink_
 * "Using EclipseLink with Nonrelational Databases" in _Solutions Guide
 for EclispeLink_
-* link:persistenceproperties_ref.htm#BABJAJAI["nosql.property"]
+* xref:{relativedir}/persistenceproperties_ref.adoc#BABJAJAI["nosql.property"]
 * EclipseLink Platform Incubator
 `http://wiki.eclipse.org/EclipseLink/Development/Incubator/Platform`
 * Supported NoSQL and EIS Datasources
@@ -5505,8 +5132,7 @@ for EclispeLink_
 
 '''''
 
-@ObjectTypeConverter
-~~~~~~~~~~~~~~~~~~~~
+=== @ObjectTypeConverter
 
 The `@ObjectTypeConverter` annotation specifies an
 `org.eclipse.persistence.mappings.converters.ObjectTypeConverter` that
@@ -5515,8 +5141,7 @@ value(s) during the reading and writing of a mapped attribute.
 
 [[sthref248]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BGBDHDHC[Table 2-43] describes this annotation's elements.
 
@@ -5524,17 +5149,17 @@ link:#BGBDHDHC[Table 2-43] describes this annotation's elements.
 
 *_Table 2-43 @ObjectTypeConverter Annotation Elements_*
 
-[width="48%",cols="<48%,<,<52%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`name` |Set this attribute to the `String` name for your converter.
 Ensure that this name is unique across the persistence unit. |none
 
 |`dataType` |(Optional) Set this attribute to the type stored in the
-database. |`void.class`link:#CEGCJGHC[^Foot 1 ^]
+database. |`void.class` footnote:disclaimer[The default is inferred from the type of the persistence
+field or property.]
 
 |`objectType` |(Optional) Set the value of this attribute to the type
-stored on the entity. |`void.class`link:#sthref250[^Footref 1^]
+stored on the entity. |`void.class` footnote:disclaimer[]
 
 |`conversionValues` |Set the value of this attribute to the array of
 conversion values (instances of `ConversionValue: String objectValue`
@@ -5545,22 +5170,16 @@ object value. Note that this argument is for dealing with legacy data if
 the data value is missing. |Empty `String`
 |=======================================================================
 
- +
-
-^Footnote 1 ^The default is inferred from the type of the persistence
-field or property. +
 [[sthref251]]
 
-* +
-Usage*
+*Usage*
 
 EclipseLink also includes `@TypeConverter` and `@StructConverter`
 converters.
 
 [[sthref252]]
 
-* +
-Examples*
+*Examples*
 
 link:#BGBFDFEJ[Example 2-80] shows how to use the `@ObjectTypeConverter`
 annotation to specify object converters for the `gender` field.
@@ -5620,16 +5239,14 @@ For more information, see:
 
 '''''
 
-@ObjectTypeConverters
-~~~~~~~~~~~~~~~~~~~~~
+=== @ObjectTypeConverters
 
 Use `@ObjectTypeConverters` to define multiple `ObjectTypeConverter`
 items.
 
 [[sthref254]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CHDBIIEH[Table 2-44] describes this annotation's elements.
 
@@ -5637,19 +5254,15 @@ link:#CHDBIIEH[Table 2-44] describes this annotation's elements.
 
 *_Table 2-44 @ObjectTypeConverters Annotation Elements_*
 
-[width="43%",cols="<56%,<,<44%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`ObjectTypeConverter` |(Required) An array of `@ObjectTypeConverter`
-| +
+|
 |=======================================================================
-
- +
 
 [[sthref256]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDBGGJB[Example 2-82] shows how to use this annotation.
 
@@ -5680,8 +5293,7 @@ elements.
 
 [[sthref257]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -5691,16 +5303,14 @@ For more information, see:
 
 '''''
 
-@OptimisticLocking
-~~~~~~~~~~~~~~~~~~
+=== @OptimisticLocking
 
 Use `@OptimisticLocking` to specify the type of optimistic locking
 EclipseLink should use when updating or deleting entities.
 
 [[sthref258]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BCGEDBBI[Table 2-45] describes this annotation's elements.
 
@@ -5708,7 +5318,6 @@ link:#BCGEDBBI[Table 2-45] describes this annotation's elements.
 
 *_Table 2-45 @OptimisticLocking Annotation Elements_*
 
-[width="43%",cols="<56%,<,<44%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`cascade` a|
@@ -5725,7 +5334,7 @@ This element is currently only supported with `VERSION_COLUMN` locking.
 
 This element is required when `type=SELECTED_COLUMNS`.
 
- | +
+ |
 
 |`type` a|
 (Optional) The type of optimistic locking policy to use:
@@ -5743,19 +5352,15 @@ the `WHERE` clause when performing an update.
  |`VERSION_COLUMN`
 |=======================================================================
 
- +
-
 [[sthref260]]
 
-* +
-Usage*
+*Usage*
 
 You can specify `@OptimisticLocking` on an Entity or MappedSuperclass.
 
 [[sthref261]]
 
-* +
-Examples*
+*Examples*
 
 link:#BCGJBJFJ[Example 2-83] shows how to use the `@OptimisticLocking`
 annotation for all columns
@@ -5794,8 +5399,7 @@ element in the `eclipselink-orm.xml` file for a single column.
 
 [[sthref263]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -5806,16 +5410,14 @@ EclispeLink_
 
 '''''
 
-@OracleArray
-~~~~~~~~~~~~
+=== @OracleArray
 
 Use the `@OracleArray` annotation to define an Oracle database `VARRAY`
 type, which you can use within PLSQL procedure calls.
 
 [[sthref264]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CACCDHDF[Table 2-46] describes the annotation's elements.
 
@@ -5835,12 +5437,9 @@ holds |`VARCHAR_TYPE`
 is mapped |`ArrayList`
 |=======================================================================
 
- +
-
 [[sthref266]]
 
-* +
-Examples*
+*Examples*
 
 link:#CACFFDHH[Example 2-85] shows how to use the `@OracleArray`
 annotation to define a `VARRAY` type.
@@ -5875,8 +5474,7 @@ public class Employee{...}
 
 [[sthref267]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -5887,15 +5485,14 @@ For more information, see:
 
 '''''
 
-@OracleArrays
+=== @OracleArrays
 ~~~~~~~~~~~~~
 
 Use the `@OracleArrays` annotation to define multiple `VARRAY` types.
 
 [[sthref268]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CACBFHJC[Table 2-47] describes the annotation's elements.
 
@@ -5903,18 +5500,14 @@ link:#CACBFHJC[Table 2-47] describes the annotation's elements.
 
 *_Table 2-47 @OracleArrays Attribute Elements_*
 
-[width="40%",cols="<65%,<,<35%",options="header",]
 |=======================================================
 |*Element* |*Description* |*Default*
-|value |(Required) An array of Oracle `VARRAY` types | +
+|value |(Required) An array of Oracle `VARRAY` types |
 |=======================================================
-
- +
 
 [[sthref270]]
 
-* +
-Examples*
+*Examples*
 
 See link:#CACGHFJB["@OracleArray"] for an example of how to use this
 annotation.
@@ -5932,16 +5525,14 @@ For more information, see:
 
 '''''
 
-@OracleObject
-~~~~~~~~~~~~~
+=== @OracleObject
 
 Use the `@OracleObject` annotation to define an Oracle database `OBJECT`
 type, which you can use within PLSQL procedure calls.
 
 [[sthref272]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CACGCCBA[Table 2-48] describes the annotation's elements.
 
@@ -5949,24 +5540,20 @@ link:#CACGCCBA[Table 2-48] describes the annotation's elements.
 
 *_Table 2-48 @OracleObject Annotation Elements_*
 
-[width="40%",cols="<50%,<,<50%",options="header",]
 |=======================================================================
 |*Element* |*Description* |*Default*
-|name |(Required) The name of the `OBJECT` type in the database | +
+|name |(Required) The name of the `OBJECT` type in the database |
 
 |javaType |(Optional) The Java type to which you want to map the
 `OBJECT` type. This class must be mapped using an `@STRUCT` annotation
 |void
 
-|fields |(Required) Defines the parameter fields in the record type | +
+|fields |(Required) Defines the parameter fields in the record type |
 |=======================================================================
-
- +
 
 [[sthref274]]
 
-* +
-Examples*
+*Examples*
 
 link:#CACBHHBD[Example 2-86] shows how to use the `@OracleObject`
 annotation to define an Oracle `OBJECT` type.
@@ -6008,8 +5595,7 @@ public class Employee{...}
 
 [[sthref275]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -6020,16 +5606,14 @@ For more information, see:
 
 '''''
 
-@OracleObjects
-~~~~~~~~~~~~~~
+=== @OracleObjects
 
 Use the `@OracleObjects` annotation to define multiple Oracle `OBJECT`
 types.
 
 [[sthref276]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CACDICGC[Table 2-49] describes the annotation's elements.
 
@@ -6037,13 +5621,10 @@ link:#CACDICGC[Table 2-49] describes the annotation's elements.
 
 *_Table 2-49 @OracleObjects Annotation Elements_*
 
-[width="40%",cols="<65%,<,<35%",options="header",]
 |=======================================================
 |*Element* |*Description* |*Default*
-|value |(Required) An array of Oracle `OBJECT` types | +
+|value |(Required) An array of Oracle `OBJECT` types |
 |=======================================================
-
- +
 
 [[sthref278]]
 
@@ -6055,8 +5636,7 @@ annotation.
 
 [[sthref279]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -6066,8 +5646,7 @@ For more information, see:
 
 '''''
 
-@OrderCorrection
-~~~~~~~~~~~~~~~~
+=== @OrderCorrection
 
 Use `@OrderCorrection` to specify a strategy to use if the order list
 read from the database is invalid (for example, it has nulls,
@@ -6078,8 +5657,7 @@ To be valid, an order list of _n_ elements must be `{0, 1,..., n-1}`
 
 [[sthref280]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CHDIFBBF[Table 2-50] describes this annotation's elements.
 
@@ -6087,7 +5665,6 @@ link:#CHDIFBBF[Table 2-50] describes this annotation's elements.
 
 *_Table 2-50 @OrderCorrection Annotation Elements_*
 
-[width="40%",cols="<65%,<,<35%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |value a|
@@ -6101,12 +5678,9 @@ database is invalid:
  |`READ_WRITE`
 |=======================================================================
 
- +
-
 [[sthref282]]
 
-* +
-Usage*
+*Usage*
 
 When using `@OrderCorrection`, you can specify how EclipseLink should
 handle invalid list orders:
@@ -6172,8 +5746,7 @@ For example, given the following list of three objects in the database:
 
 [[sthref283]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDFIAIE[Example 2-87] shows how to use this annotation.
 
@@ -6204,8 +5777,7 @@ link:#CHDHIFFI[Example 2-88] shows how to use this extension in the
 
 [[sthref284]]
 
-* +
-See Also*
+*See Also*
 
 For more information see:
 
@@ -6215,8 +5787,7 @@ For more information see:
 
 '''''
 
-@Partitioned
-~~~~~~~~~~~~
+=== @Partitioned
 
 Use `@Partitioned` to specify a partitioning policy to use for an Entity
 or relationship.
@@ -6232,18 +5803,14 @@ link:#CHDCJBCE[Table 2-51] describes this annotation's elements.
 
 *_Table 2-51 @Partitioned Annotation Elements_*
 
-[width="43%",cols="<54%,<,<46%",options="header",]
 |=======================================================
 |*Annotation Element* |*Description* |*Default*
-|`value` |(Required) Name of the partitioning policy | +
+|`value` |(Required) Name of the partitioning policy |
 |=======================================================
-
- +
 
 [[sthref287]]
 
-* +
-Usage*
+*Usage*
 
 Use partitioning to partition the data for a class across multiple
 databases or a database cluster (such as Oracle RAC). Partitioning can
@@ -6345,8 +5912,7 @@ commit.
 
 [[sthref288]]
 
-* +
-Examples*
+*Examples*
 
 link:#CEGHAIDJ[Example 2-89] shows how to partition Employee data by
 location. The two primary sites, *Ottawa* and *Toronto* are each stored
@@ -6423,8 +5989,7 @@ public class Project {
 
 [[sthref289]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -6445,15 +6010,13 @@ Examples`http://wiki.eclipse.org/EclipseLink/Examples/JPA/Partitioning`
 
 '''''
 
-@Partitioning
-~~~~~~~~~~~~~
+=== @Partitioning
 
 Use `@Partitioning` to configure a custom `PartitioningPolicy`.
 
 [[sthref290]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CEGGJJDE[Table 2-52] describes this annotation's elements.
 
@@ -6461,22 +6024,18 @@ link:#CEGGJJDE[Table 2-52] describes this annotation's elements.
 
 *_Table 2-52 @Partitioning Annotation Elements_*
 
-[width="42%",cols="<55%,<,<45%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`name` |Name of the partition policy. Names must be unique for the
-persistence unit. | +
+persistence unit. |
 
 |`partitioningClass` |(Required) Full `package.class` name of a subclass
-of `PartitioningPolicy` | +
+of `PartitioningPolicy` |
 |=======================================================================
-
- +
 
 [[sthref292]]
 
-* +
-Usage*
+*Usage*
 
 Data partitioning allows for an application to scale its data across
 more than a single database machine. EclipseLink supports data
@@ -6491,8 +6050,7 @@ persistence unit.
 
 [[sthref293]]
 
-* +
-Examples*
+*Examples*
 
 link:#CEGCEIBF[Example 2-91] shows a custom partitioning policy.
 
@@ -6521,8 +6079,7 @@ public class OrderPartitioningPolicy extends PartitioningPolicy {
 
 [[sthref294]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -6534,7 +6091,7 @@ For more information, see:
 * link:#BCGBJGFF["@RoundRobinPartitioning"]
 * link:#BCGEJFAH["@UnionPartitioning"]
 * link:#CEGHFJDJ["@ValuePartitioning"]
-* link:persistenceproperties_ref.htm#partitioning["partitioning"]
+* xref:{relativedir}/persistenceproperties_ref.adoc#partitioning["partitioning"]
 * "Data Partitioning"
 `http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Data_Partitioning`
 * EclipseLink Examples
@@ -6544,8 +6101,7 @@ For more information, see:
 
 '''''
 
-@PinnedPartitioning
-~~~~~~~~~~~~~~~~~~~
+=== @PinnedPartitioning
 
 Use `@PinnedPartitionPolicy` to pin requests to a single connection
 pool, allowing for vertical partitioning (that is, having an entity,
@@ -6553,8 +6109,7 @@ query, or session always access a single database).
 
 [[sthref295]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BCGFGBAF[Table 2-53] describes this annotation's elements.
 
@@ -6562,21 +6117,17 @@ link:#BCGFGBAF[Table 2-53] describes this annotation's elements.
 
 *_Table 2-53 @PinnedPartitioning Annotation Elements_*
 
-[width="42%",cols="<55%,<,<45%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
-|`connectionPool` |Connection pool name to which to pin queries | +
+|`connectionPool` |Connection pool name to which to pin queries |
 
 |`name` |Name of the partition policy. Names must be unique for the
-persistence unit. | +
+persistence unit. |
 |=======================================================================
-
- +
 
 [[sthref297]]
 
-* +
-Usage*
+*Usage*
 
 Partition policies are globally named, to allow reuse. You must also set
 the partitioning policy with the `@Partitioned` annotation.
@@ -6595,16 +6146,14 @@ single node is used for a single transaction.
 
 [[sthref298]]
 
-* +
-Examples*
+*Examples*
 
 See link:#CEGHAIDJ["Using Partitioning"] for an example of partitioning
 with EclipseLink.
 
 [[sthref299]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -6616,16 +6165,14 @@ Partitioning"`http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Dev
 
 '''''
 
-@PLSQLParameter
-~~~~~~~~~~~~~~~
+=== @PLSQLParameter
 
 Use `@PLSQLParameter` within a `NamedPLSQLStoredProcedureQuery` or
 `PLSQLRecord` annotation.
 
 [[sthref300]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CHDDEJEC[Table 2-54] describes this annotation's elements.
 
@@ -6633,10 +6180,9 @@ link:#CHDDEJEC[Table 2-54] describes this annotation's elements.
 
 *_Table 2-54 @PLSQLParameter Annotation Elements_*
 
-[width="35%",cols="<60%,<,<40%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
-|`name` |(Required) The query parameter name | +
+|`name` |(Required) The query parameter name |
 
 |`direction` a|
 (Optional) The direction of the stored procedure parameter:
@@ -6650,26 +6196,23 @@ link:#CHDDEJEC[Table 2-54] describes this annotation's elements.
 
 |`databaseType` |(Optional) Database data type for the parameter. This
 either one of the type constants defined in `OraclePLSQLTypes`, or
-`JDBCTypes`, or a custom record or table type name. | +
+`JDBCTypes`, or a custom record or table type name. |
 
-|`length` |(Optional) Maximum length of the field value | +
+|`length` |(Optional) Maximum length of the field value |
 
-|`name` |(Optional) Stored procedure parameter name | +
+|`name` |(Optional) Stored procedure parameter name |
 
 |`optional` |(Optional) Specify if the parameter is required, or
 optional and defaulted by the procedure. |`false`
 
-|`scale` |(Optional) Maximum precision value | +
+|`scale` |(Optional) Maximum precision value |
 
-|`precision` |(Optional) Maximum precision value | +
+|`precision` |(Optional) Maximum precision value |
 |=======================================================================
-
- +
 
 [[sthref302]]
 
-* +
-Usage*
+*Usage*
 
 Use the `@PLSQLParameter` annotation to configure the parameter and type
 for Oracle PLSQL stored procedures and record types that use extended
@@ -6678,16 +6221,14 @@ PLSQL types instead of regular SQL types. They support `PLSQL RECORD`,
 
 [[sthref303]]
 
-* +
-Examples*
+*Examples*
 
 See link:#BGBDHGJE2["@NamedPLSQLStoredProcedureQuery"] for an example
 using the `@PLSQLParameter` annotation.
 
 [[sthref304]]
 
-* +
-See Also*
+*See Also*
 
 For more information:
 
@@ -6700,16 +6241,14 @@ Examples`http://wiki.eclipse.org/EclipseLink/Examples/JPA/PLSQLStoredFunction`
 
 '''''
 
-@PLSQLRecord
-~~~~~~~~~~~~
+=== @PLSQLRecord
 
 Use `@PLSQLRecord` to define a database PLSQL `RECORD` type for use
 within PLSQL procedures.
 
 [[sthref305]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CHDDABDB[Table 2-55] describes this annotation's elements.
 
@@ -6717,26 +6256,22 @@ link:#CHDDABDB[Table 2-55] describes this annotation's elements.
 
 *_Table 2-55 @PLSQLRecord Annotation Elements_*
 
-[width="34%",cols="<62%,<,<38%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
-|`name` |(Required) The name of the table in the database | +
+|`name` |(Required) The name of the table in the database |
 
 |`compatibileType` |(Required) Name of the database `OBJECTYPE` that
-mirror's the record's structure | +
+mirror's the record's structure |
 
-|`fields` |(Required) The fields in the record type | +
+|`fields` |(Required) The fields in the record type |
 
 |`javaType` |(Optional) The class of the object type. You must map this
-class with the `@Struct` annotation. | +
+class with the `@Struct` annotation. |
 |=======================================================================
-
- +
 
 [[sthref307]]
 
-* +
-Usage*
+*Usage*
 
 Oracle PLSQL `RECORD` types are _structured_ database types. Although
 JDBC does not provide a mechanism for returning these types, EclipseLink
@@ -6753,8 +6288,7 @@ stored procedure query.
 
 [[sthref308]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDJJCGF[Example 2-92] shows how to use this annotation.
 
@@ -6777,8 +6311,7 @@ public class Employee {
 
 [[sthref309]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -6794,15 +6327,13 @@ Examples`http://wiki.eclipse.org/EclipseLink/Examples/JPA/PLSQLStoredFunction`
 
 '''''
 
-@PLSQLRecords
-~~~~~~~~~~~~~
+=== @PLSQLRecords
 
 Use `@PLSQLRecords` to define multiple `PLSQLRecord`.
 
 [[sthref310]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CHDDABDB4[Table 2-56] describes this annotation's elements.
 
@@ -6810,26 +6341,21 @@ link:#CHDDABDB4[Table 2-56] describes this annotation's elements.
 
 *_Table 2-56 @PLSQLRecords Annotation Elements_*
 
-[width="34%",cols="<62%,<,<38%",options="header",]
 |=======================================================
 |*Annotation Element* |*Description* |*Default*
-|`value` |(Required) An array of named PLSQL records | +
+|`value` |(Required) An array of named PLSQL records |
 |=======================================================
-
- +
 
 [[sthref312]]
 
-* +
-Examples*
+*Examples*
 
 See link:#CHDBGAED["@PLSQLRecord"] for an example of how to use this
 annotation.
 
 [[sthref313]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -6845,16 +6371,14 @@ Examples`http://wiki.eclipse.org/EclipseLink/Examples/JPA/PLSQLStoredFunction`
 
 '''''
 
-@PLSQLTable
-~~~~~~~~~~~
+=== @PLSQLTable
 
 Use the `@PLSQLTable` annotation to define a database PLSQL `TABLE`
 type, which you can use within PLSQL procedure calls.
 
 [[sthref314]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CACBGCAJ[Table 2-57] describes this annotation's elements.
 
@@ -6862,14 +6386,13 @@ link:#CACBGCAJ[Table 2-57] describes this annotation's elements.
 
 *_Table 2-57 @PLSQLTable Annotation Elements_*
 
-[width="41%",cols="<49%,<,<51%",options="header",]
 |=======================================================================
 |*Element* |*Description* |*Default*
-|name |(Required) The name of the table type in the database | +
+|name |(Required) The name of the table type in the database |
 
 |compatibilityType |(Required) The name of the database `VARRAY` type
 that mirrors the structure of the table. The table is converted to and
-from this type so that it can be passed through JDBC. | +
+from this type so that it can be passed through JDBC. |
 
 |nestedType |(Required) The type of table, e.g. `TABLE` of `EMP_REC`
 |`VARCHAR_TYPE`
@@ -6884,12 +6407,9 @@ collection in PL/SQL; the constructors for associative (`VARRAY`) arrays
 and non-associative (nested) tables differ. |`false`
 |=======================================================================
 
- +
-
 [[sthref316]]
 
-* +
-Examples*
+*Examples*
 
 [[TLJPA54113]][[sthref317]]
 
@@ -6921,8 +6441,7 @@ public class Employee{...}
 
 [[sthref318]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -6932,15 +6451,13 @@ For more information, see:
 
 '''''
 
-@PLSQLTables
-~~~~~~~~~~~~
+=== @PLSQLTables
 
 Use the `@PLSQLTables` annotation to define mutiple PLSQL tables.
 
 [[sthref319]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CACCJCAH[Table 2-58] describes this annotation's elements.
 
@@ -6948,26 +6465,21 @@ link:#CACCJCAH[Table 2-58] describes this annotation's elements.
 
 *_Table 2-58 @PLSQLTables Annotation Elements_*
 
-[width="40%",cols="<65%,<,<35%",options="header",]
 |====================================================
 |*Annotation* |*Description* |*Default*
 |value |(Required) An array of named PLSQL tables | +
 |====================================================
 
- +
-
 [[sthref321]]
 
-* +
-Examples*
+*Examples*
 
 See link:#CACJBHHF["@PLSQLTable"] for examples of how to use this
 annotation.
 
 [[sthref322]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -6977,8 +6489,7 @@ For more information, see:
 
 '''''
 
-@PrimaryKey
-~~~~~~~~~~~
+=== @PrimaryKey
 
 Use `@PrimaryKey` to allow advanced configuration of the ID.
 
@@ -6988,8 +6499,7 @@ precisely.
 
 [[sthref323]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BGEBGEAB[Table 2-59] describes this annotation's elements.
 
@@ -6997,7 +6507,6 @@ link:#BGEBGEAB[Table 2-59] describes this annotation's elements.
 
 *_Table 2-59 @PrimaryKey Annotation Elements_*
 
-[width="43%",cols="<54%,<,<46%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`cacheKeyType` a|
@@ -7017,7 +6526,7 @@ what is optimial for the class.
 |`columns` |(Optional) Directly specifies the primary key columns. This
 can be used instead of `@Id` if the primary key includes a non basic
 field, such as a foreign key, or a inheritance discriminator, embedded,
-or transformation mapped field. | +
+or transformation mapped field. |
 
 |`validation` a|
 (Optional) Configures what ID validation is done:
@@ -7034,12 +6543,9 @@ values.
  |`ZERO`
 |=======================================================================
 
- +
-
 [[sthref325]]
 
-* +
-Usage*
+*Usage*
 
 By default, EclipseLink interprets zero as `null` for primitive types
 that cannot be null (such as `int` and `long`), causing zero to be an
@@ -7054,8 +6560,7 @@ IDs: new IDs are generated only for IDs that are not valid (`null` or
 
 [[sthref326]]
 
-* +
-Examples*
+*Examples*
 
 link:#BGEJFGAG[Example 2-94] shows how to use this annotation.
 
@@ -7088,21 +6593,19 @@ element in your `eclipselink-orm.xml` file.
 
 [[sthref327]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
 * "@Id"`http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Entities/Ids/Id`
-* link:persistenceproperties_ref.htm#CACEEGCC["id-validation"]
+* xref:{relativedir}/persistenceproperties_ref.adoc#CACEEGCC["id-validation"]
 * link:#CACGCEIJ["Entity Annotations"]
 
 [[CHDDDDAI]][[TLJPA507]]
 
 '''''
 
-@PrivateOwned
-~~~~~~~~~~~~~
+=== @PrivateOwned
 
 Use `@PrivateOwned` to specify that a relationship is privately owned;
 target object is a dependent part of the source object and is not
@@ -7110,8 +6613,7 @@ referenced by any other object and cannot exist on its own.
 
 [[sthref328]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 The `@PrivateOwned` annotation does not have attributes.
 
@@ -7149,13 +6651,8 @@ Normally, do not configure privately owned relationships on objects that
 might be shared. An object should not be the target in more than one
 relationship if it is the target in a privately owned relationship.
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
+[NOTE]
+====
 Referencing a privately owned object may produce undesired effects, as
 it is the application's responsibility to "clean up" references to the
 privately owned object.
@@ -7164,15 +6661,11 @@ If the object becomes de-referenced and is deleted, other objects in the
 cache that continue to reference the deleted object may cause constraint
 violations, they may resurrect the object (if using cascade persist), or
 they may simply not reflect what is in the database.
-
-|=======================================================================
-
- +
+====
 
 [[sthref330]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDIAFFA[Example 2-96] shows using `@PrivateOwned` to specify
 `Employee` field `phoneNumbers.` .
@@ -7197,8 +6690,7 @@ link:#CHDIAFFA[Example 2-96] shows using `@PrivateOwned` to specify
 
 [[sthref331]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -7208,8 +6700,7 @@ For more information, see:
 
 '''''
 
-@Properties
-~~~~~~~~~~~
+=== @Properties
 
 Use `@Property` to specify a single user-defined property on a mapped
 attribute or its `get`/`set` method. Use the `@Properties` annotation to
@@ -7220,8 +6711,7 @@ an application or extension needs to extend EclipseLink metadata.
 
 [[sthref332]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BABIHDFH[Table 2-60] describes this annotation's elements.
 
@@ -7229,18 +6719,14 @@ link:#BABIHDFH[Table 2-60] describes this annotation's elements.
 
 *_Table 2-60 @Properties Annotation Elements_*
 
-[width="59%",cols="<53%,<,<47%",options="header",]
 |==============================================
 |*Annotation Element* |*Description* |*Default*
 |Property |Array of `Property` elements | +
 |==============================================
 
- +
-
 [[sthref334]]
 
-* +
-Usage*
+*Usage*
 
 You can specify `@Property` on a mapped attribute (or its `get`/`set`
 method) within an Entity, MappedSuperclass, or Embeddable class. You can
@@ -7269,8 +6755,7 @@ annotation within a `@Transformation` mapping. link:#BABHCBAG[Example
 
 [[sthref336]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -7280,8 +6765,7 @@ For more information, see:
 
 '''''
 
-@Property
-~~~~~~~~~
+=== @Property
 
 Use `@Property` to specify a single user-defined property on a mapped
 attribute or its `get`/`set` method. Use the `@Properties` annotation to
@@ -7289,8 +6773,7 @@ wrap multiple properties.
 
 [[sthref337]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BGBIGFCA[Table 2-61] describes this annotation's elements.
 
@@ -7298,25 +6781,21 @@ link:#BGBIGFCA[Table 2-61] describes this annotation's elements.
 
 *_Table 2-61 @Property Annotation Elements_*
 
-[width="43%",cols="<54%,<,<46%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
-|`name` |(Required) Name of the property | +
+|`name` |(Required) Name of the property |
 
 |`value` |(Required) String representation of the property `value`,
-converted to an instance of `valueType` | +
+converted to an instance of `valueType` |
 
 |`valueType` |(Optional) Property value type, converted to valueType by
 `ConversionManager`. This must be a simple type that can be handled by
 the `ConversionManager`. |`String`
 |=======================================================================
 
- +
-
 [[sthref339]]
 
-* +
-Usage*
+*Usage*
 
 You can specify `@Property` on a mapped attribute (or its `get`/`set`
 method) within an Entity, MappedSuperclass, or Embeddable class. You can
@@ -7335,8 +6814,7 @@ latter taking precedence in case of conflicts.
 
 [[sthref340]]
 
-* +
-Examples*
+*Examples*
 
 link:#BABHECGF[Example 2-120] shows how to use the `@Property`
 annotation within a `@Transformation` mapping. link:#BABHCBAG[Example
@@ -7345,8 +6823,7 @@ annotation within a `@Transformation` mapping. link:#BABHCBAG[Example
 
 [[sthref341]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -7356,8 +6833,7 @@ For more information, see:
 
 '''''
 
-@QueryRedirectors
-~~~~~~~~~~~~~~~~~
+=== @QueryRedirectors
 
 Use @`QueryRedirectors` to intercept EclipseLink queries for pre- and
 post-processing, redirection, or performing some side effect such as
@@ -7365,8 +6841,7 @@ auditing.
 
 [[sthref342]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CIHEBJBG[Table 2-62] describes this annotation's elements.
 
@@ -7374,7 +6849,6 @@ link:#CIHEBJBG[Table 2-62] describes this annotation's elements.
 
 *_Table 2-62 @QueryRedirectors Annotation Elements_*
 
-[width="44%",cols="<55%,<,<45%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`allQueries` |This `AllQueries` Query Redirector will be applied to any
@@ -7426,12 +6900,9 @@ redirector set directly on the query. In EclipseLink an
 datasource. |`void.class`
 |=======================================================================
 
- +
-
 [[sthref344]]
 
-* +
-Usage*
+*Usage*
 
 Use `@QueryRedirectors` to extend the standard EclipseLink query
 functionality.
@@ -7445,8 +6916,7 @@ redirect queries to the Coherence grid.
 
 [[sthref345]]
 
-* +
-Examples*
+*Examples*
 
 link:#CIHDHIIH[Example 2-97] shows how to use this annotation.
 
@@ -7465,8 +6935,7 @@ public class
 
 [[sthref346]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -7476,8 +6945,7 @@ For more information, see:
 
 '''''
 
-@RangePartition
-~~~~~~~~~~~~~~~
+=== @RangePartition
 
 Use `@RangePartition` to create a specific range partition for a
 connection pool. Values within the range will be routed to the specified
@@ -7485,8 +6953,7 @@ connection pool.
 
 [[sthref347]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BABCAEJH[Table 2-63] describes this annotation's elements.
 
@@ -7494,31 +6961,26 @@ link:#BABCAEJH[Table 2-63] describes this annotation's elements.
 
 *_Table 2-63 @RangePartition Annotation Elements_*
 
-[width="51%",cols="<61%,<,<39%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`connectionPool` |The connection pool to which to route queries for the
-specified range | +
+specified range |
 
-|`startValue` |The `String` representation of the range start value | +
+|`startValue` |The `String` representation of the range start value |
 
-|`endValue` |The `String` representation of the range end value | +
+|`endValue` |The `String` representation of the range end value |
 |=======================================================================
-
- +
 
 [[sthref349]]
 
-* +
-Examples*
+*Examples*
 
 See link:#CEGJCEIH["Using @RangePartitioning"] for an example of
 partitioning with EclipseLink.
 
 [[sthref350]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -7530,8 +6992,7 @@ Partitioning"`http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Dev
 
 '''''
 
-@RangePartitioning
-~~~~~~~~~~~~~~~~~~
+=== @RangePartitioning
 
 Use `@RangePartitioning` to partitions access to a database cluster by a
 field value from the object (such as the object's ID, location, or
@@ -7545,8 +7006,7 @@ default behavior.
 
 [[sthref351]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BCGHJEBE[Table 2-64] describes this annotation's elements.
 
@@ -7554,11 +7014,10 @@ link:#BCGHJEBE[Table 2-64] describes this annotation's elements.
 
 *_Table 2-64 @RangePartitioning Annotation Elements_*
 
-[width="48%",cols="<59%,<,<41%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`name` |(Required) The name of the partition policy; must be unique for
-the persistence unit. | +
+the persistence unit. |
 
 |`partitionColumn` a|
 (Required) The database column or query parameter to partition queries
@@ -7569,10 +7028,10 @@ of the object's ID.
 This can also be the name of a query parameter. If a query does not
 contain the field the query will not be partitioned.
 
- | +
+ |
 
 |`partitions` |(Required) List of connection pool names to partition
-across | +
+across |
 
 |`partitionValueType` |The type of the start and end values |`String`
 
@@ -7581,12 +7040,10 @@ partition field should be sent to every database and have the result
 unioned. |`false`
 |=======================================================================
 
- +
 
 [[sthref353]]
 
-* +
-Usage*
+*Usage*
 
 Partitioning can be enabled on an Entity, relationship, query, or
 session/persistence unit.
@@ -7605,7 +7062,7 @@ single node is used for a single transaction.
 
 [[sthref354]]
 
-* +
+*
 Examples*
 
 link:#BCGIJGHH[Example 2-98] shows how to use the `@RangePartitioning`
@@ -7658,8 +7115,7 @@ element in the `eclipselink-orm.xml` file.
 
 [[sthref356]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -7670,22 +7126,19 @@ For more information, see:
 
 '''''
 
-@ReadOnly
-~~~~~~~~~
+=== @ReadOnly
 
 Use `@ReadOnly` to specify that a class is read-only.
 
 [[sthref357]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 This annotation contains no elements.
 
 [[sthref358]]
 
-* +
-Usage*
+*Usage*
 
 It may be defined on an Entity or MappedSuperclass.
 
@@ -7695,25 +7148,14 @@ on the root of the inheritance hierarchy .
 You can also use `@ReadOnly` to bypass EclipseLink's persistence context
 to save heap space (such as if you need to load a large dataset).
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-You should not modify read-only entities. Doing so can corrupt the
+NOTE: You should not modify read-only entities. Doing so can corrupt the
 EclipseLink cache. To modify a read-only entity, it must cloned or
 serialized.
 
-|=======================================================================
-
- +
 
 [[sthref359]]
 
-* +
-Examples*
+*Examples*
 
 link:#BGBCIIDB[Example 2-100] shows how to use this annotation.
 
@@ -7745,8 +7187,7 @@ in the `eclipselink-orm.xml` file.
 
 [[sthref360]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -7756,8 +7197,7 @@ For more information, see:
 
 '''''
 
-@ReadTransformer
-~~~~~~~~~~~~~~~~
+=== @ReadTransformer
 
 Use `@ReadTransformer` with Transformation mappings to define the
 transformation of the database column values into attribute values
@@ -7765,8 +7205,7 @@ transformation of the database column values into attribute values
 
 [[sthref361]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CHDGCGID[Table 2-65] describes this annotation's elements.
 
@@ -7774,12 +7213,11 @@ link:#CHDGCGID[Table 2-65] describes this annotation's elements.
 
 *_Table 2-65 @ReadTransformer Annotation Elements_*
 
-[width="42%",cols="<55%,<,<45%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`method` |The mapped class must have a method with this name which
 returns a value to be assigned to the attribute (not assigns the value
-to the attribute). | +
+to the attribute). |
 
 |transformerClass a|
 User-defined class that implements the
@@ -7792,26 +7230,13 @@ to create the value to be assigned to the attribute.
  |`void.class`
 |=======================================================================
 
- +
-
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-You must specify *either* a `method` or `transformerClass`, but not
+NOTE: You must specify *either* a `method` or `transformerClass`, but not
 both.
 
-|=======================================================================
-
- +
 
 [[sthref363]]
 
-* +
-Usage*
+*Usage*
 
 Also unless it's a read-only mapping, either `@WriteTransformer`
 annotation or `@WriteTransformers` annotation should be specified. Each
@@ -7821,8 +7246,7 @@ single database column value (column is specified in the
 
 [[sthref364]]
 
-* +
-Examples*
+*Examples*
 
 See link:#BABHECGF["Using @Transformation Annotation"] for an example of
 how to use the `@WriteTransformer annotation` with a Transformation
@@ -7830,8 +7254,7 @@ mapping.
 
 [[sthref365]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -7842,8 +7265,7 @@ For more information, see:
 
 '''''
 
-@ReplicationPartitioning
-~~~~~~~~~~~~~~~~~~~~~~~~
+=== @ReplicationPartitioning
 
 Use `@ReplicationPartitioning` to send requests to a set of connection
 pools. It is for replicating data across a cluster of database machines.
@@ -7851,8 +7273,7 @@ Only modification queries are replicated.
 
 [[sthref366]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BABJICDB[Table 2-66] describes this annotation's elements.
 
@@ -7860,22 +7281,18 @@ link:#BABJICDB[Table 2-66] describes this annotation's elements.
 
 *_Table 2-66 @ReplicationPartitioning Annotation Elements_*
 
-[width="38%",cols="<48%,<,<52%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`name` |The name of the partition policy; must be unique for the
-persistence unit | +
+persistence unit |
 
 |`connectionPools` |List of connection pool names to replicate across
 |All defined pools in the `ServerSession`
 |=======================================================================
 
- +
-
 [[sthref368]]
 
-* +
-Usage*
+*Usage*
 
 Partitioning can be enabled on an Entity, relationship, query, or
 session/persistence unit.
@@ -7894,16 +7311,14 @@ single node is used for a single transaction.
 
 [[sthref369]]
 
-* +
-Examples*
+*Examples*
 
 See link:#CEGHAIDJ["Using Partitioning"] for an example of partitioning
 with EclipseLink.
 
 [[sthref370]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -7915,35 +7330,25 @@ Partitioning"`http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Dev
 
 '''''
 
-@ReturnInsert
-~~~~~~~~~~~~~
+=== @ReturnInsert
 
 Use `@ReturnInsert` to cause `INSERT` operations to return values back
 into the object being written. This allows for table default values,
 trigger or stored procedures computed values to be set back into the
 object.
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
+[NOTE]
+====
 Returning is only supported with an Oracle Database and requires an
 `INSERT RETURNING` clause.
 
 To use returning with other databases, a stored procedure with output
 parameters is used for the insert query.
-
-|=======================================================================
-
- +
+====
 
 [[sthref371]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CIHIAFFB[Table 2-67] describes this annotation's elements.
 
@@ -7951,26 +7356,21 @@ link:#CIHIAFFB[Table 2-67] describes this annotation's elements.
 
 *_Table 2-67 @ReturnInsert Annotation Elements_*
 
-[width="43%",cols="<54%,<,<46%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`returnOnly` |(Optional) If specified (true), the mapping field will be
 excluded from the `INSERT` clause during SQL generation. |false
 |=======================================================================
 
- +
-
 [[sthref373]]
 
-* +
-Usage*
+*Usage*
 
 A `@ReturnInsert` annotation can only be specified on a `Basic` mapping.
 
 [[sthref374]]
 
-* +
-Examples*
+*Examples*
 
 link:#CIHDFAFD[Example 2-102] shows how to use the `@ReturnInsert`
 annotation. If you do not use an argument, EclipseLink accepts the
@@ -8005,8 +7405,7 @@ element in the `eclipselink-orm.xml` file.
 
 [[sthref375]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -8017,49 +7416,37 @@ For more information, see:
 
 '''''
 
-@ReturnUpdate
-~~~~~~~~~~~~~
+=== @ReturnUpdate
 
 Use `@ReturnUpdate` to cause `UPDATE` operations to return values back
 into the object being written. This allows for table default values,
 trigger or stored procedures computed values to be set back into the
 object.
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
+[NOTE]
+====
 Returning is only supported with an Oracle Database and requires an
 `INSERT RETURNING` clause.
 
 To use returning with other databases, a stored procedure with output
 parameters is used for the insert query.
-
-|=======================================================================
-
- +
+====
 
 [[sthref376]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 This annotation contains no elements.
 
 [[sthref377]]
 
-* +
-Usage*
+*Usage*
 
 A `@ReturnUpdate` annotation can only be specified on a `Basic` mapping.
 
 [[sthref378]]
 
-* +
-Examples*
+*Examples*
 
 link:#CACBJIIH[Example 2-104] shows how to use the `@ReturnUpdate`
 annotation. The annotation does not accept any arguments.
@@ -8094,8 +7481,7 @@ mapping file.
 
 [[sthref379]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -8106,16 +7492,14 @@ For more information, see:
 
 '''''
 
-@RoundRobinPartitioning
-~~~~~~~~~~~~~~~~~~~~~~~
+=== @RoundRobinPartitioning
 
 Use `@RoundRobinPartitioning` to send requests in a "round robin"
 fashion to the set of connection pools.
 
 [[sthref380]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BCGIBFHJ[Table 2-68] describes this annotation's elements.
 
@@ -8123,11 +7507,10 @@ link:#BCGIBFHJ[Table 2-68] describes this annotation's elements.
 
 *_Table 2-68 @RoundRobinPartitioning Annotation Elements_*
 
-[width="51%",cols="<51%,<,<49%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`name` |(Required) Name of the partition policy. Names must be unique
-for the persistence unit. | +
+for the persistence unit. |
 
 |`connectionPools` |(Optional) List of connection pool names to load
 balance across |All defined pools in the `ServerSession`
@@ -8137,12 +7520,9 @@ written to and kept in sync, and have reads load-balanced across the
 databases. |`false`
 |=======================================================================
 
- +
-
 [[sthref382]]
 
-* +
-Usage*
+*Usage*
 
 Use the `@RoundRobinPartitioning` annotation for load-balancing read
 queries across a cluster of database machines. Using
@@ -8163,16 +7543,14 @@ single node is used for a single transaction.
 
 [[sthref383]]
 
-* +
-Examples*
+*Examples*
 
 See link:#CHDDAHEB["@Partitioned"] for an example of partitioning with
 EclipseLink.
 
 [[sthref384]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -8184,8 +7562,7 @@ Partitioning"`http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Dev
 
 '''''
 
-@SerializedObject
-~~~~~~~~~~~~~~~~~
+=== @SerializedObject
 
 Use an `@SerializedObject` annotation to set an
 `org.eclipse.persistence.descriptors.SerializedObjectPolicy` instance on
@@ -8196,8 +7573,7 @@ collections into an additional field in the database.
 
 [[sthref385]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CACBBJAE[Table 2-69] describes this annotation's elements.
 
@@ -8205,22 +7581,18 @@ link:#CACBBJAE[Table 2-69] describes this annotation's elements.
 
 *_Table 2-69 @SerializedObject Attribute Elements_*
 
-[width="47%",cols="<45%,<,<55%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`column` |(Optional) The column that holds the serialized object |BLOB
 column named SOP in the entity's main table.
 
 |`value` |(Required) The Class that implements the
-` SerializedObjectPolicy` interface | +
+` SerializedObjectPolicy` interface |
 |=======================================================================
-
- +
 
 [[sthref387]]
 
-* +
-Usage*
+*Usage*
 
 Use an `@SerializedObject` annotation to read data from the database
 faster. The drawback to this usage is that writing to the database is
@@ -8233,24 +7605,12 @@ either throw an exception or, if all other fields have been read as
 well, build the object using these fields (exactly as in the case where
 a serialized object policy is not used).
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-Currently, no default implementation of the `SerializedObjectPolicy`
+NOTE: Currently, no default implementation of the `SerializedObjectPolicy`
 interface is available. You must provide this class.
-
-|=======================================================================
-
- +
 
 [[sthref388]]
 
-* +
-Examples*
+*Examples*
 
 link:#CACFCAFF[Example 2-106] demonstrates how to use the
 @SerializedObject annotation to specify a serialized object policy and
@@ -8306,8 +7666,7 @@ Address address = em.find(Address.class, id, hints);
 
 [[sthref389]]
 
-* +
-See Also*
+*See Also*
 
 For more information:
 
@@ -8317,16 +7676,14 @@ For more information:
 
 '''''
 
-@StoredProcedureParameter
-~~~~~~~~~~~~~~~~~~~~~~~~~
+=== @StoredProcedureParameter
 
 Use `@StoredProcedureParameter` within a `NamedStoredProcedureQuery`
 annotation.
 
 [[sthref390]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CHDDEJEC6[Table 2-70] describes this annotation's elements.
 
@@ -8334,10 +7691,9 @@ link:#CHDDEJEC6[Table 2-70] describes this annotation's elements.
 
 *_Table 2-70 @StoredProcedureParameter Annotation Elements_*
 
-[width="35%",cols="<60%,<,<40%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
-|`queryParameter` |(Required) The query parameter name | +
+|`queryParameter` |(Required) The query parameter name |
 
 |`direction` a|
 (Optional) The direction of the stored procedure parameter:
@@ -8353,9 +7709,9 @@ link:#CHDDEJEC6[Table 2-70] describes this annotation's elements.
 returned from the procedure. |`-1`
 
 |`jdbcTypeName` |(Optional) JDBC type name. This may be required for
-`ARRAY` or `STRUCT` types. | +
+`ARRAY` or `STRUCT` types. |
 
-|`name` |(Optional) Stored procedure parameter name | +
+|`name` |(Optional) Stored procedure parameter name |
 
 |`optional` |(Optional) Specify if the parameter is required, or
 optional and defaulted by the procedure. |`false`
@@ -8364,20 +7720,16 @@ optional and defaulted by the procedure. |`false`
 This depends on the `type` returned from the procedure. |`void.class`
 |=======================================================================
 
- +
-
 [[sthref392]]
 
-* +
-Examples*
+*Examples*
 
 See link:#BGBGAEFF["@NamedStoredProcedureQuery"] for an example using
 the `@StoredProcedureParameter` annotation.
 
 [[sthref393]]
 
-* +
-See Also*
+*See Also*
 
 For more information:
 
@@ -8389,8 +7741,7 @@ Examples`http://wiki.eclipse.org/EclipseLink/Examples/JPA/StoredProcedures`
 
 '''''
 
-@Struct
-~~~~~~~
+=== @Struct
 
 Use @Struct to define a class to map to a database `Struct` type. The
 class should normally be an Embeddable, but could also be an Entity if
@@ -8398,8 +7749,7 @@ stored in a object table.
 
 [[sthref394]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CBBCGIHG[Table 2-71] describes this annotation's elements.
 
@@ -8407,21 +7757,17 @@ link:#CBBCGIHG[Table 2-71] describes this annotation's elements.
 
 *_Table 2-71 @Struct Annotation Elements_*
 
-[width="59%",cols="<53%,<,<47%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
-|`name` |(Required) The database name of the database structure type | +
+|`name` |(Required) The database name of the database structure type |
 
 |`fields` |(Optional) Defines the order of the fields contained in the
-database structure type. | +
+database structure type. |
 |=======================================================================
-
- +
 
 [[sthref396]]
 
-* +
-Usage*
+*Usage*
 
 `Struct` types are extended object-relational data-types supported by
 some databases. Struct types are user define types in the database such
@@ -8433,8 +7779,7 @@ use `RECORD` types in an Oracle Database.
 
 [[sthref397]]
 
-* +
-Examples*
+*Examples*
 
 link:#CACCGJAJ[Example 2-109] shows using the `@Struct` annotation to
 define a Java class to map to an `OBJECT` type.
@@ -8488,8 +7833,7 @@ the `eclipselink-orm.xml` file.
 
 [[sthref398]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -8499,8 +7843,7 @@ For more information, see:
 
 '''''
 
-@StructConverter
-~~~~~~~~~~~~~~~~
+=== @StructConverter
 
 Use `@StructConverter` to enable custom processing of `java.sql.Struct`
 types to process complex database types, such as spatial datatypes.
@@ -8508,23 +7851,11 @@ types to process complex database types, such as spatial datatypes.
 EclipseLink includes the `JGeometryConverter` class to convert the
 Oracle `JGeometry` spatial datatype.
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-Unlike other converters, `@StructConverter` has its own interface.
-
-|=======================================================================
-
- +
+NOTE: Unlike other converters, `@StructConverter` has its own interface.
 
 [[sthref399]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BABJIBGI[Table 2-72] describes this annotation's elements.
 
@@ -8532,7 +7863,6 @@ link:#BABJIBGI[Table 2-72] describes this annotation's elements.
 
 *_Table 2-72 @StructConverter Annotation Elements_*
 
-[width="39%",cols="<59%,<,<41%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`name` |The `String` name for your converter. Ensure that this name is
@@ -8544,12 +7874,9 @@ implement the
 interface. |none
 |=======================================================================
 
- +
-
 [[sthref401]]
 
-* +
-Usage*
+*Usage*
 
 You can use the existing `@Convert` annotation with its value attribute
 set to the `StructConverter` name – in this case, the appropriate
@@ -8563,8 +7890,7 @@ EclipseLink also includes additional converters, such as
 
 [[sthref402]]
 
-* +
-Examples*
+*Examples*
 
 link:#BGBJCJCC[Example 2-111] shows how to define the `@StructConverter`
 annotation.
@@ -8589,8 +7915,7 @@ an `@Converter` and an `@StructConverter` of the same name.
 
 [[sthref403]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -8602,16 +7927,14 @@ For more information, see:
 
 '''''
 
-@StructConverters
-~~~~~~~~~~~~~~~~~
+=== @StructConverters
 
 Use `@StructConverters` to define multiple `@StructConverter`
 annotations.
 
 [[sthref404]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CHDJDFBJ[Table 2-73] describes this annotation's elements.
 
@@ -8622,15 +7945,12 @@ link:#CHDJDFBJ[Table 2-73] describes this annotation's elements.
 [width="53%",cols="<44%,<,<56%",options="header",]
 |================================================================
 |*Annotation Element* |*Description* |*Default*
-|`StructConverter[]` |(Required) An array of struct converter | +
+|`StructConverter[]` |(Required) An array of struct converter |
 |================================================================
-
- +
 
 [[sthref406]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDHGDGH[Example 2-112] shows how to use the `@StructConverters`
 annotation to define multiple `@StructConverter` elements.
@@ -8664,8 +7984,7 @@ element in the `eclipselink-orm.xml` file.
 
 [[sthref407]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -8675,8 +7994,7 @@ For more information, see:
 
 '''''
 
-@Structure
-~~~~~~~~~~
+=== @Structure
 
 Use `@Structure` on a field/method to define a `StructureMapping` to an
 embedded `Struct` type. The target Embeddable must be mapped using the
@@ -8684,15 +8002,13 @@ Struct annotation.
 
 [[sthref408]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 This annotation contains no elements.
 
 [[sthref409]]
 
-* +
-Usage*
+*Usage*
 
 Struct types are extended object-relational data-types supported by some
 databases. Struct types are user define types in the database such as
@@ -8702,8 +8018,7 @@ table.
 
 [[sthref410]]
 
-* +
-Examples*
+*Examples*
 
 link:#CACDBBII[Example 2-114] shows how to use the `@Structure`
 annotation. See link:#CACCGJAJ[Example 2-109] to an example of using
@@ -8735,8 +8050,7 @@ by using the `<structure>` element.
 
 [[sthref412]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -8746,8 +8060,7 @@ For more information, see:
 
 '''''
 
-@TenantDiscriminatorColumn
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== @TenantDiscriminatorColumn
 
 The `@TenantDiscriminator` annotation is used with the `@Multitenant`
 annotation and the `SINGLE-TABLE` mulitenant type to limit what a
@@ -8755,8 +8068,7 @@ persistence context can access in single-table mulitenancy.
 
 [[sthref413]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CHEIBAFI[Table 2-74] describes this annotation's elements.
 
@@ -8764,7 +8076,6 @@ link:#CHEIBAFI[Table 2-74] describes this annotation's elements.
 
 *_Table 2-74 @TenantDiscriminatorColumn Properties_*
 
-[width="65%",cols="<51%,<49%,<",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`java.lang.String` `columnDefinition` |(Optional) The SQL fragment that
@@ -8796,12 +8107,9 @@ absent the column is assumed to be in the primary table. This attribute
 must be specified if the column is on a secondary table.
 |=======================================================================
 
- +
-
 [[sthref415]]
 
-* +
-Usage*
+*Usage*
 
 To configure single-table multi-tenancy, you must specify both of the
 following:
@@ -8820,21 +8128,12 @@ multi-tenancy, using the `@Multitenant` annotation, for example:
 `SecondaryTable`) associated with the given entity can be shared among
 tenants.
 +
- +
 
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-The `@Table` annotation is not required, because the discriminator
+NOTE: The `@Table` annotation is not required, because the discriminator
 column is assumed to be on the primary table. However, if the
 discriminator column is defined on a secondary table, you must identify
 that table using `@SecondaryTable`.
 
-|=======================================================================
-
- +
 * Specify the column or columns to be used as the discriminator column,
 using the `@TenantDiscriminatorColumn` annotation, for example:
 +
@@ -9046,8 +8345,7 @@ file.
 
 [[sthref419]]
 
-* +
-See Also*
+*See Also*
 
 * link:#BABIEJGD["@Multitenant"]
 * link:#CECBEBEA["@TenantDiscriminatorColumns"]
@@ -9060,8 +8358,7 @@ See Also*
 
 '''''
 
-@TenantDiscriminatorColumns
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== @TenantDiscriminatorColumns
 
 Specify multiple discriminator columns for single-table multitenancy by
 using the `@TenantDiscriminatorColumns` annotation to contain multiple
@@ -9069,8 +8366,7 @@ using the `@TenantDiscriminatorColumns` annotation to contain multiple
 
 [[sthref420]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CECFFDCB[Table 2-75] describes this annotation's elements.
 
@@ -9085,12 +8381,9 @@ link:#CECFFDCB[Table 2-75] describes this annotation's elements.
 `TenantDiscriminatorColumn` annotations |none
 |=======================================================================
 
- +
-
 [[sthref422]]
 
-* +
-Usage*
+*Usage*
 
 You must use the `@TenantDiscriminatorColumns` annotation to contain
 multiple `@TenantDiscriminatorColumn` annotations. The
@@ -9100,8 +8393,7 @@ alone, without `@TenantDiscriminatorColumns`.
 
 [[sthref423]]
 
-* +
-Examples*
+*Examples*
 
 [source,oac_no_warn]
 ----
@@ -9118,8 +8410,7 @@ See link:#CHECIDGH["@TenantDiscriminatorColumn"] for more examples of
 
 [[sthref424]]
 
-* +
-See Also*
+*See Also*
 
 * link:#BABIEJGD["@Multitenant"]
 * link:#CHECIDGH["@TenantDiscriminatorColumn"]
@@ -9129,8 +8420,7 @@ See Also*
 
 '''''
 
-@TenantTableDiscriminator
-~~~~~~~~~~~~~~~~~~~~~~~~~
+=== @TenantTableDiscriminator
 
 Table-per-tenant multitenancy allows multiple tenants of an application
 to isolate their data in one or more tenant-specific tables. The tenant
@@ -9140,8 +8430,7 @@ strategy.
 
 [[sthref425]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CHDGDIIC[Table 2-76] describes this annotation's elements.
 
@@ -9149,7 +8438,6 @@ link:#CHDGDIIC[Table 2-76] describes this annotation's elements.
 
 *_Table 2-76 @TenantTableDiscriminator Annotation Elements_*
 
-[width="53%",cols="<46%,<,<54%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`java.lang.String` `ContextProperty` |(Optional) Name of the context
@@ -9167,12 +8455,9 @@ the persistence unit:
  |`SUFFIX`
 |=======================================================================
 
- +
-
 [[sthref427]]
 
-* +
-Usage*
+*Usage*
 
 In table-per-tenant multitenancy, tenants' tables can be in the same
 schema, using a prefix or suffix naming pattern to distinguish them; or
@@ -9199,8 +8484,7 @@ table-per-tenant multitenancy, see link:#BABIEJGD["@Multitenant"].
 
 [[sthref428]]
 
-* +
-Examples*
+*Examples*
 
 The following example shows a `SCHEMA`-type table discriminator.
 
@@ -9237,8 +8521,7 @@ public class Employee {
 
 [[sthref431]]
 
-* +
-See Also*
+*See Also*
 
 * link:#BABIEJGD["@Multitenant"]
 * link:#CHECIDGH["@TenantDiscriminatorColumn"]
@@ -9251,16 +8534,14 @@ See Also*
 
 '''''
 
-@TimeOfDay
-~~~~~~~~~~
+=== @TimeOfDay
 
 Use `@TimeOfDay` to specify a specific time of day using a `Calendar`
 instance which is to be used within an `@Cache` annotation.
 
 [[sthref432]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BGBFEGGF[Table 2-77] describes this annotation's elements.
 
@@ -9278,19 +8559,15 @@ link:#BGBFEGGF[Table 2-77] describes this annotation's elements.
 |`specified` |For internal use – do not modify |`true`
 |=====================================================
 
- +
-
 [[sthref434]]
 
-* +
-Examples*
+*Examples*
 
 See link:#CHDBBIHE["@Cache"] for examples of using `@TimeOfDay`.
 
 [[sthref435]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -9300,8 +8577,7 @@ For more information, see:
 
 '''''
 
-@Transformation
-~~~~~~~~~~~~~~~
+=== @Transformation
 
 Use `@Transformation` with a Transformation mapping to define the
 transformation of database columns into attribute values (unless the
@@ -9310,8 +8586,7 @@ Transformation mapping is write-only, in which case it should have a
 
 [[sthref436]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BABFBEDA[Table 2-78] describes this annotation's elements.
 
@@ -9319,7 +8594,6 @@ link:#BABFBEDA[Table 2-78] describes this annotation's elements.
 
 *_Table 2-78 @Transformation Annotation Elements_*
 
-[width="30%",cols="<70%,<,<30%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`fetch` a|
@@ -9337,12 +8611,9 @@ property may be `null`. It is disregarded for primitive types, which are
 considered non-optional. |`true`
 |=======================================================================
 
- +
-
 [[sthref438]]
 
-* +
-Usage*
+*Usage*
 
 Unless it's a read-only mapping, either `WriteTransformer` annotation or
 `WriteTransformers` annotation should be specified. Each
@@ -9352,8 +8623,7 @@ single database column value (column is specified in the
 
 [[sthref439]]
 
-* +
-Examples*
+*Examples*
 
 link:#BABHECGF[Example 2-120] shows how to use the `@Transformation`
 annotation.
@@ -9422,16 +8692,14 @@ For more information, see:
 
 '''''
 
-@TypeConverter
-~~~~~~~~~~~~~~
+=== @TypeConverter
 
 Use `@TypeConverter` to modify data values during the reading and
 writing of a mapped attribute.
 
 [[sthref441]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CHDIIHBI[Table 2-79] describes this annotation's elements.
 
@@ -9439,27 +8707,21 @@ link:#CHDIIHBI[Table 2-79] describes this annotation's elements.
 
 *_Table 2-79 @TypeConverter Annotation Elements_*
 
-[width="43%",cols="<54%,<,<46%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`name` |(Required) The `String` name for your converter. This name must
 be unique across the persistence unit. |none
 
 |`dataType` |(Optional) The `type` stored in the database
-|`void.class`link:#CEGBJCIH[^Foot 1 ^]
+|`void.class` footnote:disclaimer[]
 
 |`objectType` |(Optional) The `type` stored on the entity
-|`void.class`link:#sthref443[^Footref 1^]
+|`void.class` footnote:disclaimer[]
 |=======================================================================
 
- +
-
-^Footnote 1 ^The default is inferred from the type of the persistence
-field or property. +
 [[sthref444]]
 
-* +
-Usage*
+*Usage*
 
 Each `TypeConverter` must be uniquely named and can be defined at the
 class, field and property level and can be specified within an Entity,
@@ -9474,8 +8736,7 @@ converters.
 
 [[sthref445]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDEHGEF[Example 2-122] shows how to use the `@TypeConverter`
 annotation to convert the `Double` value stored in the database to a
@@ -9508,8 +8769,7 @@ public class Employee implements Serializable{
 
 [[sthref446]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -9521,15 +8781,13 @@ For more information, see:
 
 '''''
 
-@TypeConverters
-~~~~~~~~~~~~~~~
+=== @TypeConverters
 
 Use `@TypeConverters` to define multiple `TypeConverter` elements.
 
 [[sthref447]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CIHJAIHB[Table 2-80] describes this annotation's elements.
 
@@ -9537,7 +8795,6 @@ link:#CIHJAIHB[Table 2-80] describes this annotation's elements.
 
 *_Table 2-80 @TypeConverters Annotation Elements_*
 
-[width="59%",cols="<53%,<,<47%",options="header",]
 |============================================================
 |*Annotation Element* |*Description* |*Default*
 |`TypeConverter[]` |(Required) An array of type converter | +
@@ -9547,8 +8804,7 @@ link:#CIHJAIHB[Table 2-80] describes this annotation's elements.
 
 [[sthref449]]
 
-* +
-Examples*
+*Examples*
 
 link:#BCFEHCDH[Example 2-123] shows how to use this annotation.
 
@@ -9591,8 +8847,7 @@ element in the `eclipselink-orm.xml` file.
 
 [[sthref451]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -9603,8 +8858,7 @@ For more information, see:
 
 '''''
 
-@UnionPartitioning
-~~~~~~~~~~~~~~~~~~
+=== @UnionPartitioning
 
 Use `@UnionPartitioning` to send queries to all connection pools and
 then union the results. This can be used for queries or relationships
@@ -9613,8 +8867,7 @@ cross partition relationship.
 
 [[sthref452]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BCGFGGCI[Table 2-81] describes this annotation's elements.
 
@@ -9622,11 +8875,10 @@ link:#BCGFGGCI[Table 2-81] describes this annotation's elements.
 
 *_Table 2-81 @UnionPartitioning Annotation Elements_*
 
-[width="50%",cols="<48%,<,<52%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`name` |Name of the partition policy. Names must be unique for the
-persistence unit. | +
+persistence unit. |
 
 |`connectionPools` |List of connection pool names to load balance across
 |Defaults to all defined pools in the `ServerSession`
@@ -9640,12 +8892,9 @@ ManyToMany relationships, when the join table needs to be replicated.
  |`false`
 |=======================================================================
 
- +
-
 [[sthref454]]
 
-* +
-Usage*
+*Usage*
 
 Partitioning can be enabled on an Entity, relationship, query, or
 session/persistence unit. Partition policies are globally named to allow
@@ -9663,16 +8912,14 @@ single node is used for a single transaction.
 
 [[sthref455]]
 
-* +
-Examples*
+*Examples*
 
 See link:#CEGHAIDJ["Using Partitioning"] for an example of partitioning
 with EclipseLink.
 
 [[sthref456]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -9684,8 +8931,7 @@ Partitioning"`http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Dev
 
 '''''
 
-@UuidGenerator
-~~~~~~~~~~~~~~
+=== @UuidGenerator
 
 Use `@UuidGenerator` to defines a primary key generator that may be
 referenced by name when a generator element is specified for the
@@ -9698,8 +8944,7 @@ all generator types).
 
 [[sthref457]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CFAIAHJG[Table 2-82] describes this annotation's elements.
 
@@ -9707,19 +8952,16 @@ link:#CFAIAHJG[Table 2-82] describes this annotation's elements.
 
 *_Table 2-82 @UuidGenerator Annotation Elements_*
 
-[width="38%",cols="<56%,<,<44%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`name` |Name of the UUID generator, which must be unique for the
-persistence unit | +
+persistence unit |
 |=======================================================================
 
- +
 
 [[sthref459]]
 
-* +
-Examples*
+*Examples*
 
 link:#CFADJAIF[Example 2-125] shows how to use this annotation.
 
@@ -9769,8 +9011,7 @@ You can also specify the named sequence at the persistence unit level
 
 [[sthref460]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -9784,8 +9025,7 @@ Value`http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/En
 
 [[sthref461]]
 
-@UnionPartitioning
-~~~~~~~~~~~~~~~~~~
+=== @UnionPartitioning
 
 Use `@UnionPartitioning` to send queries to all connection pools and
 then union the results. This can be used for queries or relationships
@@ -9794,8 +9034,7 @@ cross partition relationship.
 
 [[sthref462]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BCGFGGCI[Table 2-81] describes this annotation's elements.
 
@@ -9803,7 +9042,6 @@ link:#BCGFGGCI[Table 2-81] describes this annotation's elements.
 
 *_Table 2-83 @UnionPartitioning Annotation Elements_*
 
-[width="50%",cols="<48%,<,<52%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`name` |Name of the partition policy. Names must be unique for the
@@ -9821,12 +9059,9 @@ ManyToMany relationships, when the join table needs to be replicated.
  |`false`
 |=======================================================================
 
- +
-
 [[sthref465]]
 
-* +
-Usage*
+*Usage*
 
 Partitioning can be enabled on an Entity, relationship, query, or
 session/persistence unit. Partition policies are globally named to allow
@@ -9844,16 +9079,14 @@ single node is used for a single transaction.
 
 [[sthref466]]
 
-* +
-Examples*
+*Examples*
 
 See link:#CEGHAIDJ["Using Partitioning"] for an example of partitioning
 with EclipseLink.
 
 [[sthref467]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -9865,16 +9098,14 @@ Partitioning"`http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Dev
 
 '''''
 
-@ValuePartition
-~~~~~~~~~~~~~~~
+=== @ValuePartition
 
 Use `@ValuePartition` to represent a specific value partition that will
 be routed to a specific connection pool.
 
 [[sthref468]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CACBHEHI[Table 2-84] describes this annotation's elements.
 
@@ -9882,21 +9113,17 @@ link:#CACBHEHI[Table 2-84] describes this annotation's elements.
 
 *_Table 2-84 @ValuePartition Annotation Elements_*
 
-[width="43%",cols="<54%,<,<46%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`connectionPool` |The connection pool to which to route queries to for
-the `value` | +
+the `value` |
 
-|`value` |The `String` representation of the value | +
+|`value` |The `String` representation of the value |
 |=======================================================================
-
- +
 
 [[sthref470]]
 
-* +
-Examples*
+*Examples*
 
 link:#CJHFDJAC[Example 2-128] shows how to use the `@ValuePartition` and
 `@ValuePartitioning` annotations.
@@ -9947,8 +9174,7 @@ in the `eclipselink-orm.xml` file.
 
 [[sthref471]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -9959,8 +9185,7 @@ For more information, see:
 
 '''''
 
-@ValuePartitioning
-~~~~~~~~~~~~~~~~~~
+=== @ValuePartitioning
 
 Use `@ValuePartitioning` to partition access to a database cluster by a
 field value from the object (such as the object's location or tenant).
@@ -9971,8 +9196,7 @@ server's and unioned, or left to the session's default behavior.
 
 [[sthref472]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CEGEGCEA[Table 2-85] describes this annotation's elements.
 
@@ -9980,11 +9204,10 @@ link:#CEGEGCEA[Table 2-85] describes this annotation's elements.
 
 *_Table 2-85 @ValuePartitioning Annotation Elements_*
 
-[width="41%",cols="<71%,<,<29%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`name` |(Required) Name of the partition policy. Names must be unique
-for the persistence unit. | +
+for the persistence unit. |
 
 |`partitionColumn` a|
 (Required) The database column or query parameter to partition queries
@@ -9996,13 +9219,13 @@ object's ID. This can also be the name of a query parameter.
 
 If a query does not contain the field the query will not be partitioned.
 
- | +
+ |
 
 |`partitions` |(Required) Store the value partitions. Each partition
-maps a value to a `connectionPool`. | +
+maps a value to a `connectionPool`. |
 
 |`defaultConnectionPool` |(Optional) The default connection pool is used
-for any unmapped values | +
+for any unmapped values |
 
 |`partitionValueType` |(Optional) The `type` of the start and end values
 |`String`
@@ -10012,12 +9235,9 @@ not contain the partition field should be sent to every database and
 have the result unioned. |`false`
 |=======================================================================
 
- +
-
 [[sthref474]]
 
-* +
-Usage*
+*Usage*
 
 Partitioning can be enabled on an Entity, relationship, query, or
 session/persistence unit. Partition policies are globally named to allow
@@ -10035,16 +9255,14 @@ single node is used for a single transaction.
 
 [[sthref475]]
 
-* +
-Examples*
+*Examples*
 
 See link:#CEGHAIDJ["Using Partitioning"] for an example of partitioning
 with EclipseLink.
 
 [[sthref476]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -10056,8 +9274,7 @@ Partitioning"`http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Dev
 
 '''''
 
-@VariableOneToOne
-~~~~~~~~~~~~~~~~~
+=== @VariableOneToOne
 
 Use `@VariableOneToOne` to represent a pointer references between a java
 object and an implementer of an interface. This mapping is usually
@@ -10067,8 +9284,7 @@ mappings are normally implemented using a foreign key and a type code.
 
 [[sthref477]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CHDGHCBF[Table 2-86] describes this annotation's elements.
 
@@ -10076,11 +9292,10 @@ link:#CHDGHCBF[Table 2-86] describes this annotation's elements.
 
 *_Table 2-86 @VariableOneToOne Annotation Elements_*
 
-[width="59%",cols="<39%,<,<61%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`CascadeType` |(Optional) Array of operations that must be cascaded to
-the target of the association | +
+the target of the association |
 
 |`DiscriminatorClasses` |(Optional) Array of discriminator types that
 can be used with this mapping a|
@@ -10109,30 +9324,26 @@ value
 
  |`Eager`
 
-|`Optional` |(Optional) Specify if the association is optional. | +
+|`Optional` |(Optional) Specify if the association is optional. |
 
 |`OrphanRemoval` |(Optional) Specify if interface class that is the
-target of this mapping. | +
+target of this mapping. |
 
 |`TargetInterface` |(Optional) The interface class that is the target of
 this mapping |If none is specified, EclipseLink will infer the interface
 class based on the type of object being referenced.
 |=======================================================================
 
- +
-
 [[sthref479]]
 
-* +
-Usage*
+*Usage*
 
 You can specify `@VariableOneToOne` on an Entity, MappedSuperclass, or
 Embeddable class.
 
 [[sthref480]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDJDIJD[Example 2-130] shows how to use the `@VariableOneToOne`
 annotation.
@@ -10184,8 +9395,7 @@ link:#CHDCBGAF[Example 2-131] shows the same mapping using the
 
 [[sthref481]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -10196,16 +9406,14 @@ For more information, see:
 
 '''''
 
-@VirtualAccessMethods
-~~~~~~~~~~~~~~~~~~~~~
+=== @VirtualAccessMethods
 
 Use `@VirtualAccessMethods` to specify that a specific class contains
 virtual methods.
 
 [[sthref482]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#CIHCCFIH[Table 2-87] describes this annotation's elements.
 
@@ -10213,7 +9421,6 @@ link:#CIHCCFIH[Table 2-87] describes this annotation's elements.
 
 *_Table 2-87 @VirtualAccessMethods Annotation Elements_*
 
-[width="41%",cols="<52%,<,<48%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`get` a|
@@ -10235,20 +9442,16 @@ If `set` is specified, you must also specify `get`.
  |`set`
 |=======================================================================
 
- +
-
 [[sthref484]]
 
-* +
-Usage*
+*Usage*
 
 Use the `@VirtualAccessMethods` annotation to define access methods for
 mappings with in which `accessType`=VIRTUAL.
 
 [[sthref485]]
 
-* +
-Examples*
+*Examples*
 
 link:#CIHCCFIH[Table 2-87] shows an entity using property access.
 
@@ -10293,8 +9496,7 @@ the `<access>` and `<access-method>` elements in your
 
 [[sthref487]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -10307,8 +9509,7 @@ for EclispeLink_
 
 '''''
 
-@WriteTransformer
-~~~~~~~~~~~~~~~~~
+=== @WriteTransformer
 
 Use `@WriteTransformer` on a `TranformationMapping` to transform a
 single attribute value to a single database column value. Use the
@@ -10316,8 +9517,7 @@ single attribute value to a single database column value. Use the
 
 [[sthref488]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BGBEGIEE[Table 2-88] describes this annotation's elements.
 
@@ -10325,7 +9525,6 @@ link:#BGBEGIEE[Table 2-88] describes this annotation's elements.
 
 *_Table 2-88 @WriteTransformer Annotation Elements_*
 
-[width="48%",cols="<40%,<,<60%",options="header",]
 |=======================================================================
 |*Annotation Element* |*Description* |*Default*
 |`column` a|
@@ -10347,7 +9546,7 @@ example:`public Time getStartTime()`
 The method may require `@Transient` to avoid being mapped as a `Basic`
 by default.
 
- | +
+ |
 
 |`transformerClass` a|
 (Optional) User-defined class that implements the `FieldTransformer`
@@ -10362,25 +9561,11 @@ example:`public Time buildFieldValue(Object instance, String fieldName, Session 
  |`void.class`
 |=======================================================================
 
- +
-
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-You must specify either `transformerClass` _or_ `method` , but not both.
-
-|=======================================================================
-
- +
+NOTE: You must specify either `transformerClass` _or_ `method` , but not both.
 
 [[sthref490]]
 
-* +
-Usage*
+*Usage*
 
 You cannot define a `@WriteTransforme`r for a read-only mapping.
 
@@ -10411,8 +9596,7 @@ A convenient way to create a `FieldTransformer` is to extend
 
 [[sthref492]]
 
-* +
-Examples*
+*Examples*
 
 See link:#BABHECGF["Using @Transformation Annotation"] for an example of
 how to use the `@WriteTransformer annotation` with a Transformation
@@ -10420,8 +9604,7 @@ mapping.
 
 [[sthref493]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -10433,8 +9616,7 @@ For more information, see:
 
 '''''
 
-@WriteTransformers
-~~~~~~~~~~~~~~~~~~
+=== @WriteTransformers
 
 Use `@WriteTransformer` on a `TranformationMapping` to transform a
 single attribute value to a single database column value. Use the
@@ -10442,8 +9624,7 @@ single attribute value to a single database column value. Use the
 
 [[sthref494]]
 
-* +
-Annotation Elements*
+*Annotation Elements*
 
 link:#BCFBFAIF[Table 2-89] describes this annotation's elements.
 
@@ -10451,25 +9632,20 @@ link:#BCFBFAIF[Table 2-89] describes this annotation's elements.
 
 *_Table 2-89 @WriteTransformers Annotation Elements_*
 
-[width="59%",cols="<53%,<,<47%",options="header",]
 |======================================================
 |*Annotation Element* |*Description* |*Default*
-|`WriteTransformer` |An array of `WriteTransformer` | +
+|`WriteTransformer` |An array of `WriteTransformer` |
 |======================================================
-
- +
 
 [[sthref496]]
 
-* +
-Usage*
+*Usage*
 
 You cannot use `@WriteTransforme`rs for a read-only mapping.
 
 [[sthref497]]
 
-* +
-Examples*
+*Examples*
 
 See link:#BABHECGF["Using @Transformation Annotation"] for an example of
 how to use the `@WriteTransformer annotation` with a Transformation
@@ -10477,46 +9653,10 @@ mapping.
 
 [[sthref498]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
 * link:#BGBGGAEA["@WriteTransformer"].
 * link:#BABCJGIG["@Transformation"].
 * http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Print_Version#How_to_Use_the_.40Transformation_Annotation
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|=======================================================================
-a|
-[width="96%",cols=",^50%,^50%",]
-|=======================================================================
-| 
-|link:intro.htm[image:../../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:jpql.htm[image:../../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|=======================================================================
-
-
-|http://www.eclipse.org/eclipselink/[image:../../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
-link:../../../dcommon/html/cpyr.htm[ +
-] a|
-[cols=",^,,^,,^,^",]
-|=======================================================================
-|  |image:../../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../../[image:../../../dcommon/images/search.png[Search] +
-] | 
-|link:../../eclipselink_jpa_extensions.pdf[image:../../../dcommon/images/pdf_icon.png[PDF]]
-|link:#disqus_thread[image:../../../dcommon/images/comments.png[Comments] +
-Comments]
-|=======================================================================
-
-|=======================================================================
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

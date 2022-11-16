@@ -16,7 +16,8 @@
 
 ///////////////////////////////////////////////////////////////////////////////
 
-= Introduction
+= Jakarta Persistence API (JPA) Extensions Reference for EclipseLink
+:nofooter:
 :description: EclipseLink
 :keywords: eclipselink, java, jpa, persistence, introduction
 :relativedir: jpa/extensions
@@ -25,16 +26,16 @@
 :rootdir: {docdir}/{relativedir}
 include::attributes.adoc[]
 
-//List of Examples
-:sectnums!:
-include::{rootdir}/loe.adoc[]
-
 //Title and Copyright Information
 include::{rootdir}/title_eclipselink.adoc[]
 
 //Preface
 [preface]
 include::{rootdir}/preface.adoc[]
+
+//List of Examples
+:sectnums!:
+include::{rootdir}/loe.adoc[]
 
 //Introduction
 :sectnums:
@@ -55,3 +56,5 @@ include::{rootdir}/persistenceproperties_ref.adoc[]
 
 //eclipselink-orm.xml Schema Reference
 include::{rootdir}/schema.adoc[]
+
+include::copyright.adoc[]

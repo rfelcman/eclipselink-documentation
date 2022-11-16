@@ -16,7 +16,8 @@
 
 ///////////////////////////////////////////////////////////////////////////////
 
-= Introduction
+= Understanding EclipseLink
+:nofooter:
 :description: EclipseLink
 :keywords: eclipselink, java, jpa, persistence, concepts, understanding
 :relativedir: concepts
@@ -25,16 +26,16 @@
 :rootdir: {docdir}/{relativedir}
 include::attributes.adoc[]
 
-//List of Examples
-:sectnums!:
-include::{rootdir}/loe.adoc[]
-
 //Title and Copyright Information
 include::{rootdir}/title_eclipselink.adoc[]
 
 //Preface
 [preface]
 include::{rootdir}/preface.adoc[]
+
+//List of Examples
+:sectnums!:
+include::{rootdir}/loe.adoc[]
 
 //Overview of EclipseLink
 :sectnums:
@@ -75,3 +76,4 @@ include::{rootdir}/nosql.adoc[]
 [appendix]
 include::{rootdir}/app_tl_ext.adoc[]
 
+include::copyright.adoc[]

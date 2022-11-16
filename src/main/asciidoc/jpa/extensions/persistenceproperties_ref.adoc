@@ -8144,11 +8144,8 @@ using only EclipseLink `sessions.xml`.
 
 *_Figure 5-1 Using the eclipselink.sessions-xml Persistence Property_*
 
-image:img/override_tl.gif[Description of Figure 5-1
-follows,title="Description of Figure 5-1 follows"] +
-link:img_text/override_tl.htm[Description of "Figure 5-1 Using the
-eclipselink.sessions-xml Persistence Property"] +
- +
+image:{imagesrelativedir}/override_tl.gif[Description of Figure 5-1 follows,title="Description of Figure 5-1 follows"] +
+xref:{imagestextrelativedir}/override_tl.adoc[Description of "Figure 5-1 Using the eclipselink.sessions-xml Persistence Property"] +
 
 [[sthref1180]]
 

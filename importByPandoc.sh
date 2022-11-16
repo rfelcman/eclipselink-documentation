@@ -27,7 +27,7 @@ convert_documents() {
 }
 
 #convert_documents ${JPA_DOC_INPUT_PATH} ${JPA_DOC_OUTPUT_PATH}
-convert_documents ${CONCEPTS_DOC_INPUT_PATH} ${CONCEPTS_DOC_OUTPUT_PATH}
+#convert_documents ${CONCEPTS_DOC_INPUT_PATH} ${CONCEPTS_DOC_OUTPUT_PATH}
 
 
 

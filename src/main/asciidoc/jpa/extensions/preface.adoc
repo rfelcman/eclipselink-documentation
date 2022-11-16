@@ -16,7 +16,7 @@
 
 ///////////////////////////////////////////////////////////////////////////////
 
-=== Preface
+== Preface
 
 EclipseLink JPA provides specific annotations (_EclipseLink extensions_)
 in addition to supporting the standard Java Persistence Architecture
@@ -26,7 +26,7 @@ your JPA entities.
 
 [[TLJPA102]][[sthref2]]
 
-==== Audience
+=== Audience
 
 This document is intended for application developers who want to develop
 applications using EclipseLink with Java Persistence Architecture (JPA).
@@ -57,7 +57,7 @@ hearing impaired.
 
 [[TLJPA105]][[sthref4]]
 
-==== Related Documents
+=== Related Documents
 
 For more information, see the following documents:
 
@@ -69,7 +69,7 @@ For more information, see the following documents:
 
 [[TLJPA106]][[sthref5]]
 
-==== Conventions
+=== Conventions
 
 The following text conventions are used in this document:
 
