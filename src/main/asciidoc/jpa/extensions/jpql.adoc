@@ -150,7 +150,7 @@ SELECT e FROM Employee e WHERE COLUMN('ROWID', e) = :id
 
 For more information, see:
 
-* link:annotations_ref.htm#additionalcriteria["@AdditionalCriteria"]
+* xref:{relativedir}/annotations_ref.adoc#additionalcriteria["@AdditionalCriteria"]
 
 [[except]][[TLJPA611]]
 
@@ -249,8 +249,7 @@ require special syntax cannot be called with `FUNCTION`. Instead, use
 
 [[sthref510]]
 
-* +
-Examples*
+*Examples*
 
 link:#CIHCCHIC[Example 3-6] shows how to use this JPQL extension.
 
@@ -284,8 +283,7 @@ SELECT s FROM SimpleSpatial s WHERE FUNCTION('MDSYS.SDO_RELATE', s.jGeometry, :o
 
 [[sthref511]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 

@@ -279,7 +279,7 @@ settings (such as `id`, `embedded-id`, `basic`, `version`,
 level, then the `eclipselink-orm.xml` attributes merges or overrides the
 existing settings, else creates new attributes.
 
-|`class` |None | +
+|`class` |None |
 
 |`access` |Full override |If an access setting exists, then the
 eclipselink-orm.xml's access setting overrides the existing setting, or
@@ -440,7 +440,7 @@ a new association-override setting.
 eclipselink-orm.xml's name setting overrides the existing setting, or
 creates a new name setting.
 
-|`class` |None | +
+|`class` |None |
 
 |`access` |Full override |If an access setting exists, then the
 eclipselink-orm.xml's access setting overrides the existing setting, or
@@ -452,8 +452,6 @@ exists, then the eclipselink-orm.xml's metadata-complete setting will be
 applied. If a metadata-complete setting is not specified, it will not
 override an existing setting, that is essentially turning it off.
 |=======================================================================
-
- +
 
 [[BGBIJGGA]][[TLJPA699]]
 
@@ -476,7 +474,7 @@ many-to-many, embedded, transient) exist at the mapping level, then the
 eclipselink-orm.xml's attributes merges or overrides the existing
 settings, or creates new attributes.
 
-|`class` |None | +
+|`class` |None |
 
 |`access` |Full override |If an access setting exists, then the
 eclipselink-orm.xml's access setting overrides the existing setting, or
