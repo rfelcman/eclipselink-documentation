@@ -34,49 +34,49 @@ extensions) by:
 
 EclipseLink supplies the following query hints:
 
-* `batch`
-* `batch.size`
-* `batch.type`
-* `cache-usage`
-* `cache-usage.indirection-policy`
-* `cursor`
-* `composite-unit.member`
-* `cursor.initial-size`
-* `cursor.page-size`
-* `exclusive-connection`
-* `flush`
-* `history.as-of`
-* `history.as-of.scn`
-* `inheritance.outer-join`
-* `jdbc.bind-parameters`
-* `jdbc.allow-partial-bind-parameters`
-* `jdbc.cache-statement`
-* `jdbc.fetch-size`
-* `jdbc.first-result`
-* `jdbc.max-rows`
-* `jdbc.native-connection`
-* `jdbc.parameter-delimiter`
-* `jdbc.timeout`
-* `join-fetch`
-* `left-join-fetch`
-* `load-group`
-* `load-group.attribute`
-* `maintain-cache`
-* `pessimistic-lock`
-* `prepare`
-* `query-results-cache`
-* `query-results-cache.expiry`
-* `query-results-cache.expiry-time-of-day`
-* `query-results-cache.ignore-null`
-* `query-results-cache.randomize-expiry`
-* `query-results-cache.size`
-* `query-results-cache.type`
-* `query-type`
-* `read-only`
-* `refresh`
-* `refresh.cascade`
-* `result-collection-type`
-* `sql.hint`
+* link:#batch[`batch`]
+* link:#batchsize[`batch.size`]
+* link:#batchtype[`batch.type`]
+* link:#cacheusage[`cache-usage`]
+* link:#cacheusageindirectionpolicy[`cache-usage.indirection-policy`]
+* link:#cursor[`cursor`]
+* link:#compositeunitmember[`composite-unit.member`]
+* link:#cursorinitialsize[`cursor.initial-size`]
+* link:#cursorpagesize[`cursor.page-size`]
+* link:#exclusiveconnection[`exclusive-connection`]
+* link:#flush[`flush`]
+* link:#historyasof[`history.as-of`]
+* link:#historyasofscn[`history.as-of.scn`]
+* link:#inheritanceouterjoin[`inheritance.outer-join`]
+* link:#jdbcbindparameters[`jdbc.bind-parameters`]
+* link:#jdbcallowpartialbindparameters[`jdbc.allow-partial-bind-parameters`]
+* link:#jdbccachestatement[`jdbc.cache-statement`]
+* link:#jdbcfetchsize[`jdbc.fetch-size`]
+* link:#jdbcfirstresult[`jdbc.first-result`]
+* link:#jdbcmaxrows[`jdbc.max-rows`]
+* link:#jdbcnativeconnection[`jdbc.native-connection`]
+* link:#jdbcparameterdelimiter[`jdbc.parameter-delimiter`]
+* link:#jdbctimeout[`jdbc.timeout`]
+* link:#joinfetch1[`join-fetch`]
+* link:#leftjoinfetch[`left-join-fetch`]
+* link:#loadgroup[`load-group`]
+* link:#loadgroupattribute[`load-group.attribute`]
+* link:#maintaincache[`maintain-cache`]
+* link:#pessimisticlock[`pessimistic-lock`]
+* link:#prepare[`prepare`]
+* link:#queryresultscache[`query-results-cache`]
+* link:#queryresultscacheexpiry[`query-results-cache.expiry`]
+* link:#queryresultscacheexpirytimeofday[`query-results-cache.expiry-time-of-day`]
+* link:#queryresultscacheignorenull[`query-results-cache.ignore-null`]
+* link:#queryresultscacherandomizeexpiry[`query-results-cache.randomize-expiry`]
+* link:#queryresultscachesize[`query-results-cache.size`]
+* link:#queryresultscachetype[`query-results-cache.type`]
+* link:#querytype[`query-type`]
+* link:#readonly1[`read-only`]
+* link:#refresh[`refresh`]
+* link:#refreshcascade[`refresh.cascade`]
+* link:#resultcollectiontype[`result-collection-type`]
+* link:#sqlhint[`sql.hint`]
 
 All EclipseLink query hints are defined in the `QueryHints` class in the
 `org.eclipse.persistence.config package`. When you set a hint, you can
@@ -163,12 +163,12 @@ For more information, see:
 
 * "EclipseLink" JPA Query Hints
 `http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Querying/Query_Hints`
-* link:#fetch["join-fetch"]
-* link:#BABHCJIH["batch.size"]
-* link:#BABFGHAA["batch.type"]
+* link:#joinfetch1["join-fetch"]
+* link:#batchsize["batch.size"]
+* link:#batchtype["batch.type"]
 * "Querying" in _Solutions Guide for EclispeLink_
 
-[[BABHCJIH]][[TLJPA723]]
+[[batchsize]][[TLJPA723]]
 
 '''''
 
@@ -235,7 +235,7 @@ For more information, see:
 
 * link:#batch["batch"]
 
-[[BABFGHAA]][[TLJPA727]]
+[[batchtype]][[TLJPA727]]
 
 '''''
 
@@ -417,9 +417,9 @@ For more information, see:
 * "EclipseLink Caches" in _Understanding EclipseLink_
 * "Querying" in _Solutions Guide for EclispeLink_
 * "Enhancing Performance" in _Solutions Guide for EclispeLink_
-* link:#BABDBIDI["cache-usage.indirection-policy"]
+* link:#cacheusageindirectionpolicy["cache-usage.indirection-policy"]
 
-[[BABDBIDI]][[TLJPA731]]
+[[cacheusageindirectionpolicy]][[TLJPA731]]
 
 '''''
 
@@ -501,7 +501,7 @@ For more information, see:
 * "Querying" in _Solutions Guide for EclispeLink_
 * link:#cacheusage["cache-usage"]
 
-[[BABBGFJA]][[TLJPA735]]
+[[cursor]][[TLJPA735]]
 
 '''''
 
@@ -581,10 +581,10 @@ import org.eclipse.persistence.config.QueryHints;
 
 For more information, see:
 
-* link:#CHDJJCHG["cursor.initial-size"]
-* link:#CACIGJGE["cursor.page-size"]
+* link:#cursorinitialsize["cursor.initial-size"]
+* link:#cursorpagesize["cursor.page-size"]
 
-[[CHDDFIDC]][[TLJPA54134]]
+[[compositeunitmember]][[TLJPA54134]]
 
 '''''
 
@@ -640,7 +640,7 @@ import org.eclipse.persistence.config.QueryHints;
 value="mypersistentunit");
 ----
 
-[[CHDJJCHG]][[TLJPA739]]
+[[cursorinitialsize]][[TLJPA739]]
 
 '''''
 
@@ -703,9 +703,9 @@ import org.eclipse.persistence.config.QueryHints;
 
 For more information, see:
 
-* link:#BABBGFJA["cursor"]
+* link:#cursor["cursor"]
 
-[[CACIGJGE]][[TLJPA54069]]
+[[cursorpagesize]][[TLJPA54069]]
 
 '''''
 
@@ -768,9 +768,9 @@ import org.eclipse.persistence.config.QueryHints;
 
 For more information, see:
 
-* link:#BABBGFJA["cursor"]
+* link:#cursor["cursor"]
 
-[[BABJFGGC]][[TLJPA747]]
+[[exclusiveconnection]][[TLJPA747]]
 
 '''''
 
@@ -848,7 +848,7 @@ For more information, see:
 
 * xref:{relativedir}/persistenceproperties_ref.adoc#CACBICGG2["jdbc.exclusive-connection.mode"]
 
-[[CBHFHGEB]][[TLJPA751]]
+[[flush]][[TLJPA751]]
 
 '''''
 
@@ -934,10 +934,10 @@ For more information, see:
 `http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Querying/Query_Hints`
 * "EclipseLink Caches" in _Understanding EclipseLink_
 * "Querying" in _Solutions Guide for EclispeLink_
-* link:#BABDBIDI["cache-usage.indirection-policy"]
+* link:#cacheusageindirectionpolicy["cache-usage.indirection-policy"]
 * link:#cacheusage["cache-usage"]
 
-[[CACDJCBE]][[TLJPA755]]
+[[historyasof]][[TLJPA755]]
 
 '''''
 
@@ -1009,11 +1009,11 @@ import org.eclipse.persistence.config.QueryHints;
 
 For more information, see:
 
-* link:#BDCBGEJG["history.as-of.scn"]
+* link:#historyasofscn["history.as-of.scn"]
 * "Using Oracle Flashback Technology" in _Oracle Database Advanced
 Application Developer's Guide_
 
-[[BDCBGEJG]][[TLJPA759]]
+[[historyasofscn]][[TLJPA759]]
 
 '''''
 
@@ -1080,11 +1080,11 @@ import org.eclipse.persistence.config.QueryHints;
 
 For more information, see:
 
-* link:#CACDJCBE["history.as-of"]
+* link:#historyasof["history.as-of"]
 * "Using Oracle Flashback Technology" in _Oracle Database Advanced
 Application Developer's Guide_
 
-[[BABEDHJB]][[TLJPA763]]
+[[inheritanceouterjoin]][[TLJPA763]]
 
 '''''
 
@@ -1165,7 +1165,7 @@ For more information, see:
 * "Inheritance" in _Understanding EclipseLink_
 * "Enhancing Performance" in _Solutions Guide for EclispeLink_
 
-[[bindparameters]][[TLJPA642]]
+[[jdbcbindparameters]][[TLJPA642]]
 
 '''''
 
@@ -1270,7 +1270,7 @@ For more information, see:
 * "Parameterized SQL and Statement Caching" in _Solutions Guide for
 EclispeLink_
 
-[[allowpartialbindparameters]][[TLJPA831]]
+[[jdbcallowpartialbindparameters]][[TLJPA831]]
 
 '''''
 
@@ -1337,12 +1337,12 @@ propertiesMap.put(PersistenceUnitProperties.JDBC_ALLOW_PARTIAL_PARAMETERS, "true
 
 For more information, see:
 
-* link:#bindparameters["jdbc.bind-parameters"]
+* link:#jdbcbindparameters["jdbc.bind-parameters"]
 * xref:{relativedir}/persistenceproperties_ref.adoc#CIHJADHF["jdbc.batch-writing.size"]
 * "Parameterized SQL and Statement Caching" in _Solutions Guide for
 EclispeLink_
 
-[[BABCHAFD]][[TLJPA766]]
+[[jdbccachestatement]][[TLJPA766]]
 
 '''''
 
@@ -1423,7 +1423,7 @@ For more information, see:
 * xref:{relativedir}/persistenceproperties_ref.adoc#CHDHAFAA["jdbc.cache-statements"]
 * "Enhancing Performance" in _Solutions Guide for EclispeLink_
 
-[[fetchsize]][[TLJPA647]]
+[[jdbcfetchsize]][[TLJPA647]]
 
 '''''
 
@@ -1513,7 +1513,7 @@ For more information, see:
 EclispeLink_
 * "EclipseLink Caches" in _Understanding EclipseLink_
 
-[[BHAGGAIA]][[TLJPA770]]
+[[jdbcfirstresult]][[TLJPA770]]
 
 '''''
 
@@ -1573,7 +1573,7 @@ For more information, see:
 
 * "Query Concepts" in _Understanding EclipseLink_
 
-[[maxrows]][[TLJPA651]]
+[[jdbcmaxrows]][[TLJPA651]]
 
 '''''
 
@@ -1647,7 +1647,7 @@ For more information, see:
 http://wiki.eclipse.org/EclipseLink/Examples/JPA/Pagination
 * "Query Concepts" in _Understanding EclipseLink_
 
-[[CACCHBBG]][[TLJPA773]]
+[[jdbcnativeconnection]][[TLJPA773]]
 
 '''''
 
@@ -1711,7 +1711,7 @@ For more information, see:
 
 * xref:{relativedir}/persistenceproperties_ref.adoc#target-server["target-server"]
 
-[[CHDEBFHE]][[TLJPA776]]
+[[jdbcparameterdelimiter]][[TLJPA776]]
 
 '''''
 
@@ -1773,9 +1773,9 @@ import org.eclipse.persistence.config.QueryHints;
 
 For more information, see:
 
-* link:#bindparameters["jdbc.bind-parameters"]
+* link:#jdbcbindparameters["jdbc.bind-parameters"]
 
-[[timeout]][[TLJPA656]]
+[[jdbctimeout]][[TLJPA656]]
 
 '''''
 
@@ -1854,7 +1854,7 @@ For more information, see:
 * "About JPA Query Hints" in _Understanding EclipseLink_
 * "Enhancing Performance" in _Solutions Guide for EclispeLink_
 
-[[fetch]][[TLJPA660]]
+[[joinfetch1]][[TLJPA660]]
 
 '''''
 
@@ -1936,10 +1936,10 @@ For more information, see:
 * "Fetch Joins" in the JPA Specification
 (`http://jcp.org/en/jsr/detail?id=317`)
 * link:#batch["batch"]
-* link:#CHDEFDDC["left-join-fetch"]
+* link:#leftjoinfetch["left-join-fetch"]
 * "Enhancing Performance" in _Solutions Guide for EclispeLink_
 
-[[CHDEFDDC]][[TLJPA779]]
+[[leftjoinfetch]][[TLJPA779]]
 
 '''''
 
@@ -2013,10 +2013,10 @@ import org.eclipse.persistence.config.QueryHints;
 * "Fetch Joins" in the JPA Specification
 (`http://jcp.org/en/jsr/detail?id=317`)
 * link:#batch["batch"]
-* link:#fetch["join-fetch"]
+* link:#joinfetch1["join-fetch"]
 * "Enhancing Performance" in _Solutions Guide for EclispeLink_
 
-[[BABIJCGD]][[TLJPA782]]
+[[loadgroup]][[TLJPA782]]
 
 '''''
 
@@ -2085,20 +2085,20 @@ import org.eclipse.persistence.config.QueryHints;
 
 For more information, see:
 
-* link:#CACEDHDG["load-group.attribute"]
+* link:#loadgroupattribute["load-group.attribute"]
 * "AttributeGroup Types and Operations" in _Understanding EclipseLink_
 * EclipseLink Attribute Group
 example:`http://wiki.eclipse.org/EclipseLink/Examples/JPA/AttributeGroup`
 * xref:{relativedir}/annotations_ref.adoc#BABJBDEG["@FetchGroup"]
 
-[[CACEDHDG]][[TLJPA785]]
+[[loadgroupattribute]][[TLJPA785]]
 
 '''''
 
 === load-group.attribute
 
 Use `eclipselink.load-group.attribute` to specify if the query uses a
-link:#BABIJCGD[load-group] that includes a list of attributes.
+link:#loadgroup[load-group] that includes a list of attributes.
 
 [[sthref651]]
 
@@ -2117,7 +2117,7 @@ are supported.
 
 For more information, see:
 
-* link:#BABIJCGD["load-group"]
+* link:#loadgroup["load-group"]
 
 [[maintaincache]][[TLJPA54073]]
 
@@ -2285,7 +2285,7 @@ EclispeLink_
 * "Building Blocks of a EclipseLink Project" in _Understanding
 EclipseLink_
 
-[[CHDGDECH]][[TLJPA788]]
+[[prepare]][[TLJPA788]]
 
 '''''
 
@@ -2361,7 +2361,7 @@ For more information, see:
 
 * "Understanding Queries" in _Understanding EclipseLink_
 
-[[CHDGEADJ]][[TLJPA792]]
+[[queryresultscache]][[TLJPA792]]
 
 '''''
 
@@ -2392,7 +2392,7 @@ link:#CHDEBFCF[Table 4-28] describes this persistence property's values.
 *Usage*
 
 By default, the query will cache 100 query results (see
-link:#CACJDDDG[query-results-cache.size]); if the same named query with
+link:#queryresultscachesize[query-results-cache.size]); if the same named query with
 the same arguments is re-executed EclipseLink will skip the database and
 return the cached results.
 
@@ -2462,7 +2462,7 @@ For more information, see:
 
 * "About Query Results Cache" in _Understanding EclipseLink_
 
-[[BABHGIHG]][[TLJPA797]]
+[[queryresultscacheexpiry]][[TLJPA797]]
 
 '''''
 
@@ -2533,9 +2533,9 @@ See Also*
 
 For more information, see:
 
-* link:#CHDGEADJ["query-results-cache"]
+* link:#queryresultscache["query-results-cache"]
 
-[[CBAFBFJA]][[TLJPA801]]
+[[queryresultscacheexpirytimeofday]][[TLJPA801]]
 
 '''''
 
@@ -2604,9 +2604,9 @@ import org.eclipse.persistence.config.QueryHints;
 
 For more information, see:
 
-* link:#CHDGEADJ["query-results-cache"]
+* link:#queryresultscache["query-results-cache"]
 
-[[CHDHGGBD]][[TLJPA805]]
+[[queryresultscacheignorenull]][[TLJPA805]]
 
 '''''
 
@@ -2678,16 +2678,16 @@ import org.eclipse.persistence.config.QueryHints;
 
 For more information, see:
 
-* link:#CHDGEADJ["query-results-cache"]
+* link:#queryresultscache["query-results-cache"]
 
-[[BEIGHCEF]][[TLJPA54077]]
+[[queryresultscacherandomizeexpiry]][[TLJPA54077]]
 
 '''''
 
 === query-results-cache.randomize-expiry
 
 Use `eclipselink.query-results-cache.randomize-expiry` to specify the
-expiry time (link:#BABHGIHG[query-results-cache.expiry]) should be
+expiry time (link:#queryresultscacheexpiry[query-results-cache.expiry]) should be
 randomized by 10% of its set value.
 
 [[sthref688]]
@@ -2752,10 +2752,10 @@ import org.eclipse.persistence.config.QueryHints;
 
 For more information, see:
 
-* link:#CHDGEADJ["query-results-cache"]
-* link:#BABHGIHG["query-results-cache.expiry"]
+* link:#queryresultscache["query-results-cache"]
+* link:#queryresultscacheexpiry["query-results-cache.expiry"]
 
-[[CACJDDDG]][[TLJPA813]]
+[[queryresultscachesize]][[TLJPA813]]
 
 '''''
 
@@ -2784,7 +2784,7 @@ link:#CBAIEAAC[Table 4-33] describes this query hint's values.
 
 *Usage*
 
-When using link:#CHDGEADJ[query-results-cache], if the same named query
+When using link:#queryresultscache[query-results-cache], if the same named query
 with the same arguments is re-executed EclipseLink will skip the
 database and return the cached results.
 
@@ -2829,9 +2829,9 @@ import org.eclipse.persistence.config.QueryHints;
 
 For more information, see:
 
-* link:#CHDGEADJ["query-results-cache"]
+* link:#queryresultscache["query-results-cache"]
 
-[[CACCFFDA]][[TLJPA54081]]
+[[queryresultscachetype]][[TLJPA54081]]
 
 '''''
 
@@ -2909,8 +2909,7 @@ import org.eclipse.persistence.config.QueryHints;
 
 [[sthref702]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -2998,7 +2997,7 @@ For more information, see:
 
 * "Queries" in _Understanding EclipseLink_
 
-[[TLJPA676]]
+[[readonly1]][[TLJPA676]]
 
 '''''
 
@@ -3149,9 +3148,9 @@ import org.eclipse.persistence.config.QueryHints;
 
 For more information, see:
 
-* link:#refreshcache["refresh.cascade"]
+* link:#refreshcascade["refresh.cascade"]
 
-[[refreshcache]][[TLJPA1056]]
+[[refreshcascade]][[TLJPA1056]]
 
 '''''
 
@@ -3223,7 +3222,7 @@ For more information, see:
 
 * link:#refresh["refresh"]
 
-[[BABCJADG]][[TLJPA655]]
+[[resultcollectiontype]][[TLJPA655]]
 
 '''''
 
@@ -3298,7 +3297,7 @@ For more information, see:
 
 * "Collection Mappings" in the _Understanding EclipseLink_
 
-[[CIHHAEDE]][[TLJPA822]]
+[[sqlhint]][[TLJPA822]]
 
 '''''
 
