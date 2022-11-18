@@ -302,7 +302,7 @@
 * xref:{relativedir}/persistenceproperties_ref.adoc#CHDDABBB[5-52 Using jdbc.native-sql in persistence.xml]
 * xref:{relativedir}/persistenceproperties_ref.adoc#CHDIJBIE[5-53 Using jdbc.native-sql in a Property Map]
 * xref:{relativedir}/persistenceproperties_ref.adoc#CHDHGEBH[5-54 Using jdbc.property in persistence.xml]
-* xref:{relativedir}/persistenceproperties_ref.adoc#CHDJHBDG[5-55 Using jdbc.sql-cast in persistence.xml]
+* xref:{relativedir}/persistenceproperties_ref.adoc#CHDJHBDG1[5-55 Using jdbc.sql-cast in persistence.xml]
 * xref:{relativedir}/persistenceproperties_ref.adoc#CHDBHAGA[5-56 Using jdbc.uppercase-column-names in persistence.xml]
 * xref:{relativedir}/persistenceproperties_ref.adoc#CHDJJCBB[5-57 Using jpa.uppercase-column-names in persistence.xml]
 * xref:{relativedir}/persistenceproperties_ref.adoc#CHDCHGGF[5-58 Using jpql.validation in persistence.xml]

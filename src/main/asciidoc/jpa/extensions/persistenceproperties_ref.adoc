@@ -58,12 +58,12 @@ The following lists the EclipseLink persistence property
 EclipseLink includes the following persistence property extensions for
 weaving:
 
-* `weaving`
-* `weaving.changetracking`
-* `weaving.eager`
-* `weaving.fetchgroups`
-* `weaving.internal`
-* `weaving.lazy`
+* link:#prop.weaving[`weaving`]
+* link:#weavingchangetracking[`weaving.changetracking`]
+* link:#weavingeager[`weaving.eager`]
+* link:#weavingfetchgroups[`weaving.fetchgroups`]
+* link:#weavinginternal[`weaving.internal`]
+* link:#weavinglazy[`weaving.lazy`]
 
 [[CACDIEID2]][[TLJPA1050]]
 
@@ -72,19 +72,19 @@ weaving:
 EclipseLink includes the following persistence property extensions for
 customizing descriptors and sessions:
 
-* `deploy-on-startup`
-* `descriptor.customizer`
-* `session.customizer`
-* `session.include.descriptor.queries`
-* `session-event-listener`
-* `session-name`
-* `sessions-xml`
-* `target-database`
-* `target-server`
-* `metadata-source`
-* `metadata-source.properties.file`
-* `metadata-source.send-refresh-command`
-* `metadata-source.xml.url`
+* link:#deployonstartup[`deploy-on-startup`]
+* link:#descriptorcustomizer[`descriptor.customizer`]
+* link:#sessioncustomizer[`session.customizer`]
+* link:#sessionincludedescriptorqueries[`session.include.descriptor.queries`]
+* link:#sessioneventlistener[`session-event-listener`]
+* link:#sessionname[`session-name`]
+* link:#sessionsxml[`sessions-xml`]
+* link:#targetdatabase[`target-database`]
+* link:#targetserver[`target-server`]
+* link:#metadatasource[`metadata-source`]
+* link:#metadatasourcepropertiesfile[`metadata-source.properties.file`]
+* link:#metadatasourcesendrefreshcommand[`metadata-source.send-refresh-command`]
+* link:#metadatasourcexmlurl[`metadata-source.xml.url`]
 
 [[CACJHFEC2]][[TLJPA1051]]
 
@@ -93,10 +93,10 @@ customizing descriptors and sessions:
 EclipseLink includes the following persistence property extensions for
 validation.
 
-* `exception-handler`
-* `partitioning`
-* `partitioning.callback`
-* `profiler`
+* link:#exceptionhandler[`exception-handler`]
+* link:#prop.partitioning[`partitioning`]
+* link:#partitioningcallback[`partitioning.callback`]
+* link:#profiler[`profiler`]
 
 [[TLJPA827]]
 
@@ -107,13 +107,13 @@ validation.
 EclipseLink includes the following persistence property extensions for
 logging.
 
-* `logging.connection`
-* `logging.exceptions`
-* `logging.file`
-* `logging.level`
-* `logging.session`
-* `logging.thread`
-* `logging.timestamp`
+* link:#loggingconnection[`logging.connection`]
+* link:#loggingexceptions[`logging.exceptions`]
+* link:#loggingfile[`logging.file`]
+* link:#logginglevel[`logging.level`]
+* link:#loggingsession[`logging.session`]
+* link:#loggingthread[`logging.thread`]
+* link:#loggingtimestamp[`logging.timestamp`]
 
 [[CACDCCEG2]][[TLJPA1052]]
 
@@ -122,29 +122,29 @@ logging.
 EclipseLink includes the following persistence property extensions for
 caching:
 
-* `cache.coordination.channel`
-* `cache.coordination.jms.factory`
-* `cache.coordination.jms.host`
-* `cache.coordination.jms.reuse-topic-publisher`
-* `cache.coordination.jms.topic`
-* `cache.coordination.jndi.initial-context-factory`
-* `cache.coordination.jndi.password`
-* `cache.coordination.jndi.user`
-* `cache.coordination.naming-service`
-* `cache.coordination.propagate-asynchronously`
-* `cache.coordination.protocol`
-* `cache.coordination.remove-connection-on-error`
-* `cache.coordination.rmi.announcement-delay`
-* `cache.coordination.rmi.multicast-group`
-* `cache.coordination.rmi.multicast-group`
-* `cache.coordination.rmi.packet-time-to-live`
-* `cache.coordination.rmi.url`
-* `cache.coordination.thread.pool.size`
-* `cache.database-event-listener`
-* `cache.shared`
-* `cache.size`
-* `cache.type`
-* `flush-clear.cache`
+* link:#cachecoordinationchannel[`cache.coordination.channel`]
+* link:#cachecoordinationjmsfactory[`cache.coordination.jms.factory`]
+* link:#cachecoordinationjmshost[`cache.coordination.jms.host`]
+* link:#cachecoordinationjmsreusetopicpublisher[`cache.coordination.jms.reuse-topic-publisher`]
+* link:#cachecoordinationjmstopic[`cache.coordination.jms.topic`]
+* link:#cachecoordinationjndiinitialcontextfactory[`cache.coordination.jndi.initial-context-factory`]
+* link:#cachecoordinationjndipassword[`cache.coordination.jndi.password`]
+* link:#cachecoordinationjndiuser[`cache.coordination.jndi.user`]
+* link:#cachecoordinationnamingservice[`cache.coordination.naming-service`]
+* link:#cachecoordinationpropagateasynchronously[`cache.coordination.propagate-asynchronously`]
+* link:#cachecoordinationprotocol[`cache.coordination.protocol`]
+* link:#cachecoordinationremoveconnectiononerror[`cache.coordination.remove-connection-on-error`]
+* link:#cachecoordinationrmiannouncementdelay[`cache.coordination.rmi.announcement-delay`]
+* link:#cachecoordinationrmimulticastgroup[`cache.coordination.rmi.multicast-group`]
+* link:#cachecoordinationrmimulticastgroupport[`cache.coordination.rmi.multicast-group.port`]
+* link:#cachecoordinationrmipackettimetolive[`cache.coordination.rmi.packet-time-to-live`]
+* link:#cachecoordinationrmiurl[`cache.coordination.rmi.url`]
+* link:#cachecoordinationthreadpoolsize[`cache.coordination.thread.pool.size`]
+* link:#cachedatabaseeventlistener[`cache.database-event-listener`]
+* link:#cacheshared[`cache.shared`]
+* link:#cachesize[`cache.size`]
+* link:#cachetype[`cache.type`]
+* link:#cachetype[`flush-clear.cache`]
 
 [[CHDBDCHB2]][[TLJPA1053]]
 
@@ -153,9 +153,9 @@ caching:
 EclipseLink includes the following persistence property extensions for
 mappings:
 
-* `composite-unit`
-* `composite-unit.member`
-* `composite-unit.properties`
+* link:#compositeunit[`composite-unit`]
+* link:#compositeunitmember[`composite-unit.member`]
+* link:#compositeunitproperties[`composite-unit.properties`]
 
 [[CHDFDDBF]][[TLJPA54051]]
 
@@ -164,11 +164,11 @@ mappings:
 EclipseLink includes the following persistence property extensions for
 mappings:
 
-* `create-ddl-jdbc-file-name`
-* `ddl.table-creation-suffix`
-* `ddl-generation`
-* `ddl-generation.output-mode`
-* `drop-ddl-jdbc-file-name`
+* link:#createddljdbcfilename[`create-ddl-jdbc-file-name`]
+* link:#ddltablecreationsuffix[`ddl.table-creation-suffix`]
+* link:#ddlgeneration[`ddl-generation`]
+* link:#ddlgenerationoutputmode[`ddl-generation.output-mode`]
+* link:#dropddljdbcfilename[`drop-ddl-jdbc-file-name`]
 
 [[CHDICECH2]][[TLJPA1054]]
 
@@ -177,22 +177,22 @@ mappings:
 EclipseLink includes the following persistence property extensions for
 configuring JDBC connections and connection pooling:
 
-* `connection-pool`
-* `connection-pool.read`
-* `connection-pool.sequence`
-* `jdbc.allow-native-sql-queries`
-* `jdbc.batch-writing`
-* `jdbc.batch-writing.size`
-* `jdbc.cache-statements`
-* `jdbc.cache-statements.size`
-* `jdbc.connector`
-* `jdbc.exclusive-connection.is-lazy`
-* `jdbc.exclusive-connection.mode`
-* `jdbc.naming_into_indexed`
-* `jdbc.native-sql`
-* `jdbc.property`
-* `jdbc.sql-cast`
-* `jdbc.uppercase-columns`
+* link:#connectionpool[`connection-pool`]
+* link:#connectionpoolread[`connection-pool.read`]
+* link:#connectionpoolsequence[`connection-pool.sequence`]
+* link:#jdbcallownativesqlqueries[`jdbc.allow-native-sql-queries`]
+* link:#jdbcbatchwriting[`jdbc.batch-writing`]
+* link:#jdbcbatchwritingsize[`jdbc.batch-writing.size`]
+* link:#jdbccachestatements[`jdbc.cache-statements`]
+* link:#jdbccachestatementssize[`jdbc.cache-statements.size`]
+* link:#jdbcconnector[`jdbc.connector`]
+* link:#jdbcexclusiveconnectionislazy[`jdbc.exclusive-connection.is-lazy`]
+* link:#jdbcexclusiveconnectionmode[`jdbc.exclusive-connection.mode`]
+* link:#jdbcnamingintoindexed[`jdbc.naming_into_indexed`]
+* link:#jdbcnativesql[`jdbc.native-sql`]
+* link:#jdbcproperty[`jdbc.property`]
+* link:#jdbcsqlcast[`jdbc.sql-cast`]
+* link:#jdbcuppercasecolumns[`jdbc.uppercase-columns`]
 
 [[CHDFDDBF1]][[TLJPA540511]]
 
@@ -201,13 +201,13 @@ configuring JDBC connections and connection pooling:
 EclipseLink includes the following persistence property extensions for
 concurrency management:
 
-* `concurrency.manager.waittime`
-* `concurrency.manager.maxsleeptime`
-* `concurrency.manager.maxfrequencytodumptinymessage`
-* `concurrency.manager.maxfrequencytodumpmassivemessage`
-* `concurrency.manager.allow.interruptedexception`
-* `concurrency.manager.allow.concurrencyexception`
-* `concurrency.manager.allow.readlockstacktrace`
+* link:#concurrencymanagerwaittime[`concurrency.manager.waittime`]
+* link:#concurrencymanagermaxsleeptime[`concurrency.manager.maxsleeptime`]
+* link:#concurrencymanagermaxfrequencytodumptinymessage[`concurrency.manager.maxfrequencytodumptinymessage`]
+* link:#concurrencymanagermaxfrequencytodumpmassivemessage[`concurrency.manager.maxfrequencytodumpmassivemessage`]
+* link:#concurrencymanagerallowinterruptedexception[`concurrency.manager.allow.interruptedexception`]
+* link:#concurrencymanagerallowconcurrencyexception[`concurrency.manager.allow.concurrencyexception`]
+* link:#concurrencymanagerallowreadlockstacktrace[`concurrency.manager.allow.readlockstacktrace`]
 
 [[CACBGBJG2]][[TLJPA1055]]
 
@@ -216,118 +216,117 @@ concurrency management:
 The following lists the EclipseLink persistence property
 (`persitence.xml` file) extensions, in alphabetical order:
 
-* `application-location`
-* `cache.coordination.channel`
-* `cache.coordination.jms.factory`
-* `cache.coordination.jms.host`
-* `cache.coordination.jms.reuse-topic-publisher`
-* `cache.coordination.jms.topic`
-* `cache.coordination.jndi.initial-context-factory`
-* `cache.coordination.jndi.password`
-* `cache.coordination.jndi.user`
-* `cache.coordination.naming-service`
-* `cache.coordination.propagate-asynchronously`
-* `cache.coordination.protocol`
-* `cache.coordination.remove-connection-on-error`
-* `cache.coordination.rmi.announcement-delay`
-* `cache.coordination.rmi.multicast-group`
-* `cache.coordination.rmi.multicast-group`
-* `cache.coordination.rmi.packet-time-to-live`
-* `cache.coordination.rmi.url`
-* `cache.coordination.thread.pool.size`
-* `cache.database-event-listener`
-* `cache.shared`
-* `cache.size`
-* `cache.type`
-* `classloader`
-* `composite-unit`
-* `composite-unit.member`
-* `composite-unit.properties`
-* `concurrency.manager.waittime`
-* `concurrency.manager.maxsleeptime`
-* `concurrency.manager.maxfrequencytodumptinymessage`
-* `concurrency.manager.maxfrequencytodumpmassivemessage`
-* `concurrency.manager.allow.interruptedexception`
-* `concurrency.manager.allow.concurrencyexception`
-* `concurrency.manager.allow.readlockstacktrace`
-* `connection-pool`
-* `connection-pool.read`
-* `connection-pool.sequence`
-* `create-ddl-jdbc-file-name`
-* `ddl.table-creation-suffix`
-* `ddl-generation`
-* `ddl-generation.output-mode`
-* `ddl.table-creation-suffix`
-* `deploy-on-startup`
-* `descriptor.customizer`
-* `drop-ddl-jdbc-file-name`
-* `exception-handler`
-* `exclude-eclipselink-orm`
-* `flush-clear.cache`
-* `id-validation`
-* `jdbc.allow-native-sql-queries`
-* `jdbc.batch-writing`
-* `jdbc.batch-writing.size`
-* `jdbc.cache-statements`
-* `jdbc.cache-statements.size`
-* `jdbc.connector`
-* `jdbc.exclusive-connection.is-lazy`
-* `jdbc.exclusive-connection.mode`
-* `jdbc.naming_into_indexed`
-* `jdbc.native-sql`
-* `jdbc.property`
-* `jdbc.sql-cast`
-* `jdbc.uppercase-columns`
-* `jpa.uppercase-column-names`
-* `jpql.parser`
-* `jpql.validation`
-* `logging.connection`
-* `logging.exceptions`
-* `logging.file`
-* `logging.level`
-* `logging.session`
-* `logging.thread`
-* `logging.timestamp`
-* `metadata-source`
-* `metadata-source.properties.file`
-* `metadata-source.send-refresh-command`
-* `metadata-source.xml.url`
-* `nosql.connection-factory`
-* `nosql.connection-spec`
-* `nosql.property`
-* `oracle.proxy-type`
-* `orm.throw.exceptions`
-* `orm.validate.schema`
-* `partitioning`
-* `partitioning.callback`
-* `persistence-context.close-on-commit`
-* `persistence-context.commit-without-persist-rules`
-* `persistence-context.flush-mode`
-* `persistence-context.persist-on-commit`
-* `persistence-context.reference-mode`
-* `persistenceunits`
-* `persistencexml`
-* `persisencexml.default`
-* `profiler`
-* `session.customizer`
-* `session.include.descriptor.queries`
-* `session-event-listener`
-* `session-name`
-* `sessions-xml`
-* `target-database`
-* `target-server`
-* `temporal.mutable`
-* `tenant-id`
-* `transaction.join-existing`
-* `tuning`
-* `validate-existence`
-* `validation-only`
-* `weaving`
-* `weaving.changetracking`
-* `weaving.eager`
-* `weaving.fetchgroups`
-* `weaving.internal`
-* `weaving.lazy`
+* link:#applicationlocation[`application-location`]
+* link:#cachecoordinationchannel[`cache.coordination.channel`]
+* link:#cachecoordinationjmsfactory[`cache.coordination.jms.factory`]
+* link:#cachecoordinationjmshost[`cache.coordination.jms.host`]
+* link:#cachecoordinationjmsreusetopicpublisher[`cache.coordination.jms.reuse-topic-publisher`]
+* link:#cachecoordinationjmstopic[`cache.coordination.jms.topic`]
+* link:#cachecoordinationjndiinitialcontextfactory[`cache.coordination.jndi.initial-context-factory`]
+* link:#cachecoordinationjndipassword[`cache.coordination.jndi.password`]
+* link:#cachecoordinationjndiuser[`cache.coordination.jndi.user`]
+* link:#cachecoordinationnamingservice[`cache.coordination.naming-service`]
+* link:#cachecoordinationpropagateasynchronously[`cache.coordination.propagate-asynchronously`]
+* link:#cachecoordinationprotocol[`cache.coordination.protocol`]
+* link:#cachecoordinationremoveconnectiononerror[`cache.coordination.remove-connection-on-error`]
+* link:#cachecoordinationrmiannouncementdelay[`cache.coordination.rmi.announcement-delay`]
+* link:#cachecoordinationrmimulticastgroup[`cache.coordination.rmi.multicast-group`]
+* link:#cachecoordinationrmimulticastgroupport[`cache.coordination.rmi.multicast-group.port`]
+* link:#cachecoordinationrmipackettimetolive[`cache.coordination.rmi.packet-time-to-live`]
+* link:#cachecoordinationrmiurl[`cache.coordination.rmi.url`]
+* link:#cachecoordinationthreadpoolsize[`cache.coordination.thread.pool.size`]
+* link:#cachedatabaseeventlistener[`cache.database-event-listener`]
+* link:#cacheshared[`cache.shared`]
+* link:#cachesize[`cache.size`]
+* link:#cachetype[`cache.type`]
+* link:#classloader[`classloader`]
+* link:#compositeunit[`composite-unit`]
+* link:#compositeunitmember[`composite-unit.member`]
+* link:#compositeunitproperties[`composite-unit.properties`]
+* link:#concurrencymanagerwaittime[`concurrency.manager.waittime`]
+* link:#concurrencymanagermaxsleeptime[`concurrency.manager.maxsleeptime`]
+* link:#concurrencymanagermaxfrequencytodumptinymessage[`concurrency.manager.maxfrequencytodumptinymessage`]
+* link:#concurrencymanagermaxfrequencytodumpmassivemessage[`concurrency.manager.maxfrequencytodumpmassivemessage`]
+* link:#concurrencymanagerallowinterruptedexception[`concurrency.manager.allow.interruptedexception`]
+* link:#concurrencymanagerallowconcurrencyexception[`concurrency.manager.allow.concurrencyexception`]
+* link:#concurrencymanagerallowreadlockstacktrace[`concurrency.manager.allow.readlockstacktrace`]
+* link:#connectionpool[`connection-pool`]
+* link:#connectionpoolread[`connection-pool.read`]
+* link:#connectionpoolsequence[`connection-pool.sequence`]
+* link:#createddljdbcfilename[`create-ddl-jdbc-file-name`]
+* link:#ddltablecreationsuffix[`ddl.table-creation-suffix`]
+* link:#ddlgeneration[`ddl-generation`]
+* link:#ddlgenerationoutputmode[`ddl-generation.output-mode`]
+* link:#deployonstartup[`deploy-on-startup`]
+* link:#descriptorcustomizer[`descriptor.customizer`]
+* link:#dropddljdbcfilename[`drop-ddl-jdbc-file-name`]
+* link:#exceptionhandler[`exception-handler`]
+* link:#excludeeclipselinkorm[`exclude-eclipselink-orm`]
+* link:#flushclearcache[`flush-clear.cache`]
+* link:#idvalidation[`id-validation`]
+* link:#jdbcallownativesqlqueries[`jdbc.allow-native-sql-queries`]
+* link:#jdbcbatchwriting[`jdbc.batch-writing`]
+* link:#jdbcbatchwritingsize[`jdbc.batch-writing.size`]
+* link:#jdbccachestatements[`jdbc.cache-statements`]
+* link:#jdbccachestatementssize[`jdbc.cache-statements.size`]
+* link:#jdbcconnector[`jdbc.connector`]
+* link:#jdbcexclusiveconnectionislazy[`jdbc.exclusive-connection.is-lazy`]
+* link:#jdbcexclusiveconnectionmode[`jdbc.exclusive-connection.mode`]
+* link:#jdbcnamingintoindexed[`jdbc.naming_into_indexed`]
+* link:#jdbcnativesql[`jdbc.native-sql`]
+* link:#jdbcproperty[`jdbc.property`]
+* link:#jdbcsqlcast[`jdbc.sql-cast`]
+* link:#jdbcuppercasecolumns[`jdbc.uppercase-columns`]
+* link:#jpauppercasecolumnnames[`jpa.uppercase-column-names`]
+* link:#jpqlparser[`jpql.parser`]
+* link:#jpqlvalidation[`jpql.validation`]
+* link:#loggingconnection[`logging.connection`]
+* link:#loggingexceptions[`logging.exceptions`]
+* link:#loggingfile[`logging.file`]
+* link:#logginglevel[`logging.level`]
+* link:#loggingsession[`logging.session`]
+* link:#loggingthread[`logging.thread`]
+* link:#loggingtimestamp[`logging.timestamp`]
+* link:#metadatasource[`metadata-source`]
+* link:#metadatasourcepropertiesfile[`metadata-source.properties.file`]
+* link:#metadatasourcesendrefreshcommand[`metadata-source.send-refresh-command`]
+* link:#metadatasourcexmlurl[`metadata-source.xml.url`]
+* link:#nosqlconnectionfactory[`nosql.connection-factory`]
+* link:#nosqlconnectionspec[`nosql.connection-spec`]
+* link:#nosqlproperty[`nosql.property`]
+* link:#oracleproxytype[`oracle.proxy-type`]
+* link:#ormthrowexceptions[`orm.throw.exceptions`]
+* link:#ormvalidateschema[`orm.validate.schema`]
+* link:#prop.partitioning[`partitioning`]
+* link:#partitioningcallback[`partitioning.callback`]
+* link:#persistencecontextcloseoncommit[`persistence-context.close-on-commit`]
+* link:#persistencecontextcommitwithoutpersistrules[`persistence-context.commit-without-persist-rules`]
+* link:#persistencecontextflushmode[`persistence-context.flush-mode`]
+* link:#persistencecontextpersistoncommit[`persistence-context.persist-on-commit`]
+* link:#persistencecontextreferencemode[`persistence-context.reference-mode`]
+* link:#persistenceunits[`persistenceunits`]
+* link:#persistencexml[`persistencexml`]
+* link:#persisencexmldefault[`persisencexml.default`]
+* link:#profiler[`profiler`]
+* link:#sessioncustomizer[`session.customizer`]
+* link:#sessionincludedescriptorqueries[`session.include.descriptor.queries`]
+* link:#sessioneventlistener[`session-event-listener`]
+* link:#sessionname[`session-name`]
+* link:#sessionsxml[`sessions-xml`]
+* link:#targetdatabase[`target-database`]
+* link:#targetserver[`target-server`]
+* link:#temporalmutable[`temporal.mutable`]
+* link:#tenantid[`tenant-id`]
+* link:#transactionjoinexisting[`transaction.join-existing`]
+* link:#tuning[`tuning`]
+* link:#validateexistence[`validate-existence`]
+* link:#validationonly[`validation-only`]
+* link:#prop.weaving[`weaving`]
+* link:#weavingchangetracking[`weaving.changetracking`]
+* link:#weavingeager[`weaving.eager`]
+* link:#weavingfetchgroups[`weaving.fetchgroups`]
+* link:#weavinginternal[`weaving.internal`]
+* link:#weavinglazy[`weaving.lazy`]
 
 [[applicationlocation]][[TLJPA1060]]
 
@@ -397,7 +396,7 @@ propertiesMap.put(PersistenceUnitProperties.APPLICATION_LOCATION,
 
 For more information, see:
 
-* link:#BABCDHBB["ddl-generation.output-mode"]
+* link:#ddlgenerationoutputmode["ddl-generation.output-mode"]
 
 [[cachecoordinationchannel]][[TLJPA1062]]
 
@@ -471,7 +470,7 @@ propertiesMap.put(PersistenceUnitProperties.CACHE_COORDINATION_CHANNEL,
 
 For more information, see:
 
-* link:annotations_ref.htm#CHDBBIHE["@Cache"]
+* xref:{relativedir}/annotations_ref.adoc#CHDBBIHE["@Cache"]
 * "Cache Coordination" in _Understanding EclipseLink_
 * "Scaling EclipseLink Applications in Clusters" in _Solutions Guide for
 EclispeLink_
@@ -1452,7 +1451,6 @@ link:#CACFAGIE[Table 5-16] describes this persistence property's values.
 *_Table 5-16 Valid Values for
 cache.coordination.rmi.multicast-group.port_*
 
-[width="28%",cols="<100%,<",options="header",]
 |===================================
 |*Value* |*Description*
 |Numeric a|
@@ -1550,7 +1548,7 @@ For more information, see:
 * "Scaling EclipseLink Applications in Clusters" in _Solutions Guide for
 EclispeLink_
 
-[[BABCJIFC]][[TLJPA863]]
+[[cachecoordinationrmiurl]][[TLJPA863]]
 
 '''''
 
@@ -1768,7 +1766,7 @@ ener"/>
 
 For more information, see:
 
-* link:annotations_ref.htm#CHDBBIHE["@Cache"]
+* xref:{relativedir}/annotations_ref.adoc#CHDBBIHE["@Cache"]
 * "Cache Coordination" in _Understanding EclipseLink_
 * "Scaling EclipseLink Applications in Clusters" in _Solutions Guide for
 EclispeLink_
@@ -1822,7 +1820,7 @@ that sets the default for all entities.
 
 *Examples*
 
-See link:annotations_ref.htm#CACHFEFD[Example 2-12] for information on
+See xref:{relativedir}/annotations_ref.adoc#CACHFEFD[Example 2-12] for information on
 how to use this property.
 
 [[cachesize]][[TLJPA54118]]
@@ -1845,7 +1843,6 @@ values.
 
 *_Table 5-22 Valid Values for cache.size_*
 
-[width="25%",cols="<100%,<",options="header",]
 |===================================================
 |*Value* |*Description*
 |integer |The size of the cache. Default: 100 Bytes.
@@ -1869,15 +1866,14 @@ the size is the sub-cache size. The default cache size is 100 Bytes.
 
 *Examples*
 
-See link:annotations_ref.htm#CACHFEFD[Example 2-12] for information on
+See xref:{relativedir}/annotations_ref.adoc#CACHFEFD[Example 2-12] for information on
 how to use this property.
 
 [[cachetype]][[TLJPA54120]]
 
 '''''
 
-cache.type
-~~~~~~~~~~
+=== cache.type
 
 Use the `eclipselink.cache.type` property prefix to set the type of
 cache.
@@ -1960,7 +1956,7 @@ If you do not want to cache entities, set the `cache.shared` property.
 
 *Examples*
 
-See link:annotations_ref.htm#CACHFEFD[Example 2-12] for information
+See xref:{relativedir}/annotations_ref.adoc#CACHFEFD[Example 2-12] for information
 about how to use this property.
 
 [[sthref848]]
@@ -1969,7 +1965,7 @@ about how to use this property.
 
 For more information, see:
 
-* link:#CHDEJCJJ[cache.shared]
+* link:#cacheshared[cache.shared]
 
 [[classloader]][[TLJPA1069]]
 
@@ -2096,8 +2092,8 @@ link:#BIIECICI[Example 5-21] shows how to use this property in the
 
 For more information, see:
 
-* link:#CHDHCIDH["composite-unit.member"]
-* link:#CIHGHJGA["composite-unit.properties"]
+* link:#compositeunitmember["composite-unit.member"]
+* link:#compositeunitproperties["composite-unit.properties"]
 * "Using Multiple Databases with a Composite Persistence Unit" in
 _Solutions Guide for EclispeLink_
 * "Composite Persistence Units"
@@ -2199,24 +2195,22 @@ value="org.eclipse.persistence.platform.database.MySQLPlatform"/>
 
 For more information, see:
 
-* link:annotations_ref.htm#BGBHHCJH["@CompositeMember"]
+* xref:{relativedir}/annotations_ref.adoc#BGBHHCJH["@CompositeMember"]
 * link:#compositeunit["composite-unit"]
-* link:queryhints.htm#CHDDFIDC["composite-unit.member"]
+* xref:{relativedir}/queryhints.adoc#CHDDFIDC["composite-unit.member"]
 
-[[CIHGHJGA]][[TLJPA879]]
+[[compositeunitproperties]][[TLJPA879]]
 
 '''''
 
-composite-unit.properties
-~~~~~~~~~~~~~~~~~~~~~~~~~
+=== composite-unit.properties
 
 Use the `eclipselink.composite-unit.properties` property to configure
 the properties for persistence unit members.
 
 [[sthref863]]
 
-* +
-Values*
+*Values*
 
 link:#CIHHEHCB[Table 5-27] describes this persistence property's values.
 
@@ -2224,27 +2218,22 @@ link:#CIHHEHCB[Table 5-27] describes this persistence property's values.
 
 *_Table 5-27 Valid Values for composite-unit.properties_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |Map of properties |Properties to be passed to the persistence unit. Use
 the persistence unit's name as the key.
 |=======================================================================
 
- +
-
 [[sthref865]]
 
-* +
-Usage*
+*Usage*
 
 Pass this property to `createEntityManager` method of a composite
 persistence unit to pass properties to its member persistence units.
 
 [[sthref866]]
 
-* +
-Examples*
+*Examples*
 
 link:#CIHGBGHC[Example 5-23] shows how to use this property in a
 property map
@@ -2282,19 +2271,17 @@ EntityManagerFactory emf = Persistence.createEntityManagerFactory("compositePu",
 
 [[sthref867]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#BIICFIDB["composite-unit"]
+* link:#compositeunit["composite-unit"]
 
-[[concurrency.manager.waittime]]
+[[concurrencymanagerwaittime]]
 
 '''''
 
-concurrency.manager.waittime
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== concurrency.manager.waittime
 
 This property in milliseconds can control thread management in
 `org.eclipse.persistence.internal.helper.ConcurrencyManager`. It control
@@ -2302,8 +2289,7 @@ how much time loop wait before it try acquire lock for current thread
 again. It value is set above above 0 dead lock detection mechanism and
 related extended logging will be activated.
 
-* +
-Values*
+*Values*
 
 link:#concurrency.manager.waittime.tab[Table 5-30] describes this
 persistence property's values.
@@ -2312,7 +2298,6 @@ persistence property's values.
 
 *_Table 5-30 Valid Values for concurrency.manager.waittime_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |Wait time |How much time loop wait before it try acquire lock for
@@ -2320,8 +2305,7 @@ current thread again. Default value is 0 (unit is ms). Allowed values
 are: long
 |=======================================================================
 
-* +
-Examples*
+*Examples*
 
 link:#concurrency.manager.waittime.example[Example 5-24] shows how to
 use this property in the `persistence.xml` file.
@@ -2336,20 +2320,18 @@ use this property in the `persistence.xml` file.
             
 ----
 
-[[concurrency.manager.maxsleeptime]]
+[[concurrencymanagermaxsleeptime]]
 
 '''''
 
-concurrency.manager.maxsleeptime
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== concurrency.manager.maxsleeptime
 
 This system property in milliseconds can control thread management in
 `org.eclipse.persistence.internal.helper.ConcurrencyManager`. It control
 how long we are willing to wait before firing up an exception.
 
 
-* +
-Values*
+*Values*
 
 link:#concurrency.manager.maxsleeptime.tab[Table 5-30] describes this
 persistence property's values.
@@ -2358,7 +2340,6 @@ persistence property's values.
 
 *_Table 5-30 Valid Values for concurrency.manager.maxsleeptime_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |Wait time |It control how long we are willing to wait before firing up
@@ -2366,8 +2347,7 @@ an exception. Default value is 40000 (unit is ms). Allowed values are:
 long
 |=======================================================================
 
-* +
-Examples*
+*Examples*
 
 link:#concurrency.manager.maxsleeptime.example[Example 5-24] shows how
 to use this property in the `persistence.xml` file.
@@ -2383,12 +2363,11 @@ persistence.xml_*
             
 ----
 
-[[concurrency.manager.maxfrequencytodumptinymessage]]
+[[concurrencymanagermaxfrequencytodumptinymessage]]
 
 '''''
 
-concurrency.manager.maxfrequencytodumptinymessage
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== concurrency.manager.maxfrequencytodumptinymessage
 
 This system property in milliseconds can control thread management in
 `org.eclipse.persistence.internal.helper.ConcurrencyManager` and
@@ -2396,8 +2375,7 @@ This system property in milliseconds can control thread management in
 how frequently the tiny dump log message is created.
 
 
-* +
-Values*
+*Values*
 
 link:#concurrency.manager.maxfrequencytodumptinymessage.tab[Table 5-30]
 describes this persistence property's values.
@@ -2407,15 +2385,13 @@ describes this persistence property's values.
 *_Table 5-30 Valid Values for
 concurrency.manager.maxfrequencytodumptinymessage_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |Wait time |It control how frequently the tiny dump log message is
 created. Default value is 40000 (unit is ms). Allowed values are: long
 |=======================================================================
 
-* +
-Examples*
+*Examples*
 
 link:#concurrency.manager.maxfrequencytodumptinymessage.example[Example
 5-24] shows how to use this property in the `persistence.xml` file.
@@ -2431,12 +2407,11 @@ in persistence.xml_*
             
 ----
 
-[[concurrency.manager.maxfrequencytodumpmassivemessage]]
+[[concurrencymanagermaxfrequencytodumpmassivemessage]]
 
 '''''
 
-concurrency.manager.maxfrequencytodumpmassivemessage
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== concurrency.manager.maxfrequencytodumpmassivemessage
 
 This system property in milliseconds can control thread management in
 `org.eclipse.persistence.internal.helper.ConcurrencyManager` and
@@ -2444,8 +2419,7 @@ This system property in milliseconds can control thread management in
 how frequently the massive dump log message is created.
 
 
-* +
-Values*
+*Values*
 
 link:#concurrency.manager.maxfrequencytodumpmassivemessage.tab[Table
 5-30] describes this persistence property's values.
@@ -2455,15 +2429,13 @@ link:#concurrency.manager.maxfrequencytodumpmassivemessage.tab[Table
 *_Table 5-30 Valid Values for
 concurrency.manager.maxfrequencytodumpmassivemessage_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |Wait time |It control how frequently the massive dump log message is
 created. Default value is 60000 (unit is ms). Allowed values are: long
 |=======================================================================
 
-* +
-Examples*
+*Examples*
 
 link:#concurrency.manager.maxfrequencytodumpmassivemessage.example[Example
 5-24] shows how to use this property in the `persistence.xml` file.
@@ -2480,12 +2452,11 @@ persistence.xml_*
             
 ----
 
-[[concurrency.manager.allow.interruptedexception]]
+[[concurrencymanagerallowinterruptedexception]]
 
 '''''
 
-concurrency.manager.allow.interruptedexception
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== concurrency.manager.allow.interruptedexception
 
 In the places where use this property normally if a thread is stuck it
 is because it is doing object building. Blowing the threads ups is not
@@ -2497,8 +2468,7 @@ constant are not as sensible as when the write lock manager is starving
 to run commit.
 
 
-* +
-Values*
+*Values*
 
 link:#concurrency.manager.allow.interruptedexception.tab[Table 5-30]
 describes this persistence property's values.
@@ -2508,7 +2478,6 @@ describes this persistence property's values.
 *_Table 5-30 Valid Values for
 concurrency.manager.allow.interruptedexception_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |true |(Default) If we want the to fire up an exception to try to get
@@ -2519,8 +2488,7 @@ threads to progress.
 not fire the interrupted exception let the system.
 |=======================================================================
 
-* +
-Examples*
+*Examples*
 
 link:#concurrency.manager.allow.interruptedexception.example[Example
 5-24] shows how to use this property in the `persistence.xml` file.
@@ -2536,18 +2504,16 @@ persistence.xml_*
             
 ----
 
-[[concurrency.manager.allow.concurrencyexception]]
+[[concurrencymanagerallowconcurrencyexception]]
 
 '''''
 
-concurrency.manager.allow.concurrencyexception
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== concurrency.manager.allow.concurrencyexception
 
 See valid values table.
 
 
-* +
-Values*
+*Values*
 
 link:#concurrency.manager.allow.concurrencyexception.tab[Table 5-30]
 describes this persistence property's values.
@@ -2557,7 +2523,6 @@ describes this persistence property's values.
 *_Table 5-30 Valid Values for
 concurrency.manager.allow.concurrencyexception_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |true |(Default) If we want the to fire up an exception to try to get
@@ -2574,8 +2539,7 @@ terrible impact in system recovery unless we have infinite retries for
 the business transactions.
 |=======================================================================
 
-* +
-Examples*
+*Examples*
 
 link:#concurrency.manager.allow.concurrencyexception.example[Example
 5-24] shows how to use this property in the `persistence.xml` file.
@@ -2591,18 +2555,16 @@ persistence.xml_*
             
 ----
 
-[[concurrency.manager.allow.readlockstacktrace]]
+[[concurrencymanagerallowreadlockstacktrace]]
 
 '''''
 
-concurrency.manager.allow.readlockstacktrace
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== concurrency.manager.allow.readlockstacktrace
 
 Collect debug/trace information during ReadLock acquisition.
 
 
-* +
-Values*
+*Values*
 
 link:#concurrency.manager.allow.readlockstacktrace.tab[Table 5-30]
 describes this persistence property's values.
@@ -2612,7 +2574,6 @@ describes this persistence property's values.
 *_Table 5-30 Valid Values for
 concurrency.manager.allow.readlockstacktrace_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |true |(Default) Collect debug/trace information during ReadLock
@@ -2622,8 +2583,7 @@ acquisition.
 acquisition
 |=======================================================================
 
-* +
-Examples*
+*Examples*
 
 link:#concurrency.manager.allow.readlockstacktrace.example[Example 5-24]
 shows how to use this property in the `persistence.xml` file.
@@ -2643,16 +2603,14 @@ persistence.xml_*
 
 '''''
 
-connection-pool
-~~~~~~~~~~~~~~~
+=== connection-pool
 
 Use the `eclipselink.connection-pool` property to configure the various
 connection pool properties.
 
 [[sthref868]]
 
-* +
-Values*
+*Values*
 
 link:#BABGHEBJ[Table 5-28] describes this persistence property's values.
 
@@ -2660,7 +2618,6 @@ link:#BABGHEBJ[Table 5-28] describes this persistence property's values.
 
 *_Table 5-28 Valid Values for connection-pool_*
 
-[width="21%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`initial` |Starting (initial) number of connections.
@@ -2690,12 +2647,9 @@ default).
 than the default).
 |=======================================================================
 
- +
-
 [[sthref870]]
 
-* +
-Usage*
+*Usage*
 
 Append the name of the connection pool and property to be configured. If
 connection pool is specified, EclipseLink configures the default (write)
@@ -2703,8 +2657,7 @@ pool.
 
 [[sthref871]]
 
-* +
-Examples*
+*Examples*
 
 link:#BABICBAJ[Example 5-24] shows how to use this property in the
 `persistence.xml` file.
@@ -2724,8 +2677,7 @@ value="jdbc:oracle:thin:@node2:1521:orcl"/>
 
 [[sthref872]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -2733,24 +2685,22 @@ For more information, see:
 `http://wiki.eclipse.org/EclipseLink/Examples/JPA/Partitioning`
 * "Connection Pools" in _Understanding EclipseLink_
 * "Connection Pooling" in _Solutions Guide for EclispeLink_
-* link:#CHDHAFAA["jdbc.cache-statements"]
-* link:#CHDDIIFD["connection-pool.read"]
-* link:#BABIDAGH["connection-pool.sequence"]
+* link:#jdbccachestatements["jdbc.cache-statements"]
+* link:#connectionpoolread["connection-pool.read"]
+* link:#connectionpoolsequence["connection-pool.sequence"]
 
-[[CHDDIIFD]][[TLJPA884]]
+[[connectionpoolread]][[TLJPA884]]
 
 '''''
 
-connection-pool.read
-~~~~~~~~~~~~~~~~~~~~
+=== connection-pool.read
 
 Use the `eclipselink.connection-pool.read` property to configure a read
 connection pool for non-transaction read queries.
 
 [[sthref873]]
 
-* +
-Values*
+*Values*
 
 link:#CHDBEFFF[Table 5-29] describes this persistence property's values.
 
@@ -2758,7 +2708,6 @@ link:#CHDBEFFF[Table 5-29] describes this persistence property's values.
 
 *_Table 5-29 Valid Values for connection-pool.read_*
 
-[width="21%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`initial` |Starting (initial) number of connection.
@@ -2787,20 +2736,16 @@ default).
 then the default).
 |=======================================================================
 
- +
-
 [[sthref875]]
 
-* +
-Usage*
+*Usage*
 
 By default, EclipseLink _does not_ use a separate read connection pool;
 the default pool is used for read queries.
 
 [[sthref876]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDJCIHD[Example 5-25] shows how to use this property in the
 `persistence.xml` file.
@@ -2817,8 +2762,7 @@ link:#CHDJCIHD[Example 5-25] shows how to use this property in the
 
 [[sthref877]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -2826,19 +2770,17 @@ For more information, see:
 * "Connection Pooling" in _Solutions Guide for EclispeLink_
 * link:#connectionpool["connection-pool"]
 
-[[BABIDAGH]][[TLJPA887]]
+[[connectionpoolsequence]][[TLJPA887]]
 
 '''''
 
-connection-pool.sequence
-~~~~~~~~~~~~~~~~~~~~~~~~
+=== connection-pool.sequence
 
 Use the `eclipselink.connection-pool.sequence` property to have the
 connection pool allocate generated IDs.
 
 
-* +
-Values*
+*Values*
 
 link:#BABGAFBI[Table 5-30] describes this persistence property's values.
 
@@ -2846,7 +2788,6 @@ link:#BABGAFBI[Table 5-30] describes this persistence property's values.
 
 *_Table 5-30 Valid Values for connection-pool.sequence_*
 
-[width="21%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |true |Uses the internal connection pool to pool connections from a
@@ -2856,12 +2797,9 @@ datasource.
 connections from a datasource.
 |=======================================================================
 
- +
-
 [[sthref880]]
 
-* +
-Usage*
+*Usage*
 
 This is only required for `TABLE` sequencing. By default, EclipseLink
 _does not_ use a separate sequence connection pool; the default pool is
@@ -2869,8 +2807,7 @@ used for sequencing.
 
 [[sthref881]]
 
-* +
-Examples*
+*Examples*
 
 link:#BABEFAFH[Example 5-26] shows how to use this property in the
 `persistence.xml` file.
@@ -2886,8 +2823,7 @@ link:#BABEFAFH[Example 5-26] shows how to use this property in the
 
 [[sthref882]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -2899,8 +2835,7 @@ For more information, see:
 
 '''''
 
-create-ddl-jdbc-file-name
-~~~~~~~~~~~~~~~~~~~~~~~~~
+=== create-ddl-jdbc-file-name
 
 Use the `eclipselink.create-ddl-jdbc-file-name` property to specify the
 name of the DDL file generated by EclipseLink that contains the SQL
@@ -2908,8 +2843,7 @@ statements to create tables for JPA entities.
 
 [[sthref883]]
 
-* +
-Values*
+*Values*
 
 link:#CBBIDIID[Table 5-31] describes this persistence property's values.
 
@@ -2917,7 +2851,6 @@ link:#CBBIDIID[Table 5-31] describes this persistence property's values.
 
 *_Table 5-31 Valid Values for create-ddl-jdbc-file-name_*
 
-[width="18%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |File name a|
@@ -2930,12 +2863,9 @@ system.
 
 |=======================================================================
 
- +
-
 [[sthref885]]
 
-* +
-Usage*
+*Usage*
 
 If `eclipselink.ddl-generation` is set to `create-tables` or
 `drop-and-create-tables`, EclipseLink writes this file to the location
@@ -2943,28 +2873,25 @@ specified by `eclipselink.application-location`.
 
 [[sthref886]]
 
-* +
-Examples*
+*Examples*
 
 See link:#BABFFGJE[Example 5-27] for information on how to use this
 property.
 
 [[sthref887]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#CACHGDEJ["application-location"]
-* link:#BABHEJJI["ddl-generation"]
+* link:#applicationlocation["application-location"]
+* link:#ddlgeneration["ddl-generation"]
 
-[[BABHEJJI]][[TLJPA892]]
+[[ddlgeneration]][[TLJPA892]]
 
 '''''
 
-ddl-generation
-~~~~~~~~~~~~~~
+=== ddl-generation
 
 Use the `eclipselink.ddl-generation` property to specify how EclipseLink
 generates DDL (Data Definition Language) for the database schema (tables
@@ -2980,8 +2907,7 @@ be ignored.
 
 [[sthref888]]
 
-* +
-Values*
+*Values*
 
 link:#BABBEGCE[Table 5-32] describes this persistence property's values.
 
@@ -2989,7 +2915,6 @@ link:#BABBEGCE[Table 5-32] describes this persistence property's values.
 
 *_Table 5-32 Valid Values for ddl-generation_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`create-tables` a|
@@ -3024,12 +2949,9 @@ schema to be dropped through another mechanism.
 |`none` |(Default) No DDL generated; no schema generated.
 |=======================================================================
 
- +
-
 [[sthref890]]
 
-* +
-Usage*
+*Usage*
 
 You can use `create-or-extend-tables` only when
 `eclipselink.ddl-generation.output-mode` = `database`.
@@ -3042,8 +2964,7 @@ system property `INTERACT_WITH_DB` and set its value to `false`.
 
 [[sthref891]]
 
-* +
-Examples*
+*Examples*
 
 link:#BABFFGJE[Example 5-27] shows how to use this property in the
 `persistence.xml` file.
@@ -3079,30 +3000,27 @@ propertiesMap.put(PersistenceUnitProperties.CREATE_JDBC_DDL_FILE, "create.sql");
 
 [[sthref892]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
 * link:#createddljdbcfilename["create-ddl-jdbc-file-name"]
-* link:#BABFEBCG["drop-ddl-jdbc-file-name"]
-* link:#BABCDHBB["ddl-generation.output-mode"]
+* link:#dropddljdbcfilename["drop-ddl-jdbc-file-name"]
+* link:#ddlgenerationoutputmode["ddl-generation.output-mode"]
 * Example `http://wiki.eclipse.org/EclipseLink/Examples/JPA/DDL`
 
-[[BABCDHBB]][[TLJPA1073]]
+[[ddlgenerationoutputmode]][[TLJPA1073]]
 
 '''''
 
-ddl-generation.output-mode
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== ddl-generation.output-mode
 
 Use the `eclipselink.ddl-generation.output-mode` property to specify
 where EclipseLink generates and writes the DDL.
 
 [[sthref893]]
 
-* +
-Values*
+*Values*
 
 link:#BABGHGDC[Table 5-33] describes this persistence property's values.
 
@@ -3110,7 +3028,6 @@ link:#BABGHGDC[Table 5-33] describes this persistence property's values.
 
 *_Table 5-33 Valid Values for ddl-generation.output-mode_*
 
-[width="18%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`both` a|
@@ -3119,7 +3036,7 @@ DDL will be generated and written to both the database and a file.
 * If `eclipselink.ddl-generation` is set to `create-tables`, then
 `eclipselink.create-ddl-jdbc-file-name` is written to
 `eclipselink.application-location` and executed on the database.
-* If eclipselink.link:#BABHEJJI[ddl-generation] is set to
+* If eclipselink.link:#ddlgeneration[ddl-generation] is set to
 `drop-and-create-tables`, then both
 `eclipselink.create-ddl-jdbc-file-name` and
 `eclipselink.drop-ddl-jdbc-file-name` are written to
@@ -3138,55 +3055,48 @@ DDL will be generated and written to a file only.
 database.
 * If `eclipselink.ddl-generation` is set to `drop-and-create-tables`,
 then both `eclipselink.create-ddl-jdbc-file-name` and
-eclipselink.link:#BABFEBCG[drop-ddl-jdbc-file-name] are written to
+eclipselink.link:#dropddljdbcfilename[drop-ddl-jdbc-file-name] are written to
 `eclipselink.application-location`. Neither are executed on the
 database.
 
 |=======================================================================
 
- +
-
 [[sthref895]]
 
-* +
-Usage*
+*Usage*
 
 You can only use `ddl-generation.output-mode` if you use
 `ddl-generation`. Then, you can optimally set other properties.
 
 [[sthref896]]
 
-* +
-Examples*
+*Examples*
 
 See link:#BABFFGJE[Example 5-27] for information on how to use this
 property.
 
 [[sthref897]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#CACHGDEJ["application-location"]
-* link:#BABHEJJI["ddl-generation"]
+* link:#applicationlocation["application-location"]
+* link:#ddlgeneration["ddl-generation"]
 * link:#createddljdbcfilename["create-ddl-jdbc-file-name"]
 
-[[BEHBIEJG]][[TLJPA1072]]
+[[ddltablecreationsuffix]][[TLJPA1072]]
 
 '''''
 
-ddl.table-creation-suffix
-~~~~~~~~~~~~~~~~~~~~~~~~~
+=== ddl.table-creation-suffix
 
 Use the `eclipselink.ddl.table-creation-suffix` property to append a
 string to generated `CREATE Table` statements.
 
 [[sthref898]]
 
-* +
-Values*
+*Values*
 
 link:#BEHIHGDB[Table 5-34] describes this property's values.
 
@@ -3194,25 +3104,20 @@ link:#BEHIHGDB[Table 5-34] describes this property's values.
 
 *_Table 5-34 Valid Values for ddl-generation.table-creation-suffix_*
 
-[width="28%",cols="<100%,<",options="header",]
 |==============================
 |*Value* |*Description*
 |value |The name of the suffix.
 |==============================
 
- +
-
 [[sthref900]]
 
-* +
-Usage*
+*Usage*
 
 The `ddl.generation` property must be set.
 
 [[sthref901]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDCAFFF[Example 5-29] shows how to use this property in the
 `persistence.xml` file.
@@ -3228,19 +3133,17 @@ link:#CHDCAFFF[Example 5-29] shows how to use this property in the
 
 [[sthref902]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#BABHEJJI["ddl-generation"]
+* link:#ddlgeneration["ddl-generation"]
 
-[[delayonstartup]][[TLJPA1074]]
+[[deployonstartup]][[TLJPA1074]]
 
 '''''
 
-deploy-on-startup
-~~~~~~~~~~~~~~~~~
+=== deploy-on-startup
 
 Use the `eclipselink.deploy-on-startup` property to configure deployment
 on startup (at the creation of the `EntityManagerFactory`) instead of
@@ -3248,8 +3151,7 @@ occurring the first time an `EntityManager` is created.
 
 [[sthref903]]
 
-* +
-Values*
+*Values*
 
 link:#BABJJADC[Table 5-35] describes this persistence property's values.
 
@@ -3257,7 +3159,6 @@ link:#BABJJADC[Table 5-35] describes this persistence property's values.
 
 *_Table 5-35 Valid Values for delay-on-startup_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`true` |Causes a persistence unit to be created when the EntityManager
@@ -3269,12 +3170,9 @@ first EntityManager is created, or until metadata is required from the
 EntityManagerFactory.
 |=======================================================================
 
- +
-
 [[sthref905]]
 
-* +
-Usage*
+*Usage*
 
 Using `true` may increase startup time of a JavaEE server, but will
 avoid the first request from hanging as the persistence unit is
@@ -3282,8 +3180,7 @@ deployed.
 
 [[sthref906]]
 
-* +
-Examples*
+*Examples*
 
 link:#BABJIBFB[Example 5-30] shows how to use this property in the
 `peristence.xml` file.
@@ -3297,12 +3194,11 @@ link:#BABJIBFB[Example 5-30] shows how to use this property in the
 <property name="eclipselink.deploy-on-startup" value="true" />
 ----
 
-[[CCHIEAIA]][[TLJPA1075]]
+[[descriptorcustomizer]][[TLJPA1075]]
 
 '''''
 
-descriptor.customizer
-~~~~~~~~~~~~~~~~~~~~~
+=== descriptor.customizer
 
 Use the `eclipselink.descriptor.customizer` property as a prefix for a
 property to configure a `DescriptorCustomizer`. Use this class's
@@ -3313,8 +3209,7 @@ for the descriptor associated with the JPA entity.
 
 [[sthref907]]
 
-* +
-Values*
+*Values*
 
 link:#CCHJDFEF[Table 5-36] describes this persistence property's values.
 
@@ -3322,25 +3217,20 @@ link:#CCHJDFEF[Table 5-36] describes this persistence property's values.
 
 *_Table 5-36 Valid Values for descriptor.customizer_*
 
-[width="28%",cols="<100%,<",options="header",]
 |===================================================================
 |*Value* |*Description*
 |name |Full name for a class that implements `DescriptorCustomizer`.
 |===================================================================
 
- +
-
 [[sthref909]]
 
-* +
-Usage*
+*Usage*
 
 You cannot use multiple descriptor customizers.
 
 [[sthref910]]
 
-* +
-Examples*
+*Examples*
 
 link:#CCHFCJIB[Example 5-31] shows how to use this property in the
 `peristence.xml` file.
@@ -3371,8 +3261,7 @@ propertiesMap.put(PersistenceUnitProperties.DESCRIPTOR_CUSTOMIZER+".Order",
 
 [[sthref911]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -3380,12 +3269,11 @@ For more information, see:
 * Section 8.1, "Entity" in the JPA Specification
 `http://jcp.org/en/jsr/detail?id=220`
 
-[[BABFEBCG]][[TLJPA1077]]
+[[dropddljdbcfilename]][[TLJPA1077]]
 
 '''''
 
-drop-ddl-jdbc-file-name
-~~~~~~~~~~~~~~~~~~~~~~~
+=== drop-ddl-jdbc-file-name
 
 Use the `eclipselink.drop-ddl-jdbc-file-name` property to specify the
 name of the DDL file generated by EclipseLink that contains the SQL
@@ -3402,7 +3290,6 @@ link:#BABDFGJF[Table 5-37] describes this persistence property's values.
 
 *_Table 5-37 Valid Values for drop-ddl-jdbc-file-name_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |File name a|
@@ -3415,12 +3302,9 @@ system.
 
 |=======================================================================
 
- +
-
 [[sthref914]]
 
-* +
-Usage*
+*Usage*
 
 If `eclipselink.ddl-generation` is set to `create-tables`, EclipseLink
 writes this file to the location specified by
@@ -3428,27 +3312,24 @@ writes this file to the location specified by
 
 [[sthref915]]
 
-* +
-Examples*
+*Examples*
 
 See link:#BABFFGJE[Example 5-27] for information on how to use this
 property.
 
 [[sthref916]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#BABHEJJI["ddl-generation"]
+* link:#ddlgeneration["ddl-generation"]
 
-[[CCHCJCDJ]][[TLJPA1079]]
+[[exceptionhandler]][[TLJPA1079]]
 
 '''''
 
-exception-handler
-~~~~~~~~~~~~~~~~~
+=== exception-handler
 
 Use the `eclipselink.exception-handler` property to specify the
 EclipseLink exception handler class: an exception handler class that
@@ -3457,8 +3338,7 @@ interface. The class must provide a default, no-argument constructor.
 
 [[sthref917]]
 
-* +
-Values*
+*Values*
 
 link:#CCHEDGHC[Table 5-38] describes this persistence property's values.
 
@@ -3466,7 +3346,6 @@ link:#CCHEDGHC[Table 5-38] describes this persistence property's values.
 
 *_Table 5-38 Valid Values for exception-handler_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`ExceptionHandler` class a|
@@ -3479,20 +3358,16 @@ Use the `handleException` method of the class, which takes a
 
 |=======================================================================
 
- +
-
 [[sthref919]]
 
-* +
-Usage*
+*Usage*
 
 The `ExceptionHandler` class name must be fully qualified by its package
 name.
 
 [[sthref920]]
 
-* +
-Examples*
+*Examples*
 
 link:#CCHEACJI[Example 5-33] shows how to use this property in the
 `persistence.xml` file.
@@ -3523,30 +3398,27 @@ propertiesMap.put(PersistenceUnitProperties.EXCEPTION_HANDLER_CLASS,
 
 [[sthref921]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#orm.throw.exceptions["orm.throw.exceptions"]
+* link:#ormthrowexceptions["orm.throw.exceptions"]
 * "Sessions" in _Understanding EclipseLink_
 * "Managing and Diagnosing Problems" in _Solutions Guide for
 EclispeLink_
 
-[[CHDBIAAC]][[TLJPA1083]]
+[[excludeeclipselinkorm]][[TLJPA1083]]
 
 '''''
 
-exclude-eclipselink-orm
-~~~~~~~~~~~~~~~~~~~~~~~
+=== exclude-eclipselink-orm
 
 Use the `eclipselink.exclude-eclipselink-orm` property to exclude an
 EclipseLink ORM mapping file for a specific persistence unit.
 
 [[sthref922]]
 
-* +
-Values*
+*Values*
 
 link:#CHDEAFHG[Table 5-39] describes this persistence property's values.
 
@@ -3554,19 +3426,15 @@ link:#CHDEAFHG[Table 5-39] describes this persistence property's values.
 
 *_Table 5-39 Valid Values for exclude-eclipselink-orm_*
 
-[width="28%",cols="<100%,<",options="header",]
 |===================================================================
 |*Value* |*Description*
 |`true` |Does not use the `eclipselink-orm.xml` file.
 |`false` |(Default) EclipseLink uses the `eclipselink-orm.xml` file.
 |===================================================================
 
- +
-
 [[sthref924]]
 
-* +
-Usage*
+*Usage*
 
 By default the first file found at the resource name:
 `META-INF/eclipselink-orm.xml` is processed and overrides configurations
@@ -3574,8 +3442,7 @@ specified in annotations and standard mapping files.
 
 [[sthref925]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDBHCCA[Example 5-35] shows how to use this property in the
 `persistence.xml` file.
@@ -3591,8 +3458,7 @@ link:#CHDBHCCA[Example 5-35] shows how to use this property in the
 
 [[sthref926]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -3601,12 +3467,11 @@ EclipseLink_
 * "Using an External Metadata Source" in _Solutions Guide for
 EclispeLink_
 
-[[CDEJGBEI]][[TLJPA1085]]
+[[flushclearcache]][[TLJPA1085]]
 
 '''''
 
-flush-clear.cache
-~~~~~~~~~~~~~~~~~
+=== flush-clear.cache
 
 Use the `eclipselink.flush-clear.cache` property to specify the
 EclipseLink `EntityManager` cache behavior when a `clear` method follows
@@ -3614,8 +3479,7 @@ the `flush` method.
 
 [[sthref927]]
 
-* +
-Values*
+*Values*
 
 link:#CDEDEGHC[Table 5-40] describes this persistence property's values.
 
@@ -3623,7 +3487,6 @@ link:#CDEDEGHC[Table 5-40] describes this persistence property's values.
 
 *_Table 5-40 Valid Values for flush-clear.cache_*
 
-[width="23%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`Drop` a|
@@ -3650,12 +3513,9 @@ transaction you may run out of memory.
 
 |=======================================================================
 
- +
-
 [[sthref929]]
 
-* +
-Usage*
+*Usage*
 
 You can specify this property when creating an `EntityManagerFactory`
 (in the map passed to the `createEntityManagerFactory` method or in the
@@ -3666,8 +3526,7 @@ Note that the latter overrides the former.
 
 [[sthref930]]
 
-* +
-Examples*
+*Examples*
 
 link:#CDEICBJJ[Example 5-36] shows how to use this property in the
 `persistence.xml` file.
@@ -3697,12 +3556,11 @@ FlushClearCache.Drop);
 
 [[sthref931]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:annotations_ref.htm#CHDBBIHE["@Cache"]
+* xref:{relativedir}/annotations_ref.adoc#CHDBBIHE["@Cache"]
 * "Cache Coordination" in _Understanding EclipseLink_
 * "Scaling EclipseLink Applications in Clusters" in _Solutions Guide for
 EclispeLink_
@@ -3711,20 +3569,18 @@ EclispeLink_
 * "Clustering and Cache Coordination"
 `http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Caching/Coordination`
 
-[[CACEEGCC]][[TLJPA1087]]
+[[idvalidation]][[TLJPA1087]]
 
 '''''
 
-id-validation
-~~~~~~~~~~~~~
+=== id-validation
 
 Use the `eclipselink.id-validation` property to define which primary key
 components values are considered invalid.
 
 [[sthref932]]
 
-* +
-Values*
+*Values*
 
 link:#CACJGDDD[Table 5-41] describes this persistence property's values.
 
@@ -3732,7 +3588,6 @@ link:#CACJGDDD[Table 5-41] describes this persistence property's values.
 
 *_Table 5-41 Valid Values for id-validation_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`Negative` |`Null`, `0` and negative values are invalid for IDs
@@ -3746,20 +3601,16 @@ extending `Number` and primitive `int` and `long` IDs.
 and `long` IDs.
 |=======================================================================
 
- +
-
 [[sthref934]]
 
-* +
-Usage*
+*Usage*
 
 Identity and sequencing (with `shouldAlwaysOverrideExistingValue`
 configured as `true`) will override any existing ID value.
 
 [[sthref935]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDIIGAJ[Example 5-38] shows how to use this property in the
 `persistence.xml` file.
@@ -3775,20 +3626,18 @@ link:#CHDIIGAJ[Example 5-38] shows how to use this property in the
 
 [[sthref936]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
 * "Persisting Objects" in _Understanding EclipseLink_
-* link:annotations_ref.htm#BGEBBFJE["@PrimaryKey"]
+* xref:{relativedir}/annotations_ref.adoc#BGEBBFJE["@PrimaryKey"]
 
-[[CIHHJBFB]][[TLJPA1089]]
+[[jdbcallownativesqlqueries]][[TLJPA1089]]
 
 '''''
 
-jdbc.allow-native-sql-queries
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== jdbc.allow-native-sql-queries
 
 Use the `eclipselink.jdbc.allow-native-sql-queries` property to specify
 if user-defined (that is, native) SQL is allowed within a persistence
@@ -3796,8 +3645,7 @@ unit.
 
 [[sthref937]]
 
-* +
-Values*
+*Values*
 
 link:#CIHCHAAF[Table 5-42] describes this persistence property's values.
 
@@ -3805,19 +3653,15 @@ link:#CIHCHAAF[Table 5-42] describes this persistence property's values.
 
 *_Table 5-42 Valid Values for jdbc.allow-native-sql-queries_*
 
-[width="28%",cols="<100%,<",options="header",]
 |================================================
 |*Value* |*Description*
 |`true` |(Default) EclipseLink allows native SQL.
 |`false` |EclipseLink does not allow native SQL.
 |================================================
 
- +
-
 [[sthref939]]
 
-* +
-Usage*
+*Usage*
 
 Within a multitenant, use this option to minimize the potential impact
 of revealing multitenant information. By default, any persistence unit
@@ -3826,8 +3670,7 @@ with a multitenant entity causes EclipseLink to set
 
 [[sthref940]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDFFJJE[Example 5-39] shows how to use this property in the
 `persistence.xml` file.
@@ -3843,27 +3686,24 @@ link:#CHDFFJJE[Example 5-39] shows how to use this property in the
 
 [[sthref941]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
 * "Querying" in _Understanding EclipseLink_
 
-[[CIHIAGAF]][[TLJPA906]]
+[[jdbcbatchwriting]][[TLJPA906]]
 
 '''''
 
-jdbc.batch-writing
-~~~~~~~~~~~~~~~~~~
+=== jdbc.batch-writing
 
 Use the `eclipselink.jdbc.batch-writing` property to configure batch
 writing to optimize transactions with multiple write functions.
 
 [[sthref942]]
 
-* +
-Values*
+*Values*
 
 link:#CIHFJDIB[Table 5-43] describes this persistence property's values.
 
@@ -3871,7 +3711,6 @@ link:#CIHFJDIB[Table 5-43] describes this persistence property's values.
 
 *_Table 5-43 Valid Values for jdbc.batch-writing_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`jdbc` |Use JDBC batch writing.
@@ -3891,36 +3730,21 @@ class.
 |`none` |(Default) Do not use batch writing (that is, turn it off).
 |=======================================================================
 
- +
-
 [[sthref944]]
 
-* +
-Usage*
+*Usage*
 
 Batch writing allows multiple heterogeneous dynamic SQL statements to be
 sent to the database as a single execution, or multiple homogeneous
 parameterized SQL statements to be executed as a single batch execution.
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-Not all JDBC drivers or databases support batch writing.
-
-|=======================================================================
-
- +
+NOTE: Not all JDBC drivers or databases support batch writing.
 
 Use `eclipselink.jdbc.batch-writing.size` to specify the batch size.
 
 [[sthref945]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDJDFBE[Example 5-40] shows how to use this property in the
 `persistence.xml` file.
@@ -3955,23 +3779,21 @@ See Also*
 
 For more information, see:
 
-* link:#CIHJADHF["jdbc.batch-writing.size"]
+* link:#jdbcbatchwritingsize["jdbc.batch-writing.size"]
 * "Batch Writing" in _Solutions Guide for EclispeLink_
 
-[[CIHJADHF]][[TLJPA910]]
+[[jdbcbatchwritingsize]][[TLJPA910]]
 
 '''''
 
-jdbc.batch-writing.size
-~~~~~~~~~~~~~~~~~~~~~~~
+=== jdbc.batch-writing.size
 
 Use the `eclipselink.jdbc.batch-writing.size` property to configure the
 batch size used for batch writing.
 
 [[sthref947]]
 
-* +
-Values*
+*Values*
 
 link:#CIHCGJDJ[Table 5-44] describes this persistence property's values.
 
@@ -3979,7 +3801,6 @@ link:#CIHCGJDJ[Table 5-44] describes this persistence property's values.
 
 *_Table 5-44 Valid Values for jdbc.batch-writing.size_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |batch size a|
@@ -3991,12 +3812,9 @@ buffer (default: `32k`).
 
 |=======================================================================
 
- +
-
 [[sthref949]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDGEAHF[Example 5-42] shows how to use this property in the
 `persistence.xml` file.
@@ -4012,28 +3830,25 @@ link:#CHDGEAHF[Example 5-42] shows how to use this property in the
 
 [[sthref950]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#CIHIAGAF["jdbc.batch-writing"]
+* link:#jdbcbatchwriting["jdbc.batch-writing"]
 * "Batch Writing" in _Solutions Guide for EclispeLink_
 
-[[CHDHAFAA]][[TLJPA913]]
+[[jdbccachestatements]][[TLJPA913]]
 
 '''''
 
-jdbc.cache-statements
-~~~~~~~~~~~~~~~~~~~~~
+=== jdbc.cache-statements
 
 Use the `eclipselink.jdbc.cache-statements` property to specify if JDBC
 statements should be cached.
 
 [[sthref951]]
 
-* +
-Values*
+*Values*
 
 link:#CHDJCHGH[Table 5-45] describes this persistence property's values.
 
@@ -4041,19 +3856,15 @@ link:#CHDJCHGH[Table 5-45] describes this persistence property's values.
 
 *_Table 5-45 Valid Values for jdbc.cache-statements_*
 
-[width="28%",cols="<100%,<",options="header",]
 |======================================================
 |*Value* |*Description*
 |`true` |Enable internal statement caching.
 |`false` |(Default) Disable internal statement caching.
 |======================================================
 
- +
-
 [[sthref953]]
 
-* +
-Usage*
+*Usage*
 
 You should use this property when using EclipseLink's internal
 connection pooling. See link:#connectionpool["connection-pool"] for more
@@ -4061,8 +3872,7 @@ information.
 
 [[sthref954]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDFFCAE[Example 5-43] shows how to use this property in the
 `persistence.xml` file.
@@ -4092,29 +3902,26 @@ propertiesMap.put(PersistenceUnitProperties.CACHE_STATEMENTS, "false");
 
 [[sthref955]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#CACBICGG["jdbc.cache-statements.size"]
+* link:#jdbccachestatementssize["jdbc.cache-statements.size"]
 * link:#connectionpool["connection-pool"]
 * "Batch Writing" in _Solutions Guide for EclispeLink_
 
-[[CACBICGG]][[TLJPA917]]
+[[jdbccachestatementssize]][[TLJPA917]]
 
 '''''
 
-jdbc.cache-statements.size
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== jdbc.cache-statements.size
 
 Use the `eclipselink.jdbc.cache-statements.size` property to specify the
 number of statements held when using internal statement caching.
 
 [[sthref956]]
 
-* +
-Values*
+*Values*
 
 link:#CACHIFGG[Table 5-46] describes this persistence property's values.
 
@@ -4122,7 +3929,6 @@ link:#CACHIFGG[Table 5-46] describes this persistence property's values.
 
 *_Table 5-46 Valid Values for jdbc.cache-statements.size_*
 
-[width="28%",cols="<100%,<",options="header",]
 |====================================================================
 |*Value* |*Description*
 |size a|
@@ -4131,8 +3937,6 @@ A string value containing a positive integer or zero (Default: `50`).
 The maximum value may vary, depending on your JDBC driver.
 
 |====================================================================
-
- +
 
 [[sthref958]]
 
@@ -4166,28 +3970,25 @@ propertiesMap.put(PersistenceUnitProperties.CACHE_STATEMENTS_SIZE, "100");
 
 [[sthref959]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#CHDHAFAA["jdbc.cache-statements"]
+* link:#jdbccachestatements["jdbc.cache-statements"]
 * "Batch Writing" in _Solutions Guide for EclispeLink_
 
-[[CFAJHIJA]][[TLJPA921]]
+[[jdbcconnector]][[TLJPA921]]
 
 '''''
 
-jdbc.connector
-~~~~~~~~~~~~~~
+=== jdbc.connector
 
 Use the `eclipselink.jdbc.connector` property to define a custom
 connector to connect to the database.
 
 [[sthref960]]
 
-* +
-Values*
+*Values*
 
 link:#CFAEDDCC[Table 5-47] describes this persistence property's values.
 
@@ -4195,19 +3996,15 @@ link:#CFAEDDCC[Table 5-47] describes this persistence property's values.
 
 *_Table 5-47 Valid Values for jdbc.connector_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |Fully qualified class name |A class that implements the `Connector`
 interface.
 |=======================================================================
 
- +
-
 [[sthref962]]
 
-* +
-Usage*
+*Usage*
 
 You can use this property to connect to a non-standard connection pool,
 or provide customized details on how to obtain a connection.
@@ -4217,8 +4014,7 @@ This property is not required when using a `DataSource` or JDBC
 
 [[sthref963]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDDEEFA[Example 5-47] shows how to use this property in the
 `persistence.xml` file.
@@ -4232,20 +4028,18 @@ link:#CHDDEEFA[Example 5-47] shows how to use this property in the
 <property name="eclipselink.jdbc.connector" value="package.MyConnector"/>
 ----
 
-[[CHDCJIBF]][[TLJPA925]]
+[[jdbcexclusiveconnectionislazy]][[TLJPA925]]
 
 '''''
 
-jdbc.exclusive-connection.is-lazy
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== jdbc.exclusive-connection.is-lazy
 
 Use the `eclipselink.jdbc.exclusive-connection.is-lazy` property to
 specify if EclipseLink acquires write connections lazily.
 
 [[sthref964]]
 
-* +
-Values*
+*Values*
 
 link:#CHDEEGCH[Table 5-48] describes this persistence property's values.
 
@@ -4253,19 +4047,15 @@ link:#CHDEEGCH[Table 5-48] describes this persistence property's values.
 
 *_Table 5-48 Valid Values for jdbc.exclusive-connection.is-lazy_*
 
-[width="28%",cols="<100%,<",options="header",]
 |===================================================
 |*Value* |*Description*
 |`true` |(Default) Acquire write connections lazily.
 |`false` |Do not acquire write connections lazily.
 |===================================================
 
- +
-
 [[sthref966]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDDIIHC[Example 5-48] shows how to use this property in the
 `persistence.xml` file.
@@ -4297,27 +4087,24 @@ propertiesMap.put(PersistenceUnitProperties.EXCLUSIVE_CONNECTION_IS_LAZY,
 
 [[sthref967]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
 * Auditing`http://wiki.eclipse.org/EclipseLink/Examples/JPA/Auditing`
 
-[[CACBICGG2]][[TLJPA929]]
+[[jdbcexclusiveconnectionmode]][[TLJPA929]]
 
 '''''
 
-jdbc.exclusive-connection.mode
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== jdbc.exclusive-connection.mode
 
 Use the `eclipselink.jdbc.exclusive-connection.mode` property to specify
 when EclipseLink performs reads through the write connection.
 
 [[sthref968]]
 
-* +
-Values*
+*Values*
 
 link:#CHDJCHGH3[Table 5-49] describes this persistence property's
 values.
@@ -4326,7 +4113,6 @@ values.
 
 *_Table 5-49 Valid Values for jdbc.exclusive-connection.mode_*
 
-[width="18%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`Transactional` a|
@@ -4368,12 +4154,9 @@ exclusive connection.
 
 |=======================================================================
 
- +
-
 [[sthref970]]
 
-* +
-Usage*
+*Usage*
 
 You can set this property while creating either an
 `EntityManagerFactory` (either in the map passed to the
@@ -4383,8 +4166,7 @@ method). Note that the latter overrides the former.
 
 [[sthref971]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDBEHHE[Example 5-50] shows how to use this property in the
 `persistence.xml` file.
@@ -4414,12 +4196,11 @@ propertiesMap.put(PersistenceUnitProperties.EXCLUSIVE_CONNECTION_MODE, "Always")
 
 [[sthref972]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#CHDCJIBF["jdbc.exclusive-connection.is-lazy"]
+* link:#jdbcexclusiveconnectionislazy["jdbc.exclusive-connection.is-lazy"]
 * "Isolated Client Sessions" in _Understanding EclipseLink_
 * "Connections" in _Understanding EclipseLink_
 
@@ -4427,12 +4208,11 @@ For more information, see:
 
 '''''
 
-[[CIHBHCIE]][[TLJPA939]]
+[[jdbcnamingintoindexed]][[TLJPA939]]
 
 '''''
 
-jdbc.naming_into_indexed
-~~~~~~~~~~~~~~~~~~~~~~~~
+=== jdbc.naming_into_indexed
 
 Use the `eclipselink.jdbc.naming_into_indexed` property defines if
 stored procedure parameters passed by name should be transformed into
@@ -4462,24 +4242,11 @@ specified in the stored procedure.
 This code was added there to ensure backward compatibility with older
 EclipseLink releases.
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-Normally, `naming_into_indexed` is not required. It's usually required
+NOTE: Normally, `naming_into_indexed` is not required. It's usually required
 when JDBC driver doesn't support parameters passed to stored proceures
 by name.
 
-|=======================================================================
-
- +
-
-
-* +
-Values*
+*Values*
 
 link:#CIHFHHGF[Table 5-51] describes this persistence property's values.
 
@@ -4487,19 +4254,15 @@ link:#CIHFHHGF[Table 5-51] describes this persistence property's values.
 
 *_Table 5-51 Valid Values for jdbc.naming_into_indexed_*
 
-[width="28%",cols="<100%,<",options="header",]
 |===============================================================
 |*Value* |*Description*
 |`true` |Transform named parameters into positional/index based.
 |`false` |(Default) Do not transform.
 |===============================================================
 
- +
-
 [[sthref983]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDJHBDG[Example 5-55] shows how to use this property in the
 `persistence.xml` file.
@@ -4513,8 +4276,11 @@ link:#CHDJHBDG[Example 5-55] shows how to use this property in the
 <property name="eclipselink.jpa.naming_into_indexed" value="true"/>
 ----
 
-jdbc.native-sql
-~~~~~~~~~~~~~~~
+[[jdbcnativesql]]
+
+'''''
+
+=== jdbc.native-sql
 
 Use the `eclipselink.jdbc.native-sql` property to specify if EclipseLink
 uses generic SLQ or includes platform-specific (that is, "native") SQL
@@ -4522,8 +4288,7 @@ statements.
 
 [[sthref973]]
 
-* +
-Values*
+*Values*
 
 link:#CIHDBHDD[Table 5-50] describes this persistence property's values.
 
@@ -4531,19 +4296,15 @@ link:#CIHDBHDD[Table 5-50] describes this persistence property's values.
 
 *_Table 5-50 Valid Values for jdbc.native-sql_*
 
-[width="28%",cols="<100%,<",options="header",]
 |========================================================
 |*Value* |*Description*
 |`true` |(Default) Use platform-specific ("native" ) SQL.
 |`false` |Use generic SQL.
 |========================================================
 
- +
-
 [[sthref975]]
 
-* +
-Usage*
+*Usage*
 
 When using platform-specific SQL (`eclipselink.jdbc.native-sql` =
 `true`), EclipseLink uses platform-specific SQL to customize join
@@ -4551,8 +4312,7 @@ syntax, date operators, using sequencing, and so on.
 
 [[sthref976]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDDABBB[Example 5-52] shows how to use this property in the
 `persistence.xml` file.
@@ -4581,35 +4341,31 @@ propertiesMap.put(PersistenceUnitProperties.NATIVE_SQL, "false");
 
 [[sthref977]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
 * "Querying" in _Understanding EclipseLink_
 * "Query Languages" in _Understanding EclipseLink_
 
-[[CIHHJHHD]][[TLJPA937]]
+[[jdbcproperty]][[TLJPA937]]
 
 '''''
 
-jdbc.property
-~~~~~~~~~~~~~
+=== jdbc.property
 
 Use the `eclipselink.jdbc.property` prefix to pass JDBC driver-specific
 connection properties to EclipseLink.
 
 [[sthref978]]
 
-* +
-Usage*
+*Usage*
 
 Append the JDBC driver-specific property name to this property prefix.
 
 [[sthref979]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDHGEBH[Example 5-54] shows how to use this property prefix in
 the `persistence.xml` file.
@@ -4625,8 +4381,7 @@ the `persistence.xml` file.
 
 [[sthref980]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -4634,57 +4389,39 @@ For more information, see:
 EclispeLink_
 * "Introduction to Data Access" in _Understanding EclipseLink_
 
-[[CIHBHCID]][[TLJPA939]]
+[[jdbcsqlcast]][[TLJPA939]]
 
 '''''
 
-jdbc.sql-cast
-~~~~~~~~~~~~~
+=== jdbc.sql-cast
 
 Use the `eclipselink.jdbc.sql-cast` property to specify if EclipseLink
 uses platform-specific (that is, "native") `CAST` SQL operations.
 
- +
+NOTE: Normally, casting is not required. Using it may cause issues.
 
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
+*Values*
 
-Normally, casting is not required. Using it may cause issues.
+link:#CIHFHHGF1[Table 5-51] describes this persistence property's values.
 
-|=======================================================================
-
- +
-
-
-* +
-Values*
-
-link:#CIHFHHGF[Table 5-51] describes this persistence property's values.
-
-[[CIHFHHGF]]
+[[CIHFHHGF1]]
 
 *_Table 5-51 Valid Values for jdbc.sql-cast_*
 
-[width="28%",cols="<100%,<",options="header",]
 |==================================================================
 |*Value* |*Description*
 |`true` |Use platform-specific `CAST` operations.
 |`false` |(Default) Do not use platform-specific `CAST` operations.
 |==================================================================
 
- +
+[[sthref9831]]
 
-[[sthref983]]
+*Examples*
 
-* +
-Examples*
-
-link:#CHDJHBDG[Example 5-55] shows how to use this property in the
+link:#CHDJHBDG1[Example 5-55] shows how to use this property in the
 `persistence.xml` file.
 
-[[CHDJHBDG]][[TLJPA54144]]
+[[CHDJHBDG1]][[TLJPA54144]]
 
 *_Example 5-55 Using jdbc.sql-cast in persistence.xml_*
 
@@ -4693,34 +4430,22 @@ link:#CHDJHBDG[Example 5-55] shows how to use this property in the
 <property name="eclipselink.jdbc.sql-cast" value="true"/>
 ----
 
-[[CIHIIAFD]][[TLJPA941]]
+[[jdbcuppercasecolumns]][[TLJPA941]]
 
 '''''
 
-jdbc.uppercase-columns
-~~~~~~~~~~~~~~~~~~~~~~
+=== jdbc.uppercase-columns
 
 Use the `eclipselink.jdbc.uppercase-columns` property to force column
 names from the metadata to be uppercase.
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-This parameter has been replaced by `jpql.parser`, which ensures that
+NOTE: This parameter has been replaced by `jpql.parser`, which ensures that
 both sides use uppercase for comparisons.
 
-|=======================================================================
-
- +
 
 [[sthref984]]
 
-* +
-Values*
+*Values*
 
 link:#CIHGHIGC[Table 5-52] describes this persistence property's values.
 
@@ -4728,7 +4453,6 @@ link:#CIHGHIGC[Table 5-52] describes this persistence property's values.
 
 *_Table 5-52 Valid Values for jdbc.uppercase-columns_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |true |Forces all column names from the metadata to uppercase.
@@ -4737,12 +4461,9 @@ link:#CIHGHIGC[Table 5-52] describes this persistence property's values.
 uppercase.
 |=======================================================================
 
- +
-
 [[sthref986]]
 
-* +
-Usage*
+*Usage*
 
 When using native SQL queries, the JDBC metadata may return column names
 in lower case on some platforms. If the column names are uppercase in
@@ -4751,8 +4472,7 @@ parameter to force all column names from the metadata to uppercase.
 
 [[sthref987]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDBHAGA[Example 5-56] shows how to use this parameter in the
 `persistence.xml` file.
@@ -4768,30 +4488,27 @@ link:#CHDBHAGA[Example 5-56] shows how to use this parameter in the
 
 [[sthref988]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#CHDFJAAC["jpql.parser"]
+* link:#jpqlparser["jpql.parser"]
 * "Using EclipseLink with the Oracle Database" in _Solutions Guide for
 EclispeLink_
 * "Introduction to Data Access" in _Understanding EclipseLink_
 
-[[CHDFJAAC]][[TLJPA1093]]
+[[jpqlparser]][[TLJPA1093]]
 
 '''''
 
-jpql.parser
-~~~~~~~~~~~
+=== jpql.parser
 
 Use the `eclipselink.jpql.parser` property to configure the JPQL parser
 parameters.
 
 [[sthref989]]
 
-* +
-Values*
+*Values*
 
 link:#CHDDCFEJ[Table 5-53] describes this persistence property's values.
 
@@ -4799,7 +4516,6 @@ link:#CHDDCFEJ[Table 5-53] describes this persistence property's values.
 
 *_Table 5-53 Valid Values for jpql.parser_*
 
-[width="34%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`org.eclipse.persistence.internal.jpa.jpql.HermesParser` |(Default)
@@ -4810,23 +4526,19 @@ JPQL support.
 for backward compatibility (prior to EclipseLink 2.4).
 |=======================================================================
 
- +
-
 [[sthref991]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#BCFGFEFB3["jpql.validation"]
+* link:#jpqlvalidation["jpql.validation"]
 
-[[CHDJGCBD]][[TLJPA1091]]
+[[jpauppercasecolumnnames]][[TLJPA1091]]
 
 '''''
 
-jpa.uppercase-column-names
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== jpa.uppercase-column-names
 
 Use the `eclipselink.jpa.uppercase-column-names` property to specify JPA
 processing to uppercase all column name definitions (simulating case
@@ -4834,8 +4546,7 @@ insensitivity).
 
 [[sthref992]]
 
-* +
-Values*
+*Values*
 
 link:#CHDEEHBA[Table 5-54] describes this persistence property's values.
 
@@ -4843,7 +4554,6 @@ link:#CHDEEHBA[Table 5-54] describes this persistence property's values.
 
 *_Table 5-54 Valid Values for jpa.uppercase-column-names_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`true` |JDBC metadata returned from the database is returned in
@@ -4853,20 +4563,16 @@ uppercase, ensuring fields are the same case. Sets
 |`false` |(Default) Does not return JDBC metadata in uppercase.
 |=======================================================================
 
- +
-
 [[sthref994]]
 
-* +
-Usage*
+*Usage*
 
 Use this property to correct situations in which user-defined fields do
 not match the case returned by the database for native queries.
 
 [[sthref995]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDJJCBB[Example 5-57] shows how to use this property in the
 `persistence.xml` file.
@@ -4882,30 +4588,27 @@ link:#CHDJJCBB[Example 5-57] shows how to use this property in the
 
 [[sthref996]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#CIHIIAFD["jdbc.uppercase-columns"]
+* link:#jdbcuppercasecolumns["jdbc.uppercase-columns"]
 * "Using EclipseLink with the Oracle Database" in _Solutions Guide for
 EclispeLink_
 * "Introduction to Data Access" in _Understanding EclipseLink_
 
-[[BCFGFEFB3]][[TLJPA1095]]
+[[jpqlvalidation]][[TLJPA1095]]
 
 '''''
 
-jpql.validation
-~~~~~~~~~~~~~~~
+=== jpql.validation
 
 Use the `eclipselink.jpql.parser` property to configure the JPQL parser
 validation level.
 
 [[sthref997]]
 
-* +
-Values*
+*Values*
 
 link:#BCFGAFDA3[Table 5-55] describes this persistence property's
 values.
@@ -4914,7 +4617,6 @@ values.
 
 *_Table 5-55 Valid Values for jpql.validation_*
 
-[width="34%",cols="<100%,<",options="header",]
 |============================================================
 |*Value* |*Description*
 |`EclipseLink` |(Default) Allows EclipseLink JPAL extensions.
@@ -4924,20 +4626,16 @@ values.
 |`None` |No JPQL validation.
 |============================================================
 
- +
-
 [[sthref999]]
 
-* +
-Usage*
+*Usage*
 
 This parameter applies only when `eclipselink.jpql.parser` is
 `HermesParser`.
 
 [[sthref1000]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDCHGGF[Example 5-58] shows how to use this property in the
 `persistence.xml` file.
@@ -4953,28 +4651,25 @@ link:#CHDCHGGF[Example 5-58] shows how to use this property in the
 
 [[sthref1001]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#CHDFJAAC["jpql.parser"]
-* link:jpql.htm#BABCIECD["Java Persistence Query Language Extensions"]
+* link:#jpqlparser["jpql.parser"]
+* xref:{relativedir}/jpql.adoc#BABCIECD["Java Persistence Query Language Extensions"]
 
-[[CHDJCBIF]][[TLJPA1097]]
+[[loggingconnection]][[TLJPA1097]]
 
 '''''
 
-logging.connection
-~~~~~~~~~~~~~~~~~~
+=== logging.connection
 
 Use the `eclipselink.logging.connection` property to specify if
 connections are logged.
 
 [[sthref1002]]
 
-* +
-Values*
+*Values*
 
 link:#CHDHCIED[Table 5-56] describes this persistence property's values.
 
@@ -4982,27 +4677,22 @@ link:#CHDHCIED[Table 5-56] describes this persistence property's values.
 
 *_Table 5-56 Valid Values for logging.connection_*
 
-[width="28%",cols="<100%,<",options="header",]
 |===========================================
 |*Value* |*Description*
 |`true` |(Default) Logs the connection name.
 |`false` |Does not log the connection name.
 |===========================================
 
- +
-
 [[sthref1004]]
 
-* +
-Usage*
+*Usage*
 
 Using this parameter means that all connections are logged and not
 masked by the application code.
 
 [[sthref1005]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDDDFJE[Example 5-59] shows how to use this parameter in the
 `persistence.xml` file.
@@ -5018,8 +4708,7 @@ link:#CHDDDFJE[Example 5-59] shows how to use this parameter in the
 
 [[sthref1006]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -5027,14 +4716,13 @@ For more information, see:
 `http://wiki.eclipse.org/EclipseLink/Examples/JPA/Logging`
 * "Configuring WebLogic Server to Expose EclipseLink Logging" in
 _Solutions Guide for EclispeLink_
-* link:#CHDGFDDH["logging.level"]
+* link:#logginglevel["logging.level"]
 
-[[BEIFJBIE]][[TLJPA943]]
+[[loggingexceptions]][[TLJPA943]]
 
 '''''
 
-logging.exceptions
-~~~~~~~~~~~~~~~~~~
+=== logging.exceptions
 
 Use the `eclipselink.logging.exceptions` property to specify if
 exceptions are logged when they are thrown, before returning the
@@ -5042,8 +4730,7 @@ exception to the calling application.
 
 [[sthref1007]]
 
-* +
-Values*
+*Values*
 
 link:#BEIDDGBA[Table 5-57] describes this persistence property's values.
 
@@ -5051,27 +4738,22 @@ link:#BEIDDGBA[Table 5-57] describes this persistence property's values.
 
 *_Table 5-57 Valid Values for logging.exceptions_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================
 |*Value* |*Description*
 |`true` |(Default) Logs exceptions when they are thrown.
 |`false` |Does not log exceptions when they are thrown.
 |=======================================================
 
- +
-
 [[sthref1009]]
 
-* +
-Usage*
+*Usage*
 
 Using this property ensures that all exceptions are logged and not
 masked by the application code.
 
 [[sthref1010]]
 
-* +
-Examples*
+*Examples*
 
 link:#BABCGBJA[Example 5-60] shows how to use this property in the
 `peristence.xml` file.
@@ -5100,8 +4782,7 @@ propertiesMap.put(PersistenceUnitProperties.LOGGING_EXCEPTIONS, "false");
 
 [[sthref1011]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -5109,22 +4790,20 @@ For more information, see:
 `http://wiki.eclipse.org/EclipseLink/Examples/JPA/Logging`
 * "Configuring WebLogic Server to Expose EclipseLink Logging" in
 _Solutions Guide for EclispeLink_
-* link:#CHDGFDDH["logging.level"]
+* link:#logginglevel["logging.level"]
 
-[[BEIHGBBC]][[TLJPA947]]
+[[loggingfile]][[TLJPA947]]
 
 '''''
 
-logging.file
-~~~~~~~~~~~~
+=== logging.file
 
 Use the `eclipselink.logging.file` property to specify a file location
 in which to output the log instead of the standard out.
 
 [[sthref1012]]
 
-* +
-Values*
+*Values*
 
 link:#BEIIAJDG[Table 5-58] describes this persistence property's values.
 
@@ -5132,7 +4811,6 @@ link:#BEIIAJDG[Table 5-58] describes this persistence property's values.
 
 *_Table 5-58 Valid Values for logging.file_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |directory name |A string location to a directory in which you have
@@ -5140,19 +4818,15 @@ write access. The location may be relative to your current working
 directory or an absolute location.
 |=======================================================================
 
- +
-
 [[sthref1014]]
 
-* +
-Usage*
+*Usage*
 
 This property applies when used in a Java SE environment.
 
 [[sthref1015]]
 
-* +
-Examples*
+*Examples*
 
 link:#CACEFJBC[Example 5-62] shows how to use this property in the
 `peristence.xml` file.
@@ -5181,8 +4855,7 @@ propertiesMap.put(PersistenceUnitProperties.LOGGING_FILE, "C:\myout\");
 
 [[sthref1016]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -5191,20 +4864,18 @@ For more information, see:
 * "Configuring WebLogic Server to Expose EclipseLink Logging" in
 _Solutions Guide for EclispeLink_
 
-[[CHDGFDDH]][[TLJPA951]]
+[[logginglevel]][[TLJPA951]]
 
 '''''
 
-logging.level
-~~~~~~~~~~~~~
+=== logging.level
 
 Use the `eclipselink.logging.level` property to specify a specific
 logging level and control the amount and detail that is emitted.
 
 [[sthref1017]]
 
-* +
-Values*
+*Values*
 
 link:#BEIHAIBC[Table 5-59] describes this persistence property's values.
 
@@ -5212,7 +4883,6 @@ link:#BEIHAIBC[Table 5-59] describes this persistence property's values.
 
 *_Table 5-59 Valid Values for logging.level_*
 
-[width="18%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`OFF` a|
@@ -5250,12 +4920,9 @@ testing, but not at production time.
 |`ALL` |Logs at the same level as `FINEST`.
 |=======================================================================
 
- +
-
 [[sthref1019]]
 
-* +
-Examples*
+*Examples*
 
 link:#BEIEEBEJ[Example 5-64] shows how to use this property in the
 `peristence.xml` file.
@@ -5285,8 +4952,7 @@ propertiesMap.put(PersistenceUnitProperties.LOGGING_LEVEL, Level.OFF);
 
 [[sthref1020]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -5295,22 +4961,20 @@ _Solutions Guide for EclispeLink_
 * Logging Examples
 `http://wiki.eclipse.org/EclipseLink/Examples/JPA/Logging`
 
-[[TLJPA955]]
+[[logginglogger]]
 
 '''''
 
 [[sthref1021]]
 
-logging.logger
-~~~~~~~~~~~~~~
+=== logging.logger
 
 Use the `eclipselink.logging.logger` property to define the type of
 logger to use.
 
 [[sthref1022]]
 
-* +
-Values*
+*Values*
 
 link:#BABGABAJ[Table 5-60] describes this persistence property's values.
 
@@ -5318,7 +4982,6 @@ link:#BABGABAJ[Table 5-60] describes this persistence property's values.
 
 *_Table 5-60 Valid Values for logging.logger_*
 
-[width="24%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |Custom logger |Fully qualified class name of a custom logger which
@@ -5332,12 +4995,9 @@ implements `org.eclipse.persistence.logging.SessionLog`.
 `DefaultSessionLog`.
 |=======================================================================
 
- +
-
 [[sthref1024]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDGEGJH[Example 5-66] shows how to use this parameter in the
 `persistence.xml` file.
@@ -5367,8 +5027,7 @@ propertiesMap.put(PersistenceUnitProperties.LOGGING_LOGGER,
 
 [[sthref1025]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -5377,36 +5036,23 @@ For more information, see:
 * Custom logger
 http://wiki.eclipse.org/EclipseLink/Examples/JPA/CustomLogger
 
-[[TLJPA959]]
+[[loggingparameters]]
 
 '''''
 
 [[sthref1026]]
 
-logging.parameters
-~~~~~~~~~~~~~~~~~~
+=== logging.parameters
 
 Use the `eclipselink.logging.parameters` property to define if SQL bind
 parameters are included in exceptions and logs.
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-This parameter applies to bind parameters only. Parameters are always
+NOTE: This parameter applies to bind parameters only. Parameters are always
 displayed when not using binding.
-
-|=======================================================================
-
- +
 
 [[sthref1027]]
 
-* +
-Values*
+*Values*
 
 link:#BABEIHHD[Table 5-61] describes this persistence property's values.
 
@@ -5414,19 +5060,15 @@ link:#BABEIHHD[Table 5-61] describes this persistence property's values.
 
 *_Table 5-61 Valid Values for logging.parameters_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=========================================
 |*Value* |*Description*
 |`true` |(Default) Display the parameters.
 |`false` |Do not display the parameters.
 |=========================================
 
- +
-
 [[sthref1029]]
 
-* +
-Usage*
+*Usage*
 
 By default, when using `logging.level` of `FINE` (or greater), SQL bind
 parameters are displayed. Use this parameter to override the default
@@ -5434,8 +5076,7 @@ behavior.
 
 [[sthref1030]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDCHGGF[Example 5-58] shows how to use this parameter in the
 `persistence.xml` file.
@@ -5451,31 +5092,28 @@ link:#CHDCHGGF[Example 5-58] shows how to use this parameter in the
 
 [[sthref1031]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#CHDGFDDH["logging.level"]
+* link:#logginglevel["logging.level"]
 * "Configuring WebLogic Server to Expose EclipseLink Logging" in
 _Solutions Guide for EclispeLink_
 * Logging Examples
 `http://wiki.eclipse.org/EclipseLink/Examples/JPA/Logging`
 
-[[BEIHGGHH]][[TLJPA963]]
+[[loggingsession]][[TLJPA963]]
 
 '''''
 
-logging.session
-~~~~~~~~~~~~~~~
+=== logging.session
 
 Use the `eclipselink.logging.session` property to specify if EclipseLink
 should include a session identifier in each log message.
 
 [[sthref1032]]
 
-* +
-Values*
+*Values*
 
 link:#CHDJCDEJ[Table 5-62] describes this persistence property's values.
 
@@ -5483,19 +5121,15 @@ link:#CHDJCDEJ[Table 5-62] describes this persistence property's values.
 
 *_Table 5-62 Valid Values for logging.session_*
 
-[width="28%",cols="<100%,<",options="header",]
 |===========================================
 |*Value* |*Description*
 |`true` |(Default) Log a session identifier.
 |`false` |Do not log a session identifier.
 |===========================================
 
- +
-
 [[sthref1034]]
 
-* +
-Usage*
+*Usage*
 
 This setting is applicable to messages that require a database
 connection such as SQL and the transaction information to determine on
@@ -5503,8 +5137,7 @@ which underlying session (if any) the message was sent.
 
 [[sthref1035]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDCEJIG[Example 5-69] shows how to use this property in the
 `peristence.xml` file.
@@ -5533,8 +5166,7 @@ propertiesMap.put(PersistenceUnitProperties.LOGGING_SESSION, "false");
 
 [[sthref1036]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -5542,22 +5174,20 @@ For more information, see:
 _Solutions Guide for EclispeLink_
 * Logging Examples
 `http://wiki.eclipse.org/EclipseLink/Examples/JPA/Logging`
-* link:#CHDGFDDH["logging.level"]
+* link:#logginglevel["logging.level"]
 
-[[BEIFFGGB]][[TLJPA967]]
+[[loggingthread]][[TLJPA967]]
 
 '''''
 
-logging.thread
-~~~~~~~~~~~~~~
+=== logging.thread
 
 Use the `eclipselink.logging.thread` property to specify if EclipseLink
 should include a thread identifier in each log message.
 
 [[sthref1037]]
 
-* +
-Values*
+*Values*
 
 link:#CDFJJJGC[Table 5-63] describes this persistence property's values.
 
@@ -5565,27 +5195,22 @@ link:#CDFJJJGC[Table 5-63] describes this persistence property's values.
 
 *_Table 5-63 Valid Values for logging.thread_*
 
-[width="28%",cols="<100%,<",options="header",]
 |==========================================
 |*Value* |*Description*
 |`true` |(Default) Log a thread identifier.
 |`false` |Do not log a thread identifier.
 |==========================================
 
- +
-
 [[sthref1039]]
 
-* +
-Usage*
+*Usage*
 
 You should use this property when running multi-threaded applications.
 EclipseLink will include a hashcode of the thread.
 
 [[sthref1040]]
 
-* +
-Examples*
+*Examples*
 
 link:#CDFIAHBA[Example 5-71] shows how to use this property in the
 `peristence.xml` file.
@@ -5614,31 +5239,28 @@ propertiesMap.put(PersistenceUnitProperties.LOGGING_THREAD, "false");
 
 [[sthref1041]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#CHDGFDDH["logging.level"]
+* link:#logginglevel["logging.level"]
 * Logging Examples
 `http://wiki.eclipse.org/EclipseLink/Examples/JPA/Logging`
 * "Configuring WebLogic Server to Expose EclipseLink Logging" in
 _Solutions Guide for EclispeLink_
 
-[[BEIJCEBJ]][[TLJPA971]]
+[[loggingtimestamp]][[TLJPA971]]
 
 '''''
 
-logging.timestamp
-~~~~~~~~~~~~~~~~~
+=== logging.timestamp
 
 Use the `eclipselink.logging.timestamp` property to specify if
 EclipseLink should include a timestamp in each log message.
 
 [[sthref1042]]
 
-* +
-Values*
+*Values*
 
 link:#BEIHEEHF[Table 5-64] describes this persistence property's values.
 
@@ -5646,19 +5268,15 @@ link:#BEIHEEHF[Table 5-64] describes this persistence property's values.
 
 *_Table 5-64 Valid Values for logging.timestamp_*
 
-[width="28%",cols="<100%,<",options="header",]
 |================================
 |*Value* |*Description*
 |true |(Default) Log a timestamp.
 |false |Do not log a timestamp.
 |================================
 
- +
-
 [[sthref1044]]
 
-* +
-Examples*
+*Examples*
 
 link:#BABGHIAE[Example 5-73] shows how to use this property in the
 `peristence.xml` file.
@@ -5687,8 +5305,7 @@ propertiesMap.put(PersistenceUnitProperties.LOGGING_TIMESTAMP, "false");
 
 [[sthref1045]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -5696,22 +5313,20 @@ For more information, see:
 _Solutions Guide for EclispeLink_
 * Logging Examples
 `http://wiki.eclipse.org/EclipseLink/Examples/JPA/Logging`
-* link:#CHDGFDDH["logging.level"]
+* link:#logginglevel["logging.level"]
 
-[[CHDJDEDE]][[TLJPA1099]]
+[[metadatasource]][[TLJPA1099]]
 
 '''''
 
-metadata-source
-~~~~~~~~~~~~~~~
+=== metadata-source
 
 Use the `eclipselink.metadata-source` property to specify the
 `MetadataSource` implementation EclipseLink uses to read metadata.
 
 [[sthref1046]]
 
-* +
-Values*
+*Values*
 
 link:#CHDBJHIA[Table 5-65] describes this persistence property's values.
 
@@ -5719,7 +5334,6 @@ link:#CHDBJHIA[Table 5-65] describes this persistence property's values.
 
 *_Table 5-65 Valid Values for metadata-source_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`XML` |Use `XMLMetadataSource`.
@@ -5728,20 +5342,16 @@ link:#CHDBJHIA[Table 5-65] describes this persistence property's values.
 `MetadataSource`.
 |=======================================================================
 
- +
-
 [[sthref1048]]
 
-* +
-Usage*
+*Usage*
 
 Use this property with `eclipselink.metadata-source.xml.file` to access
 an external mapping file at a fixed URL for a persistence unit.
 
 [[sthref1049]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDIJADD[Example 5-75] shows how to use this property in the
 `persistence.xml` file.
@@ -5758,14 +5368,13 @@ link:#CHDIJADD[Example 5-75] shows how to use this property in the
 
 [[sthref1050]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#CHDICFHG["metadata-source.send-refresh-command"]
-* link:#CHDDJHIC["metadata-source.xml.file"]
-* link:#CHDBFJEB["metadata-source.xml.url"]
+* link:#metadatasourcesendrefreshcommand["metadata-source.send-refresh-command"]
+* link:#metadatasourcexmlfile["metadata-source.xml.file"]
+* link:#metadatasourcexmlurl["metadata-source.xml.url"]
 * Metadata Source Examples
 `http://wiki.eclipse.org/EclipseLink/Examples/JPA/MetadataSource/`
 * "Extensible Entities"
@@ -5773,12 +5382,11 @@ For more information, see:
 * "Using an External Metadata Source" in _Solutions Guide for
 EclispeLink_
 
-[[CHDEFFGG2]][[TLJPA1101]]
+[[metadatasourcepropertiesfile]][[TLJPA1101]]
 
 '''''
 
-metadata-source.properties.file
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== metadata-source.properties.file
 
 Use the `eclipselink.metadata-source.properties.file` property to
 specify the name of the metadata repository properties file to read
@@ -5786,8 +5394,7 @@ from, using the classloader to find the resource.
 
 [[sthref1051]]
 
-* +
-Values*
+*Values*
 
 link:#CHDDAHCI2[Table 5-66] describes this persistence property's
 values.
@@ -5796,26 +5403,21 @@ values.
 
 *_Table 5-66 Valid Values for metadata-repository.properties.file_*
 
-[width="28%",cols="<100%,<",options="header",]
 |===============================================
 |*Value* |*Description*
 |Filename |Name of the metadata source XML file.
 |===============================================
 
- +
-
 [[sthref1053]]
 
-* +
-Usage*
+*Usage*
 
 Use this property with `eclipselink.metadata-source` when using an XML
 repository.
 
 [[sthref1054]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDDJECG[Example 5-76] shows how to use this property in the
 `persistence.xml` file.
@@ -5833,23 +5435,21 @@ value="c:\myproperties.xml"/>
 
 [[sthref1055]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#CHDJDEDE["metadata-source"]
+* link:#metadatasource["metadata-source"]
 * Metadata Source Examples
 `http://wiki.eclipse.org/EclipseLink/Examples/JPA/MetadataSource/`
 * "Using an External Metadata Source" in _Solutions Guide for
 EclispeLink_
 
-[[CHDICFHG]][[TLJPA976]]
+[[metadatasourcesendrefreshcommand]][[TLJPA976]]
 
 '''''
 
-metadata-source.send-refresh-command
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== metadata-source.send-refresh-command
 
 Use the `eclipselink.metadata-source.send-refresh-command` property with
 cache coordination for a clustered environment to control how
@@ -5857,8 +5457,7 @@ EclipseLink sends RCM refresh metadata commands to the cluster.
 
 [[sthref1056]]
 
-* +
-Values*
+*Values*
 
 link:#CHDEHIJD[Table 5-67] describes this persistence property's values.
 
@@ -5866,7 +5465,6 @@ link:#CHDEHIJD[Table 5-67] describes this persistence property's values.
 
 *_Table 5-67 Valid Values for metadata-source.send-refresh-command_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`true` |(Default) To propogate refresh commands to the cluster, you
@@ -5875,12 +5473,9 @@ must configure RCM and use the `eclipselink.deploy-on-startup` property.
 |`false` |Does not propagate refresh commands to the cluster.
 |=======================================================================
 
- +
-
 [[sthref1058]]
 
-* +
-Usage*
+*Usage*
 
 If cache coordination is configured and the session is deployed on
 startup, this property controls the sending of RCM refresh metadata
@@ -5891,8 +5486,7 @@ metadata.
 
 [[sthref1059]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDIACJI[Example 5-77] shows how to use this property in the
 `persistence.xml` file.
@@ -5922,24 +5516,22 @@ propertiesMap.put(PersistenceUnitProperties.METADATA_SOURCE_RCM_COMMAND, "false"
 
 [[sthref1060]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#CHDJDEDE["metadata-source"]
-* link:#delayonstartup["deploy-on-startup"]
+* link:#metadatasource["metadata-source"]
+* link:#deployonstartup["deploy-on-startup"]
 * Metadata Source Examples
 `http://wiki.eclipse.org/EclipseLink/Examples/JPA/MetadataSource/`
 * "Using an External Metadata Source" in _Solutions Guide for
 EclispeLink_
 
-[[CHDDJHIC]][[TLJPA1103]]
+[[metadatasourcexmlfile]][[TLJPA1103]]
 
 '''''
 
-metadata-source.xml.file
-~~~~~~~~~~~~~~~~~~~~~~~~
+=== metadata-source.xml.file
 
 Use the `eclipselink.metadata-repository.xml.file` property to specify
 the name of the metadata repository XML file to read from, using the
@@ -5947,8 +5539,7 @@ classloader to find the resource.
 
 [[sthref1061]]
 
-* +
-Values*
+*Values*
 
 link:#CHDIEJAA[Table 5-68] describes this persistence property's values.
 
@@ -5956,26 +5547,21 @@ link:#CHDIEJAA[Table 5-68] describes this persistence property's values.
 
 *_Table 5-68 Valid Values for metadata-source.xml.file_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=========================================
 |*Value* |*Description*
 |filename |Metadata `repository.xml` file.
 |=========================================
 
- +
-
 [[sthref1063]]
 
-* +
-Usage*
+*Usage*
 
 Use this property with the `eclipselink.metadata-source` property when
 using an XML repository.
 
 [[sthref1064]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDJJCDD[Example 5-79] shows how to use this property in the
 `persistence.xml` file.
@@ -5992,31 +5578,28 @@ link:#CHDJJCDD[Example 5-79] shows how to use this property in the
 
 [[sthref1065]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#CHDJDEDE["metadata-source"]
+* link:#metadatasource["metadata-source"]
 * Metadata Source Examples
 `http://wiki.eclipse.org/EclipseLink/Examples/JPA/MetadataSource/`
 * "Using an External Metadata Source" in _Solutions Guide for
 EclispeLink_
 
-[[CHDBFJEB]][[TLJPA1105]]
+[[metadatasourcexmlurl]][[TLJPA1105]]
 
 '''''
 
-metadata-source.xml.url
-~~~~~~~~~~~~~~~~~~~~~~~
+=== metadata-source.xml.url
 
 Use the `eclipselink.metadata-source.xml.url` property to specify the
 location of an external mapping file.
 
 [[sthref1066]]
 
-* +
-Values*
+*Values*
 
 link:#CHDEGJAI[Table 5-69] describes this persistence property's values.
 
@@ -6024,25 +5607,20 @@ link:#CHDEGJAI[Table 5-69] describes this persistence property's values.
 
 *_Table 5-69 Valid Values for metadata-source.xml.url_*
 
-[width="28%",cols="<100%,<",options="header",]
 |======================================================
 |*Value* |*Description*
 |url |Specifies the metadata repository of the XML URL.
 |======================================================
 
- +
-
 [[sthref1068]]
 
-* +
-Usage*
+*Usage*
 
 The `metadata-source` property must be set to XML.
 
 [[sthref1069]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDIJADD[Example 5-75] shows how to use this property in the
 `persistence.xml` file.
@@ -6059,12 +5637,11 @@ link:#CHDIJADD[Example 5-75] shows how to use this property in the
 
 [[sthref1070]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#CHDJDEDE["metadata-source"]
+* link:#metadatasource["metadata-source"]
 * Metadata Source Examples
 `http://wiki.eclipse.org/EclipseLink/Examples/JPA/MetadataSource/`
 * "Using an External Metadata Source" in _Solutions Guide for
@@ -6074,18 +5651,16 @@ EclispeLink_
 
 '''''
 
-[[sthref1071]]
+[[multitenanttenantssharecache]]
 
-multitenant.tenants-share-cache
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== multitenant.tenants-share-cache
 
 Use the `eclipselink.multitenant.tenants-share-cache` property to
 specify if multitenant entities will share the L2 cache.
 
 [[sthref1072]]
 
-* +
-Values*
+*Values*
 
 link:#CBAGIIID[Table 5-70] describes this persistence property's values.
 
@@ -6093,38 +5668,22 @@ link:#CBAGIIID[Table 5-70] describes this persistence property's values.
 
 *_Table 5-70 Valid Values for multitenant.tenants-share-cache_*
 
-[width="28%",cols="<100%,<",options="header",]
 |===================================================================
 |*Value* |*Description*
 |`true` |Multitenant entities will use an protected cache.
 |`false` |(Default) Multitenant entities will use an isolated cache.
 |===================================================================
 
- +
-
 [[sthref1074]]
 
-* +
-Usage*
+*Usage*
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-*WARNING:*
-
-*When this setting is `false`, queries that use the cache may return
+WARNING: *When this setting is `false`, queries that use the cache may return
 data from other tenants when using the `PROTECTED` setting.*
-
-|=======================================================================
-
- +
 
 [[sthref1075]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDDABAB[Example 5-81]shows how to use this property in the
 `persistence.xml` file.
@@ -6155,24 +5714,22 @@ propertiesMap.put(PersistenceUnitProperties.MULTITENANT_TENANTS_SHARE_CACHE,
 
 [[sthref1076]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:annotations_ref.htm#BABIEJGD["@Multitenant"]
+* xref:{relativedir}/annotations_ref.adoc#BABIEJGD["@Multitenant"]
 * Multitenant examples:
 `http://wiki.eclipse.org/EclipseLink/Examples/JPA/Multitenant`
 * "Using Multitenancy" in _Solutions Guide for EclispeLink_
 
-[[TLJPA982]]
+[[multitenanttenantsshareemf]]
 
 '''''
 
 [[sthref1077]]
 
-multitenant.tenants-share-emf
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== multitenant.tenants-share-emf
 
 Use the `eclipselink.multitenant.shared-emf` property to specify if
 multitenant entities will be used within a shared entity manager
@@ -6180,8 +5737,7 @@ factory.
 
 [[sthref1078]]
 
-* +
-Values*
+*Values*
 
 link:#CACBHJCF[Table 5-71] describes this persistence property's values.
 
@@ -6189,27 +5745,22 @@ link:#CACBHJCF[Table 5-71] describes this persistence property's values.
 
 *_Table 5-71 Valid Values for multitenant.tenants-share-emf_*
 
-[width="28%",cols="<100%,<",options="header",]
 |====================================================
 |*Value* |*Description*
 |`true` |(Default) Multitenant entities will be used.
 |`false` |Specify a unique session name.
 |====================================================
 
- +
-
 [[sthref1080]]
 
-* +
-Usage*
+*Usage*
 
 When setting it to `false`, you are required to provide a unique session
 name.
 
 [[sthref1081]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDEGDAH[Example 5-83] shows how to use this property in the
 `persistence.xml` file.
@@ -6225,22 +5776,20 @@ link:#CHDEGDAH[Example 5-83] shows how to use this property in the
 
 [[sthref1082]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:annotations_ref.htm#BABIEJGD["@Multitenant"]
+* xref:{relativedir}/annotations_ref.adoc#BABIEJGD["@Multitenant"]
 * Multitenant examples:
 `http://wiki.eclipse.org/EclipseLink/Examples/JPA/Multitenant`
 * "Using Multitenancy" in _Solutions Guide for EclispeLink_
 
-[[BGBEDEJC]][[TLJPA986]]
+[[nosqlconnectionfactory]][[TLJPA986]]
 
 '''''
 
-nosql.connection-factory
-~~~~~~~~~~~~~~~~~~~~~~~~
+=== nosql.connection-factory
 
 Use the `eclipselink.nosql.connection-factory` property to specify the
 JNDI name of a JCA `ConnectionFactory` or a JCA `ConnectionFactory`
@@ -6248,8 +5797,7 @@ class name that connects to the NoSQL data-source.
 
 [[sthref1083]]
 
-* +
-Values*
+*Values*
 
 link:#BGBCBBFD[Table 5-72] describes this persistence property's values.
 
@@ -6257,19 +5805,15 @@ link:#BGBCBBFD[Table 5-72] describes this persistence property's values.
 
 *_Table 5-72 Valid Values for nosql.connection-factory_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |connection factory |JNDI name or class name of the JCA Connection
 Factory.
 |=======================================================================
 
- +
-
 [[sthref1085]]
 
-* +
-Usage*
+*Usage*
 
 This property allows the JCA `ConnectionFactory` to be used with a NoSql
 or EIS adapter for a NoSQL datasource (that is, a non-relationship
@@ -6278,8 +5822,7 @@ transactional and messaging systems, or ERP systems).
 
 [[sthref1086]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDJJDGE[Example 5-84] shows how to use this property in the
 `persistence.xml` file.
@@ -6296,13 +5839,12 @@ value="MyConnectionFactory" />
 
 [[sthref1087]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:annotations_ref.htm#BJEIEBHC["@NoSql"]
-* link:#BABJAJAI["nosql.property"]
+* xref:{relativedir}/annotations_ref.adoc#BJEIEBHC["@NoSql"]
+* link:#nosqlproperty["nosql.property"]
 * NoSQL Persistence Units
 `http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/NoSQL/Persistence_Units`
 * Examples `http://wiki.eclipse.org/EclipseLink/Examples/JPA/NoSQL`
@@ -6310,12 +5852,11 @@ For more information, see:
 * "Using EclipseLink with Nonrelational Databases" in _Solutions Guide
 for EclispeLink_
 
-[[BCGEBECD]][[TLJPA990]]
+[[nosqlconnectionspec]][[TLJPA990]]
 
 '''''
 
-nosql.connection-spec
-~~~~~~~~~~~~~~~~~~~~~
+=== nosql.connection-spec
 
 Use the `eclipselink.nosql.connection-spec` property to specify an
 `EISConnectionSpec` class name that defines how to connect to the NoSQL
@@ -6323,8 +5864,7 @@ datasource.
 
 [[sthref1088]]
 
-* +
-Values*
+*Values*
 
 link:#CBAEAHAF[Table 5-73] describes this persistence property's values.
 
@@ -6332,18 +5872,14 @@ link:#CBAEAHAF[Table 5-73] describes this persistence property's values.
 
 *_Table 5-73 Valid Values for nosql.connection-spec_*
 
-[width="28%",cols="<100%,<",options="header",]
 |========================================
 |*Value* |*Description*
 |classname |`IESConnectionSpec` classname
 |========================================
 
- +
-
 [[sthref1090]]
 
-* +
-Usage*
+*Usage*
 
 This property allows the JCA ConnectionFactory to be used with a NoSql
 or EIS adapter for a NoSQL datasource (that is, a non-relationship
@@ -6352,21 +5888,19 @@ transactional and messaging systems, or ERP systems).
 
 [[sthref1091]]
 
-* +
-Examples*
+*Examples*
 
 See link:#BABHDHCG[Example 5-85] for information on how to use this
 property.
 
 [[sthref1092]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:annotations_ref.htm#BJEIEBHC["@NoSql"]
-* link:#BABJAJAI["nosql.property"]
+* xref:{relativedir}/annotations_ref.adoc#BJEIEBHC["@NoSql"]
+* link:#nosqlproperty["nosql.property"]
 * NoSQL Persistence Units
 `http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/NoSQL/Persistence_Units`
 * Examples `http://wiki.eclipse.org/EclipseLink/Examples/JPA/NoSQL`
@@ -6374,20 +5908,18 @@ For more information, see:
 * "Using EclipseLink with Nonrelational Databases" in _Solutions Guide
 for EclispeLink_
 
-[[BABJAJAI]][[TLJPA1107]]
+[[nosqlproperty]][[TLJPA1107]]
 
 '''''
 
-nosql.property
-~~~~~~~~~~~~~~
+=== nosql.property
 
 Use the `eclipselink.nosql.property` property to set NoSQL-specific
 connection properties.
 
 [[sthref1093]]
 
-* +
-Values*
+*Values*
 
 link:#BABDCBBE[Table 5-74] describes this persistence property's values.
 
@@ -6395,25 +5927,20 @@ link:#BABDCBBE[Table 5-74] describes this persistence property's values.
 
 *_Table 5-74 Valid Values for nosql.property_*
 
-[width="28%",cols="<100%,<",options="header",]
 |================================
 |*Value* |*Description*
 |property name |A NoSQL property.
 |================================
 
- +
-
 [[sthref1095]]
 
-* +
-Usage*
+*Usage*
 
 Append the NoSQL-specific property name to this property.
 
 [[sthref1096]]
 
-* +
-Examples*
+*Examples*
 
 link:#BABHDHCG[Example 5-85] shows how to use this property in the
 `persistence.xml` file.
@@ -6448,33 +5975,30 @@ version="2.0">
 
 [[sthref1097]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:annotations_ref.htm#BJEIEBHC["@NoSql"]
+* xref:{relativedir}/annotations_ref.adoc#BJEIEBHC["@NoSql"]
 * "Using Non-SQL Databases" in _Understanding EclipseLink_
 * NoSQL Persistence Units
 `http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/NoSQL/Persistence_Units`
 * Examples `http://wiki.eclipse.org/EclipseLink/Examples/JPA/NoSQL`
-* link:#BGBEDEJC["nosql.connection-factory"]
-* link:#BCGEBECD["nosql.connection-spec"]
+* link:#nosqlconnectionfactory["nosql.connection-factory"]
+* link:#nosqlconnectionspec["nosql.connection-spec"]
 
-[[CDEFJEGI]][[TLJPA1109]]
+[[oracleproxytype]][[TLJPA1109]]
 
 '''''
 
-oracle.proxy-type
-~~~~~~~~~~~~~~~~~
+=== oracle.proxy-type
 
 Use the `eclipselink.oracle.proxy-type` property to specify the proxy
 type to be passed to the `OracleConnection.openProxySession` method.
 
 [[sthref1098]]
 
-* +
-Values*
+*Values*
 
 link:#CDEIGGEJ[Table 5-75] describes this persistence property's values.
 
@@ -6482,7 +6006,6 @@ link:#CDEIGGEJ[Table 5-75] describes this persistence property's values.
 
 *_Table 5-75 Valid Values for oracle.proxy-type_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`USER_NAME` |This type uses a user name for authentication when
@@ -6495,12 +6018,9 @@ authentication when creating a proxy connection.
 when creating a proxy connection.
 |=======================================================================
 
- +
-
 [[sthref1100]]
 
-* +
-Usage*
+*Usage*
 
 This property requires Oracle JDBC version 10.1.0.2 or later and
 `eclipselink.target-database` must be configured to use `Oracle9` or
@@ -6517,8 +6037,7 @@ proxy connections.
 
 [[sthref1101]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDDCIFJ[Example 5-86] shows how to use the property with
 `EntityManager`.
@@ -6547,23 +6066,21 @@ entityManager.setProperty(OracleConnection.PROXY_USER_NAME, ”john”);
 
 [[sthref1102]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#target-database["target-database"]
+* link:#targetdatabase["target-database"]
 * Oracle Proxy Authentication Example
 `http://wiki.eclipse.org/EclipseLink/Examples/JPA/Oracle/Proxy`
 * Auditing example
 `http://wiki.eclipse.org/EclipseLink/Examples/JPA/Auditing`
 
-[[orm.throw.exceptions]][[TLJPA1111]]
+[[ormthrowexceptions]][[TLJPA1111]]
 
 '''''
 
-orm.throw.exceptions
-~~~~~~~~~~~~~~~~~~~~
+=== orm.throw.exceptions
 
 Use the `eclipselink.orm.throw.exceptions` property to specify if
 EclipseLink throws an exception or logs a warning when encountering a
@@ -6572,8 +6089,7 @@ problem with any of the files in the `<mapping-file>` element of the
 
 [[sthref1103]]
 
-* +
-Values*
+*Values*
 
 link:#CIHCJBFB[Table 5-76] describes this persistence property's values.
 
@@ -6581,19 +6097,15 @@ link:#CIHCJBFB[Table 5-76] describes this persistence property's values.
 
 *_Table 5-76 Valid Values for orm.throw.exceptions_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=====================================
 |*Value* |*Description*
 |`true` |(Default) Throw an exception.
 |`false` |Log a warning only.
 |=====================================
 
- +
-
 [[sthref1105]]
 
-* +
-Examples*
+*Examples*
 
 link:#CIHCCAJE[Example 5-87] shows how to use this property in the
 `persistence.xml` file.
@@ -6623,27 +6135,24 @@ propertiesMap.put(PersistenceUnitProperties.ECLIPSELINK_ORM_THROW_EXCEPTIONS,
 
 [[sthref1106]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#CCHCJCDJ["exception-handler"]
+* link:#exceptionhandler["exception-handler"]
 
-[[CHDIFJDB]][[TLJPA994]]
+[[ormvalidateschema]][[TLJPA994]]
 
 '''''
 
-orm.validate.schema
-~~~~~~~~~~~~~~~~~~~
+=== orm.validate.schema
 
 Use the `orm.validate.schema` property to override `orm.xml` schema
 validation from its default value of `false`.
 
 [[sthref1107]]
 
-* +
-Values*
+*Values*
 
 link:#CHDIEGGI[Table 5-77] describes this persistence property's values.
 
@@ -6651,7 +6160,6 @@ link:#CHDIEGGI[Table 5-77] describes this persistence property's values.
 
 *_Table 5-77 Valid Values for orm.validate.schema_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`true` |Enables schema velidation on on `orm.xml` file.
@@ -6660,19 +6168,15 @@ link:#CHDIEGGI[Table 5-77] describes this persistence property's values.
 file.
 |=======================================================================
 
- +
-
 [[sthref1109]]
 
-* +
-Usage*
+*Usage*
 
 Use `orm.validate.schema` to enable `orm.xml schema` validation.
 
 [[sthref1110]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDBCEAB[Example 5-89] shows how to use this property in the
 `persistence.xml` file.
@@ -6699,12 +6203,11 @@ import org.eclipse.persistence.config.PersistenceUnitProperties;
 propertyMap.put(PersistenceUnitProperties.ORM_VALIDATE_SCHEMA, "true");
 ----
 
-[[partitioning]][[TLJPA1115]]
+[[prop.partitioning]][[TLJPA1115]]
 
 '''''
 
-partitioning
-~~~~~~~~~~~~
+=== partitioning
 
 Use the `eclipselink.partitioning` property to set the default
 `PartitioningPolicy` for a persistence unit. The value must be the name
@@ -6712,8 +6215,7 @@ of an existing, defined `PartitioningPolicy`.
 
 [[sthref1111]]
 
-* +
-Values*
+*Values*
 
 link:#CEGBHDDC[Table 5-78] describes this persistence property's values.
 
@@ -6721,18 +6223,14 @@ link:#CEGBHDDC[Table 5-78] describes this persistence property's values.
 
 *_Table 5-78 Valid Values for partitioning_*
 
-[width="28%",cols="<100%,<",options="header",]
 |================================================
 |*Value* |*Description*
 |name |An existing, defined `PartitioningPolicy`.
 |================================================
 
- +
-
 [[sthref1113]]
 
-* +
-Usage*
+*Usage*
 
 Use this property to partition data for a class across multiple
 difference databases or across a database cluster such as Oracle RAC.
@@ -6744,8 +6242,7 @@ If multiple partitions are used to process a single transaction, use JTA
 
 [[sthref1114]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDJFIJA[Example 5-91] shows how to use this property in the
 `persistence.xml` file.
@@ -6768,22 +6265,20 @@ For more information, see:
 
 * Partitioning Examples
 `http://wiki.eclipse.org/EclipseLink/Examples/JPA/Partitioning`
-* link:annotations_ref.htm#CEGDCFDA["@Partitioning"]
+* xref:{relativedir}/annotations_ref.adoc#CEGDCFDA["@Partitioning"]
 
-[[BJFEFCFC]][[TLJPA999]]
+[[partitioningcallback]][[TLJPA999]]
 
 '''''
 
-partitioning.callback
-~~~~~~~~~~~~~~~~~~~~~
+=== partitioning.callback
 
 Use the `eclipselink.partitioning.callback` property to integrate an
 external DataSource's affinity support, such as UCP.
 
 [[sthref1116]]
 
-* +
-Values*
+*Values*
 
 link:#BJFFDAAH[Table 5-79] describes this persistence property's values.
 
@@ -6791,26 +6286,21 @@ link:#BJFFDAAH[Table 5-79] describes this persistence property's values.
 
 *_Table 5-79 Valid Values for eclipselink.partitioning.callback_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |value |A class that implements the `DataPartitioningCallBack`
 interface.
 |=======================================================================
 
- +
-
 [[sthref1118]]
 
-* +
-Usage*
+*Usage*
 
 The value must be set to the full class name.
 
 [[sthref1119]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDFEFBF[Example 5-92] shows how to use this property in the
 `persistence.xml` file.
@@ -6839,12 +6329,11 @@ propertiesMap.put(PersistenceUnitProperties.PARTITIONING_CALLBACK,
 "mypackage.MyDataPartitioningCallback");
 ----
 
-[[BABDGGHE]][[TLJPA1117]]
+[[persistencecontextcloseoncommit]][[TLJPA1117]]
 
 '''''
 
-persistence-context.close-on-commit
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== persistence-context.close-on-commit
 
 Use the `eclipselink.persistence-context.close-on-commit` property to
 specify if the `EntityManager` will be closed or not used after commit
@@ -6852,8 +6341,7 @@ specify if the `EntityManager` will be closed or not used after commit
 
 [[sthref1120]]
 
-* +
-Values*
+*Values*
 
 link:#BABGIHIC[Table 5-80] describes this persistence property's values.
 
@@ -6861,19 +6349,15 @@ link:#BABGIHIC[Table 5-80] describes this persistence property's values.
 
 *_Table 5-80 Valid Values for persistence-context.close-on-commit_*
 
-[width="28%",cols="<100%,<",options="header",]
 |===================================================================
 |*Value* |*Description*
 |`true` |Closes the EntityManager after a commit.
 |`false` |(Default) Does not close the EntityManager after a commit.
 |===================================================================
 
- +
-
 [[sthref1122]]
 
-* +
-Usage*
+*Usage*
 
 For a container-managed `EntityManager` and most managed applications,
 you normally set this property to `false`. This setting avoids
@@ -6887,8 +6371,7 @@ the factory. Alternatively, to apply the property to _specific_
 
 [[sthref1123]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDIBADB[Example 5-94] shows how to use this property in the
 `persistence.xml` file.
@@ -6918,12 +6401,11 @@ propertiesMap.put(PersistenceUnitProperties.PERSISTENCE_CONTEXT_CLOSE_ON_COMMIT,
 "true");
 ----
 
-[[BABCHJJA]][[TLJPA1003]]
+[[persistencecontextcommitwithoutpersistrules]][[TLJPA1003]]
 
 '''''
 
-persistence-context.commit-without-persist-rules
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== persistence-context.commit-without-persist-rules
 
 Use the `eclipselink.persistence-context.commit-without-persist-rules`
 property to specify if the EntityManager will search all managed objects
@@ -6932,8 +6414,7 @@ any absence of `CascadeType.PERSIST` settings.
 
 [[sthref1124]]
 
-* +
-Values*
+*Values*
 
 link:#BABGJGAD[Table 5-81] describes this persistence property's values.
 
@@ -6942,7 +6423,6 @@ link:#BABGJGAD[Table 5-81] describes this persistence property's values.
 *_Table 5-81 Valid Values for
 persistence-context.commit-without-persist-rules_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`true` |Cascades Entity life-cycle Persist operations to related
@@ -6953,12 +6433,9 @@ operations to related entities and does not use the
 `CascadeType.PERSIST` settings.
 |=======================================================================
 
- +
-
 [[sthref1126]]
 
-* +
-Usage*
+*Usage*
 
 Setting this property to `true` replicates the traditional EclipseLink
 native functionality.
@@ -6998,12 +6475,11 @@ propertiesMap.put
 "true");
 ----
 
-[[BABDHEEB]][[TLJPA1005]]
+[[persistencecontextflushmode]][[TLJPA1005]]
 
 '''''
 
-persistence-context.flush-mode
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== persistence-context.flush-mode
 
 Use the `eclipselink.persistence-context.flush-mode` property to
 configure the `EntityManager` `FlushMode` to be set as a persistence
@@ -7011,8 +6487,7 @@ property and specify when flushing occurs.
 
 [[sthref1128]]
 
-* +
-Values*
+*Values*
 
 link:#BABHDEJC[Table 5-82] describes this persistence property's values.
 
@@ -7020,19 +6495,15 @@ link:#BABHDEJC[Table 5-82] describes this persistence property's values.
 
 *_Table 5-82 Valid Values for persistence-context.flush-mode_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=====================================================
 |*Value* |*Description*
 |`auto` |(Default) Flushing occurs at query execution.
 |`commit` |Flushing occurs at transaction commit.
 |=====================================================
 
- +
-
 [[sthref1130]]
 
-* +
-Usage*
+*Usage*
 
 The property set in `persistence.xml` or passed to
 `createEntityManagerFactory` affects _all_ `EntityManagers` created by
@@ -7041,8 +6512,7 @@ it to the `createEntityManager` method.
 
 [[sthref1131]]
 
-* +
-Examples*
+*Examples*
 
 link:#BABJCABF[Example 5-98] shows how to use this property in the
 `persistence.xml` file.
@@ -7072,20 +6542,18 @@ propertiesMap.put(PersistenceUnitProperties.PERSISTENCE_CONTEXT_FLUSH_MODE,
 
 [[sthref1132]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:queryhints.htm#CBHFHGEB["flush"]
+* xref:{relativedir}/queryhints.adoc#CBHFHGEB["flush"]
 * "Enhancing Performance" in _Solutions Guide for EclispeLink_
 
-[[BABGCAGC]][[TLJPA1008]]
+[[persistencecontextpersistoncommit]][[TLJPA1008]]
 
 '''''
 
-persistence-context.persist-on-commit
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== persistence-context.persist-on-commit
 
 Use the `eclipselink.persistence-context.persist-on-commit` property to
 specify if the `EntityManager` searches all managed objects and persists
@@ -7095,8 +6563,7 @@ used for new objects.
 
 [[sthref1133]]
 
-* +
-Values*
+*Values*
 
 link:#BABHIBEC[Table 5-83] describes this persistence property's values.
 
@@ -7104,7 +6571,6 @@ link:#BABHIBEC[Table 5-83] describes this persistence property's values.
 
 *_Table 5-83 Valid Values for persistence-context.persist-on-commit_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`true` |(Default) Searches and persists related non-managed new objects
@@ -7114,12 +6580,9 @@ that are cascade persist.
 that are cascade persist.
 |=======================================================================
 
- +
-
 [[sthref1135]]
 
-* +
-Usage*
+*Usage*
 
 The property set in `persistence.xml` or passed to
 `createEntityManagerFactory` affects _all_ `EntityManagers` created by
@@ -7159,12 +6622,11 @@ propertiesMap.put(PersistenceUnitProperties.PERSISTENCE_CONTEXT_PERSIST_ON_COMMI
 "false");
 ----
 
-[[BABIAJAI]][[TLJPA1119]]
+[[persistencecontextreferencemode]][[TLJPA1119]]
 
 '''''
 
-persistence-context.reference-mode
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== persistence-context.reference-mode
 
 Use the `eclipselink.persistence-context.reference-mode` property to
 specify if hard or soft (that is, weak) references are used within the
@@ -7172,8 +6634,7 @@ Persistence Context.
 
 [[sthref1137]]
 
-* +
-Values*
+*Values*
 
 link:#BABFGBIF[Table 5-84] describes this persistence property's values.
 
@@ -7181,7 +6642,6 @@ link:#BABFGBIF[Table 5-84] describes this persistence property's values.
 
 *_Table 5-84 Valid Values for persistence-context.reference-mode_*
 
-[width="18%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`hard` |(Default) EclipseLink references all objects through hard
@@ -7191,7 +6651,7 @@ of work) is released/cleared or closed.
 
 |`weak` a|
 References to objects supporting active attribute change tracking (see
-link:annotations_ref.htm#CEGCCCCJ["@ChangeTracking"]) will be held by
+xref:{relativedir}/annotations_ref.adoc#CEGCCCCJ["@ChangeTracking"]) will be held by
 weak references. That is, any object no longer referenced directly or
 indirectly will be available for garbage collection. When a change is
 made to a change-tracked object, that object is moved to a hard
@@ -7208,7 +6668,7 @@ not be available for garbage collection.
 |`force_weak` a|
 All objects, including non-change-tracked objects, are to be held by
 weak references. When a change is made to a change-tracked object (see
-link:annotations_ref.htm#CEGCCCCJ["@ChangeTracking"]), that object is
+xref:{relativedir}/annotations_ref.adoc#CEGCCCCJ["@ChangeTracking"]), that object is
 moved to a hard reference and will not be available for garbage
 collection until flushed. However, any objects that do not support
 active attribute change tracking may be garbage collected before their
@@ -7220,12 +6680,9 @@ available for garbage collection.
 
 |=======================================================================
 
- +
-
 [[sthref1139]]
 
-* +
-Usage*
+*Usage*
 
 The property set in `persistence.xml` or passed to
 `createEntityManagerFactory` affects all `EntityManagers` created by the
@@ -7234,8 +6691,7 @@ factory. To apply the property to specific `EntityManagers` pass it to
 
 [[sthref1140]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDBACII[Example 5-102] shows how to use this property in a
 `persistence.xml` file.
@@ -7268,19 +6724,17 @@ ReferenceMode.FORCE_WEAK);
 
 [[sthref1141]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:annotations_ref.htm#CEGCCCCJ["@ChangeTracking"]
+* xref:{relativedir}/annotations_ref.adoc#CEGCCCCJ["@ChangeTracking"]
 
 [[persistenceunits]][[TLJPA1121]]
 
 '''''
 
-persistenceunits
-~~~~~~~~~~~~~~~~
+=== persistenceunits
 
 Use the `eclipselink.persistenceunits` property to specify the set of
 persistence unit names that will be processed when generating the
@@ -7289,8 +6743,7 @@ available in all persistence XML files.
 
 [[sthref1142]]
 
-* +
-Values*
+*Values*
 
 link:#BABDEJGG[Table 5-85] describes this persistence property's values.
 
@@ -7298,7 +6751,6 @@ link:#BABDEJGG[Table 5-85] describes this persistence property's values.
 
 *_Table 5-85 Valid Values for persistenceunits_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |names a|
@@ -7309,12 +6761,9 @@ a comma ( , ) in the name of a persistence unit.
 
 |=======================================================================
 
- +
-
 [[sthref1144]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDDAJDH[Example 5-104] shows how to use this property in the
 `persistence.xml` file.
@@ -7332,31 +6781,18 @@ link:#CHDDAJDH[Example 5-104] shows how to use this property in the
 
 '''''
 
-persistencexml
-~~~~~~~~~~~~~~
+=== persistencexml
 
 Use the `eclipselink.persistencexml` property to specify the full
 resource name in which to look for the persistence XML files. If
 omitted, EclipseLink uses the default location:
 `META-INF/persistence.xml`.
 
- +
-
-[width="100%",cols="<100%",]
-|=======================================================================
-a|
-image:../../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-Currently, this property is used only for the canonical model generator.
-
-|=======================================================================
-
- +
+NOTE: Currently, this property is used only for the canonical model generator.
 
 [[sthref1145]]
 
-* +
-Values*
+*Values*
 
 link:#BEIGADGB[Table 5-86] describes this persistence property's values.
 
@@ -7364,18 +6800,14 @@ link:#BEIGADGB[Table 5-86] describes this persistence property's values.
 
 *_Table 5-86 Valid Values for persistencexml_*
 
-[width="28%",cols="<100%,<",options="header",]
 |======================================================
 |*Value* |*Description*
 |resource name |Location of the `persistence.xml` file.
 |======================================================
 
- +
-
 [[sthref1147]]
 
-* +
-Usage*
+*Usage*
 
 This property is only used by EclipseLink when it is locating the
 configuration file. When used within an EJB/Spring container in
@@ -7386,8 +6818,7 @@ If you want to change the default location, use `persisencexml.default`.
 
 [[sthref1148]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDCHHEB[Example 5-105] shows how to use this property in the
 `persistence.xml` file.
@@ -7403,19 +6834,17 @@ link:#CHDCHHEB[Example 5-105] shows how to use this property in the
 
 [[sthref1149]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#CHDEGCBC["persisencexml.default"]
+* link:#persisencexmldefault["persisencexml.default"]
 
-[[CHDEGCBC]][[TLJPA54184]]
+[[persisencexmldefault]][[TLJPA54184]]
 
 '''''
 
-persisencexml.default
-~~~~~~~~~~~~~~~~~~~~~
+=== persisencexml.default
 
 Use the `eclipselink.persistencexml.default` property to specify the
 default resource location where the `persistence.xml` configuration file
@@ -7423,8 +6852,7 @@ is located. The default location is `META-INF/persistence.xml`.
 
 [[sthref1150]]
 
-* +
-Values*
+*Values*
 
 link:#CHDDBHGH[Table 5-87] describes this persistence property's values.
 
@@ -7432,19 +6860,15 @@ link:#CHDDBHGH[Table 5-87] describes this persistence property's values.
 
 *_Table 5-87 Valid Values for persistencexml.default_*
 
-[width="25%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |resource location |Default resource location of the `persistence.xml`
 file.
 |=======================================================================
 
- +
-
 [[sthref1152]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDDHADB[Example 5-106] shows how to use this property in a
 property map.
@@ -7464,16 +6888,14 @@ propertiesMap.put(PersistenceUnitProperties.ECLIPSELINK_PERSISTENCE_XML_DEFAULT,
 
 '''''
 
-profiler
-~~~~~~~~
+=== profiler
 
 Use the `eclipselink.profiler` property to specify which performance
 profiler to use in order to capture runtime statistics.
 
 [[sthref1153]]
 
-* +
-Values*
+*Values*
 
 link:#CHDBECBD[Table 5-88] describes this persistence property's values.
 
@@ -7481,7 +6903,6 @@ link:#CHDBECBD[Table 5-88] describes this persistence property's values.
 
 *_Table 5-88 Valid Values for profiler_*
 
-[width="26%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`NoProfiler` |(Default) Do not use a performance profiler.
@@ -7509,12 +6930,9 @@ This property is specific to the Oracle Dynamic Monitoring Service
 `SessionProfiler` and provides a no-argument constructor.
 |=======================================================================
 
- +
-
 [[sthref1155]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDBCCED[Example 5-107] shows how to use this property in the
 `persistence.xml` file.
@@ -7545,17 +6963,15 @@ ProfilerType.PerformanceProfiler);
 
 [[sthref1156]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-[[session.customizer]][[TLJPA1127]]
+[[sessioncustomizer]][[TLJPA1127]]
 
 '''''
 
-session.customizer
-~~~~~~~~~~~~~~~~~~
+=== session.customizer
 
 Use the `eclipselink.session.customizer` property to specify a session
 customizer class that implements the
@@ -7564,8 +6980,7 @@ must provide a default, no argument constructor.
 
 [[sthref1157]]
 
-* +
-Values*
+*Values*
 
 link:#CHDGBEFG[Table 5-89] describes this persistence property's values.
 
@@ -7573,18 +6988,14 @@ link:#CHDGBEFG[Table 5-89] describes this persistence property's values.
 
 *_Table 5-89 Valid Values for session.customizer_*
 
-[width="28%",cols="<100%,<",options="header",]
 |======================================================================
 |*Value* |*Description*
 |class name |Fully qualified class name of a `SessionCustomizer` class.
 |======================================================================
 
- +
-
 [[sthref1159]]
 
-* +
-Usage*
+*Usage*
 
 You can use the customize method of the class (which takes an
 `org.eclipse.persistence.sessions.Session`) to programmatically access
@@ -7593,8 +7004,7 @@ class to define multiple session event listeners.
 
 [[sthref1160]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDFBIEI[Example 5-109] shows how to use this property in the
 `persistence.xml` file.
@@ -7625,19 +7035,17 @@ propertiesMap.put(PersistenceUnitProperties.SESSION_CUSTOMIZER,
 
 [[sthref1161]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#session-event-listener["session-event-listener"]
+* link:#sessioneventlistener["session-event-listener"]
 
-[[CHDFDJJD]][[TLJPA1017]]
+[[sessionincludedescriptorqueries]][[TLJPA1017]]
 
 '''''
 
-session.include.descriptor.queries
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== session.include.descriptor.queries
 
 Use the `eclipselink.session.include.descriptor.queries` property to
 specify whether all descriptor named queries are copied to the session
@@ -7645,8 +7053,7 @@ for use by the entity manager.
 
 [[sthref1162]]
 
-* +
-Values*
+*Values*
 
 link:#CHDDEADH[Table 5-90] describes this persistence property's values.
 
@@ -7654,19 +7061,15 @@ link:#CHDDEADH[Table 5-90] describes this persistence property's values.
 
 *_Table 5-90 Valid Values for session.include.descriptor.queries_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================
 |*Value* |*Description*
 |`true` |Copying is enabled.
 |`false` |(Default) Copying is disabled.
 |=======================================
 
- +
-
 [[sthref1164]]
 
-* +
-Examples*
+*Examples*
 
 link:#BABGAFHH[Example 5-111] shows how to use this property in the
 `persistence.xml` file.
@@ -7695,20 +7098,18 @@ import org.eclipse.persistence.config.PersistenceUnitProperties;
 propertiesMap.put(PersistenceUnitProperties.INCLUDE_DESCRIPTOR_QUERIES, "true");
 ----
 
-[[session-event-listener]][[TLJPA1129]]
+[[sessioneventlistener]][[TLJPA1129]]
 
 '''''
 
-session-event-listener
-~~~~~~~~~~~~~~~~~~~~~~
+=== session-event-listener
 
 Use the `eclipselink.session-event-listener` property to specify a
 descriptor event listener to be added during bootstrapping.
 
 [[sthref1165]]
 
-* +
-Values*
+*Values*
 
 link:#CHDGFICG[Table 5-91] describes this persistence property's values.
 
@@ -7716,27 +7117,22 @@ link:#CHDGFICG[Table 5-91] describes this persistence property's values.
 
 *_Table 5-91 Valid Values for session-event-listener_*
 
-[width="18%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |Class name |A qualified class name for a class that implements the
 `org.eclipse.persistence.sessions.SessionEventListener` interface.
 |=======================================================================
 
- +
-
 [[sthref1167]]
 
-* +
-Usage*
+*Usage*
 
 To define multiple event listener, you can use a
-link:#session.customizer[session.customizer] class.
+link:#sessioncustomizer[session.customizer] class.
 
 [[sthref1168]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDJFEIG[Example 5-113] shows how to use this property in a
 `persistence.xml` file.
@@ -7767,19 +7163,17 @@ propertiesMap.put(PersistenceUnitProperties.SESSION_EVENT_LISTENER_CLASS,
 
 [[sthref1170]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#session.customizer["session.customizer"]
+* link:#sessioncustomizer["session.customizer"]
 
-[[CHDFHEAC]][[TLJPA1023]]
+[[sessionname]][[TLJPA1023]]
 
 '''''
 
-session-name
-~~~~~~~~~~~~
+=== session-name
 
 Use the `eclipselink.session-name` property to configure a unique name
 to use when storing the singleton server session within the
@@ -7796,19 +7190,15 @@ link:#CHDECCEJ[Table 5-92] describes this persistence property's values.
 
 *_Table 5-92 Valid Values for session.name_*
 
-[width="18%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |Name |Unique session name to use instead of the default,
 EclipseLink-generated session name.
 |=======================================================================
 
- +
-
 [[sthref1173]]
 
-* +
-Usage*
+*Usage*
 
 By default, EclipseLink generates a unique session name. You can provide
 a custom, unique, session name with this property.
@@ -7818,8 +7208,7 @@ the name of the session in the `sessions-xml` file.
 
 [[sthref1174]]
 
-* +
-Examples*
+*Examples*
 
 link:#CACICICG[Example 5-115] shows how to use this property in the
 `persistence.xml` file.
@@ -7848,19 +7237,17 @@ propertiesMap.put(PersistenceUnitProperties.SESSION_NAME, "MySession");
 
 [[sthref1175]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#sessions-xml["sessions-xml"]
+* link:#sessionsxml["sessions-xml"]
 
-[[sessions-xml]][[TLJPA1131]]
+[[sessionsxml]][[TLJPA1131]]
 
 '''''
 
-sessions-xml
-~~~~~~~~~~~~
+=== sessions-xml
 
 Use the `eclipselink.sessions-xml` property to use a specified native
 `sessions.xml` configuration file (which references a `project.xml`
@@ -7869,8 +7256,7 @@ annotations or EclipseLink XML (as shown in link:#CIHFHAFB[Figure 5-1]).
 
 [[sthref1176]]
 
-* +
-Values*
+*Values*
 
 link:#CIHCGECF[Table 5-93] describes this persistence property's values.
 
@@ -7878,19 +7264,15 @@ link:#CIHCGECF[Table 5-93] describes this persistence property's values.
 
 *_Table 5-93 Valid Values for sessions-xml_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |configuration file |The resource name of the sessions XML file. If you
 do not specify the value for this property, it will not be used.
 |=======================================================================
 
- +
-
 [[sthref1178]]
 
-* +
-Usage*
+*Usage*
 
 You can use the `eclipselink.sessions-xml` property as an alternative to
 using annotations and deployment XML. With this property, EclipseLink
@@ -7908,8 +7290,7 @@ xref:{imagestextrelativedir}/override_tl.adoc[Description of "Figure 5-1 Using t
 
 [[sthref1180]]
 
-* +
-Examples*
+*Examples*
 
 link:#CIHGDFAI[Example 5-117] shows how to use this property in a
 `persistence.xml` file.
@@ -7938,19 +7319,17 @@ propertiesMap.put(PersistenceUnitProperties.SESSIONS_XML, "mysession.xml");
 
 [[sthref1181]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:schema.htm#BGBBEIEA["Overriding and Merging"]
+* xref:{relativedir}/schema.adoc#BGBBEIEA["Overriding and Merging"]
 
-[[target-database]][[TLJPA1133]]
+[[targetdatabase]][[TLJPA1133]]
 
 '''''
 
-target-database
-~~~~~~~~~~~~~~~
+=== target-database
 
 Use the `eclipselink.target-database` property to specify the database
 to use, controlling custom operations and SQL generation for the
@@ -7958,8 +7337,7 @@ specified database.
 
 [[sthref1182]]
 
-* +
-Values*
+*Values*
 
 link:#CHDIJHJG[Table 5-94] describes this persistence property's values.
 
@@ -7967,7 +7345,6 @@ link:#CHDIJHJG[Table 5-94] describes this persistence property's values.
 
 *_Table 5-94 Valid Values for target-database_*
 
-[width="34%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |Defined in the `TargetDatabase` class or a fully qualified class name
@@ -8006,20 +7383,16 @@ listed and your JDBC driver does not support the metadata required for
 
 |=======================================================================
 
- +
-
 [[sthref1184]]
 
-* +
-Usage*
+*Usage*
 
 If `eclipselink.validation-only` = `true`, you cannot use an `Auto`
 class name or short name.
 
 [[sthref1185]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDGGJAG[Example 5-119] shows how to use this property in the
 `persistence.xml` file.
@@ -8057,19 +7430,17 @@ propertiesMap.put(PersistenceUnitProperties.TARGET_DATABASE, TargetDatabase.Orac
 
 [[sthref1186]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#validation-only["validation-only"]
+* link:#validationonly["validation-only"]
 
-[[target-server]][[TLJPA1135]]
+[[targetserver]][[TLJPA1135]]
 
 '''''
 
-target-server
-~~~~~~~~~~~~~
+=== target-server
 
 Use the `eclipselink.target-server` property to configure the
 `ServerPlatform` that will be used to enable integration with a host
@@ -8079,8 +7450,7 @@ to detect which ServerPlatform should be used. If detection fails,
 
 [[sthref1187]]
 
-* +
-Values*
+*Values*
 
 link:#CCHGCDCJ[Table 5-95] describes this persistence property's values.
 
@@ -8088,7 +7458,6 @@ link:#CCHGCDCJ[Table 5-95] describes this persistence property's values.
 
 *_Table 5-95 Valid Values for target-server_*
 
-[width="34%",cols="<100%,<",options="header",]
 |======================================================================
 |*Value* |*Description*
 |Defined in the `TargetServer` class a|
@@ -8110,12 +7479,9 @@ Specify your application server:
 
 |======================================================================
 
- +
-
 [[sthref1189]]
 
-* +
-Usage*
+*Usage*
 
 In addition to the supplied values, you can specify a custom server
 platform by supply the full class name for the platform.
@@ -8126,8 +7492,7 @@ controller.
 
 [[sthref1190]]
 
-* +
-Examples*
+*Examples*
 
 link:#CCHCEIDA[Example 5-121] shows how to use this property in a
 `persistence.xml` file.
@@ -8158,25 +7523,22 @@ TargetServer.OC4J_10_1_3);
 
 [[sthref1191]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-[[CHDHJBEE]][[TLJPA54147]]
+[[temporalmutable]][[TLJPA54147]]
 
 '''''
 
-temporal.mutable
-~~~~~~~~~~~~~~~~
+=== temporal.mutable
 
 Use the `eclipselink.temporal.mutable` property to configure the default
 for detecting changes to the temporal field (Date, Calendar).
 
 [[sthref1192]]
 
-* +
-Values*
+*Values*
 
 link:#CHDIHHDJ[Table 5-96] shows this persistence property's values.
 
@@ -8184,7 +7546,6 @@ link:#CHDIHHDJ[Table 5-96] shows this persistence property's values.
 
 *_Table 5-96 Valid Values for temporal.mutable_*
 
-[width="25%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`true` |Changes to the object are detected. Disables weaving of
@@ -8193,20 +7554,16 @@ attribute change tracking.
 |`false` |(Default) Changes to the object itself are not detected.
 |=======================================================================
 
- +
-
 [[sthref1194]]
 
-* +
-Usage*
+*Usage*
 
 By default, it is assumed that temporal fields are replaced, and the
 temporal object is not changed directly.
 
 [[sthref1195]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDCHDCH[Example 5-123] shows how to use this property in the
 `persistence.xml` file.
@@ -8234,20 +7591,18 @@ propertyMap.put(PersistenceUnitProperties.TEMPORAL_MUTABLE,
 "true");
 ----
 
-[[CHDHBGIE]][[TLJPA54150]]
+[[tenantid]][[TLJPA54150]]
 
 '''''
 
-tenant-id
-~~~~~~~~~
+=== tenant-id
 
 Use the `eclipselink.tenant-id` property to specify the default context
 property used to populate multitenant entities.
 
 [[sthref1196]]
 
-* +
-Values*
+*Values*
 
 link:#CHDGHBII[Table 5-97] describes this persistence property's values.
 
@@ -8255,18 +7610,14 @@ link:#CHDGHBII[Table 5-97] describes this persistence property's values.
 
 *_Table 5-97 Valid Values for tenant-id_*
 
-[width="25%",cols="<100%,<",options="header",]
 |==============================================
 |*Value* |*Description*
 |`value` |Name of the default context property.
 |==============================================
 
- +
-
 [[sthref1198]]
 
-* +
-Usage*
+*Usage*
 
 This is a default multitenant property that can be used on its own or
 with other properties defined by you. You are not obligated to use this
@@ -8274,8 +7625,7 @@ property. You are free to specify your own.
 
 [[sthref1199]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDFGBED[Example 5-125] shows how to use this property in the
 `persistence.xml`file.
@@ -8303,12 +7653,11 @@ propertyMap.put(PersistenceUnitProperties.MULTI_TENANT_PROPERTY_DEFAULT,
 "Oracle");
 ----
 
-[[CIHEAICB]][[TLJPA1137]]
+[[transactionjoinexisting]][[TLJPA1137]]
 
 '''''
 
-transaction.join-existing
-~~~~~~~~~~~~~~~~~~~~~~~~~
+=== transaction.join-existing
 
 Use the `eclipselink.transaction.join-existing` property to force the
 persistence context to read through the JTA-managed ("write") connect
@@ -8317,8 +7666,7 @@ ion in case there is an active transaction.
 
 [[sthref1200]]
 
-* +
-Values*
+*Values*
 
 link:#CIHBCCII[Table 5-98] describes this persistence property's values.
 
@@ -8326,7 +7674,6 @@ link:#CIHBCCII[Table 5-98] describes this persistence property's values.
 
 *_Table 5-98 Valid Values for transaction.join-existing_*
 
-[width="21%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`true` |Forces the persistence context to read through the JTA-managed
@@ -8336,12 +7683,9 @@ connection.
 through the JTA-managed connection.
 |=======================================================================
 
- +
-
 [[sthref1202]]
 
-* +
-Usage*
+*Usage*
 
 The property set in persistence.xml or passed to
 `createEntityManagerFactory` affects all `EntityManagers` created by the
@@ -8352,8 +7696,7 @@ updated. Alternatively, to apply the property only to some
 
 [[sthref1203]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDEEHAC[Example 5-127] shows how to use this property in the
 `persistence.xml` file.
@@ -8383,27 +7726,24 @@ propertyMap.put(PersistenceUnitProperties.TRANSACTION_JOIN_EXISTING,
 
 [[sthref1204]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
 * "Automated Tuning" in _Solutions Guide for EclispeLink_
 
-[[CHDGFIGB]][[TLJPA54187]]
+[[tuning]][[TLJPA54187]]
 
 '''''
 
-tuning
-~~~~~~
+=== tuning
 
 The `eclipselink.tuning` property selects the type of tuner to use to
 configure the persistence unit.
 
 [[sthref1205]]
 
-* +
-Values*
+*Values*
 
 link:#CHDECFEA[Table 5-99] describes this persistence property's values.
 
@@ -8411,7 +7751,6 @@ link:#CHDECFEA[Table 5-99] describes this persistence property's values.
 
 *_Table 5-99 Valid Values for tuning_*
 
-[width="25%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`standard` |(Default) Uses the standard tuner and does not change any
@@ -8425,12 +7764,9 @@ a simplified development and debugging configuration.
 `org.eclipse.persistence.tools.tuning.SessionTuner` interface.
 |=======================================================================
 
- +
-
 [[sthref1207]]
 
-* +
-Usage*
+*Usage*
 
 Use automated tuning to set multiple configuration properties as part of
 a single flag to perform dynamic tuning during different steps of
@@ -8438,8 +7774,7 @@ application deployment.
 
 [[sthref1208]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDFBDDA[Example 5-129] shows how to use this property in the
 `persistence.xml` file.
@@ -8453,20 +7788,18 @@ link:#CHDFBDDA[Example 5-129] shows how to use this property in the
 <property name="eclipselink.tuning" value="safe"/>
 ----
 
-[[validate-existence]][[TLJPA1139]]
+[[validateexistence]][[TLJPA1139]]
 
 '''''
 
-validate-existence
-~~~~~~~~~~~~~~~~~~
+=== validate-existence
 
 Use the `eclipselink.validate-existence` property to specify if
 EclipseLink should verify an object's existence on `persist()`.
 
 [[sthref1209]]
 
-* +
-Values*
+*Values*
 
 link:#BBACJIID[Table 5-100] describes this persistence property's
 values.
@@ -8475,7 +7808,6 @@ values.
 
 *_Table 5-100 Valid Values for validate-existence_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`true` |EclipseLink verifies the object's existence.
@@ -8484,20 +7816,16 @@ values.
 in the persistence context.
 |=======================================================================
 
- +
-
 [[sthref1211]]
 
-* +
-Usage*
+*Usage*
 
 EclipseLink will throw an error if a validated object is not in the
 persistence context.
 
 [[sthref1212]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDHEBBG[Example 5-130] shows how to use this property in the
 `persistence.xml` file.
@@ -8525,20 +7853,18 @@ propertyMap.put(PersistenceUnitProperties.VALIDATE-EXISTENCE,
 "true");
 ----
 
-[[validation-only]][[TLJPA1141]]
+[[validationonly]][[TLJPA1141]]
 
 '''''
 
-validation-only
-~~~~~~~~~~~~~~~
+=== validation-only
 
 Use the `eclipselink.validation-only` property to validate deployments
 by initializing descriptors but not connecting to the data source.
 
 [[sthref1213]]
 
-* +
-Values*
+*Values*
 
 link:#CHDGIEBD[Table 5-101] describes this persistence property's
 values.
@@ -8547,7 +7873,6 @@ values.
 
 *_Table 5-101 Valid Values for validation-only_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`true` |EclipseLink will initialize the descriptors but not log in.
@@ -8556,12 +7881,9 @@ values.
 in.
 |=======================================================================
 
- +
-
 [[sthref1215]]
 
-* +
-Usage*
+*Usage*
 
 When setting `eclipselink.validation-only` to `true`, you must also
 configure `eclipselink.target-database` with a non-Auto class name or a
@@ -8569,8 +7891,7 @@ short name.
 
 [[sthref1216]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDJIFBC[Example 5-132] show how to use this property in the
 `persistence.xml` file.
@@ -8600,19 +7921,17 @@ propertyMap.put(PersistenceUnitProperties.VALIDATION_ONLY,
 
 [[sthref1217]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#target-database["target-database"]
+* link:#targetdatabase["target-database"]
 
-[[weaving]][[TLJPA1143]]
+[[prop.weaving]][[TLJPA1143]]
 
 '''''
 
-weaving
-~~~~~~~
+=== weaving
 
 Use the `eclipselink.weaving` property to specify if EclipseLink weaves
 the entity classes. EclipseLink JPA uses weaving to enhance JPA entities
@@ -8621,8 +7940,7 @@ internal optimizations.
 
 [[sthref1218]]
 
-* +
-Values*
+*Values*
 
 link:#CHDDFGDI[Table 5-102] describes this persistence property's
 values.
@@ -8631,7 +7949,6 @@ values.
 
 *_Table 5-102 Valid values for weaving_*
 
-[width="25%",cols="<100%,<",options="header",]
 |==============================================
 |*Value* |*Description*
 |`true` |Weave the entity classes dynamically.
@@ -8639,12 +7956,9 @@ values.
 |`static` |Weave the entity classes statically.
 |==============================================
 
- +
-
 [[sthref1220]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDEIGFH[Example 5-134] shows how to use this property in the
 `persistence.xml` file.
@@ -8674,8 +7988,7 @@ propertiesMap.put
 
 [[sthref1221]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
@@ -8683,18 +7996,17 @@ For more information, see:
 * "Enhancing Performance" in
 _http://eclipse.org/eclipselink/documentation/[Solutions Guide for
 EclipseLink]_
-* link:#CHDCEEFC["weaving.changetracking"]
-* link:#BABGGCGC["weaving.eager"]
-* link:#CHDDIFGE["weaving.fetchgroups"]
-* link:#BABJICDJ["weaving.internal"]
-* link:annotations_ref.htm#CEGCCCCJ["@ChangeTracking"]
+* link:#weavingchangetracking["weaving.changetracking"]
+* link:#weavingeager["weaving.eager"]
+* link:#weavingfetchgroups["weaving.fetchgroups"]
+* link:#weavinginternal["weaving.internal"]
+* xref:{relativedir}/annotations_ref.adoc#CEGCCCCJ["@ChangeTracking"]
 
-[[CHDCEEFC]][[TLJPA54125]]
+[[weavingchangetracking]][[TLJPA54125]]
 
 '''''
 
-weaving.changetracking
-~~~~~~~~~~~~~~~~~~~~~~
+=== weaving.changetracking
 
 Use the `eclipselink.weaving.changetracking` persistence property to:
 
@@ -8707,8 +8019,7 @@ This property is enabled only when weaving is enabled.
 
 [[sthref1222]]
 
-* +
-Values*
+*Values*
 
 link:#CHDGAACE[Table 5-103] describes this persistence property's
 values.
@@ -8717,19 +8028,15 @@ values.
 
 *_Table 5-103 Valid Values for weaving.changetracking_*
 
-[width="25%",cols="<100%,<",options="header",]
 |========================================
 |*Value* |*Description*
 |`true` |(Default) Enables this property.
 |`false` |Disables this property.
 |========================================
 
- +
-
 [[sthref1224]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDCCAFF[Example 5-136] shows how to use this property in the
 `persistence.xml` file.
@@ -8765,22 +8072,20 @@ See Also*
 
 For more information, see:
 
-* link:#weaving["weaving"]
+* link:#prop.weaving["weaving"]
 
-[[BABGGCGC]][[TLJPA1035]]
+[[weavingeager]][[TLJPA1035]]
 
 '''''
 
-weaving.eager
-~~~~~~~~~~~~~
+=== weaving.eager
 
 Use the `eclipselink.weaving.eager` property to specify if EclipseLink
 uses indirection on eager relationships.
 
 [[sthref1226]]
 
-* +
-Values*
+*Values*
 
 link:#BABFACAI[Table 5-104] describes this persistence property's
 values.
@@ -8789,7 +8094,6 @@ values.
 
 *_Table 5-104 Valid Values for weaving.eager_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`true` |Enables indirection on eager relationships through weaving.
@@ -8798,23 +8102,19 @@ values.
 weaving.
 |=======================================================================
 
- +
-
 [[sthref1228]]
 
-* +
-Usage*
+*Usage*
 
 One-to-one and many-to-one mappings, even when configured with
 `FetchType.EAGER`, will effectively become "lazy."
 
 You can use this extension only if `weaving` is configured to `true` or
-`static`. See link:#weaving["weaving"] for more information.
+`static`. See link:#prop.weaving["weaving"] for more information.
 
 [[sthref1229]]
 
-* +
-Examples*
+*Examples*
 
 link:#BABFGADF[Example 5-138] shows how to use this property in the
 `persistence.xml` file.
@@ -8844,19 +8144,17 @@ propertiesMap.put
 
 [[sthref1230]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#weaving["weaving"]
+* link:#prop.weaving["weaving"]
 
-[[CHDDIFGE]][[TLJPA54129]]
+[[weavingfetchgroups]][[TLJPA54129]]
 
 '''''
 
-weaving.fetchgroups
-~~~~~~~~~~~~~~~~~~~
+=== weaving.fetchgroups
 
 Use the `eclipselink.weaving.fetchgroups` property to enable
 `FetchGroups` through weaving. When this is enabled, lazy direct mapping
@@ -8869,8 +8167,7 @@ This property is only considered when weaving is enabled.
 
 [[sthref1231]]
 
-* +
-Values*
+*Values*
 
 link:#CHDFIGGA[Table 5-105] describes this persistence property's
 values.
@@ -8879,19 +8176,15 @@ values.
 
 *_Table 5-105 Valid Values for weaving.fetchgroups_*
 
-[width="25%",cols="<100%,<",options="header",]
 |========================================================
 |*Value* |*Description*
 |`true` |(Default) Enables `FetchGroups` through weaving.
 |`false` |Disables `FetchGroups` through weaving.
 |========================================================
 
- +
-
 [[sthref1233]]
 
-* +
-Examples*
+*Examples*
 
 link:#CHDGJJBB[Example 5-140] shows how to use this property in the
 `persistence.xml` file.
@@ -8921,27 +8214,24 @@ propertiesMap.put
 
 [[sthref1234]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#weaving["weaving"]
+* link:#prop.weaving["weaving"]
 
-[[BABJICDJ]][[TLJPA1039]]
+[[weavinginternal]][[TLJPA1039]]
 
 '''''
 
-weaving.internal
-~~~~~~~~~~~~~~~~
+=== weaving.internal
 
 Use the `eclipselink.weaving.internal` property to specify if
 EclipseLink uses internal optimizations through weaving.
 
 [[sthref1235]]
 
-* +
-Values*
+*Values*
 
 link:#BABCGIJB[Table 5-106] describes this persistence property's
 values.
@@ -8950,27 +8240,22 @@ values.
 
 *_Table 5-106 Valid Values for weaving.internal_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=================================================================
 |*Value* |*Description*
 |`true` |(Default) Enables internal optimizations through weaving.
 |`false` |Disables internal optimizations through weaving.
 |=================================================================
 
- +
-
 [[sthref1237]]
 
-* +
-Usage*
+*Usage*
 
 You can use this extension only if `weaving` is configured to `true` or
-`static`. See link:#weaving["weaving"] for more information.
+`static`. See link:#prop.weaving["weaving"] for more information.
 
 [[sthref1238]]
 
-* +
-Examples*
+*Examples*
 
 link:#BABBBCEI[Example 5-142] shows how to use this property in the
 `persistence.xml` file.
@@ -9000,27 +8285,24 @@ propertiesMap.put
 
 [[sthref1239]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#weaving["weaving"]
+* link:#prop.weaving["weaving"]
 
-[[BABDBIFE]][[TLJPA1043]]
+[[weavinglazy]][[TLJPA1043]]
 
 '''''
 
-weaving.lazy
-~~~~~~~~~~~~
+=== weaving.lazy
 
 Use the `eclipselink.weaving.lazy` property to specify if EclipseLink
 uses lazy one-to-one and many-to-one mappings.
 
 [[sthref1240]]
 
-* +
-Values*
+*Values*
 
 link:#BABHEIHE[Table 5-107] describes this persistence property's
 values.
@@ -9029,7 +8311,6 @@ values.
 
 *_Table 5-107 Valid Values for weaving.lazy_*
 
-[width="28%",cols="<100%,<",options="header",]
 |=======================================================================
 |*Value* |*Description*
 |`true` |(Default) Enables lazy one-to-one and many-to-one mappings
@@ -9039,20 +8320,16 @@ through weaving.
 weaving.
 |=======================================================================
 
- +
-
 [[sthref1242]]
 
-* +
-Usage*
+*Usage*
 
 You can use this extension only if `weaving` is configured to `true` or
-`static`. See link:#weaving["weaving"] for more information.
+`static`. See link:#prop.weaving["weaving"] for more information.
 
 [[sthref1243]]
 
-* +
-Examples*
+*Examples*
 
 link:#BABCJAID[Example 5-144] shows how to use this property in the
 `persistence.xml` file.
@@ -9082,9 +8359,8 @@ propertiesMap.put
 
 [[sthref1244]]
 
-* +
-See Also*
+*See Also*
 
 For more information, see:
 
-* link:#weaving["weaving"]
+* link:#prop.weaving["weaving"]

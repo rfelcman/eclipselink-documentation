@@ -40,7 +40,7 @@ EclipseLink supplies the following query hints:
 * link:#cacheusage[`cache-usage`]
 * link:#cacheusageindirectionpolicy[`cache-usage.indirection-policy`]
 * link:#cursor[`cursor`]
-* link:#compositeunitmember[`composite-unit.member`]
+* link:#hint.compositeunitmember[`composite-unit.member`]
 * link:#cursorinitialsize[`cursor.initial-size`]
 * link:#cursorpagesize[`cursor.page-size`]
 * link:#exclusiveconnection[`exclusive-connection`]
@@ -584,7 +584,7 @@ For more information, see:
 * link:#cursorinitialsize["cursor.initial-size"]
 * link:#cursorpagesize["cursor.page-size"]
 
-[[compositeunitmember]][[TLJPA54134]]
+[[hint.compositeunitmember]][[TLJPA54134]]
 
 '''''
 
