@@ -1,0 +1,117 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*EclipseLink Solutions Guide for EclipseLink* +
+Release 4.0 a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:intro002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:install.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#TLADG110]##
+
+[#sthref12]##
+
+== The Use Cases
+
+The use cases documented in this guide are as follows:
+
+* link:install.htm#CHDIGBJC[Chapter 2, "Installing EclipseLink"] - How
+to download and install EclipseLink.
+* link:tlandwls.htm#BABHCJBG[Chapter 3, "Using EclipseLink with WebLogic
+Server"] - How to use EclipseLink with WebLogic Server.
+* link:tlandgs.htm#BABDGFIC[Chapter 4, "Using EclipseLink with GlassFish
+Server"] - How to use EclipseLink with GlassFish Server.
+* link:jboss.htm#BEIEIJAE[Chapter 5, "Using EclipseLink with JBoss 7
+Application Server"] - How to use EclipseLink with JBoss 7 Application
+Server.
+* link:websphere.htm#CFHHEHJG[Chapter 6, "Using EclipseLink with IBM
+WebSphere Application Server"] - How to use EclipseLink with IBM
+WebSphere Application Server.
+* link:migrnativetoplink.htm#BCGDEBBB[Chapter 7, "Migrating from Native
+TopLink"] - How to how to migrate applications using native EclipseLink
+object-relational mapping (ORM) API to the current EclipseLink API.
+* link:migrhib.htm#CHDFDCII[Migrating from Hibernate to EclipseLink] -
+How to migrate applications from using Hibernate JPA to using
+EclipseLink JPA.
+* link:usingmultipledbs.htm#BABJAFII[Chapter 9, "Using Multiple
+Databases with a Composite Persistence Unit"] - How to expose multiple
+persistence units (each with unique sets of entity types) as a single
+persistence context.
+* link:scaling.htm#CHDCAFDB[Chapter 10, "Scaling Applications in
+Clusters"] - How to configure EclipseLink applications to ensure
+scalability in clustered application server environments.
+* link:saas.htm#CIADHEBF[Chapter 11, "Providing Software as a Service"]
+- Overview of EclipseLink Software as a Service (SaaS) features..
+* link:extensible.htm#CIAEIEAI[Chapter 12, "Making JPA Entities and JAXB
+Beans Extensible"] - How to make JPA entities or JAXB beans extensible.
+* link:metadatasource.htm#BABGDEGB[Chapter 13, "Using an External
+MetaData Source"] - How to use an external metadata source.
+* link:multitenancy.htm#CHDBJCJA[Chapter 14, "Tenant Isolation Using
+EclipseLink"] - How to support multiple application tenants who share
+data sources, including tables and schemas.
+* link:jpatoxml.htm#CIHGJCIH[Chapter 15, "Mapping JPA to XML"] - How to
+map JPA entities to XML using EclipseLink MOXy.
+* link:testingjpa.htm#BABEBCCJ[Chapter 17, "Testing JPA Outside a
+Container"] - How to test your EclipseLink JPA application outside the
+container.
+* link:performance.htm#BBAGGDED[Chapter 18, "Enhancing Performance"] -
+Getting the best performance out of EclipseLink.
+* link:restful_jpa.htm#CHDGHJID[Chapter 19, "Exposing JPA Entities
+Through RESTful Data Services"] - How to expose entities through RESTful
+services using EclipseLink Jakarta Persistence API for RESTful Services
+(JPA-RS).
+* link:qcn.htm#CHDDAEJB[Chapter 20, "Using Database Events to Invalidate
+the Cache"] - How to use EclipseLink Database Change Notification (DCN)
+for caching with a shared database in JPA.
+* link:nonrelational_db.htm#BGBCIABF[Chapter 21, "Using EclipseLink with
+NoSQL Databases"] - How to use EclipseLink to map objects to
+non-relational (that is, no SQL) data sources.
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:intro002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:install.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
+link:../../dcommon/html/cpyr.htm[ +
+] a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

@@ -1,0 +1,102 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*EclipseLink Solutions Guide for EclipseLink* +
+Release 4.0 a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:migrnativetoplink002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:migrhib001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#CHDFDCII]####[#TLADG458]####
+
+== [.secnum]#8# Migrating from Hibernate to EclipseLink
+
+[#TLADG459]##
+
+This chapter describes how to migrate applications from using Hibernate
+JPA annotations and its native and proprietary API to using
+EclipseLink's JPA implementation, provided by EclipseLink. The migration
+involves converting Hibernate annotations to EclipseLink annotations,
+and converting native Hibernate API to EclipseLink JPA in the
+application code. Standard JPA annotations and API are left unchanged.
+
+This chapter describes how to migrate applications from using Hibernate
+JPA annotations and its native and proprietary API to using EclipseLink
+JPA. The migration involves converting Hibernate annotations to
+EclipseLink annotations, and converting native Hibernate API to
+EclipseLink JPA in the application code. Standard JPA annotations and
+API are left unchanged.
+
+This chapter includes the following sections:
+
+* link:migrhib001.htm#BGBCDEFG[Introduction to the Solution]
+* link:migrhib002.htm#BGBBIHFB[Main Tasks]
+* link:migrhib003.htm#BGBCJFAD[Additional Resources]
+
+[#TLADG942]##
+
+*Use Case*
+
+A developer wants to migrate applications using Hibernate as the
+persistence provider to use EclipseLink instead.
+
+[#TLADG943]##
+
+*Solution*
+
+Follow the instructions in this chapter to upgrade the application.
+
+[#TLADG944]##
+
+*Components*
+
+* EclipseLink 2.4 or later.
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:migrnativetoplink002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:migrhib001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
+link:../../dcommon/html/cpyr.htm[ +
+] a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

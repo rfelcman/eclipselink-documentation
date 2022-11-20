@@ -1,0 +1,65 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*EclipseLink Solutions Guide for EclipseLink* +
+Release 4.0 a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:install.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:install002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#CHDFACCB]####[#TLADG1203]####
+
+== Prerequisites
+
+EclipseLink requires a Java Virtual Machine (JVM) compatible with JDK
+1.6.0 (or higher). EclipseLink also requires internet access to use
+URL-based schemas and hosted documentation.
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:install.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:install002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
+link:../../dcommon/html/cpyr.htm[ +
+] a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

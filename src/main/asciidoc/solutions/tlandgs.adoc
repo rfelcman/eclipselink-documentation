@@ -1,0 +1,101 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*EclipseLink Solutions Guide for EclipseLink* +
+Release 4.0 a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:tlandwls003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:tlandgs001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#BABDGFIC]####[#TLADG158]####
+
+== [.secnum]#4# Using EclipseLink with GlassFish Server
+
+[#TLADG159]##
+
+This chapter describes how to use EclipseLink as the persistence
+provider for applications deployed to Oracle GlassFish Server.
+
+This chapter includes the following sections:
+
+* link:tlandgs001.htm#CIHHFGAG[Introduction to the Solution]
+* link:tlandgs002.htm#CIHIGBFH[Implementing the Solution]
+* link:tlandgs003.htm#CIHFEBGC[Additional Resources]
+
+[#TLADG893]##
+
+*Use Case*
+
+Users want to run applications that employ JPA on Oracle GlassFish
+Server.
+
+[#TLADG894]##
+
+*Solution*
+
+The Oracle GlassFish platform provides full support for EclipseLink.
+Developers writing applications for the GlassFish Server platform can
+achieve full Java-to-data source integration that complies with the
+Jakarta Persistence API (JPA) 2.0 specification. EclipseLink allows you
+to integrate Java applications with any data source, without
+compromising ideal application design or data integrity.
+
+[#TLADG895]##
+
+*Components*
+
+* GlassFish Server 3.1.2.
+* EclipseLink 2.3.0 or later.
+* Any compliant JDBC database including Oracle Database, Oracle Database
+Express Edition, MySQL, and so on.
+* While it is not required, you may want to use a Jakarta EE integrated
+development environment (IDE) for convenience during development.
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:tlandwls003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:tlandgs001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
+link:../../dcommon/html/cpyr.htm[ +
+] a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

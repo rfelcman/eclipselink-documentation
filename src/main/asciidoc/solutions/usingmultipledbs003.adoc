@@ -1,0 +1,97 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*EclipseLink Solutions Guide for EclipseLink* +
+Release 4.0 a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:usingmultipledbs002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:scaling.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#CIHCDGEH]####[#TLADG193]####
+
+== Additional Resources
+
+See the following resources for more information about the technologies
+and tools used to implement the solutions in this chapter:
+
+For the following additional information about composite persistence
+units, see "`@CompositeMember`," "`composite.unit`," and
+"`composite-unit.member`" in _Jakarta Persistence API (JPA) Extensions
+Reference for EclipseLink_:
+
+* Limitations of composite persistence units.
+* Configuring composite member persistence units that contain
+dependencies.
+* All persistence unit properties used by composite persistence units
+and composite member persistence units
+* How to pass persistence unit properties to composite member
+persistence units with the `Persistence.createEntityManagerFactory`
+method, while creating a composite persistence unit
+`EntityManagerFactory`
+* All entity manager properties used by composite persistence unit and
+composite member persistence units
+* How to pass entity manager properties to composite member persistence
+units with the `emf.createEntityManager` method for the composite
+persistence unit `EntityManagerFactory`
+
+[#TLADG194]##
+
+[#sthref60]##
+
+=== Related Javadoc
+
+For more information, see the following APIs in _Java API Reference for
+EclipseLink_:
+
+* `PersistenceUnitProperties` class
+* `Persistence.createEntityManger` class
+* `EntityManagerFactory` interface
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:usingmultipledbs002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:scaling.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
+link:../../dcommon/html/cpyr.htm[ +
+] a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

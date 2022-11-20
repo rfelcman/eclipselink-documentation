@@ -1,0 +1,76 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*EclipseLink Solutions Guide for EclipseLink* +
+Release 4.0 a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:scaling002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:saas.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#CEGHHHJF]####[#TLADG211]####
+
+== Additional Resources
+
+See the following resources for more information about the technologies
+and tools used to implement the solutions in this chapter:
+
+The following code sample and JavaDoc resources are available:
+
+* Code Samples
+** `http://wiki.eclipse.org/EclipseLink/Examples/JPA/CacheCoordination`
+** `http://wiki.eclipse.org/EclipseLink/Examples/JPA/Caching`
+* See the following APIs in _Java API Reference for EclipseLink_.
+** `org.eclipse.persistence.annotations.OptimisticLocking`
+** `org.eclipse.persistence.annotations.Cache`
+** `org.eclipse.persistence.annotations.Partitioned`
+** `org.eclipse.persistence.descriptors.ClassDescriptor`
+** `org.eclipse.persistence.sessions.coordination`
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:scaling002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:saas.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
+link:../../dcommon/html/cpyr.htm[ +
+] a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

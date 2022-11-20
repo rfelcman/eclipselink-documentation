@@ -1,0 +1,112 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*EclipseLink Solutions Guide for EclipseLink* +
+Release 4.0 a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:tlandwls.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:tlandwls002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#BABCIJEE]####[#TLADG113]####
+
+== Introduction to the Solution
+
+WebLogic Server is a scalable, enterprise-ready Java Platform,
+Enterprise Edition (Jakarta EE platform) application server. WebLogic
+Server's complete implementation of the Jakarta EE 6 specification
+provides a standard set of APIs for creating distributed Java
+applications that can access a wide variety of services, such as
+databases, messaging services, and connections to external enterprise
+systems. In addition to the Jakarta EE implementation, WebLogic Server
+enables enterprises to deploy critical applications in a robust, secure,
+highly available, and scalable environment. These features allow
+enterprises to configure clusters of WebLogic Server instances to
+distribute load, and provide extra capacity in case of hardware or other
+failures. For more details about these and other WebLogic Server
+features, see _Introduction to WebLogic Server_.
+
+EclipseLink provides APIs and a run-time environment for implementing
+the persistence layer of Jakarta EE applications (as well as Java SE
+applications).
+
+[#TLADG114]##
+
+[#sthref13]##
+
+=== Advantages to Using EclipseLink with WebLogic Server
+
+While WebLogic Server can use other persistence providers and
+EclipseLink can be used with other application servers, using WebLogic
+Server with EclipseLink provides a number of advantages:
+
+* EclipseLink is the default persistence provider for WebLogic Server
+domains, with support for JPA 2.1.
+* The EclipseLink implementation of Java Architecture for XML Binding
+(JAXB) is the default JAXB implementation in WebLogic Server.
+EclipseLink fully implements JAXB and also includes other advanced
+features. By default, you can take advantage of EclipseLink JAXB in Java
+API for XML Web Services (JAX-WS) and Java API for RESTful Web Services
+(JAX-RS) applications.
+* EclipseLink logging integration in WebLogic Server provides a
+comprehensive, integrated logging infrastructure. See
+link:tlandwls002.htm#BABIIEHD[Task 4: Use or Reconfigure the Logging
+Integration.]
+
+>
+
+This graphic shows how WebLogic Server, EclipseLink, Coherence and
+TopLink Grid are related to each other and to the data source(s). A box
+representing WebLogic Suite contains Coherence and a box containing
+WebLogic Server, which contains EclipseLink, which contains TopLink Grid
+and EclipseLink. Above this box is a box containing JDeveloper, which
+points to EclipseLink and EclipseLink. Below the box is the Oracle
+Database, which points to EclipseLink and WebLogic Server.
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:tlandwls.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:tlandwls002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
+link:../../dcommon/html/cpyr.htm[ +
+] a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

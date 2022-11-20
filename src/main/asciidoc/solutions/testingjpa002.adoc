@@ -1,0 +1,119 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*EclipseLink Solutions Guide for EclipseLink* +
+Release 4.0 a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:testingjpa001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:testingjpa003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#CHDCABFF]####[#TLADG398]####
+
+== Configuring the persistence.xml File
+
+The `persistence.xml` file is the deployment descriptor file for
+persistence using JPA. It specifies the persistence units and declares
+the managed persistence classes, the object/relation mapping, and the
+database connection details.
+
+[#TLADG399]##
+
+[#sthref139]##
+
+=== Main Tasks
+
+To configure the `persistence.xml` file, the following tasks:
+
+* link:#CHDBEAJF[Task 1: Use the persistence.xml File]
+* link:#CHDFFBDI[Task 2: Instantiate EntityManagerFactory]
+
+[#CHDBEAJF]####[#TLADG400]####
+
+==== Task 1: Use the persistence.xml File
+
+link:#CHDFFCIE[Example 17-2] illustrates a `persistence.xml` file for a
+Java SE platform configuration (that is, outside a container).
+
+[#CHDFFCIE]####[#TLADG401]####
+
+*_Example 17-2 A persistence.xml File Specifying the Java SE Platform
+Configuration_*
+
+[source,oac_no_warn]
+----
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence persistence_1_0.xsd" version="1.0">
+    <persistence-unit name="my-app" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:orcl"/>
+            <property name="jakarta.persistence.jdbc.user" value="scott"/>
+            <property name="jakarta.persistence.jdbc.password" value="tiger"/>
+        </properties>
+    </persistence-unit>
+</persistence>
+----
+
+[#CHDFFBDI]####[#TLADG402]####
+
+==== Task 2: Instantiate EntityManagerFactory
+
+An `EntityManagerFactory` provides an efficient way to construct
+`EntityManager` instances for a database. You can instantiate the
+`EntityManagerFactory` for the application (illustrated in
+link:#CHDFFCIE[Example 17-2]) by using:
+
+[source,oac_no_warn]
+----
+Persistence.createEntityManagerFactory("my-app");
+----
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:testingjpa001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:testingjpa003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
+link:../../dcommon/html/cpyr.htm[ +
+] a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

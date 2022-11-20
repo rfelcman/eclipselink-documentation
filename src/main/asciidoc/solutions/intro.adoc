@@ -1,0 +1,80 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*EclipseLink Solutions Guide for EclipseLink* +
+Release 4.0 a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:whatsnew.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:intro001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#CHDGIDEA]####[#TLADG107]####
+
+== [.secnum]#1# Introduction
+
+[#TLADG1087]##
+
+EclipseLink is a powerful and flexible Java persistence framework for
+storing Java objects in a data store, such as a relational database or a
+NoSQL database, and for converting Java objects to XML or JSON
+documents. EclipseLink provides APIs and a run-time environment for
+implementing the persistence layer of Java Platform, Standard Edition
+(Java SE platform), and Java Platform, Enterprise Edition (Jakarta EE
+platform) applications.
+
+EclipseLink implements Jakarta Persistence API (JPA), Java Architecture
+for XML Binding (JAXB), and other standards-based persistence
+technologies and also includes extensions beyond those standards. For
+more information about the EclipseLink project, see "Eclipse Persistence
+Services Project (EclipseLink) home" at
+`http://www.eclipse.org/eclipselink/`. For the EclipseLink
+Documentation, Center see
+`http://www.eclipse.org/eclipselink/documentation/`.
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:whatsnew.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:intro001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
+link:../../dcommon/html/cpyr.htm[ +
+] a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

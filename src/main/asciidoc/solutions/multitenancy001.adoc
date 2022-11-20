@@ -1,0 +1,104 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*EclipseLink Solutions Guide for EclipseLink* +
+Release 4.0 a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:multitenancy.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:multitenancy002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#A1261503]####[#TLADG615]####
+
+== Introduction to the Solution
+
+EclipseLink offers considerable flexibility in how you can design and
+implement features for isolating tenants. Possibilities include the
+following:
+
+*Application Isolation options*
+
+* Separate container/server
+* Separate application within the same container/server
+* Separate entity manager factory and shared cache within the same
+application
+* Shared entity manager factory with tenant isolation per entity manager
+
+*Data isolation options*
+
+* Separate database
+* Separate schema/tablespace
+* Separate tables
+* Shared table with row isolation
+* Query filtering
+* Oracle Virtual Private Database (VPD)
+
+EclipseLink includes the following options for providing multi-tenancy
+in the data source:
+
+* *Single-table multi-tenancy* allows tenants to share tables. Each
+tenant has its own rows, identified by discriminator columns, and those
+rows are invisible to other tenants. See
+link:multitenancy002.htm#BABJGBCF[Using Single-Table Multi-Tenancy].
+* With *table-per-tenant* multi-tenancy, each tenant has its own table
+or tables, identified by table tenant discriminators, and those tables
+are invisible to other users. See
+link:multitenancy003.htm#A1235913[Using Table-Per-Tenant Multi-Tenancy].
+* With (*VDP*) multi-tenancy, tenants use a VDP database, which provides
+the functionality to support multiple tenants sharing the same table.
+See link:multitenancy004.htm#CHDJEBAC[Using VPD Multi-Tenancy].
+
+EclipseLink further provides tenant-specific extensions through
+extensible entities using extensible entities and `MetadataSource`. For
+information about those features, see
+link:extensible.htm#CIAEIEAI[Chapter 12, "Making JPA Entities and JAXB
+Beans Extensible,"] and link:metadatasource.htm#BABGDEGB[Chapter 13,
+"Using an External MetaData Source."]
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:multitenancy.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:multitenancy002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
+link:../../dcommon/html/cpyr.htm[ +
+] a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

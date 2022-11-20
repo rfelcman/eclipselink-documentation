@@ -1,0 +1,74 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*EclipseLink Solutions Guide for EclipseLink* +
+Release 4.0 a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,",]
+|===
+|link:oracledb002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+| 
+|===
+
+[#CHDBEHDJ]####[#TLADG1080]####
+
+== Additional Resources
+
+See the following links for additional resources about the solutions
+discussed in this chapter.
+
+* _Java API Reference for EclipseLink_
+* _Jakarta Persistence API (JPA) Extensions Reference for EclipseLink_
+* _Oracle Database JDBC Java API Reference_
+* _Oracle Database PL/SQL Language Reference_
+* _Oracle Database Security Guide_
+* _Oracle Label Security Administrator's Guide_
+* _Oracle Fusion Middleware Configuring and Managing JDBC Data Sources
+for Oracle WebLogic Server_
+* _Oracle Real Application Clusters Administration and Deployment Guide_
+* _Oracle Universal Connection Pool for JDBC Developer's Guide_
+* _Oracle Spatial and Graph Developer's Guide_
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="48%",cols=",^100%",]
+|===
+| 
+|link:oracledb002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
+link:../../dcommon/html/cpyr.htm[ +
+] a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

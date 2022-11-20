@@ -1,0 +1,74 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*EclipseLink Solutions Guide for EclipseLink* +
+Release 4.0 a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:oracledb.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:oracledb002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#CHDDBEHD]####[#TLADG1057]####
+
+== Introduction to the Solution
+
+EclipseLink includes enhanced support for the Oracle Database platform.
+Applications that have standardized on the Oracle Database can take
+advantage of this support to gain ease-of-use, increase performance and
+scalability, and enhance security. EclipseLink includes support for
+native Oracle JDBC-specific APIs, PL/SQL, Oracle Real Application
+Clusters (RAC), Oracle Virtual Private Database, Oracle Proxy
+Authentication, and Oracle Spatial and Graph. Refer to the Oracle
+Database documentation for details on these technologies.
+
+Much of the Oracle Database platform support is contained in the
+`org.eclipse.persistence.platform.database.oracle*` package. For details
+on the APIs, see _Java API Reference for EclipseLink_.
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:oracledb.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:oracledb002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
+link:../../dcommon/html/cpyr.htm[ +
+] a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

@@ -22,7 +22,7 @@ Jakarta Persistence API (JPA) Extensions Reference for EclipseLink
 
 Release  {release-version}
 
-December 2022
+{release-date}
 
 *EclipseLink Jakarta Persistence API (JPA) Extensions Reference for
 EclipseLink*
@@ -35,4 +35,4 @@ License (EPL)
 The initial contribution of this content was based on work copyrighted
 by Oracle and was submitted with permission.
 
-Print date: December, 2022
+Print date: {print-date}

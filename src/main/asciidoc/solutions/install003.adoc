@@ -1,0 +1,72 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*EclipseLink Solutions Guide for EclipseLink* +
+Release 4.0 a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:install002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:install004.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#CHDCJICG]####[#TLADG1095]####
+
+== Installing EclipseLink NoSQL Support
+
+Support for NoSQL databases was introduced in EclipseLink 2.4.
+
+To add support for NoSQL databases to EclipseLink, download and install
+`eclipselink-plugins-nosql-`__`ver_no`__`.zip` file from
+`http://www.eclipse.org/eclipselink/downloads/`. Use this bundle in
+conjunction with `eclipselink.jar` or the EclipseLink JPA bundles.
+
+For information about NoSQL support, see
+link:nonrelational_db.htm#BGBCIABF[Chapter 21, "Using EclipseLink with
+NoSQL Databases."]
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:install002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:install004.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
+link:../../dcommon/html/cpyr.htm[ +
+] a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

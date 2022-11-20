@@ -1,0 +1,136 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*EclipseLink Solutions Guide for EclipseLink* +
+Release 4.0 a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:qcn.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:qcn002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#A1099038]####[#TLADG1004]####
+
+== Introduction to the Solution
+
+EclipseLink provides a shared (L2) object cache that can reduce database
+access for objects and their relationships. This cache is enabled by
+default which is normally not a problem, unless the contents of the
+database are modified directly by other applications, or by the same
+application on other servers in a clustered environment. This may result
+in stale data in the cache.
+
+If the contents of the database are modified, then a mechanism is needed
+to ensure that the contents of the cache are synchronized with the
+database. That mechanism is provided by EclipseLink Database Change
+Notification. DCN allows shared caching to be used in the JPA
+environment.
+
+ +
+
+[width="100%",cols="<100%",]
+|===
+a|
+image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
+
+Database Change Notification extends the functionality provided by the
+Oracle Database Continuous Query Notification feature. For more
+information, see "Continuous Query Notification" in _Oracle Database
+JDBC Developer's Guide_.
+
+|===
+
+ +
+
+EclipseLink Database Change Notification extends the functionality
+provided by the Oracle Database Continuous Query Notification. One of
+the features of Continuous Query Notification is that it allows database
+events to be raised when rows in a table are modified.
+
+To detect modifications, EclipseLink DCN uses the `ROWID` to inform of
+row level changes in the primary table. EclipseLink includes the `ROWID`
+in all queries for a DCN-enabled class. EclipseLink also selects the
+object's `ROWID` after an insert operation. EclipseLink maintains a
+cache index on the `ROWID`, in addition to the object's `Id`.
+EclipseLink also selects the database transaction ID once for each
+transaction to avoid invalidating the cache on the server that is
+processing the transaction.
+
+EclipseLink DCN is enabled through the
+`OracleChangeNotificationListener`
+(`org.eclipse.persistence.platform.database.oracle.dcn.OracleChangeNotificationListener`)
+listener class. This listener integrates with Oracle JDBC to receive
+database change events. To enable the listener, specify the full path to
+the `OracleChangeNotificationListener` class as the value of the
+`eclipselink.cache.database-event-listener` property in the
+`persistence.xml` file.
+
+By default, all entities in the domain are registered for change
+notification. However, you can selectively disable change notification
+for certain classes by tagging them in the Java files with the
+`databaseChangeNotificationType`
+(`org.eclipse.persistence.annotations.DatabaseChangeNotificationType`)
+attribute of the `Cache` annotation. The value of this attribute
+determines the type of database change notification an entity should
+use. The default value of the `databaseChangeNotificationType` attribute
+is `Invalidate`. To disable change notification for a class, set the
+value of the attribute to `None`.
+
+The `databaseChangeNotificationType` attribute is relevant only if the
+persistence unit has been configured with a database event listener,
+such as the `OracleChangeNotificationListener` class, that receives
+database change events. This allows the EclipseLink cache to be
+invalidated or updated from database changes.
+
+Oracle strongly suggests that you use optimistic locking (writes on
+stale data will fail and automatically invalidate the cache) in your
+transactions. If you include an `@Version` annotation in your entity,
+then the version column in the primary table will always be updated, and
+the object will always be invalidated.
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:qcn.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:qcn002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
+link:../../dcommon/html/cpyr.htm[ +
+] a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

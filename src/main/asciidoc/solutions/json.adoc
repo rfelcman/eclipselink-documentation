@@ -1,0 +1,102 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*EclipseLink Solutions Guide for EclipseLink* +
+Release 4.0 a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:jpatoxml007.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:json001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#CACGHDHH]####[#TLADG573]####
+
+== [.secnum]#16# Converting Objects to and from JSON Documents
+
+This chapter describes how EclipseLink MOXy supports the ability to
+convert objects to and from JSON (JavaScript Object Notation). This
+feature is useful when creating RESTful services; JAX-RS services can
+accept both XML and JSON messages.
+
+This chapter includes the following sections:
+
+* link:json001.htm#A1584087[Introduction to the Solution]
+* link:json002.htm#A1584696[Implementing the Solution]
+* link:json003.htm#A1584393[Additional Resources]
+
+[#TLADG721]##
+
+*Use Case*
+
+Users need to convert objects to and from JSON documents.
+
+[#TLADG722]##
+
+*Solution*
+
+EclipseLink provides JSON support through the EclipseLink MOXy
+implementation.
+
+[#TLADG1132]##
+
+*Components*
+
+* EclipseLink 2.4 or later.
+* JSON documents.
+
+[#TLADG724]##
+
+*Sample*
+
+See the following EclipseLink samples for related information:
+
+* `http://wiki.eclipse.org/EclipseLink/Examples/MOXy`
+* `http://wiki.eclipse.org/EclipseLink/Examples/MOXy/JSON_Metadata`
+* `http://wiki.eclipse.org/EclipseLink/Examples/MOXy/MOXy_JSON_Provider`
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:jpatoxml007.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:json001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
+link:../../dcommon/html/cpyr.htm[ +
+] a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

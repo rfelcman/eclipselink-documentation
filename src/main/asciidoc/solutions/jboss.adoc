@@ -1,0 +1,97 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*EclipseLink Solutions Guide for EclipseLink* +
+Release 4.0 a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:tlandgs003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:jboss001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#BEIEIJAE]####[#TLADG670]####
+
+== [.secnum]#5# Using EclipseLink with JBoss 7 Application Server
+
+[#TLADG742]##
+
+This chapter introduces and describes how to use EclipseLink as the
+persistence provider for applications deployed to JBoss Application
+Server 7.1.
+
+This chapter includess the following sections:
+
+* link:jboss001.htm#BEIFEJJI[Introduction to the Solution]
+* link:jboss002.htm#BEIBJBCF[Implementing the Solution]
+* link:jboss003.htm#A1580333[Additional Resources]
+
+[#TLADG743]##
+
+*Use Case*
+
+EclipseLink can be used with a number of popular Jakarta EE application
+servers, including JBoss Application Server.
+
+[#TLADG744]##
+
+*Solution*
+
+Configure JBoss to use EclipseLink runtime, and deploy applications
+developed using EclipseLink APIs.
+
+[#TLADG745]##
+
+*Components*
+
+* EclipseLink 2.4 or later.
+* JBoss Application Server 7.x.
+* A compliant Java Database Connectivity (JDBC) database, such as Oracle
+Database, Oracle Express, MySQL, the HSQL database embedded in JBoss
+Application Server, etc.
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:tlandgs003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:jboss001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
+link:../../dcommon/html/cpyr.htm[ +
+] a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

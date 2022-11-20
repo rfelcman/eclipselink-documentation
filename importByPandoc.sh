@@ -1,14 +1,19 @@
 #!/bin/bash
 
-export JPA_DOC_INPUT_PATH=../webSite/documentation/3.0/jpa/extensions
+export JPA_DOC_INPUT_PATH=../webSite/documentation/4.0/jpa/extensions
 export JPA_DOC_OUTPUT_PATH=docs.tmp/jpa/extensions
 mkdir -p ${JPA_DOC_OUTPUT_PATH}
 rm -rf ${JPA_DOC_OUTPUT_PATH}/*
 
-export CONCEPTS_DOC_INPUT_PATH=../webSite/documentation/3.0/concepts
+export CONCEPTS_DOC_INPUT_PATH=../webSite/documentation/4.0/concepts
 export CONCEPTS_DOC_OUTPUT_PATH=docs.tmp/concepts
 mkdir -p ${CONCEPTS_DOC_OUTPUT_PATH}
 rm -rf ${CONCEPTS_DOC_OUTPUT_PATH}/*
+
+export SOLUTIONS_DOC_INPUT_PATH=../webSite/documentation/4.0/solutions
+export SOLUTIONS_DOC_OUTPUT_PATH=docs.tmp/solutions
+mkdir -p ${SOLUTIONS_DOC_OUTPUT_PATH}
+rm -rf ${SOLUTIONS_DOC_OUTPUT_PATH}/*
 
 
 # Convert documents from input directory to some output directory.
@@ -28,6 +33,7 @@ convert_documents() {
 
 #convert_documents ${JPA_DOC_INPUT_PATH} ${JPA_DOC_OUTPUT_PATH}
 #convert_documents ${CONCEPTS_DOC_INPUT_PATH} ${CONCEPTS_DOC_OUTPUT_PATH}
+convert_documents ${SOLUTIONS_DOC_INPUT_PATH} ${SOLUTIONS_DOC_OUTPUT_PATH}
 
 
 

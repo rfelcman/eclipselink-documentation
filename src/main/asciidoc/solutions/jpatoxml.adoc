@@ -1,0 +1,110 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*EclipseLink Solutions Guide for EclipseLink* +
+Release 4.0 a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:multitenancy005.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:jpatoxml001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#CIHGJCIH]####[#TLADG286]####
+
+== [.secnum]#15# Mapping JPA to XML
+
+[#TLADG503]##
+
+This chapter describes how to use JPA with the Java Architecture for XML
+Binding (JAXB)—the Jakarta EE standard for mapping POJOs (Plain Old Java
+Objects) to XML—and its Mapping Objects to XML (MOXy) extensions to map
+JPA entities to XML. Mapping JPA entities to XML is useful when you want
+to create a data access service with Java API for Restful Web Services
+(JAX-RS), Java API for XML Web Services (JAX-WS), or Spring.
+
+This chapter includes the following topics:
+
+* link:jpatoxml001.htm#BEICFGAJ[Introduction to the Solution]
+* link:jpatoxml002.htm#BEIGDBHI[Binding JPA Entities to XML]
+* link:jpatoxml003.htm#BEIEJGCE[Mapping Simple Java Values to XML Text
+Nodes]
+* link:jpatoxml004.htm#BEIJGBGA[Using XML Metadata Representation to
+Override JAXB Annotations]
+* link:jpatoxml005.htm#BEIBFCFC[Using XPath Predicates for Mapping]
+* link:jpatoxml006.htm#BEIHCDIB[Using Dynamic JAXB/MOXy]
+
+[#TLADG805]##
+
+*Use Case*
+
+Users need to map JPA entities to XML.
+
+[#TLADG806]##
+
+*Solution*
+
+EclipseLink provides support for the JAXB standard through EclipseLink
+MOXy extensions.
+
+[#TLADG807]##
+
+*Components*
+
+* EclipseLink 2.4 or later.
+* XML document
+
+[#TLADG808]##
+
+*Sample*
+
+See the following EclipseLink and JAXB examples for related information:
+
+* `http://wiki.eclipse.org/EclipseLink/Examples/MOXy`
+* `http://java.sun.com/developer/technicalArticles/WebServices/jaxb/index.html`
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:multitenancy005.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:jpatoxml001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
+link:../../dcommon/html/cpyr.htm[ +
+] a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

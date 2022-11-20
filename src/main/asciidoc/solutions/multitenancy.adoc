@@ -1,0 +1,100 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*EclipseLink Solutions Guide for EclipseLink* +
+Release 4.0 a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:metadatasource004.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:multitenancy001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#CHDBJCJA]####[#TLADG489]####
+
+== [.secnum]#14# Tenant Isolation Using EclipseLink
+
+With EclipseLink, you can develop a single application and then deploy
+it for different clients, or "tenants," with varying degrees of
+application and data isolation and of tenant-specific functionality. For
+example, a large company may develop a single payroll application to be
+used by multiple divisions. Each division has access to its own data and
+to shared data, but they cannot see any other division's data.
+
+This chapter includes the following sections:
+
+* link:multitenancy001.htm#A1261503[Introduction to the Solution]
+* link:multitenancy002.htm#BABJGBCF[Using Single-Table Multi-Tenancy]
+* link:multitenancy003.htm#A1235913[Using Table-Per-Tenant
+Multi-Tenancy]
+* link:multitenancy004.htm#CHDJEBAC[Using VPD Multi-Tenancy]
+* link:multitenancy005.htm#CHDCAJIH[Additional Resources]
+
+[#TLADG1124]##
+
+*Use Case*
+
+Multiple application clients must share data sources, with private
+access to their data, for example in a Software as a Service (SaaS)
+environment.
+
+[#TLADG1125]##
+
+*Solution*
+
+Decide on a strategy for tenant isolation; then use EclipseLink's tenant
+isolation features to implement the strategy.
+
+[#TLADG1126]##
+
+*Components*
+
+* EclipseLink 2.4 or later.
+* A compliant Java Database Connectivity (JDBC) database, such as Oracle
+Database, Oracle Express, or MySQL.
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:metadatasource004.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:multitenancy001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
+link:../../dcommon/html/cpyr.htm[ +
+] a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

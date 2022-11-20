@@ -16,6 +16,19 @@
 
 ///////////////////////////////////////////////////////////////////////////////
 
-:release-version: 4.0.0
-:release-date: December 2022
-:print-date: December, 2022
+== EclipseLink
+
+Solutions Guide for EclipseLink {release-version}
+
+{release-date}
+*Solutions Guide for EclipseLink*
+
+Copyright © 2022 by The Eclipse Foundation under the Eclipse Public
+License (EPL)
+
+`http://www.eclipse.org/org/documents/epl-v10.php`
+
+The initial contribution of this content was based on work copyrighted
+by Oracle and was submitted with permission.
+
+Print date: {print-date}

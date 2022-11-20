@@ -1,0 +1,111 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*EclipseLink Solutions Guide for EclipseLink* +
+Release 4.0 a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:restful_jpa004.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:qcn001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#CHDDAEJB]####[#TLADG549]####
+
+== [.secnum]#20# Using Database Events to Invalidate the Cache
+
+[#TLADG1003]##
+
+This chapter describes EclipseLink Database Change Notification (DCN),
+which allows you to use caching with a shared database in JPA.
+
+This chapter includes the following sections:
+
+* link:qcn001.htm#A1099038[Introduction to the Solution]
+* link:qcn002.htm#A1099145[Implementing the Solution]
+* link:qcn003.htm#A1099205[Limitations on the Solution]
+* link:qcn004.htm#A1584559[Additional Resources]
+
+[#TLADG709]##
+
+*Use Case*
+
+Users want to use a shared cache with their JPA application, however,
+external applications update the same database data, or the cache is in
+a clustered environment. The cache may retain stale data.
+
+[#TLADG710]##
+
+*Solution*
+
+EclipseLink provides an API which allows the database to notify
+EclipseLink of database changes. The changed objects can then be
+invalidated in the EclipseLink shared cache. Stale data can be
+discarded, even if other applications access the same data in the
+database.
+
+[#TLADG711]##
+
+*Components*
+
+* Oracle 11__g__R2 (11.2) (or higher) database
+* EclipseLink 2.4 or later.
+** EclipseLink library: eclipselink.jar
+** JDBC library: `ojdbc6.jar`.
+** JPA library: `persistence.jar`.
+
+[#TLADG712]##
+
+*Sample*
+
+For sample files that illustrate the use of Database Change Notification
+and shared caching in an application that uses JPA, see
+"EclipseLink/Examples/JPA/DCN" in the EclipseLink documentation.
+
+`http://wiki.eclipse.org/EclipseLink/Examples/JPA/DCN`
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:restful_jpa004.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:qcn001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
+link:../../dcommon/html/cpyr.htm[ +
+] a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

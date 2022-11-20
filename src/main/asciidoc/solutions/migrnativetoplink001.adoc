@@ -1,0 +1,657 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*EclipseLink Solutions Guide for EclipseLink* +
+Release 4.0 a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:sect1test001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:migrnativetoplink002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+The script content on this page is for navigation purposes only and does
+not alter the content in any way.
+
+[#BCGGFGDG]####[#TLADG908]####
+
+== Implementing the Solution
+
+This section contains the following tasks:
+
+* link:#BCGGFIGC[Task 1: Prerequisites]
+* link:#BCGFFCHI[Task 2: Replace Deprecated and Removed Native APIs]
+* link:#BCGJDFJB[Task 3: Rename Packages]
+* link:#BCGIFBHC[Task 4: Convert XML Configuration Files]
+
+[#BCGGFIGC]####[#TLADG909]####
+
+=== Task 1: Prerequisites
+
+* EclipseLink 2.4 or later.
++
+Download EclipseLink from
+`http://www.eclipse.org/eclipselink/downloads/`.
+* (Optional) EclipseLink Workbench. The EclipseLink Workbench is
+available in EclipseLink downloads. See the EclipseLink download page at
+`http://www.eclipse.org/eclipselink/downloads/`.
+
+[#BCGFFCHI]####[#TLADG910]####
+
+=== Task 2: Replace Deprecated and Removed Native APIs
+
+APIs that were deprecated in releases before TopLink 11g Release 1
+(11.1.1) were removed in EclipseLink. If your application uses any of
+those deprecated APIs or any APIs that were already replaced or removed
+from TopLink, you must update the application to use current APIs.
+
+The following sections lists the replaced and removed APIs, with
+suggested substitutions:
+
+* link:#BCGDBICE[APIs Replaced,]
+* link:#BCGJJGEF[Deprecated APIs,]
+* link:#BCGGJAFJ[Removed API,]
+
+ +
+
+[width="100%",cols="<100%",]
+|===
+a|
+image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
+
+When suggested replacements are in `oracle.toplink.*` packages, you must
+also change the package names, as described in link:#BCGJDFJB[Task 3:
+Rename Packages.]
+
+|===
+
+ +
+
+[#BCGDBICE]####[#TLADG911]####
+
+==== APIs Replaced
+
+The following tables list the APIs removed as of TopLink 11__g__ Release
+1 (11.1.1.1.). Use the replacement API listed in the tables.
+
+* link:#BCGDDHBC[Table 7-1, "changetracking
+(oracle.toplink.descriptors.*)"]
+* link:#BCGDIBCI[Table 7-2, "databaseaccess (oracle.toplink.internal*)"]
+* link:#BCGEIDAH[Table 7-3, "jdo (oracle.toplink.*)"]
+* link:#BCGGCCBE[Table 7-4, "mappings (oracle.toplink.*)"]
+* link:#BCGCAIHH[Table 7-5, "objectrelational (oracle.toplink.*)"]
+* link:#BCGDDFAD[Table 7-6, "oraclespecific (oracle.toplink.*)"]
+* link:#BCGFEJHH[Table 7-7, "publicinterface (oracle.toplink.*)"]
+* link:#BCGHAAEG[Table 7-8, "sdk (oracle.toplink.*)"]
+* link:#BCGFJCIC[Table 7-9, "entitymanager (oracle.toplink.sessions.*)"]
+* link:#BCGDCGAB[Table 7-10, "sessionconfiguration
+(oracle.toplink.tools.*)"]
+* link:#BCGCFHFA[Table 7-11, "xml (oracle.toplink.*)"]
+* link:#BCGBBFIC[Table 7-12, "XMLCommandConverter (oracle.toplink.*)"]
+* link:#BCGFFGIC[Table 7-13, "Remote Protocols (oracle.toplink.*)"]
+* link:#BCGGBFEE[Table 7-14, "EJB Mapping for BEA WebLogic 6.1"]
+* link:#BCGDIBIC[Table 7-15, "mappings (oracle.toplink.*)"]
+* link:#BCGDJEEJ[Table 7-16, "descriptors (oracle.toplink.*)"]
+
+[#TLADG912]####[#sthref23]####[#BCGDDHBC]##
+
+*_Table 7-1 changetracking (oracle.toplink.descriptors.*)_*
+
+[width="44%",cols="<32%,<68%,<",options="header",]
+|===
+|*Class Name* |*Method Name* |*Replacement APIs*
+|`ChangeTracker` |`getTopLinkPropertyChangeListener`
+|`._persistence_getPropertyChangeListener`
+
+|`ChangeTracker`
+|`setTopLinkPropertyChangeListener(PropertyChangeListener)`
+|`_persistence_setPropertyChangeListener(PropertyChangeListener)`
+|===
+
+ +
+
+[#TLADG913]####[#sthref24]####[#BCGDIBCI]##
+
+*_Table 7-2 databaseaccess (oracle.toplink.internal*)_*
+
+[width="52%",cols="<47%,<53%,<",options="header",]
+|===
+|*Class Name* |*Method Name* |*Replacement APIs*
+|`.*Platform` |Whole class |`oracle.toplink.platform.database.*Platform`
+|===
+
+ +
+
+[#TLADG914]####[#sthref25]####[#BCGEIDAH]##
+
+*_Table 7-3 jdo (oracle.toplink.*)_*
+
+[width="66%",cols="<,<50%,<50%",options="header",]
+|===
+|*Class Name* |*Method Name* |*Replacement APIs*
+|`.jdo` |Whole package |None
+|===
+
+ +
+
+[#TLADG915]####[#sthref26]####[#BCGGCCBE]##
+
+*_Table 7-4 mappings (oracle.toplink.*)_*
+
+[width="46%",cols="<64%,<36%,<",options="header",]
+|===
+|*Class Name* |*Method Name* |*Replacement APIs*
+|`TypeConversionMapping` |Whole class
+|`.mappings.converters.TypeConversionConverter`
+
+|`ObjectTypeMapping` |Whole class
+|`.mappings.converters.ObjectTypeConverter`
+
+|`SerializedObjectMapping` |Whole class
+|`.mappings.converters.SerializedObjectConverter`
+|===
+
+ +
+
+[#TLADG916]####[#sthref27]####[#BCGCAIHH]##
+
+*_Table 7-5 objectrelational (oracle.toplink.*)_*
+
+[width="36%",cols="<56%,<44%,<",options="header",]
+|===
+|*Class Name* |*Method Name* |*Replacement APIs*
+|`Oracle8Platform` |Whole class
+|`oracle.toplink.platform.database.oracle.Oracle8Platform`
+|===
+
+ +
+
+[#TLADG917]####[#sthref28]####[#BCGDDFAD]##
+
+*_Table 7-6 oraclespecific (oracle.toplink.*)_*
+
+[width="53%",cols="<70%,<30%,<",options="header",]
+|===
+|*Class Name* |*Method Name* |*Replacement APIs*
+|`.oraclespecific.NCharacter` |Whole class
+|`.platform.database.oracle.NCharacter`
+
+|`.oraclespecific.NClob` |Whole class |`.platform.database.oracle.NClob`
+
+|`.oraclespecific.NClob` |Whole class |`.platform.database.oracle.NClob`
+
+|`.oraclespecific.Oracle8Platform` |Whole class
+|`.platform.database.oracle.Oracle8Platform`
+
+|`.oraclespecific.Oracle9Specific` link:#sthref29[^Foot 1 ^] |Whole
+class |`.platform.database.oracle.Oracle9Specific`
+
+|.oraclespecific.TopLinkXMLType link:#sthref30[^Foot 2 ^] |Whole class
+|None
+|===
+
+ +
+
+^Footnote 1 ^`oracle.toplink.oraclespecific.Oracle9Specific` was moved
+to an internal package and renamed to
+`oracle.toplink.internal.platform.database.oracle.Oracle9Specific`. The
+replacement public API for
+`oracle.toplink.oraclespecific.Oracle9Specific` is
+`oracle.toplink.platform.database.oracle.Oracle9Specific`. +
+^Footnote 2 ^`oracle.toplink.oraclespecific.TopLinkXMLType` was a
+miscellaneous class, which does not have a replacement API. +
+
+[#TLADG918]####[#sthref31]####[#BCGFEJHH]##
+
+*_Table 7-7 publicinterface (oracle.toplink.*)_*
+
+[width="43%",cols="<63%,<37%,<",options="header",]
+|===
+|*Class Name* |*Method Name* |*Replacement APIs*
+|`DatabaseRow` |Whole class |`.sessions.DatabaseRecord`
+
+|`DatabaseSession` link:#sthref32[^Foot 1 ^] |Whole class
+|`.sessions.DatabaseSession`
+
+|`Descriptor` |Whole class
+|`.descriptors - ClassDescriptor, RelationalDescriptor`
+
+|`DescriptorEvent` |Whole class |`.descriptors.DescriptorEvent`
+
+|`DescriptorEventListener` |Whole class |`.descriptors` - new interface
+will not extend old interface
+
+|`DescriptorEventManager` |Whole class |`.descriptors`
+
+|`DescriptorQueryManager` |Whole class |`.descriptors`
+
+|`InheritancePolicy` |Whole class |`.descriptors`
+
+|`Session`link:#sthref33[^Foot 2 ^] |Whole class |`.sessions.Session`
+
+|`UnitOfWork`link:#sthref34[^Foot 3 ^] |Whole class
+|`.sessions.UnitOfWork`
+|===
+
+ +
+
+^Footnote 1 ^`oracle.toplink.publicinterface.DatabaseSession` was moved
+to an internal package and renamed to
+`oracle.toplink.internal.sessions.DatabaseSessionImpl`. The replacement
+public API for `oracle.toplink.publicinterface.DatabaseSession` is
+`oracle.toplink.sessions.DatabaseSession`. +
+^Footnote 2 ^`oracle.toplink.publicinterface.Session` was moved to an
+internal package and renamed to
+`oracle.toplink.internal.sessions.AbstractSessionImpl`. The replacement
+public API for `oracle.toplink.publicinterface.Session` is
+`oracle.toplink.sessions.Session`. +
+^Footnote 3 ^`oracle.toplink.publicinterface.UnitOfWork` was moved to an
+internal package and renamed to
+`oracle.toplink.internal.sessionl.UnitOfWorkImpl`. The replacement
+public API for `oracle.toplink.publicinterface.UnitOfWork` is
+`oracle.toplink.sessions.UnitOfWork`. +
+
+[#TLADG919]####[#sthref35]####[#BCGHAAEG]##
+
+*_Table 7-8 sdk (oracle.toplink.*)_*
+
+[width="57%",cols="<25%,<,<75%",options="header",]
+|===
+|*Class Name* |*Method Name* |*Replacement APIs*
+|`.sdk` |Whole package |`.eis`
+|===
+
+ +
+
+[#TLADG920]####[#sthref36]####[#BCGFJCIC]##
+
+*_Table 7-9 entitymanager (oracle.toplink.sessions.*)_*
+
+[width="34%",cols="<48%,<52%,<",options="header",]
+|===
+|*Class Name* |*Method Name* |*Replacement APIs*
+|All classes |All methods |JPA: see link:#BCGHJGHF[JPA Persistence
+Provider Implementation,]
+|===
+
+ +
+
+[#TLADG921]####[#sthref37]####[#BCGDCGAB]##
+
+*_Table 7-10 sessionconfiguration (oracle.toplink.tools.*)_*
+
+[width="61%",cols="<51%,<49%,<",options="header",]
+|===
+|*Class Name* |*Method Name* |*Replacement APIs*
+|`WASXMLLoader` |All methods |None
+|===
+
+ +
+
+[#TLADG922]####[#sthref38]####[#BCGCFHFA]##
+
+*_Table 7-11 xml (oracle.toplink.*)_*
+
+[width="61%",cols="<50%,<50%,<",options="header",]
+|===
+|*Class Name* |*Method Name* |*Replacement APIs*
+|`.xml` |Whole package |`.ox`
+|`.xmlstream` |Whole package |`.ox`
+|`.xml.tools` |Whole package |.`ox`
+|`.xml.xerces` |Whole package |`.ox`
+|`.xml.zip` |Whole package |`.ox`
+|===
+
+ +
+
+[#TLADG923]####[#sthref39]####[#BCGBBFIC]##
+
+*_Table 7-12 XMLCommandConverter (oracle.toplink.*)_*
+
+[width="43%",cols="<1%,<55%,<44%",options="header",]
+|===
+|*Class Name* |*Method Name* |*Replacement APIs*
+|`.remotecommand.XMLCommandConverter` |Whole class |None
+
+|`.transform.xml.XMLSource` |Whole class |None
+
+|`.transform.xml.XMLResult` |Whole class |None
+
+|`.internal.localization.i18n.ExceptionLocalizationResource`
+|"error_loading_resources" |None
+
+|`.internal.localization.i18n.ExceptionLocalizationResource`
+|"error_parsing_resources" |None
+
+|`.internal.localization.i18n.ExceptionLocalizationResource`
+|"unexpect_argument" |None
+|===
+
+ +
+
+[#TLADG924]####[#sthref40]####[#BCGFFGIC]##
+
+*_Table 7-13 Remote Protocols (oracle.toplink.*)_*
+
+[width="55%",cols="<,<80%,<20%",options="header",]
+|===
+|*Class Name* |*Method Name* |*Replacement APIs*
+|`.remote.corba.orbix` |Whole package |None
+
+|`.remote.corba.visibroker` |Whole package |None
+
+|`.remote.ejb` |Whole package |None
+
+|`.tools.sessionconfiguration.TopLinkSessionsFactory` |References for
+any of `JNDIClusteringService` in `orbix`, `visibroker` and `ejb`
+packages. |None
+
+|`.tools.sessionconfiguration.DTD2SessionConfigLoader` |References for
+any of `JNDIClusteringService` in `orbix, visibroker` and `ejb`
+packages. |None
+
+|`.tools.sessionconfiguration.model.clustering.VisibrokerCORBAJNDIClusteringConfig`
+|Whole class |None
+
+|`.tools.sessionconfiguration.model.clustering.OrbixCORBAJNDIClusteringConfig`
+|Whole class |None
+
+|`.tools.sessionconfiguration.model.clustering.EJBJNDIClusteringConfig`
+|Whole class |None
+
+|`.tools.sessionconfiguration.XMLSessionConfigProject` |References for
+any of `JNDIClusteringService` in `orbix`, `visibroker` and `ejb`
+packages. |None
+|===
+
+ +
+
+[#TLADG925]####[#sthref41]####[#BCGGBFEE]##
+
+*_Table 7-14 EJB Mapping for BEA WebLogic 6.1_*
+
+[width="38%",cols="<77%,<23%,<",options="header",]
+|===
+|*Class Name* |*Method Name* |*Replacement APIs*
+|`toplink-cmp-bean_name.xml` |None |A warning will be added at the
+beginning of:
+`internal.ejb.cmp.wls11.CMPDeployer.readTypeSpecificData()`
+|===
+
+ +
+
+[#BCGJJGEF]####[#TLADG926]####
+
+==== Deprecated APIs
+
+The following tables list the APIs deprecated in the releases prior to
+TopLink 11__g__ Release 1 (11.1.1) and therefore removed in that
+release, due to the substitution of EclipseLink libraries. Use the
+replacement API indicated.
+
+ +
+
+[width="100%",cols="<100%",]
+|===
+a|
+image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
+
+Because deprecated classes and moved classes have the same name, you may
+get compile errors if you use `import *` to import classes from both the
+old package and the new package. To avoid these errors, use `import`
+with a fully qualified package name.
+
+|===
+
+ +
+
+* link:#BCGDIBIC[Table 7-15, "mappings (oracle.toplink.*)"]
+* link:#BCGDJEEJ[Table 7-16, "descriptors (oracle.toplink.*)"]
+
+[#TLADG927]####[#sthref42]####[#BCGDIBIC]##
+
+*_Table 7-15 mappings (oracle.toplink.*)_*
+
+[width="43%",cols="<56%,<44%,<",options="header",]
+|===
+|*Class Name* |*Method Name* |*Replacement APIs*
+|`OneToOneMapping` |`useJoining`
+|`ForeignReferenceMapping.setJoinFetch(int)`
+|===
+
+ +
+
+[#TLADG928]####[#sthref43]####[#BCGDJEEJ]##
+
+*_Table 7-16 descriptors (oracle.toplink.*)_*
+
+[width="57%",cols="<25%,<,<75%",options="header",]
+|===
+|*Class Name* |*Method Name* |*Replacement APIs*
+|`ClassDescriptor` |`addMultipleTableForeignKeyField`
+|`addForeignKeyFieldForMultipleTable`
+
+|`ClassDescriptor` |`addMultipleTablePrimaryKeyField`
+|`addForeignKeyFieldForMultipleTable`
+
+|`ClassDescriptor` |`addMultipleTablePrimaryKeyFieldName`
+|`addForeignKeyFieldNameForMultipleTable`
+
+|`ClassDescriptor` |`addMultipleTableForeignKeyFieldName`
+|`addForeignKeyFieldNameForMultipleTable`
+|===
+
+ +
+
+[#BCGGJAFJ]####[#TLADG929]####
+
+==== Removed API
+
+The following classes were removed in the release prior to TopLink
+11__g__ Release 1 (11.1.1):
+
+* `OTSTransactionController`
+* `OTSSynchronizationListener`
+* `OracleSequenceDefinition` (use `SequenceObjectDefinition` instead)
+* `TimeTenSequenceDefinition` (use `SequenceObjectDefinition` instead)
+
+[#TLADG930]##
+
+[#sthref44]##
+
+==== Miscellaneous API Changes
+
+Other API changes include the following:
+
+* link:#BCGHJGHF[JPA Persistence Provider Implementation.]
+* link:#BCGGABCJ[Session Finalizers Disabled by Default.]
+* link:#BCGJCIFE[Vector and Hashtable Return Types Changed to List or
+Map.]
+
+[#BCGHJGHF]####[#TLADG931]####
+
+===== JPA Persistence Provider Implementation
+
+The persistence provider implementation in all TopLink releases since
+11g (11.1.1) is packaged in `eclipselink.jar`. It replaces all previous
+implementations, for example:
+
+* `toplink.jar`
+* `toplink-essentials.jar`
+
+[#BCGGABCJ]####[#TLADG932]####
+
+===== Session Finalizers Disabled by Default
+
+In TopLink 11__g__ (11.1.1) Technology Preview 3, session finalizers
+were disabled by default to improve performance. To enable session
+finalizers, use Session method `setIsFinalizersEnabled`(true).
+
+[#BCGJCIFE]####[#TLADG933]####
+
+===== Vector and Hashtable Return Types Changed to List or Map
+
+Any `Session` or `ClassDescriptor` method that returns `Vector` or
+`Hashtable` will eventually be changed to return `List` or `Map`,
+respectively. To prepare for this change, cast `Vector` and `Hashtable`
+return types to `List` or `Map`, respectively. For example, although the
+Javadoc for `ClassDescriptor` method `getMappings` is
+`java.util.Vector`, you should cast the returned value to `List`:
+
+[source,oac_no_warn]
+----
+List mappings = (List) descriptor.getMappings();
+----
+
+Other changes that now return `Map` include the following:
+
+* `ClassDescriptor.getQueryKeys()`
+* `ClassDescriptor.getProperties()`
+* `DescriptorQueryManager.getQueries()`
+* `EISInteraction.getProperties()`
+* `Session.getProperties()`
+* `Session.getQueries()`
+* `getAttributesToAlwaysInclude()`
+* `getSpecialOperations()`
+* `getValuesToExclude()s`
+
+[#BCGJDFJB]####[#TLADG934]####
+
+=== Task 3: Rename Packages
+
+EclipseLink continues to support native TopLink APIs; however, all
+`oracle.toplink.*` packages are now renamed to
+`org.eclipse.persistence.*`.
+
+To migrate your application to use the new code base, you must rename
+the packages in your code. To facilitate this, a package renamer tool is
+included with the EclipseLink installation. Use this tool on all of the
+following:
+
+* project source code
+* `project.xml` file
+* `persistence.xml` file
+* `sessions.xml` file
+
+The package renamer is located in the
+__`toplink_install_directory`__`\toplink\utils\rename` directory.
+Windows and UNIX/LINUX scripts are included.
+
+To run the package renamer using the scripts, do the following:
+
+. Find the `packageRename.cmd` (Windows) and `packageRename.sh`
+(UNIX/LINUX) scripts in
+__`toplink_install_directory`__`\toplink\utils\rename` directory.
+. Run either `packageRename.cmd` or `packageRename.sh` with the
+following arguments:
+* `sourceLocation` - The directory containing the files to rename.
+* `targetLocation` - The destination directory for the renamed files.
+The package renamer removes any existing Java and XML files, so it is
+advisable to specify an empty directory.
++
+For example:
++
+[source,oac_no_warn]
+----
+packageRename c:/mySourceLocation c:/myDestinationLocation
+----
++
+The package renamer performs a recursive directory search for Java and
+XML files to rename. The renamed version of each file is saved in the
+corresponding directory in the target location
+
+[#BCGIFBHC]####[#TLADG935]####
+
+=== Task 4: Convert XML Configuration Files
+
+The package renamer can rename EclipseLink XML configuration files, but
+depending on the type of file, you may need to make additional changes.
+
+[#TLADG936]##
+
+[#sthref45]##
+
+==== Sessions XML
+
+You can continue to use `sessions.xml` files as is. For a more
+forward-compatible solution, run the renamer on your `sessions.xml`
+files.
+
+[#TLADG937]##
+
+[#sthref46]##
+
+==== Deployment XML
+
+Deployment XML files from TopLink 10.1.3 and above can be read by
+TopLink 11.1.1 and later. You can continue to use those files or for a
+more forward compatible solution, run the renamer on these files and
+replace the version string in the "XML Header" with the following:
+
+"Eclipse Persistence Services"
+
+[#TLADG938]##
+
+[#sthref47]##
+
+==== Persistence XML
+
+To use EclipseLink as a persistence provider, you must run the renamer
+on your `persistence.xml` files. The renamer updates the persistence
+provider to be EclipseLink and also update any native TopLink specific
+properties to the EclipseLink equivalent.
+
+[#TLADG939]##
+
+[#sthref48]##
+
+==== ORM XML
+
+The Object-Relational (ORM) XML configuration file (`orm.xml`) is not
+EclipseLink-dependant and does not need to be updated.
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:sect1test001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:migrnativetoplink002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
+link:../../dcommon/html/cpyr.htm[ +
+] a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

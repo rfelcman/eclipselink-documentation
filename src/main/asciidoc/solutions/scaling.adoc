@@ -1,0 +1,102 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*EclipseLink Solutions Guide for EclipseLink* +
+Release 4.0 a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:usingmultipledbs003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:scaling001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#CHDCAFDB]####[#TLADG195]####
+
+== [.secnum]#10# Scaling Applications in Clusters
+
+This chapter provides instructions for configuring EclipseLink
+applications to ensure scalability in an application server cluster. The
+instructions are generic and can be applied to any application server
+cluster; however, additional content is provided for Oracle WebLogic
+Server and Oracle GlassFish Server. Consult your vendor's documentation
+as required.
+
+This chapter includes the following sections:
+
+* link:scaling001.htm#CEGBJFBE[Introduction to the Solution]
+* link:scaling002.htm#CEGHIIGG[Implementing the Solution]
+* link:scaling003.htm#CEGHHHJF[Additional Resources]
+
+[#TLADG984]##
+
+*Use Case*
+
+Applications must scale to meet client demand.
+
+[#TLADG985]##
+
+*Solution*
+
+The implementation is achieved by using a cache, configuring cache
+coordination, and using data partitioning.
+
+[#TLADG986]##
+
+*Components*
+
+* EclipseLink 2.4 or later.
+* Application Server that supports clustering.
+* Any compliant JDBC database.
+
+[#TLADG987]##
+
+*Sample*
+
+See link:scaling003.htm#CEGHHHJF[Additional Resources,] for links to
+samples.
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:usingmultipledbs003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:scaling001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
+link:../../dcommon/html/cpyr.htm[ +
+] a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

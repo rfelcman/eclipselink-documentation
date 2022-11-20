@@ -1,0 +1,81 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*EclipseLink Solutions Guide for EclipseLink* +
+Release 4.0 a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:metadatasource003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:multitenancy.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#BABIFHHF]####[#TLADG284]####
+
+== Additional Resources
+
+See the following resources for more information about the technologies
+and tools used to implement the solutions in this chapter.
+
+* For additional information about JPA deployment, see the following
+sections of the JPA Specification
+(`http://jcp.org/en/jsr/detail?id=317`):
+** Section 7.2, "Bootstrapping in Java SE Environments"
+** Chapter 7, "Container and Provider Contracts for Deployment and
+Bootstrapping"
+* For more information about persistence unit properties, see
+`PersistenceUnitProperties` class in _Oracle Fusion Middleware Java API
+Reference for EclipseLink_.
+* For more information about the APIs, see the following in _Jakarta
+Persistence API (JPA) Extensions Reference for EclipseLink_:
+** "`metadata-source`"
+** "`metadata-source.properties.file`"
+** "`metadata-source.send-refresh-command`"
+** "`metadata-source.xml.file`"
+** "`metadata-source.xml.url`"
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:metadatasource003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:multitenancy.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
+link:../../dcommon/html/cpyr.htm[ +
+] a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

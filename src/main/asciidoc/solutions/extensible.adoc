@@ -1,0 +1,97 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*EclipseLink Solutions Guide for EclipseLink* +
+Release 4.0 a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:saas001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:extensible001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#CIAEIEAI]####[#TLADG1119]####
+
+== [.secnum]#12# Making JPA Entities and JAXB Beans Extensible
+
+[#TLADG1194]##
+
+This chapter provides instructions for making JPA entities and JAXB
+beans extensible. Mappings can be added or modified externally, without
+modifying the entity or bean source file and without redeploying the
+persistence unit. This feature is useful in a Software-as-a-Service
+environment where multiple clients can share applications and
+datasources. It is also useful for customizing an application during
+installation rather than during development.
+
+This chapter includes the following sections:
+
+* link:extensible001.htm#BABFJDCF[Making JPA Entities Extensible]
+* link:extensible002.htm#BABHGCJB[Making JAXB Beans Extensible]
+* link:extensible003.htm#CIAJEHFG[Additional Resources]
+
+[#TLADG1195]##
+
+*Use Case*
+
+Users want to establish a SaaS environment, where applications and
+datasources are shared by multiple clients.
+
+[#TLADG1196]##
+
+*Solution*
+
+Use the EclipseLink extensibility feature to extend JPA entities and
+JAXB beans by using external mappings.
+
+[#TLADG1197]##
+
+*Components*
+
+* EclipseLink 2.4 or later.
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:saas001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:extensible001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
+link:../../dcommon/html/cpyr.htm[ +
+] a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

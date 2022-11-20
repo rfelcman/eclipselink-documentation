@@ -1,0 +1,93 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*EclipseLink Solutions Guide for EclipseLink* +
+Release 4.0 a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:websphere003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:sect1test001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#BCGDEBBB]####[#TLADG902]####
+
+== [.secnum]#7# Migrating from Native TopLink
+
+[#TLADG903]##
+
+This chapter describes how to migrate applications using "native"
+TopLink object-relational mapping (ORM) APIs to the current EclipseLink
+APIs.
+
+This chapter includes the following sections:
+
+* link:sect1test001.htm#BCGDFFJG[Introduction to the Solution]
+* link:migrnativetoplink001.htm#BCGGFGDG[Implementing the Solution]
+* link:migrnativetoplink002.htm#BCGJHDHE[Additional Resources]
+
+[#TLADG904]##
+
+*Use Case*
+
+A developer wants to upgrade an application that uses the older TopLink
+native ORM to use a current EclipseLink ORM implementation.
+
+[#TLADG905]##
+
+*Solution*
+
+Follow the instructions in this chapter to upgrade the application.
+
+[#TLADG906]##
+
+*Components*
+
+* EclipseLink 2.4 or later.
+* (Optional) EclipseLink Workbench.
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:websphere003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:sect1test001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
+link:../../dcommon/html/cpyr.htm[ +
+] a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

@@ -1,0 +1,90 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*EclipseLink Solutions Guide for EclipseLink* +
+Release 4.0 a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:migrhib.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:migrhib002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#BGBCDEFG]####[#TLADG460]####
+
+== Introduction to the Solution
+
+Hibernate is an object-relational mapping (ORM) tool for Java
+environments. It provides a framework for mapping Java objects to
+relational database artifacts, and Java data types to SQL data types. It
+also provides the ability to query the database and retrieve data.
+
+For more information about Hibernate, see `http://www.hibernate.org`.
+
+[#TLADG461]##
+
+*Reasons to Migrate*
+
+Reasons why you would want to migrate from Hibernate to EclipseLink
+include:
+
+* *Performance and scalability*: EclipseLink's caching architecture
+allows you to minimize object creation and share instances.
+EclipseLink's caching supports single-node and clustered deployments.
+* *Support for leading relation databases*: EclipseLink continues to
+support all leading relational databases with extensions specific to
+each. EclipseLink is also the best ORM solution for Oracle Database.
+* *A comprehensive persistence solution*: While EclipseLink offers
+industry leading object-relational support, EclipseLink also uses its
+core mapping functionality to deliver Object-XML (JAXB), Service Data
+Object (SDO), and Database Web Services (DBWS). Depending on your
+requirements, you can use one or more of the persistence services based
+on the same core persistence engine.
+* *JPA Support*: EclipseLink is the JPA reference implementation, and it
+will support future versions of JPA.
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:migrhib.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:migrhib002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
+link:../../dcommon/html/cpyr.htm[ +
+] a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

@@ -1,0 +1,117 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*EclipseLink Solutions Guide for EclipseLink* +
+Release 4.0 a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:migrhib003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:usingmultipledbs001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#BABJAFII]####[#TLADG182]####
+
+== [.secnum]#9# Using Multiple Databases with a Composite Persistence Unit
+
+With EclipseLink, you can expose multiple persistence units (each with
+unique sets of entity types) as a single persistence context by using a
+_composite persistence unit_. Individual persistence units that are part
+of this composite persistence unit are called _composite member
+persistence units_.
+
+ +
+
+[width="100%",cols="<100%",]
+|===
+a|
+image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
+
+EclipseLink also supports multiple databases through partitioning. See
+link:scaling.htm#CHDCAFDB[Chapter 10, "Scaling Applications in
+Clusters"] for more information.
+
+|===
+
+ +
+
+This chapter includes the following sections:
+
+* link:usingmultipledbs001.htm#CIHBBIJJ[Introduction to the Solution]
+* link:usingmultipledbs002.htm#CIHJJBFF[Implementing the Solution]
+* link:usingmultipledbs003.htm#CIHCDGEH[Additional Resources]
+
+[#TLADG980]##
+
+*Use Case*
+
+Users need to map expose multiple persistence units as a single
+persistence context within an application.
+
+[#TLADG981]##
+
+*Solution*
+
+EclipseLink supports a "composite" persistence unit which can include
+multiple member persistence units.
+
+[#TLADG982]##
+
+*Components*
+
+* EclipseLink 2.4.2 or later.
+* Multiple databases.
+
+[#TLADG983]##
+
+*Sample*
+
+See the following EclipseLink examples for related information:
+
+* `http://wiki.eclipse.org/EclipseLink/Examples/JPA/Composite`
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:migrhib003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:usingmultipledbs001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
+link:../../dcommon/html/cpyr.htm[ +
+] a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

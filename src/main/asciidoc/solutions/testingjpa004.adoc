@@ -1,0 +1,123 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*EclipseLink Solutions Guide for EclipseLink* +
+Release 4.0 a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:testingjpa003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:testingjpa005.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#CHDEECDB]####[#TLADG1084]####
+
+== Using Weaving
+
+Weaving is a technique of manipulating the byte-code of compiled Java
+classes.
+
+EclipseLink uses weaving to enhance Plain Old Java Object (POJO) classes
+and JPA entities with many features such lazy loading, change tracking,
+fetch groups, and internal optimizations.
+
+[#TLADG1085]##
+
+[#sthref141]##
+
+=== How to Disable or Enable Weaving in a Java SE Environment
+
+In a Java SE environment weaving is not enabled by default. This can
+affect LAZY One-To-One, Many-To-One and Basic relationships. It also has
+a major effect on performance and disable attribute change tracking.
+
+To enable weaving in Java SE, the EclipseLink agent must be used when
+starting the Java VM.
+
+[source,oac_no_warn]
+----
+java -javaagent:eclipselink.jar
+----
+
+Spring could also be used to allow JPA weaving in Java SE. See
+`http://wiki.eclipse.org/EclipseLink/Examples/JPA/JPASpring` for more
+information.
+
+Static weaving can also be used, by including the following persistence
+property,
+
+[source,oac_no_warn]
+----
+<property name="eclipselink.weaving" value="static"/>
+----
+
+See "weaving" in _Jakarta Persistence API (JPA) Extensions Reference for
+EclipseLink_ for more information.
+
+[#TLADG1086]##
+
+[#sthref142]##
+
+=== How to Disable or Enable Weaving in a Jakarta EE Environment
+
+In a Jakarta EE environment weaving is enabled by default (on any
+Jakarta EE 5 or greater fully compliant application server, such as
+Weblogic, Webspehere, and Glassfish. JBoss does not allow weaving so you
+must use static weaving or Spring).
+
+To disable weaving the weaving persistence unit property can be used,
+
+[source,oac_no_warn]
+----
+<property name="eclipselink.weaving" value="false">
+ 
+----
+
+For more information on weaving see "weaving" in _Jakarta Persistence
+API (JPA) Extensions Reference for EclipseLink_.
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:testingjpa003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:testingjpa005.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
+link:../../dcommon/html/cpyr.htm[ +
+] a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

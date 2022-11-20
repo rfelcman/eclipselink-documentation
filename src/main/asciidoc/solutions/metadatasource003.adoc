@@ -1,0 +1,109 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*EclipseLink Solutions Guide for EclipseLink* +
+Release 4.0 a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:metadatasource002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:metadatasource004.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#BABGHHIH]####[#TLADG276]####
+
+== Main Tasks
+
+To use an external metadata source for your mapping information, perform
+the following tasks:
+
+* link:#BABEIJIG[Task 1: Configure the Persistence Unit]
+* link:#BABIGAGE[Task 2: Configure the Server]
+
+[#BABEIJIG]####[#TLADG277]####
+
+=== Task 1: Configure the Persistence Unit
+
+In your persistence unit, specify the external metadata source by
+defining an `eclipselink.metadata.source` property and assign as its
+value a class that implements
+`org.eclipse.persistence.jpa.metadata.MetadataSource`. For example:
+
+[source,oac_no_warn]
+----
+<property name="eclipselink.metadata-source" value="mypackage.MyMetadataSource"/>
+----
+
+You are free to provide the metadata location in your class as you
+choose, for example:
+
+[source,oac_no_warn]
+----
+public class AdminMetadataSource extends XMLMetadataSource {
+ 
+    @Override
+    public XMLEntityMappings getEntityMappings(Map<String, Object> properties, ClassLoader classLoader, SessionLog log) {
+        String leagueId = (String) properties.get(LEAGUE_CONTEXT);
+        properties.put(PersistenceUnitProperties.METADATA_SOURCE_XML_URL, "http://myserverlocation/rest/" + leagueId + "/orm");
+        return super.getEntityMappings(properties, classLoader, log);
+    }
+}
+----
+
+[#BABIGAGE]####[#TLADG283]####
+
+=== Task 2: Configure the Server
+
+To access the metadata file, the server must provide URL access to the
+mapping file by using any of the following:
+
+* Static file serving
+* A server-based solution with its own mapping file or a mapping file
+built on-demand from stored mapping information
+* Some other web technology.
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:metadatasource002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:metadatasource004.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
+link:../../dcommon/html/cpyr.htm[ +
+] a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

@@ -1,0 +1,96 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*EclipseLink Solutions Guide for EclipseLink* +
+Release 4.0 a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:nonrelational_db003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:oracledb001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#BGBFBFFC]####[#TLADG580]####
+
+== [.secnum]#22# Using EclipseLink with the Oracle Database
+
+This chapter provides instructions for understanding and
+usingEclipseLink features that are designed specifically to support the
+Oracle Database platform.
+
+This chapter includes the following sections:
+
+* link:oracledb001.htm#CHDDBEHD[Introduction to the Solution]
+* link:oracledb002.htm#CHDJHBIC[Implementing the Solution]
+* link:oracledb003.htm#CHDBEHDJ[Additional Resources]
+
+[#TLADG1054]##
+
+*Use Case*
+
+EclipseLink offers a persistence solution that is designed to work with
+any database. However, applications that plan to use the Oracle Database
+platform can take advantage of enhanced support for the Oracle Database.
+
+[#TLADG1055]##
+
+*Solution*
+
+The solution is achieved by using various EclipseLink APIs and Oracle
+products. Applications choose to implement different EclipseLink APIs
+based on the Oracle Database feature or products being used.
+
+[#TLADG1056]##
+
+*Components*
+
+* EclipseLink 2.4 or later.
+* Oracle Database
+* Additional Oracle Database and Middleware products are required
+depending on the features that an application chooses to use.
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:nonrelational_db003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:oracledb001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
+link:../../dcommon/html/cpyr.htm[ +
+] a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +
