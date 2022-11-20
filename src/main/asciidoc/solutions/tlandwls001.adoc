@@ -1,32 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*EclipseLink Solutions Guide for EclipseLink* +
-Release 4.0 a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:tlandwls.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:tlandwls002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#BABCIJEE]####[#TLADG113]####
-
-== Introduction to the Solution
+///////////////////////////////////////////////////////////////////////////////
+[[ELWLS001]]
+=== Introduction to the Solution
 
 WebLogic Server is a scalable, enterprise-ready Java Platform,
 Enterprise Edition (Jakarta EE platform) application server. WebLogic
@@ -46,11 +36,7 @@ EclipseLink provides APIs and a run-time environment for implementing
 the persistence layer of Jakarta EE applications (as well as Java SE
 applications).
 
-[#TLADG114]##
-
-[#sthref13]##
-
-=== Advantages to Using EclipseLink with WebLogic Server
+==== Advantages to Using EclipseLink with WebLogic Server
 
 While WebLogic Server can use other persistence providers and
 EclipseLink can be used with other application servers, using WebLogic
@@ -66,7 +52,7 @@ API for XML Web Services (JAX-WS) and Java API for RESTful Web Services
 (JAX-RS) applications.
 * EclipseLink logging integration in WebLogic Server provides a
 comprehensive, integrated logging infrastructure. See
-link:tlandwls002.htm#BABIIEHD[Task 4: Use or Reconfigure the Logging
+xref:{relativedir}/tlandwls002.adoc#BABIIEHD[Task 4: Use or Reconfigure the Logging
 Integration.]
 
 >
@@ -78,35 +64,3 @@ WebLogic Server, which contains EclipseLink, which contains TopLink Grid
 and EclipseLink. Above this box is a box containing JDeveloper, which
 points to EclipseLink and EclipseLink. Below the box is the Oracle
 Database, which points to EclipseLink and WebLogic Server.
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:tlandwls.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:tlandwls002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
-link:../../dcommon/html/cpyr.htm[ +
-] a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

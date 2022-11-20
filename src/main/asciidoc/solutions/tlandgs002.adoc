@@ -1,32 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*EclipseLink Solutions Guide for EclipseLink* +
-Release 4.0 a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:tlandgs001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:tlandgs003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#CIHIGBFH]####[#TLADG165]####
-
-== Implementing the Solution
+///////////////////////////////////////////////////////////////////////////////
+[[ELGS002]]
+=== Implementing the Solution
 
 To run EclipseLink JPA applications in GlassFish Server, you must
 configure the server and coordinate certain server and application
@@ -42,9 +32,9 @@ settings. These are described in the following tasks.
 * link:#CIHFIGGB[Task 8: Run the Application]
 * link:#CIHIFGEF[Task 9: Monitor the Application]
 
-[#CIHDCDJD]####[#TLADG164]####
+[[CIHDCDJD]]
 
-=== Task 1: Prerequisites
+==== Task 1: Prerequisites
 
 This document is based on the following products and tools, although the
 principles apply to any supported database or development environment.
@@ -83,9 +73,9 @@ For Oracle Enterprise Pack for Eclipse, see
 +
 For NetBeans, see `http://www.oracle.com/us/products/tools/050845.html`.
 
-[#CIHEJFFA]####[#TLADG166]####
+[[CIHEJFFA]]
 
-=== Task 2: Install GlassFish Server
+==== Task 2: Install GlassFish Server
 
 EclipseLink is included with the GlassFish Server distribution. You can
 find instructions for installing and configuring GlassFish Server at
@@ -114,29 +104,21 @@ directory.
       .
 ----
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
+[NOTE]
+====
 * The `org.eclipse.persistence.oracle.jar` file is available with
 GlassFish and provides Oracle Database-specific functionality for
 EclipseLink. This file is used only for applications running against an
 Oracle Database.
-
-|===
-
- +
+====
 
 Object-XML (also known as JAXB support, or _MOXy_) is a component that
 enables you to bind Java classes to XML schemas. This support is
 provided by the `org.eclipse.persistence.moxy.jar`.
 
-[#CIHFCJJI]####[#TLADG167]####
+[[CIHFCJJI]]
 
-=== Task 3: Set Up the Data Source
+==== Task 3: Set Up the Data Source
 
 Configuring an Oracle database as a JDBC resource for a Jakarta EE
 application involves the following steps:
@@ -146,9 +128,9 @@ GlassFish Server]
 . link:#CIHFIGGF[Create a JDBC Connection Pool for the Resource]
 . link:#CIHIDADF[Create the JDBC Resource]
 
-[#CIHDEDEE]####[#TLADG168]####
+[[CIHDEDEE]]
 
-==== Integrate the JDBC Driver for Oracle Database into GlassFish Server
+===== Integrate the JDBC Driver for Oracle Database into GlassFish Server
 
 To integrate the JDBC driver, copy its JAR file into the domain and then
 restart the domain and instances to make the driver available.
@@ -201,9 +183,9 @@ restart-instance pmd-i1
 restart-instance pmd-i2
 ----
 
-[#CIHFIGGF]####[#TLADG169]####
+[[CIHFIGGF]]
 
-==== Create a JDBC Connection Pool for the Resource
+===== Create a JDBC Connection Pool for the Resource
 
 You can create a JDBC connection pool from the GlassFish Server
 Administration Console or from the command line.
@@ -242,9 +224,9 @@ create-jdbc-connection-pool
 ping-connection-pool pool_name 
 ----
 
-[#CIHIDADF]####[#TLADG170]####
+[[CIHIDADF]]
 
-==== Create the JDBC Resource
+===== Create the JDBC Resource
 
 You can use the GlassFish Server Administration Console to create the
 JDBC resource or you can use the command line.
@@ -269,9 +251,9 @@ for example:
 create-jdbc-resource --connectionpoolid poolbvcallbackbmt jdbc/bvcallbackbmt
 ----
 
-[#CIHBFDDB]####[#TLADG171]####
+[[CIHBFDDB]]
 
-=== Task 4: Create the persistence.xml File
+==== Task 4: Create the persistence.xml File
 
 link:#CIHJGIEF[Example 4-1] illustrates a sample `persistence.xml` file
 that specifies the default persistence provider for EclipseLink,
@@ -329,7 +311,7 @@ properties, see:
 * link:#CIHCBCIC[Specify an Oracle Database.]
 * link:#CIHHJIGF[Specify Logging.]
 
-[#CIHJGIEF]####[#TLADG172]####
+[[CIHJGIEF]]
 
 *_Example 4-1 Sample persistence.xml File_*
 
@@ -349,18 +331,18 @@ properties, see:
 </persistence>
 ----
 
-[#CIHFFHAE]####[#TLADG173]####
+[[CIHFFHAE]]
 
-==== Specify the Persistence Provider
+===== Specify the Persistence Provider
 
 The persistence provider defines the implementation of JPA. It is
 defined in the `provider` element of the `persistence.xml` file.
 Persistence providers are vendor-specific. The persistence provider for
 EclipseLink is `org.eclipse.persistence.jpa.PersistenceProvider`.
 
-[#CIHCBCIC]####[#TLADG174]####
+[[CIHCBCIC]]
 
-==== Specify an Oracle Database
+===== Specify an Oracle Database
 
 You specify the database connection details in the `persistence.xml`
 file. GlassFish Server uses the bundled Java DB (Derby) database by
@@ -384,9 +366,9 @@ Development Guide_, at:
 
 `http://docs.oracle.com/cd/E26576_01/doc.312/e24930/jpa.htm#gbwmj`
 
-[#CIHHJIGF]####[#TLADG175]####
+[[CIHHJIGF]]
 
-==== Specify Logging
+===== Specify Logging
 
 EclipseLink provides a logging utility even though logging is not part
 of the JPA specification. Hence, the information provided by the log is
@@ -444,9 +426,9 @@ available in the logging utility, see "Persistence Property Extensions
 Reference" in _Jakarta Persistence API (JPA) Extensions Reference for
 EclipseLink_.
 
-[#CIHDDACF]####[#TLADG176]####
+[[CIHDDACF]]
 
-=== Task 5: Set Up GlassFish Server for JPA
+==== Task 5: Set Up GlassFish Server for JPA
 
 _GlassFish Server Application Development Guide_ describes
 server-specific considerations on setting up GlassFish Server to run
@@ -467,9 +449,9 @@ options to manage automatic schema generation
 * "Restrictions and Optimizations," for restrictions and performance
 optimizations that affect using the Jakarta Persistence API
 
-[#CIHHDEFE]####[#TLADG177]####
+[[CIHHDEFE]]
 
-=== Task 6: Create the Application
+==== Task 6: Create the Application
 
 To create an application that uses EclipseLink as its JPA persistence
 provider, you may want to use a Jakarta EE IDE for convenience during
@@ -484,9 +466,9 @@ Server Application Development Guide_, at:
 
 `http://docs.oracle.com/cd/E26576_01/doc.312/e24930/jpa.htm`
 
-[#CIHCFJDE]####[#TLADG178]####
+[[CIHCFJDE]]
 
-=== Task 7: Deploy the Application to GlassFish Server
+==== Task 7: Deploy the Application to GlassFish Server
 
 For information about deploying to GlassFish Server, see "Deploy
 Applications or Modules," "To Deploy an Enterprise Application," and "To
@@ -496,18 +478,18 @@ Guide_, at:
 
 `http://docs.oracle.com/cd/E26576_01/index.htm`
 
-[#CIHFIGGB]####[#TLADG179]####
+[[CIHFIGGB]]
 
-=== Task 8: Run the Application
+==== Task 8: Run the Application
 
 For instructions for starting a deployed application from the GlassFish
 Server Administration Console, see "Application Client Launch" and "To
 Launch an Application" in _GlassFish Server Administration Console
 Online Help_.
 
-[#CIHIFGEF]####[#TLADG180]####
+[[CIHIFGEF]]
 
-=== Task 9: Monitor the Application
+==== Task 9: Monitor the Application
 
 GlassFish Server provides a monitoring service to track the health and
 performance of an application. For information about monitoring an
@@ -518,35 +500,3 @@ information about monitoring the application from the command line, see
 Administration Guide_, at:
 
 `http://docs.oracle.com/cd/E26576_01/doc.312/e24928/monitoring.htm`
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:tlandgs001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:tlandgs003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
-link:../../dcommon/html/cpyr.htm[ +
-] a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

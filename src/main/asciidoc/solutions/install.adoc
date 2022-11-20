@@ -1,72 +1,41 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*EclipseLink Solutions Guide for EclipseLink* +
-Release 4.0 a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:sect1test.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:install001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#CHDIGBJC]####[#TLADG873]####
+///////////////////////////////////////////////////////////////////////////////
 
-== [.secnum]#2# Installing EclipseLink
+== Installing EclipseLink
 
 This chapter tells how to install EclipseLink.
 
 EclipseLink is available in several distributions which are installed in
 a variety of ways, as described in the following sections:
 
-* link:install001.htm#CHDFACCB[Prerequisites]
-* link:install002.htm#CHDFDCDC[Installing EclipseLink for Java SE and
-Jakarta EE Development]
-* link:install003.htm#CHDCJICG[Installing EclipseLink NoSQL Support]
-* link:install004.htm#CHDJBFEA[Installing EclipseLink with OSGi Support]
+* xref:{relativedir}/install001.adoc#INSTALL001[Prerequisites]
+* xref:{relativedir}/install002.adoc#INSTALL002[Installing EclipseLink for Java SE and Jakarta EE Development]
+* xref:{relativedir}/install003.adoc#INSTALL003[Installing EclipseLink NoSQL Support]
+* xref:{relativedir}/install004.adoc#INSTALL004[Installing EclipseLink with OSGi Support]
 
-'''''
+//Prerequisites
+include::{rootdir}/install001.adoc[]
 
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:sect1test.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:install001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
+//Installing EclipseLink for Java SE and Jakarta EE Development
+include::{rootdir}/install002.adoc[]
 
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
-link:../../dcommon/html/cpyr.htm[ +
-] a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+//Installing EclipseLink NoSQL Support
+include::{rootdir}/install003.adoc[]
 
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +
+//Installing EclipseLink with OSGi Support
+include::{rootdir}/install004.adoc[]

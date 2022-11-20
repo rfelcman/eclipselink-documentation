@@ -43,40 +43,15 @@ include::{rootdir}/whatsnew.adoc[]
 //Overview of EclipseLink
 :sectnums:
 :sectnumlevels: 1
-include::{rootdir}/general.adoc[]
+include::{rootdir}/intro.adoc[]
 
-//Understanding Object-Relational and MOXy Internals
-include::{rootdir}/blocks.adoc[]
+//Installing EclipseLink
+include::{rootdir}/install.adoc[]
 
-//Understanding the Persistence Unit
-include::{rootdir}/app_dev.adoc[]
+//Using EclipseLink with WebLogic Server
+include::{rootdir}/tlandwls.adoc[]
 
-//Understanding Entities
-include::{rootdir}/entities.adoc[]
-
-//Understanding Descriptors
-include::{rootdir}/descriptors.adoc[]
-
-//Understanding Mappings
-include::{rootdir}/mappingintro.adoc[]
-
-//Understanding Data Access
-include::{rootdir}/data_access.adoc[]
-
-//Understanding Caching
-include::{rootdir}/cache.adoc[]
-
-//Understanding Queries
-include::{rootdir}/queries.adoc[]
-
-//Understanding EclipseLink Expressions
-include::{rootdir}/expressions.adoc[]
-
-//Understanding Non-relational Data Sources
-include::{rootdir}/nosql.adoc[]
-
-//A Database and Application Server Support
-[appendix]
-include::{rootdir}/app_tl_ext.adoc[]
+//Using EclipseLink with GlassFish Server
+include::{rootdir}/tlandgs.adoc[]
 
 include::copyright.adoc[]

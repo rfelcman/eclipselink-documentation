@@ -1,52 +1,36 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*EclipseLink Solutions Guide for EclipseLink* +
-Release 4.0 a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:tlandwls003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:tlandgs001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#BABDGFIC]####[#TLADG158]####
-
-== [.secnum]#4# Using EclipseLink with GlassFish Server
-
-[#TLADG159]##
+///////////////////////////////////////////////////////////////////////////////
+[[ELGS]]
+== Using EclipseLink with GlassFish Server
 
 This chapter describes how to use EclipseLink as the persistence
 provider for applications deployed to Oracle GlassFish Server.
 
 This chapter includes the following sections:
 
-* link:tlandgs001.htm#CIHHFGAG[Introduction to the Solution]
-* link:tlandgs002.htm#CIHIGBFH[Implementing the Solution]
-* link:tlandgs003.htm#CIHFEBGC[Additional Resources]
-
-[#TLADG893]##
+* xref:{relativedir}/tlandgs001.adoc#ELGS001[Introduction to the Solution]
+* xref:{relativedir}/tlandgs002.adoc#ELGS002[Implementing the Solution]
+* xref:{relativedir}/tlandgs003.adoc#ELGS003[Additional Resources]
 
 *Use Case*
 
 Users want to run applications that employ JPA on Oracle GlassFish
 Server.
-
-[#TLADG894]##
 
 *Solution*
 
@@ -57,8 +41,6 @@ Jakarta Persistence API (JPA) 2.0 specification. EclipseLink allows you
 to integrate Java applications with any data source, without
 compromising ideal application design or data integrity.
 
-[#TLADG895]##
-
 *Components*
 
 * GlassFish Server 3.1.2.
@@ -68,34 +50,11 @@ Express Edition, MySQL, and so on.
 * While it is not required, you may want to use a Jakarta EE integrated
 development environment (IDE) for convenience during development.
 
-'''''
+//Introduction to the Solution
+include::{rootdir}/tlandgs001.adoc[]
 
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:tlandwls003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:tlandgs001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
+//Implementing the Solution
+include::{rootdir}/tlandgs002.adoc[]
 
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
-link:../../dcommon/html/cpyr.htm[ +
-] a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +
+//Additional Resources
+include::{rootdir}/tlandgs003.adoc[]
