@@ -1,54 +1,38 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*EclipseLink Solutions Guide for EclipseLink* +
-Release 4.0 a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:restful_jpa004.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:qcn001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#CHDDAEJB]####[#TLADG549]####
-
-== [.secnum]#20# Using Database Events to Invalidate the Cache
-
-[#TLADG1003]##
+///////////////////////////////////////////////////////////////////////////////
+[[QCN]]
+== Using Database Events to Invalidate the Cache
 
 This chapter describes EclipseLink Database Change Notification (DCN),
 which allows you to use caching with a shared database in JPA.
 
 This chapter includes the following sections:
 
-* link:qcn001.htm#A1099038[Introduction to the Solution]
-* link:qcn002.htm#A1099145[Implementing the Solution]
-* link:qcn003.htm#A1099205[Limitations on the Solution]
-* link:qcn004.htm#A1584559[Additional Resources]
-
-[#TLADG709]##
+* xref:{relativedir}/qcn001.adoc#QCN001[Introduction to the Solution]
+* xref:{relativedir}/qcn002.adoc#QCN002[Implementing the Solution]
+* xref:{relativedir}/qcn003.adoc#QCN003[Limitations on the Solution]
+* xref:{relativedir}/qcn004.adoc#QCN004[Additional Resources]
 
 *Use Case*
 
 Users want to use a shared cache with their JPA application, however,
 external applications update the same database data, or the cache is in
 a clustered environment. The cache may retain stale data.
-
-[#TLADG710]##
 
 *Solution*
 
@@ -58,8 +42,6 @@ invalidated in the EclipseLink shared cache. Stale data can be
 discarded, even if other applications access the same data in the
 database.
 
-[#TLADG711]##
-
 *Components*
 
 * Oracle 11__g__R2 (11.2) (or higher) database
@@ -67,8 +49,6 @@ database.
 ** EclipseLink library: eclipselink.jar
 ** JDBC library: `ojdbc6.jar`.
 ** JPA library: `persistence.jar`.
-
-[#TLADG712]##
 
 *Sample*
 
@@ -78,34 +58,14 @@ and shared caching in an application that uses JPA, see
 
 `http://wiki.eclipse.org/EclipseLink/Examples/JPA/DCN`
 
-'''''
+//Introduction to the Solution
+include::{rootdir}/qcn001.adoc[]
 
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:restful_jpa004.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:qcn001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
+//Implementing the Solution
+include::{rootdir}/qcn002.adoc[]
 
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
-link:../../dcommon/html/cpyr.htm[ +
-] a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+//Limitations on the Solution
+include::{rootdir}/qcn003.adoc[]
 
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +
+//Additional Resources
+include::{rootdir}/qcn004.adoc[]

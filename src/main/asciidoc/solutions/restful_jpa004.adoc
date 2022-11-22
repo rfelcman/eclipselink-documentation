@@ -367,7 +367,7 @@ in the REST API. They are:
 * link:#CHDBDEBE[Query Returning List of Results]
 * link:#CHDIHEJJ[Update/Delete Query]
 
-[#CHDBDEBE]####[#TLADG1183]####
+[[CHDBDEBE]]
 
 '''''
 

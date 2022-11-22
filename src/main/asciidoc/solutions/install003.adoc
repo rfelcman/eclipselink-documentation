@@ -26,5 +26,5 @@ To add support for NoSQL databases to EclipseLink, download and install
 conjunction with `eclipselink.jar` or the EclipseLink JPA bundles.
 
 For information about NoSQL support, see
-xref:{relativedir}/nonrelational_db.adoc#BGBCIABF[Chapter 21, "Using EclipseLink with
+xref:{relativedir}/nonrelational_db.adoc#NOSQL[Chapter 21, "Using EclipseLink with
 NoSQL Databases."]

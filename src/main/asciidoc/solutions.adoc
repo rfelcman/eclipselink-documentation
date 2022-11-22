@@ -99,4 +99,13 @@ include::{rootdir}/performance.adoc[]
 //Exposing JPA Entities Through RESTful Data Services
 include::{rootdir}/restful_jpa.adoc[]
 
+//Using Database Events to Invalidate the Cache
+include::{rootdir}/qcn.adoc[]
+
+//Using EclipseLink with NoSQL Databases
+include::{rootdir}/nonrelational_db.adoc[]
+
+//Using EclipseLink with the Oracle Database
+include::{rootdir}/oracledb.adoc[]
+
 include::copyright.adoc[]

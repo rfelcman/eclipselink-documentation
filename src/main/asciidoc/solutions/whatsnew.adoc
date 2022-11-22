@@ -59,11 +59,11 @@ RESTful Data Services."]
 * Support for TopLink Database Change Notification (DCN), which allows
 the database to notify TopLink of database changes so that cached
 objects can be invalidated in the shared cache. See
-xref:{relativedir}/qcn.adoc#CHDDAEJB[Chapter 20, "Using Database Events to Invalidate
+xref:{relativedir}/qcn.adoc#QCN[Chapter 20, "Using Database Events to Invalidate
 the Cache."]
 * NoSQL database support, allowing objects to be mapped to
 non-relational (NoSQL) data sources. See
-xref:{relativedir}/nonrelational_db.adoc#BGBCIABF[Chapter 21, "Using EclipseLink with
+xref:{relativedir}/nonrelational_db.adoc#NOSQL[Chapter 21, "Using EclipseLink with
 NoSQL Databases,"].
 
 For a complete list of the changes in this release, see
@@ -115,7 +115,7 @@ for the Java Platform, Standard Edition (Java SE platform)).
 JPA Entities Through RESTful Data Services,"] to describe how to expose
 JPA entities through Jakarta Persistence API-RESTful Services (JPA-RS),
 using either JSON or XML media.
-* Added new chapter, xref:{relativedir}/qcn.adoc#CHDDAEJB[Chapter 20, "Using Database
+* Added new chapter, xref:{relativedir}/qcn.adoc#QCN[Chapter 20, "Using Database
 Events to Invalidate the Cache,"] to describe how to use EclipseLink
 Database Change Notification (DCN) for shared caching in a JPA
 environment. DCN allows the database to notify EclipseLink of database

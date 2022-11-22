@@ -65,9 +65,9 @@ Getting the best performance out of EclipseLink.
 Through RESTful Data Services"] - How to expose entities through RESTful
 services using EclipseLink Jakarta Persistence API for RESTful Services
 (JPA-RS).
-* xref:{relativedir}/qcn.adoc#CHDDAEJB[Chapter 20, "Using Database Events to Invalidate
+* xref:{relativedir}/qcn.adoc#QCN[Chapter 20, "Using Database Events to Invalidate
 the Cache"] - How to use EclipseLink Database Change Notification (DCN)
 for caching with a shared database in JPA.
-* xref:{relativedir}/nonrelational_db.adoc#BGBCIABF[Chapter 21, "Using EclipseLink with
+* xref:{relativedir}/nonrelational_db.adoc#NOSQL[Chapter 21, "Using EclipseLink with
 NoSQL Databases"] - How to use EclipseLink to map objects to
 non-relational (that is, no SQL) data sources.

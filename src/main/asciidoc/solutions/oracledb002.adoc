@@ -1,32 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*EclipseLink Solutions Guide for EclipseLink* +
-Release 4.0 a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:oracledb001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:oracledb003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#CHDJHBIC]####[#TLADG1058]####
-
-== Implementing the Solution
+///////////////////////////////////////////////////////////////////////////////
+[[ORACLEDB002]]
+=== Implementing the Solution
 
 The solution in this section is organized according to technology. The
 organization allows developers to easily understand the different parts
@@ -41,9 +31,9 @@ This section includes the following topics:
 * link:#CHDIEBBB[Using EclipseLink with Oracle RAC]
 * link:#CHDJBFIJ[Using Oracle Spatial and Graph]
 
-[#CHDIBDGJ]####[#TLADG1059]####
+[[CHDIBDGJ]]
 
-=== Using Oracle Platform-Specific APIs
+==== Using Oracle Platform-Specific APIs
 
 Oracle Database platform support is provided in the
 `org.eclipse.persistence.platform.database.OraclePlatform` class, the
@@ -59,22 +49,12 @@ The following support is provided for the Oracle Database:
 * Native SQL for `byte[]`, `Date`, `Time`, `Timestamp` and `Calendar`
 * Support for `BLOB` and `CLOB` database types using Oracle JDBC
 specific `LOBLocator` for large values
-+
- +
 
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-For non-Oracle thin JDBC drivers or applications environments where the
+NOTE: For non-Oracle thin JDBC drivers or applications environments where the
 thin driver is wrapped, it is possible to turn off `LOBLocator` usage
 using `setShouldUseLocatorForLOBWrite(boolean)` on the platform
 instance.
 
-|===
-
- +
 * Native support for outer join syntax `(+) =`
 * Native Sequencing (`SELECT SEQ_NAME.NEXTVAL FROM DUAL`)
 * Native SQL/ROWNUM support for `MaxRows` and `FirstResult` filtering.
@@ -104,9 +84,9 @@ link:#CHDEFIBH[Using Oracle Virtual Private Database.]
 * Proxy Authentication. See link:#CHDGDDJF[Using Oracle Proxy
 Authentication.]
 
-[#CHDDCIEC]####[#TLADG652]####
+[[CHDDCIEC]]
 
-=== Using Oracle PL/SQL With EclipseLink
+==== Using Oracle PL/SQL With EclipseLink
 
 EclipseLink includes APIs for use with Oracle PL/SQL. The APIs are
 located in the `org.eclipse.persistence.platform.database.oracle.plsql`
@@ -118,9 +98,9 @@ This Section contains the following topics:
 * link:#CHDBBJIG[Executing an Oracle PL/SQL Stored Function]
 * link:#CHDDJJBI[Handling PL/SQL arguments for Oracle Stored Procedures]
 
-[#CHDBBJIG]####[#TLADG653]####
+[[CHDBBJIG]]
 
-==== Executing an Oracle PL/SQL Stored Function
+===== Executing an Oracle PL/SQL Stored Function
 
 Oracle PL/SQL stored functions can be used to return complex PL/SQL
 data-types such as `RECORD` types and `TABLE` types. PL/SQL types are
@@ -145,11 +125,7 @@ procedures. Use the `StoredFunctionCall` class, the
 and the `@NamedStoredProcedureQuery` annotation for stored functions and
 procedure that do not return complex PL/SQL types.
 
-[#TLADG654]##
-
-[#sthref238]##
-
-===== Main Tasks
+====== Main Tasks
 
 To execute an Oracle PL/SQL stored function:
 
@@ -163,9 +139,9 @@ JpaEntityManager]
 @NamedPLSQLStoredFunctionQuery]
 * link:#CHDHEIFJ[Task 6: Use the Stored Function in a Query]
 
-[#CHDJBJEF]####[#TLADG655]####
+[[CHDJBJEF]]
 
-===== Task 1: Create an Oracle Stored Function That Returns a PL/SQL Record Type
+====== Task 1: Create an Oracle Stored Function That Returns a PL/SQL Record Type
 
 [source,oac_no_warn]
 ----
@@ -184,9 +160,9 @@ END;
 END EMP_PKG;
 ----
 
-[#CHDIGHDG]####[#TLADG656]####
+[[CHDIGHDG]]
 
-===== Task 2: Define an Object Type Mirror
+====== Task 2: Define an Object Type Mirror
 
 [source,oac_no_warn]
 ----
@@ -194,9 +170,9 @@ CREATE OR REPLACE TYPE EMP_TYPE AS OBJECT (F_NAME VARCHAR2(30),
    L_NAME VARCHAR2(30), SALARY NUMBER(10,2))
 ----
 
-[#CHDEIABJ]####[#TLADG657]####
+[[CHDEIABJ]]
 
-===== Task 3: Define a Java Class Mapping The OBJECT Type
+====== Task 3: Define a Java Class Mapping The OBJECT Type
 
 [source,oac_no_warn]
 ----
@@ -213,9 +189,9 @@ public class Employee {
 }
 ----
 
-[#CHDFACEG]####[#TLADG658]####
+[[CHDFACEG]]
 
-===== Task 4: Execute a PL/SQL Stored Function Using JpaEntityManager
+====== Task 4: Execute a PL/SQL Stored Function Using JpaEntityManager
 
 [source,oac_no_warn]
 ----
@@ -242,9 +218,9 @@ Query query = ((JpaEntityManager)entityManager.getDelegate()).
 Employee result = (Employee)query.getSingleResult();
 ----
 
-[#CHDHDIAF]####[#TLADG659]####
+[[CHDHDIAF]]
 
-===== Task 5: Define a Stored Function Using @NamedPLSQLStoredFunctionQuery
+====== Task 5: Define a Stored Function Using @NamedPLSQLStoredFunctionQuery
 
 [source,oac_no_warn]
 ----
@@ -262,9 +238,9 @@ public class Employee {
 }
 ----
 
-[#CHDHEIFJ]####[#TLADG660]####
+[[CHDHEIFJ]]
 
-===== Task 6: Use the Stored Function in a Query
+====== Task 6: Use the Stored Function in a Query
 
 [source,oac_no_warn]
 ----
@@ -272,9 +248,9 @@ Query query = entityManager.createNamedQuery("getEmployee");
 Employee result = (Employee)query.getSingleResult();
 ----
 
-[#CHDDJJBI]####[#TLADG661]####
+[[CHDDJJBI]]
 
-==== Handling PL/SQL arguments for Oracle Stored Procedures
+===== Handling PL/SQL arguments for Oracle Stored Procedures
 
 The standard way of handling a stored procedure is to build an instance
 of the `StoredProcedureCall` class. However, the arguments must be
@@ -282,23 +258,8 @@ compatible with the JDBC specification. To handle Oracle PL/SQL
 arguments (for example, `BOOLEAN`, `PLS_INTEGER`, PL/SQL record, and so
 on), use the `PLSQLStoredProcedureCall` class.
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-the `PLSQLStoredProcedureCall` class is only supported on Oracle8 or
+NOTE: the `PLSQLStoredProcedureCall` class is only supported on Oracle8 or
 higher.
-
-|===
-
- +
-
-[#TLADG662]##
-
-[#sthref239]##
 
 ===== Using the PLSQLStoredProcedureCall Class
 
@@ -310,8 +271,6 @@ target procedure:
 ----
 PROCEDURE bool_in_test(x IN BOOLEAN)
 ----
-
-[#TLADG663]##
 
 *Example of Using the PLSQLStoredProcedureCall Class*
 
@@ -380,26 +339,11 @@ END;
    bind => [:1 => 1]
 ----
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-Notice the conversion of the Integer to a PL/SQL `BOOLEAN` type in the
+NOTE: Notice the conversion of the Integer to a PL/SQL `BOOLEAN` type in the
 `DECLARE` stanza (as a similar conversion is used for OUT `BOOLEAN`
 arguments).
 
-|===
-
- +
-
-[#TLADG664]##
-
-[#sthref240]##
-
-===== Mixing JDBC Arguments With Non JDBC Arguments
+====== Mixing JDBC Arguments With Non JDBC Arguments
 
 A Stored Procedure may have a mix of regular and non JDBC arguments. Use
 the `PLSQLStoredProcedureCall` class when at least one argument is a non
@@ -412,8 +356,6 @@ following target procedure:
 ----
 PROCEDURE two_arg_test(x IN BOOLEAN, y IN VARCHAR)
 ----
-
-[#TLADG665]##
 
 *Example of Mixing JDBC Arguments With NonJDBC Arguments*
 
@@ -453,11 +395,7 @@ END;
    bind => [:1 => 0, :2 => test]
 ----
 
-[#TLADG666]##
-
-[#sthref241]##
-
-===== Handling IN and OUT Arguments
+====== Handling IN and OUT Arguments
 
 The following example demonstrates a stored procedure that contain both
 `IN` and `OUT` arguments and is based on the following target procedure:
@@ -469,8 +407,6 @@ BEGIN
    x := 33;
 END;
 ----
-
-[#TLADG667]##
 
 *Example of Handling IN and OUT Arguments*
 
@@ -515,29 +451,14 @@ END;
    bind => [:1 => testsdfsdfasdfsdfsdfsdfsdfsdfdfsdfsdffds, X => :2]
 ----
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-The order in which arguments are bound at runtime must be altered.
+NOTE: The order in which arguments are bound at runtime must be altered.
 Anonymous PL/SQL blocks must process the ordinal markers (`:1`,`:2`) for
 all the IN arguments first, then the OUT arguments. Inside the block,
 the arguments are passed in the correct order for the target procedure,
 but the bind order is managed in the `DECLARE` stanza and after the
 target procedure has been invoked.
 
-|===
-
- +
-
-[#TLADG668]##
-
-[#sthref242]##
-
-===== Handling IN OUT Arguments
+====== Handling IN OUT Arguments
 
 Anonymous PL/SQL blocks cannot natively handle `IN OUT` arguments. The
 arguments must be split into two parts: an IN-half and an OUT-half. The
@@ -551,8 +472,6 @@ BEGIN
    y := FALSE;
 END;
 ----
-
-[#TLADG669]##
 
 *Example of Handling IN OUT Arguments*
 
@@ -595,23 +514,13 @@ END;
    bind => [:1 => test, :2 => 1, Y => :3]
 ----
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-The `Y` argument is split in two using the `:2` and `:3` ordinal
+NOTE: The `Y` argument is split in two using the `:2` and `:3` ordinal
 markers.
 
-|===
 
- +
+[[CHDEFIBH]]
 
-[#CHDEFIBH]####[#TLADG1060]####
-
-=== Using Oracle Virtual Private Database
+==== Using Oracle Virtual Private Database
 
 EclipseLink supports Oracle Virtual Private Database (VPD). Oracle VPD
 is a server-enforced, fine-grained access control mechanism. Oracle VPD
@@ -624,7 +533,7 @@ Oracle Label Security, see _Oracle Label Security Administrator's
 Guide_.
 
 For details about using Oracle VPD with Multitenancy, see
-link:multitenancy004.htm#CHDJEBAC[Using VPD Multi-Tenancy.]
+xref:{relativedir}/multitenancy004.adoc#MULTITENANCY004[Using VPD Multi-Tenancy.]
 
 To use the Oracle Database VPD feature in an EclipseLink application, an
 isolated cache should be used. Any entity that maps to a table that uses
@@ -636,8 +545,6 @@ the are invoked during the persistence context's life cycle. The session
 event handler you must implement depends on whether or not you are using
 Oracle Database proxy authentication.
 
-[#TLADG1061]##
-
 *Oracle VPD with Oracle Database Proxy Authentication*
 
 By using Oracle Database proxy authentication, you can set up Oracle VPD
@@ -647,8 +554,6 @@ after login trigger using the proxy session_user.
 
 For details on using Oracle proxy authentication, see
 link:#CHDGDDJF[Using Oracle Proxy Authentication.]
-
-[#TLADG1062]##
 
 *Oracle VPD Without Oracle Database Proxy Authentication*
 
@@ -666,9 +571,9 @@ interacting with the database.
 In the implementation of these handlers, you can obtain the required
 user credentials from the associated session's properties.
 
-[#CHDGDDJF]####[#TLADG1063]####
+[[CHDGDDJF]]
 
-=== Using Oracle Proxy Authentication
+==== Using Oracle Proxy Authentication
 
 JPA and EclipseLink are typically used in a middle tier/server
 environment with a shared connection pool. A connection pool allows
@@ -689,14 +594,7 @@ persistence unit properties on an `EntityManager` object:
 * `oracle.jdbc.OracleConnection.PROXY_CERTIFICATE`
 * `oracle.jdbc.OracleConnection.PROXY_ROLES`
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-This connection is only used for writing by default; reads still use the
+NOTE: This connection is only used for writing by default; reads still use the
 shared connection pool. To force reads to also use the connection, the
 `eclipselink.jdbc.exclusive-connection.mode` property should be set to
 `Always`, but this depends on if the application wishes to audit writes
@@ -706,20 +604,10 @@ or only when first required. If only writes are audited, then lazy
 connections allow for the cost of creating a new database connection to
 be avoided unless a write occurs.
 
-|===
-
- +
-
-[#TLADG1064]##
-
-[#sthref243]##
-
-==== Main Tasks:
+===== Main Tasks:
 
 To setup proxy authentication, create an `EntityManager` object and set
 the persistence unit properties. Three examples are provided:
-
-[#TLADG1065]##
 
 *Task: Audit Only Writes*
 
@@ -737,8 +625,6 @@ properties.put("eclipselink.jdbc.exclusive-connection.is-lazy", "true");
 EntityManager em = factory.createEntityManager(properties);
 ----
 
-[#TLADG1066]##
-
 *Task: Audit Reads and Writes*
 
 To configure proxy authentication when auditing reads and writes:
@@ -754,8 +640,6 @@ properties.put("eclipselink.jdbc.exclusive-connection.mode", "Always");
 properties.put("eclipselink.jdbc.exclusive-connection.is-lazy", "false");
 EntityManager em = factory.createEntityManager(properties);
 ----
-
-[#TLADG1067]##
 
 *Task: Configure Proxy Authentication in Jakarta EE Applications*
 
@@ -792,28 +676,20 @@ properties.put("eclipselink.jdbc.exclusive-connection.is-lazy", "false");
    setProperties(properties);
 ----
 
-[#TLADG1068]##
-
-[#sthref244]##
-
-==== Caching and security
+===== Caching and security
 
 By default, EclipseLink maintains a shared (L2) object cache. This is
 fine for auditing, but if Oracle VPD or user based security is used to
 prevent the reading of certain tables/classes, then the cache may need
 to be disabled for these secure classes. To disable the shared cache,
-see link:scaling002.htm#CEGEDHAB["Disabling Entity Caching"].
+see xref:{relativedir}/scaling002.adoc#CEGEDHAB["Disabling Entity Caching"].
 
 If the database user is used to check security for reads, then set the
 `eclipselink.jdbc.exclusive-connection.mode` property to `Isolated` to
 only use the user connection for reads for the classes whose shared
 cache has been disabled (isolated).
 
-[#TLADG1069]##
-
-[#sthref245]##
-
-==== Using Oracle Virtual Private Database for Row-Level Security
+===== Using Oracle Virtual Private Database for Row-Level Security
 
 The Oracle Virtual Private Database (VPD) feature allows for row level
 security within the Oracle database. Typically, database security only
@@ -826,11 +702,11 @@ support Oracle VPD. The proxy user allows for the row level security to
 be checked. When using Oracle VPD, it is also important to disable
 shared caching for the secured objects as these objects should not be
 shared. To disable the shared cache, see
-link:scaling002.htm#CEGEDHAB["Disabling Entity Caching"].
+xref:{relativedir}/scaling002.adoc#CEGEDHAB["Disabling Entity Caching"].
 
-[#CHDIEBBB]####[#TLADG1070]####
+[[CHDIEBBB]]
 
-=== Using EclipseLink with Oracle RAC
+==== Using EclipseLink with Oracle RAC
 
 Oracle Real Application Clusters (RAC) extends the Oracle Database so
 that you can store, update, and efficiently retrieve data using multiple
@@ -865,31 +741,19 @@ operational and that you know the connection URL. In addition, download
 the database Oracle Client software that contains the `ons.jar` file.
 The `ucp.jar` file is included with the Oracle Database.
 
-[#TLADG1071]##
-
-[#sthref246]##
-
-==== Accessing a RAC-Enabled database from Jakarta EE Applications
+===== Accessing a RAC-Enabled database from Jakarta EE Applications
 
 The tasks in this section are used to connect to a RAC-enabled database
 from a persistence application implemented in Oracle WebLogic Server.
 
-[#TLADG1072]##
+====== Task 1: Configure a Multi Data Source or GridLink Data Source
 
-[#sthref247]##
-
-===== Task 1: Configure a Multi Data Source or GridLink Data Source
-
-Refer to link:tlandwls.htm#ELWLS[Chapter 3, "Using EclipseLink with
+Refer to xref:{relativedir}/:tlandwls.htm#ELWLS[Chapter 3, "Using EclipseLink with
 WebLogic Server,"] and _Oracle Fusion Middleware Configuring and
 Managing JDBC Data Sources for Oracle WebLogic Server_ for details about
 configuring a data source in WebLogic Server for Oracle RAC.
 
-[#TLADG1073]##
-
-[#sthref248]##
-
-===== Task 2: Configure the Persistence Unit
+====== Task 2: Configure the Persistence Unit
 
 Edit the `persistence.xml` file and include the name of the data source
 within a persistence unit configuration. For example:
@@ -902,29 +766,17 @@ within a persistence unit configuration. For example:
 </persistence-unit>
 ----
 
-[#TLADG1074]##
-
-[#sthref249]##
-
-===== Task 3: Include the Required JARs
+====== Task 3: Include the Required JARs
 
 Ensure that the `ons.jar` is in the WebLogic Server classpath.
 
-[#TLADG1075]##
-
-[#sthref250]##
-
-==== Accessing a RAC-Enabled Database from Standalone Applications
+===== Accessing a RAC-Enabled Database from Standalone Applications
 
 The tasks in this section are used to connect to a RAC database from a
 standalone persistence application. The tasks demonstrate how to use UCP
 data sources which are required for advanced RAC features.
 
-[#TLADG1076]##
-
-[#sthref251]##
-
-===== Task 1: Create a UCP Data Source
+====== Task 1: Create a UCP Data Source
 
 A UCP data source is used to connect to a RAC database. The data source
 can specify advanced RAC configuration. For details on using advanced
@@ -985,11 +837,7 @@ follows:
 Persistence.createEntityManagerFactory("my-app");
 ----
 
-[#TLADG1077]##
-
-[#sthref252]##
-
-===== Task 2: Use the UCP Data Source
+====== Task 2: Use the UCP Data Source
 
 To use the UCP data source, instantiate an `EntityManagerFactory` an
 pass in the data source as follows:
@@ -1001,18 +849,14 @@ Map properties = new HashMap();
        Persistence.createEntityManagerFactory(properties);
 ----
 
-[#TLADG1078]##
-
-[#sthref253]##
-
-===== Task 3: Include the Required JARs
+====== Task 3: Include the Required JARs
 
 Ensure that both `ucp.jar` and `ons.jar` are in the application
 classpath.
 
-[#CHDJBFIJ]####[#TLADG1079]####
+[[CHDJBFIJ]]
 
-=== Using Oracle Spatial and Graph
+==== Using Oracle Spatial and Graph
 
 EclipseLink provides added support for querying Oracle Spatial and Graph
 data in the Oracle Database. Oracle Spacial and Graph is used to
@@ -1023,7 +867,7 @@ functions that facilitate the storage, retrieval, update, and query of
 collections of spatial features in an Oracle database. For details about
 developing Oracle Spacial and Graph applications, see _Oracle Spatial
 and Graph Developer's Guide_. To use Oracle Spatial and Graph within
-WebLogic Server, see link:tlandwls002.htm#BABHICHE[Chapter 3, "Task 7:
+WebLogic Server, see xref:{relativedir}/tlandwls002.adoc#BABHICHE[Chapter 3, "Task 7:
 Extend the Domain to Use Advanced Oracle Database Features,"]
 
 EclipseLink applications can construct expressions that use Oracle
@@ -1062,35 +906,3 @@ SELECT a FROM Asset a, Geography geo WHERE geo.id = :id AND a.id IN :id_list AND
 SELECT s FROM SimpleSpatial s WHERE FUNCTION('MDSYS.SDO_RELATE', s.jGeometry,
    :otherGeometry, :params) = 'TRUE' ORDER BY s.id ASC
 ----
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:oracledb001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:oracledb003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
-link:../../dcommon/html/cpyr.htm[ +
-] a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

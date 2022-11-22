@@ -1,32 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*EclipseLink Solutions Guide for EclipseLink* +
-Release 4.0 a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:nonrelational_db001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:nonrelational_db003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#A1582967]####[#TLADG1023]####
-
-== Implementing the Solution
+///////////////////////////////////////////////////////////////////////////////
+[[NOSQL002]]
+=== Implementing the Solution
 
 This section contains the following tasks for converting objects to and
 from JSON documents.
@@ -39,13 +29,13 @@ from JSON documents.
 * link:#BABIIDED[Task 6: Defining Queries]
 * link:#BABFJIJE[Task 7: Connecting to the Database]
 
-[#BABEBADB]####[#TLADG1024]####
+[[BABEBADB]]
 
-=== Task 1: Prerequisites
+==== Task 1: Prerequisites
 
-[#BABIGCEC]####[#TLADG1025]####
+[[BABIGCEC]]
 
-=== Task 2: Mapping the Data
+==== Task 2: Mapping the Data
 
 You can configure mappings to NoSQL data with the EclipseLink `@NoSQL`
 annotation and `<no-sql>` XML element. The `@NoSQL` annotation defines
@@ -70,7 +60,7 @@ single XML document).
 link:#BABBBHHD[Example 21-1] illustrates how to use `@NoSQL` with
 `@Entity` and `@Embeddable` classes.
 
-[#BABBBHHD]####[#TLADG1026]####
+[[BABBBHHD]]
 
 *_Example 21-1 Using @NoSql Annotation with JSON_*
 
@@ -109,9 +99,9 @@ public class OrderLine {
 }
 ----
 
-[#BABEIBBG]####[#TLADG1027]####
+[[BABEIBBG]]
 
-=== Task 3: Defining IDs
+==== Task 3: Defining IDs
 
 With EclipseLink, you can use any field (or set of fields) as your ID
 when using a non-relational database, just like any other relational
@@ -142,25 +132,13 @@ The `@GeneratedValue` tells EclipseLink to use the Mongo OID to generate
 this ID value. To use a UUID instead of the Mongo OID, use the
 @UUIDGenerator annotation.
 +
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-MongoDB does not support `@SequenceGenerator` or `@TableGenerator` nor
+NOTE: MongoDB does not support `@SequenceGenerator` or `@TableGenerator` nor
 the `IDENTITY`, `TABLE`, and `SEQUENCE` generation types.
 
 The ID of the Mongo OID or UUID is not a numerical value; you must map
 it as a `String` or `byte[]`.
 
-|===
-
- +
-+
 For example:
-+
 [source,oac_no_warn]
 ----
 @Id
@@ -169,17 +147,15 @@ For example:
 private String id;
 ----
 
-[#BABFIIFG]####[#TLADG1028]####
+[[BABFIIFG]]
 
-=== Task 4: Defining Mappings
+==== Task 4: Defining Mappings
 
 With non-relational databases, EclipseLink maps objects to structured
 data such as XML or JSON. NoSQL supports all existing JPA mapping
 annotations and XML, including embedded data and embedded collections.
 If you do not define a mapping annotation (or XML) for an attribute
 EclipseLink uses the default mapping.
-
-[#TLADG1029]##
 
 *Basic Mappings*
 
@@ -188,22 +164,11 @@ do not require any configuration. Field names used in the Mongo BSON
 document will mirror the object attribute names (in uppercase). To use a
 different BSON field name, use the `@Field` annotation.
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-Do not use `@Column` or `@JoinColumn`. Instead use `@Field` and
+NOTE: Do not use `@Column` or `@JoinColumn`. Instead use `@Field` and
 `@JoinField`. Additionally, the `@JoinTable` and `@CollectionTable`
 annotations are not supported or required.
 
-|===
-
- +
-
-[#BABIFJJG]####[#TLADG1030]####
+[[BABIFJJG]]
 
 *Embedded Values*
 
@@ -214,24 +179,11 @@ data is stored in the XML document, no separate table (that is,
 are nested in the document and do not require unique field names, the
 `@AttributeOverride` attribute is not needed.
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-Normally, you will not need to use the `@Embedded` annotation, since it
+NOTE: Normally, you will not need to use the `@Embedded` annotation, since it
 will default correctly.
 
 However, EclipseLink does not default `@ElementCollection` mappings,
 therefore you must include that annotation.
-
-|===
-
- +
-
-[#TLADG1031]##
 
 *Relationships*
 
@@ -246,25 +198,14 @@ object's document. For a collection, a collection of IDs is stored. Use
 the `@JoinField` annotation to define the name of the foreign key field
 in the BSON document.
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-EclipseLink does not support the `mappedBy` option for relationships
+NOTE: EclipseLink does not support the `mappedBy` option for relationships
 with non-relational databases, as the foreign keys would need to be
 stored on both sides.
-
-|===
-
- +
 
 You can also define a relationship mapping by using a query. However you
 must use a `DescriptorCustomizer` instead of an annotation.
 
-[#TLADG1032]####[#sthref229]####
+[[sthref229]]
 
 *_Example 21-2 Sample Mappings_*
 
@@ -284,36 +225,25 @@ private List<OrderLine> orderLines = new ArrayList<OrderLine>();
 private Customer customer;
 ----
 
-[#BABFIJAA]####[#TLADG1033]####
+[[BABFIJAA]]
 
-=== Task 5: Using Locking
+==== Task 5: Using Locking
 
 Locking support is dependent on the NoSQL platform. Some NoSQL platforms
 may offer support for optimistic version locking.
 
 * Oracle NoSQL – Locking is not supported.
 * MongoDB – Version locking is supported.
-+
- +
 
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-MongoDB does not support transactions. If a lock error occurs during a
+NOTE: MongoDB does not support transactions. If a lock error occurs during a
 transaction, any objects that have been previously written will not be
 rolled back.
-
-|===
-
- +
 
 If the NoSQL platform does not support locking, you can use the
 `@Version` annotation (as shown in link:#BABFACAI[Example 21-3]) to
 validate objects on `merge()` operations.
 
-[#BABFACAI]####[#TLADG1034]####
+[[BABFACAI]]
 
 *_Example 21-3 Using @Version_*
 
@@ -324,19 +254,15 @@ private long version;
 ...
 ----
 
-[#BABIIDED]####[#TLADG1035]####
+[[BABIIDED]]
 
-=== Task 6: Defining Queries
+==== Task 6: Defining Queries
 
 Querying in NoSQL is dependent on the NoSQL platform. Some NoSQL
 data-sources may support dynamic querying through their own query
 language, others may not support querying at all.
 
-[#TLADG1036]##
-
-[#sthref230]##
-
-==== JPQL Queries
+===== JPQL Queries
 
 The Java Persistence Query Language (JPQL) is the query language defined
 by JPA. JPQL can be used for reading (`SELECT`), as well as bulk updates
@@ -350,7 +276,7 @@ no WHERE clause.
 joins, sub-selects, group by and certain database functions are not
 supported.
 
-[#TLADG1037]####[#sthref231]####
+[[sthref231]]
 
 *_Example 21-4 Oracle NoSQL JPQL Examples_*
 
@@ -358,7 +284,7 @@ supported.
 ----
 ----
 
-[#TLADG1038]####[#sthref232]####
+[[sthref232]]
 
 *_Example 21-5 MongoDB JPQL Examples_*
 
@@ -390,11 +316,7 @@ Query query = em.createQuery("Select o.totalCost from Order o");
 List<BigDecimal> orders = query.getResultList();
 ----
 
-[#TLADG1039]##
-
-[#sthref233]##
-
-==== Native Queries
+===== Native Queries
 
 Native SQL queries are not translated, and passed directly to the
 database. SQL queries can be used for advanced queries that require
@@ -407,7 +329,7 @@ JPA native queries using that language.
 * MongoDB – Supports JPA native queries by using the MongoDB native
 command language.
 
-[#TLADG1040]####[#sthref234]####
+[[sthref234]]
 
 *_Example 21-6 Oracle NoSQL Native Query_*
 
@@ -415,7 +337,7 @@ command language.
 ----
 ----
 
-[#TLADG1041]####[#sthref235]####
+[[sthref235]]
 
 *_Example 21-7 MongoDB Native Query_*
 
@@ -425,9 +347,9 @@ Query query = em.createNativeQuery("db.ORDER.findOne({\"_id\":\"" + oid + "\"})"
 Order order = (Order)query.getSingleResult();
 ----
 
-[#BABFJIJE]####[#TLADG1042]####
+[[BABFJIJE]]
 
-=== Task 7: Connecting to the Database
+==== Task 7: Connecting to the Database
 
 EclipseLink connects to NoSQL databases through the persistence.xml
 file. Use the `<eclipselink.target-database>` property to define the
@@ -435,21 +357,10 @@ specific NoSQL platform. You must also define a connection with the
 `<eclipselink.nosql.connection-spec>` property. Additional connection
 values (such as the `db`, `port`, and `host` can also be defined.
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-To connect to a cluster of Mongo databases, enter a comma, separated
+NOTE: To connect to a cluster of Mongo databases, enter a comma, separated
 list of values for the `host` and `port`.
 
-|===
-
- +
-
-[#TLADG1043]####[#sthref236]####
+[[sthref236]]
 
 *_Example 21-8 Oracle NoSQL persistence.xml Example_*
 
@@ -457,7 +368,7 @@ list of values for the `host` and `port`.
 ----
 ----
 
-[#TLADG1044]####[#sthref237]####
+[[sthref237]]
 
 *_Example 21-9 MongoDB persistence.xml Example_*
 
@@ -477,35 +388,3 @@ list of values for the `host` and `port`.
     </persistence-unit>
 </persistence>
 ----
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:nonrelational_db001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:nonrelational_db003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
-link:../../dcommon/html/cpyr.htm[ +
-] a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

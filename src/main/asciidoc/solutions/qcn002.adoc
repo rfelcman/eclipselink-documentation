@@ -1,32 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*EclipseLink Solutions Guide for EclipseLink* +
-Release 4.0 a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:qcn001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:qcn003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#A1099145]####[#TLADG1005]####
-
-== Implementing the Solution
+///////////////////////////////////////////////////////////////////////////////
+[[QCN002]]
+=== Implementing the Solution
 
 This section contains the following tasks to enable shared caching in a
 JPA environment:
@@ -34,21 +24,20 @@ JPA environment:
 * link:#CHDBAJED[Task 1: Set up the Database and Tables]
 * link:#CHDDJAIE[Task 2: Grant User Permissions]
 * link:#CHDFIGGJ[Task 3: Set the Classpath]
-* link:#CHDJCFDD[Task 4: Identify Classes that will Participate in
-Change Notification]
+* link:#CHDJCFDD[Task 4: Identify Classes that will Participate in Change Notification]
 * link:#CHDBCIIE[Task 5: Add the Database Event Listener]
 * link:#CHDIIICG[Task 6: Edit the Java Files]
 
-[#CHDBAJED]####[#TLADG1006]####
+[[CHDBAJED]]
 
-=== Task 1: Set up the Database and Tables
+==== Task 1: Set up the Database and Tables
 
 The solution presumes that you are working with an Oracle 11gR2 (11.2)
 or higher database that contains the tables that you are interested in.
 
-[#CHDDJAIE]####[#TLADG1007]####
+[[CHDDJAIE]]
 
-=== Task 2: Grant User Permissions
+==== Task 2: Grant User Permissions
 
 Among other permissions, the database user must be granted the `CHANGE`
 `NOTIFICATION` privilege. To do this, you must have a DBA privilege,
@@ -77,17 +66,17 @@ grant change notification to &&user
 ...
 ----
 
-[#CHDFIGGJ]####[#TLADG1008]####
+[[CHDFIGGJ]]
 
-=== Task 3: Set the Classpath
+==== Task 3: Set the Classpath
 
 Ensure that the `eclipselink.jar` EclipseLink library, the `ojdbc6.jar`
 JDBC library, the `persistence.jar` JPA library, and the domain classes
 are present on the classpath.
 
-[#CHDJCFDD]####[#TLADG1009]####
+[[CHDJCFDD]]
 
-=== Task 4: Identify Classes that will Participate in Change Notification
+==== Task 4: Identify Classes that will Participate in Change Notification
 
 By default, all entities in the domain will participate in change
 notification. There are several different ways to limit the entities
@@ -96,19 +85,8 @@ by the `<entity class ...>` element in the `orm.xml` file, indicated
 with the `<exclude-unlisted-classes>` element in the `persistence.xml`
 file, or contained in a JAR file.
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-The `<exclude-unlisted-classes>` element is not intended for use in the
+NOTE: The `<exclude-unlisted-classes>` element is not intended for use in the
 Java SE environment.
-
-|===
-
- +
 
 Entity classes can also be excluded by using a `Cache` annotation
 attribute in the Java files. For more information, see
@@ -129,9 +107,9 @@ complete `persistence.xml` file, see link:#CHDECAAF[Example 20-1].
 ...
 ----
 
-[#CHDBCIIE]####[#TLADG1010]####
+[[CHDBCIIE]]
 
-=== Task 5: Add the Database Event Listener
+==== Task 5: Add the Database Event Listener
 
 Use the `eclipselink.cache.database-event-listener` property to identify
 the database event listener. The
@@ -167,21 +145,11 @@ the `model` package. The `eclipselink.cache.database-event-listener`
 property is set to the full path of the
 `OracleChangeNotificationListener` class.
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-A `<provider>` tag is optional if running in a container where
+NOTE: A `<provider>` tag is optional if running in a container where
 EclipseLink is the default provider.
 
-|===
 
- +
-
-[#CHDECAAF]####[#TLADG1011]####
+[[CHDECAAF]]
 
 *_Example 20-1 Sample persistence.xml File_*
 
@@ -205,9 +173,9 @@ EclipseLink is the default provider.
 </persistence>
 ----
 
-[#CHDIIICG]####[#TLADG1012]####
+[[CHDIIICG]]
 
-=== Task 6: Edit the Java Files
+==== Task 6: Edit the Java Files
 
 Typically, to participate in change notification, no changes are needed
 to the Java classes which correspond to database tables. However,
@@ -219,11 +187,7 @@ you can tag them in the Java files. EclipseLink tracks changes only to
 the primary table. If you want changes to secondary tables to also be
 tracked, you can indicate this in the Java files.
 
-[#TLADG1013]##
-
-[#sthref227]##
-
-==== Set Optimistic Locking
+===== Set Optimistic Locking
 
 Oracle strongly suggests that you use optimistic locking: writes on
 stale data will fail and automatically invalidate the cache. Include an
@@ -235,7 +199,7 @@ In link:#CHDJGCBF[Example 20-2] the `@Version` annotation is defined for
 the entity `Customer`. Note that getters and setters are defined for the
 `version` variable.
 
-[#CHDJGCBF]####[#TLADG1014]####
+[[CHDJGCBF]]
 
 *_Example 20-2 Defining the @Version Annotation_*
 
@@ -265,9 +229,9 @@ public class Customer implements Serializable {
 ...
 ----
 
-[#CHDGBGAG]####[#TLADG1015]####
+[[CHDGBGAG]]
 
-==== Exclude Classes from Change Notification (Optional)
+===== Exclude Classes from Change Notification (Optional)
 
 Use the `databaseChangeNotificationType` attribute of the `Cache`
 annotation to identify the classes for which you do not want change
@@ -284,11 +248,7 @@ public class Order {
 ...
 ----
 
-[#TLADG1016]##
-
-[#sthref228]##
-
-==== Track Changes in Secondary Tables (Optional)
+===== Track Changes in Secondary Tables (Optional)
 
 EclipseLink tracks changes only to the primary table. If any updates
 occur in a secondary table, EclipseLink will not invalidate the object.
@@ -302,35 +262,3 @@ correlation from the `ROWID` of the primary, secondary and relationship
 tables. Thus, to receive events when a secondary or relationship table
 changes, the version in the primary table must change so that the event
 is returned.
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:qcn001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:qcn003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
-link:../../dcommon/html/cpyr.htm[ +
-] a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +
