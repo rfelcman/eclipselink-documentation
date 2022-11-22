@@ -1,32 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*EclipseLink Solutions Guide for EclipseLink* +
-Release 4.0 a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:restful_jpa003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:qcn.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#CHDEGJIG]####[#TLADG1172]####
-
-== RESTful Data Services API Reference
+///////////////////////////////////////////////////////////////////////////////
+[[RESTJPA004]]
+=== RESTful Data Services API Reference
 
 The following types of RESTful operations can be used with JPA via HTTP
 when using RESTful Data Services:
@@ -37,11 +27,11 @@ when using RESTful Data Services:
 * link:#CHDEHGDH[Base Operations]
 * link:#CHDFCFFA[Metadata Operations]
 
-[#CHDEIFFJ]####[#TLADG1173]####
+[[CHDEIFFJ]]
 
 '''''
 
-== Entity Operations
+=== Entity Operations
 
 Entity operations are those performed against a specific entity type
 within the persistence unit.
@@ -59,13 +49,11 @@ Supported entity operations are:
 * link:#CHDGJGDD[MERGE]
 * link:#CHDDDDAB[DELETE]
 
-[#CHDEBJID]####[#TLADG1174]####
+[[CHDEBJID]]
 
 '''''
 
-=== FIND
-
-[#sthref160]##
+==== FIND
 
 *HTTP Request Syntax*
 
@@ -77,31 +65,20 @@ where:
 * _`hints`_ are specified using HTTP query parameters, with the key
 being the name of the EclipseLink query hint
 
-[#sthref161]##
-
 *Example*
 
 `GET http://localhost:8080/exampleApp/persistence/v1.0/ExamplePU/entity/Foo/1`
 
-[#sthref162]##
-
 *Produces*
 
 JSON or XML
-
-[#sthref163]##
 
 *Response*
 
 * `OK`, with a payload containing the entity
 * `NOT_FOUND` if the entity does not exist
 
-[#sthref164]##
-
-* +
-[.refsubsect]#Usage#*
-
-[#sthref165]##
+*Usage*
 
 *Composite Keys*
 
@@ -118,21 +95,15 @@ and `extA`=`321`. The URL to find the entity is:
 The `321` comes before the `123` because `extA` comes before `extB` when
 sorted in Java.
 
-[#sthref166]##
-
 *Result Caching*
 
 Default EclipseLink and HTTP caching is enabled and configured through
 standard means.
 
-[#CHDJGEFH]##
-
 *Refresh*
 
 The `EntityManager.refresh` operation can be invoked using the `find`
 with the query hint for `Refresh`.
-
-[#sthref167]##
 
 *Attributes*
 
@@ -148,95 +119,68 @@ while
 `/persistence/v1.0/{unit-name}/entity/{type}/{id}/{relationship}/{index}/{relationship2`}
 will not
 
-[#CHDCIIIG]####[#TLADG1175]####
+[[CHDCIIIG]]
 
 '''''
 
-=== PERSIST
-
-[#sthref168]##
+==== PERSIST
 
 *HTTP Request Syntax*
 
 `PUT /persistence/{version}/{unit-name}/entity/{type}`
 
-[#sthref169]##
-
 *Example*
 
 `PUT http://localhost:8080/exampleApp/persistence/v1.0/ExamplePU/entity/Foo`
-
-[#sthref170]##
 
 *Consumes*
 
 JSON or XML
 
-[#sthref171]##
-
 *Payload*
 
 Entity
-
-[#sthref172]##
 
 *Produces*
 
 JSON or XML
 
-[#sthref173]##
-
 *Response*
 
 Payload containing the entity returned by the persist operation
 
-[#sthref174]##
-
-* +
-[.refsubsect]#Usage#*
+*Usage*
 
 `PUT` is required to be idempotent. As a result, it will fail if called
 with an object that expects the server to provide an ID field. Typically
 this will occur if the metadata specifies a generated key and the field
 that contains that key is unpopulated.
 
-[#CHDGJGDD]####[#TLADG1176]####
+[[CHDGJGDD]]
 
 '''''
 
-=== MERGE
-
-[#sthref175]##
+==== MERGE
 
 *HTTP Request Syntax*
 
 `POST /persistence/{version}/{unit-name}/entity/{type}`
 
-[#sthref176]##
-
 *Example*
 
 `POST http://localhost:8080/exampleApp/persistence/v1.0/ExamplePU/entity/Foo`
-
-[#sthref177]##
 
 *Consumes*
 
 JSON or XML
 
-[#sthref178]##
-
 *Payload*
 
 Entity
 
-[#sthref179]##
-
 *Produces*
 
 JSON or XML
-
-[#sthref180]##
 
 *Response*
 
@@ -247,13 +191,11 @@ through comparison. It compares the object and all related objects to
 the ones that already exist and issues `INSERT`s, `UPDATE`s, and
 `DELETE`s to put the object in the persistence context.
 
-[#CHDDDDAB]####[#TLADG1177]####
+[[CHDDDDAB]]
 
 '''''
 
-=== DELETE
-
-[#sthref181]##
+==== DELETE
 
 *HTTP Request Syntax*
 
@@ -261,23 +203,19 @@ the ones that already exist and issues `INSERT`s, `UPDATE`s, and
 
 where `{id}` is defined using a string
 
-[#sthref182]##
-
 *Example*
 
 `DELETE http://localhost:8080/exampleApp/persistence/v1.0/ExamplePU/entity/Foo/1`
-
-[#sthref183]##
 
 *Response*
 
 `OK`
 
-[#CHDDAJBI]####[#TLADG1178]####
+[[CHDDAJBI]]
 
 '''''
 
-== Entity Operations on Relationships
+=== Entity Operations on Relationships
 
 The base URI for relationship operations is as follows:
 
@@ -289,15 +227,13 @@ Supported relationship operations are:
 * link:#CHDBEDDA[ADD]
 * link:#CHDDGAII[REMOVE]
 
-[#CHDCEJCC]####[#TLADG1179]####
+[[CHDCEJCC]]
 
 '''''
 
-=== READ
+==== READ
 
 Use this operation to get the values of a relationship.
-
-[#sthref184]##
 
 *HTTP Request Syntax*
 
@@ -308,58 +244,36 @@ where:
 * `{id}` is a string.
 * `{relationship}` is the JPA name of the relationship.
 
-[#sthref185]##
-
 *Example*
 
 `GET http://localhost:8080/exampleApp/persistence/v1.0/ExamplePU/entity/Foo/1/myRelationship`
 
-[#sthref186]##
-
 *Produces*
 
 JSON or XML
-
-[#sthref187]##
 
 *Response*
 
 * `OK`, Payload containing an entity or a list of entities.
 * `NOT_FOUND` if the entity does not exist
 
-[#CHDBEDDA]####[#TLADG1180]####
+[[CHDBEDDA]]
 
 '''''
 
-=== ADD
+==== ADD
 
 Use this operation to add to a list or replace the value of a
 many-to-one relationship.
-
-[#sthref188]##
 
 *HTTP Request Syntax*
 
 `POST /persistence/{version}/{unit-name}/entity/{type}/{id}/{relationship}?{partner}`
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-As of EclipseLink 2.4.2, `partner` should be specified as a query
+NOTE: As of EclipseLink 2.4.2, `partner` should be specified as a query
 parameter. Specifying `partner` as a matrix parameter is deprecated.
 
-|===
-
- +
-
-[#sthref189]##
-
-* +
-[.refsubsect]#Examples#*
+*Examples*
 
 For unidirectional relationships, `{partner}` is not required, for
 example:
@@ -373,55 +287,34 @@ relationship is `Bid.auction`, use the following:
 
 `POST http://localhost:8080/exampleApp/persistence/v1.0/ExamplePU/entity/Foo/1/myRelationship?partner=bid`
 
-[#sthref190]##
-
 *Consumes*
 
 JSON or XML
-
-[#sthref191]##
 
 *Payload*
 
 Entity with the new value.
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-Relationship objects can be passed by value or by reference. See
-link:restful_jpa002.htm#CHDBDBHJ["Passing By Value vs. Passing By
+NOTE: Relationship objects can be passed by value or by reference. See
+xref:{relativedir}/restful_jpa002.adoc#CHDBDBHJ["Passing By Value vs. Passing By
 Reference"].
-
-|===
-
- +
-
-[#sthref192]##
 
 *Produces*
 
 JSON or XML
 
-[#sthref193]##
-
 *Response*
 
 Payload containing the entity with the added element
 
-[#CHDDGAII]####[#TLADG1181]####
+[[CHDDGAII]]
 
 '''''
 
-=== REMOVE
+==== REMOVE
 
 Use this operation to remove a specific entity from the list or a null
 on a many-to-one relationship.
-
-[#sthref194]##
 
 *HTTP Request Syntax*
 
@@ -435,51 +328,32 @@ relationship list needs to be removed. The entire list specified by the
 `{relationship}` will be removed when `relationshipListItemId` is not
 specified.
 
-[#sthref195]##
-
 *Example*
 
 `DELETE http://localhost:8080/exampleApp/persistence/v1.0/ExamplePU/entity/Foo/1/myRelationship`
-
-[#sthref196]##
 
 *Consumes*
 
 JSON or XML
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-Relationship objects can be passed by value or by reference. See
-link:restful_jpa002.htm#CHDBDBHJ["Passing By Value vs. Passing By
+NOTE: Relationship objects can be passed by value or by reference. See
+xref:{relativedir}/restful_jpa002.adoc#CHDBDBHJ["Passing By Value vs. Passing By
 Reference"].
-
-|===
-
- +
-
-[#sthref197]##
 
 *Produces*
 
 JSON or XML
-
-[#sthref198]##
 
 *Response*
 
 * OK
 * Payload containing the entity with the removed element
 
-[#CHDJFCIF]####[#TLADG1182]####
+[[CHDJFCIF]]
 
 '''''
 
-== Query Operations
+=== Query Operations
 
 The base URI for query operations is as follows:
 
@@ -497,9 +371,7 @@ in the REST API. They are:
 
 '''''
 
-=== Query Returning List of Results
-
-[#sthref199]##
+==== Query Returning List of Results
 
 *HTTP Request Syntax*
 
@@ -511,22 +383,15 @@ where:
 * _`hints`_ are specified using HTTP query parameters and with the key
 being the name of the EclipseLink query hint
 
-[#sthref200]##
-
-* +
-[.refsubsect]#Examples#*
+*Examples*
 
 `GET http://localhost:8080/exampleApp/persistence/v1.0/ExamplePU/query/Foo.findByName;name=myname`
 
 `GET http://localhost:8080/exampleApp/persistence/v1.0/ExamplePU/query/Foo.findByName;name=myname?eclipselink.jdbc.max-results=500`
 
-[#sthref201]##
-
 *Produces*
 
 JSON or XML
-
-[#sthref202]##
 
 *Response*
 
@@ -593,13 +458,11 @@ use square brackets `[]` to encapsulate a collection and curly braces
 ]
 ----
 
-[#CHDIHEJJ]####[#TLADG1184]####
+[[CHDIHEJJ]]
 
 '''''
 
-=== Update/Delete Query
-
-[#sthref203]##
+==== Update/Delete Query
 
 *HTTP Request Syntax*
 
@@ -611,34 +474,25 @@ where:
 * _`hints`_ are specified using HTTP query parameters and with the key
 being the name of the EclipseLink query hint
 
-[#sthref204]##
-
-* +
-[.refsubsect]#Examples#*
+*Examples*
 
 `POST http://localhost:8080/exampleApp/persistence/v1.0/ExamplePU/query/Foo.deleteAllByName;name=myname`
 
 `POST http://localhost:8080/exampleApp/persistence/v1.0/ExamplePU/query/Foo.updateName;name=myname?eclipselink.jdbc.max-results=500`
 
-[#sthref205]##
-
 *Produces*
 
 JSON or XML
-
-[#sthref206]##
 
 *Response*
 
 A payload containing the number of entities updated or deleted
 
-[#CHDHEJAJ]####[#TLADG1185]####
+[[CHDHEJAJ]]
 
 '''''
 
-== Single Result Queries
-
-[#sthref207]##
+=== Single Result Queries
 
 *HTTP Request Syntax*
 
@@ -650,59 +504,45 @@ where:
 * _`hints`_ are specified using HTTP query parameters and with the key
 being the name of the EclipseLink query hint
 
-[#sthref208]##
-
 *Example*
 
 `GET http://localhost:8080/exampleApp/persistence/v1.0/ExamplePU/singleResultQuery/Foo.findByName;name=myname`
-
-[#sthref209]##
 
 *Produces*
 
 JSON, XML, or application/octet-stream
 
-[#sthref210]##
-
 *Response*
 
 A payload containing an entity
 
-[#CHDEHGDH]####[#TLADG1186]####
+[[CHDEHGDH]]
 
 '''''
 
-== Base Operations
+=== Base Operations
 
 Base operations are:
 
 * link:#CHDCCFCI[List Existing Persistence Units]
 
-[#CHDCCFCI]####[#TLADG1187]####
+[[CHDCCFCI]]
 
 '''''
 
-=== List Existing Persistence Units
-
-[#sthref211]##
+==== List Existing Persistence Units
 
 *HTTP Request Syntax*
 
 `GET /persistence/{version}`
 
-[#sthref212]##
-
 *Example*
 
 `GET http://localhost:8080/exampleApp/persistence/v1.0`
 
-[#sthref213]##
-
 *Produces*
 
 JSON or XML
-
-[#sthref214]##
 
 *Response*
 
@@ -730,11 +570,11 @@ metadata about them. For example:
 ]
 ----
 
-[#CHDFCFFA]####[#TLADG1189]####
+[[CHDFCFFA]]
 
 '''''
 
-== Metadata Operations
+=== Metadata Operations
 
 The following metadata operations are supported:
 
@@ -742,40 +582,28 @@ The following metadata operations are supported:
 * link:#CHDGEFIJ[List Queries in a Persistence Unit]
 * link:#CHDJBAFI[Describe a Specific Entity]
 
-[#CHDGHGHB]####[#TLADG1190]####
+[[CHDGHGHB]]
 
 '''''
 
-=== List Types in a Persistence Unit
-
-[#sthref215]##
+==== List Types in a Persistence Unit
 
 *HTTP Request Syntax*
 
 `GET /persistence/{version}/{unit-name}/metadata`
 
-[#sthref216]##
-
 *Example*
 
 `GET http://localhost:8080/exampleApp/persistence/v1.0/ExamplePU/metadata`
-
-[#sthref217]##
 
 *Produces*
 
 JSON
 
-[#sthref218]##
-
 *Response*
 
 * `OK`, with a payload containing a list of types, with links to more
 detailed metadata, for example:
-+
-[source,oac_no_warn]
-----
-----
 +
 [source,oac_no_warn]
 ----
@@ -801,31 +629,23 @@ detailed metadata, for example:
 ----
 * `NOT_FOUND` if the persistence unit is not found
 
-[#CHDGEFIJ]####[#TLADG1191]####
+[[CHDGEFIJ]]
 
 '''''
 
-=== List Queries in a Persistence Unit
-
-[#sthref219]##
+==== List Queries in a Persistence Unit
 
 *HTTP Request Syntax*
 
 `GET /persistence/{version}/{unit-name}/metadata/query`
 
-[#sthref220]##
-
 *Example*
 
 `GET http://localhost:8080/exampleApp/persistence/v1.0/ExamplePU/metadata/query`
 
-[#sthref221]##
-
 *Produces*
 
 JSON
-
-[#sthref222]##
 
 *Response*
 
@@ -980,31 +800,23 @@ example:
 ----
 * `NOT_FOUND` if persistence unit is not found
 
-[#CHDJBAFI]####[#TLADG1192]####
+[[CHDJBAFI]]
 
 '''''
 
-=== Describe a Specific Entity
-
-[#sthref223]##
+==== Describe a Specific Entity
 
 *HTTP Request Syntax*
 
 `GET /persistence/{version}/{unit-name}/metadata/entity/` _`type`_
 
-[#sthref224]##
-
 *Example*
 
 `GET http://localhost:8080/CustomerApp/persistence/v1.0/Inventory/metadata/entity/Customer`
 
-[#sthref225]##
-
 *Produces*
 
 JSON
-
-[#sthref226]##
 
 *Response*
 
@@ -1189,33 +1001,3 @@ operations on it, for example,
 * `NOT_FOUND` if the persistence unit is not found
 
 '''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:restful_jpa003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:qcn.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
-link:../../dcommon/html/cpyr.htm[ +
-] a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

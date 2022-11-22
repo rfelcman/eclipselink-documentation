@@ -1,34 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*EclipseLink Solutions Guide for EclipseLink* +
-Release 4.0 a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:multitenancy005.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:jpatoxml001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#CIHGJCIH]####[#TLADG286]####
-
-== [.secnum]#15# Mapping JPA to XML
-
-[#TLADG503]##
+///////////////////////////////////////////////////////////////////////////////
+[[JPA2XML]]
+== Mapping JPA to XML
 
 This chapter describes how to use JPA with the Java Architecture for XML
 Binding (JAXB)—the Jakarta EE standard for mapping POJOs (Plain Old Java
@@ -39,36 +27,26 @@ to create a data access service with Java API for Restful Web Services
 
 This chapter includes the following topics:
 
-* link:jpatoxml001.htm#BEICFGAJ[Introduction to the Solution]
-* link:jpatoxml002.htm#BEIGDBHI[Binding JPA Entities to XML]
-* link:jpatoxml003.htm#BEIEJGCE[Mapping Simple Java Values to XML Text
-Nodes]
-* link:jpatoxml004.htm#BEIJGBGA[Using XML Metadata Representation to
-Override JAXB Annotations]
-* link:jpatoxml005.htm#BEIBFCFC[Using XPath Predicates for Mapping]
-* link:jpatoxml006.htm#BEIHCDIB[Using Dynamic JAXB/MOXy]
-
-[#TLADG805]##
+* xref:{relativedir}/jpatoxml001.adoc#JPA2XML001[Introduction to the Solution]
+* xref:{relativedir}/jpatoxml002.adoc#JPA2XML002[Binding JPA Entities to XML]
+* xref:{relativedir}/jpatoxml003.adoc#JPA2XML003[Mapping Simple Java Values to XML Text Nodes]
+* xref:{relativedir}/jpatoxml004.adoc#JPA2XML004[Using XML Metadata Representation to Override JAXB Annotations]
+* xref:{relativedir}/jpatoxml005.adoc#JPA2XML005[Using XPath Predicates for Mapping]
+* xref:{relativedir}/jpatoxml006.adoc#JPA2XML006[Using Dynamic JAXB/MOXy]
 
 *Use Case*
 
 Users need to map JPA entities to XML.
-
-[#TLADG806]##
 
 *Solution*
 
 EclipseLink provides support for the JAXB standard through EclipseLink
 MOXy extensions.
 
-[#TLADG807]##
-
 *Components*
 
 * EclipseLink 2.4 or later.
 * XML document
-
-[#TLADG808]##
 
 *Sample*
 
@@ -77,34 +55,23 @@ See the following EclipseLink and JAXB examples for related information:
 * `http://wiki.eclipse.org/EclipseLink/Examples/MOXy`
 * `http://java.sun.com/developer/technicalArticles/WebServices/jaxb/index.html`
 
-'''''
+//Introduction to the Solution
+include::{rootdir}/jpatoxml001.adoc[]
 
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:multitenancy005.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:jpatoxml001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
+//Binding JPA Entities to XML
+include::{rootdir}/jpatoxml002.adoc[]
 
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
-link:../../dcommon/html/cpyr.htm[ +
-] a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+//Mapping Simple Java Values to XML Text Nodes
+include::{rootdir}/jpatoxml003.adoc[]
 
-|===
+//Using XML Metadata Representation to Override JAXB Annotations
+include::{rootdir}/jpatoxml004.adoc[]
 
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +
+//Using XPath Predicates for Mapping
+include::{rootdir}/jpatoxml005.adoc[]
+
+//Using Dynamic JAXB/MOXy
+include::{rootdir}/jpatoxml006.adoc[]
+
+//Additional Resources
+include::{rootdir}/jpatoxml007.adoc[]

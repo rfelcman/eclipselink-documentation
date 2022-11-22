@@ -1,32 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*EclipseLink Solutions Guide for EclipseLink* +
-Release 4.0 a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:multitenancy001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:multitenancy003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#BABJGBCF]####[#TLADG260]####
-
-== Using Single-Table Multi-Tenancy
+///////////////////////////////////////////////////////////////////////////////
+[[MULTITENANCY002]]
+=== Using Single-Table Multi-Tenancy
 
 With single-table multi-tenancy, any table (`Table` or `SecondaryTable`)
 to which an entity or mapped superclass maps can include rows for
@@ -44,27 +34,16 @@ insert, update, and delete operations on the table. When multi-tenant
 metadata is applied at the mapped superclass level, it is applied to all
 subentities unless they specify their own multi-tenant metadata.
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-In the context of single-table multi-tenancy, ”single-table” means
+NOTE: In the context of single-table multi-tenancy, ”single-table” means
 multiple tenants can share a single table, and each tenant's data is
 distinguished from other tenants' data via the discriminator column(s).
 It is possible to use multiple tables with single-table multi-tenancy;
 but in that case, an entity's persisted data is stored in multiple
 tables, and multiple tenants can share all the tables.
 
-|===
+[[BABIFFCI]]
 
- +
-
-[#BABIFFCI]####[#TLADG261]####
-
-=== Main Tasks for Using Single-Table Multi-Tenancy
+==== Main Tasks for Using Single-Table Multi-Tenancy
 
 The following tasks provide instructions for using single-table
 multi-tenancy:
@@ -73,12 +52,11 @@ multi-tenancy:
 * link:#BABDFFJD[Task 2: Enable Single-Table Multi-Tenancy]
 * link:#BABFGJAJ[Task 3: Specify Tenant Discriminator Columns]
 * link:#BABHIDCG[Task 4: Perform Operations and Queries]
-* link:#CHDIHGID[Task 5: Use Single-Table Multi-Tenancy in an
-Inheritance Hierarchy]
+* link:#CHDIHGID[Task 5: Use Single-Table Multi-Tenancy in an Inheritance Hierarchy]
 
-[#CHDBADCI]####[#TLADG1127]####
+[[CHDBADCI]]
 
-==== Task 1: Prerequisites
+===== Task 1: Prerequisites
 
 To implement and use single-table multi-tenancy, you need:
 
@@ -93,20 +71,16 @@ or MySQL. These instructions are based on Oracle Database XE 11g Release
 +
 For the certification matrix, see
 
-[#BABDFFJD]####[#TLADG262]####
+[[BABDFFJD]]
 
-==== Task 2: Enable Single-Table Multi-Tenancy
+===== Task 2: Enable Single-Table Multi-Tenancy
 
 Single-table multi-tenancy can be enabled declaratively using the
 `@Multitenant` annotation, in an Object Relational Mapping (ORM) XML
 file using the `<multitenant>` element, or by using annotations and XML
 together.
 
-[#TLADG263]##
-
-[#sthref82]##
-
-===== Using the @Multitenant Annotation
+====== Using the @Multitenant Annotation
 
 To use the `@Multitenant` annotation, include it with an `@Entity` or
 `@MappedSuperclass` annotation. For example:
@@ -120,41 +94,15 @@ public class Employee {
 }
 ----
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-Single-table is the default multi-tenancy type, so `SINGLE_TABLE` does
+NOTE: Single-table is the default multi-tenancy type, so `SINGLE_TABLE` does
 not have to be included in `@Multitenant`.
 
-|===
-
- +
-
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-The `@Table` annotation is not required, because the discriminator
+NOTE: The `@Table` annotation is not required, because the discriminator
 column is assumed to be on the primary table. However, if the
 discriminator column is defined on a secondary table, you must identify
 that table using `@SecondaryTable`.
 
-|===
-
- +
-
-[#TLADG264]##
-
-[#sthref83]##
-
-===== Using the <multitenant> Element
+====== Using the <multitenant> Element
 
 To use the `<multitenant>` element, include the element within an
 `<entity>` element. For example:
@@ -169,7 +117,7 @@ To use the `<multitenant>` element, include the element within an
 </entity>
 ----
 
-[#BABFGJAJ]####[#TLADG490]####
+[[BABFGJAJ]]
 
 ==== Task 3: Specify Tenant Discriminator Columns
 
@@ -207,10 +155,6 @@ application can define.
 attribute must be marked as read only.
 ** Both mapped and unmapped properties are used to form the additional
 criteria when issuing a SELECT query.
-
-[#TLADG266]##
-
-[#sthref84]##
 
 ===== Use the @TenantDiscriminatorColumn Annotation
 
@@ -256,10 +200,6 @@ public Employee() {
 }
 ----
 
-[#TLADG267]##
-
-[#sthref85]##
-
 ===== Use the <tenant-discriminator-column> Element
 
 To use the `<tenant-discriminator-column>` element, include the element
@@ -301,10 +241,6 @@ example:
    ...
 </entity>
 ----
-
-[#TLADG268]##
-
-[#sthref86]##
 
 ===== Map Tenant Discriminator Columns
 
@@ -378,7 +314,7 @@ discriminator column to another column named `AGE`:
 </entity>
 ----
 
-[#CHDIIAAF]####[#TLADG617]####
+[[CHDIIAAF]]
 
 ===== Define Persistence Unit and Entity Mappings Defaults
 
@@ -419,11 +355,7 @@ that specify their own tenant discriminator metadata. For example:
 </entity-mappings>
 ----
 
-[#TLADG620]##
-
-[#sthref87]##
-
-==== Configure Context Properties and Caching Scope
+===== Configure Context Properties and Caching Scope
 
 Runtime context properties are used in conjunction with the
 multi-tenancy configuration on an entity (or mapped superclass) to
@@ -468,22 +400,11 @@ EntityManager em = Persistence.createEntityManagerFactory("multi-tenant",
       properties).createEntityManager();
 ----
 
- +
+NOTE: Swapping tenant IDs during a live `EntityManager` is not allowed.
 
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
+[[CHDBHBIG]]
 
-Swapping tenant IDs during a live `EntityManager` is not allowed.
-
-|===
-
- +
-
-[#CHDBHBIG]####[#TLADG621]####
-
-===== Configure a Shared Entity Manager
+====== Configure a Shared Entity Manager
 
 By default, tenants share the entity manager factory. A single
 application instance with a shared `EntityManagerFactory` for a
@@ -508,25 +429,10 @@ To share the cache, set the
 `eclipselink.multitenant.tenants-share-cache` property to `true`. This
 results in multi-tenant entities having a PROTECTED cache setting.
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-*Caution:*
-
-Queries that use the cache may return data from other tenants when using
+CAUTION: Queries that use the cache may return data from other tenants when using
 the `PROTECTED` setting.
 
-|===
-
- +
-
-[#TLADG622]##
-
-[#sthref88]##
-
-===== Configure a Non-Shared Entity Manager
+====== Configure a Non-Shared Entity Manager
 
 To create an entity manager factory that is not shared, set the
 `eclipselink.multitenant.tenants-share-emf` property to `false`.
@@ -575,11 +481,7 @@ An example in the persistence unit definition:
 </persistence-unit>
 ----
 
-[#TLADG623]##
-
-[#sthref89]##
-
-===== Configure an Entity Manager
+====== Configure an Entity Manager
 
 When configuring properties at the level of the entity manager, you must
 specify the caching strategies, because the same server session can be
@@ -602,7 +504,7 @@ EntityManager em = Persistence.createEntityManagerFactory("multitenant",
 ...
 ----
 
-[#BABHIDCG]####[#TLADG270]####
+[[BABHIDCG]]
 
 ==== Task 4: Perform Operations and Queries
 
@@ -621,25 +523,14 @@ following queries:
 * Update all
 * Delete all
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-Multi-tenancy is not supported through named native queries. To use
+NOTE: Multi-tenancy is not supported through named native queries. To use
 named native queries in a multi-tenant environment, manually handle any
 multi-tenancy issues directly in the query. In general, it is best to
 avoid named native queries in a multi-tenant environment.
 
-|===
+[[CHDIHGID]]
 
- +
-
-[#CHDIHGID]####[#TLADG624]####
-
-==== Task 5: Use Single-Table Multi-Tenancy in an Inheritance Hierarchy
+===== Task 5: Use Single-Table Multi-Tenancy in an Inheritance Hierarchy
 
 Inheritance strategies are configured by specifying the inheritance type
 (`@jakarta.persistence.Inheritance`). Single-table multi-tenancy can be
@@ -656,35 +547,3 @@ some entities of the hierarchy may be multi-tenant, while others may not
 be. The other inheritance strategies can only specify multi-tenancy at
 the root level, because you cannot isolate an entity to a single table
 to build only its type.
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:multitenancy001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:multitenancy003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
-link:../../dcommon/html/cpyr.htm[ +
-] a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

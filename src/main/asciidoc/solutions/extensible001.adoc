@@ -1,32 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*EclipseLink Solutions Guide for EclipseLink* +
-Release 4.0 a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:extensible.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:extensible002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#BABFJDCF]####[#TLADG217]####
-
-== Making JPA Entities Extensible
+///////////////////////////////////////////////////////////////////////////////
+[[EXTENSIBLE001]]
+=== Making JPA Entities Extensible
 
 Use the `@VirtualAccessMethods` annotation to specify that an entity is
 extensible. By using virtual properties in an extensible entity, you can
@@ -49,11 +39,7 @@ customer (even post-deployment).
 mappings have changed.
 * Provide an additional source of metadata to be used by an application.
 
-[#TLADG218]##
-
-[#sthref69]##
-
-=== Main Tasks for Creating and Supporting an Extensible JPA Entity
+==== Main Tasks for Creating and Supporting an Extensible JPA Entity
 
 To create and support an extensible JPA entity:
 
@@ -63,9 +49,9 @@ To create and support an extensible JPA entity:
 * link:#CIAIJHAG[Task 4: Externalizing Extensions Using a
 MetaDataSource]
 
-[#CIAHBEAJ]####[#TLADG219]####
+[[CIAHBEAJ]]
 
-==== Task 1: Configure the Entity
+===== Task 1: Configure the Entity
 
 Configure the entity by annotating the entity class with
 `@VirtualAccessMethods` (or using the XML `<access-methods>`), adding
@@ -78,9 +64,9 @@ the following sections:
 * link:#CIAHBEBF[Define Virtual Attribute Storage]
 * link:#CIAIFCJE[Use XML]
 
-[#CIAGGIHJ]####[#TLADG220]####
+[[CIAGGIHJ]]
 
-===== Annotate the Entity Class with @VirtualAccessMethods
+====== Annotate the Entity Class with @VirtualAccessMethods
 
 Annotate the entity with `@VirtualAccessMethods` to specify that it is
 extensible and to define virtual properties.
@@ -88,11 +74,10 @@ extensible and to define virtual properties.
 link:#CIAHBGHB[Table 12-1] describes the attributes available to the
 `@VirtualAccessMethods` annotation.
 
-[#TLADG221]####[#sthref70]####[#CIAHBGHB]##
+[[CIAHBGHB]]
 
 *_Table 12-1 Attributes for the @VirtualAccessMethods Annotation_*
 
-[width="17%",cols="<100%,<",options="header",]
 |===
 |*Attribute* |*Description*
 |`get` a|
@@ -115,11 +100,9 @@ Required? No
 
 |===
 
- +
+[[CIAJFEFA]]
 
-[#CIAJFEFA]####[#TLADG222]####
-
-===== Add get and set Methods to the Entity
+====== Add get and set Methods to the Entity
 
 Add `get(String)` and `set(String, Object)` methods to the entity. The
 `get()` method returns a value by property name and the `set()` method
@@ -131,23 +114,12 @@ EclipseLink weaves these methods if weaving is enabled, which provides
 support for lazy loading, change tracking, fetch groups, and internal
 optimizations.
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-Weaving is not supported when using virtual access methods with
+NOTE: Weaving is not supported when using virtual access methods with
 `OneToOne` mappings. If attempted, an exception will be thrown.
 
-|===
+[[CIAHBEBF]]
 
- +
-
-[#CIAHBEBF]####[#TLADG223]####
-
-===== Define Virtual Attribute Storage
+====== Define Virtual Attribute Storage
 
 Add a data structure to store the extended attributes and values, that
 is, the virtual mappings. These can then be mapped to the database. See
@@ -164,7 +136,7 @@ using property-based access, `@Transient` is unnecessary.
 link:#BABJBFGB[Example 12-1] illustrates an entity class that uses
 property access.
 
-[#BABJBFGB]####[#TLADG224]####
+[[BABJBFGB]]
 
 *_Example 12-1 Entity Class that Uses Property Access_*
 
@@ -190,9 +162,9 @@ public class Customer{
     }
 ----
 
-[#CIAIFCJE]####[#TLADG225]####
+[[CIAIFCJE]]
 
-===== Use XML
+====== Use XML
 
 As an alternative to, or in addition to, using the
 `@VirtualAccessMethods` annotation, you can use an `access="VIRTUAL"`
@@ -220,9 +192,9 @@ use the `<access>` and `<access-methods>` elements, for example:
    </persistence-unit-metadata>
 ----
 
-[#CIAIJJDH]####[#TLADG226]####
+[[CIAIJJDH]]
 
-==== Task 2: Design the Schema
+===== Task 2: Design the Schema
 
 Provide database tables with extra columns to store virtual attribute
 values. For example, the following `Customer` table includes two
@@ -241,9 +213,9 @@ You can then specify which of the `FLEX` columns should be used to
 persist an extended attribute, as described in link:#CIAECEAE["Task 3:
 Provide Additional Mappings"].
 
-[#CIAECEAE]####[#TLADG227]####
+[[CIAECEAE]]
 
-==== Task 3: Provide Additional Mappings
+===== Task 3: Provide Additional Mappings
 
 To provide additional mappings, add the mappings with the `column` and
 `access-methods` attributes to the `eclipselink-orm.xml` file, for
@@ -256,9 +228,9 @@ example:
 </basic>
 ----
 
-[#CIAIJHAG]####[#TLADG228]####
+[[CIAIJHAG]]
 
-==== Task 4: Externalizing Extensions Using a MetaDataSource
+===== Task 4: Externalizing Extensions Using a MetaDataSource
 
 Configure persistence unit properties to indicate that the application
 should retrieve the flexible mappings from the `eclipselink-orm.xml`
@@ -268,14 +240,9 @@ file. You can set persistence unit properties using the
 sections.
 
 For more information about external mappings, see
-link:metadatasource.htm#BABGDEGB[Chapter 13, "Using an External MetaData
-Source."]
+xref:{relativedir}/metadatasource.htm#METADATASOURCE[Chapter 13, "Using an External MetaData Source."]
 
-[#TLADG229]##
-
-[#sthref71]##
-
-===== Configure the persistence.xml File
+====== Configure the persistence.xml File
 
 In the `persistence.xml` file, use the `eclipselink.metadata-source`
 property to use the default `eclipselink-orm.xml` file. Use the
@@ -288,11 +255,7 @@ at the specified location, for example:
 <property name="eclipselink.metadata-source.xml.url" value="foo://bar"/>
 ----
 
-[#TLADG230]##
-
-[#sthref72]##
-
-===== Configure EntityManagerFactory and the Metadata Repository
+====== Configure EntityManagerFactory and the Metadata Repository
 
 Extensions are added at bootstrap time through access to a metadata
 repository. The metadata repository is accessed through a class that
@@ -324,11 +287,7 @@ subclasses defined by the developer.
 <property name="com.foo.MetadataRepository.extra-data" value="foo-bar"/>
 ----
 
-[#TLADG231]##
-
-[#sthref73]##
-
-===== Refresh the Metadata Repository
+====== Refresh the Metadata Repository
 
 If you change the metadata and you want an `EntityManager` instance
 based on the new metadata, you must call the `refreshMetadata()` method
@@ -339,11 +298,7 @@ The `refreshMetadata()` method takes a map of properties that can be
 used to override the properties previously defined for the
 `metadata-source` element.
 
-[#TLADG232]##
-
-[#sthref74]##
-
-=== Code Examples
+==== Code Examples
 
 link:#CIADHIHE[Example 12-2] illustrates the following:
 
@@ -356,7 +311,7 @@ even if no mappings use them, because of the presence of
 
 These items are illustrated in bold font.
 
-[#CIADHIHE]####[#TLADG233]####
+[[CIADHIHE]]
 
 *_Example 12-2 Virtual Access Using Default get and set Method Names_*
 
@@ -402,7 +357,7 @@ method to use.
 
 These items are illustrated in bold font.
 
-[#CIAHGIEJ]####[#TLADG234]####
+[[CIAHGIEJ]]
 
 *_Example 12-3 Overriding get and set Methods_*
 
@@ -451,7 +406,7 @@ even if no mappings use them, because of the presence of
 
 These items are illustrated in bold font.
 
-[#CIADJCIB]####[#TLADG235]####
+[[CIADJCIB]]
 
 *_Example 12-4 Using Property Access_*
 
@@ -480,35 +435,3 @@ public class Address {
  
 ...
 ----
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:extensible.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:extensible002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
-link:../../dcommon/html/cpyr.htm[ +
-] a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

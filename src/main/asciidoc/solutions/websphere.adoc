@@ -1,59 +1,41 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*EclipseLink Solutions Guide for EclipseLink* +
-Release 4.0 a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:jboss003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:websphere001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#CFHHEHJG]####[#TLADG597]####
-
-== [.secnum]#6# Using EclipseLink with IBM WebSphere Application Server
-
-[#CFHCIFHI]####[#TLADG598]####
+///////////////////////////////////////////////////////////////////////////////
+[[ELWS]]
+== Using EclipseLink with IBM WebSphere Application Server
 
 This chapter describes how to use EclipseLink as the persistence
 provider for applications deployed to IBM WebSphere Application Server.
 
 This chapter includes the following sections:
 
-* link:websphere001.htm#CFHHJJEC[Introduction to the Solution]
-* link:websphere002.htm#A1584318[Implementing the Solution]
-* link:websphere003.htm#CFHEBIIG[Additional Resources]
-
-[#TLADG732]##
+* xref:{relativedir}/websphere001.adoc#ELWS001[Introduction to the Solution]
+* xref:{relativedir}/websphere002.adoc#ELWS002[Implementing the Solution]
+* xref:{relativedir}/websphere003.adoc#ELWS003[Additional Resources]
 
 *Use Case*
 
 EclipseLink can be used with a number of popular Jakarta EE application
 servers, including WebSphere Application Server.
 
-[#TLADG733]##
-
 *Solution*
 
 Configure WebSphere to use EclipseLink runtime, and deploy applications
 developed using EclipseLink APIs.
-
-[#TLADG734]##
 
 *Components*
 
@@ -64,34 +46,11 @@ on WebSphere 8.5.
 Database, Oracle Express, MySQL, the Derby database included in
 WebSphere Application Server, and so on.
 
-'''''
+//Introduction to the Solution
+include::{rootdir}/websphere001.adoc[]
 
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:jboss003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:websphere001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
+//Implementing the Solution
+include::{rootdir}/websphere002.adoc[]
 
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
-link:../../dcommon/html/cpyr.htm[ +
-] a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +
+//Additional Resources
+include::{rootdir}/websphere003.adoc[]

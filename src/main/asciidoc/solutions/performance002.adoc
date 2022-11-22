@@ -1,32 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*EclipseLink Solutions Guide for EclipseLink* +
-Release 4.0 a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:performance001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:restful_jpa.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#CHDFIECF]####[#TLADG438]####
-
-== Monitoring and Optimizing EclipseLink-Enabled Applications
+///////////////////////////////////////////////////////////////////////////////
+[[PERFORMANCE002]]
+=== Monitoring and Optimizing EclipseLink-Enabled Applications
 
 The most important challenge to performance tuning is knowing what to
 optimize. To improve the performance of your application, identify the
@@ -34,20 +24,16 @@ areas of your application that do not operate at peak efficiency. This
 section contains information about these subjects:
 
 * link:#CHDJJDDH[Performance Optimization Recommendations and Tips]
-* link:#CHDIAFJI[Task 1: Measure EclipseLink Performance with the
-EclipseLink Profiler]
-* link:#CIAFFAIF[Task 2: Measure EclipseLink Performance in the Server
-Environment]
+* link:#CHDIAFJI[Task 1: Measure EclipseLink Performance with the EclipseLink Profiler]
+* link:#CIAFFAIF[Task 2: Measure EclipseLink Performance in the Server Environment]
 * link:#CIAFGJHI[Task 3: Measure Fetch Group Field Usage]
-* link:#CHDICBBA[Task 4: Identify Sources of Application Performance
-Problems]
-* link:#CHDDCABJ[Task 5: Modify Poorly-Performing Application
-Components]
+* link:#CHDICBBA[Task 4: Identify Sources of Application Performance Problems]
+* link:#CHDDCABJ[Task 5: Modify Poorly-Performing Application Components]
 * link:#CHDHGFDI[Task 6: Measure Performance Again]
 
-[#CHDJJDDH]####[#TLADG439]####
+[[CHDJJDDH]]
 
-=== Performance Optimization Recommendations and Tips
+==== Performance Optimization Recommendations and Tips
 
 EclipseLink provides a diverse set of features to measure and optimize
 application performance. You can enable or disable most features in the
@@ -77,9 +63,9 @@ Problems].
 Components].
 * link:#CHDHGFDI[Task 6: Measure Performance Again].
 
-[#CHDIAFJI]####[#TLADG440]####
+[[CHDIAFJI]]
 
-=== Task 1: Measure EclipseLink Performance with the EclipseLink Profiler
+==== Task 1: Measure EclipseLink Performance with the EclipseLink Profiler
 
 The EclipseLink performance profiler helps you identify performance
 problems by logging performance statistics for every executed query in a
@@ -89,12 +75,9 @@ or simple single-threaded use case.
 The EclipseLink performance profiler logs the following information to
 the log file.
 
-[#TLADG441]####[#sthref146]####[#sthref147]##
-
 *_Table 18-1 Information Logged by the EclipseLink Performance
 Profiler_*
 
-[width="31%",cols="<100%,<",options="header",]
 |===
 |*Information Logged* |*Description*
 |Query Class |Query class name.
@@ -137,11 +120,9 @@ execution (in milliseconds)
 before it is sent to the database (in milliseconds)
 |===
 
- +
+[[CHDDAEHF]]
 
-[#CHDDAEHF]####[#TLADG442]####
-
-==== Enabling the EclipseLink Profiler
+===== Enabling the EclipseLink Profiler
 
 The EclipseLink performance profiler is an instance of
 `org.eclipse.persistence.tools.profiler.PerformanceProfiler` class. To
@@ -156,11 +137,10 @@ In addition to enabling the EclipseLink profiler, The
 `PerformanceProfiler` class public API also provides the functionality
 described in link:#CHDGBGGC[Table 18-2]:
 
-[#TLADG443]####[#sthref148]####[#CHDGBGGC]##
+[[CHDGBGGC]]
 
 *_Table 18-2 Additional PerformanceProfiler Functionality_*
 
-[width="35%",cols="<,<100%",options="header",]
 |===
 |*To...* |*Use...*
 |Disable the profiler |`dontLogProfile`
@@ -179,13 +159,7 @@ operation profiles by query |`logProfileSummaryByQuery`
 operation profiles by class. |`logProfileSummaryByClass`
 |===
 
- +
-
-[#TLADG444]##
-
-[#sthref149]##
-
-==== Accessing and Interpreting Profiler Results
+===== Accessing and Interpreting Profiler Results
 
 You can see profiling results by opening the profile log in a text
 reader, such as Notepad.
@@ -196,7 +170,7 @@ application.
 link:#CHDBGFGG[Example 18-7] shows an sample of the EclipseLink profiler
 output.
 
-[#CHDBGFGG]####[#TLADG445]####
+[[CHDBGFGG]]
 
 *_Example 18-7 Performance Profiler Output_*
 
@@ -224,9 +198,9 @@ database.
 * `time/obj=116123809`: number of nanoseconds spent on each object.
 * `obj/sec=8`: number of objects handled per second.
 
-[#CIAFFAIF]####[#TLADG1230]####
+[[CIAFFAIF]]
 
-=== Task 2: Measure EclipseLink Performance in the Server Environment
+==== Task 2: Measure EclipseLink Performance in the Server Environment
 
 Use the Performance Monitor to provide detailed profiling and monitoring
 information in a multithreaded server environment. Use the performance
@@ -276,21 +250,12 @@ by the PerformanceMonitor class. The weights include:
 +
  +
 
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-In the current release, the performance monitor responds with the same
+NOTE: In the current release, the performance monitor responds with the same
 information for the `HEAVY` and `ALL` values.
 
-|===
+[[CIAFGJHI]]
 
- +
-
-[#CIAFGJHI]####[#TLADG1231]####
-
-=== Task 3: Measure Fetch Group Field Usage
+==== Task 3: Measure Fetch Group Field Usage
 
 Use the Fetch Group Monitor to measure fetch group field usage. This can
 be useful for performance analysis in a complex system.
@@ -301,9 +266,9 @@ Enable this monitor by using the system property
 The monitor outputs the attribute used for a class every time a new
 attribute is accessed.
 
-[#CHDICBBA]####[#TLADG446]####
+[[CHDICBBA]]
 
-=== Task 4: Identify Sources of Application Performance Problems
+==== Task 4: Identify Sources of Application Performance Problems
 
 Areas of the application where performance problems could occur include
 the following:
@@ -322,20 +287,16 @@ link:#CHDDCABJ[Task 5: Modify Poorly-Performing Application Components]
 provides some guidelines for dealing with problems in each of these
 areas.
 
-[#CHDDCABJ]####[#TLADG447]####
+[[CHDDCABJ]]
 
-=== Task 5: Modify Poorly-Performing Application Components
+==== Task 5: Modify Poorly-Performing Application Components
 
 For each source of application performance problems listed in
 link:#CHDICBBA[Task 4: Identify Sources of Application Performance
 Problems], you can try specific workarounds, as described in this
 section.
 
-[#TLADG448]##
-
-[#sthref150]##
-
-==== Identifying General Performance Optimizations
+===== Identifying General Performance Optimizations
 
 *Avoid overriding EclipseLink default behavior unless your application
 requires it*. Some of these defaults are suitable for a development
@@ -356,11 +317,7 @@ easy to use: the default configuration they export to deployment XML
 (and the code it generates, if required) represents best practices
 optimized for most applications.
 
-[#TLADG449]##
-
-[#sthref151]##
-
-==== Schema
+===== Schema
 
 Optimization is an important consideration when you design your database
 schema and object model. Most performance issues occur when the object
@@ -382,11 +339,7 @@ Possible ways to optimize the schema include:
 See "Data Storage Schema" in _EclipseLink Concepts_ for additional
 information.
 
-[#TLADG450]##
-
-[#sthref152]##
-
-==== Mappings and Descriptors
+===== Mappings and Descriptors
 
 If you find performance bottlenecks in your mapping and descriptors, try
 these solutions:
@@ -411,11 +364,7 @@ the descriptor to use a different constructor. See
 "@InstantiationCopyPolicy" in _Jakarta Persistence API (JPA) Extensions
 Reference for EclipseLink_.
 
-[#TLADG452]##
-
-[#sthref153]##
-
-==== Cache
+===== Cache
 
 You can often improve performance through caching, even in a clustered
 environment by implementing cache coordination. Cache coordination
@@ -429,11 +378,7 @@ following examples:
 * `http://wiki.eclipse.org/EclipseLink/Examples/JPA/CacheCoordination`
 * `http://wiki.eclipse.org/EclipseLink/Examples/JPA/DCN`
 
-[#TLADG453]##
-
-[#sthref154]##
-
-==== Data Access
+===== Data Access
 
 Depending on the type of data source your application accesses,
 EclipseLink offers a variety of `Login` options that you can use to tune
@@ -449,11 +394,7 @@ performance for your application. These techniques show you how to:
 * Use Parameterized SQL (Parameter Binding) and Prepared Statement
 Caching for Optimization.
 
-[#TLADG454]##
-
-[#sthref155]##
-
-==== Queries
+===== Queries
 
 EclipseLink provides an extensive query API for reading, writing, and
 updating data. "Understanding EclipseLink Queries" in _EclipseLink
@@ -471,11 +412,7 @@ your application. These techniques show you how to:
 
 It also includes links to read and write optimization examples.
 
-[#TLADG456]##
-
-[#sthref156]##
-
-==== Application Server and Database Optimization
+===== Application Server and Database Optimization
 
 To optimize the application server and database performance, consider
 these techniques:
@@ -490,9 +427,9 @@ load, and that your JVM has been configured optimally.
 * Ensure that your database has been configured correctly for optimal
 performance and its expected load.
 
-[#CHDHGFDI]####[#TLADG457]####
+[[CHDHGFDI]]
 
-=== Task 6: Measure Performance Again
+==== Task 6: Measure Performance Again
 
 Finally, after identifying possible performance bottlenecks and taking
 some action on them, rerun your application, again with the profiler
@@ -500,35 +437,3 @@ enabled (see link:#CHDDAEHF[Enabling the EclipseLink Profiler]). Review
 the results and, if more action is required, follow the procedures
 outlined in link:#CHDDCABJ[Task 5: Modify Poorly-Performing Application
 Components].
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:performance001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:restful_jpa.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
-link:../../dcommon/html/cpyr.htm[ +
-] a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

@@ -1,34 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*EclipseLink Solutions Guide for EclipseLink* +
-Release 4.0 a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:json003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:testingjpa001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#BABEBCCJ]####[#TLADG394]####
-
-== [.secnum]#17# Testing JPA Outside a Container
-
-[#TLADG395]##
+///////////////////////////////////////////////////////////////////////////////
+[[TESTINGJPA]]
+== Testing JPA Outside a Container
 
 This chapter describes how, with EclipseLink, you can use the
 persistence unit JAR file to test your application outside the container
@@ -37,27 +25,21 @@ persistence unit JAR file to test your application outside the container
 
 This chapter includes the following sections:
 
-* link:testingjpa001.htm#CHDHAFFB[Understanding JPA Deployment]
-* link:testingjpa002.htm#CHDCABFF[Configuring the persistence.xml File]
-* link:testingjpa003.htm#CHDDJADH[Using a Property Map]
-* link:testingjpa004.htm#CHDEECDB[Using Weaving]
-* link:testingjpa005.htm#CHDEJAGF[Additional Resources]
-
-[#TLADG1081]##
+* xref:{relativedir}/testingjpa001.adoc#TESTINGJPA001[Understanding JPA Deployment]
+* xref:{relativedir}/testingjpa002.adoc#TESTINGJPA002[Configuring the persistence.xml File]
+* xref:{relativedir}/testingjpa003.adoc#TESTINGJPA003[Using a Property Map]
+* xref:{relativedir}/testingjpa004.adoc#TESTINGJPA004[Using Weaving]
+* xref:{relativedir}/testingjpa005.adoc#TESTINGJPA005[Additional Resources]
 
 *Use Case*
 
 Users need to use EclipseLink both inside and outside the container
 (such as applications for the Java SE platform).
 
-[#TLADG1082]##
-
 *Solution*
 
 This solution highlights the primary differences when using EclipseLink
 outside a container.
-
-[#TLADG1083]##
 
 *Components*
 
@@ -65,34 +47,17 @@ outside a container.
 * An application server (such as Oracle WebLogic Server, IBM WebSphere,
 or Glassfish)
 
-'''''
+//Understanding JPA Deployment
+include::{rootdir}/testingjpa001.adoc[]
 
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:json003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:testingjpa001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
+//Configuring the persistence.xml File
+include::{rootdir}/testingjpa002.adoc[]
 
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
-link:../../dcommon/html/cpyr.htm[ +
-] a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+//Using a Property Map
+include::{rootdir}/testingjpa003.adoc[]
 
-|===
+//Using Weaving
+include::{rootdir}/testingjpa004.adoc[]
 
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +
+//Additional Resources
+include::{rootdir}/testingjpa005.adoc[]

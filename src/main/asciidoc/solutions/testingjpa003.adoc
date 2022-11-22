@@ -1,41 +1,27 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*EclipseLink Solutions Guide for EclipseLink* +
-Release 4.0 a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:testingjpa002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:testingjpa004.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#CHDDJADH]####[#TLADG403]####
-
-== Using a Property Map
+///////////////////////////////////////////////////////////////////////////////
+[[TESTINGJPA003]]
+=== Using a Property Map
 
 You can use a property map to override the default persistence
 properties and use container deployment.
 
-[#TLADG404]##
-
-[#sthref140]##
-
-=== Main Tasks
+==== Main Tasks
 
 To use a property map, perform the following steps:
 
@@ -43,14 +29,14 @@ To use a property map, perform the following steps:
 * link:#CHDCAFIA[Task 2: Configure the Bootstrapping API]
 * link:#CHDGCFBH[Task 3: Instantiate the EntityManagerFactory]
 
-[#CHDHHIIJ]####[#TLADG405]####
+[[CHDHHIIJ]]
 
-==== Task 1: Configure the persistence.xml File
+===== Task 1: Configure the persistence.xml File
 
 link:#CHDEHGEG[Example 17-3] illustrates a `persistence.xml` file that
 uses container deployment.
 
-[#CHDEHGEG]####[#TLADG406]####
+[[CHDEHGEG]]
 
 *_Example 17-3 A persistence.xml File Specifying the Java SE Platform
 Configuration, for use with a Property Map_*
@@ -64,29 +50,19 @@ Configuration, for use with a Property Map_*
 </persistence>
 ----
 
- +
+NOTE: There is no data source available when tested outside a container.
 
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
 
-There is no data source available when tested outside a container.
+[[CHDCAFIA]]
 
-|===
-
- +
-
-[#CHDCAFIA]####[#TLADG407]####
-
-==== Task 2: Configure the Bootstrapping API
+===== Task 2: Configure the Bootstrapping API
 
 To test the persistence unit shown in link:#CHDEHGEG[Example 17-3]
 outside the container, you must use the Java SE platform bootstrapping
 API. link:#CHDDHBCC[Example 17-4] contains sample code that illustrates
 this bootstrapping.
 
-[#CHDDHBCC]####[#TLADG408]####
+[[CHDDHBCC]]
 
 *_Example 17-4 Sample Configuration_*
 
@@ -118,9 +94,9 @@ import static org.eclipse.persistence.config.PersistenceUnitProperties.*;
   properties.put(TARGET_SERVER, TargetServer.None);
 ----
 
-[#CHDGCFBH]####[#TLADG409]####
+[[CHDGCFBH]]
 
-==== Task 3: Instantiate the EntityManagerFactory
+===== Task 3: Instantiate the EntityManagerFactory
 
 An `EntityManagerFactory` provides an efficient way to construct
 `EntityManager` instances for a database. You can instantiate the
@@ -132,35 +108,3 @@ link:#CHDDHBCC[Example 17-4]) by using:
 Persistence.
 createEntityManagerFactory("unitName", "properties");
 ----
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:testingjpa002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:testingjpa004.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
-link:../../dcommon/html/cpyr.htm[ +
-] a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

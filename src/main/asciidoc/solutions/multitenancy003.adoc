@@ -1,32 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*EclipseLink Solutions Guide for EclipseLink* +
-Release 4.0 a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:multitenancy002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:multitenancy004.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#A1235913]####[#TLADG491]####
-
-== Using Table-Per-Tenant Multi-Tenancy
+///////////////////////////////////////////////////////////////////////////////
+[[MULTITENANCY003]]
+=== Using Table-Per-Tenant Multi-Tenancy
 
 Table-per-tenant multi-tenancy allows multiple tenants of an application
 to isolate their data in one or more tenant-specific tables. Multiple
@@ -56,7 +46,7 @@ support additional persistence unit metadata provided from outside the
 application.
 
 For information about `MetadataSource`, see
-link:metadatasource.htm#BABGDEGB[Chapter 13, "Using an External MetaData
+xref:{relativedir}/metadatasource.htm#METADATASOURCE[Chapter 13, "Using an External MetaData
 Source."] See also `metadata-source` in _Jakarta Persistence API (JPA)
 Extensions Reference for EclipseLink_.
 
@@ -73,11 +63,7 @@ inheritance hierarchy when using a `SINGLE_TABLE` or `JOINED`
 inheritance strategy. Multi-tenant metadata can be specified in a
 `TABLE_PER_CLASS` inheritance hierarchy
 
-[#TLADG492]##
-
-[#sthref90]##
-
-=== Main Tasks for Using Table-Per-Tenant Multi-Tenancy
+==== Main Tasks for Using Table-Per-Tenant Multi-Tenancy
 
 The following tasks provide instructions for using table-per-tenant
 multi-tenancy:
@@ -87,9 +73,9 @@ multi-tenancy:
 * link:#CHDGBJBE[Task 3: Specify Tenant Table Discriminator]
 * link:#CHDDCDHI[Task 4: Specify a Context Property at Runtime]
 
-[#CHDIGFFI]####[#TLADG1128]####
+[[CHDIGFFI]]
 
-==== Task 1: Prerequisites
+===== Task 1: Prerequisites
 
 To implement and use table-per-tenant multi-tenancy, you need:
 
@@ -104,20 +90,16 @@ or MySQL. These instructions are based on Oracle Database XE 11g Release
 +
 For the certification matrix, see
 
-[#CHDGCIGF]####[#TLADG493]####
+[[CHDGCIGF]]
 
-==== Task 2: Enable Table-Per-Tenant Multi-Tenancy
+===== Task 2: Enable Table-Per-Tenant Multi-Tenancy
 
 Table-per-tenant multi-tenancy can be enabled declaratively using the
 `@Multitenant` annotation; or in an Object Relational Mapping (ORM) XML
 file using the `<multitenant>` element, or using annotations and XML
 together.
 
-[#TLADG494]##
-
-[#sthref91]##
-
-===== Using the @Multitenant and @TenantTableDiscriminator Annotations
+====== Using the @Multitenant and @TenantTableDiscriminator Annotations
 
 To use the `@Multitenant` annotation, include the annotation with an
 `@Entity` or `@MappedSuperclass` annotation and include the
@@ -138,11 +120,7 @@ The `TABLE_PER_TENANT` attribute states that clients have a dedicated
 table or tables (`Table` and `SecondaryTable`) associated with the
 entity.
 
-[#TLADG495]##
-
-[#sthref92]##
-
-===== Using the <multitenant> Element
+====== Using the <multitenant> Element
 
 To use the `<multitenant>` element, include the element within an
 `<entity>` element. For example:
@@ -157,9 +135,9 @@ To use the `<multitenant>` element, include the element within an
 </entity>
 ----
 
-[#CHDGBJBE]####[#TLADG497]####
+[[CHDGBJBE]]
 
-==== Task 3: Specify Tenant Table Discriminator
+===== Task 3: Specify Tenant Table Discriminator
 
 The tenant table discriminator describes the type of table discriminator
 to use in a table-per-tenant multi-tenancy strategy. The tenant table
@@ -176,11 +154,7 @@ The tenant table discriminator is used together with an associated
 application context to indicate which table or tables an application
 tenant can access.
 
-[#TLADG496]##
-
-[#sthref93]##
-
-===== Using the @TenantTableDiscriminator Annotation
+====== Using the @TenantTableDiscriminator Annotation
 
 Use the `@TenantTableDiscriminator` annotation to specify which tables
 are associated with which tenants. The tenant table discriminator must
@@ -213,11 +187,7 @@ public class Employee {
 }
 ----
 
-[#TLADG498]##
-
-[#sthref94]##
-
-===== Using the <tenant-table-discriminator> Element
+====== Using the <tenant-table-discriminator> Element
 
 To use the `<tenant-table-discriminator>` element, include the element
 within a `<multitenant>` element and include the `name` and
@@ -235,9 +205,9 @@ within a `<multitenant>` element and include the `name` and
 </entity>
 ----
 
-[#CHDDCDHI]####[#TLADG499]####
+[[CHDDCDHI]]
 
-==== Task 4: Specify a Context Property at Runtime
+===== Task 4: Specify a Context Property at Runtime
 
 At runtime, specify the context property using a persistence unit
 definition passed to an entity manager factory or set on an individual
@@ -276,11 +246,7 @@ em.setProperty(EntityManagerProperties.MULTITENANT_PROPERTY_DEFAULT, "707");
 ...
 ----
 
-[#TLADG1129]##
-
-[#sthref95]##
-
-==== Task 5: Perform Operations and Queries
+===== Task 5: Perform Operations and Queries
 
 The tenant discriminator column is used at runtime through entity
 manager operations and querying. The tenant discriminator column and
@@ -297,50 +263,7 @@ following queries:
 * Update all
 * Delete all
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-Multi-tenancy is not supported through named native queries. To use
+NOTE: Multi-tenancy is not supported through named native queries. To use
 named native queries in a multi-tenant environment, manually handle any
 multi-tenancy issues directly in the query. In general, it is best to
 avoid named native queries in a multi-tenant environment.
-
-|===
-
- +
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:multitenancy002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:multitenancy004.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
-link:../../dcommon/html/cpyr.htm[ +
-] a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

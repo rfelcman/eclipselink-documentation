@@ -1,32 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*EclipseLink Solutions Guide for EclipseLink* +
-Release 4.0 a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:jpatoxml003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:jpatoxml005.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#BEIJGBGA]####[#TLADG350]####
-
-== Using XML Metadata Representation to Override JAXB Annotations
+///////////////////////////////////////////////////////////////////////////////
+[[JPA2XML004]]
+=== Using XML Metadata Representation to Override JAXB Annotations
 
 In addition to using Java annotations, EclipseLink provides an XML
 mapping configuration file called `eclipselink-oxm.xml` that you can use
@@ -49,25 +39,10 @@ technologies that adding more would make the class unreadable.
 This section demonstrates how to use `eclipselink-oxm.xml` to override
 JAXB annotations
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-While using this mapping file enables many advanced features, it might
+NOTE: While using this mapping file enables many advanced features, it might
 prevent you from porting it to other JAXB implementations
 
-|===
-
- +
-
-[#TLADG351]##
-
-[#sthref117]##
-
-=== Task 1: Define Advanced Mappings in the XML
+==== Task 1: Define Advanced Mappings in the XML
 
 First, update the XML mapping file to expose the
 `eclipselink_oxm_2_3.xsd`. schema. link:#BEIDBECD[Example 15-20] shows
@@ -75,7 +50,7 @@ how to modify the `<xml-bindings>` element in the mapping file to point
 to the correct namespace and leverage the schema. Each Java package can
 have one mapping file.
 
-[#BEIDBECD]####[#TLADG352]####
+[[BEIDBECD]]
 
 *_Example 15-20 Updating XML Binding Information in the Mapping File_*
 
@@ -90,11 +65,7 @@ have one mapping file.
 </xml-bindings>
 ----
 
-[#TLADG353]##
-
-[#sthref118]##
-
-=== Task 2: Configure Usage in JAXBContext
+==== Task 2: Configure Usage in JAXBContext
 
 Next, pass the mapping file to `JAXBContext` in your object:
 
@@ -121,11 +92,7 @@ properties.put(JAXBContextFactory.ECLIPSELINK_OXM_XML_KEY, metadata);
 JAXBContext.newInstance("example.order:example.customer", aClassLoader, properties);
 ----
 
-[#TLADG354]##
-
-[#sthref119]##
-
-=== Task 3: Specify the MOXy as the JAXB Implementation
+==== Task 3: Specify the MOXy as the JAXB Implementation
 
 You must use MOXy as your JAXB implementation. To do so, do the
 following:
@@ -138,35 +105,3 @@ jakarta.xml.bind.context.factory=org.eclipse.persistence.jaxb.JAXBContextFactory
 ----
 . Copy the `jaxb.properties` file to the package that contains your
 domain classes.
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:jpatoxml003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:jpatoxml005.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
-link:../../dcommon/html/cpyr.htm[ +
-] a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

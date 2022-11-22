@@ -493,7 +493,7 @@ override an existing setting, that is essentially turning it off.
 
 ===== Examples of Overriding and Merging
 
-[[TLJPA702]][[sthref1252]]
+[[TLJPA702]]
 
 *_Example 6-1 Overriding/Merging Example 1_*
 
@@ -509,7 +509,7 @@ Results in:
 ** mapping *b* (from `orm.xml`)
 ** mappings *c* and *d* (from `eclipselink-orm.xml`)
 
-[[TLJPA703]][[sthref1253]]
+[[TLJPA703]]
 
 *_Example 6-2 Overriding/Merging Example 2_*
 
@@ -530,7 +530,7 @@ Results in:
 ** mapping *a* (from `some-other-mapping-file`)
 ** mappings *b* and *c* (from `eclipselink-orm.xml`)
 
-[[TLJPA704]][[sthref1254]]
+[[TLJPA704]]
 
 *_Example 6-3 Overriding/Merging Example 3_*
 
@@ -549,7 +549,7 @@ Results in:
 ** mappings *c* and *d* (from `eclipselink-orm.xml`)
 ** mapping *x* (from `some-other-mapping-file.xml`)
 
-[[TLJPA705]][[sthref1255]]
+[[TLJPA705]]
 
 *_Example 6-4 Overriding/Merging Example 4_*
 
@@ -565,7 +565,7 @@ Note: The file is added through a `<mapping-file>` tag in the
 Results in an exception, due to conflicting specifications for mapping
 *c*.
 
-[[TLJPA706]][[sthref1256]]
+[[TLJPA706]]
 
 *_Example 6-5 Overriding/Merging Example 5_*
 

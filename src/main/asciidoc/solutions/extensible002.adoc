@@ -1,32 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*EclipseLink Solutions Guide for EclipseLink* +
-Release 4.0 a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:extensible001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:extensible003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#BABHGCJB]####[#TLADG236]####
-
-== Making JAXB Beans Extensible
+///////////////////////////////////////////////////////////////////////////////
+[[EXTENSIBLE002]]
+=== Making JAXB Beans Extensible
 
 Use the `@XmlVirtualAccessMethods` annotation to specify that a JAXB
 bean is extensible. By using virtual properties in an extensible bean,
@@ -49,18 +39,18 @@ This section has the following subsections:
 * link:#CIAFIAAF[Main Steps]
 * link:#CIAEDJHB[Code Examples]
 
-[#CIAFIAAF]####[#TLADG237]####
+[[CIAFIAAF]]
 
-=== Main Steps
+==== Main Steps
 
 To create and support an extensible JAXB bean:
 
 * link:#CIAEGGCB[Task 1: Configure the Bean]
 * link:#CIAIDAED[Task 2: Provide Additional Mappings]
 
-[#CIAEGGCB]####[#TLADG238]####
+[[CIAEGGCB]]
 
-==== Task 1: Configure the Bean
+===== Task 1: Configure the Bean
 
 Configure the bean by annotating the bean class with the
 `@XmlVirtualAccessMethods`, adding `get` and `set` methods for the
@@ -68,11 +58,7 @@ property values, and adding a data structure to store the extended
 attributes and values. Alternatively, you can use the
 `<xml-virtual-access-methods>` element in `eclipselink-orm.xml`.
 
-[#TLADG239]##
-
-[#sthref75]##
-
-===== Annotate the Bean Class with @Xml VirtualAccessMethods
+====== Annotate the Bean Class with @Xml VirtualAccessMethods
 
 Annotate the bean with `@XmlVirtualAccessMethods` to specify that it is
 extensible and to define virtual properties.
@@ -80,11 +66,10 @@ extensible and to define virtual properties.
 link:#CIAFAFCH[Table 12-2] describes the attributes available to the
 `@XmlVirtualAccessMethods` annotation.
 
-[#TLADG240]####[#sthref76]####[#CIAFAFCH]##
+[[CIAFAFCH]]
 
 *_Table 12-2 Attributes for the @XmlVirtualAccessMethods Annotation_*
 
-[width="31%",cols="<100%,<",options="header",]
 |===
 |*Attribute* |*Description*
 |`get` a|
@@ -107,13 +92,7 @@ Required? No
 
 |===
 
- +
-
-[#TLADG241]##
-
-[#sthref77]##
-
-===== Add get and set Methods to the Bean
+====== Add get and set Methods to the Bean
 
 Add `get(String)` and `set(String, Object)` methods to the bean. The
 `get()` method returns a value by property name and the `set()` method
@@ -121,11 +100,7 @@ stores a value by property name. The default names for these methods are
 `get` and `set`, and they can be overridden with the
 `@XmlVirtualAccessMethods` annotation.
 
-[#TLADG242]##
-
-[#sthref78]##
-
-===== Define Virtual Attribute Storage
+====== Define Virtual Attribute Storage
 
 Add a data structure to store the extended attributes and values, that
 is, the virtual mappings. These can then be mapped to the database. See
@@ -139,11 +114,7 @@ When using field-based access, annotate the data structure with
 `@XmlTransient` so it cannot use it for another mapping. When using
 property-based access, `@XmlTransient` is unnecessary.
 
-[#TLADG243]##
-
-[#sthref79]##
-
-===== Use XML
+====== Use XML
 
 As an alternative to, or in addition to, using
 `@XmlVirtualAccessMethods`, you can use the XML equivalents, for
@@ -177,9 +148,9 @@ instead of `get` and `set` (default):
 <xml-virtual-access-methods get-method="retrieve" set-method="put"/>
 ----
 
-[#CIAIDAED]####[#TLADG244]####
+[[CIAIDAED]]
 
-==== Task 2: Provide Additional Mappings
+===== Task 2: Provide Additional Mappings
 
 To provide additional mappings, add the mappings to the
 `eclipselink-oxm.xml` file, for example:
@@ -189,9 +160,9 @@ To provide additional mappings, add the mappings to the
 <xml-element java-attribute="idNumber"/> 
 ----
 
-[#CIAEDJHB]####[#TLADG245]####
+[[CIAEDJHB]]
 
-=== Code Examples
+==== Code Examples
 
 The examples in this section illustrate how to use extensible JAXB
 beans. The example begins with the creation of a base class that other
@@ -201,11 +172,7 @@ separate tenants. Even though both tenants share several real
 properties, they will define virtual properties that are unique to their
 requirements.
 
-[#TLADG246]##
-
-[#sthref80]##
-
-==== Basic Setup
+===== Basic Setup
 
 link:#CIAHDEGG[Example 12-5] illustrates a base class, `ExtensibleBase`,
 which other extensible classes can extend. In the example, the use of
@@ -214,7 +181,7 @@ mapped as an inheritance relationship. The real properties represent the
 parts of the model that will be common to all tenants. The per-tenant
 extensions will be represented as virtual properties.
 
-[#CIAHDEGG]####[#TLADG247]####
+[[CIAHDEGG]]
 
 *_Example 12-5 A Base Class for Extensible Classes_*
 
@@ -249,7 +216,7 @@ link:#CIAECFAH[Example 12-6] illustrates the definition of a `Customer`
 class. The `Customer` class is extensible because it inherits from a
 domain class that has been annotated with `@XmlVirtualAccessMethods`.
 
-[#CIAECFAH]####[#TLADG248]####
+[[CIAECFAH]]
 
 *_Example 12-6 An Extensible Customer Class_*
 
@@ -297,7 +264,7 @@ link:#CIAGABCC[Example 12-7] illustrates an `Address` class. It is not
 necessary for every class in your model to be extensible. In this
 example, the `Address` class does not have any virtual properties.
 
-[#CIAGABCC]####[#TLADG249]####
+[[CIAGABCC]]
 
 *_Example 12-7 A Nonextensible Address Class_*
 
@@ -323,7 +290,7 @@ public class Address {
 link:#CIAEEBIG[Example 12-8] illustrates a `PhoneNumber` class. Like
 `Customer`, `PhoneNumber` will be an extensible class.
 
-[#CIAEEBIG]####[#TLADG250]####
+[[CIAEEBIG]]
 
 *_Example 12-8 An Extensible PhoneNumber Class_*
 
@@ -349,17 +316,11 @@ public class PhoneNumber extends ExtensibleBase {
 }
 ----
 
-[#TLADG251]##
-
-[#sthref81]##
-
-==== Define the Tenants
+===== Define the Tenants
 
 The examples in this section define two separate tenants. Even though
 both tenants share several real properties, the corresponding XML
 representation can be quite different due to virtual properties.
-
-[#TLADG252]##
 
 *Tenant 1*
 
@@ -385,7 +346,7 @@ property.
 link:#CIAJHHAJ[Example 12-9] illustrates the `binding-tenant1.xml`
 mapping file.
 
-[#CIAJHHAJ]####[#TLADG253]####
+[[CIAJHHAJ]]
 
 *_Example 12-9 Defining Virtual Properties for Tenant 1_*
 
@@ -434,7 +395,7 @@ unmarshal operations. link:#CIAIIDAD[Example 12-10] illustrates the
 `Customer` class code for tenant 1 to obtain the data associated with
 virtual properties.
 
-[#CIAIIDAD]####[#TLADG254]####
+[[CIAIIDAD]]
 
 *_Example 12-10 Tenant 1 Code to Provide the Data Associated with
 Virtual Properties_*
@@ -489,7 +450,7 @@ marshaller.marshal(customer, System.out);
 link:#CIAECIAH[Example 12-11] illustrates the XML output from the
 `Customer` class for tenant 1.
 
-[#CIAECIAH]####[#TLADG255]####
+[[CIAECIAH]]
 
 *_Example 12-11 XML Output from the Customer Class for Tenant 1_*
 
@@ -511,8 +472,6 @@ link:#CIAECIAH[Example 12-11] illustrates the XML output from the
 </customer>
 ----
 
-[#TLADG256]##
-
 *Tenant 2*
 
 The second tenant is a streaming media provider that offers on-demand
@@ -527,7 +486,7 @@ of the real properties.
 link:#CIAGBEGJ[Example 12-12] illustrates the `binding-tenant2.xml`
 mapping file.
 
-[#CIAGBEGJ]####[#TLADG257]####
+[[CIAGBEGJ]]
 
 *_Example 12-12 Defining Virtual Properties for Tenant 2_*
 
@@ -557,7 +516,7 @@ mapping file.
 link:#CIACHCHF[Example 12-13] illustrates the tenant 2 `Customer` class
 code to obtain the data associated with virtual properties.
 
-[#CIACHCHF]####[#TLADG258]####
+[[CIACHCHF]]
 
 *_Example 12-13 Tenant 2 Code to Provide the Data Associated with
 Virtual Properties_*
@@ -590,7 +549,7 @@ marshaller.marshal(customer, System.out);
 link:#CIAGDDIG[Example 12-14] illustrates the XML output from the
 `Customer` class for tenant 2.
 
-[#CIAGDDIG]####[#TLADG259]####
+[[CIAGDDIG]]
 
 *_Example 12-14 XML Output from the Customer Class for Tenant 2_*
 
@@ -604,35 +563,3 @@ link:#CIAGDDIG[Example 12-14] illustrates the XML output from the
    <phoneNumber>555-WORK</phoneNumber>
 </customer>
 ----
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:extensible001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:extensible003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
-link:../../dcommon/html/cpyr.htm[ +
-] a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

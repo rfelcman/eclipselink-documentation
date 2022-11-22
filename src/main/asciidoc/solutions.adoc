@@ -54,4 +54,49 @@ include::{rootdir}/tlandwls.adoc[]
 //Using EclipseLink with GlassFish Server
 include::{rootdir}/tlandgs.adoc[]
 
+//Using EclipseLink with JBoss 7 Application Server
+include::{rootdir}/jboss.adoc[]
+
+//Using EclipseLink with IBM WebSphere Application Server
+include::{rootdir}/websphere.adoc[]
+
+//Migrating from Native TopLink
+include::{rootdir}/migrnativetoplink.adoc[]
+
+//Migrating from Hibernate to EclipseLink
+include::{rootdir}/migrhib.adoc[]
+
+//Using Multiple Databases with a Composite Persistence Unit
+include::{rootdir}/usingmultipledbs.adoc[]
+
+//Scaling Applications in Clusters
+include::{rootdir}/scaling.adoc[]
+
+//Providing Software as a Service
+include::{rootdir}/saas.adoc[]
+
+//Making JPA Entities and JAXB Beans Extensible
+include::{rootdir}/extensible.adoc[]
+
+//Using an External MetaData Source
+include::{rootdir}/metadatasource.adoc[]
+
+//Tenant Isolation Using EclipseLink
+include::{rootdir}/multitenancy.adoc[]
+
+//Mapping JPA to XML
+include::{rootdir}/jpatoxml.adoc[]
+
+//Converting Objects to and from JSON Documents
+include::{rootdir}/json.adoc[]
+
+//Testing JPA Outside a Container
+include::{rootdir}/testingjpa.adoc[]
+
+//Enhancing Performance
+include::{rootdir}/performance.adoc[]
+
+//Exposing JPA Entities Through RESTful Data Services
+include::{rootdir}/restful_jpa.adoc[]
+
 include::copyright.adoc[]

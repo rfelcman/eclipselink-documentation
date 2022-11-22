@@ -23,19 +23,14 @@ configure WebLogic Server and coordinate certain settings in it and in
 your application, as described in the following tasks:
 
 * link:#BABJHCFG[Task 1: Prerequisites]
-* link:#BABJDGGE[Task 3: Configure JMX MBean Extensions in WebLogic
-Server]
+* link:#BABJDGGE[Task 3: Configure JMX MBean Extensions in WebLogic Server]
 * link:#BABIIEHD[Task 4: Use or Reconfigure the Logging Integration]
-* link:#BABJEFBD[Task 5: Add Persistence to Your Java Application Using
-EclipseLink]
+* link:#BABJEFBD[Task 5: Add Persistence to Your Java Application Using EclipseLink]
 * link:#BABEEIFH[Task 6: Configure a Data Source]
-* link:#BABHICHE[Task 7: Extend the Domain to Use Advanced Oracle
-Database Features]
-* link:#BABICGHA[Task 8: Start WebLogic Server and Deploy the
-Application]
+* link:#BABHICHE[Task 7: Extend the Domain to Use Advanced Oracle Database Features]
+* link:#BABICGHA[Task 8: Start WebLogic Server and Deploy the Application]
 * link:#BABEEJDE[Task 9: Run the Application]
-* link:#BABIJAAD[Task 10: Configure and Monitor Persistence Settings in
-WebLogic Server]
+* link:#BABIJAAD[Task 10: Configure and Monitor Persistence Settings in WebLogic Server]
 
 [[BABJHCFG]]
 

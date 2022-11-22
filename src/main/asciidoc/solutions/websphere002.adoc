@@ -1,32 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*EclipseLink Solutions Guide for EclipseLink* +
-Release 4.0 a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:websphere001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:websphere003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#A1584318]####[#TLADG770]####
-
-== Implementing the Solution
+///////////////////////////////////////////////////////////////////////////////
+[[ELWS002]]
+=== Implementing the Solution
 
 To develop, deploy, and run EclipseLink applications in IBM WebSphere,
 you must add various modules including EclipseLink to WebSphere, and you
@@ -40,9 +30,9 @@ WebSphere, Version 7 or later:
 * link:#CEGCGFJB[Task 3: Configure the Server and the Application to Use
 EclipseLink]
 
-[#CFHIHHBB]####[#TLADG771]####
+[[CFHIHHBB]]
 
-=== Task 1: Prerequisites
+==== Task 1: Prerequisites
 
 Ensure that you have installed the following components:
 
@@ -60,9 +50,9 @@ You will use the following files:
 ** `eclipselink.jar`
 ** `jakarta.persistence_`__`ver_no`__`.jar`
 
-[#CEGCHAJB]####[#TLADG1105]####
+[[CEGCHAJB]]
 
-=== Task 2: Configure Persistence Units
+==== Task 2: Configure Persistence Units
 
 Configure persistence units to use EclipseLink as the persistence
 provider and to use WebSphere as the target server.
@@ -70,7 +60,7 @@ provider and to use WebSphere as the target server.
 link:#CEGCBJCA[Example 6-1] shows a sample configuration for a
 container-managed persistence unit.
 
-[#CEGCBJCA]####[#TLADG1106]####
+[[CEGCBJCA]]
 
 *_Example 6-1 Sample persistence.xml for a container-managed persistence
 unit_*
@@ -100,7 +90,7 @@ unit_*
 link:#CEGBBBJE[Example 6-2] shows a sample configuration for an
 application-managed persistence unit.
 
-[#CEGBBBJE]####[#TLADG1107]####
+[[CEGBBBJE]]
 
 *_Example 6-2 Sample persistence.xml for an application-managed
 persistence unit_*
@@ -134,9 +124,9 @@ application, you can change the version to
 `persistence_2_0.xsd" version="2.`__n__`"` (WebSphere's support for JPA
 2 began in WebSphere Application Server 7.0.0.9.
 
-[#CEGCGFJB]####[#TLADG1108]####
+[[CEGCGFJB]]
 
-=== Task 3: Configure the Server and the Application to Use EclipseLink
+==== Task 3: Configure the Server and the Application to Use EclipseLink
 
 The following are typical scenarios for using EclipseLink with the
 application server:
@@ -145,25 +135,22 @@ application server:
 * link:#CEGFFJEA[*Package EclipseLink in the Application EAR*]
 * link:#CEGJBCHB[*Package EclipseLink in the WAR*]
 
-[#CEGFHBBI]####[#TLADG1109]####
+[[CEGFHBBI]]
 
-==== Modify Server to Make EclipseLink Available Globally
+===== Modify Server to Make EclipseLink Available Globally
 
 You can make EclipseLink available globally for both container-managed
 and application-managed persistence units in either of the following
 ways:
 
 * link:#CEGGAEGJ[Option 1: Create a Global Shared Library (Recommended)]
-* link:#CEGGCCFC[Option 2: Add EclipseLink as a Server Library
-Extension]
+* link:#CEGGCCFC[Option 2: Add EclipseLink as a Server Library Extension]
 
-[#CEGGAEGJ]####[#TLADG1110]####
+[[CEGGAEGJ]]
 
 *Option 1: Create a Global Shared Library (Recommended)*
 
-. [#CEGDEIEC]##
-+
-Create a global shared library containing the following files:
+. Create a global shared library containing the following files:
 * `eclipselink.jar`
 +
 Find this file in the
@@ -185,7 +172,7 @@ to facilitate the creation of shared libraries.
 See the WebSphere documentation for instructions on how to use WebSphere
 to associate the shared library with an application.
 
-[#CEGGCCFC]####[#TLADG1111]####
+[[CEGGCCFC]]
 
 *Option 2: Add EclipseLink as a Server Library Extension*
 
@@ -193,9 +180,9 @@ To add EclipseLink as a server library extension, copy `eclipselink.jar`
 and the other JAR file(s) listed in Option 1, above, to the
 __`WAS_HOME`__`\lib\ext` directory.
 
-[#CEGFFJEA]####[#TLADG1112]####
+[[CEGFFJEA]]
 
-==== Package EclipseLink in the Application EAR
+===== Package EclipseLink in the Application EAR
 
 You can also implement container-managed persistence by adding
 `eclipselink.jar` in the application EAR, without making any
@@ -225,7 +212,7 @@ class loader first.
 . Deploy and start the application. See the IBM WebSphere documentation
 for instructions.
 
-[#CEGJBCHB]####[#TLADG1113]####
+[[CEGJBCHB]]
 
 ==== Package EclipseLink in the WAR
 
@@ -244,35 +231,3 @@ documentation for instructions on setting class loader order using the
 Administrative console.
 . Deploy and start the application. See the IBM WebSphere documentation
 for instructions.
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:websphere001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:websphere003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
-link:../../dcommon/html/cpyr.htm[ +
-] a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

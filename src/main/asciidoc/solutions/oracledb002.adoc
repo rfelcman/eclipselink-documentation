@@ -880,7 +880,7 @@ from a persistence application implemented in Oracle WebLogic Server.
 
 ===== Task 1: Configure a Multi Data Source or GridLink Data Source
 
-Refer to link:tlandwls.htm#BABHCJBG[Chapter 3, "Using EclipseLink with
+Refer to link:tlandwls.htm#ELWLS[Chapter 3, "Using EclipseLink with
 WebLogic Server,"] and _Oracle Fusion Middleware Configuring and
 Managing JDBC Data Sources for Oracle WebLogic Server_ for details about
 configuring a data source in WebLogic Server for Oracle RAC.

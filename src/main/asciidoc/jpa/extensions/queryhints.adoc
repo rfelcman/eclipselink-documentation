@@ -846,7 +846,7 @@ import org.eclipse.persistence.config.QueryHints;
 
 For more information, see:
 
-* xref:{relativedir}/persistenceproperties_ref.adoc#CACBICGG2["jdbc.exclusive-connection.mode"]
+* xref:{relativedir}/persistenceproperties_ref.adoc#jdbcexclusiveconnectionmode["jdbc.exclusive-connection.mode"]
 
 [[flush]][[TLJPA751]]
 
@@ -885,7 +885,7 @@ see the changes. If the query does not require seeing the changes, you
 should avoid the flush in order to improve performance.
 
 You can also configure the flush-mode as a persistence unit property.
-See xref:{relativedir}/persistenceproperties_ref.adoc#CDEJGBEI["flush-clear.cache"] for
+See xref:{relativedir}/persistenceproperties_ref.adoc#flushclearcache["flush-clear.cache"] for
 more information.
 
 You can also use conforming to query changes without requiring a flush.
@@ -928,8 +928,8 @@ import org.eclipse.persistence.config.QueryHints;
 
 For more information, see:
 
-* xref:{relativedir}/persistenceproperties_ref.adoc#BABDHEEB["persistence-context.flush-mode"]
-* xref:{relativedir}/persistenceproperties_ref.adoc#CDEJGBEI["flush-clear.cache"]
+* xref:{relativedir}/persistenceproperties_ref.adoc#persistencecontextflushmode["persistence-context.flush-mode"]
+* xref:{relativedir}/persistenceproperties_ref.adoc#flushclearcache["flush-clear.cache"]
 * "EclipseLink" JPA Query Hints
 `http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Querying/Query_Hints`
 * "EclipseLink Caches" in _Understanding EclipseLink_
@@ -1119,7 +1119,7 @@ This query hint can be used queries to root or branch inherited classes.
 
 You can also configure this behavior by using a `DescriptorCustomizer`
 (see
-xref:{relativedir}/persistenceproperties_ref.adoc#CCHIEAIA["descriptor.customizer"]).
+xref:{relativedir}/persistenceproperties_ref.adoc#descriptorcustomizer["descriptor.customizer"]).
 
 NOTE: This is required for correct ordering, `firstResult`, `maxResult`, and
 cursors.
@@ -1265,8 +1265,8 @@ propertiesMap.put(PersistenceUnitProperties.JDBC_BIND_PARAMETERS, "true");
 
 For more information, see:
 
-* xref:{relativedir}/persistenceproperties_ref.adoc#CHDHAFAA["jdbc.cache-statements"]
-* xref:{relativedir}/persistenceproperties_ref.adoc#CIHJADHF["jdbc.batch-writing.size"]
+* xref:{relativedir}/persistenceproperties_ref.adoc#jdbccachestatements["jdbc.cache-statements"]
+* xref:{relativedir}/persistenceproperties_ref.adoc#jdbcbatchwritingsize["jdbc.batch-writing.size"]
 * "Parameterized SQL and Statement Caching" in _Solutions Guide for
 EclispeLink_
 
@@ -1336,7 +1336,7 @@ propertiesMap.put(PersistenceUnitProperties.JDBC_ALLOW_PARTIAL_PARAMETERS, "true
 For more information, see:
 
 * link:#jdbcbindparameters["jdbc.bind-parameters"]
-* xref:{relativedir}/persistenceproperties_ref.adoc#CIHJADHF["jdbc.batch-writing.size"]
+* xref:{relativedir}/persistenceproperties_ref.adoc#jdbcbatchwritingsize["jdbc.batch-writing.size"]
 * "Parameterized SQL and Statement Caching" in _Solutions Guide for
 EclispeLink_
 
@@ -1374,7 +1374,7 @@ caching is enable for the persistence unit.
 
 TIP: Normally, you should set statement caching for the entire persistence
 unit (see
-xref:{relativedir}/persistenceproperties_ref.adoc#CHDHAFAA["jdbc.cache-statements"])
+xref:{relativedir}/persistenceproperties_ref.adoc#jdbccachestatements["jdbc.cache-statements"])
 instead of each query.
 
 When using a `DataSource`, you must set statement caching in the
@@ -1418,7 +1418,7 @@ See Also*
 
 For more information, see:
 
-* xref:{relativedir}/persistenceproperties_ref.adoc#CHDHAFAA["jdbc.cache-statements"]
+* xref:{relativedir}/persistenceproperties_ref.adoc#jdbccachestatements["jdbc.cache-statements"]
 * "Enhancing Performance" in _Solutions Guide for EclispeLink_
 
 [[jdbcfetchsize]][[TLJPA647]]

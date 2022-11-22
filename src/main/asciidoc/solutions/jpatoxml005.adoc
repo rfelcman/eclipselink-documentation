@@ -1,32 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*EclipseLink Solutions Guide for EclipseLink* +
-Release 4.0 a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:jpatoxml004.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:jpatoxml006.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#BEIBFCFC]####[#TLADG355]####
-
-== Using XPath Predicates for Mapping
+///////////////////////////////////////////////////////////////////////////////
+[[JPA2XML005]]
+=== Using XPath Predicates for Mapping
 
 This section demonstrates how the EclipseLink MOXy API uses XPath
 predicates to define an expression that specifiers the XML element's
@@ -41,9 +31,9 @@ This section contains the following subsections:
 * link:#BEIJIHCI[Mapping Based on an Attribute Value]
 * link:#BEIDJHFD["Self" Mappings]
 
-[#BEIHJHCJ]####[#TLADG356]####
+[[BEIHJHCJ]]
 
-=== Understanding XPath Predicates
+==== Understanding XPath Predicates
 
 As described above, an XPath predicate is an expression that defines a
 specific object-to-XML mapping when standard annotations
@@ -77,17 +67,17 @@ following XML:
 Thus, by using the XPath predicate, you can use the same attribute name
 for a different attribute value.
 
-[#BEIIBJHE]####[#TLADG357]####
+[[BEIIBJHE]]
 
-=== Mapping Based on Position
+==== Mapping Based on Position
 
 This mapping technique is described in
-link:jpatoxml003.htm#BEIDCEHD[Mapping Values to a Text Node by
+xref:{relativedir}/jpatoxml003.adoc#BEIDCEHD[Mapping Values to a Text Node by
 Position].
 
-[#BEIJIHCI]####[#TLADG358]####
+[[BEIJIHCI]]
 
-=== Mapping Based on an Attribute Value
+==== Mapping Based on an Attribute Value
 
 Beginning with EclipseLink MOXy 2.3, you can also map to an XML element
 based on an Attribute value. In this exercise, you will annotate the JPA
@@ -95,7 +85,7 @@ entity to render the XML document shown in link:#BEIIBGBB[Example
 15-21]. Note that all of the XML elements are named node but are
 differentiated by the value of their name attribute.
 
-[#BEIIBGBB]####[#TLADG359]####
+[[BEIIBGBB]]
 
 *_Example 15-21_*
 
@@ -118,9 +108,9 @@ To attain this mapping, you need to declare three classes, `Name`,
 __`element-name`__`[@`__`attribute-name``='``value`__`']` to map each
 Java field.
 
-[#BEIEIFGA]####[#TLADG360]####
+[[BEIEIFGA]]
 
-==== Task 1: Create the Customer Entity
+===== Task 1: Create the Customer Entity
 
 To create the `Customer` class entity:
 
@@ -164,7 +154,7 @@ as a `List<PhoneNumber>` type and assign it the value
 The `Customer` class should look like the snippet in
 link:#BEIHAHJF[Example 15-22].
 
-[#BEIHAHJF]####[#TLADG361]####
+[[BEIHAHJF]]
 
 *_Example 15-22 Customer Object Mapping to an Attribute Value_*
 
@@ -196,11 +186,7 @@ public class Customer {
 }
 ----
 
-[#TLADG362]##
-
-[#sthref120]##
-
-==== Task 2: Create the Address Entity
+===== Task 2: Create the Address Entity
 
 To create the `Address` class, do the following:
 
@@ -230,7 +216,7 @@ annotation `@XmlPath("node[@name='street']/text()")`.
 
 The `Address` class should look like link:#BEIHAIHA[Example 15-23].
 
-[#BEIHAIHA]####[#TLADG363]####
+[[BEIHAIHA]]
 
 *_Example 15-23 Address Object Mapping to an Attribute Value_*
 
@@ -252,11 +238,7 @@ public class Address {
 }
 ----
 
-[#TLADG364]##
-
-[#sthref121]##
-
-==== Task 3: Create the PhoneNumber Entity
+===== Task 3: Create the PhoneNumber Entity
 
 To create the `PhoneNumber` entity:
 
@@ -294,7 +276,7 @@ attributes under the PhoneNumber root element by using the
 
 The `PhoneNumber` object should look like link:#BEIDDBJA[Example 15-24].
 
-[#BEIDDBJA]####[#TLADG365]####
+[[BEIDDBJA]]
 
 *_Example 15-24 PhoneNumber Object Mapping to an Attribute Value_*
 
@@ -317,9 +299,9 @@ public class PhoneNumber {
 }
 ----
 
-[#BEIDJHFD]####[#TLADG366]####
+[[BEIDJHFD]]
 
-=== "Self" Mappings
+==== "Self" Mappings
 
 A "self" mapping occurs on one-to-one mappings when you set the target
 object's XPath to "." (dot) so the data from the target object appears
@@ -360,7 +342,7 @@ as a `List<PhoneNumber>` type and assign it the value
 The rendered XML for the Customer entity would look like
 link:#BEICAHDH[Example 15-25].
 
-[#BEICAHDH]####[#TLADG367]####
+[[BEICAHDH]]
 
 *_Example 15-25 XML Node with Self-Mapped Address Element_*
 
@@ -375,35 +357,3 @@ link:#BEICAHDH[Example 15-25].
    <node name="phone-number" type="cell">555-2222</node>
 </node>
 ----
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:jpatoxml004.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:jpatoxml006.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
-link:../../dcommon/html/cpyr.htm[ +
-] a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

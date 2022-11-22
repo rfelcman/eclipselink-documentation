@@ -1,32 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*EclipseLink Solutions Guide for EclipseLink* +
-Release 4.0 a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:restful_jpa001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:restful_jpa003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#A1656101]####[#TLADG1157]####
-
-== Implementing the Solution
+///////////////////////////////////////////////////////////////////////////////
+[[RESTJPA002]]
+=== Implementing the Solution
 
 This section contains the following tasks for exposing JPA entities
 using RESTful Data Services:
@@ -35,39 +25,26 @@ using RESTful Data Services:
 * link:#CHDGGJJJ[Step 2: Create and Configure the Application]
 * link:#CHDBHBAC[Step 3: Understand RESTful Data Services URI Basics]
 * link:#CHDBIIFF[Step 4: Represent Entities Using JPA, JAXB, or JSON]
-* link:#CHDCIHEG[Step 5: Issue Client Calls for Operations on the
-Persistence Unit]
+* link:#CHDCIHEG[Step 5: Issue Client Calls for Operations on the Persistence Unit]
 * link:#CHDGJEDF[Step 6: Implement Security]
-* link:#CHDHGACD[Step 7: Understand the Structure of RESTful Data
-Services Responses]
+* link:#CHDHGACD[Step 7: Understand the Structure of RESTful Data Services Responses]
 
-[#CHDCIBDG]####[#TLADG1158]####
+[[CHDCIBDG]]
 
-=== Step 1: Prerequisites
+==== Step 1: Prerequisites
 
 To implement and use RESTful Data Services, you need:
 
 * Either of the following Jakarta EE application servers:
 ** Oracle WebLogic Server Release 4.0 or later.
 ** Glassfish Server 3.1.2 or later.
-+
- +
 
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-With Glassfish Server 3.1.2, you must upgrade the EclipseLink version to
+NOTE: With Glassfish Server 3.1.2, you must upgrade the EclipseLink version to
 use the version of the RESTful Data Services shipped in EclipseLink
 2.4.2 (and must also include DBWS). See
 `http://www.eclipse.org/eclipselink/downloads/` for EclipseLink
 downloads.
 
-|===
-
- +
-+
 Those servers include the following:
 ** EclipseLink 2.4 or later, configured as the persistence provider.
 ** Jersey, the reference implementation of the Java API for RESTful Web
@@ -85,106 +62,58 @@ bundles.
 Oracle Database, Oracle Database Express Edition (Oracle Database XE),
 or MySQL. These instructions are based on Oracle Database XE 11g Release
 2.
-+
 For the certification matrix, see
 
-[#CHDGGJJJ]####[#TLADG1159]####
+[[CHDGGJJJ]]
 
-=== Step 2: Create and Configure the Application
+==== Step 2: Create and Configure the Application
 
 RESTful Data Services are designed to function with standard JPA
 applications, with little extra work required beyond enabling the
 service, as described below:
 
-. [#CHDIFBID]##
-+
-Develop an application using one or more standard JPA persistence units,
+. Develop an application using one or more standard JPA persistence units,
 package it in a Web ARchive (WAR) file, and deploy it normally.
 +
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-The fragment must be placed inside a WAR, because it offers Web
+NOTE: The fragment must be placed inside a WAR, because it offers Web
 services. That WAR may optionally be packaged inside an Enterprise
 Archive (EAR) file.
-
-|===
-
- +
 +
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-Weaving is required for several RESTful Data Services features to work:
+NOTE: Weaving is required for several RESTful Data Services features to work:
 providing relationships as links, editing relationships, and dealing
 with lazy many-to-one relationships. Therefore, for those features, you
 must either deploy to a Jakarta EE compliant server or statically weave
 your classes.
-
-|===
-
- +
-. [#CHDDHCHE]##
 +
-Include the RESTful Data Services servlet in the WAR containing the
+. Include the RESTful Data Services servlet in the WAR containing the
 application. (For instructions on downloading, see.link:#CHDCIBDG[Step
 1: Prerequisites])
 +
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-The RESTful Data Services JAR file includes a `web-fragment.xml` file
+NOTE: The RESTful Data Services JAR file includes a `web-fragment.xml` file
 that identifies the servlet and defines the root URI for the RESTful
 service.
 
-|===
-
- +
-+
 Add the `org.eclipse.persistence.jpars_`__`version_num`__`.jar` file to
 the WAR containing the application, under `WEB-INF/lib`.
 
-[#CHDBHBAC]####[#TLADG1160]####
+[[CHDBHBAC]]
 
-=== Step 3: Understand RESTful Data Services URI Basics
+==== Step 3: Understand RESTful Data Services URI Basics
 
 URIs used for making REST calls for RESTful Data Services follow these
 standard patterns:
 
 * The base URI for an application is:
 `http://server:port/application-name/persistence/{version}`
-+
- +
 
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-As of EclipseLink 2.4.2, support for using RESTful Data Services URIs
+NOTE: As of EclipseLink 2.4.2, support for using RESTful Data Services URIs
 without a version number is deprecated and will be removed in future
 releases. The version of RESTful Data Services in EclipseLink 2.4.2 is
 `v1.0`, and that version number should be used to make REST requests to
 RESTful Data Services.
 
-|===
-
- +
 * For base operations on the persistence unit, add the persistence unit
 name:
-+
 `/persistence/{version}/{unit-name}`
 * For specific types of operations, add the type of operation, for
 example:
@@ -197,11 +126,11 @@ example:
 ** Base operations: `/persistence/{version}`
 
 For complete documentation on how to construct these URIs, see
-link:restful_jpa004.htm#CHDEGJIG[RESTful Data Services API Reference.]
+xref:{relativedir}/restful_jpa004.adoc#RESTJPA004[RESTful Data Services API Reference.]
 
-[#CHDBIIFF]####[#TLADG1165]####
+[[CHDBIIFF]]
 
-=== Step 4: Represent Entities Using JPA, JAXB, or JSON
+==== Step 4: Represent Entities Using JPA, JAXB, or JSON
 
 Entities in RESTful Data Services are represented in two ways:
 
@@ -216,17 +145,11 @@ objects are mapped. Additionally, the persistence unit property
 `eclipselink.jpa-rs.oxm` can be specified in a persistence unit's
 `persistence.xml` to specify XML-defined JAXB mappings.
 
-[#TLADG1166]##
-
-[#sthref157]##
-
-==== Relationships
+===== Relationships
 
 In general, JAXB default mappings are sufficient to allow information
 exchange using JSON/JAXB. There are, however, some special cases when
 dealing with relationships.
-
-[#TLADG1167]##
 
 *Bidirectional Relationships and Cycles*
 
@@ -296,7 +219,7 @@ If the objects are identified as follows...
   }
 ----
 
-[#CHDBDBHJ]####[#TLADG1168]####
+[[CHDBDBHJ]]
 
 *Passing By Value vs. Passing By Reference*
 
@@ -305,7 +228,7 @@ value or by reference in the REST request. JSON attributes hold resource
 references (see link:#CHDBADFD["Pass By Value"]), while `_relationship`s
 have "navigation" links (see link:#CHDFJAII["Pass By Reference"]).
 
-[#CHDBADFD]####[#TLADG1206]####
+[[CHDBADFD]]
 
 *Pass By Value*
 
@@ -322,7 +245,7 @@ the object. The following JSON passes `myA` by value:
   }
 ----
 
-[#CHDFJAII]####[#TLADG1207]####
+[[CHDFJAII]]
 
 *Pass By Reference*
 
@@ -445,18 +368,18 @@ attributes and a list of an entity called `Bid`.
   </Auction> 
 ----
 
-[#CHDCIHEG]####[#TLADG1161]####
+[[CHDCIHEG]]
 
-=== Step 5: Issue Client Calls for Operations on the Persistence Unit
+==== Step 5: Issue Client Calls for Operations on the Persistence Unit
 
 Clients use HTTP calls to perform operations on persistence units in a
 deployed application. The requirements and options for constructing the
-calls are described in link:restful_jpa004.htm#CHDEGJIG[RESTful Data
+calls are described in xref:{relativedir}/restful_jpa004.adoc#RESTJPA004[RESTful Data
 Services API Reference.]
 
-[#CHDCDFHG]####[#TLADG1162]####
+[[CHDCDFHG]]
 
-==== Specify Media Format in the Header
+===== Specify Media Format in the Header
 
 This REST interface can handle both XML and JSON representations of
 data. The caller is responsible for using HTTP header values to indicate
@@ -475,24 +398,14 @@ If no header value is specified, JSON is used by default. If
 `Content-type` is specified and `Accept` is not specified, the returned
 format matches the `Content-type` passed in.
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-In many REST utilities, the `Accept` value is defaulted to
+NOTE: In many REST utilities, the `Accept` value is defaulted to
 `application/xml`. In those cases, you must configure this value
 explicitly if you want JSON.
 
-|===
 
- +
+[[CHDGBJGH]]
 
-[#CHDGBJGH]####[#TLADG1164]####
-
-==== About Logging
+===== About Logging
 
 Messages related to RESTful Data Services operations are logged to a
 logger called `org.eclipse.persistence.jpars`. Most messages are logged
@@ -502,15 +415,15 @@ Messages related to operations within `EntityManager`s,
 `EntityManagerFactory`s and `JAXBContext`s are logged in the same manner
 as other EclipseLink logging.
 
-[#CHDGJEDF]####[#TLADG1171]####
+[[CHDGJEDF]]
 
-=== Step 6: Implement Security
+==== Step 6: Implement Security
 
 Secure RESTful Data Services through typical REST security mechanisms.
 
-[#CHDHGACD]####[#TLADG1208]####
+[[CHDHGACD]]
 
-=== Step 7: Understand the Structure of RESTful Data Services Responses
+==== Step 7: Understand the Structure of RESTful Data Services Responses
 
 The RESTful Data Services response messages, either in XML or in JSON,
 contain following categories:
@@ -551,11 +464,7 @@ from the name of the entity it represents.
 </employee>
 ----
 
-[#TLADG1209]##
-
-[#sthref158]##
-
-==== Basic Data Types
+===== Basic Data Types
 
 In the RESTful Data Services responses, basic data types and primitives
 are presented as simple JSON or XML fields. For example:
@@ -583,11 +492,7 @@ are presented as simple JSON or XML fields. For example:
 </employee>
 ----
 
-[#TLADG1210]##
-
-[#sthref159]##
-
-==== Links and Relationships
+===== Links and Relationships
 
 RESTful Data Services operations return all relationships by reference,
 with the exception of JPA embeddables and element collections.
@@ -686,35 +591,3 @@ the response will contain list of `Certification` objects, not links:
    ...
 }
 ----
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:restful_jpa001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:restful_jpa003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
-link:../../dcommon/html/cpyr.htm[ +
-] a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

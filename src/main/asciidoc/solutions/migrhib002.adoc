@@ -1,57 +1,42 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*EclipseLink Solutions Guide for EclipseLink* +
-Release 4.0 a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:migrhib001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:migrhib003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#BGBBIHFB]####[#TLADG462]####
-
-== Main Tasks
+///////////////////////////////////////////////////////////////////////////////
+[[MIGRATEHIBERNATE002]]
+=== Main Tasks
 
 Complete these tasks to migrate an application that uses Hibernate as
 its persistence provider to EclipseLink.
 
 * link:#BGBFIGDF[Task 1: Convert the Hibernate Entity Annotation]
-* link:#BGBCJCBF[Task 2: Convert the Hibernate Custom Sequence Generator
-Annotation]
+* link:#BGBCJCBF[Task 2: Convert the Hibernate Custom Sequence Generator Annotation]
 * link:#BGBDFADJ[Task 3: Convert Hibernate Mapping Annotations]
 * link:#BGBGAGJD[Task 4: Modify the persistence.xml File]
 * link:#BGBGDHBH[Task 5: Convert Hibernate API to EclipseLink API]
 
-[#TLADG1114]##
-
-[#sthref49]##
-
-=== Task 1: Prerequisites
+==== Task 1: Prerequisites
 
 EclipseLink 2.4 or later.
 
 Download EclipseLink from
 `http://www.eclipse.org/eclipselink/downloads/`.
 
-[#BGBFIGDF]####[#TLADG463]####
+[[BGBFIGDF]]
 
-=== Task 1: Convert the Hibernate Entity Annotation
+==== Task 2: Convert the Hibernate Entity Annotation
 
 The Hibernate entity annotation, defined by the
 `org.hibernate.annotations.Entity` class, adds additional metadata
@@ -63,7 +48,7 @@ annotation. The example uses the `selectBeforeUpdate`, `dynamicInsert`,
 that the Hibernate entity annotation also defines `mutable` and
 `persister` attributes, which are not used in this example.
 
-[#BGBJIHJB]####[#TLADG464]####
+[[BGBJIHJB]]
 
 *_Example 8-1 Sample Hibernate Entity Annotation_*
 
@@ -84,11 +69,7 @@ Eclipselink documentation, at:
 
 `http://wiki.eclipse.org/EclipseLink/Examples/JPA/Migration/Hibernate/V3Annotations`
 
-[#TLADG465]##
-
-[#sthref50]##
-
-==== Convert the SelectBeforeUpdate, dynamicInsert and dynamicUpdate Attributes
+===== Convert the SelectBeforeUpdate, dynamicInsert and dynamicUpdate Attributes
 
 In Hibernate, the `selectBeforeUpdate` attribute specifies that
 Hibernate should never perform a SQL update unless it is certain that an
@@ -104,11 +85,7 @@ update only the columns that have changed. If alternative operations are
 required, then the queries used for these operations can be customized
 by using Java code, SQL, or stored procedures.
 
-[#TLADG466]##
-
-[#sthref51]##
-
-==== Convert the OptimisticLock Attribute
+===== Convert the OptimisticLock Attribute
 
 In Hibernate, the `optimisticLock` attribute determines the optimistic
 locking strategy.
@@ -121,12 +98,11 @@ with the EclipseLink `@OptimisticLocking` annotation or in the
 EclipseLink `orm.xml` file. For more information, see
 @OptimisticLocking.
 
-[#TLADG467]####[#sthref52]####[#BGBFBBCE]##
+[[BGBFBBCE]]
 
 *_Table 8-1 Translating Hibernate's OptimisticLock to EclipseLink's
 OptimisticLocking_*
 
-[width="48%",cols="<55%,<45%,<",options="header",]
 |===
 |*Hibernate's OptimisticLock Type* |*Description* |*EclipseLink
 OptimisticLocking*
@@ -150,23 +126,21 @@ Use the EclipseLink annotation:
 
 |===
 
- +
-
 Additionally, EclipseLink allows you to compare a specific set of
 selected columns using the `OptimisticLockingType.SELECTED_COLUMNS`
 annotation. This allows you to select the critical columns that should
 be compared if the `CHANGED` or `ALL` strategies do not meet your needs.
 
-[#BGBCJCBF]####[#TLADG468]####
+[[BGBCJCBF]]
 
-=== Task 2: Convert the Hibernate Custom Sequence Generator Annotation
+==== Task 3: Convert the Hibernate Custom Sequence Generator Annotation
 
 In Hibernate, the `@GeneratedValue` annotation defines the identifier
 generation strategy. The `@GenericGenerator` allows you to define a
 Hibernate-specific ID generator. link:#BGBHCBDG[Example 8-2] illustrates
 a custom generator for sequence values.
 
-[#BGBHCBDG]####[#TLADG469]####
+[[BGBHCBDG]]
 
 *_Example 8-2 Custom Generator for Sequence Values_*
 
@@ -193,18 +167,14 @@ to use Custom Sequencing"] in the EclipseLink documentation, at:
 
 `http://wiki.eclipse.org/EclipseLink/Examples/JPA/CustomSequencing`
 
-[#BGBDFADJ]####[#TLADG470]####
+[[BGBDFADJ]]
 
-=== Task 3: Convert Hibernate Mapping Annotations
+==== Task 4: Convert Hibernate Mapping Annotations
 
 The following sections describe how to convert various Hibernate
 annotations to EclipseLink annotations.
 
-[#TLADG471]##
-
-[#sthref53]##
-
-==== Convert the @ForeignKey Annotation
+===== Convert the @ForeignKey Annotation
 
 In Hibernate, the `@ForeignKey` annotation allows you to define the name
 of the foreign key to be used during schema generation.
@@ -216,27 +186,12 @@ to have EclipseLink generate the schema (DDL) commands to a script file
 instead of directly on the database. The script can then be customized
 to use different names prior to being executed.
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-The foreign key name is not used by EclipseLink at runtime, but is
+NOTE: The foreign key name is not used by EclipseLink at runtime, but is
 required if EclipseLink attempts to drop the schema. In this case, the
 drop script should be generated to a file and customized to match the
 foreign key names used during creation.
 
-|===
-
- +
-
-[#TLADG472]##
-
-[#sthref54]##
-
-==== Convert the @Cache Annotation
+===== Convert the @Cache Annotation
 
 In Hibernate, the `@Cache` annotation configures the caching of entities
 and relationships. Because EclipseLink uses an entity cache instead of a
@@ -247,9 +202,9 @@ EclipseLink `@Cache` annotation. For more information about the `@Cache`
 annotation and equivalent `eclipselink-orm.xml` configuration values,
 see Jakarta Persistence API (JPA) Extensions Reference for EclipseLink.
 
-[#BGBGAGJD]####[#TLADG473]####
+[[BGBGAGJD]]
 
-=== Task 4: Modify the persistence.xml File
+==== Task 5: Modify the persistence.xml File
 
 The `persistence.xml` file is the deployment descriptor file for JPA
 persistence. It specifies the persistence units, and declares the
@@ -258,7 +213,7 @@ database connection details. link:#BGBBIHAD[Example 8-3] illustrates a
 `persistence.xml` file for an application that uses Hibernate.
 Hibernate-specific values appear in bold font.
 
-[#BGBBIHAD]####[#TLADG474]####
+[[BGBBIHAD]]
 
 *_Example 8-3 Persistence File for an Application that Uses Hibernate_*
 
@@ -276,11 +231,7 @@ Hibernate-specific values appear in bold font.
 </persistence>
 ----
 
-[#TLADG475]##
-
-[#sthref55]##
-
-==== Modified persistence.xml File
+===== Modified persistence.xml File
 
 link:#BGBHEIEJ[Example 8-4] illustrates a `persistence.xml` file
 modified for an application that uses EclipseLink. Key differences
@@ -290,7 +241,7 @@ EclipseLink-specific properties are typically be prefixed by
 `eclipselink`, for example, `eclipselink.target-database`.
 EclipseLink-specific values appear in bold font.
 
-[#BGBHEIEJ]####[#TLADG476]####
+[[BGBHEIEJ]]
 
 *_Example 8-4 Persistence File Modified for EclipseLink_*
 
@@ -314,11 +265,7 @@ EclipseLink-specific values appear in bold font.
 </persistence> 
 ----
 
-[#TLADG477]##
-
-[#sthref56]##
-
-==== Drop and Create the Database Tables
+===== Drop and Create the Database Tables
 
 For production environments, you would usually have the schema set up on
 the database. The following properties defined in the persistence unit
@@ -339,31 +286,17 @@ For more information on this feature, see the `drop-and-create-tables`
 entry in "ddl-generation" in _Jakarta Persistence API (JPA) Extensions
 Reference for EclipseLink_.
 
-[#TLADG1115]##
 
-[#sthref57]##
-
-==== Create or Extend Database Tables
+===== Create or Extend Database Tables
 
 The Create or Extend Database Tables feature allows you match the
 database schema to the object model by creating new database tables or
 by modifying existing tables. You can modify existing tables by
 specifying field name changes and by add and removing fields.
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-In the current release, the Create or Extend Database Tables feature
+NOTE: In the current release, the Create or Extend Database Tables feature
 will not rename or delete existing columns. It will only add missing
 table columns.
-
-|===
-
- +
 
 The Create or Extend Database Tables feature reduces the need to
 repopulate test data. You avoid the need to use the Drop and Create
@@ -387,9 +320,9 @@ For more information on this feature, see the `create-or-extend-tables`
 entry in "ddl-generation" in _Jakarta Persistence API (JPA) Extensions
 Reference for EclipseLink_.
 
-[#BGBGDHBH]####[#TLADG478]####
+[[BGBGDHBH]]
 
-=== Task 5: Convert Hibernate API to EclipseLink API
+==== Task 6: Convert Hibernate API to EclipseLink API
 
 link:#BGBDAHCF[Table 8-2] describes the Hibernate classes that are
 commonly used in a JPA project and their equivalent EclipseLink (JPA)
@@ -400,11 +333,10 @@ the `jakarta.persistence` package.
 For information about the EclipseLink API, see _Java API Reference for
 EclipseLink_.
 
-[#TLADG479]####[#sthref58]####[#BGBDAHCF]##
+[[BGBDAHCF]]
 
 *_Table 8-2 Hibernate Classes and Equivalent JPA Interfaces_*
 
-[width="48%",cols="<44%,<56%,<",options="header",]
 |===
 |*org.hibernate* |*jakarta.persistence* |*Description*
 |`cfg.Configuration` |`Persistence` |Provides a bootstrap class that
@@ -426,37 +358,3 @@ transactions.
 
 |`Query` |`Query` |Provides APIs to execute queries.
 |===
-
- +
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:migrhib001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:migrhib003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
-link:../../dcommon/html/cpyr.htm[ +
-] a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

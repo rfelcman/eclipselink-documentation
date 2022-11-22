@@ -1,32 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*EclipseLink Solutions Guide for EclipseLink* +
-Release 4.0 a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:testingjpa.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:testingjpa002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#CHDHAFFB]####[#TLADG396]####
-
-== Understanding JPA Deployment
+///////////////////////////////////////////////////////////////////////////////
+[[TESTINGJPA001]]
+=== Understanding JPA Deployment
 
 When deploying outside of a container, use the
 `createEntityManagerFactory` method of the
@@ -37,25 +27,10 @@ combined with those specified in the `persistence.xml` file. They may be
 additional properties or they may override the value of a property that
 you specified previously in the `persistence.xml` file.
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-*Tip:*
-
-This is a convenient way to set properties obtained from program input,
+TIP: This is a convenient way to set properties obtained from program input,
 such as the command line.
 
-|===
-
- +
-
-[#TLADG397]##
-
-[#sthref137]##
-
-=== Using EntityManager
+==== Using EntityManager
 
 The `EntityManager` is the access point for persisting an entity bean,
 loading it from the database. Usually, the Jakarta Persistence API (JPA)
@@ -67,7 +42,7 @@ to `createEntityManagerFactory` to change the transaction type from
 `JTA` to `RESOURCE_LOCAL` and to define JDBC connection information, as
 shown here:
 
-[#TLADG1204]####[#sthref138]####
+[[sthref138]]
 
 *_Example 17-1 Changing transaction type and defining connection
 information_*
@@ -101,35 +76,3 @@ properties.put(TARGET_SERVER, TargetServer.None);
 
 You also have access to the EclipseLink extensions to the
 `EntityManager`.
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:testingjpa.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:testingjpa002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
-link:../../dcommon/html/cpyr.htm[ +
-] a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

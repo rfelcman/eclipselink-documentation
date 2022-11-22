@@ -429,7 +429,7 @@ use additional criteria to configure such restrictions.
 NOTE: In most cases, you use the `@Multitenant` annotation in multitenancy
 environments instead, as shown.
 
-[[TLJPA54054]][[sthref13]]
+[[TLJPA54054]]
 
 *_Example 2-3 Multitenancy Example 1_*
 
@@ -441,7 +441,7 @@ a billing application or billing organization:
 @AdditionalCriteria("this.tenant = 'Billing'")
 ----
 
-[[TLJPA54055]][[sthref14]]
+[[TLJPA54055]]
 
 *_Example 2-4 Multitenancy Example 2_*
 
@@ -704,7 +704,7 @@ databases, this may only work for singleton IDs.
 The following examples show how to use this annotation (and XML) with
 different batch fetch types.
 
-[[TLJPA331]][[sthref25]]
+[[TLJPA331]]
 
 *_Example 2-7 Using JOIN BatchFetch Type_*
 
@@ -724,7 +724,7 @@ private Address address;
  
 ----
 
-[[TLJPA332]][[sthref26]]
+[[TLJPA332]]
 
 *_Example 2-8 Using EXISTS BatchFetch Type_*
 
@@ -744,7 +744,7 @@ return stringMap;
 </one-to-one>
 ----
 
-[[TLJPA333]][[sthref27]]
+[[TLJPA333]]
 
 *_Example 2-9 Using IN BatchFetch Type_*
 
@@ -1862,7 +1862,7 @@ member persistence unit. It may be used in conjunction with
 You can configure the `CompositeMember` using annotations or the
 `eclipselink-orm.xml` file, as shown in these examples.
 
-[[TLJPA371]][[sthref72]]
+[[TLJPA371]]
 
 *_Example 2-27 Using @CompositeMember Annotation_*
 
@@ -1877,7 +1877,7 @@ public Collection<String> getResponsibilities() {
 }
 ----
 
-[[TLJPA372]][[sthref73]]
+[[TLJPA372]]
 
 *_Example 2-28 Using <composite-member> XML_*
 
@@ -1899,8 +1899,8 @@ For more information, see:
 
 * "Using Multiple Databases with a Composite Persistence Unit" in
 _Solutions Guide for EclispeLink_
-* xref:{relativedir}/persistenceproperties_ref.adoc#BIICFIDB["composite-unit"]
-* xref:{relativedir}/persistenceproperties_ref.adoc#CHDHCIDH["composite-unit.member"]
+* xref:{relativedir}/persistenceproperties_ref.adoc#composite-unit["composite-unit"]
+* xref:{relativedir}/persistenceproperties_ref.adoc#compositeunitmember["composite-unit.member"]
 * "Composite Persistence Units"
 `http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Composite_Persistence_Units`
 
@@ -2429,7 +2429,7 @@ in the `eclipselink-orm.xml` file.
 
 For more information, see:
 
-* xref:{relativedir}/persistenceproperties_ref.adoc#CCHIEAIA["descriptor.customizer"]
+* xref:{relativedir}/persistenceproperties_ref.adoc#descriptorcustomizer["descriptor.customizer"]
 * "Binding JPA Entities to XML" in _Solutions Guide for EclispeLink_
 * EclipseLink Examples
 `http://wiki.eclipse.org/EclipseLink/Examples/JPA/MappingSelectionCriteria`
@@ -2498,7 +2498,7 @@ public class Department {
 link:#CBHBIFII[Example 2-38] shows how to use the `<delete-all>` element
 in the `eclipselink-orm.xml` file.
 
-[[TLJPA397]][[sthref107]]
+[[TLJPA397]]
 
 *_Example 2-39 Using <delete-all> XML_*
 
@@ -2795,7 +2795,7 @@ public class Person {
    private ContactInfo contactInfo;
 ----
 
-[[TLJPA54004]][[sthref127]]
+[[TLJPA54004]]
 
 *_Example 2-43 Using <fetch-group> XML_*
 
@@ -3210,7 +3210,7 @@ commonly be used in queries.
 This example defines three indexes, one on *first name*, one on *last
 name*, and a multiple column index on *first name* _and_ *last name*.
 
-[[TLJPA420]][[sthref153]]
+[[TLJPA420]]
 
 *_Example 2-48 Using @Index Annotation_*
 
@@ -3236,7 +3236,7 @@ using `<index>`, as shown in the following example. Define columns using
 the `<column>` subelement. All the attributes supported in the `@Index`
 annotation are also supported in the `<index>` element.
 
-[[TLJPA421]][[sthref154]]
+[[TLJPA421]]
 
 *_Example 2-49 Using <index> XML_*
 
@@ -3330,7 +3330,7 @@ use `@InstantiationCopyPolicy`.
 The default EclipseLink copy policy depends on your configuration:
 
 * When using
-xref:{relativedir}/persistenceproperties_ref.adoc#BABJICDJ[weaving.internal] (and field
+xref:{relativedir}/persistenceproperties_ref.adoc#weavinginternal[weaving.internal] (and field
 access), EclipseLink generates a specialized clone method to copy
 objects.
 * Without weaving, EclipseLink uses instantiation to copy objects.
@@ -3381,7 +3381,7 @@ For more information, see:
 
 * link:#BGBDGCDJ["@CopyPolicy"]
 * link:#CDDJGFHA["@CloneCopyPolicy"]
-* xref:{relativedir}/persistenceproperties_ref.adoc#BABJICDJ["weaving.internal"]
+* xref:{relativedir}/persistenceproperties_ref.adoc#weavinginternal["weaving.internal"]
 
 [[CEGFFHHA]][[TLJPA428]]
 
@@ -3449,7 +3449,7 @@ especially for collection relationships.
 The following example shows how to use the `@JoinFetch` annotation to
 specify Employee field `managedEmployees`.
 
-[[TLJPA430]][[sthref168]]
+[[TLJPA430]]
 
 *_Example 2-52 Using @JoinFetch Annotation_*
 
@@ -3551,7 +3551,7 @@ public class Order {
 }
 ----
 
-[[TLJPA54007]][[sthref174]]
+[[TLJPA54007]]
 
 *_Example 2-55 Using <join-field> in XML_*
 
@@ -3871,7 +3871,7 @@ link:#CHECIDGH["@TenantDiscriminatorColumn"].
 The following example uses `@Multitenant`, `@TenantDiscriminatorColumn`,
 and a context property to define single-table multitenancy on an entity:
 
-[[TLJPA711]][[sthref190]]
+[[TLJPA711]]
 
 *_Example 2-59 Example Using @Multitenant_*
 
@@ -3888,7 +3888,7 @@ The following example uses the `<multitenant>` element to specify a
 minimal single-table multitenancy. `SINGLE_TABLE` is the default value
 and therefore does not have to be specified.
 
-[[TLJPA712]][[sthref191]]
+[[TLJPA712]]
 
 *_Example 2-60 Example Using <multitenant>_*
 
@@ -3948,7 +3948,7 @@ table-per-tenant multitenancy on an entity.
 `@TenantTableDiscriminator(SCHEMA)` specifies that the discriminator
 table is identified by schema.
 
-[[TLJPA715]][[sthref193]]
+[[TLJPA715]]
 
 *_Example 2-61 Example Using @Multitenant with
 @TenantTableDiscriminator_*
@@ -3968,7 +3968,7 @@ The following example shows the `<multitenant>` element and the
 `<tenant-table-discriminator>` elements used to define a minimal
 table-per-tenant multitenancy.
 
-[[TLJPA716]][[sthref194]]
+[[TLJPA716]]
 
 *_Example 2-62 Example Using <multitenant> with
 <tenant-table-discriminator>_*
@@ -4034,7 +4034,7 @@ public class Task implements Serializable {
 
 The following example shows...
 
-[[TLJPA720]][[sthref196]]
+[[TLJPA720]]
 
 *_Example 2-64 Example Using <multitenant>_*
 
@@ -5122,7 +5122,7 @@ Grid_
 * "Using NoSQL Databases" in _Understanding EclipseLink_
 * "Using EclipseLink with Nonrelational Databases" in _Solutions Guide
 for EclispeLink_
-* xref:{relativedir}/persistenceproperties_ref.adoc#BABJAJAI["nosql.property"]
+* xref:{relativedir}/persistenceproperties_ref.adoc#nosqlproperty["nosql.property"]
 * EclipseLink Platform Incubator
 `http://wiki.eclipse.org/EclipseLink/Development/Incubator/Platform`
 * Supported NoSQL and EIS Datasources
@@ -5381,7 +5381,7 @@ annotation for all columns
 link:#BCGJBJFJ[Example 2-83] shows how to use the `<optimistic-locking>`
 element in the `eclipselink-orm.xml` file for a single column.
 
-[[TLJPA488]][[sthref262]]
+[[TLJPA488]]
 
 *_Example 2-84 Using <optimistic-locking> XML_*
 
@@ -6411,7 +6411,7 @@ and non-associative (nested) tables differ. |`false`
 
 *Examples*
 
-[[TLJPA54113]][[sthref317]]
+[[TLJPA54113]]
 
 *_Example 2-93 Using the @PLSQLTable Annotation_*
 
@@ -6598,7 +6598,7 @@ element in your `eclipselink-orm.xml` file.
 For more information, see:
 
 * "@Id"`http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Entities/Ids/Id`
-* xref:{relativedir}/persistenceproperties_ref.adoc#CACEEGCC["id-validation"]
+* xref:{relativedir}/persistenceproperties_ref.adoc#idvalidation["id-validation"]
 * link:#CACGCEIJ["Entity Annotations"]
 
 [[CHDDDDAI]][[TLJPA507]]
@@ -7095,7 +7095,7 @@ public class Project implements Serializable {
 link:#BCGIJGHH[Example 2-98] shows how to use the `<range-partitioning>`
 element in the `eclipselink-orm.xml` file.
 
-[[TLJPA522]][[sthref355]]
+[[TLJPA522]]
 
 *_Example 2-99 Using <range-partitioning> XML_*
 
@@ -8038,7 +8038,7 @@ protected Address address;
 You can also define structure mappings in the `eclipselink-orm.xml` file
 by using the `<structure>` element.
 
-[[TLJPA554]][[sthref411]]
+[[TLJPA554]]
 
 *_Example 2-115 Using <structure> XML_*
 
@@ -8488,7 +8488,7 @@ table-per-tenant multitenancy, see link:#BABIEJGD["@Multitenant"].
 
 The following example shows a `SCHEMA`-type table discriminator.
 
-[[TLJPA563]][[sthref429]]
+[[TLJPA563]]
 
 *_Example 2-118 Using @TenantTableDiscriminator Annotation_*
 
@@ -8504,7 +8504,7 @@ public class Employee {
  
 ----
 
-[[TLJPA564]][[sthref430]]
+[[TLJPA564]]
 
 *_Example 2-119 Using **<tenant-table-discriminator**> XML_*
 
@@ -8830,7 +8830,7 @@ public class Parameters implements Serializable {
 link:#BCFEHCDH[Example 2-123] shows how to use the `<type-converters>`
 element in the `eclipselink-orm.xml` file.
 
-[[TLJPA577]][[sthref450]]
+[[TLJPA577]]
 
 *_Example 2-124 Using <type-converters> XML_*
 
@@ -9455,7 +9455,7 @@ mappings with in which `accessType`=VIRTUAL.
 
 link:#CIHCCFIH[Table 2-87] shows an entity using property access.
 
-[[TLJPA597]][[sthref486]]
+[[TLJPA597]]
 
 *_Example 2-132 Using @VirtualAccessMethods Annotation_*
 

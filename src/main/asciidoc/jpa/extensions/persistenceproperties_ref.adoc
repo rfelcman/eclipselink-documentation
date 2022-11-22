@@ -2197,7 +2197,7 @@ For more information, see:
 
 * xref:{relativedir}/annotations_ref.adoc#BGBHHCJH["@CompositeMember"]
 * link:#compositeunit["composite-unit"]
-* xref:{relativedir}/queryhints.adoc#CHDDFIDC["composite-unit.member"]
+* xref:{relativedir}/queryhints.adoc#compositeunitmember["composite-unit.member"]
 
 [[compositeunitproperties]][[TLJPA879]]
 
@@ -4656,7 +4656,7 @@ link:#CHDCHGGF[Example 5-58] shows how to use this property in the
 For more information, see:
 
 * link:#jpqlparser["jpql.parser"]
-* xref:{relativedir}/jpql.adoc#BABCIECD["Java Persistence Query Language Extensions"]
+* xref:{relativedir}/jpql.adoc#TLJPA54065["Java Persistence Query Language Extensions"]
 
 [[loggingconnection]][[TLJPA1097]]
 
@@ -6546,7 +6546,7 @@ propertiesMap.put(PersistenceUnitProperties.PERSISTENCE_CONTEXT_FLUSH_MODE,
 
 For more information, see:
 
-* xref:{relativedir}/queryhints.adoc#CBHFHGEB["flush"]
+* xref:{relativedir}/queryhints.adoc#flush["flush"]
 * "Enhancing Performance" in _Solutions Guide for EclispeLink_
 
 [[persistencecontextpersistoncommit]][[TLJPA1008]]
@@ -7150,7 +7150,7 @@ value="mypackage.MyClass.class"/>
 link:#CHDJFEIG[Example 5-113] shows how to use this property in a
 property map.
 
-[[TLJPA1022]][[sthref1169]]
+[[TLJPA1022]]
 
 *_Example 5-114 Using session-event-listener in a Property Map_*
 

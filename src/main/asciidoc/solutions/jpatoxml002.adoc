@@ -1,46 +1,36 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*EclipseLink Solutions Guide for EclipseLink* +
-Release 4.0 a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:jpatoxml001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:jpatoxml003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#BEIGDBHI]####[#TLADG293]####
-
-== Binding JPA Entities to XML
+///////////////////////////////////////////////////////////////////////////////
+[[JPA2XML002]]
+=== Binding JPA Entities to XML
 
 The following examples demonstrate how to bind JPA entities to XML by
 using JAXB annotations. For more information about binding, see
-link:jpatoxml001.htm#BEIEHDIH[Understanding XML Binding] for more
-information about JAXB, see link:jpatoxml001.htm#BEIJHDEG[Understanding
+xref:{relativedir}/jpatoxml001.adoc#BEIEHDIH[Understanding XML Binding] for more
+information about JAXB, see xref:{relativedir}/jpatoxml001.adoc#BEIJHDEG[Understanding
 JAXB]
 
 * link:#BEICADBF[Binding JPA Relationships to XML]
 * link:#BEIIHFJG[Binding Compound Primary Keys to XML]
 * link:#BEIECBGA[Binding Embedded ID Classes to XML]
 
-[#BEICADBF]####[#TLADG294]####
+[[BEICADBF]]
 
-=== Binding JPA Relationships to XML
+==== Binding JPA Relationships to XML
 
 The following exercise demonstrate show to use JAXB to derive an XML
 representation from a set of JPA entities, a process called "binding"
@@ -53,9 +43,9 @@ These examples will show how to bind two common JPA relationships:
 to map an Employee entity to that employee's phone number, address, and
 department.
 
-[#BEIBJCIJ]####[#TLADG295]####
+[[BEIBJCIJ]]
 
-==== Task 1: Define the Accessor Type and Import Classes
+===== Task 1: Define the Accessor Type and Import Classes
 
 Since all of the following examples use the same accessor type, `FIELD`,
 define it at the package level by using the JAXB annotation
@@ -71,11 +61,7 @@ import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 ----
 
-[#TLADG296]##
-
-[#sthref97]##
-
-==== Task 2: Map Privately-Owned Relationships
+===== Task 2: Map Privately-Owned Relationships
 
 A "privately-owned" relationship occurs when the target object is only
 referenced by a single source object. This type of relationship can be
@@ -85,9 +71,9 @@ This Task shows how to create bi-directional mappings for both of these
 types of relationships between the `Employee` entity and the `Address`
 and `PhoneNumber` entities.
 
-[#BEIJCIBI]####[#TLADG297]####
+[[BEIJCIBI]]
 
-===== Mapping a One-to-One and Embedded Relationship
+====== Mapping a One-to-One and Embedded Relationship
 
 The JPA `@OneToOne` and `@Embedded` annotations indicate that only one
 instance of the source entity is able to refer to the same target entity
@@ -133,10 +119,6 @@ the foreign key.
 
 The entities should look like those shown in link:#BEIJFCEG[Example
 15-1] and link:#BEIEGBBE[Example 15-2].
-
-[#TLADG298]##
-
-[#sthref98]##
 
 ====== Mapping a One-to-Many Relationship
 
@@ -190,9 +172,9 @@ referenced by the foreign key (`referencedColumnName = "E_ID"`).
 The entities should look like those shown in link:#BEIJFCEG[Example
 15-1] and link:#BEIEEFBA[Example 15-3].
 
-[#BEIEEFII]####[#TLADG299]####
+[[BEIEEFII]]
 
-==== Task 3: Map the Shared Reference Relationship
+===== Task 3: Map the Shared Reference Relationship
 
 A shared reference relationship occurs when target objects are
 referenced by multiple source objects. For example, a business might be
@@ -210,11 +192,7 @@ fields and properties.
 This section contains examples that show how to map a many-to-one shared
 reference relationship and a many-to-many shared reference relationship.
 
-[#TLADG300]##
-
-[#sthref99]##
-
-===== Mapping a Many-to-One Shared Reference Relationship
+====== Mapping a Many-to-One Shared Reference Relationship
 
 In a many-to-one mapping, one or more instances of the source entity are
 able to refer to the same target entity instance. This example
@@ -259,11 +237,7 @@ relationship is owned by the `contact` field.
 The entities should look like those shown in link:#BEIJFCEG[Example
 15-1] and link:#BEIEEFBA[Example 15-3].
 
-[#TLADG301]##
-
-[#sthref100]##
-
-===== Mapping a Many-to-Many Shared Reference Relationship
+====== Mapping a Many-to-Many Shared Reference Relationship
 
 The `@ManyToMany` annotation indicates that one or more instances of the
 source entity are able to refer to one or more target entity instances.
@@ -335,11 +309,7 @@ inserting the following code:
 The entities should look like those shown in link:#BEIJFCEG[Example
 15-1] and link:#BEIHHJEA[Example 15-4].
 
-[#TLADG302]##
-
-[#sthref101]##
-
-==== JPA Entities
+===== JPA Entities
 
 Once the mappings are created, the entities should look like those in
 the following examples:
@@ -349,22 +319,11 @@ the following examples:
 * link:#BEIEEFBA[Example 15-3, "PhoneNumber Entity"]
 * link:#BEIHHJEA[Example 15-4, "Department Entity"]
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-In order to save space, package names, import statements, and the
+NOTE: In order to save space, package names, import statements, and the
 get/set methods have been omitted from the code examples. All examples
 use standard JPA annotations.
 
-|===
-
- +
-
-[#BEIJFCEG]####[#TLADG303]####
+[[BEIJFCEG]]
 
 *_Example 15-1 Employee Entity_*
 
@@ -391,7 +350,7 @@ public class Employee {
 }
 ----
 
-[#BEIEGBBE]####[#TLADG304]####
+[[BEIEGBBE]]
 
 *_Example 15-2 Address Entity_*
 
@@ -415,7 +374,7 @@ public class Address {
 }
 ----
 
-[#BEIEEFBA]####[#TLADG305]####
+[[BEIEEFBA]]
 
 *_Example 15-3 PhoneNumber Entity_*
 
@@ -438,7 +397,7 @@ public class PhoneNumber {
 }
 ----
 
-[#BEIHHJEA]####[#TLADG306]####
+[[BEIHHJEA]]
 
 *_Example 15-4 Department Entity_*
 
@@ -463,7 +422,7 @@ public class Department {
 }
 ----
 
-[#BEIIHFJG]####[#TLADG307]####
+[[BEIIHFJG]]
 
 === Binding Compound Primary Keys to XML
 
@@ -471,18 +430,10 @@ When a JPA entity has compound primary keys, you can bind it by using
 JAXB annotations and certain EclipseLink extensions, as shown in the
 following example.
 
-[#TLADG308]##
-
-[#sthref102]##
-
 ==== Task1: Define the XML Accessor Type
 
 Define the accessor type as `FIELD`, as described in link:#BEIBJCIJ[Task
 1: Define the Accessor Type and Import Classes]
-
-[#TLADG309]##
-
-[#sthref103]##
 
 ==== Task 2: Create the Target Object
 
@@ -535,7 +486,7 @@ type ID. This is a typical application of the `@XmlKey` annotation.
 
 The Employee entity should look like link:#BEIDFDDJ[Example 15-5]
 
-[#BEIDFDDJ]####[#TLADG310]####
+[[BEIDFDDJ]]
 
 *_Example 15-5 Employee Entity with Compound Primary Keys_*
 
@@ -579,10 +530,6 @@ public class EmployeeId {
     }
 }
 ----
-
-[#TLADG311]##
-
-[#sthref104]##
 
 ==== Task 3: Create the Source Object
 
@@ -630,7 +577,7 @@ private Employee contact;
 
 The target object should look like link:#BEIFBGAG[Example 15-6].
 
-[#BEIFBGAG]####[#TLADG312]####
+[[BEIFBGAG]]
 
 *_Example 15-6 PhoneNumber Entity_*
 
@@ -653,9 +600,9 @@ public class PhoneNumber {
 }
 ----
 
-[#BEIECBGA]####[#TLADG313]####
+[[BEIECBGA]]
 
-=== Binding Embedded ID Classes to XML
+==== Binding Embedded ID Classes to XML
 
 An embedded ID defines a separate `Embeddable` Java class to contain the
 entity's primary key. It is defined through the `@EmbeddedId`
@@ -665,18 +612,14 @@ embedded Id's `Embeddable` are assumed to be part of the primary key.
 This exercise shows how to derive an XML representation from a set of
 JPA entities using JAXB when a JPA entity has an embedded ID class.
 
-[#TLADG314]##
-
-[#sthref105]##
-
-==== Task1: Define the XML Accessor Type
+===== Task1: Define the XML Accessor Type
 
 Define the XML accessor type as `FIELD`, as described in
 link:#BEIBJCIJ[Task 1: Define the Accessor Type and Import Classes]
 
-[#BEIDGBIA]####[#TLADG315]####
+[[BEIDGBIA]]
 
-==== Task 2: Create the Target Object
+===== Task 2: Create the Target Object
 
 The target object is an entity called `Employee` and contains the
 mapping for an employee's contact phone number. Creating this target
@@ -722,7 +665,7 @@ relationships will be owned by the contact field, as indicated by the
 The completed target object should look like link:#BEIDAGDJ[Example
 15-7].
 
-[#BEIDAGDJ]####[#TLADG316]####
+[[BEIDAGDJ]]
 
 *_Example 15-7 Employee Entity as Target Object_*
 
@@ -743,11 +686,7 @@ public class Employee {
 }
 ----
 
-[#TLADG319]##
-
-[#sthref106]##
-
-==== Task 3: Create the Source Object
+===== Task 3: Create the Source Object
 
 The source object in this example has a compound key, so you must mark
 the field `@XmlTransient` to prevent a key from being mapped by itself.
@@ -786,7 +725,7 @@ _single_ ID, you would use the `@XmlIDREF` annotation.
 The completed `PhoneNumber` class should look like
 link:#BEIGJACE[Example 15-8].
 
-[#BEIGJACE]####[#TLADG320]####
+[[BEIGJACE]]
 
 *_Example 15-8 PhoneNumber Class as Source Object_*
 
@@ -809,11 +748,7 @@ public class PhoneNumber {
 }
 ----
 
-[#TLADG321]##
-
-[#sthref107]##
-
-==== Task 5: Implement the DescriptorCustomizer as PhoneNumberCustomizer Class
+===== Task 5: Implement the DescriptorCustomizer as PhoneNumberCustomizer Class
 
 Code added in Task 4 indicated the need to create the
 XMLObjectReferenceMappings to the new values. This requires to
@@ -839,7 +774,7 @@ public class PhoneNumberCustomizer implements DescriptorCustomizer {
 
 `PhoneNumberCustomizer` should look like link:#BEIFCHBH[Example 15-9].
 
-[#BEIFCHBH]####[#TLADG322]####
+[[BEIFCHBH]]
 
 *_Example 15-9 PhoneNumber Customizer with Updated Key Mappings_*
 
@@ -863,9 +798,9 @@ public class PhoneNumberCustomizer implements DescriptorCustomizer {
 }
 ----
 
-[#BEIBJBFA]####[#TLADG323]####
+[[BEIBJBFA]]
 
-=== Using the EclipseLink XML Binding Document
+===== Using the EclipseLink XML Binding Document
 
 As demonstrated in the preceding examples, EclipseLink implements the
 standard JAXB annotations to map JPA entities to an XML representation.
@@ -885,35 +820,3 @@ fields
 For more information about using the XML Bindings document, see XML
 Bindings in the JAXB/MOXy documentation at
 `http://wiki.eclipse.org/EclipseLink/UserGuide/MOXy/Runtime/XML_Bindings`.
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:jpatoxml001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:jpatoxml003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
-link:../../dcommon/html/cpyr.htm[ +
-] a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

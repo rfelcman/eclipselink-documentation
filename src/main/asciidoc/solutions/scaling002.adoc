@@ -1,32 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*EclipseLink Solutions Guide for EclipseLink* +
-Release 4.0 a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:scaling001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:scaling003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#CEGHIIGG]####[#TLADG198]####
-
-== Implementing the Solution
+///////////////////////////////////////////////////////////////////////////////
+[[SCALING002]]
+=== Implementing the Solution
 
 These tasks provide general instructions for ensuring that a EclipseLink
 application scales in an application server cluster. Complete the tasks
@@ -36,13 +26,12 @@ This section contains the following tasks:
 
 * link:#CEGBHAEA[Task 1: Configure Cache Consistency]
 * link:#CEGEHGCF[Task 2: Ensure EclipseLink Is Enabled]
-* link:#CEGJHBBG[Task 3: Ensure All Application Servers Are Part of the
-Cluster]
+* link:#CEGJHBBG[Task 3: Ensure All Application Servers Are Part of the Cluster]
 * link:#BABHHAEJ[Using Data Partitioning to Scale Data]
 
-[#CEGBHAEA]####[#TLADG199]####
+[[CEGBHAEA]]
 
-=== Task 1: Configure Cache Consistency
+==== Task 1: Configure Cache Consistency
 
 This task includes different configuration options that mitigate the
 possibility that an application might use stale data when deployed to an
@@ -63,24 +52,13 @@ The following are the configuration options:
 * link:#CEGCHFCD[Setting Optimistic Locking]
 * link:#CEGBAIIH[Using Cache Coordination]
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-Oracle provides a EclipseLink and Coherence integration that allows
+NOTE: Oracle provides a EclipseLink and Coherence integration that allows
 EclipseLink to use Coherence as the L2 cache. For details on EclipseLink
 Grid, see
 
-|===
+[[CEGEDHAB]]
 
- +
-
-[#CEGEDHAB]####[#TLADG200]####
-
-==== Disabling Entity Caching
+===== Disabling Entity Caching
 
 Disable the shared cache for highly volatile entities or for all
 entities as required. To disable the shared cache for all objects, use
@@ -105,9 +83,9 @@ public class Employee {
 }
 ----
 
-[#CEGBGIFB]####[#TLADG201]####
+[[CEGBGIFB]]
 
-==== Refreshing the Cache
+===== Refreshing the Cache
 
 Refreshing a cache reloads the cache from the database to ensure that an
 application is using current data. There are different ways to refresh a
@@ -161,9 +139,9 @@ query.setHint("jakarta.persistence.cache.storeMode", "REFRESH");
 Lastly, native API methods are also available. For details, see the
 `ClassDescriptor` documentation in _Java API Reference for EclipseLink_.
 
-[#CEGCABII]####[#TLADG202]####
+[[CEGCABII]]
 
-==== Setting Entity Caching Expiration
+===== Setting Entity Caching Expiration
 
 Cache expiration makes a cached object instance invalid after a
 specified amount of time. Any attempt to use the object causes the most
@@ -187,9 +165,9 @@ public class Employee {
 }
 ----
 
-[#CEGCHFCD]####[#TLADG203]####
+[[CEGCHFCD]]
 
-==== Setting Optimistic Locking
+===== Setting Optimistic Locking
 
 Optimistic locking prevents one user from writing over another user's
 work. Locking is important when multiple servers or multiple
@@ -221,9 +199,9 @@ a parent object when its privately owned child object's version field
 changes, use the `cascaded` method set to `true`. The method is set to
 `false` by default.
 
-[#CEGBAIIH]####[#TLADG204]####
+[[CEGBAIIH]]
 
-==== Using Cache Coordination
+===== Using Cache Coordination
 
 Cache coordination synchronizes changes among distributed sessions.
 Cache coordination is most useful in application server clusters where
@@ -257,11 +235,7 @@ For additional details on cache coordination see:
 
 _Jakarta Persistence API (JPA) Extensions Reference for EclipseLink_
 
-[#TLADG208]##
-
-[#sthref61]##
-
-===== Setting Cache Synchronization
+====== Setting Cache Synchronization
 
 Cache synchronization determines how notifications of object changes are
 broadcast among session members. The following synchronization options
@@ -295,11 +269,7 @@ The `ClassDescriptor.setCacheSynchronizationType` native API method can
 also be used to specify synchronization. For details, see the
 `ClassDescriptor` documentation in _Java API Reference for EclipseLink_.
 
-[#TLADG205]##
-
-[#sthref62]##
-
-===== Configuring JMS Cache Coordination Using Persistence Properties
+====== Configuring JMS Cache Coordination Using Persistence Properties
 
 The following example demonstrates how to configure cache coordination
 in the `persistence.xml` file and uses JMS for broadcast notification.
@@ -336,11 +306,7 @@ required. For example:
 <property name="eclipselink.cache.coordination.jndi.password" value="password" />
 ----
 
-[#TLADG206]##
-
-[#sthref63]##
-
-===== Configuring RMI Cache Coordination Using Persistence Properties
+====== Configuring RMI Cache Coordination Using Persistence Properties
 
 The following example demonstrates how to configure cache coordination
 in the `persistence.xml` file and uses RMI for broadcast notification:
@@ -412,11 +378,7 @@ configures the multicast settings:
 <property name="eclipselink.cache.coordination.packet-time-to-live" value="2" />
 ----
 
-[#TLADG1227]##
-
-[#sthref64]##
-
-===== Cache Coordination and Oracle WebLogic
+====== Cache Coordination and Oracle WebLogic
 
 Both RMI and JMS cache coordination work with Oracle WebLogic Server.
 When a WebLogic cluster is used JNDI is replicated among the cluster
@@ -428,11 +390,7 @@ dedicated JMS server if the JMS messaging traffic is heavy.
 
 Use of other JMS services in WebLogic may have other requirements.
 
-[#TLADG1228]##
-
-[#sthref65]##
-
-===== Cache Coordination and Glassfish
+====== Cache Coordination and Glassfish
 
 JMS cache coordination works with Glassfish Server. When a Glassfish
 cluster is used, JNDI is replicated among the cluster servers, so a
@@ -448,11 +406,7 @@ Each server must provide its own
 different `persistence.xml` file for each server, or by setting the URL
 as a System property in the server, or through a customizer.
 
-[#TLADG1229]##
-
-[#sthref66]##
-
-===== Cache Coordination and IBM WebSphere
+====== Cache Coordination and IBM WebSphere
 
 JMS cache coordination may have issues on IBM WebSphere. Use of a
 Message Driven Bean (MDB) may be required to allow access to JMS. To use
@@ -461,47 +415,36 @@ an MDB with cache coordination, set the
 `jms-publishing`. The application will also have to deploy an MDB that
 processes cache coordination messages in its EAR file.
 
-[#CEGBJIFB]####[#TLADG207]####
+[[CEGBJIFB]]
 
-===== Configuring Cache Coordination Using the Cache Coordination API
+====== Configuring Cache Coordination Using the Cache Coordination API
 
 The `CommandManager` interface allows you to programmatically configure
 cache coordination for a session. The interface is accessed using the
 `getCommandManager` method from the `DatabaseSession` interface.
 
-[#CEGEHGCF]####[#TLADG209]####
+[[CEGEHGCF]]
 
-=== Task 2: Ensure EclipseLink Is Enabled
+==== Task 2: Ensure EclipseLink Is Enabled
 
 Ensure that the EclipseLink JAR files are included on the classpath of
 each application server in the cluster to which the EclipseLink
 application is deployed and configure EclipseLink as the persistence
 provider. For detailed instructions about setting up EclipseLink with
 WebLogic Server and GlassFish Server, see
-link:tlandwls.htm#BABHCJBG[Chapter 3, "Using EclipseLink with WebLogic
-Server,"] and link:tlandgs.htm#BABDGFIC[Chapter 4, "Using EclipseLink
+xref:{relativedir}/tlandwls.adoc#ELWLS[Chapter 3, "Using EclipseLink with WebLogic
+Server,"] and xref:{relativedir}/tlandgs.adoc#ELGS[Chapter 4, "Using EclipseLink
 with GlassFish Server,"] respectively.
 
-[#CEGJHBBG]####[#TLADG210]####
+[[CEGJHBBG]]
 
-=== Task 3: Ensure All Application Servers Are Part of the Cluster
+==== Task 3: Ensure All Application Servers Are Part of the Cluster
 
 Configure an application server cluster that includes each application
 server that hosts the EclipseLink application:
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-TopLink relies on JMS and RMI and does not use the application server's
+NOTE: TopLink relies on JMS and RMI and does not use the application server's
 cluster communication.
-
-|===
-
- +
 
 * For WebLogic Server clustering see _Oracle Fusion Middleware Using
 Clusters for Oracle WebLogic Server_.
@@ -509,7 +452,7 @@ Clusters for Oracle WebLogic Server_.
 +
 `http://download.oracle.com/docs/cd/E18930_01/html/821-2426/index.html`
 
-[#BABHHAEJ]####[#TLADG988]####
+[[BABHHAEJ]]
 
 === Using Data Partitioning to Scale Data
 
@@ -525,11 +468,10 @@ persistence unit. To configure data partitioning, use the `@Partitioned`
 annotation and one or more partitioning policy annotations.
 link:#BABBIJCD[Table 10-1] describes the partitioning policies
 
-[#TLADG989]####[#sthref67]####[#BABBIJCD]##
+[[BABBIJCD]]
 
 *_Table 10-1 Partitioning Policies_*
 
-[width="39%",cols="<100%,<",options="header",]
 |===
 |*Annotation* |*Description*
 |`@HashPartitioning` |Partitions access to a database cluster by the
@@ -578,8 +520,6 @@ unioned, or it can be left to the session's default behavior.
 partitioning policy. A class that extends the `PartitioningPolicy` class
 must be provided.
 |===
-
- +
 
 Partitioning policies are globally-named objects in a persistence unit
 and are reusable across multiple descriptors or queries. This improves
@@ -664,10 +604,6 @@ public class Project {
 }
 ----
 
-[#TLADG990]##
-
-[#sthref68]##
-
 ==== Clustered Databases and Oracle RAC
 
 Some databases support clustering the database across multiple servers.
@@ -679,7 +615,7 @@ more efficient to partition the data access to specific nodes, to reduce
 cross node communication. Partitioning can be used in conjunction with a
 clustered database to reduce cross node communication, and improve
 scalability. For details on using EclipseLink with Oracle RAC, see
-link:oracledb002.htm#CHDIEBBB[Using EclipseLink with Oracle RAC.]
+xref:{relativedir}/oracledb002.adoc#CHDIEBBB[Using EclipseLink with Oracle RAC.]
 
 Adhere to the following requirements when using data partitioning with a
 database cluster:
@@ -695,35 +631,3 @@ to have each transaction only require access to a single node.
 * Usage of an exclusive connection for an `EntityManager` is recommended
 to avoid having multiple nodes in a single transaction and avoid 2-phase
 commit.
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:scaling001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:scaling003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
-link:../../dcommon/html/cpyr.htm[ +
-] a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

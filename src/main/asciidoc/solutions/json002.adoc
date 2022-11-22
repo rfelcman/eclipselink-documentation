@@ -1,32 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*EclipseLink Solutions Guide for EclipseLink* +
-Release 4.0 a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:json001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:json003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#A1584696]####[#TLADG763]####
-
-== Implementing the Solution
+///////////////////////////////////////////////////////////////////////////////
+[[JSON002]]
+=== Implementing the Solution
 
 This section contains the following tasks for converting objects to and
 from JSON documents.
@@ -36,19 +26,20 @@ from JSON documents.
 * link:#CHDDIFFD[Task 3: Specifying JSON Data Types]
 * link:#CHDBFEDC[Task 4: Supporting Attributes]
 * link:#CHDJEHFB[Task 5: Supporting no Root Element]
-* link:#CHDJIGDD[Task 6: Using Collections]
-* link:#CHDHHFIB[Task 7: Mapping Root-Level Collections]
-* link:#CHDIHBIF[Task 8: Wrapping Text Values]
+* link:#CHDJIGDDA[Task 6: Using Namespaces]
+* link:#CHDJIGDD[Task 7: Using Collections]
+* link:#CHDHHFIB[Task 8: Mapping Root-Level Collections]
+* link:#CHDIHBIF[Task 9: Wrapping Text Values]
 
-[#CHDHHDEH]####[#TLADG764]####
+[[CHDHHDEH]]
 
-=== Task 1: Marshalling and Unmarshalling JSON Documents
+==== Task 1: Marshalling and Unmarshalling JSON Documents
 
 Use the *eclipselink.media-type* property on your JAXB Marshaller or
 Unmarsaller to produce and use JSON documents with your application, as
 shown in link:#CHDEDEFA[Example 16-1].
 
-[#CHDEDEFA]####[#TLADG1133]####
+[[CHDEDEFA]]
 
 *_Example 16-1 Marshalling and Unmarshalling_*
 
@@ -69,7 +60,7 @@ You can also specify the `eclipselink.media-type` property in the `Map`
 of the properties used when you create the `JAXBContext`, as shown in
 link:#CHDCEFJJ[Example 16-2].
 
-[#CHDCEFJJ]####[#TLADG1134]####
+[[CHDCEFJJ]]
 
 *_Example 16-2 Using a Map_*
 
@@ -93,7 +84,7 @@ You can also configure your application to use JSON documents by using
 the `MarshallerProperties`, `UnmarshallerProperties`, and `MediaType`
 constants, as shown in link:#CHDFHBDA[Example 16-3].
 
-[#CHDFHBDA]####[#TLADG1135]####
+[[CHDFHBDA]]
 
 *_Example 16-3 Using MarshallerProperties and UnarshallerProperties_*
 
@@ -108,9 +99,9 @@ u.setProperty(UnmarshallerProperties.MEDIA_TYPE, MediaType.APPLICATION_JSON);
 ...
 ----
 
-[#CHDCBAIG]####[#TLADG765]####
+[[CHDCBAIG]]
 
-=== Task 2: Specifying JSON Bindings
+==== Task 2: Specifying JSON Bindings
 
 link:#CHDJCEEE[Example 16-4] shows a basic JSON binding that does not
 require compile time dependencies in addition to those required for
@@ -118,7 +109,7 @@ normal JAXB usage. This example shows how to unmarshal JSON from a
 `StreamSource` into the user object `SearchResults`, add a new `Result`
 to the collection, and then marshal the new collection to `System.out`.
 
-[#CHDJCEEE]####[#TLADG1136]####
+[[CHDJCEEE]]
 
 *_Example 16-4 Using Basic JSON Binding_*
 
@@ -166,7 +157,7 @@ You can also write MOXy External Bindings files as JSON documents.
 link:#CHDEFJCC[Example 16-5] shows how to use `bindings.json` to map
 *Customer* and *PhoneNumber* classes to JSON.
 
-[#CHDEFJCC]####[#TLADG1137]####
+[[CHDEFJCC]]
 
 *_Example 16-5 Using External Bindings_*
 
@@ -210,7 +201,7 @@ link:#CHDEFJCC[Example 16-5] shows how to use `bindings.json` to map
 link:#CHDDAECA[Example 16-6] shows how to use the JSON file (created in
 link:#CHDEFJCC[Example 16-5]) when bootstrapping a `JAXBContext`.
 
-[#CHDDAECA]####[#TLADG1138]####
+[[CHDDAECA]]
 
 *_Example 16-6 Using JSON to Bootstrap a JAXBContext_*
 
@@ -226,15 +217,15 @@ StreamSource json = new StreamSource(new File("src/org/example/input.json"));
 ...
 ----
 
-[#CHDDIFFD]####[#TLADG766]####
+[[CHDDIFFD]]
 
-=== Task 3: Specifying JSON Data Types
+==== Task 3: Specifying JSON Data Types
 
 Although XML has a single datatype, JSON differentiates between strings,
 numbers, and booleans. EclipseLink supports these datatypes
 automatically, as shown in link:#BABEFCED[Example 16-7]
 
-[#BABEFCED]####[#TLADG1139]####
+[[BABEFCED]]
 
 *_Example 16-7 Using JSON Data Types_*
 
@@ -255,9 +246,9 @@ public class Address {
 }
 ----
 
-[#CHDBFEDC]####[#TLADG1141]####
+[[CHDBFEDC]]
 
-=== Task 4: Supporting Attributes
+==== Task 4: Supporting Attributes
 
 JSON does not use attributes; anything mapped with a `@XmlAttribute`
 annotation will be marshalled as an element. By default, EclipseLink
@@ -272,7 +263,7 @@ attribute name during marshal and will recognize it during unmarshal.
 In the example below the `number` field is mapped as an attribute with
 the prefix *@*.
 
-[#CHDICAHE]####[#TLADG1142]####
+[[CHDICAHE]]
 
 *_Example 16-8 Using a Prefix_*
 
@@ -298,7 +289,7 @@ when creating the `JAXBContext`, as shown in link:#CHDIIHGC[Example
 16-9]. All marshallers and unmarshalers created from the context will
 use the specified prefix.
 
-[#CHDIIHGC]####[#TLADG1143]####
+[[CHDIIHGC]]
 
 *_Example 16-9 Setting a Prefix in a Map_*
 
@@ -310,9 +301,9 @@ properties.put(JAXBContextProperties.JSON_ATTRIBUTE_PREFIX, "@");
 JAXBContext ctx = JAXBContext.newInstance(new Class[] { Phone.class }, properties);
 ----
 
-[#CHDJEHFB]####[#TLADG1144]####
+[[CHDJEHFB]]
 
-=== Task 5: Supporting no Root Element
+==== Task 5: Supporting no Root Element
 
 EclipseLink supports JSON documents without a root element. By default,
 if no `@XmlRootElement` annotation exists, the marshalled JSON document
@@ -322,7 +313,7 @@ omit the root element from the JSON output, even if the
 property when marshalling a document, as shown in link:#CHDEAEJA[Example
 16-10].
 
-[#CHDEAEJA]####[#TLADG1145]####
+[[CHDEAEJA]]
 
 *_Example 16-10 Marshalling no Root Element Documents_*
 
@@ -335,7 +326,7 @@ When unmarshaling a document with no root elements, you should specify
 the class to which to unmarshal, as shown in link:#CHDJAJBJ[Example
 16-11].
 
-[#CHDJAJBJ]####[#TLADG1146]####
+[[CHDJAJBJ]]
 
 *_Example 16-11 Unmarshalling no Root Element Documents_*
 
@@ -345,25 +336,12 @@ unmarshaller.setProperty(UnmarshallerProperties.JSON_INCLUDE_ROOT, false);
 JAXBElement<SearchResults> jaxbElement = unmarshaller.unmarshal(source, SearchResults.class);
 ----
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-If the document has no root element, you must specify the class to
+NOTE: If the document has no root element, you must specify the class to
 unmarshal to.
 
-|===
+[[CHDJIGDDA]]
 
- +
-
-[#TLADG1147]##
-
-[#sthref136]##
-
-=== Task 5 Using Namespaces
+==== Task 6 Using Namespaces
 
 Because JSON does not use namespces, by default all namespaces and
 prefixes are ignored when marshaling and unmarshaling. In some cases,
@@ -380,7 +358,7 @@ proper namespaces.
 link:#CHDCEBBJ[Example 16-12] shows how to use the
 `NAMESPACE_PREFIX_MAPPER` property.
 
-[#CHDCEBBJ]####[#TLADG1148]####
+[[CHDCEBBJ]]
 
 *_Example 16-12 Using Namesapces_*
 
@@ -421,14 +399,14 @@ jsonMarshaller.setProperty(MarshallerProperties.JSON_NAMESPACE_SEPARATOR, ':');
 jsonUnmarshaller.setProperty(UnmarshallerProperties.JSON_NAMESPACE_SEPARATOR, ':');
 ----
 
-[#CHDJIGDD]####[#TLADG1149]####
+[[CHDJIGDD]]
 
-=== Task 6: Using Collections
+==== Task 7: Using Collections
 
 By default, when marshalling to JSON, EclipseLink marshals empty
 collections as `[ ]`, as shown in link:#CHDDJCJA[Example 16-13].
 
-[#CHDDJCJA]####[#TLADG1150]####
+[[CHDDJCJA]]
 
 *_Example 16-13 Marshalling Empty Collections_*
 
@@ -459,9 +437,9 @@ jsonMarshaller.setProperty(MarshallerProperties.JSON_MARSHAL_EMPTY_COLLECTIONS, 
  
 ----
 
-[#CHDHHFIB]####[#TLADG1151]####
+[[CHDHHFIB]]
 
-=== Task 7: Mapping Root-Level Collections
+==== Task 8: Mapping Root-Level Collections
 
 If you use the `@XmlRootElement(name="root")` annotation to specify a
 root level, the JSON document can be marshaled as:
@@ -514,14 +492,14 @@ to unmarshal to:
 unmarshaller.unmarshal(json, Root.class);
 ----
 
-[#CHDIHBIF]####[#TLADG1152]####
+[[CHDIHBIF]]
 
-=== Task 8: Wrapping Text Values
+==== Task 9: Wrapping Text Values
 
 JAXB supports one or more `@XmlAttributes` on `@XmlValue classes`, as
 shown in link:#CHDBHJHF[Example 16-14].
 
-[#CHDBHJHF]####[#TLADG1153]####
+[[CHDBHJHF]]
 
 *_Example 16-14 Using @XmlAttributes_*
 
@@ -550,7 +528,7 @@ public class Phone {
 To produce a valid JSON document, EclipseLink uses a `value` wrapper, as
 shown in link:#CHDFFIIH[Example 16-15].
 
-[#CHDFFIIH]####[#TLADG1154]####
+[[CHDFFIIH]]
 
 *_Example 16-15 Using a value Wrapper_*
 
@@ -578,7 +556,7 @@ By default, EclipseLink uses *value* as the name of the wrapper. Use the
 `JSON_VALUE_WRAPPER` property to customize the name of the value
 wrapper, as shown in link:#CHDCFBHH[Example 16-16].
 
-[#CHDCFBHH]####[#TLADG1155]####
+[[CHDCFBHH]]
 
 *_Example 16-16 Customizing the Name of the Value Wrapper_*
 
@@ -614,7 +592,7 @@ You can also specify the `JSON_VALUE_WRAPPER` property in the `Map` of
 the properties used when you create the `JAXBContext`, as shown in
 link:#CHDEDDAA[Example 16-17].
 
-[#CHDEDDAA]####[#TLADG1156]####
+[[CHDEDDAA]]
 
 *_Example 16-17 Using a Map_*
 
@@ -630,35 +608,3 @@ Unmarshaller jsonUnmarshaller = ctx.createUnmarshaller();
 
 When specified in a Map, the Marshallers and Unmarshallers created from
 the `JAXBContent` will automatically use the specified value wrapper.
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:json001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:json003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
-link:../../dcommon/html/cpyr.htm[ +
-] a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

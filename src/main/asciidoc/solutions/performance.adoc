@@ -1,34 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*EclipseLink Solutions Guide for EclipseLink* +
-Release 4.0 a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:testingjpa005.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:performance001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#BBAGGDED]####[#TLADG412]####
-
-== [.secnum]#18# Enhancing Performance
-
-[#TLADG413]##
+///////////////////////////////////////////////////////////////////////////////
+[[PERFORMANCE]]
+== Enhancing Performance
 
 This chapter describes EclipseLink performance features, provided by
 EclipseLink, and how to monitor and optimize EclipseLink-enabled
@@ -36,18 +24,13 @@ applications.
 
 This chapter includes the following sections:
 
-* link:performance001.htm#CHDIIAFD[Performance Features]
-* link:performance002.htm#CHDFIECF[Monitoring and Optimizing
-EclipseLink-Enabled Applications]
-
-[#TLADG1047]##
+* xref:{relativedir}/performance001.adoc#PERFORMANCE001[Performance Features]
+* xref:{relativedir}/performance002.adoc#PERFORMANCE002[Monitoring and Optimizing EclipseLink-Enabled Applications]
 
 *Use Case*
 
 Users want to improve the performance of their EclipseLink-enabled
 application.
-
-[#TLADG1048]##
 
 *Solution*
 
@@ -56,13 +39,9 @@ performance, such as caching. In addition, there are ways to improve the
 performance of specific functions, such as using Join Fetching for
 queries.
 
-[#TLADG1049]##
-
 *Components*
 
 * EclipseLink 2.4 or later.
-
-[#TLADG1050]##
 
 *Sample*
 
@@ -72,34 +51,8 @@ See the following EclipseLink samples for related information:
 * `http://wiki.eclipse.org/EclipseLink/Examples/JPA/Performance`
 * `http://wiki.eclipse.org/EclipseLink/Examples/JPA/Monitoring`
 
-'''''
+//Performance Features
+include::{rootdir}/performance001.adoc[]
 
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:testingjpa005.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:performance001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
-link:../../dcommon/html/cpyr.htm[ +
-] a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +
+//Monitoring and Optimizing EclipseLink-Enabled Applications
+include::{rootdir}/performance002.adoc[]

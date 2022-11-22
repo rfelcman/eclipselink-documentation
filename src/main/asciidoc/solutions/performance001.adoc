@@ -1,32 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*EclipseLink Solutions Guide for EclipseLink* +
-Release 4.0 a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:performance.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:performance002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#CHDIIAFD]####[#TLADG414]####
-
-== Performance Features
+///////////////////////////////////////////////////////////////////////////////
+[[PERFORMANCE001]]
+=== Performance Features
 
 EclipseLink includes a number of performance features that make it the
 industry's best performing and most scalable JPA implementation. These
@@ -40,9 +30,9 @@ features include:
 * link:#BBAFFHDD[Automated Tuning]
 * link:#CHDIICEJ[Tools]
 
-[#CHDCGIHF]####[#TLADG415]####
+[[CHDCGIHF]]
 
-=== Object Caching
+==== Object Caching
 
 The EclipseLink cache is an in-memory repository that stores recently
 read or written objects based on class and primary key values. The cache
@@ -58,11 +48,7 @@ per entity basis.
 * Configure cache size on a per entity basis.
 * Coordinate clustered caches.
 
-[#TLADG416]##
-
-[#sthref144]##
-
-==== Caching Annotations
+===== Caching Annotations
 
 EclipseLink defines these entity caching annotations:
 
@@ -76,11 +62,7 @@ Property Extensions Reference" in _Jakarta Persistence API (JPA)
 Extensions Reference for EclipseLink_). These properties might
 compliment or provide an alternative to the usage of annotations.
 
-[#TLADG417]##
-
-[#sthref145]##
-
-==== Using the @Cache Annotation
+===== Using the @Cache Annotation
 
 EclipseLink uses identity maps to cache objects in order to enhance
 performance, as well as maintain object identity. You can control the
@@ -88,7 +70,7 @@ cache and its behavior by using the `@Cache` annotation in your entity
 classes. link:#CHDBDCBC[Example 18-1] shows how to implement this
 annotation.
 
-[#CHDBDCBC]####[#TLADG418]####
+[[CHDBDCBC]]
 
 *_Example 18-1 Using the @Cache Annotation_*
 
@@ -113,9 +95,9 @@ For more information about object caching and using the `@Cache`
 annotation, see "@Cache" in the _Jakarta Persistence API (JPA)
 Extensions Reference for EclipseLink_.
 
-[#CHDJFFEJ]####[#TLADG419]####
+[[CHDJFFEJ]]
 
-=== Querying
+==== Querying
 
 The scope of a query, the amount of data returned, and how that data is
 returned can all affect the performance of a EclipseLink-enabled
@@ -131,9 +113,9 @@ providing these features:
 
 This section describes how these features improve performance.
 
-[#CHDEHHHD]####[#TLADG420]####
+[[CHDEHHHD]]
 
-==== Read-only Queries
+===== Read-only Queries
 
 EclipseLink uses the `eclipselink.read-only` hint, `QueryHint`
 (`@QueryHint`) to retrieve read-only results back from a query. On
@@ -145,9 +127,9 @@ For more information about read-only queries, see the documentation for
 the read-only hint in _Jakarta Persistence API (JPA) Extensions
 Reference for EclipseLink_.
 
-[#CHDEGCHH]####[#TLADG421]####
+[[CHDEGCHH]]
 
-==== Join Fetching
+===== Join Fetching
 
 Join Fetching enhances performance by enabling the joining and reading
 of the related objects in the same query as the source object. Enable
@@ -155,7 +137,7 @@ Join Fetching by using the `@JoinFetch` annotation, as shown in
 link:#CHDBICAF[Example 18-2]. This example shows how the `@JoinFetch`
 annotation specifies the `Employee` field `managedEmployees`.
 
-[#CHDBICAF]####[#TLADG422]####
+[[CHDBICAF]]
 
 *_Example 18-2 Enabling JoinFetching_*
 
@@ -176,9 +158,9 @@ annotation specifies the `Employee` field `managedEmployees`.
 For more details on Join Fetching, see "@JoinFetch" in _Jakarta
 Persistence API (JPA) Extensions Reference for EclipseLink_.
 
-[#CHDFHFEB]####[#TLADG423]####
+[[CHDFHFEB]]
 
-==== Batch Reading
+===== Batch Reading
 
 The `eclipselink.batch` hint supplies EclipseLink with batching
 information so subsequent queries of related objects can be optimized in
@@ -187,9 +169,9 @@ read. Batch reading is more efficient than joining because it avoids
 reading duplicate data. Batching is only allowed on queries that have a
 single object in their select clause.
 
-[#CHDDJCAC]####[#TLADG424]####
+[[CHDDJCAC]]
 
-==== Fetch Size
+===== Fetch Size
 
 If you have large queries that return a large number of objects you can
 improve performance by reducing the number database hits required to
@@ -205,9 +187,9 @@ total expected result size is optimal. Note that if you are unsure of
 the result set size, incorrectly setting a fetch size too large or too
 small can decrease performance.
 
-[#CHDIEBJE]####[#TLADG425]####
+[[CHDIEBJE]]
 
-==== Pagination
+===== Pagination
 
 Slow paging can result in significant application overhead; however,
 EclipseLink includes a variety of solutions for improving paging
@@ -227,9 +209,9 @@ Pagination" in the EclipseLink online documentation, at:
 
 `http://wiki.eclipse.org/EclipseLink/Examples/JPA/Pagination#How_to_use_EclipseLink_Pagination`
 
-[#CHDBGFAI]####[#TLADG426]####
+[[CHDBGFAI]]
 
-==== Cache Usage
+===== Cache Usage
 
 EclipseLink uses a shared cache mechanism that is scoped to the entire
 persistence unit. When operations are completed in a particular
@@ -244,9 +226,9 @@ by using the `eclipselink.cache-usage` hint. For more information, see
 "cache usage" in t__Jakarta Persistence API (JPA) Extensions Reference
 for EclipseLink__.
 
-[#CHDDGGFI]####[#TLADG427]####
+[[CHDDGGFI]]
 
-=== Mapping
+==== Mapping
 
 Mapping performance is enhanced by these features:
 
@@ -255,9 +237,9 @@ Mapping performance is enhanced by these features:
 
 This section describes these features.
 
-[#CHDDJHCG]####[#TLADG429]####
+[[CHDDJHCG]]
 
-==== Read-Only Objects
+===== Read-Only Objects
 
 When you declare a class read-only, clones of that class are neither
 created nor merged greatly improving performance. You can declare a
@@ -283,7 +265,7 @@ For more information about using read-only objects to enhance
 performance, see "@ReadOnly" in _Jakarta Persistence API (JPA)
 Extensions Reference for EclipseLink_.
 
-[#CHDIJAAH]####[#TLADG430]####
+[[CHDIJAAH]]
 
 ==== Weaving
 
@@ -303,9 +285,9 @@ For details on how to use weaving to enhance application performance,
 see "weaving" in _Jakarta Persistence API (JPA) Extensions Reference for
 EclipseLink_.
 
-[#CHDBIBAI]####[#TLADG431]####
+[[CHDBIBAI]]
 
-=== Transactions
+==== Transactions
 
 To optimize performance during data transactions, use change tracking,.
 Change tracking allows you to tune the way EclipseLink detects changes
@@ -317,7 +299,7 @@ and so on.
 Enable change tracking by using the `@ChangeTracking` annotation, as
 shown in link:#CHDJDDFA[Example 18-3].
 
-[#CHDJDDFA]####[#TLADG432]####
+[[CHDJDDFA]]
 
 *_Example 18-3 Enabling Change Tracking_*
 
@@ -334,9 +316,9 @@ public class Employee implements Serializable {
 For more details on change tracking, see "@ChangeTracking" in _Jakarta
 Persistence API (JPA) Extensions Reference for EclipseLink_.
 
-[#CHDHFDEJ]####[#TLADG433]####
+[[CHDHFDEJ]]
 
-=== Database
+==== Database
 
 Database performance features in EclipseLink include:
 
@@ -347,9 +329,9 @@ Database performance features in EclipseLink include:
 
 This section describes these features.
 
-[#CHDJFFHG]####[#TLADG434]####
+[[CHDJFFHG]]
 
-==== Connection Pooling
+===== Connection Pooling
 
 Establishing a connection to a data source can be time-consuming, so
 reusing such connections in a connection pool can improve performance.
@@ -385,9 +367,9 @@ the following topics in _EclipseLink Concepts_:
 * "Understanding Connections"
 * "Understanding Connection Pools"
 
-[#CHDHECDD]####[#TLADG435]####
+[[CHDHECDD]]
 
-==== Parameterized SQL and Statement Caching
+===== Parameterized SQL and Statement Caching
 
 Parameterized SQL can prevent the overall length of an SQL query from
 exceeding the statement length limit that your JDBC driver or database
@@ -430,9 +412,9 @@ For more information about using parameterized SQL and statement
 caching, see "jdbc.bind-parameters" in _Jakarta Persistence API (JPA)
 Extensions Reference for EclipseLink_.
 
-[#CHDHDFAD]####[#TLADG436]####
+[[CHDHDFAD]]
 
-==== Batch Writing
+===== Batch Writing
 
 Heterogeneous batch writing is an optimization that allows EclipseLink
 to send multiple heterogeneous dynamic SQL statements to the database to
@@ -457,9 +439,9 @@ properties, see the `batch-writing` and `batch-writing.size`
 documentation in _Jakarta Persistence API (JPA) Extensions Reference for
 EclipseLink_.
 
-[#BBAJBHBI]####[#TLADG1243]####
+[[BBAJBHBI]]
 
-==== Serialized Object Policy
+===== Serialized Object Policy
 
 Serialized object policy is an optimization that allows EclipseLink to
 write out the whole entity object with its privately owned (and nested
@@ -492,8 +474,6 @@ version
 * Irregular structure of the aggregation makes it less possible to use
 other common optimizations (such as join fetching and batch reading).
 
-[#TLADG1253]##
-
 *Serialized Object Policy Configuration*
 
 Serialized object policy is enabled by using the `@SerializedObject`
@@ -509,21 +489,10 @@ the default column name, and sets optimistic locking to `cascade`, which
 can increase performance by keeping the serialized object policy field
 in the database up-to-date.
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-If serialized object policy is set on an entity, then policies with the
+NOTE: If serialized object policy is set on an entity, then policies with the
 same fields are set on all inheriting entities.
 
-|===
-
- +
-
-[#BBAHGDFA]####[#TLADG1250]####
+[[BBAHGDFA]]
 
 *_Example 18-4 Enabling Serialized Object Policy Using Annotations_*
 
@@ -545,7 +514,7 @@ public class Address implements Serializable {
 link:#BBABHJJI[Example 18-5] enables serialized object policy in the
 `eclipselink-orm.xml` file
 
-[#BBABHJJI]####[#TLADG1251]####
+[[BBABHJJI]]
 
 *_Example 18-5 Enabling Serialized Object Policy Using
 eclipselink-orm.xml_*
@@ -568,7 +537,7 @@ eclipselink-orm.xml_*
 link:#BBAGBGFB[Example 18-6] enables serialized object policy in a
 customizer (either session or descriptor):
 
-[#BBAGBGFB]####[#TLADG1254]####
+[[BBAGBGFB]]
 
 *_Example 18-6 Enabling Serialized Object Policy in a Customizer_*
 
@@ -673,7 +642,7 @@ example:
 <property name="eclipselink.jdbc.result-set-access-optimization" value="true"/>
 ----
 
-[#BBAHIFAF]####[#TLADG1252]####
+[[BBAHIFAF]]
 
 *A Simple Serialized Object Policy Example*
 
@@ -740,9 +709,9 @@ object policy.
 * 10 levels – performance is more than 25 times faster than without
 serialized object policy.
 
-[#BBAFFHDD]####[#TLADG1244]####
+[[BBAFFHDD]]
 
-=== Automated Tuning
+==== Automated Tuning
 
 Automated tuning is an optimization that allows applications to
 automatically tune JPA and session configuration for a specific purpose.
@@ -788,42 +757,10 @@ following example enables the safe tuner.
 For a detailed reference of the `tuning` property, see _Jakarta
 Persistence API (JPA) Extensions Reference for EclipseLink_.
 
-[#CHDIICEJ]####[#TLADG437]####
+[[CHDIICEJ]]
 
-=== Tools
+==== Tools
 
 EclipseLink provides monitoring and optimization tools, as described in
-link:performance002.htm#CHDFIECF[Monitoring and Optimizing
+xref:{relativedir}/performance002.adoc#PERFORMANCE002[Monitoring and Optimizing
 EclipseLink-Enabled Applications].
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:performance.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:performance002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
-link:../../dcommon/html/cpyr.htm[ +
-] a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

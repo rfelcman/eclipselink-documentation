@@ -1,32 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*EclipseLink Solutions Guide for EclipseLink* +
-Release 4.0 a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:jpatoxml002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:jpatoxml004.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#BEIEJGCE]####[#TLADG324]####
-
-== Mapping Simple Java Values to XML Text Nodes
+///////////////////////////////////////////////////////////////////////////////
+[[JPA2XML003]]
+=== Mapping Simple Java Values to XML Text Nodes
 
 This section demonstrates several ways to map simple Java values
 directly to XML text nodes. It includes the following examples:
@@ -34,15 +24,15 @@ directly to XML text nodes. It includes the following examples:
 * link:#BEIJIEGC[Mapping a Value to an Attribute]
 * link:#BEIDFEIC[Mapping a Value to a Text Node]
 
-[#BEIJIEGC]####[#TLADG325]####
+[[BEIJIEGC]]
 
-=== Mapping a Value to an Attribute
+==== Mapping a Value to an Attribute
 
 This example maps the `id` property in the Java object `Customer` to its
 XML representation as an attribute of the `<customer>` element. The XML
 will be based on the schema in link:#BEICBDBC[Example 15-10].
 
-[#BEICBDBC]####[#TLADG326]####
+[[BEICBDBC]]
 
 *_Example 15-10 Example XML Schema_*
 
@@ -64,11 +54,7 @@ The following procedures demonstrate how to map the `id` property from
 the Java object and, alternately, how to represent the value in
 EclipseLink's Object-to-XML Mapping (OXM) metadata format.
 
-[#TLADG327]##
-
-[#sthref108]##
-
-==== Mapping from the Java Object
+===== Mapping from the Java Object
 
 The key to creating this mapping from a Java object is the
 `@XmlAttribute` JAXB annotation, which maps the field to the XML
@@ -101,7 +87,7 @@ public class Customer {
 
 The object should look like link:#BEIHFEHF[Example 15-11].
 
-[#BEIHFEHF]####[#TLADG328]####
+[[BEIHFEHF]]
 
 *_Example 15-11 Customer Object with Mapped id Property_*
 
@@ -121,18 +107,14 @@ public class Customer {
 }
 ----
 
-[#TLADG329]##
-
-[#sthref109]##
-
-==== Defining the Mapping in OXM Metadata Format
+===== Defining the Mapping in OXM Metadata Format
 
 If you want to represent the mapping in EclipseLink's OXM metadata
 format, you need to use the XML tags defined in the
 `eclipselink-oxm.xml` file and populate them with the appropriate
 values, as shown in link:#BEICFEDE[Example 15-12].
 
-[#BEICFEDE]####[#TLADG330]####
+[[BEICFEDE]]
 
 *_Example 15-12 Mapping id as an Attribute in OXM Metadata Format_*
 
@@ -149,12 +131,12 @@ values, as shown in link:#BEICFEDE[Example 15-12].
 ----
 
 For more information about the OXM metadata format, see
-link:jpatoxml004.htm#BEIJGBGA[Using XML Metadata Representation to
+xref:{relativedir}/jpatoxml004.adoc#JPA2XML004[Using XML Metadata Representation to
 Override JAXB Annotations].
 
-[#BEIDFEIC]####[#TLADG331]####
+[[BEIDFEIC]]
 
-=== Mapping a Value to a Text Node
+==== Mapping a Value to a Text Node
 
 EclipseLink makes it easy for you to map values from a Java object to
 various kinds of XML text nodes; for example, to simple text nodes, text
@@ -166,19 +148,15 @@ are demonstrated in the following examples:
 * link:#BEICIFCI[Mapping a Value to a Text Node in a Sub-element]
 * link:#BEIDCEHD[Mapping Values to a Text Node by Position]
 
-[#BEIFAICJ]####[#TLADG332]####
+[[BEIFAICJ]]
 
-==== Mapping a Value to a Simple Text Node
+===== Mapping a Value to a Simple Text Node
 
 You can map a value from a Java object either by using JAXB annotations
 in the Java object or, alternately, by representing the mapping in
 EclipseLink's OXM metadata format.
 
-[#TLADG333]##
-
-[#sthref110]##
-
-===== Mapping by Using JAXB Annotations
+====== Mapping by Using JAXB Annotations
 
 Assuming the associated schema defines an element called
 `<phone-number>` which accepts a string value, you can use the
@@ -214,7 +192,7 @@ property in the Customer class to map this value as an attribute:
 
 The object should look like link:#BEIGFCJG[Example 15-13].
 
-[#BEIGFCJG]####[#TLADG334]####
+[[BEIGFCJG]]
 
 *_Example 15-13 PhoneNumber Object with Mapped number Property_*
 
@@ -234,18 +212,14 @@ public class PhoneNumber {
 }
 ----
 
-[#TLADG335]##
-
-[#sthref111]##
-
-===== Defining the Mapping in OXM Metadata Format
+====== Defining the Mapping in OXM Metadata Format
 
 If you want to represent the mapping in EclipseLink's OXM metadata
 format, you need to use the XML tags defined in the
 `eclipselink-oxm.xml` file and populate them with the appropriate
 values, as shown in link:#BEIECBDG[Example 15-14].
 
-[#BEIECBDG]####[#TLADG336]####
+[[BEIECBDG]]
 
 *_Example 15-14 Mapping number as an Attribute in OXM Metadata Format_*
 
@@ -261,9 +235,9 @@ values, as shown in link:#BEIECBDG[Example 15-14].
 ...
 ----
 
-[#BEIBEFEJ]####[#TLADG337]####
+[[BEIBEFEJ]]
 
-==== Mapping Values to a Text Node in a Simple Sequence
+===== Mapping Values to a Text Node in a Simple Sequence
 
 You can map a sequence of values, for example a customer's first and
 last name, as separate elements either by using JAXB annotations or by
@@ -271,11 +245,7 @@ representing the mapping in EclipseLink's OXM metadata format. The
 following procedures illustrate how to map values for a customers' first
 names and last names
 
-[#TLADG338]##
-
-[#sthref112]##
-
-===== Mapping by Using JAXB Annotations
+====== Mapping by Using JAXB Annotations
 
 Assuming the associated schema defines the following elements:
 
@@ -322,7 +292,7 @@ example, here the `<first-name>` element combination would be specified
 
 The object should look like link:#BEIFIJIH[Example 15-15].
 
-[#BEIFIJIH]####[#TLADG339]####
+[[BEIFIJIH]]
 
 *_Example 15-15 Customer Object Mapping Values to a Simple Sequence_*
 
@@ -345,18 +315,14 @@ public class Customer {
 }
 ----
 
-[#TLADG340]##
-
-[#sthref113]##
-
-===== Defining the Mapping in OXM Metadata Format
+====== Defining the Mapping in OXM Metadata Format
 
 If you want to represent the mapping in EclipseLink's OXM metadata
 format, you need to use the XML tags defined in the
 `eclipselink-oxm.xml` file and populate them with the appropriate
 values, as shown in link:#BEIIHFFE[Example 15-16].
 
-[#BEIIHFFE]####[#TLADG341]####
+[[BEIIHFFE]]
 
 *_Example 15-16 Mapping Sequential Attributes in OXM Metadata Format_*
 
@@ -373,9 +339,9 @@ values, as shown in link:#BEIIHFFE[Example 15-16].
 ...
 ----
 
-[#BEICIFCI]####[#TLADG342]####
+[[BEICIFCI]]
 
-==== Mapping a Value to a Text Node in a Sub-element
+===== Mapping a Value to a Text Node in a Sub-element
 
 You can map values from a Java object to text nodes that are nested as a
 subelement in the XML document by using JAXB annotations or by
@@ -385,11 +351,7 @@ elements, which are sub-elements of a `<personal-info>` element under a
 `<customer>` root, you could use the following procedures to achieve
 these mappings.
 
-[#TLADG343]##
-
-[#sthref114]##
-
-===== Mapping by Using JAXB Annotations
+====== Mapping by Using JAXB Annotations
 
 Assuming the associated schema defines the following elements:
 
@@ -442,7 +404,7 @@ predicate:
 
 The object should look like link:#BEIBCIDB[Example 15-17].
 
-[#BEIBCIDB]####[#TLADG344]####
+[[BEIBCIDB]]
 
 *_Example 15-17 Customer Object Mapping Properties to Sub-elements_*
 
@@ -466,18 +428,14 @@ public class Customer {
 }
 ----
 
-[#TLADG345]##
-
-[#sthref115]##
-
-===== Defining the Mapping in OXM Metadata Format
+====== Defining the Mapping in OXM Metadata Format
 
 If you want to represent the mapping in EclipseLink's OXM metadata
 format, you need to use the XML tags defined in the
 `eclipselink-oxm.xml` file and populate them with the appropriate
 values, as shown in link:#BEIEADBI[Example 15-18].
 
-[#BEIEADBI]####[#TLADG346]####
+[[BEIEADBI]]
 
 *_Example 15-18 Mapping Attributes as Sub-elements in OXM Metadata
 Format_*
@@ -495,9 +453,9 @@ Format_*
 ...
 ----
 
-[#BEIDCEHD]####[#TLADG347]####
+[[BEIDCEHD]]
 
-==== Mapping Values to a Text Node by Position
+===== Mapping Values to a Text Node by Position
 
 When multiple nodes have the same name, map their values from the Java
 object by specifying their position in the XML document. Do this by
@@ -508,11 +466,7 @@ format. In the following example, XML contains two `<name>` elements;
 the first occurrence of name should represent the Customer's first name,
 the second name their last name.
 
-[#TLADG348]##
-
-[#sthref116]##
-
-===== Mapping by Using JAXB Annotations
+====== Mapping by Using JAXB Annotations
 
 Assuming an XML schema that defines the following attributes:
 
@@ -569,7 +523,7 @@ example, `"name[1]/text"` will map the `firstName` property to the first
 
 The object should look like link:#BEICHICJ[Example 15-19].
 
-[#BEICHICJ]####[#TLADG349]####
+[[BEICHICJ]]
 
 *_Example 15-19 Customer Object Mapping Values by Position_*
 
@@ -596,36 +550,4 @@ public class Customer {
 ----
 
 For more information about using XPath predicates, see
-link:jpatoxml005.htm#BEIBFCFC[Using XPath Predicates for Mapping].
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:jpatoxml002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:jpatoxml004.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
-link:../../dcommon/html/cpyr.htm[ +
-] a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +
+xref:{relativedir}/jpatoxml005.adoc#JPA2XML005[Using XPath Predicates for Mapping].

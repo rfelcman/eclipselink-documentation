@@ -1,32 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*EclipseLink Solutions Guide for EclipseLink* +
-Release 4.0 a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:multitenancy003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:multitenancy005.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#CHDJEBAC]####[#TLADG501]####
-
-== Using VPD Multi-Tenancy
+///////////////////////////////////////////////////////////////////////////////
+[[MULTITENANCY004]]
+=== Using VPD Multi-Tenancy
 
 A Virtual Private Database (VPD) uses security controls to restrict
 access to database objects based on various parameters.
@@ -61,11 +51,7 @@ the database and then specify multi-tenancy on the entity or mapped
 superclass, as shown in the following example, using `@Multitenant` and
 `@TenantDiscriminatorColumn`:
 
-[#TLADG626]##
-
-[#sthref96]##
-
-=== Main Tasks for Using VPD Multi-Tenancy
+==== Main Tasks for Using VPD Multi-Tenancy
 
 The following tasks provide instructions for using VPD multi-tenancy
 with Oracle Virtual Private Database:
@@ -76,9 +62,9 @@ with Oracle Virtual Private Database:
 * link:#CHDDJIAE[Task 4: Disable Criteria Generation]
 * link:#CHDIIJEB[Task 5: Configure persistence.xml]
 
-[#CHDDEDCJ]####[#TLADG1130]####
+[[CHDDEDCJ]]
 
-==== Task 1: Prerequisites
+===== Task 1: Prerequisites
 
 To implement and use VPD multi-tenancy, you need:
 
@@ -91,9 +77,9 @@ VDP, for example, Oracle Virtual Private Database.
 +
 For the certification matrix, see
 
-[#CHDDFBFC]####[#TLADG627]####
+[[CHDDFBFC]]
 
-==== Task 2: Configure the Virtual Private Database
+===== Task 2: Configure the Virtual Private Database
 
 In this example, an Oracle Virtual Private Database is configured with a
 policy and a stored procedure. The policy is a call to the database that
@@ -123,9 +109,9 @@ CREATE OR REPLACE FUNCTION ident_func (p_schema IN VARCHAR2 DEFAULT NULL, p_obje
     END;
 ----
 
-[#CHDICCHE]####[#TLADG629]####
+[[CHDICCHE]]
 
-==== Task 3: Configure the Entity or Mapped Superclass
+===== Task 3: Configure the Entity or Mapped Superclass
 
 As described above, VPD is configured to use the `USER_ID` column to
 limit access to rows. Therefore, you must tell EclipseLink to
@@ -147,9 +133,9 @@ public class Task implements Serializable {
 ...
 ----
 
-[#CHDDJIAE]####[#TLADG630]####
+[[CHDDJIAE]]
 
-==== Task 4: Disable Criteria Generation
+===== Task 4: Disable Criteria Generation
 
 When single-table and table-per-tenant multi-tenancy are enabled, a
 client identifier is auto appended to any generated SQL. However, when
@@ -172,9 +158,9 @@ In EclipseLink 2.3.1, you must run the following codefrom a
 session.getDescriptor(Task.class).getQueryManager().setIncludeTenantCriteria(false);
 ----
 
-[#CHDIIJEB]####[#TLADG631]####
+[[CHDIIJEB]]
 
-==== Task 5: Configure persistence.xml
+===== Task 5: Configure persistence.xml
 
 Add the following properties to `persistence.xml`.
 
@@ -212,35 +198,3 @@ For example:
   ...
 </properties>
 ----
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:multitenancy003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:multitenancy005.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
-link:../../dcommon/html/cpyr.htm[ +
-] a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

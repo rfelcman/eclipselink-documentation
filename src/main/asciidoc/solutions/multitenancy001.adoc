@@ -1,32 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*EclipseLink Solutions Guide for EclipseLink* +
-Release 4.0 a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:multitenancy.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:multitenancy002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#A1261503]####[#TLADG615]####
-
-== Introduction to the Solution
+///////////////////////////////////////////////////////////////////////////////
+[[MULTITENANCY001]]
+=== Introduction to the Solution
 
 EclipseLink offers considerable flexibility in how you can design and
 implement features for isolating tenants. Possibilities include the
@@ -55,50 +45,18 @@ in the data source:
 * *Single-table multi-tenancy* allows tenants to share tables. Each
 tenant has its own rows, identified by discriminator columns, and those
 rows are invisible to other tenants. See
-link:multitenancy002.htm#BABJGBCF[Using Single-Table Multi-Tenancy].
+xref:{relativedir}/multitenancy002.adoc#MULTITENANCY002[Using Single-Table Multi-Tenancy].
 * With *table-per-tenant* multi-tenancy, each tenant has its own table
 or tables, identified by table tenant discriminators, and those tables
 are invisible to other users. See
-link:multitenancy003.htm#A1235913[Using Table-Per-Tenant Multi-Tenancy].
+xref:{relativedir}/multitenancy003.adoc#MULTITENANCY003[Using Table-Per-Tenant Multi-Tenancy].
 * With (*VDP*) multi-tenancy, tenants use a VDP database, which provides
 the functionality to support multiple tenants sharing the same table.
-See link:multitenancy004.htm#CHDJEBAC[Using VPD Multi-Tenancy].
+See xref:{relativedir}/multitenancy004.adoc#MULTITENANCY004[Using VPD Multi-Tenancy].
 
 EclipseLink further provides tenant-specific extensions through
 extensible entities using extensible entities and `MetadataSource`. For
 information about those features, see
-link:extensible.htm#CIAEIEAI[Chapter 12, "Making JPA Entities and JAXB
-Beans Extensible,"] and link:metadatasource.htm#BABGDEGB[Chapter 13,
+xref:{relativedir}/extensible.adoc#EXTENSIBLE[Chapter 12, "Making JPA Entities and JAXB
+Beans Extensible,"] and xref:{relativedir}/metadatasource.adoc#METADATASOURCE[Chapter 13,
 "Using an External MetaData Source."]
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:multitenancy.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:multitenancy002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 2014, Oracle and/or its affiliates. All rights reserved.
-link:../../dcommon/html/cpyr.htm[ +
-] a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_otlcg.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +
