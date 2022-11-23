@@ -1,34 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-a|
-Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|===
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|===
-|link:shared_reference_relations003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:shared_reference_relations005.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
-
-[#BABIIBFI]####[#TLJAX355]####
-
-== Mapping Composite Key Relationships
+///////////////////////////////////////////////////////////////////////////////
+[[SHAREDREFERENCERELATIONS004]]
+=== Mapping Composite Key Relationships
 
 If the objects that you want to map have multi-part keys (that is, a
 combination of fields that determines uniqueness), you can use
@@ -40,25 +28,14 @@ can be used. For composite primary keys, multiple `@XmlKey` annotations
 can be used, or a single `@XmlID` can be combined with one or more
 `@XmlKey` annotations.
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-Composite Keys can be useful when using JAXB to map JPA entities. For
+NOTE: Composite Keys can be useful when using JAXB to map JPA entities. For
 more information see Converting JPA entities to/from XML (via JAXB).
-
-|===
-
- +
 
 In link:#BABHFBDI[Example 7-8], each *Employee* has one *manager* but
 multiple *reports*, and *Employees* are uniquely identified by the
 combination of their `id` and `name` fields.
 
-[#BABHFBDI]####[#TLJAX356]####
+[[BABHFBDI]]
 
 *_Example 7-8 Using the @XmlKey and @XmlJoinNodes Annotations_*
 
@@ -97,7 +74,7 @@ public class Employee {
 link:#BABHAEGF[Example 7-9] shows how to define this mapping information
 in EclipseLink's OXM metadata format.
 
-[#BABHAEGF]####[#TLJAX357]####
+[[BABHAEGF]]
 
 *_Example 7-9 Sample XML Mapping_*
 
@@ -139,33 +116,3 @@ This would produce the following XML:
    </employee>
 </company>
 ----
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:shared_reference_relations003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:shared_reference_relations005.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2013 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

@@ -1,34 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-a|
-Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|===
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|===
-|link:shared_reference_relations001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:shared_reference_relations003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
-
-[#BABHIHAE]####[#TLJAX345]####
-
-== Mapping Single Key Relationships
+///////////////////////////////////////////////////////////////////////////////
+[[SHAREDREFERENCERELATIONS002]]
+=== Mapping Single Key Relationships
 
 To model non-privately-owned relationships, your "target" objects must
 have IDs (keys) defined, and your "source" object must use these IDs to
@@ -42,7 +30,7 @@ restriction.
 In link:#BABEJJIE[Example 7-1], each *Employee* has one *manager* but
 multiple *reports*.
 
-[#BABEJJIE]####[#TLJAX346]####
+[[BABEJJIE]]
 
 *_Example 7-1 Using the @XmlID and @XmlIDREF Annotations_*
 
@@ -76,7 +64,7 @@ public class Employee {
 The following example shows how to define this mapping information in
 EclipseLink's OXM metadata format.
 
-[#TLJAX347]####[#sthref129]####
+[[sthref129]]
 
 *_Example 7-2 Sample XML Mapping_*
 
@@ -117,16 +105,12 @@ This would produce the following XML:
 The *manager* and *reports* elements contain the IDs of the *Employee*
 instances they are referencing.
 
-[#TLJAX348]##
-
-[#sthref130]##
-
-=== Using @XmlList
+==== Using @XmlList
 
 Because the `@XmlIDREF` annotation is also compatible with the
 `@XmlList` annotation, the *Employee* object could be modeled as:
 
-[#TLJAX349]####[#sthref131]####
+[[sthref131]]
 
 *_Example 7-3 Using the @XmlList Annotation_*
 
@@ -173,33 +157,3 @@ This would produce the following XML:
    </employee>
 </company>
 ----
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:shared_reference_relations001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:shared_reference_relations003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2013 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

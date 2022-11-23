@@ -1,34 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-a|
-Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|===
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|===
-|link:type_level001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:type_level003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
-
-[#CIHBJDDI]####[#TLJAX195]####
-
-== Setting Up Namespace Information
+///////////////////////////////////////////////////////////////////////////////
+[[TYPELEVEL002]]
+=== Setting Up Namespace Information
 
 Most XML documents are qualified with a namespace. You can
 namespace-qualify elements of your Java class at the following levels:
@@ -41,16 +29,16 @@ In most cases, package-level annotation is sufficient. You can use the
 other levels to customize your document. Use the `@XmlSchema` annotation
 to specify the namespace.
 
-[#BABJBJJH]####[#TLJAX196]####
+[[BABJBJJH]]
 
-=== Qualifying at the Package Level
+==== Qualifying at the Package Level
 
 Use the `@XmlSchema` annotation on the package to set a default
 namespace and specify that all elements in the package are qualified
 with the namespace. This information is specified in a special Java
 source file, `package-info.java`.
 
-[#CIHBHJDB]####[#TLJAX197]####
+[[CIHBHJDB]]
 
 *_Example 3-6 Using Annotations_*
 
@@ -68,7 +56,7 @@ import jakarta.xml.bind.annotation.XmlSchema;
 
 This can be defined in EclipseLink XML Bindings as follows:
 
-[#CIHIHBGE]####[#TLJAX198]####
+[[CIHIHBGE]]
 
 *_Example 3-7 Using OXM Metadata_*
 
@@ -104,13 +92,13 @@ link:#CIHIHBGE[Example 3-7] will produce the following XML:
 All elements are qualified with the *http://www.example.org/package*
 namespace.
 
-[#BABJBFHD]####[#TLJAX199]####
+[[BABJBFHD]]
 
-=== Qualifying at the Type Level
+==== Qualifying at the Type Level
 
 Type level annotations will override the package level namespace.
 
-[#TLJAX200]####[#sthref60]####
+[[sthref60]]
 
 *_Example 3-8 Using Annotations_*
 
@@ -132,7 +120,7 @@ public class Customer {
 
 This can be defined in EclipseLink XML Bindings as follows:
 
-[#TLJAX201]####[#sthref61]####
+[[sthref61]]
 
 *_Example 3-9 Using XML Bindings File_*
 
@@ -172,15 +160,15 @@ This will produce the following XML:
 Elements inside the *Customer* type are qualified with the
 *http://www.example.org/type* namespace.
 
-[#BABFDCJH]####[#TLJAX202]####
+[[BABFDCJH]]
 
-=== Qualifying at the Field/Property Level
+==== Qualifying at the Field/Property Level
 
 You can override the package or type namespaces at the property/field
 level. All attribute and element annotations accept the *namespace*
 parameter.
 
-[#TLJAX203]####[#sthref62]####
+[[sthref62]]
 
 *_Example 3-10 Overriding the Namespace_*
 
@@ -204,7 +192,7 @@ public class Customer {
 
 This can be defined in EclipseLink XML Bindings as follows:
 
-[#TLJAX204]####[#sthref63]####
+[[sthref63]]
 
 *_Example 3-11 Sample Bindings File_*
 
@@ -246,31 +234,3 @@ Only the *account* element is qualified with the
 *http://www.example.org/property* namespace.
 
 '''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:type_level001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:type_level003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2013 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

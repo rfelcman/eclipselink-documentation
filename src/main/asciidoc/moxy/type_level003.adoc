@@ -1,34 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-a|
-Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|===
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|===
-|link:type_level002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:simple_values.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
-
-[#CIHBIFIC]####[#TLJAX205]####
-
-== Specifying Inheritance
+///////////////////////////////////////////////////////////////////////////////
+[[TYPELEVEL003]]
+=== Specifying Inheritance
 
 EclipseLink MOXy provides several ways to represent your inheritance
 hierarchy in XML:
@@ -37,9 +25,9 @@ hierarchy in XML:
 * link:#BABIICIB[Using Substitution Groups]
 * link:#BABHIBJJ[Using @XmlDiscriminatorNode/@XmlDiscriminatorValue]
 
-[#BABGHADJ]####[#TLJAX206]####
+[[BABGHADJ]]
 
-=== Using xsi:type
+==== Using xsi:type
 
 By default, EclipseLink will use the `xsi:type` attribute to represent
 inheritance in XML.
@@ -48,7 +36,7 @@ In this example an abstract super class (*ContactInfo*) contains all
 types of contact information. *Address* and *PhoneNumber* are the
 concrete implementations of *ContactInfo*.
 
-[#CIHCJDHH]####[#TLJAX207]####
+[[CIHCJDHH]]
 
 *_Example 3-12 Sample Java Classes_*
 
@@ -103,9 +91,9 @@ Marshalling an example *Customer* would produce the following XML:
 
 Note the `xsi:type` attribute on the `contactInfo` element.
 
-[#BABIICIB]####[#TLJAX208]####
+[[BABIICIB]]
 
-=== Using Substitution Groups
+==== Using Substitution Groups
 
 Another way to model inheritance in XML is through XML Schema's
 substitution groups functionality. Using this approach, the element name
@@ -115,7 +103,7 @@ Taking the same link:#CIHCJDHH[Example 3-12], we will add
 `@XmlRootElement` annotations to each of the subclasses, which will act
 as the inheritance indicator.
 
-[#CIHJCCEE]####[#TLJAX209]####
+[[CIHJCCEE]]
 
 *_Example 3-13 Using @XmlRootElement Annotation_*
 
@@ -157,9 +145,9 @@ following XML:
 
 Note that the *Address* object is marshalled to the `address` element.
 
-[#BABHIBJJ]####[#TLJAX210]####
+[[BABHIBJJ]]
 
-=== Using @XmlDiscriminatorNode/@XmlDiscriminatorValue
+==== Using @XmlDiscriminatorNode/@XmlDiscriminatorValue
 
 You can also use the MOXY-specific `@XmlDiscriminatorNode` and
 `@XmlDiscriminatorValue` annotations (introduced in EclipseLink 2.2) to
@@ -173,7 +161,7 @@ Using link:#CIHJCCEE[Example 3-13], the *ContactInfo* class uses the
 that class' indicator name (`address-classifier` and
 `phone-number-classifier`).
 
-[#CIHGABAC]####[#TLJAX211]####
+[[CIHGABAC]]
 
 *_Example 3-14 Using the @XmlDiscriminatorNode and
 @XmlDiscriminatorValue Annotations_*
@@ -216,33 +204,3 @@ link:#CIHGABAC[Example 3-14] produces the following XML:
 Notice that *Address* is marshalled to the `contactInfo` element. Its
 classifier attribute contains the discriminator node value
 `address-classifier`.
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:type_level002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:simple_values.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2013 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

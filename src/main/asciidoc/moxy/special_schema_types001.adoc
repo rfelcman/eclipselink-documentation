@@ -1,34 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-a|
-Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|===
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|===
-|link:special_schema_types.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:special_schema_types002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
-
-[#BABFCBCF]####[#TLJAX292]####
-
-== Mapping Dates and Times
+///////////////////////////////////////////////////////////////////////////////
+[[SPECIALSCHEMATYPES001]]
+=== Mapping Dates and Times
 
 You can use the `@XmlSchemaType` annotation to customize the XML
 representation of date and time information. Additionally, EclipseLink
@@ -42,7 +30,7 @@ specification (JSR-222):
 The following XML schema contains a *date-of-birth* element of type
 `xsd:date`:
 
-[#TLJAX293]####[#sthref90]####
+[[sthref90]]
 
 *_Example 5-1 Sample XML Schema_*
 
@@ -61,11 +49,7 @@ The following XML schema contains a *date-of-birth* element of type
  
 ----
 
-[#TLJAX294]##
-
-[#sthref91]##
-
-=== Understanding the Generated Model
+==== Understanding the Generated Model
 
 The JAXB XML Schema to Java compiler (XJC) can be used to generate a
 class model from the sample schema. For example:
@@ -78,7 +62,7 @@ class model from the sample schema. For example:
 
 will generate the following *Customer* class:
 
-[#TLJAX295]####[#sthref92]####
+[[sthref92]]
 
 *_Example 5-2 Sample Customer Class_*
 
@@ -125,18 +109,14 @@ Some Java data types (like *XMLGregorianCalendar*) have multiple XML
 representations (such as `xsd:date`, `xsd:time`, or *xsd:dateTime*). Use
 `@XmlSchemaType` to select the appropriate representation.
 
-[#TLJAX296]##
-
-[#sthref93]##
-
-=== Using a Different Date (or Calendar) Property
+==== Using a Different Date (or Calendar) Property
 
 By default, the JAXB XML schema to Java compiler (XJC) generates a
 property of type `XMLGregorianCalendar`. However, you can easily change
 this to `java.util.Date` or `java.util.Calendar`, as shown in
 link:#BABJAHAF[Example 5-3]:
 
-[#BABJAHAF]####[#TLJAX297]####
+[[BABJAHAF]]
 
 *_Example 5-3 Using java.util.Date_*
 
@@ -170,33 +150,3 @@ public class Customer {
  
 }
 ----
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:special_schema_types.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:special_schema_types002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2013 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

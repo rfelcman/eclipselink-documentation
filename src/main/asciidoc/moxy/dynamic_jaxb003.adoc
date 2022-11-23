@@ -1,34 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-a|
-Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|===
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|===
-|link:dynamic_jaxb002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:dynamic_jaxb004.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
-
-[#BGBDCIBC]####[#TLJAX450]####
-
-== Bootstrapping from XML Schema (XSD)
+///////////////////////////////////////////////////////////////////////////////
+[[DYNAMICJAXB003]]
+=== Bootstrapping from XML Schema (XSD)
 
 With EclipseLink MOXy, you can provide an existing XML schema from which
 to create a `DynamicJAXBContext`. EclipseLink will parse the schema and
@@ -42,26 +30,15 @@ You can pass the XML Schema to `DynamicJAXBContextFactory` by using:
 * `org.w3c.dom.Node`
 * `javax.xml.transform.Source`
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-EclipseLink MOXy uses Sun's XJC (XML-to-Java Compiler) APIs to parse the
+NOTE: EclipseLink MOXy uses Sun's XJC (XML-to-Java Compiler) APIs to parse the
 schema into an in-memory representation and generate dynamic types and
 mappings. When bootstrapping from XSD, you will need to include
 `jaxb-xjc.jar` (from the JAXB reference implementation) on your
 *CLASSPATH*.
 
-|===
-
- +
-
 The APIs used to create a DynamicJAXBContext are as follows:
 
-[#TLJAX451]####[#sthref197]####
+[[sthref197]]
 
 *_Example 9-4 Creating a DynamicJAXBContext_*
 
@@ -98,27 +75,16 @@ public static DynamicJAXBContext createContextFromXSD(javax.xml.transform.Source
  
 ----
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-The classLoader parameter is your application's current class loader,
+NOTE: The classLoader parameter is your application's current class loader,
 and will be used to first lookup classes to see if they exist before new
 `DynamicTypes` are generated. The user may pass in `null` for this
 parameter, and `Thread.currentThread().getContextClassLoader()` will be
 used instead.
 
-|===
-
- +
-
 This example shows how to create and marshall a new object using Dynamic
 MOXy.
 
-[#TLJAX452]####[#sthref198]####
+[[sthref198]]
 
 *_Example 9-5 Sample XML Schema_*
 
@@ -158,7 +124,7 @@ The code snippet in link:#BGBFCCBC[Example 9-6]:
 * Creates new `DynamicEntities` and sets their properties
 * Creates a `JAXBMarshaller` and marshals the Java objects to XML
 
-[#BGBFCCBC]####[#TLJAX453]####
+[[BGBFCCBC]]
 
 *_Example 9-6 Sample Application Code_*
 
@@ -183,11 +149,7 @@ dContext.createMarshaller().marshal(newCustomer, System.out);
  
 ----
 
-[#TLJAX454]##
-
-[#sthref199]##
-
-=== Importing Other Schemas / EntityResolvers
+==== Importing Other Schemas / EntityResolvers
 
 If the XML schema that you use to bootstrap imports other schemas, you
 must configure an `org.xml.sax.EntityResolver` to resolve the locations
@@ -196,7 +158,7 @@ of the imported schemas. You can then pass the `EntityResolver` to the
 
 In link:#BGBIIEGH[Example 9-7], each type is defined in its own schema:
 
-[#BGBIIEGH]####[#TLJAX455]####
+[[BGBIIEGH]]
 
 *_Example 9-7 Sample XML Schema_*
 
@@ -229,7 +191,7 @@ location of the imported schema.
 
 link:#BGBIJHID[Example 9-8] illustrates the `EntityResolver`:
 
-[#BGBIJHID]####[#TLJAX456]####
+[[BGBIJHID]]
 
 *_Example 9-8 Sample Application Code_*
 
@@ -278,11 +240,7 @@ or from the command line:
 
 `-Dcom.sun.tools.xjc.api.impl.s2j.SchemaCompilerImpl.noCorrect`
 
-[#TLJAX457]##
-
-[#sthref200]##
-
-=== Customizing Generated Mappings with XJC External Binding Customization Files
+==== Customizing Generated Mappings with XJC External Binding Customization Files
 
 When bootstrapping from an XSD, you have the option to customize the
 mappings that will be generated through the use of XJC's External
@@ -290,7 +248,7 @@ Binding Customization file format (`.xjb`). In the example below, the
 package name of the dynamic classes has been overridden, and the name
 attribute has been renamed to `last-name-comma-first-name`.
 
-[#TLJAX458]####[#sthref201]####
+[[sthref201]]
 
 *_Example 9-9 custom1.xjb File_*
 
@@ -320,26 +278,15 @@ For complete information on the External Binding Customization file
 format, please see
 `http://download.oracle.com/docs/cd/E17802_01/webservices/webservices/docs/2.0/tutorial/doc/JAXBUsing4.html`.
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-If you wish to use External Binding Customization files, you will need
+NOTE: If you wish to use External Binding Customization files, you will need
 to use *Source* objects to point to your XML Schema. *Sources* are used
 to load the `.xjb` files as well, and they must all have the same System
 ID set.
 
-|===
-
- +
-
 link:#BABIJDEI[Example 9-10] illustrates bootstrapping from an XSD, and
 customizing the mapping generation using two separate `.xjb` files.
 
-[#BABIJDEI]####[#TLJAX459]####
+[[BABIJDEI]]
 
 *_Example 9-10 Bootstrapping Example_*
 
@@ -382,33 +329,3 @@ DynamicJAXBContext jaxbContext = (DynamicJAXBContext) JAXBContext.newInstance("e
 The value of `EXTERNAL_BINDINGS_KEY` can be either a single `Source` or
 a `List<Source>`, pointing to your External Binding Customization
 file(s).
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:dynamic_jaxb002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:dynamic_jaxb004.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2013 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

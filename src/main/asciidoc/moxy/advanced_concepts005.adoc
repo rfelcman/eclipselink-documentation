@@ -1,38 +1,26 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-a|
-Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|===
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|===
-|link:advanced_concepts004.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:advanced_concepts006.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
-
-[#CHDBFCAA]####[#TLJAX405]####
-
-== Mapping Using XPath Predicates
+///////////////////////////////////////////////////////////////////////////////
+[[ADVANCEDCONCEPTS005]]
+=== Mapping Using XPath Predicates
 
 By default, JAXB will use the Java field name as the XML element name:
 
-[#TLJAX406]####[#sthref167]####
+[[sthref167]]
 
 *_Example 8-24 Sample Java Code and XML Schema_*
 
@@ -59,7 +47,7 @@ public class Customer {
 Or, the XML name can be customized using the name attribute of the
 `@XmlElement` annotation:
 
-[#TLJAX407]####[#sthref168]####
+[[sthref168]]
 
 *_Example 8-25 Sample Java Code and XML Schema_*
 
@@ -104,11 +92,7 @@ the document, or based on an attribute value of an element:
 For cases like this, EclipseLink MOXy allows you to use XPath predicates
 to define an expression that will specify the XML element's name.
 
-[#TLJAX408]##
-
-[#sthref169]##
-
-=== Mapping with XPath Predicates
+==== Mapping with XPath Predicates
 
 An XPath predicate represents an expression that will be evaluated
 against the element specified. For example, the XPath statement:
@@ -150,25 +134,10 @@ Would match the *node* element with the attribute *name="foo"* (that is,
  
 ----
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-For more information on XPath Predicates, see "2.4 Predicates" of the
+NOTE: For more information on XPath Predicates, see "2.4 Predicates" of the
 XML Path Language (XPath) specification (`http://www.w3.org/TR/xpath`).
 
-|===
-
- +
-
-[#TLJAX409]##
-
-[#sthref170]##
-
-=== Mapping Based on Position
+==== Mapping Based on Position
 
 In the following example, our XML contains two *name* elements; the
 first occurrence of *name* should represent the *Customer's* first name,
@@ -177,7 +146,7 @@ specify XPath expressions for each property that will match the
 appropriate XML element. Note that we also use `@XmlType(propOrder)` to
 ensure that our elements will always be in the proper positions.
 
-[#TLJAX410]####[#sthref171]####
+[[sthref171]]
 
 *_Example 8-26 Using the @XmlType(propOrder) Annotation_*
 
@@ -207,7 +176,7 @@ public class Customer {
 This same configuration can be expressed in an EclipseLink XML Bindings
 document as follows:
 
-[#TLJAX411]####[#sthref172]####
+[[sthref172]]
 
 *_Example 8-27 Using the prop-order Attribute_*
 
@@ -228,7 +197,7 @@ document as follows:
 
 This will give us the desired XML representation:
 
-[#TLJAX412]####[#sthref173]####
+[[sthref173]]
 
 *_Example 8-28 Resulting XML_*
 
@@ -242,17 +211,13 @@ This will give us the desired XML representation:
  
 ----
 
-[#TLJAX413]##
-
-[#sthref174]##
-
-=== Mapping Based on an Attribute Value
+==== Mapping Based on an Attribute Value
 
 Since EclipseLink MOXy 2.3, you can also map to an XML element based on
 an Attribute value. In this example, all of our XML elements are named
 *node*, differentiated by the value of their *name* attribute:
 
-[#TLJAX414]####[#sthref175]####
+[[sthref175]]
 
 *_Example 8-29 Sample XML Schema_*
 
@@ -274,7 +239,7 @@ an Attribute value. In this example, all of our XML elements are named
 We can use an XPath in the form of
 `element-name[@attribute-name='value']` to map each Java field:
 
-[#TLJAX415]####[#sthref176]####
+[[sthref176]]
 
 *_Example 8-30 Sample Mappings_*
 
@@ -338,11 +303,7 @@ public class PhoneNumber {
  
 ----
 
-[#TLJAX416]##
-
-[#sthref177]##
-
-=== Creating "Self" Mappings
+==== Creating "Self" Mappings
 
 EclipseLink allows you to configure your one-to-one mappings so the data
 from the target object will appear inside the source object's XML
@@ -355,7 +316,7 @@ to *.* (dot).
 link:#CHDGBEAC[Example 8-31] demonstrates a self mapping declared in
 annotations.
 
-[#CHDGBEAC]####[#TLJAX417]####
+[[CHDGBEAC]]
 
 *_Example 8-31 Self Mapping Example_*
 
@@ -402,33 +363,3 @@ data is stored in the root *node*.
    <node name="phone-number" type="cell">555-2222</node>
 </node>
 ----
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:advanced_concepts004.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:advanced_concepts006.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2013 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

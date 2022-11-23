@@ -1,34 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-a|
-Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|===
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|===
-|link:dynamic_jaxb003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:json.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
-
-[#BGBGHCHJ]####[#TLJAX460]####
-
-== Bootstrapping from EclipseLink Metadata (OXM)
+///////////////////////////////////////////////////////////////////////////////
+[[DYNAMICJAXB004]]
+=== Bootstrapping from EclipseLink Metadata (OXM)
 
 If you would like to have more control over how your `DynamicEntities`
 will be mapped to XML, you can instead bootstrap from an EclipseLink OXM
@@ -37,7 +25,7 @@ EclipseLink's robust mappings framework and customize how each complex
 type in XML maps to its Java counterpart. The following API on
 `DynamicJAXBContextFactory` can be used to bootstrap from an OXM file:
 
-[#TLJAX461]####[#sthref202]####
+[[sthref202]]
 
 *_Example 9-11 Creating a DynamicJAXBContext_*
 
@@ -98,11 +86,7 @@ properties.put(JAXBContextProperties.OXM_METADATA_SOURCE, iStream);
 DynamicJAXBContext jaxbContext = DynamicJAXBContextFactory.createContextFromOXM(myClassLoader, properties);
 ----
 
-[#TLJAX462]##
-
-[#sthref203]##
-
-=== Example
+==== Example
 
 Using the sample OXM in link:#BABCECHB[Example 9-12], we will show an
 example of how to create and marshall a new object using Dynamic MOXy.
@@ -110,7 +94,7 @@ It is important to note the `type` attributes. Because there is no
 underlying Java class, the types of each property must be explicitly
 specified.
 
-[#BABCECHB]####[#TLJAX463]####
+[[BABCECHB]]
 
 *_Example 9-12 Sample XML Schema_*
 
@@ -151,7 +135,7 @@ The code in link:#BGBHBFEG[Example 9-13] demonstrates:
 * Creating new `DynamicEntities` and setting their properties
 * Creating a `JAXBMarshaller` and marshalling the Java objects to XML
 
-[#BGBHBFEG]####[#TLJAX464]####
+[[BGBHBFEG]]
 
 *_Example 9-13 Sample Application Code_*
 
@@ -176,35 +160,5 @@ newAddress.set("postalCode", "M5V1E6");
  
 newCustomer.set("address", newAddress);
  
-dContext.createMarshaller().marshal(newCustomer, System.out
+dContext.createMarshaller().marshal(newCustomer, System.out);
 ----
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:dynamic_jaxb003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:json.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2013 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

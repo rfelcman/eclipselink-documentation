@@ -1,33 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-a|
-Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|===
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,",]
-|===
-|link:json002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-| 
-|===
-
-[#BABEADAH]####[#TLJAX471]####
-
-== Specifying JSON Bindings
+///////////////////////////////////////////////////////////////////////////////
+[[JAXBJSON003]]
+=== Specifying JSON Bindings
 
 link:#BABICGHC[Example 10-4] shows a basic JSON binding that does not
 require compile time dependencies in addition to those required for
@@ -35,7 +24,7 @@ normal JAXB usage. This example shows how to unmarshal JSON from a
 `StreamSource` into the user object `SearchResults`, add a new `Result`
 to the collection, and then marshal the new collection to `System.out`.
 
-[#BABICGHC]####[#TLJAX472]####
+[[BABICGHC]]
 
 *_Example 10-4 Using Basic JSON Binding_*
 
@@ -83,7 +72,7 @@ You can also write MOXy External Bindings files as JSON documents.
 link:#BABBEFHI[Example 10-5] shows how to use `bindings.json` to map
 *Customer* and *PhoneNumber* classes to JSON.
 
-[#BABBEFHI]####[#TLJAX473]####
+[[BABBEFHI]]
 
 *_Example 10-5 Using External Bindings_*
 
@@ -127,7 +116,7 @@ link:#BABBEFHI[Example 10-5] shows how to use `bindings.json` to map
 link:#BABBAADH[Example 10-6] shows how to use the JSON file (created in
 link:#BABBEFHI[Example 10-5]) when bootstrapping a `JAXBContext`.
 
-[#BABBAADH]####[#TLJAX474]####
+[[BABBAADH]]
 
 *_Example 10-6 Using JSON to Bootstrap a JAXBContext_*
 
@@ -143,17 +132,13 @@ StreamSource json = new StreamSource(new File("src/org/example/input.json"));
 ...
 ----
 
-[#TLJAX477]##
-
-[#sthref205]##
-
-=== Specifying JSON Data Types
+==== Specifying JSON Data Types
 
 Although XML has a single datatype, JSON differentiates between strings,
 numbers, and booleans. EclipseLink supports these datatypes
 automatically, as shown in link:#BABGFFEH[Example 10-7]
 
-[#BABGFFEH]####[#TLJAX478]####
+[[BABGFFEH]]
 
 *_Example 10-7 Using JSON Data Types_*
 
@@ -178,11 +163,7 @@ public class Address {
 }
 ----
 
-[#TLJAX479]##
-
-[#sthref206]##
-
-=== Supporting Attributes
+==== Supporting Attributes
 
 JSON does not use attributes; anything mapped with a `@XmlAttribute`
 annotation will be marshalled as an element. By default, EclipseLink
@@ -197,7 +178,7 @@ attribute name during marshal and will recognize it during unmarshal.
 In the example below the `number` field is mapped as an attribute with
 the prefix *@*.
 
-[#BABEFCED]####[#TLJAX480]####
+[[BABEFCED]]
 
 *_Example 10-8 Using a Prefix_*
 
@@ -223,7 +204,7 @@ when creating the `JAXBContext`, as shown in link:#BABGGBJD[Example
 10-9]. All marshallers and unmarshalers created from the context will
 use the specified prefix.
 
-[#BABGGBJD]####[#TLJAX481]####
+[[BABGGBJD]]
 
 *_Example 10-9 Setting a Prefix in a Map_*
 
@@ -235,11 +216,7 @@ properties.put(JAXBContextProperties.JSON_ATTRIBUTE_PREFIX, "@");
 JAXBContext ctx = JAXBContext.newInstance(new Class[] { Phone.class }, properties);
 ----
 
-[#TLJAX482]##
-
-[#sthref207]##
-
-=== Supporting no Root Element
+==== Supporting no Root Element
 
 EclipseLink supports JSON documents without a root element. By default,
 if no `@XmlRootElement` annotation exists, the marshalled JSON document
@@ -249,7 +226,7 @@ omit the root element from the JSON output, even if the
 property when marshalling a document, as shown in link:#BABECFAI[Example
 10-10].
 
-[#BABECFAI]####[#TLJAX483]####
+[[BABECFAI]]
 
 *_Example 10-10 Marshalling no Root Element Documents_*
 
@@ -261,7 +238,7 @@ marshaller.setProperty(MarshallerProperties.JSON_INCLUDE_ROOT, false);
 When unmarshaling a document with no root elements, you should set the
 `JSON_INCLUDE_ROOT` property as shown in link:#BABECFAI[Example 10-10].
 
-[#TLJAX484]####[#sthref208]####
+[[sthref208]]
 
 *_Example 10-11 Unmarshalling no Root Element Documents_*
 
@@ -271,25 +248,10 @@ unmarshaller.setProperty(UnmarshallerProperties.JSON_INCLUDE_ROOT, false);
 JAXBElement<SearchResults> jaxbElement = unmarshaller.unmarshal(source, SearchResults.class);
 ----
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-If the document has no root element, you must specify the class to
+NOTE: If the document has no root element, you must specify the class to
 unmarshal to.
 
-|===
-
- +
-
-[#TLJAX485]##
-
-[#sthref209]##
-
-=== Using Namespaces
+==== Using Namespaces
 
 Because JSON does not use namespces, by default all namespaces and
 prefixes are ignored when marshaling and unmarshaling. In some cases,
@@ -306,7 +268,7 @@ proper namespaces.
 link:#BABEAJFJ[Example 10-12] shows how to use the
 `NAMESPACE_PREFIX_MAPPER` property.
 
-[#BABEAJFJ]####[#TLJAX486]####
+[[BABEAJFJ]]
 
 *_Example 10-12 Using Namesapces_*
 
@@ -347,16 +309,12 @@ jsonMarshaller.setProperty(MarshallerProperties.JSON_NAMESPACE_SEPARATOR, ':');
 jsonUnmarshaller.setProperty(UnmarshallerProperties.JSON_NAMESPACE_SEPARATOR, ':');
 ----
 
-[#TLJAX487]##
-
-[#sthref210]##
-
-=== Using Collections
+==== Using Collections
 
 By default, when marshalling to JSON, EclipseLink marshals empty
 collections as `[ ]`, as shown in link:#BABFJGGE[Example 10-13].
 
-[#BABFJGGE]####[#TLJAX488]####
+[[BABFJGGE]]
 
 *_Example 10-13_*
 
@@ -387,11 +345,7 @@ jsonMarshaller.setProperty(MarshallerProperties.JSON_MARSHAL_EMPTY_COLLECTIONS, 
  
 ----
 
-[#TLJAX489]##
-
-[#sthref211]##
-
-=== Mapping Root-Level Collections
+==== Mapping Root-Level Collections
 
 If you use the `@XmlRootElement(name="root")` annotation to specify a
 root level, the JSON document can be marshaled as:
@@ -444,16 +398,12 @@ to unmarshal to:
 unmarshaller.unmarshal(json, Root.class);
 ----
 
-[#TLJAX490]##
-
-[#sthref212]##
-
-=== Wrapping XML Values
+==== Wrapping XML Values
 
 JAXB supports one or more `@XmlAttributes` on `@XmlValue classes`, as
 shown in link:#BABCDADE[Example 10-14]
 
-[#BABCDADE]####[#TLJAX491]####
+[[BABCDADE]]
 
 *_Example 10-14 Using @XmlAttributes_*
 
@@ -482,7 +432,7 @@ public class Phone {
 To produce a valid JSON document, EclipseLink uses a `value` wrapper, as
 shown in link:#BABGIAAJ[Example 10-15].
 
-[#BABGIAAJ]####[#TLJAX492]####
+[[BABGIAAJ]]
 
 *_Example 10-15 Using a value Wrapper_*
 
@@ -510,7 +460,7 @@ By default, EclipseLink uses *value* as the name of the wrapper. Use the
 `JSON_VALUE_WRAPPER` property to customize the name of the value
 wrapper, as shown in link:#BABBHBFB[Example 10-16].
 
-[#BABBHBFB]####[#TLJAX493]####
+[[BABBHBFB]]
 
 *_Example 10-16_*
 
@@ -546,7 +496,7 @@ You can also specify the `JSON_VALUE_WRAPPER` property in the `Map` of
 the properties used when you create the `JAXBContext`, as shown in
 link:#BABCBAFB[Example 10-17].
 
-[#BABCBAFB]####[#TLJAX494]####
+[[BABCBAFB]]
 
 *_Example 10-17 Using a Map_*
 
@@ -562,32 +512,3 @@ Unmarshaller jsonUnmarshaller = ctx.createUnmarshaller();
 
 When specified in a Map, the Marshallers and Unmarshallers created from
 the `JAXBContent` will automatically use the specified value wrapper.
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="48%",cols=",^100%",]
-|===
-| 
-|link:json002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2013 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

@@ -1,40 +1,28 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-a|
-Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|===
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|===
-|link:runtime005.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:runtime007.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
-
-[#CACCBAFF]####[#TLJAX168]####
-
-== Validating Against an XML Schema
+///////////////////////////////////////////////////////////////////////////////
+[[RUNTIME006]]
+=== Validating Against an XML Schema
 
 If you would like to validate your objects against an XML Schema during
 marshalling and unmarshalling, you can make use of JAXB's
 `ValidationEventHandler`.
 
-[#TLJAX169]####[#sthref44]####
+[[sthref44]]
 
 *_Example 2-25 Sample XML Schema_*
 
@@ -77,7 +65,7 @@ Notice the following constraints:
 The *Customer* class is shown below. Notice that the class _does not_
 contain any validation code.
 
-[#TLJAX170]####[#sthref45]####
+[[sthref45]]
 
 *_Example 2-26 Sample Customer Class_*
 
@@ -117,11 +105,7 @@ public class Customer {
  
 ----
 
-[#TLJAX171]##
-
-[#sthref46]##
-
-=== Using a ValidationEventHandler
+==== Using a ValidationEventHandler
 
 You can receive JAXB validation events by providing your own subclass of
 `ValidationEventHandler`. The event is represented as an instance of
@@ -135,7 +119,7 @@ operation to stop.
 In link:#CACGDDBA[Example 2-27], we will simply print out an event's
 data when one is received:
 
-[#CACGDDBA]####[#TLJAX172]####
+[[CACGDDBA]]
 
 *_Example 2-27 Sample ValidationEventHandler_*
 
@@ -167,17 +151,13 @@ public class MyValidationEventHandler implements ValidationEventHandler {
  
 ----
 
-[#TLJAX173]##
-
-[#sthref47]##
-
-=== Enabling Validation
+==== Enabling Validation
 
 In addition to providing an implementation of `ValidationEventHandler`,
 an instance of `Schema` must be set on the `Marshaller` or
 `Unmarshaller`.
 
-[#TLJAX174]####[#sthref48]####
+[[sthref48]]
 
 *_Example 2-28 Sample Java Code_*
 
@@ -210,10 +190,6 @@ public class UnmarshalDemo {
  
 ----
 
-[#TLJAX175]##
-
-[#sthref49]##
-
 ==== Input (input.xml File)
 
 [source,oac_no_warn]
@@ -225,10 +201,6 @@ public class UnmarshalDemo {
    <phone-number/>
 </customer>
 ----
-
-[#TLJAX176]##
-
-[#sthref50]##
 
 ==== Output
 
@@ -280,33 +252,3 @@ LOCATOR
     NODE:  null
     URL:  null
 ----
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:runtime005.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:runtime007.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2013 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

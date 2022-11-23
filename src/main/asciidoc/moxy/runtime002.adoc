@@ -1,34 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-a|
-Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|===
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|===
-|link:runtime001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:runtime003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
-
-[#CACEJGAI]####[#TLJAX119]####
-
-== Bootstrapping
+///////////////////////////////////////////////////////////////////////////////
+[[RUNTIME002]]
+=== Bootstrapping
 
 EclipseLink MOXy offers several options when creating your
 `JAXBContext`. You have the option of bootstrapping from:
@@ -41,16 +29,12 @@ mappings for your Java classes
 * A list of session names, referring to EclipseLink sessions defined in
 `sessions.xml`
 
-[#TLJAX120]##
-
-[#sthref11]##
-
-=== Using the JAXBContext API
+==== Using the JAXBContext API
 
 The methods on `JAXBContext` (shown in link:#CACIIJCH[Example 2-1]) are
 used to create new instances.
 
-[#CACIIJCH]####[#TLJAX121]####
+[[CACIIJCH]]
 
 *_Example 2-1 JAXBContext Methods_*
 
@@ -81,9 +65,9 @@ The APIs in link:#CACIIJCH[Example 2-1] expect to find a
 information see link:runtime001.htm#CACFEGHC["Specifying the EclipseLink
 Runtime"].
 
-[#CACGJHHB]####[#TLJAX122]####
+[[CACGJHHB]]
 
-=== Bootstrapping from Classes
+==== Bootstrapping from Classes
 
 If you have a collection of Java classes annotated with JAXB
 annotations, you can provide a list of these classes directly:
@@ -98,9 +82,9 @@ example, referenced classes, super class) will automatically be
 recognized by the `JAXBContext`. Subclasses or classes marked as
 `@``XmlTransient` will not be recognized.
 
-[#CACGGBJG]####[#TLJAX123]####
+[[CACGGBJG]]
 
-=== Bootstrapping from a Context Path
+==== Bootstrapping from a Context Path
 
 Another way to bootstrap your `JAXBContext` is with a `String`, called
 the _context path_. This is a colon-delimited list of package names
@@ -118,9 +102,9 @@ will discover your model classes:
 * link:#CACGECEG[Using an ObjectFactory]
 * link:#CACHAFIB[Using MetadataSource]
 
-[#CACJBEFE]####[#TLJAX124]####
+[[CACJBEFE]]
 
-==== Using a `jaxb.index` File
+===== Using a `jaxb.index` File
 
 The context path could contain a file named `jaxb.index`, which is a
 simple text file containing the class names from the current package
@@ -131,7 +115,7 @@ that will be brought into the `JAXBContext`:
 src/example/jaxb.index:
 ----
 
-[#TLJAX125]####[#sthref12]####
+[[sthref12]]
 
 *_Example 2-2 Sample jaxb.index File_*
 
@@ -146,9 +130,9 @@ referenced classes, super class) will automatically be recognized by the
 `JAXBContext`. Subclasses or classes marked as `@XmlTransient` will not
 be recognized.
 
-[#CACGECEG]####[#TLJAX126]####
+[[CACGECEG]]
 
-==== Using an ObjectFactory
+===== Using an ObjectFactory
 
 The context path could also contain a class called `ObjectFactory`,
 which is a special factory class that JAXB will look for. This class
@@ -161,7 +145,7 @@ but one can be written by hand as well.
 src/example/ObjectFactory.java:
 ----
 
-[#TLJAX127]####[#sthref13]####
+[[sthref13]]
 
 *_Example 2-3 Sample ObjectFactory_*
 
@@ -192,15 +176,15 @@ return new EmployeeType();
 }
 ----
 
-[#CACHAFIB]####[#TLJAX128]####
+[[CACHAFIB]]
 
-==== Using MetadataSource
+===== Using MetadataSource
 
 EclipseLink MOXy also has the ability to retrieve mapping information
 from an implementation of EclipseLink's `MetadataSource`. Using this
 approach, you are responsible for creating your own `XmlBindings`.
 
-[#TLJAX129]####[#sthref14]####
+[[sthref14]]
 
 *_Example 2-4 Sample Metadata Source_*
 
@@ -221,11 +205,9 @@ public interface MetadataSource {
 ----
 
 For information on using a MetadataSource, see
-link:runtime004.htm#CACDDJHJ["Using MetadataSource"].
+xref:{relativedir}/runtime004.adoc#RUNTIME004["Using MetadataSource"].
 
-[#CACFIEIB]####[#TLJAX130]####
-
-=== Bootstrapping from EclipseLink XML Bindings
+==== Bootstrapping from EclipseLink XML Bindings
 
 To have more control over how your classes will be mapped to XML, you
 can bootstrap from an EclipseLink XML bindings document. Using this
@@ -237,7 +219,7 @@ Links to the actual documents are passed in via the *properties*
 parameter, using a special key,
 `JAXBContextProperties.OXM_METADATA_SOURCE`:
 
-[#TLJAX131]####[#sthref15]####
+[[sthref15]]
 
 *_Example 2-5 Using an EclipseLink Bindings Document_*
 
@@ -252,13 +234,9 @@ JAXBContext context = JAXBContext.newInstance(new Class[]{ Customer.class }, pro
 ----
 
 For more information on the XML Bindings format, see
-link:runtime003.htm#CACHCHAE["Using XML Bindings"].
+xref:{relativedir}/runtime003.adoc#RUNTIME003["Using XML Bindings"].
 
-[#TLJAX132]##
-
-[#sthref16]##
-
-=== Combining Annotated Classes and XML Bindings
+==== Combining Annotated Classes and XML Bindings
 
 When bootstrapping from annotated classes, additional mapping
 information can be provided with an EclipseLink XML bindings document.
@@ -270,7 +248,7 @@ annotations in your model classes).
 For example, review the annotated `Employee` class in
 link:#CACHBAEJ[Example 2-6].
 
-[#CACHBAEJ]####[#TLJAX133]####
+[[CACHBAEJ]]
 
 *_Example 2-6 Sample Java Class_*
 
@@ -294,7 +272,7 @@ You can customize the `Employee` to use an EclipseLink XMLAdapter for
 marshalling/unmarshalling `PhoneNumbers` by using the XML Bindings in
 link:#CACJCGHC[Example 2-7].
 
-[#CACJCGHC]####[#TLJAX134]####
+[[CACJCGHC]]
 
 *_Example 2-7 Using an XML Bindings Document_*
 
@@ -317,7 +295,7 @@ link:#CACJCGHC[Example 2-7].
 Finally, pass both the list of annotated classes and the link to the XML
 Bindings to the `JAXBContext`, as shown in link:#CACDDFDF[Example 2-8].
 
-[#CACDDFDF]####[#TLJAX135]####
+[[CACDDFDF]]
 
 *_Example 2-8 Sample Application Code_*
 
@@ -330,33 +308,3 @@ properties.put(JAXBContextProperties.OXM_METADATA_SOURCE, iStream);
 Class[] classes = new Class[] { Company.class, Employee.class };
 JAXBContext context = JAXBContext.newInstance(classes, properties);
 ----
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:runtime001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:runtime003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2013 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

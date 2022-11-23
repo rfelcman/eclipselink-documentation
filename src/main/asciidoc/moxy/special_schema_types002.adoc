@@ -1,39 +1,27 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-a|
-Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|===
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|===
-|link:special_schema_types001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:special_schema_types003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
-
-[#BABFFEHF]####[#TLJAX298]####
-
-== Mapping to a Union Field
+///////////////////////////////////////////////////////////////////////////////
+[[SPECIALSCHEMATYPES002]]
+=== Mapping to a Union Field
 
 The following XML schema and class diagram show a typical use of an XML
 Schema Union:
 
-[#TLJAX299]####[#sthref94]####
+[[sthref94]]
 
 *_Example 5-4 XML Schema Union_*
 
@@ -54,15 +42,12 @@ Schema Union:
  
 ----
 
-[#TLJAX300]####[#sthref95]####
+[[sthref95]]
 
 *_Figure 5-1 Mapping to a Union Field_*
 
-image:img/dxmuc.gif[Mapping to a Union
-Field,title="Mapping to a Union Field"] +
-link:img_text/dxmuc.htm[Description of "Figure 5-1 Mapping to a Union
-Field"] +
- +
+image:{imagesrelativedir}/dxmuc.gif[Mapping to a Union Field,title="Mapping to a Union Field"] +
+xref:{imagestextrelativedir}/dxmuc.adoc[Description of "Figure 5-1 Mapping to a Union Field"] +
 
 link:#BABDEIDD[Figure 5-2] illustrates a mapping to a union field in an
 XML document that conforms to the example schema. When EclipseLink
@@ -71,28 +56,22 @@ can make a successful conversion. The first schema type in the union is
 `xsd:decimal`. Because *10.5* is a valid decimal, EclipseLink converts
 the value to the appropriate type.
 
-[#BABDEIDD]####[#TLJAX301]####
+[[BABDEIDD]]
 
 *_Figure 5-2 Mapping to a Union Field in an XML Document_*
 
-image:img/dxmuv.gif[Mapping to a Union Field in an XML
-Document,title="Mapping to a Union Field in an XML Document"] +
-link:img_text/dxmuv.htm[Description of "Figure 5-2 Mapping to a Union
-Field in an XML Document"] +
- +
+image:{imagesrelativedir}/dxmuv.gif[Mapping to a Union Field in an XML Document,title="Mapping to a Union Field in an XML Document"] +
+xref:{imagestextrelativedir}/dxmuv.adoc[Description of "Figure 5-2 Mapping to a Union Field in an XML Document"] +
 
 In link:#BABFGEDJ[Figure 5-3], the value *M* is _not_ a valid
 `xsd:decimal` type, so the next union type is tried, `xsd:string`.
 
-[#BABFGEDJ]####[#TLJAX302]####
+[[BABFGEDJ]]
 
 *_Figure 5-3 Mapping to a Union Field_*
 
-image:img/dxmuvs.gif[Mapping to a Union
-Field,title="Mapping to a Union Field"] +
-link:img_text/dxmuvs.htm[Description of "Figure 5-3 Mapping to a Union
-Field"] +
- +
+image:{imagesrelativedir}/dxmuvs.gif[Mapping to a Union Field,title="Mapping to a Union Field"] +
+xref:{imagestextrelativedir}/dxmuvs.adoc[Description of "Figure 5-3 Mapping to a Union Field"] +
 
 Currently, EclipseLink does not support the mapping of Unions using
 Annotations or OXM Metadata. However, an EclipseLink XML Customizer can
@@ -103,7 +82,7 @@ avoid automatically generating a mapping for it. We also include an
 `@XmlCustomizer` annotation; the `CustomerCustomizer` class will create
 the Union mapping in code.
 
-[#TLJAX303]####[#sthref99]####
+[[sthref99]]
 
 *_Example 5-5 Using an EclipseLink Customizer_*
 
@@ -131,7 +110,7 @@ the `shoeSize` attribute. In link:#CHDEDAIJ[Example 5-6], an
 `XMLUnionField` is configured on the mapping, and the possible Union
 member types are added by calling `addSchemaType()`:
 
-[#CHDEDAIJ]####[#TLJAX304]####
+[[CHDEDAIJ]]
 
 *_Example 5-6 Mapping a Union Field_*
 
@@ -164,11 +143,7 @@ public class CustomerCustomizer implements DescriptorCustomizer {
  
 ----
 
-[#TLJAX305]##
-
-[#sthref100]##
-
-=== Understanding Conversion Order
+==== Understanding Conversion Order
 
 The order of the calls to `addSchemaType()` is important; when
 converting an XML value into Java, EclipseLink will attempt the
@@ -199,11 +174,7 @@ shoeSizeField.addSchemaType(XMLConstants.DECIMAL_QNAME);
 
 The shoeSize value will be a `String` *("10.5")*.
 
-[#TLJAX306]##
-
-[#sthref101]##
-
-=== Customizing Conversion Classes
+==== Customizing Conversion Classes
 
 EclipseLink uses a set of default conversions to create a value for the
 Java attribute (in this case, `xsd:decimal` will be converted into a
@@ -215,33 +186,3 @@ object to store `shoeSize` as a `Float`:
 ----
 shoeSizeField.addConversion(XMLConstants.DECIMAL_QNAME, Float.class);
 ----
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:special_schema_types001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:special_schema_types003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2013 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

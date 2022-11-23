@@ -1,34 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-a|
-Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|===
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|===
-|link:simple_values001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:simple_values003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
-
-[#CHDHEDHA]####[#TLJAX256]####
-
-== Mapping Collections of Simple Values
+///////////////////////////////////////////////////////////////////////////////
+[[SIMPLEVALUES002]]
+=== Mapping Collections of Simple Values
 
 This section demonstrates several ways to map a collection of simple
 Java values directly to XML text nodes.
@@ -38,15 +26,15 @@ Java values directly to XML text nodes.
 * link:#CHDIHAGJ[Mapping to a List Element]
 * link:#CHDDGGJC[Mapping a Collection of XmlAttributes or XmlValues]
 
-[#CHDEBEAH]####[#TLJAX257]####
+[[CHDEBEAH]]
 
-=== Mapping to Text Nodes
+==== Mapping to Text Nodes
 
 Given the XML schema in link:#CHDJIJBH[Example 4-25],
 link:#CHDBIDCE[Figure 4-10] illustrates the mapping of a Java collection
 to elements in a corresponding XML document.
 
-[#CHDJIJBH]####[#TLJAX258]####
+[[CHDJIJBH]]
 
 *_Example 4-25 Sample XML Schema_*
 
@@ -67,21 +55,18 @@ to elements in a corresponding XML document.
  
 ----
 
-[#CHDBIDCE]####[#TLJAX259]####
+[[CHDBIDCE]]
 
 *_Figure 4-10 XML Direct Collection Mapping to Text Nodes_*
 
-image:img/dc.gif[XML Direct Collection
-Mapping,title="XML Direct Collection Mapping"] +
-link:img_text/dc.htm[Description of "Figure 4-10 XML Direct Collection
-Mapping to Text Nodes"] +
- +
+image:{imagesrelativedir}/dc.gif[XML Direct Collection Mapping,title="XML Direct Collection Mapping"] +
+xref:{imagestextrelativedir}/dc.adoc[Description of "Figure 4-10 XML Direct Collection Mapping to Text Nodes"] +
 
 link:#CHDBHGHJ[Example 4-26] shows how to annotate your Java class to
 obtain this mapping with EclipseLink. All that is needed is the standard
 JAXB `@XmlElement` annotation.
 
-[#CHDBHGHJ]####[#TLJAX260]####
+[[CHDBHGHJ]]
 
 *_Example 4-26 Using the @XmlElement Annotation_*
 
@@ -105,7 +90,7 @@ public class Customer {
 link:#CHDGCGDF[Example 4-27] shows how to define your mapping
 information in EclipseLink's OXM metadata format.
 
-[#CHDGCGDF]####[#TLJAX261]####
+[[CHDGCGDF]]
 
 *_Example 4-27 Sample XML Mapping_*
 
@@ -122,16 +107,16 @@ information in EclipseLink's OXM metadata format.
  
 ----
 
-[#CHDHHIBD]####[#TLJAX262]####
+[[CHDHHIBD]]
 
-=== Mapping to Text Nodes with a Grouping Element
+==== Mapping to Text Nodes with a Grouping Element
 
 Given the XML schema in link:#CHDBDBEH[Example 4-28],
 link:#CHDDEJFD[Figure 4-11] illustrates the mapping of a Java collection
 to elements in a corresponding XML document, using a grouping element to
 organize the elements of the collection.
 
-[#CHDBDBEH]####[#TLJAX263]####
+[[CHDBDBEH]]
 
 *_Example 4-28 Sample XML Schema_*
 
@@ -152,22 +137,19 @@ organize the elements of the collection.
  
 ----
 
-[#CHDDEJFD]####[#TLJAX264]####
+[[CHDDEJFD]]
 
 *_Figure 4-11 XML Direct Collection Mapping to Text Nodes with a
 Grouping Element_*
 
-image:img/dcge.gif[XML Direct Collection
-Mapping,title="XML Direct Collection Mapping"] +
-link:img_text/dcge.htm[Description of "Figure 4-11 XML Direct Collection
-Mapping to Text Nodes with a Grouping Element"] +
- +
+image:{imagesrelativedir}/dcge.gif[XML Direct Collection Mapping,title="XML Direct Collection Mapping"] +
+xref:{imagestextrelativedir}/dcge.adoc[Description of "Figure 4-11 XML Direct Collection Mapping to Text Nodes with a Grouping Element"] +
 
 link:#CHDBHBIF[Example 4-29] shows how to annotate your Java class to
 obtain this mapping with EclipseLink. We specify the grouping element
 with the `@XmlElementWrapper` annotation.
 
-[#CHDBHBIF]####[#TLJAX265]####
+[[CHDBHBIF]]
 
 *_Example 4-29 Using the @XmlElementWrapper Annotation_*
 
@@ -192,7 +174,7 @@ public class Customer {
 link:#CHDFCAGG[Example 4-30] shows how to define your mapping
 information in EclipseLink's OXM metadata format.
 
-[#CHDFCAGG]####[#TLJAX266]####
+[[CHDFCAGG]]
 
 *_Example 4-30 Sample XML Mapping_*
 
@@ -211,9 +193,9 @@ information in EclipseLink's OXM metadata format.
  
 ----
 
-[#CHDIHAGJ]####[#TLJAX267]####
+[[CHDIHAGJ]]
 
-=== Mapping to a List Element
+==== Mapping to a List Element
 
 Given the XML schema in link:#CHDGBCBI[Example 4-31],
 link:#CHDGBHHE[Figure 4-12] illustrates a mapping to an `xsd:list` type
@@ -222,7 +204,7 @@ the collection of simple Java objects as a `String` of white space
 delimited tokens in XML. Here, the tasks list contains three entries:
 *Design*, *Code* and *Test*.
 
-[#CHDGBCBI]####[#TLJAX268]####
+[[CHDGBCBI]]
 
 *_Example 4-31 Sample XML Schema_*
 
@@ -247,20 +229,17 @@ delimited tokens in XML. Here, the tasks list contains three entries:
  
 ----
 
-[#CHDGBHHE]####[#TLJAX269]####
+[[CHDGBHHE]]
 
 *_Figure 4-12 XML Direct Mapping to a List Field_*
 
-image:img/dcxmstn.gif[XMLDirect Mapping to a List
-Field,title="XMLDirect Mapping to a List Field"] +
-link:img_text/dcxmstn.htm[Description of "Figure 4-12 XML Direct Mapping
-to a List Field"] +
- +
+image:{imagesrelativedir}/dcxmstn.gif[XMLDirect Mapping to a List Field,title="XMLDirect Mapping to a List Field"] +
+xref:{imagestextrelativedir}/dcxmstn.adoc[Description of "Figure 4-12 XML Direct Mapping to a List Field"] +
 
 link:#CHDHDGFF[Example 4-32] shows how to annotate your Java class to
 obtain this mapping with EclipseLink.
 
-[#CHDHDGFF]####[#TLJAX270]####
+[[CHDHDGFF]]
 
 *_Example 4-32 Using the @XmlList Annotation_*
 
@@ -284,7 +263,7 @@ public class Employee {
 link:#CHDEIEDI[Example 4-33] shows how to define your mapping
 information in EclipseLink's OXM metadata format.
 
-[#CHDEIEDI]####[#TLJAX271]####
+[[CHDEIEDI]]
 
 *_Example 4-33 Sample XML Mapping_*
 
@@ -301,15 +280,15 @@ information in EclipseLink's OXM metadata format.
  
 ----
 
-[#CHDDGGJC]####[#TLJAX272]####
+[[CHDDGGJC]]
 
-=== Mapping a Collection of XmlAttributes or XmlValues
+==== Mapping a Collection of XmlAttributes or XmlValues
 
 `@XmlList` can also be used in conjunction with `@XmlAttribute` or
 `@XmlValue`, as shown in link:#CHDGGBBB[Example 4-34]. The collection
 will be represented as a space-separated string in the attribute.
 
-[#CHDGGBBB]####[#TLJAX273]####
+[[CHDGGBBB]]
 
 *_Example 4-34 Java Annotations_*
 
@@ -345,7 +324,7 @@ public class PhoneNumbers {
  
 ----
 
-[#TLJAX274]####[#sthref78]####
+[[sthref78]]
 
 *_Example 4-35 EclipseLink OXM Metadata_*
 
@@ -372,7 +351,7 @@ public class PhoneNumbers {
  
 ----
 
-[#TLJAX275]####[#sthref79]####
+[[sthref79]]
 
 *_Example 4-36 Example XML Documents_*
 
@@ -382,33 +361,3 @@ public class PhoneNumbers {
  
 <phone-numbers>6132883982 6139828817 18882982298</phone-numbers>
 ----
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:simple_values001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:simple_values003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2013 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

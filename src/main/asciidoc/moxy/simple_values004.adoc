@@ -1,47 +1,31 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-a|
-Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|===
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|===
-|link:simple_values003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:special_schema_types.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
-
-[#CHDCGAIC]####[#TLJAX282]####
-
-== Mapping Enums
+///////////////////////////////////////////////////////////////////////////////
+[[SIMPLEVALUES004]]
+=== Mapping Enums
 
 Java enums can be mapped to XML using the `@XmlEnum` and `@XmlEnumValue`
 annotations.
 
-[#TLJAX283]##
-
-[#sthref83]##
-
-=== Mapping Enums using Constant Names
+==== Mapping Enums using Constant Names
 
 The following schema demonstrates an XML enumeration:
 
-[#TLJAX284]####[#sthref84]####
+[[sthref84]]
 
 *_Example 4-40 Sample XML Schema_*
 
@@ -61,7 +45,7 @@ The following schema demonstrates an XML enumeration:
 If your `enum` constant names themselves are sufficient for the XML
 representation, you can simply use the `@XmlEnum` annotation:
 
-[#TLJAX285]####[#sthref85]####
+[[sthref85]]
 
 *_Example 4-41 Using the @XmlEnum Annotation_*
 
@@ -87,7 +71,7 @@ public class Customer {
 link:#CHDHJCBE[Example 4-42] shows how to define this mapping in
 EclipseLink OXM Metadata:
 
-[#CHDHJCBE]####[#TLJAX286]####
+[[CHDHJCBE]]
 
 *_Example 4-42 Sample XML Mapping_*
 
@@ -125,15 +109,11 @@ When marshalled to XML, a *Customer* would look like this:
  
 ----
 
-[#TLJAX287]##
-
-[#sthref86]##
-
-=== Mapping Enums to Custom XML Values
+==== Mapping Enums to Custom XML Values
 
 Given the following XML schema enumeration:
 
-[#TLJAX288]####[#sthref87]####
+[[sthref87]]
 
 *_Example 4-43 Sample XML Schema_*
 
@@ -153,7 +133,7 @@ Given the following XML schema enumeration:
 To model this in Java, the `@XmlEnumValue` annotation is used to provide
 an XML value for each `enum` constant:
 
-[#TLJAX289]####[#sthref88]####
+[[sthref88]]
 
 *_Example 4-44 Using the @XmlEnumValue Annotation_*
 
@@ -184,7 +164,7 @@ public class Customer {
 link:#CHDGHHFE[Example 4-45] shows how to define this mapping in
 EclipseLink OXM Metadata:
 
-[#CHDGHHFE]####[#TLJAX290]####
+[[CHDGHHFE]]
 
 *_Example 4-45 Sample XML Mapping_*
 
@@ -220,33 +200,3 @@ When marshalled to XML, a new *Customer* would look like this:
    <type>2</type>
 </customer>
 ----
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:simple_values003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:special_schema_types.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2013 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

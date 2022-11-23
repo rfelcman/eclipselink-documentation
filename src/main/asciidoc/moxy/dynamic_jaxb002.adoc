@@ -1,34 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-a|
-Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|===
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|===
-|link:dynamic_jaxb001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:dynamic_jaxb003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
-
-[#BGBGADEE]####[#TLJAX448]####
-
-== Specifying the EclipseLink Runtime
+///////////////////////////////////////////////////////////////////////////////
+[[DYNAMICJAXB002]]
+=== Specifying the EclipseLink Runtime
 
 In order to use EclipseLink Dynamic MOXy as your JAXB implementation,
 you must identify the EclipseLink `DynamicJAXBContextFactory` in your
@@ -49,11 +37,7 @@ create a `DynamicJAXBContext`.
 Because you do not need to change any application code, you can easily
 switch between different JAXB implementations.
 
-[#TLJAX449]##
-
-[#sthref196]##
-
-=== Instantiating a DynamicJAXBContext
+==== Instantiating a DynamicJAXBContext
 
 The following methods on JAXBContext can be used to create new instances
 of DynamicJAXBContexts:
@@ -90,65 +74,15 @@ which can have several possible values:
 **** `javax.xml.transform.Source`
 **** `org.w3c.dom.Node`
 **** `org.xml.sax.InputSource`
-+
- +
 
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-If using one of these options, a package-name element must be defined in
+NOTE: If using one of these options, a package-name element must be defined in
 the `xml-bindings` element of your OXM file.
 
-|===
-
- +
 *** A List of objects from the set above.
-+
- +
 
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-If using this option, a package-name element must be defined in the
+NOTE: If using this option, a package-name element must be defined in the
 `xml-bindings` element of your OXM file.
 
-|===
-
- +
 *** A `Map<String, Object>`, where `String` is a package name, and
 `Object` is the pointer to the OXM file, from the set of possibilities
 above.
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:dynamic_jaxb001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:dynamic_jaxb003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2013 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

@@ -1,34 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-a|
-Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|===
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|===
-|link:simple_values.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:simple_values002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
-
-[#CHDHEJHH]####[#TLJAX213]####
-
-== Mapping Simple Values
+///////////////////////////////////////////////////////////////////////////////
+[[SIMPLEVALUES001]]
+=== Mapping Simple Values
 
 This section demonstrates several ways to map simple Java values
 directly to XML text nodes.
@@ -38,15 +26,15 @@ directly to XML text nodes.
 * link:#CHDGEBBJ[Mapping to a Specified Schema Type]
 * link:#CHDDBJBE[Mapping with a Simple Type Translator]
 
-[#CHDGCAGJ]####[#TLJAX214]####
+[[CHDGCAGJ]]
 
-=== Mapping to an Attribute
+==== Mapping to an Attribute
 
 Given the XML schema in link:#CHDCEBGA[Example 4-1],
 link:#CHDDEAAC[Figure 4-1] illustrates an XML direct mapping to an
 attribute in a corresponding XML document.
 
-[#CHDCEBGA]####[#TLJAX215]####
+[[CHDCEBGA]]
 
 *_Example 4-1 Sample XML Schema_*
 
@@ -64,21 +52,18 @@ attribute in a corresponding XML document.
 </xsd:schema>
 ----
 
-[#CHDDEAAC]####[#TLJAX216]####
+[[CHDDEAAC]]
 
 *_Figure 4-1 XML Direct Mapping to an Attribute_*
 
-image:img/dxmatt.gif[XML Direct Mapping to an
-Attribute,title="XML Direct Mapping to an Attribute"] +
-link:img_text/dxmatt.htm[Description of "Figure 4-1 XML Direct Mapping
-to an Attribute"] +
- +
+image:{imagesrelativedir}/dxmatt.gif[XML Direct Mapping to an Attribute,title="XML Direct Mapping to an Attribute"] +
+xref:{imagestextrelativedir}/dxmatt.adoc[Description of "Figure 4-1 XML Direct Mapping to an Attribute"] +
 
 link:#CHDCBCAE[Example 4-2] shows how to annotate your Java class to
 obtain this mapping with EclipseLink. All that is needed is the standard
 JAXB `@XmlAttribute` annotation.
 
-[#CHDCBCAE]####[#TLJAX217]####
+[[CHDCBCAE]]
 
 *_Example 4-2 Using the @XmlAttribute Annotation_*
 
@@ -102,7 +87,7 @@ public class Customer {
 link:#CHDEBIBI[Example 4-3] shows how to define your mapping information
 in EclipseLink's OXM metadata format.
 
-[#CHDEBIBI]####[#TLJAX218]####
+[[CHDEBIBI]]
 
 *_Example 4-3 Defining the Mapping_*
 
@@ -119,9 +104,9 @@ in EclipseLink's OXM metadata format.
  
 ----
 
-[#CHDDCCGG]####[#TLJAX219]####
+[[CHDDCCGG]]
 
-=== Mapping to a Text Node
+==== Mapping to a Text Node
 
 This section describes using an XML direct mapping when doing the
 following:
@@ -131,15 +116,15 @@ following:
 * link:#CHDEEABA[Mapping to a Text Node by Position]
 * link:#CHDHFDGE[Mapping to a Simple Text Node]
 
-[#CHDCEJEI]####[#TLJAX220]####
+[[CHDCEJEI]]
 
-==== Mapping to a Text Node in a Simple Sequence
+===== Mapping to a Text Node in a Simple Sequence
 
 Given the XML schema in link:#CHDCJCDA[Example 4-4],
 link:#CHDIHEFA[Figure 4-2] illustrates an XML direct mapping to
 individual text nodes in a sequence in a corresponding XML document.
 
-[#CHDCJCDA]####[#TLJAX221]####
+[[CHDCJCDA]]
 
 *_Example 4-4 Sample XML Schema_*
 
@@ -161,21 +146,18 @@ individual text nodes in a sequence in a corresponding XML document.
  
 ----
 
-[#CHDIHEFA]####[#TLJAX222]####
+[[CHDIHEFA]]
 
 *_Figure 4-2 XML Direct Mapping to Individual Text Nodes_*
 
-image:img/dxmss.gif[XML Direct Mapping to Individual Text
-Nodes,title="XML Direct Mapping to Individual Text Nodes"] +
-link:img_text/dxmss.htm[Description of "Figure 4-2 XML Direct Mapping to
-Individual Text Nodes"] +
- +
+image:{imagesrelativedir}/dxmss.gif[XML Direct Mapping to Individual Text Nodes,title="XML Direct Mapping to Individual Text Nodes"] +
+xref:{imagestextrelativedir}/dxmss.adoc[Description of "Figure 4-2 XML Direct Mapping to Individual Text Nodes"] +
 
 link:#CHDCEBGA[Example 4-1] shows how to annotate your Java class to
 obtain this mapping with EclipseLink. Here, the standard JAXB
 `@XmlElement` annotation is used, with a customized element name.
 
-[#CHDHHJGH]####[#TLJAX223]####
+[[CHDHHJGH]]
 
 *_Example 4-5 Using the @XmlElement Annotation_*
 
@@ -212,7 +194,7 @@ link:#CHDIEJJD[Example 4-6] shows how to define your mapping information
 in EclipseLink's OXM metadata format. To specify a custom element
 `name`, the `name` attribute is used.
 
-[#CHDIEJJD]####[#TLJAX224]####
+[[CHDIEJJD]]
 
 *_Example 4-6 Using the name Attribute_*
 
@@ -229,15 +211,15 @@ in EclipseLink's OXM metadata format. To specify a custom element
 ...
 ----
 
-[#CHDHJFIB]####[#TLJAX225]####
+[[CHDHJFIB]]
 
-==== Mapping to a Text Node in a Sub-element
+===== Mapping to a Text Node in a Sub-element
 
 Given the XML schema in link:#CHDGBBJB[Example 4-7],
 link:#CHDJGBDD[Figure 4-3] illustrates an XML direct mapping to a text
 node in a subelement in a corresponding XML document.
 
-[#CHDGBBJB]####[#TLJAX226]####
+[[CHDGBBJB]]
 
 *_Example 4-7 Sample XML Schema_*
 
@@ -265,22 +247,19 @@ node in a subelement in a corresponding XML document.
  
 ----
 
-[#CHDJGBDD]####[#TLJAX227]####
+[[CHDJGBDD]]
 
 *_Figure 4-3 XML Direct Mapping to a Text Element in a Subnode_*
 
-image:img/dxmse.gif[XML Direct Mapping to a Text Element in a
-Subnode,title="XML Direct Mapping to a Text Element in a Subnode"] +
-link:img_text/dxmse.htm[Description of "Figure 4-3 XML Direct Mapping to
-a Text Element in a Subnode"] +
- +
+image:{imagesrelativedir}/dxmse.gif[XML Direct Mapping to a Text Element in a Subnode,title="XML Direct Mapping to a Text Element in a Subnode"] +
+xref:{imagestextrelativedir}/dxmse.adoc[Description of "Figure 4-3 XML Direct Mapping to a Text Element in a Subnode"] +
 
 link:#CHDJGGDB[Example 4-8] shows how to annotate your Java class to
 obtain this mapping with EclipseLink. Here, because we are going beyond
 a simple element name customization and are actually introducing new XML
 structure, EclipseLink's `@XmlPath` annotation is used.
 
-[#CHDJGGDB]####[#TLJAX228]####
+[[CHDJGGDB]]
 
 *_Example 4-8 Using the @XmlPath Annotation_*
 
@@ -309,7 +288,7 @@ link:#CHDCJJCH[Example 4-9] shows how to define your mapping information
 in EclipseLink's OXM metadata format. Here, the customized XML path is
 defined in the `xml-path` attribute.
 
-[#CHDCJJCH]####[#TLJAX229]####
+[[CHDCJJCH]]
 
 *_Example 4-9 Using the xml-path Attribute_*
 
@@ -327,15 +306,15 @@ defined in the `xml-path` attribute.
  
 ----
 
-[#CHDEEABA]####[#TLJAX230]####
+[[CHDEEABA]]
 
-==== Mapping to a Text Node by Position
+===== Mapping to a Text Node by Position
 
 Given the XML schema in link:#CHDEDHDH[Example 4-10],
 link:#CHDCDJAA[Figure 4-4] illustrates an XML direct mapping to a text
 node by position in a corresponding XML document.
 
-[#CHDEDHDH]####[#TLJAX231]####
+[[CHDEDHDH]]
 
 *_Example 4-10 Sample XML Schema_*
 
@@ -356,21 +335,18 @@ node by position in a corresponding XML document.
  
 ----
 
-[#CHDCDJAA]####[#TLJAX232]####
+[[CHDCDJAA]]
 
 *_Figure 4-4 XML Direct Mapping to a Text Node_*
 
-image:img/dxmpos.gif[XML Direct Mapping to a Text
-Node,title="XML Direct Mapping to a Text Node"] +
-link:img_text/dxmpos.htm[Description of "Figure 4-4 XML Direct Mapping
-to a Text Node"] +
- +
+image:{imagesrelativedir}/dxmpos.gif[XML Direct Mapping to a Text Node,title="XML Direct Mapping to a Text Node"] +
+xref:{imagestextrelativedir}/dxmpos.adoc[Description of "Figure 4-4 XML Direct Mapping to a Text Node"] +
 
 link:#CHDGIGCD[Example 4-11] shows how to configure this mapping in
 Java. Again, for more complex XML path customization, EclipseLink's
 `@XmlPath` annotation is used.
 
-[#CHDGIGCD]####[#TLJAX233]####
+[[CHDGIGCD]]
 
 *_Example 4-11 Using the @XmlPath Annotation_*
 
@@ -397,7 +373,7 @@ public class Customer {
 link:#CHDGDFJB[Example 4-12] shows how to define your mapping
 information in EclipseLink's OXM metadata format.
 
-[#CHDGDFJB]####[#TLJAX234]####
+[[CHDGDFJB]]
 
 *_Example 4-12 Defining the Mapping_*
 
@@ -415,15 +391,15 @@ information in EclipseLink's OXM metadata format.
  
 ----
 
-[#CHDHFDGE]####[#TLJAX235]####
+[[CHDHFDGE]]
 
-==== Mapping to a Simple Text Node
+===== Mapping to a Simple Text Node
 
 Given the XML schema in link:#CHDJIBEE[Example 4-13],
 link:#CHDBJFCA[Figure 4-5] illustrates an XML direct mapping to a simple
 text node in a corresponding XML document.
 
-[#CHDJIBEE]####[#TLJAX236]####
+[[CHDJIBEE]]
 
 *_Example 4-13 Sample XML Schema_*
 
@@ -438,21 +414,18 @@ text node in a corresponding XML document.
  
 ----
 
-[#CHDBJFCA]####[#TLJAX237]####
+[[CHDBJFCA]]
 
 *_Figure 4-5 XML Direct Mapping to a Simple Text Node_*
 
-image:img/dxmstn.gif[XML Direct Mapping to a Simple Text
-Node,title="XML Direct Mapping to a Simple Text Node"] +
-link:img_text/dxmstn.htm[Description of "Figure 4-5 XML Direct Mapping
-to a Simple Text Node"] +
- +
+image:{imagesrelativedir}/dxmstn.gif[XML Direct Mapping to a Simple Text Node,title="XML Direct Mapping to a Simple Text Node"] +
+xref:{imagestextrelativedir}/dxmstn.adoc[Description of "Figure 4-5 XML Direct Mapping to a Simple Text Node"] +
 
 link:#CHDGGIAD[Example 4-14] shows how to annotate your Java class to
 obtain this mapping with EclipseLink. In this case, the `@XmlValue`
 annotation will be used.
 
-[#CHDGGIAD]####[#TLJAX238]####
+[[CHDGGIAD]]
 
 *_Example 4-14 Using the @XmlValue Annotation_*
 
@@ -476,7 +449,7 @@ public class PhoneNumber {
 link:#CHDDJDIJ[Example 4-15] shows how to define your mapping
 information in EclipseLink's OXM metadata format.
 
-[#CHDDJDIJ]####[#TLJAX239]####
+[[CHDDJDIJ]]
 
 *_Example 4-15 Defining the Mapping_*
 
@@ -493,9 +466,9 @@ information in EclipseLink's OXM metadata format.
  
 ----
 
-[#CHDGEBBJ]####[#TLJAX240]####
+[[CHDGEBBJ]]
 
-=== Mapping to a Specified Schema Type
+==== Mapping to a Specified Schema Type
 
 In most cases, EclipseLink can determine the target format in the XML
 document. However, there are cases where you must specify which one of a
@@ -508,7 +481,7 @@ The XML schema in link:#CHDGDFEB[Example 4-16] and link:#CHDIFDIB[Figure
 4-6] an XML direct mapping from a *Calendar* object in Java to a *date*
 field in XML.
 
-[#CHDGDFEB]####[#TLJAX241]####
+[[CHDGDFEB]]
 
 *_Example 4-16 Sample XML Schema_*
 
@@ -529,21 +502,18 @@ field in XML.
  
 ----
 
-[#CHDIFDIB]####[#TLJAX242]####
+[[CHDIFDIB]]
 
 *_Figure 4-6 XML Direct Mapping to a Specific Schema Type_*
 
-image:img/schematypedate.gif[XML Direct Mapping to a Specific Schema
-Type,title="XML Direct Mapping to a Specific Schema Type"] +
-link:img_text/schematypedate.htm[Description of "Figure 4-6 XML Direct
-Mapping to a Specific Schema Type"] +
- +
+image:{imagesrelativedir}/schematypedate.gif[XML Direct Mapping to a Specific Schema Type,title="XML Direct Mapping to a Specific Schema Type"] +
+xref:{imagestextrelativedir}/schematypedate.adoc[Description of "Figure 4-6 XML Direct Mapping to a Specific Schema Type"] +
 
 link:#CHDDECHC[Example 4-17] shows how to annotate your Java class to
 obtain this mapping with EclipseLink. Here, the `@XmlSchemaType` is used
 to specify the datatype that will appear in the marshalled XML.
 
-[#CHDDECHC]####[#TLJAX243]####
+[[CHDDECHC]]
 
 *_Example 4-17 Using the @XmlSchemaType Annotation_*
 
@@ -568,7 +538,7 @@ public class Customer {
 link:#CHDBCDGI[Example 4-18] shows how to define your mapping
 information in EclipseLink's OXM metadata format.
 
-[#CHDBCDGI]####[#TLJAX244]####
+[[CHDBCDGI]]
 
 *_Example 4-18 Defining the Mapping_*
 
@@ -587,17 +557,13 @@ information in EclipseLink's OXM metadata format.
  
 ----
 
-[#TLJAX245]##
-
-[#sthref71]##
-
-==== Using Java Type Adapters
+===== Using Java Type Adapters
 
 link:#CHDGFHHD[Example 4-19] and link:#CHDJHJDG[Figure 4-7] illustrate
 XML direct mappings to two different text nodes of different binary
 types.
 
-[#CHDGFHHD]####[#TLJAX246]####
+[[CHDGFHHD]]
 
 *_Example 4-19 Sample XML Schema_*
 
@@ -619,15 +585,13 @@ types.
  
 ----
 
-[#CHDJHJDG]####[#TLJAX247]####
+[[CHDJHJDG]]
 
 *_Figure 4-7 XML Direct Mappings to Different Text Nodes of Different
 Binary Types_*
 
-image:img/dxmscht.gif[XML Direct Mappings,title="XML Direct Mappings"] +
-link:img_text/dxmscht.htm[Description of "Figure 4-7 XML Direct Mappings
-to Different Text Nodes of Different Binary Types"] +
- +
+image:{imagesrelativedir}/dxmscht.gif[XML Direct Mappings,title="XML Direct Mappings"] +
+xref:{imagestextrelativedir}/dxmscht.adoc[Description of "Figure 4-7 XML Direct Mappings to Different Text Nodes of Different Binary Types"] +
 
 link:#CHDJGHBH[Example 4-20] shows how to annotate your Java class to
 obtain this mapping with EclipseLink. By default, JAXB will marshall
@@ -637,7 +601,7 @@ specifies the XML type, while `@XmlJavaTypeAdapter` specifies the
 adapter class that will be responsible for converting the value (in this
 case, the built-in JAXB `HexBinaryAdapter`).
 
-[#CHDJGHBH]####[#TLJAX248]####
+[[CHDJGHBH]]
 
 *_Example 4-20 Using the @XmlSchemaType and @XmlJavaTypeAdapter
 Annotations_*
@@ -665,7 +629,7 @@ public class Customer {
 link:#CHDCIEED[Example 4-21] shows how to define your mapping
 information in EclipseLink's OXM metadata format.
 
-[#CHDCIEED]####[#TLJAX249]####
+[[CHDCIEED]]
 
 *_Example 4-21 Defining the Mapping_*
 
@@ -686,9 +650,9 @@ information in EclipseLink's OXM metadata format.
  
 ----
 
-[#CHDDBJBE]####[#TLJAX250]####
+[[CHDDBJBE]]
 
-=== Mapping with a Simple Type Translator
+==== Mapping with a Simple Type Translator
 
 If the type of a node is not defined in your XML schema, you can
 configure an XML direct mapping to use the `xsi:type` attribute to
@@ -698,7 +662,7 @@ Given the XML schema in link:#CHDGEJDD[Example 4-22],
 link:#CHDGACBA[Figure 4-8] illustrates a Java class that can be mapped
 to a corresponding XML document.
 
-[#CHDGEJDD]####[#TLJAX251]####
+[[CHDGEJDD]]
 
 *_Example 4-22 Sample XML Schema_*
 
@@ -720,33 +684,28 @@ to a corresponding XML document.
  
 ----
 
-[#CHDGACBA]####[#TLJAX252]####
+[[CHDGACBA]]
 
 *_Figure 4-8 Sample Java Class_*
 
-image:img/dxmsttc.gif[Sample Java Class,title="Sample Java Class"] +
-link:img_text/dxmsttc.htm[Description of "Figure 4-8 Sample Java
-Class"] +
- +
+image:{imagesrelativedir}/dxmsttc.gif[Sample Java Class,title="Sample Java Class"] +
+xref:{imagestextrelativedir}/dxmsttc.adoc[Description of "Figure 4-8 Sample Java Class"] +
 
 link:#CHDFJIEB[Figure 4-9] illustrates an XML direct mapping with a
 simple type translator in an XML document that conforms to the schema
 above.
 
-[#CHDFJIEB]####[#TLJAX253]####
+[[CHDFJIEB]]
 
 *_Figure 4-9 XML Direct Mapping with Simple Type Translator_*
 
-image:img/dxmsttm.gif[XML Direct Mapping with Simple Type
-Translator,title="XML Direct Mapping with Simple Type Translator"] +
-link:img_text/dxmsttm.htm[Description of "Figure 4-9 XML Direct Mapping
-with Simple Type Translator"] +
- +
+image:{imagesrelativedir}/dxmsttm.gif[XML Direct Mapping with Simple Type Translator,title="XML Direct Mapping with Simple Type Translator"] +
+xref:{imagestextrelativedir}/dxmsttm.adoc[Description of "Figure 4-9 XML Direct Mapping with Simple Type Translator"] +
 
 link:#CHDGCAAG[Example 4-23] shows how to annotate your Java class to
 obtain this mapping with EclipseLink.
 
-[#CHDGCAAG]####[#TLJAX254]####
+[[CHDGCAAG]]
 
 *_Example 4-23 Sample Mapping_*
 
@@ -771,7 +730,7 @@ public class PhoneNumber {
 link:#CHDHEGAE[Example 4-24] shows how to define your mapping
 information in EclipseLink's OXM metadata format.
 
-[#CHDHEGAE]####[#TLJAX255]####
+[[CHDHEGAE]]
 
 *_Example 4-24 Sample XML Mapping_*
 
@@ -787,33 +746,3 @@ information in EclipseLink's OXM metadata format.
 </java-type>
 ...
 ----
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:simple_values.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:simple_values002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2013 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

@@ -1,34 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-a|
-Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|===
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|===
-|link:runtime002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:runtime004.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
-
-[#CACHCHAE]####[#TLJAX136]####
-
-== Using XML Bindings
+///////////////////////////////////////////////////////////////////////////////
+[[RUNTIME003]]
+=== Using XML Bindings
 
 In addition to standard JAXB annotations, EclipseLink offers another way
 of expressing your metadata: the EclipseLink XML Bindings document. Not
@@ -47,18 +35,14 @@ more..
 This section describes the XML Bindings format and demonstrates some
 basic use cases.
 
-[#TLJAX137]##
-
-[#sthref17]##
-
-=== Understanding the XML Bindings Format
+==== Understanding the XML Bindings Format
 
 An XML Bindings document is XML that specifies Java type information,
 mapping information, context-wide properties – everything you need to
 define your JAXB system. An example Bindings document is shown in
 link:#CACDBJHE[Example 2-9].
 
-[#CACDBJHE]####[#TLJAX138]####
+[[CACDBJHE]]
 
 *_Example 2-9 Sample Bindings Document_*
 
@@ -114,7 +98,7 @@ link:#CACDBJHE[Example 2-9].
  </xml-bindings>
 ----
 
-[#TLJAX139]####[#sthref18]####[#sthref19]##
+[[sthref18]]
 
 *_Table 2-1 Binding Document Attributes_*
 
@@ -139,13 +123,7 @@ Java types.
 system.
 |===
 
- +
-
-[#TLJAX140]##
-
-[#sthref20]##
-
-=== Bootstrapping with XML Bindings
+==== Bootstrapping with XML Bindings
 
 When instantiating a `JAXBContext`, links to Bindings documents are
 passed in via the properties parameter, using a special key,
@@ -169,11 +147,7 @@ To bootstrap from multiple XML Bindings documents:
 * Lists of the above inputs are acceptable as well (`<xml-bindings>`
 must have package attribute).
 
-[#TLJAX141]##
-
-[#sthref21]##
-
-=== Using XML Bindings with Annotations
+==== Using XML Bindings with Annotations
 
 The most typical use of an XML Bindings document is in conjunction with
 JAXB annotations. You may have situation where you are not permitted to
@@ -187,7 +161,7 @@ annotation information.
 For example, consider the simple JAXB domain class and its default JAXB
 XML representation shown in link:#CACJAIBJ[Example 2-10].
 
-[#CACJAIBJ]####[#TLJAX142]####
+[[CACJAIBJ]]
 
 *_Example 2-10 Sample JAXB Domain Class and XML_*
 
@@ -229,7 +203,7 @@ use our own custom converter, `MyHexConverter`.
 We can specify these three customizations in an XML Bindings document as
 shown in link:#CACEDHHB[Example 2-11].
 
-[#CACEDHHB]####[#TLJAX143]####
+[[CACEDHHB]]
 
 *_Example 2-11 Customized XML Bindings_*
 
@@ -259,7 +233,7 @@ shown in link:#CACEDHHB[Example 2-11].
 The Bindings must then be provided during JAXB context creation.
 Bindings information is passed in via the `properties` argument:
 
-[#TLJAX144]####[#sthref22]####
+[[sthref22]]
 
 *_Example 2-12 Providing Bindings_*
 
@@ -293,17 +267,13 @@ After applying the XML Bindings, we have the desired XML representation:
 </customer-info>
 ----
 
-[#TLJAX145]##
-
-[#sthref23]##
-
-=== Using Multiple Bindings Documents
+==== Using Multiple Bindings Documents
 
 Starting with version 2.3, EclipseLink allows you to use mapping
 information from multiple XML Bindings documents. Using this approach,
 you can split your metadata up as you wish.
 
-[#TLJAX146]####[#sthref24]####
+[[sthref24]]
 
 *_Example 2-13 Using a List of XML Bindings:_*
 
@@ -329,7 +299,7 @@ When using a List of Bindings documents, each one must define the
 package attribute of `<xml-bindings>`, to indicate the package for each
 set of Bindings.
 
-[#TLJAX147]####[#sthref25]####
+[[sthref25]]
 
 *_Example 2-14 Using a Map for multiple packages:_*
 
@@ -362,11 +332,7 @@ JAXBContext ctx = JAXBContext.newInstance(new Class[] { Customer.class }, proper
 ...
 ----
 
-[#TLJAX148]##
-
-[#sthref26]##
-
-=== Understanding Override Rules
+==== Understanding Override Rules
 
 When multiple sources of metadata are encountered for the same package,
 a unified set of mappings will be created by merging the complete set of
@@ -424,11 +390,7 @@ replaced with the one from the later bindings.
 appears at the package level in multiple bindings files, the merged
 bindings will only contain the entry for the last one specified.
 
-[#TLJAX149]##
-
-[#sthref27]##
-
-=== Using Complete Metadata
+==== Using Complete Metadata
 
 If you would like to store all of your metadata in XML Bindings and
 ignore any JAXB annotations in your Java class, you can include the
@@ -454,7 +416,7 @@ Using the *Customer* example from above, the following examples
 demonstrate the XML representations that will be generated when using
 `xml-mapping-metadata-complet`e:
 
-[#TLJAX150]####[#sthref28]####
+[[sthref28]]
 
 *_Example 2-15 Sample Customer Class_*
 
@@ -476,7 +438,7 @@ public class Customer {
 }
 ----
 
-[#TLJAX151]####[#sthref29]####
+[[sthref29]]
 
 *_Example 2-16 XML Bindings_*
 
@@ -498,7 +460,7 @@ public class Customer {
 </xml-bindings>
 ----
 
-[#TLJAX152]####[#sthref30]####
+[[sthref30]]
 
 *_Example 2-17 XML Representation_*
 
@@ -518,7 +480,7 @@ now an XML element, as if there were no annotation on the Java field)
 * The name element has been renamed to `customer-name`
 * Default JAXB mappings are generated for `picture` and `salary`
 
-[#TLJAX153]####[#sthref31]####
+[[sthref31]]
 
 *_Example 2-18 XML Bindings (with xml-accessor-type="NONE")_*
 
@@ -540,7 +502,7 @@ now an XML element, as if there were no annotation on the Java field)
 </xml-bindings>
 ----
 
-[#TLJAX154]####[#sthref32]####
+[[sthref32]]
 
 *_Example 2-19 XML Representation_*
 
@@ -557,44 +519,10 @@ mappings from being generated
 * The XML representation contains only the mappings defined in the XML
 Bindings document
 
-[#TLJAX155]##
-
-[#sthref33]##
-
-=== Using Virtual Mappings
+==== Using Virtual Mappings
 
 XML Bindings can also be used to specify virtual mappings – mappings
 that do not correspond to a concrete Java field. For example, you might
 want to use a `HashMap` as the underlying structure to hold data for
 certain mappings. For information on using Virtual Mappings, see
-link:advanced_concepts003.htm#CHDJHCCE["Using Virtual Access Methods"].
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:runtime002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:runtime004.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2013 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +
+xref:{relativedir}/advanced_concepts003.adoc#ADVANCEDCONCEPTS003["Using Virtual Access Methods"].

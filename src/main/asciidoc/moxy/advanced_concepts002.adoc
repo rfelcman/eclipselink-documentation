@@ -1,34 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-a|
-Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|===
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|===
-|link:advanced_concepts001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:advanced_concepts003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
-
-[#CHDCCCAF]####[#TLJAX365]####
-
-== Customizing XML Name Conversions
+///////////////////////////////////////////////////////////////////////////////
+[[ADVANCEDCONCEPTS002]]
+=== Customizing XML Name Conversions
 
 JAXB has well-established rules for converting Java names to XML names,
 which can be overridden through the use of annotations. This can become
@@ -39,11 +27,7 @@ default naming algorithm.
 This example will create an implementation of `XMLNameTransformer` to
 provide a naming algorithm to MOXy.
 
-[#TLJAX366]##
-
-[#sthref139]##
-
-=== Using the XMLNameTransformer
+==== Using the XMLNameTransformer
 
 The `XMLNameTransformer` interface defines several methods for
 customizing name generation:
@@ -66,7 +50,7 @@ the following:
 names
 * XML attributes will appear in all upper-case
 
-[#CHDCIJJI]####[#TLJAX367]####
+[[CHDCIJJI]]
 
 *_Example 8-2 Using an XMLNameTransformer_*
 
@@ -110,16 +94,12 @@ public class NameGenerator implements org.eclipse.persistence.oxm.XMLNameTransfo
  
 ----
 
-[#TLJAX368]##
-
-[#sthref140]##
-
-=== Example Model
+==== Example Model
 
 The domain model in link:#CHDEEICC[Example 8-3] will be used. To save
 space, the accessors have been omitted.
 
-[#CHDEEICC]####[#TLJAX369]####
+[[CHDEEICC]]
 
 *_Example 8-3 Customer_*
 
@@ -143,7 +123,7 @@ public class Customer {
  
 ----
 
-[#TLJAX370]####[#sthref141]####
+[[sthref141]]
 
 *_Example 8-4 Address.java_*
 
@@ -163,11 +143,7 @@ public class Address {
  
 ----
 
-[#TLJAX371]##
-
-[#sthref142]##
-
-=== Specifying the Naming Algorithm
+==== Specifying the Naming Algorithm
 
 Our implementation of the naming algorithm can be provided via the
 `@XmlNameTransformer` annotation (package or type level) or via the
@@ -199,11 +175,7 @@ package example;
  
 ----
 
-[#TLJAX372]##
-
-[#sthref143]##
-
-=== XML Output
+==== XML Output
 
 Without any customization, JAXB's default naming algorithm will produce
 XML that looks like the following:
@@ -233,33 +205,3 @@ output without specifying any additional metadata on our domain classes:
    </shipping-address>
 </Customer>
 ----
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:advanced_concepts001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:advanced_concepts003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2013 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

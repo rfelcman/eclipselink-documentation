@@ -1,34 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-a|
-Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|===
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|===
-|link:advanced_concepts002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:advanced_concepts004.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
-
-[#CHDJHCCE]####[#TLJAX373]####
-
-== Using Virtual Access Methods
+///////////////////////////////////////////////////////////////////////////////
+[[ADVANCEDCONCEPTS003]]
+=== Using Virtual Access Methods
 
 In addition to standard JAXB properties (represented by Java fields and
 accessor methods), EclipseLink MOXy 2.3 introduced the concept of
@@ -50,36 +38,21 @@ virtual property values:
 *** `<ValueType>` can be `Object`, or any other Java type (if you would
 like to use a particular type of value class in the method signature)
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-By default, EclipseLink will look for methods named `set` and `get`. To
+NOTE: By default, EclipseLink will look for methods named `set` and `get`. To
 customize accessor method names, see link:#CHDBDGHA["Specifying
 Alternate Accessor Methods"].
-
-|===
-
- +
 
 For an example of using virtual properties in a multi-tenant
 architecture, see link:advanced_concepts004.htm#CHDIHFEE["Using
 Extensible MOXy"].
 
-[#TLJAX374]##
-
-[#sthref144]##
-
-=== Configuring Virtual Access Methods
+==== Configuring Virtual Access Methods
 
 Virtual Access Methods can be configured either by through Java
 annotations (see link:#CIHHFHBH[Example 8-5]) or EclipseLink OXM
 metadata (see link:#CIHIIIFB[Example 8-6]).
 
-[#CIHHFHBH]####[#TLJAX375]####
+[[CIHHFHBH]]
 
 *_Example 8-5 Using Java Annotations_*
 
@@ -121,7 +94,7 @@ public class Customer {
  
 ----
 
-[#CIHIIIFB]####[#TLJAX376]####
+[[CIHIIIFB]]
 
 *_Example 8-6 Using OXM Metadata_*
 
@@ -140,21 +113,17 @@ public class Customer {
  
 ----
 
-[#TLJAX377]##
-
-[#sthref145]##
-
-=== Example
+==== Example
 
 For this example we will use the *Customer* class
-(link:advanced_concepts002.htm#CHDEEICC[Example 8-3]), along with an
+(xref:{relativedir}/advanced_concepts002.adoc#CHDEEICC[Example 8-3]), along with an
 EclipseLink OXM file to define our virtual mappings. Any property
 encountered in this file that does not have a corresponding Java
 attribute will be considered a virtual property and will be accessed
 through the virtual access methods. Because there is no associated Java
 field, the `type` information must also be provided.
 
-[#TLJAX378]####[#sthref146]####
+[[sthref146]]
 
 *_Example 8-7 The virtualprops-oxm.xml File_*
 
@@ -224,17 +193,13 @@ customerWindow.getTextField(DCODE).setText(c.get("discountCode"));
  
 ----
 
-[#TLJAX379]##
-
-[#sthref147]##
-
-=== Using XmlAccessType.FIELD and XmlTransient
+==== Using XmlAccessType.FIELD and XmlTransient
 
 If you are using an `@XmlAccessorType` of `XmlAccessType.FIELD`, you
 will need to mark your virtual properties `Map` attribute to be
 `@XmlTransient`, to prevent the `Map` itself from being bound to XML:
 
-[#TLJAX380]####[#sthref148]####
+[[sthref148]]
 
 *_Example 8-8 Marking the Map Attribute_*
 
@@ -257,24 +222,20 @@ public class Customer {
  
 ----
 
-[#TLJAX381]##
-
-[#sthref149]##
-
-=== Options
+==== Options
 
 * link:#CHDBDGHA[Specifying Alternate Accessor Methods]
 * link:#CHDJDAJF[Specifying Schema Generation Options]
 
-[#CHDBDGHA]####[#TLJAX382]####
+[[CHDBDGHA]]
 
-==== Specifying Alternate Accessor Methods
+===== Specifying Alternate Accessor Methods
 
 To use different method names as your virtual method accessors, specify
 them using the `getMethodName` and `setMethodName` attributes on
 `@XmlVirtualAccessMethods`:
 
-[#TLJAX383]####[#sthref150]####
+[[sthref150]]
 
 *_Example 8-9 Using Alternate Accessor Methods_*
 
@@ -315,7 +276,7 @@ public class Customer {
 
 In OXM:
 
-[#TLJAX384]####[#sthref151]####
+[[sthref151]]
 
 *_Example 8-10 Using the xml-virtual-access-methods Element_*
 
@@ -337,9 +298,9 @@ In OXM:
  
 ----
 
-[#CHDJDAJF]####[#TLJAX385]####
+[[CHDJDAJF]]
 
-==== Specifying Schema Generation Options
+===== Specifying Schema Generation Options
 
 You can configure how virtual properties should appear in generated
 schemas using the `schema` attribute on `@XmlVirtualAccessMethods`.
@@ -348,16 +309,12 @@ EclipseLink offers two options. Virtual properties can be:
 * written as individual nodes, or
 * consolidated into a single `<any>` element.
 
-[#TLJAX386]##
-
-[#sthref152]##
-
-===== Virtual Properties as Individual Nodes
+====== Virtual Properties as Individual Nodes
 
 This is EclipseLink's default behavior, or can be specified explicitly
 as an override as follows:
 
-[#TLJAX387]####[#sthref153]####
+[[sthref153]]
 
 *_Example 8-11 Mapping as Individual Nodes_*
 
@@ -376,7 +333,7 @@ public class Customer {
 
 For example:
 
-[#TLJAX388]####[#sthref154]####
+[[sthref154]]
 
 *_Example 8-12 Original Customer Schema_*
 
@@ -397,7 +354,7 @@ For example:
  
 ----
 
-[#TLJAX389]####[#sthref155]####
+[[sthref155]]
 
 *_Example 8-13 Generated Schema (After adding middle-initial and
 phone-number)_*
@@ -421,16 +378,12 @@ phone-number)_*
  
 ----
 
-[#TLJAX390]##
-
-[#sthref156]##
-
-===== Virtual Properties in an `<any>` Element
+====== Virtual Properties in an `<any>` Element
 
 EclipseLink can also use an `<any>` element to hold all of the virtual
 properties in one node:
 
-[#CHDBFAEB]####[#TLJAX391]####
+[[CHDBFAEB]]
 
 *_Example 8-14 Using an `<any>` Element_*
 
@@ -450,7 +403,7 @@ public class Customer {
 From link:#CHDBFAEB[Example 8-14], a newly generated schema using this
 approach would look like:
 
-[#TLJAX392]####[#sthref157]####
+[[sthref157]]
 
 *_Example 8-15 Generated Schema_*
 
@@ -470,33 +423,3 @@ approach would look like:
  
 </xs:schema>
 ----
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:advanced_concepts002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:advanced_concepts004.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2013 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

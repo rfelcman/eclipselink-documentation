@@ -1,34 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-a|
-Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|===
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|===
-|link:advanced_concepts005.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:advanced_concepts007.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
-
-[#CHDCEDIG]####[#TLJAX418]####
-
-== Using an XmlAdapter
+///////////////////////////////////////////////////////////////////////////////
+[[ADVANCEDCONCEPTS006]]
+=== Using an XmlAdapter
 
 Some Java classes may not be well suited for use with JAXB and at first
 glance may seem "unmappable" – for example, classes that do not have a
@@ -48,7 +36,7 @@ representation through the ValueType.
 
 The outline of an XmlAdapter class is as follows:
 
-[#TLJAX419]####[#sthref178]####
+[[sthref178]]
 
 *_Example 8-32 XmlAdapter Class Outline_*
 
@@ -68,15 +56,11 @@ public class AdapterName extends XmlAdapter<ValueType, BoundType> {
  
 ----
 
-[#TLJAX420]##
-
-[#sthref179]##
-
-=== Using java.util.Currency
+==== Using java.util.Currency
 
 Our first example will use the following domain class:
 
-[#TLJAX421]####[#sthref180]####
+[[sthref180]]
 
 *_Example 8-33 Sample Domain Class_*
 
@@ -108,7 +92,7 @@ know how to handle – a simple `String`. Luckily, in this case the
 *Currency's* `toString()` method returns the currency code, which can
 also be used to create a new *Currency*:
 
-[#TLJAX422]####[#sthref181]####
+[[sthref181]]
 
 *_Example 8-34 Using an Adapter_*
 
@@ -146,7 +130,7 @@ To indicate that our adapter should be used for the *Currency* property,
 we annotate it with `@XmlJavaTypeAdapter` and provide the class name of
 our adapter:
 
-[#TLJAX423]####[#sthref182]####
+[[sthref182]]
 
 *_Example 8-35 Using the @XmlJavaTypeAdapter Annotation_*
 
@@ -172,11 +156,7 @@ public class PurchaseOrder {
  
 ----
 
-[#TLJAX424]##
-
-[#sthref183]##
-
-=== Using java.awt.Point
+==== Using java.awt.Point
 
 Sometimes the best way to handle an unmappable class is to write a
 "stand-in" class which _can_ be mapped with JAXB, and convert between
@@ -186,7 +166,7 @@ will pickup automatically and map), an infinite loop will occur during
 marshalling. Because we cannot change the *Point* class, we will write a
 new class, *MyPoint*, and use it in the adapter.
 
-[#TLJAX425]####[#sthref184]####
+[[sthref184]]
 
 *_Example 8-36 Using java.awt.Point_*
 
@@ -242,7 +222,7 @@ public class MyPointAdapter extends XmlAdapter<MyPoint, Point> {
 
 Finally, our *Point* properties are marked with `@XmlJavaTypeAdapter`:
 
-[#CHDBBDAC]####[#TLJAX426]####
+[[CHDBBDAC]]
 
 *_Example 8-37 Using the @XmlJavaTypeAdapter Annotation_*
 
@@ -270,11 +250,7 @@ public class Zone {
 }
 ----
 
-[#TLJAX427]##
-
-[#sthref185]##
-
-=== Specifying Package-Level Adapters
+==== Specifying Package-Level Adapters
 
 In link:#CHDBBDAC[Example 8-37], we annotated both *Point* properties
 with the `@XmlJavaTypeAdapter` annotation. If you have many of these
@@ -296,11 +272,7 @@ package example;
  
 ----
 
-[#TLJAX428]##
-
-[#sthref186]##
-
-=== Specifying Class-Level @XmlJavaTypeAdapters
+==== Specifying Class-Level @XmlJavaTypeAdapters
 
 If you have a Java class and you would like to always use an
 `XmlAdapter` during marshalling and unmarshalling, then you can specify
@@ -324,33 +296,3 @@ public class DataStructure {
 Now, any object that has a *DataStructure* property will automatically
 use the `DataStructureAdapter`, without the need for an annotation on
 the property itself.
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:advanced_concepts005.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:advanced_concepts007.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2013 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

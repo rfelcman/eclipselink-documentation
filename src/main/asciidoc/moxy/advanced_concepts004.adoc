@@ -1,34 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-a|
-Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|===
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|===
-|link:advanced_concepts003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:advanced_concepts005.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
-
-[#CHDIHFEE]####[#TLJAX393]####
-
-== Using Extensible MOXy
+///////////////////////////////////////////////////////////////////////////////
+[[ADVANCEDCONCEPTS004]]
+=== Using Extensible MOXy
 
 In a multi-tenant architecture, a single application runs on a server
 serving multiple client organizations (tenants). Good multi-tenant
@@ -40,11 +28,7 @@ JAXB is designed to work with domain models that have _real_ fields and
 properties. EclipseLink MOXy virtual properties provide a way to extend
 a class without modifying the source.
 
-[#TLJAX394]##
-
-[#sthref158]##
-
-=== Using the @XmlVirtualAccessMethods Annotation
+==== Using the @XmlVirtualAccessMethods Annotation
 
 The `@XmlVirtualAccessMethods` annotation is used to specify that a
 class is extensible. An extensible class is required to have a `get`
@@ -61,7 +45,7 @@ _real_ properties represent the parts of the model that will be common
 to all tenants. The per-tenant extensions will be represented as
 _virtual_ properties.
 
-[#TLJAX395]####[#sthref159]####
+[[sthref159]]
 
 *_Example 8-16 Sample ExtensibleBase_*
 
@@ -93,7 +77,7 @@ public class ExtensibleBase {
  
 ----
 
-[#TLJAX396]####[#sthref160]####
+[[sthref160]]
 
 *_Example 8-17 Customer_*
 
@@ -141,7 +125,7 @@ public class Customer extends ExtensibleBase {
  
 ----
 
-[#TLJAX397]####[#sthref161]####
+[[sthref161]]
 
 *_Example 8-18 Address_*
 
@@ -168,7 +152,7 @@ public class Address {
  
 ----
 
-[#TLJAX398]####[#sthref162]####
+[[sthref162]]
 
 *_Example 8-19 PhoneNumber_*
 
@@ -197,11 +181,7 @@ public class PhoneNumber extends ExtensibleBase {
  
 ----
 
-[#TLJAX399]##
-
-[#sthref163]##
-
-=== Creating Tenant 1
+==== Creating Tenant 1
 
 The first tenant is an online sporting goods store that requires the
 following extensions to the model:
@@ -222,7 +202,7 @@ The virtual properties defined in link:#CHDFBEGH[Example 8-20] for
 *Customer* are: *middleName*, *shippingAddress*, and *phoneNumbers*. For
 *PhoneNumber* the virtual property is the `type` property.
 
-[#CHDFBEGH]####[#TLJAX400]####
+[[CHDFBEGH]]
 
 *_Example 8-20 binding-tenant1.xml_*
 
@@ -315,7 +295,7 @@ marshaller.marshal(customer, System.out);
  
 ----
 
-[#TLJAX401]####[#sthref164]####
+[[sthref164]]
 
 *_Example 8-21 Output_*
 
@@ -337,11 +317,7 @@ marshaller.marshal(customer, System.out);
 </customer>
 ----
 
-[#TLJAX402]##
-
-[#sthref165]##
-
-=== Creating Tenant 2
+==== Creating Tenant 2
 
 The second tenant is a streaming media provider that offers on-demand
 movies and music to it's subscribers. It requires a different set of
@@ -351,7 +327,7 @@ For this tenant we will also leverage the mapping file to customize the
 mapping of the real properties, as shown in link:#CHDIFJGA[Example
 8-22]:
 
-[#CHDIFJGA]####[#TLJAX403]####
+[[CHDIFJGA]]
 
 *_Example 8-22 binding-tenant2.xml_*
 
@@ -402,7 +378,7 @@ marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 marshaller.marshal(customer, System.out);
 ----
 
-[#TLJAX404]####[#sthref166]####
+[[sthref166]]
 
 *_Example 8-23 Output_*
 
@@ -421,33 +397,3 @@ properties:
    <phoneNumber>555-WORK</phoneNumber>
 </customer>
 ----
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:advanced_concepts003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:advanced_concepts005.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2013 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

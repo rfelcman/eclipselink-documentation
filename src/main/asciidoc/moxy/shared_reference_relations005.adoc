@@ -1,34 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-a|
-Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|===
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|===
-|link:shared_reference_relations004.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:advanced_concepts.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
-
-[#BABJFGGA]####[#TLJAX358]####
-
-== Mapping Bidirectional Relationships
+///////////////////////////////////////////////////////////////////////////////
+[[SHAREDREFERENCERELATIONS005]]
+=== Mapping Bidirectional Relationships
 
 In order to map bidirectional relationships in EclipseLink MOXy, the
 back-pointer must be annotated as an `@XmlInverseReference`. Without
@@ -42,7 +30,7 @@ In link:#BABHGBAG[Example 7-11], an `Employee` has a collection of
 `PhoneNumbers`, and each `PhoneNumber` has a back-pointer back to its
 `Employee`:
 
-[#TLJAX359]####[#sthref135]####
+[[sthref135]]
 
 *_Example 7-10 Using the @XMlInverseReference Annotation_*
 
@@ -68,7 +56,7 @@ public class PhoneNumber {
 link:#BABHGBAG[Example 7-11] shows how to define this mapping in
 EclipseLink's OXM metadata format:
 
-[#BABHGBAG]####[#TLJAX360]####
+[[BABHGBAG]]
 
 *_Example 7-11 Sample XML Mapping_*
 
@@ -112,58 +100,19 @@ emp.getPhones().add(p);
 types of mappings:
 
 * One-To-One Relationships (see
-link:privately_owned_relations001.htm#BABHAJID["Mapping Privately Owned
-One-to-One Relationships"])
+xref:{relativedir}/privately_owned_relations001.adoc#PRIVATELYOWNEDRELATIONS001["Mapping Privately Owned One-to-One Relationships"])
 * One-To-Many Relationships (see
-link:privately_owned_relations002.htm#BABGFHAG["Mapping Privately Owned
-One-to-Many Relationships"])
+xref:{relativedir}/privately_owned_relations002.adoc#PRIVATELYOWNEDRELATIONS002["Mapping Privately Owned One-to-Many Relationships"])
 * Single Key Relationships (see
-link:shared_reference_relations002.htm#BABHIHAE["Mapping Single Key
-Relationships"])
+xref:{relativedir}/shared_reference_relations002.adoc#SHAREDREFERENCERELATIONS002["Mapping Single Key Relationships"])
 * Composite Key Relationships (see
-link:shared_reference_relations004.htm#BABIIBFI["Mapping Composite Key
-Relationships"])
+xref:{relativedir}/shared_reference_relations004.adoc#SHAREDREFERENCERELATIONS004["Mapping Composite Key Relationships"])
 
-`@XmlInverseReference` can be particularly useful when mapping JPA
-entities to XML (see link:runtime003.htm#CACHCHAE["Using XML Bindings"])
+`@XmlInverseReference` can be particularly useful when mapping JPA entities to XML (see xref:{relativedir}/runtime003.adoc#RUNTIME003["Using XML Bindings"])
 
-[#TLJAX361]##
-
-[#sthref136]##
-
-=== See also
+==== See also
 
 For more information, see:
 
 * Binding JPA Relationships to XML +
 `http://wiki.eclipse.org/EclipseLink/Examples/MOXy/JPA/Relationships`
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:shared_reference_relations004.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:advanced_concepts.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2013 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

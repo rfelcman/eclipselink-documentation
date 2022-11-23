@@ -1,36 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-a|
-Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|===
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|===
-|link:shared_reference_relations002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:shared_reference_relations004.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
-
-[#TLJAX350]##
-
-[#sthref132]##
-
-== Using the Embedded Key Class
+///////////////////////////////////////////////////////////////////////////////
+[[SHAREDREFERENCERELATIONS003]]
+=== Using the Embedded Key Class
 
 With JAXB, you can derive an XML representation from a set of JPA
 entities, when a JPA entity has an embedded ID class.
@@ -38,7 +24,7 @@ entities, when a JPA entity has an embedded ID class.
 In link:#BABIJHJI[Example 7-4], the `EmployeeId` is the embedded ID of
 the *Employee* class:
 
-[#BABIJHJI]####[#TLJAX351]####
+[[BABIJHJI]]
 
 *_Example 7-4 Sample Embedded ID_*
 
@@ -99,7 +85,7 @@ link:#BABHCDEJ[Example 7-5] uses the EclipseLink extension
 contact attribute is a bidirectional relationship, it includes the
 EclipseLink extension `@XmlInverseReference`.
 
-[#BABHCDEJ]####[#TLJAX352]####
+[[BABHCDEJ]]
 
 *_Example 7-5 Using the @XmlCustomizer Annotation_*
 
@@ -126,7 +112,7 @@ corresponding to the *Employee* class, change the XPath on the mapping
 for the `id` property to be _self_ or** . **. Then specify the XPath to
 the XML nodes which represent the ID.
 
-[#TLJAX353]####[#sthref133]####
+[[sthref133]]
 
 *_Example 7-6 Changing the XPath_*
 
@@ -156,7 +142,7 @@ Since the target object has a compound key, we will mark the field
 `@XmlTransient`, and use the EclipseLink extension `@XmlCustomizer` to
 set up the mapping.
 
-[#TLJAX354]####[#sthref134]####
+[[sthref134]]
 
 *_Example 7-7 Using the @XmlTransient Annotation_*
 
@@ -200,33 +186,3 @@ public class PhoneNumberCustomizer implements DescriptorCustomizer {
  
 }
 ----
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:shared_reference_relations002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:shared_reference_relations004.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2013 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

@@ -1,34 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-a|
-Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|===
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|===
-|link:overview003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:runtime001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
-
-[#TLJAX117]## [#sthref10]##
-
-== [.secnum]#2# EclipseLink MOXy Runtime
+///////////////////////////////////////////////////////////////////////////////
+[[RUNTIME]]
+== EclipseLink MOXy Runtime
 
 This chapter introduces and describes EclipseLink MOXy. EclipseLink MOXy
 is one implementation of the standard runtime defined by the JAXB
@@ -43,42 +31,39 @@ classes).
 
 This chapter includes the following sections:
 
-* link:runtime001.htm#CACFEGHC[Specifying the EclipseLink Runtime]
-* link:runtime002.htm#CACEJGAI[Bootstrapping]
-* link:runtime003.htm#CACHCHAE[Using XML Bindings]
-* link:runtime004.htm#CACDDJHJ[Using MetadataSource]
-* link:runtime005.htm#CACIIGBD[Generating an XML Schema]
-* link:runtime006.htm#CACCBAFF[Validating Against an XML Schema]
-* link:runtime007.htm#CACHJIHB[Understanding Events]
-* link:runtime008.htm#CACGFBFB[Querying Objects by XPath]
-* link:runtime009.htm#CACECFJJ[Binding to an Existing Document]
+* xref:{relativedir}/runtime001.adoc#RUNTIME001[Specifying the EclipseLink Runtime]
+* xref:{relativedir}/runtime002.adoc#RUNTIME002[Bootstrapping]
+* xref:{relativedir}/runtime003.adoc#RUNTIME003[Using XML Bindings]
+* xref:{relativedir}/runtime004.adoc#RUNTIME004[Using MetadataSource]
+* xref:{relativedir}/runtime005.adoc#RUNTIME005[Generating an XML Schema]
+* xref:{relativedir}/runtime006.adoc#RUNTIME006[Validating Against an XML Schema]
+* xref:{relativedir}/runtime007.adoc#RUNTIME007[Understanding Events]
+* xref:{relativedir}/runtime008.adoc#RUNTIME008[Querying Objects by XPath]
+* xref:{relativedir}/runtime009.adoc#RUNTIME009[Binding to an Existing Document]
 
-'''''
+//Specifying the EclipseLink Runtime
+include::{rootdir}/runtime001.adoc[]
 
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:overview003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:runtime001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
+//Bootstrapping
+include::{rootdir}/runtime002.adoc[]
 
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+//Using XML Bindings
+include::{rootdir}/runtime003.adoc[]
 
-|===
+//Using MetadataSource
+include::{rootdir}/runtime004.adoc[]
 
-[[copyright]]
-Copyright © 2013 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +
+//Generating an XML Schema
+include::{rootdir}/runtime005.adoc[]
+
+//Validating Against an XML Schema
+include::{rootdir}/runtime006.adoc[]
+
+//Understanding Events
+include::{rootdir}/runtime007.adoc[]
+
+//Querying Objects by XPath
+include::{rootdir}/runtime008.adoc[]
+
+//Binding to an Existing Document
+include::{rootdir}/runtime009.adoc[]

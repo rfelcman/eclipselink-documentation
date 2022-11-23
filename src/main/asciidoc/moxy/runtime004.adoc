@@ -1,45 +1,29 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-a|
-Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|===
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|===
-|link:runtime003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:runtime005.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
-
-[#CACDDJHJ]####[#TLJAX156]####
-
-== Using MetadataSource
+///////////////////////////////////////////////////////////////////////////////
+[[RUNTIME004]]
+=== Using MetadataSource
 
 The `MetadataSource`, introduced in EclipseLink 2.3, is responsible for
 serving up EclipseLink metadata. This allows you to store mapping
 information outside of your application and have it retrieved when the
 application's `JAXBContext` is being created or refreshed.
 
-[#TLJAX157]##
-
-[#sthref34]##
-
-=== Implementing a MetadataSource
+==== Implementing a MetadataSource
 
 To implement your own `MetadataSource`, you can:
 
@@ -53,7 +37,7 @@ additions to the interface.
 In either case, you will be responsible for implementing the following
 method:
 
-[#TLJAX158]####[#sthref35]####
+[[sthref35]]
 
 *_Example 2-20 Implementing the XMlBindings Method_*
 
@@ -69,18 +53,14 @@ method:
 XmlBindings getXmlBindings(Map<String, ?> properties, ClassLoader classLoader);
 ----
 
-[#TLJAX159]##
-
-[#sthref36]##
-
-=== Using an XmlBindings Object
+==== Using an XmlBindings Object
 
 Internally, EclipseLink metadata is stored in an `XmlBindings` object,
 which itself is mapped with JAXB. This means that you can actually use a
 JAXB unmarshaller to read external metadata and create an `XmlBindings`
 from it:
 
-[#TLJAX160]####[#sthref37]####
+[[sthref37]]
 
 *_Example 2-21 Sample XmlBindings Object_*
 
@@ -95,16 +75,12 @@ FileReader bindingsFile = new FileReader("xml-bindings.xml");
 XmlBindings bindings = (XmlBindings) xmlBindingsContext.createUnmarshaller().unmarshal(bindingsFile);
 ----
 
-[#TLJAX161]##
-
-[#sthref38]##
-
-=== Specifying the MetadataSource
+==== Specifying the MetadataSource
 
 To use a `MetadataSource` in creating a `JAXBContext`, add it to the
 properties map with the key `JAXBContextProperties.OXM_METADATA_SOURCE`:
 
-[#TLJAX162]####[#sthref39]####
+[[sthref39]]
 
 *_Example 2-22 Adding MetadataSource to the Properties Map_*
 
@@ -118,16 +94,12 @@ properties.put(JAXBContextProperties.OXM_METADATA_SOURCE, metadataSource);
 JAXBContext jc = JAXBContext.newInstance(new Class[] { Customer.class }, properties);
 ----
 
-[#TLJAX163]##
-
-[#sthref40]##
-
-=== MetadataSource Example
+==== MetadataSource Example
 
 The following example creates an `XmlBindings` object by unmarshalling
 from a URL:
 
-[#TLJAX164]####[#sthref41]####
+[[sthref41]]
 
 *_Example 2-23 Sample XmlBindings Object_*
 
@@ -173,17 +145,13 @@ public class MyMetadataSource extends MetadataSourceAdapter {
 }
 ----
 
-[#TLJAX165]##
-
-[#sthref42]##
-
-=== Building XmlBindings Programatically
+==== Building XmlBindings Programatically
 
 You also have the option of building your own `XmlBindings` object from
 scratch in code. The example below modifies the `pCode` field of the
 *Address* class to use a locale-specific name:
 
-[#TLJAX166]####[#sthref43]####
+[[sthref43]]
 
 *_Example 2-24 Sample XmlBindings Object_*
 
@@ -241,33 +209,3 @@ public class AddressMetadataSource extends MetadataSourceAdapter {
  
 }
 ----
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:runtime003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:runtime005.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2013 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

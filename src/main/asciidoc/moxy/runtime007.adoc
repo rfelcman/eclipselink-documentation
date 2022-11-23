@@ -1,45 +1,31 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-a|
-Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|===
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|===
-|link:runtime006.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:runtime008.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
-
-[#CACHJIHB]####[#TLJAX177]####
-
-== Understanding Events
+///////////////////////////////////////////////////////////////////////////////
+[[RUNTIME007]]
+=== Understanding Events
 
 JAXB offers several mechanisms to get event callbacks during the
 marshalling and unmarshalling processes. You can specify callback
 methods directly on your mapped objects, or define separate `Listener`
 classes and register them with the JAXB runtime.
 
-[#TLJAX178]##
+[[sthref51]]
 
-[#sthref51]##
-
-=== Adding Event Listener Methods on JAXB Mapped Objects
+==== Adding Event Listener Methods on JAXB Mapped Objects
 
 On any of your objects you have mapped with JAXB, you have the option of
 specifying some special methods to allow you to receive event
@@ -75,7 +61,7 @@ void afterUnmarshal(Unmarshaller u, Object parent);
 The following example shows how to write to a log every time a *Company*
 object is processed.
 
-[#TLJAX179]####[#sthref52]####
+[[sthref52]]
 
 *_Example 2-29 Sample Event Listener_*
 
@@ -113,11 +99,9 @@ public class Company {
 }
 ----
 
-[#TLJAX180]##
+[[sthref53]]
 
-[#sthref53]##
-
-=== Registering Listeners on Marshallers and Unmarshallers
+==== Registering Listeners on Marshallers and Unmarshallers
 
 JAXB's Marshaller and Unmarshaller interfaces both define a
 `setListener()` method, which allows you to set your own custom Listener
@@ -196,7 +180,7 @@ This example performs the same logging as above, but using generic
 `Listener` classes. This makes it easier to log all JAXB objects in the
 system.
 
-[#TLJAX181]####[#sthref54]####
+[[sthref54]]
 
 *_Example 2-30 Logging with the Listener Class_*
 
@@ -293,33 +277,3 @@ INFO: COMPANY:[id=Zoltrix] Thread[main,5,main]
 Jun 2, 2011 6:31:59 PM example.Tester$UnmarshalLogger afterUnmarshal
 INFO: example.Company@f0c0d3 Thread[main,5,main]
 ----
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:runtime006.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:runtime008.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2013 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

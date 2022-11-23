@@ -122,6 +122,6 @@ environment. DCN allows the database to notify EclipseLink of database
 changes. The changed objects are invalidated in the EclipseLink shared
 cache. Stale data can be discarded, even if other applications access
 the same data in the database.
-* Added new chapter, xref:{relativedir}/oracledb.adoc#BGBFBFFC[Chapter 22, "Using
+* Added new chapter, xref:{relativedir}/oracledb.adoc#ORACLEDB[Chapter 22, "Using
 EclipseLink with the Oracle Database,"] to describe how to use the
 Oracle Database features that are supported by EclipseLink.

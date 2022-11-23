@@ -1,34 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-a|
-Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-|===
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-'''''
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[cols="^,^,",]
-|===
-|link:privately_owned_relations.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:privately_owned_relations002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
-
-[#BABHAJID]####[#TLJAX324]####
-
-== Mapping Privately Owned One-to-One Relationships
+///////////////////////////////////////////////////////////////////////////////
+[[PRIVATELYOWNEDRELATIONS001]]
+=== Mapping Privately Owned One-to-One Relationships
 
 This section demonstrates several ways to map a one-to-one relationship
 between objects. By default, one-to-one relationships are
@@ -36,7 +24,7 @@ privately-owned in JAXB – their XML content will appear nested inside
 the owning element. For example, a *Customer* with a one-to-one mapping
 to a *PhoneNumber* would be marshalled as:
 
-[#TLJAX325]####[#sthref117]####
+[[sthref117]]
 
 *_Example 6-1 Sample XML Mapping_*
 
@@ -54,17 +42,13 @@ to a *PhoneNumber* would be marshalled as:
  
 ----
 
-[#TLJAX326]##
-
-[#sthref118]##
-
-=== Mapping to an Element
+==== Mapping to an Element
 
 Given the XML schema in link:#BABEIBFB[Example 6-2],
 link:#BABCHCJD[Figure 6-1] illustrates a one-to-one (1:1) relationship
 between two complex types.
 
-[#BABEIBFB]####[#TLJAX327]####
+[[BABEIBFB]]
 
 *_Example 6-2 Sample XML Schema_*
 
@@ -89,38 +73,24 @@ between two complex types.
  
 ----
 
-[#BABCHCJD]####[#TLJAX328]####
+[[BABCHCJD]]
 
 *_Figure 6-1 One-to-one Relationship_*
 
-image:img/onetoone.gif[Description of Figure 6-1
-follows,title="Description of Figure 6-1 follows"] +
-link:img_text/onetoone.htm[Description of "Figure 6-1 One-to-one
-Relationship"] +
- +
+image:{imagesrelativedir}/onetoone.gif[Description of Figure 6-1 follows,title="Description of Figure 6-1 follows"] +
+xref:{imagestextrelativedir}/onetoone.adoc[Description of "Figure 6-1 One-to-one Relationship"] +
 
 link:#BABJIIGJ[Example 6-3] shows how to annotate your Java class to
 obtain this mapping with EclipseLink. The standard JAXB `@XmlElement`
 annotation can be used to indicate that the associated Java field should
 be mapped to an XML element.
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-By default, JAXB will assume all fields on your Java object are
+NOTE: By default, JAXB will assume all fields on your Java object are
 `@XmlElements`, so in many cases the annotation itself is not required.
 If, however, you want to customize the Java field's XML name, you can
 specify an `@XmlElement` annotation with a name argument.
 
-|===
-
- +
-
-[#BABJIIGJ]####[#TLJAX329]####
+[[BABJIIGJ]]
 
 *_Example 6-3 Using the @XmlElement Annotation_*
 
@@ -160,7 +130,7 @@ public class PhoneNumber {
 link:#BABBEIFJ[Example 6-4] shows how to define your mapping information
 in an EclipseLink's XML Bindings document.
 
-[#BABBEIFJ]####[#TLJAX330]####
+[[BABBEIFJ]]
 
 *_Example 6-4 Sample XML Mapping_*
 
@@ -185,11 +155,7 @@ in an EclipseLink's XML Bindings document.
  
 ----
 
-[#TLJAX331]##
-
-[#sthref120]##
-
-=== Using EclipseLink's @XmlPath Annotation
+==== Using EclipseLink's @XmlPath Annotation
 
 By default, your Java attributes will be mapped to XML based on their
 attributes Java name, or by a name specified in an `@XmlElement`
@@ -197,7 +163,7 @@ annotation. This mapping is based on XPath, and EclipseLink's `@XmlPath`
 annotation allows you to customize this mapping. For example, you can
 use it to control the nesting of your elements in XML:
 
-[#TLJAX332]####[#sthref121]####
+[[sthref121]]
 
 *_Example 6-5 Using the @XmlPath Annotation_*
 
@@ -219,7 +185,7 @@ public class Customer {
  
 ----
 
-[#TLJAX333]####[#sthref122]####
+[[sthref122]]
 
 *_Example 6-6 Using EclipseLink XML Bindings_*
 
@@ -254,7 +220,7 @@ This will produce the following XML:
 You can also use `@XmlPath` to map to different occurrences of the same
 element in XML, by index. For example:
 
-[#TLJAX334]####[#sthref123]####
+[[sthref123]]
 
 *_Example 6-7 Using the @XmlPath Annotation_*
 
@@ -295,35 +261,4 @@ will produce the following XML:
 ----
 
 For information on using XPath in your mappings, see
-link:advanced_concepts005.htm#CHDBFCAA["Mapping Using XPath
-Predicates"].
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:privately_owned_relations.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:privately_owned_relations002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2013 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +
+xref:{relativedir}/advanced_concepts005.adoc#ADVANCEDCONCEPTS005["Mapping Using XPath Predicates"].
