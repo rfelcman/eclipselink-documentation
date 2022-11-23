@@ -1,0 +1,79 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*Developing Persistence Architectures Using EclipseLink Database Web
+Services* +
+*Release 4.0* + a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:overview004.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:creating_dbws_services001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#TLDBW142]## [#sthref31]##
+
+== [.secnum]#2# Creating DBWS Services
+
+This chapter describes how to create EclipseLink DBWS services.
+
+This chapter includes the following sections:
+
+* link:creating_dbws_services001.htm#CJABFFBE[Creating EclipseLink DBWS
+Service from a Database Table]
+* link:creating_dbws_services002.htm#CJAIJBFJ[Using an EclipseLink
+SessionCustomizer]
+* link:creating_dbws_services004.htm#CJAIFBBF[Creating a DBWS Service
+from SQL Statements]
+* link:creating_dbws_services005.htm#CJAGAEFJ[Creating from a Stored
+Procedure]
+* link:creating_dbws_services006.htm#CJAFGHAH[Creating from a Stored
+Function]
+* link:creating_dbws_services008.htm#CJAGADDJ[Creating from a Stored
+Function with complex PL/SQL arguments]
+* link:creating_dbws_services009.htm#CJADBDFD[Creating from an
+Overloaded PL/SQL Stored Procedure]
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:overview004.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:creating_dbws_services001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

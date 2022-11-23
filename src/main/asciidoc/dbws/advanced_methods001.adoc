@@ -1,0 +1,164 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*Developing Persistence Architectures Using EclipseLink Database Web
+Services* +
+*Release 4.0* + a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,",]
+|===
+|link:advanced_methods.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+| 
+|===
+
+[#BEIHBEJB]####[#TLDBW187]####
+
+== Using DBWSBuilder with Ant
+
+With EclipseLink DBWS, you can invoke the `DBWSBuilder` from Apache Ant
+(`http://ant.apache.org/`) to generate the necessary files, compile, and
+package the application with additional Ant targets.
+
+[#TLDBW188]##
+
+[#sthref60]##
+
+=== Example
+
+This example illustrates how to use Ant to generate a deployable web
+archive. For this example, consider the following file layout:
+
+*`<example-root>`*
+
+`dbws-builder.xml` (see link:#BEIEIHFG[Example 3-1]) +
+`build.xml` (see link:#BEIFBFFC[Example 3-2]) +
+`build.properties` (see link:#BEIGCDJG[Example 3-3])
+
+  *`jlib`* +
+    `eclipselink.jar` +
+    `eclipselink-dbwsutils.jar` +
+    `javax.servlet.jar` +
+    `javax.wsdl.jar` +
+    `ojdbc6.jar` +
+    `org.eclipse.persistence.oracleddlparser.jar`
+
+  *`stage`* +
+    All generated artifacts will saved here, most importantly
+`simpletable.war`.
+
+To run the DBWS builder in this example, simply type `ant` in the
+_`<example-root>`_ directory. The builder packages the generated
+artifacts into the web archive (`simpletable.war`) in the `stage`
+directory. This `.war` file can then be deployed to WebLogic.
+
+[#BEIEIHFG]####[#TLDBW189]####
+
+*_Example 3-1 Sample DBWS Builder File (dbws-builder.xml)_*
+
+[source,oac_no_warn]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<dbws-builder xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <properties>
+    <property name="projectName">simpletable</property>
+    ... database properties
+  </properties>
+ 
+  <table
+    schemaPattern="SCOTT"
+    tableNamePattern="SIMPLETABLE"
+  />
+</dbws-builder>
+----
+
+[#BEIFBFFC]####[#TLDBW190]####
+
+*_Example 3-2 Sample Build XML File (build.xml)_*
+
+[source,oac_no_warn]
+----
+<?xml version="1.0"?>
+<project name="simpletable" default="build">
+  <property file="${basedir}/build.properties"/>
+ 
+  <path id="build.path">
+    <fileset
+      dir="${jlib.dir}"
+      includes="eclipselink.jar 
+                eclipselink-dbwsutils.jar 
+                org.eclipse.persistence.oracleddlparser.jar 
+                javax.wsdl.jar 
+                javax.servlet.jar 
+                ojdbc6.jar"
+      >
+    </fileset>
+  </path>
+ 
+  <target name="build">
+    <java
+      classname="org.eclipse.persistence.tools.dbws.DBWSBuilder"
+      fork="true"
+      classpathRef="build.path"
+      >
+      <arg line="-builderFile ${dbws.builder.file} -stageDir ${stage.dir} -packageAs ${server.platform} ${ant.project.name}.war"/>
+    </java>
+  </target>
+</project>
+----
+
+[#BEIGCDJG]####[#TLDBW191]####
+
+*_Example 3-3 Sample Build Properties File (build.properties)_*
+
+[source,oac_no_warn]
+----
+custom = true
+build.sysclasspath=ignore
+ 
+stage.dir=${basedir}/stage
+jlib.dir=${basedir}/jlib
+server.platform=wls
+dbws.builder.file=dbws-builder.xml
+----
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="48%",cols=",^100%",]
+|===
+| 
+|link:advanced_methods.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

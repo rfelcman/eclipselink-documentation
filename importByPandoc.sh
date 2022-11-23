@@ -20,6 +20,11 @@ export MOXY_DOC_OUTPUT_PATH=docs.tmp/moxy
 mkdir -p ${MOXY_DOC_OUTPUT_PATH}
 rm -rf ${MOXY_DOC_OUTPUT_PATH}/*
 
+export DBWS_DOC_INPUT_PATH=../webSite/documentation/4.0/dbws/img_text
+export DBWS_DOC_OUTPUT_PATH=docs.tmp/dbws
+mkdir -p ${DBWS_DOC_OUTPUT_PATH}
+rm -rf ${DBWS_DOC_OUTPUT_PATH}/*
+
 # Convert documents from input directory to some output directory.
 # Arguments:
 #  $1 - Input directory
@@ -39,6 +44,7 @@ convert_documents() {
 #convert_documents ${CONCEPTS_DOC_INPUT_PATH} ${CONCEPTS_DOC_OUTPUT_PATH}
 #convert_documents ${SOLUTIONS_DOC_INPUT_PATH} ${SOLUTIONS_DOC_OUTPUT_PATH}
 #convert_documents ${MOXY_DOC_INPUT_PATH} ${MOXY_DOC_OUTPUT_PATH}
+convert_documents ${DBWS_DOC_INPUT_PATH} ${DBWS_DOC_OUTPUT_PATH}
 
 
 

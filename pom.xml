@@ -233,6 +233,33 @@
                             <outputDirectory>target/generated-docs/moxy/img_text</outputDirectory>
                         </configuration>
                     </execution>
+                    <execution>
+                        <id>asciidoc-to-html-dbws</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>process-asciidoc</goal>
+                        </goals>
+                        <configuration>
+                            <backend>html5</backend>
+                            <sourceDirectory>src/main/asciidoc</sourceDirectory>
+                            <sourceDocumentName>dbws.adoc</sourceDocumentName>
+                            <attributes>
+                                <toc>left</toc>
+                            </attributes>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>asciidoc-to-html-dbws_img_text</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>process-asciidoc</goal>
+                        </goals>
+                        <configuration>
+                            <backend>html5</backend>
+                            <sourceDirectory>src/main/asciidoc/dbws/img_text</sourceDirectory>
+                            <outputDirectory>target/generated-docs/dbws/img_text</outputDirectory>
+                        </configuration>
+                    </execution>
 <!--
                     <execution>
                         <id>asciidoc-to-pdf-jpa</id>

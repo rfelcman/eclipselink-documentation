@@ -1,0 +1,146 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*Developing Persistence Architectures Using EclipseLink Database Web
+Services* +
+*Release 4.0* + a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:creating_dbws_services004.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:creating_dbws_services006.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#CJAGAEFJ]####[#TLDBW175]####
+
+== Creating from a Stored Procedure
+
+EclipseLink DBWS can create a Web service that exposes a Stored
+Procedure (or multiple procedures). Because it is not possible to
+determine the structure of the returned data from the Stored Procedure's
+metadata, EclipseLink uses the Simple XML Format schema. The EclipseLink
+DBWS runtime produces an XML document that is simple and
+"human-readable."
+
+EclipseLink DBWS supports any combination of `IN`, `OUT` and `IN OUT`
+arguments. Additionally, EclipseLink also supports procedures in
+packages that are overloaded (that is, the same name but different
+parameters).
+
+[#TLDBW176]##
+
+[#sthref53]##
+
+=== Example
+
+This example uses the following Stored Procedure:
+
+[source,oac_no_warn]
+----
+DROP PROCEDURE TESTECHO;
+CREATE OR REPLACE PROCEDURE TESTECHO(T IN VARCHAR2, U OUT VARCHAR2) AS
+BEGIN
+    U := CONCAT(T, '-test');
+END;
+ 
+----
+
+The DBWSBuilder utility requires a DBWS configuration XML file as input,
+as shown here:
+
+[source,oac_no_warn]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<dbws-builder xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <properties>
+    <property name="projectName">testEcho</property>
+    ... database properties
+  </properties>
+  <procedure
+    name="testEcho"
+    procedurePattern="TESTECHO"
+    isSimpleXMLFormat="true"
+  />
+</dbws-builder>
+ 
+----
+
+Execute the `DBWSBuilder`, as shown here:
+
+[source,oac_no_warn]
+----
+prompt > dbwsbuilder.cmd -builderFile dbws-builder.xml -stageDir output_directory -packageAs wls testEcho.war
+ 
+----
+
+where
+
+* `dbws-builder.xml` is the DBWS builder configuration XML file above
+* `output_directory` is the output directory for the generated files
+* -`packageAs` specifies the platform on which the web service will be
+deployed
+
+The generated `eclipselink-dbws-schema.xsd` file is the schema for the
+Simple XML format, as shown here:
+
+[source,oac_no_warn]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  >
+  <xsd:complexType name="simple-xml-format">
+    <xsd:sequence>
+      <xsd:any minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>
+ 
+----
+
+You can customize the `simple-xml-format` and `simple-xml` tags by
+setting the appropriate properties on an SQL operation.
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:creating_dbws_services004.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:creating_dbws_services006.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

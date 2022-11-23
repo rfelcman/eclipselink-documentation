@@ -1,0 +1,200 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*Developing Persistence Architectures Using EclipseLink Database Web
+Services* +
+*Release 4.0* + a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:creating_dbws_services001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:creating_dbws_services003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#CJAIJBFJ]####[#TLDBW149]####
+
+== Using an EclipseLink SessionCustomizer
+
+When using an EclipseLink `SessionCustomizer` with DBWS, you can access
+to the EclipseLink API to retrieve the OR (`object-relational`) or OX
+(`object-XML`) mapping descriptors from the session. You can then use
+the descriptors to add, change, or delete mappings.
+
+For more information, see "Session Customization in the EclipseLink
+documentation: +
+`http://wiki.eclipse.org/Introduction_to_EclipseLink_Sessions_%28ELUG%29#Session_Customization`
+
+[#TLDBW150]##
+
+[#sthref37]##
+
+=== Example
+
+This example illustrates how to implement an EclipseLink
+`SessionCustomizer`:
+
+[source,oac_no_warn]
+----
+package some.java.package;
+ 
+import org.eclipse.persistence.config.SessionCustomizer; 
+import org.eclipse.persistence.sessions.Session; 
+import org.eclipse.persistence.sessions.DatabaseLogin; 
+ 
+public class MySessionCustomizer implements SessionCustomizer {
+ 
+  public MySessionCustomizer() {
+  }
+ 
+  public void customize(Sesssion session) { 
+    DatabaseLogin login = (DatabaseLogin)session.getDatasourceLogin();
+    // enable 'dirty' reads
+    login.setTransactionIsolation(DatabaseLogin.TRANSACTION_READ_UNCOMMITTED); 
+  } 
+}
+ 
+----
+
+In the `DBWSBuilder` configuration file, you must use the
+`orSessionCustomizerClassName` or `oxSessionCustomizerClassName` to
+specify if the customization applies to the ORM or ORX project
+(respectively), as shown here:
+
+[#TLDBW151]####[#sthref38]####
+
+*_Example 2-3 ORM Project_*
+
+[source,oac_no_warn]
+----
+<?xml version="1.0" encoding="UTF-8"?> 
+<dbws-builder xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  <properties>
+    <property name="projectName">customize_test</property>
+     ...
+    <property name="orSessionCustomizerClassName">some.java.package.MyORSessionCustomizer</property>
+ 
+----
+
+[#TLDBW152]####[#sthref39]####
+
+*_Example 2-4 ORX Project_*
+
+[source,oac_no_warn]
+----
+<?xml version="1.0" encoding="UTF-8"?> 
+<dbws-builder xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  <properties>
+    <property name="projectName">customize_test</property>
+     ...
+    <property name="oxSessionCustomizerClassName">some.java.package.MyOXSessionCustomizer</property>
+ 
+----
+
+[#TLDBW153]##
+
+[#sthref40]##
+
+=== Advanced Customization
+
+You can further customize an EclipseLink DBWS service by creating your
+own EclipseLink `project.xml` and `sessions.xml` files. Using your
+preferred utility, you can:
+
+* map your objects to your relational database in an EclipseLink
+relational project
+* map your objects to your XML schema in an EclipseLink XML project
+* create an EclipseLink `sessions.xml` file that references both
+projects.
+
+In this way, you can control all aspects of the relational and XML
+mapping. This approach is best when you want to customize most or all
+details.
+
+In link:#CJADIDDI[Example 2-5], a DBWS service is constructed from
+existing EclipseLink project maps with identical case-sensitive aliases
+(for Descriptors that are common between the projects).
+
+[#CJADIDDI]####[#TLDBW154]####
+
+*_Example 2-5 Sample DBWS Service_*
+
+[source,oac_no_warn]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<object-persistence version="Eclipse Persistence Services - some version (some build date)" xmlns="http://www.eclipse.org/eclipselink/xsds/persistence" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:eclipselink="http://www.eclipse.org/eclipselink/xsds/persistence">
+   <name>SomeORProject</name>
+   <class-mapping-descriptors>
+      <class-mapping-descriptor xsi:type="relational-class-mapping-descriptor">
+         <class>some.package.SomeClass</class>
+         <alias>SomeAlias</alias>
+...
+ 
+
+<?xml version="1.0" encoding="UTF-8"?>
+<object-persistence version="Eclipse Persistence Services - some version (some build date)" xmlns="http://www.eclipse.org/eclipselink/xsds/persistence" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:eclipselink="http://www.eclipse.org/eclipselink/xsds/persistence">
+   <name>SomeOXProject</name>
+   <class-mapping-descriptor xsi:type="xml-class-mapping-descriptor">
+      <class>some.package.SomeClass</class>
+      <alias>SomeAlias</alias>
+...
+ 
+----
+
+ +
+
+[width="100%",cols="<100%",]
+|===
+a|
+image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
+
+When building a DBWS web service in this way (that is, without the
+`DBWSBuilder` Utility) be sure to create all the necessary deployment
+artifacts.
+
+|===
+
+ +
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:creating_dbws_services001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:creating_dbws_services003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

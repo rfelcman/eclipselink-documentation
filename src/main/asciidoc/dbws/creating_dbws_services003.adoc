@@ -1,0 +1,102 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+|*Developing Persistence Architectures Using EclipseLink Database Web
+Services* +
+*Release 4.0* + a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:creating_dbws_services002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:creating_dbws_services004.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#CHDEBIHE]####[#TLDBW155]####
+
+== Using Existing EclipseLink ORM and OXM Mappings
+
+A DBWS service may be constructed using pre-existing EclipseLink ORM and
+OXM maps (both Project classes and Project deployment XML are supported)
+with identical case-sensitive aliases for Descriptors that are common
+between the projects.
+
+[#TLDBW156]####[#sthref41]####
+
+*_Example 2-6 Using an ORM Map_*
+
+[source,oac_no_warn]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<object-persistence version="Eclipse Persistence Services - some version (some build date)" xmlns="http://www.eclipse.org/eclipselink/xsds/persistence" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:eclipselink="http://www.eclipse.org/eclipselink/xsds/persistence">
+   <name>SomeORProject</name>
+   <class-mapping-descriptors>
+      <class-mapping-descriptor xsi:type="relational-class-mapping-descriptor">
+         <class>some.package.SomeClass</class>
+         <alias>SomeAlias</alias>
+...
+ 
+----
+
+[#TLDBW157]####[#sthref42]####
+
+*_Example 2-7 Using an OXM Map_*
+
+[source,oac_no_warn]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<object-persistence version="Eclipse Persistence Services - some version (some build date)" xmlns="http://www.eclipse.org/eclipselink/xsds/persistence" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:eclipselink="http://www.eclipse.org/eclipselink/xsds/persistence">
+   <name>SomeOXProject</name>
+   <class-mapping-descriptor xsi:type="xml-class-mapping-descriptor">
+      <class>some.package.SomeClass</class>
+      <alias>SomeAlias</alias>
+...
+ 
+----
+
+When building a DBWS web service in this way (that is, without the
+`DBWSBuilder` Utility) be sure to create all the necessary deployment
+artifacts
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:creating_dbws_services002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:creating_dbws_services004.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2014 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +
