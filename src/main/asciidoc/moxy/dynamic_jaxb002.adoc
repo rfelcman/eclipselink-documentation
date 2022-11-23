@@ -1,0 +1,154 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+a|
+Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+
+a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:dynamic_jaxb001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:dynamic_jaxb003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#BGBGADEE]####[#TLJAX448]####
+
+== Specifying the EclipseLink Runtime
+
+In order to use EclipseLink Dynamic MOXy as your JAXB implementation,
+you must identify the EclipseLink `DynamicJAXBContextFactory` in your
+`jaxb.properties` file.
+
+. Create a text file named `jaxb.properties`, specifying
+`DynamicJAXBContextFactory` as the factory used to build new
+`JAXBContexts`.
++
+`jakarta.xml.bind.context.factory=org.eclipse.persistence.jaxb.dynamic.DynamicJAXBContextFactory`
+. Copy the `jaxb.properties` file to the context path used to create the
+`JAXBContext`.
+. Use the standard `JAXBContext.newInstance(String contextPath)` API to
+create a `DynamicJAXBContext`.
++
+`DynamicJAXBContext jaxbContext = (DynamicJAXBContext) JAXBContext.newInstance("org.example.mypackage");`
+
+Because you do not need to change any application code, you can easily
+switch between different JAXB implementations.
+
+[#TLJAX449]##
+
+[#sthref196]##
+
+=== Instantiating a DynamicJAXBContext
+
+The following methods on JAXBContext can be used to create new instances
+of DynamicJAXBContexts:
+
+[source,oac_no_warn]
+----
+public static JAXBContext newInstance(String contextPath) throws JAXBException
+public static JAXBContext newInstance(String contextPath, ClassLoader classLoader) throws JAXBException
+public static JAXBContext newInstance(String contextPath, ClassLoader classLoader, Map<String,?> properties) throws JAXBException
+----
+
+* *contextPath* – Location of `jaxb.properties` file.
+* *classLoader* – The application's current class loader, which will be
+used to first lookup classes to see if they exist before new
+`DynamicTypes` are generated.
+* *properties* – A map of properties to use when creating a new
+`DynamicJAXBContext`. This map must contain one of the following two
+keys:
+** `org.eclipse.persistence.jaxb.JAXBContextFactory.XML_SCHEMA_KEY`,
+which can have several possible values:
+*** One of the following, pointing to your XML Schema file:
+**** `java.io.InputStream`
+**** `org.w3c.dom.Node`
+**** `javax.xml.transform.Source`
+** `org.eclipse.persistence.jaxb.JAXBContextProperties.OXM_METADATA_SOURCE`,
+which can have several possible values:
+*** One of the following, pointing to your OXM file:
+**** `java.io.File`
+**** `java.io.InputStream`
+**** `java.io.Reader`
+**** `java.net.URL`
+**** `javax.xml.stream.XMLEventReader`
+**** `javax.xml.stream.XMLStreamReader`
+**** `javax.xml.transform.Source`
+**** `org.w3c.dom.Node`
+**** `org.xml.sax.InputSource`
++
+ +
+
+[width="100%",cols="<100%",]
+|===
+a|
+image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
+
+If using one of these options, a package-name element must be defined in
+the `xml-bindings` element of your OXM file.
+
+|===
+
+ +
+*** A List of objects from the set above.
++
+ +
+
+[width="100%",cols="<100%",]
+|===
+a|
+image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
+
+If using this option, a package-name element must be defined in the
+`xml-bindings` element of your OXM file.
+
+|===
+
+ +
+*** A `Map<String, Object>`, where `String` is a package name, and
+`Object` is the pointer to the OXM file, from the set of possibilities
+above.
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:dynamic_jaxb001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:dynamic_jaxb003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2013 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

@@ -15,6 +15,10 @@ export SOLUTIONS_DOC_OUTPUT_PATH=docs.tmp/solutions
 mkdir -p ${SOLUTIONS_DOC_OUTPUT_PATH}
 rm -rf ${SOLUTIONS_DOC_OUTPUT_PATH}/*
 
+export MOXY_DOC_INPUT_PATH=../webSite/documentation/4.0/moxy
+export MOXY_DOC_OUTPUT_PATH=docs.tmp/moxy
+mkdir -p ${MOXY_DOC_OUTPUT_PATH}
+rm -rf ${MOXY_DOC_OUTPUT_PATH}/*
 
 # Convert documents from input directory to some output directory.
 # Arguments:
@@ -33,7 +37,8 @@ convert_documents() {
 
 #convert_documents ${JPA_DOC_INPUT_PATH} ${JPA_DOC_OUTPUT_PATH}
 #convert_documents ${CONCEPTS_DOC_INPUT_PATH} ${CONCEPTS_DOC_OUTPUT_PATH}
-convert_documents ${SOLUTIONS_DOC_INPUT_PATH} ${SOLUTIONS_DOC_OUTPUT_PATH}
+#convert_documents ${SOLUTIONS_DOC_INPUT_PATH} ${SOLUTIONS_DOC_OUTPUT_PATH}
+#convert_documents ${MOXY_DOC_INPUT_PATH} ${MOXY_DOC_OUTPUT_PATH}
 
 
 

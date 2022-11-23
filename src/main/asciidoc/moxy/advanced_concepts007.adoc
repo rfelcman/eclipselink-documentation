@@ -1,0 +1,289 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+a|
+Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+
+a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:advanced_concepts006.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:advanced_concepts008.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#CHDFFEFF]####[#TLJAX429]####
+
+== Using XML Transformations
+
+In many cases, you can use MOXy's `@XmlTransformation` annotation to
+give you considerably more control over the marshalling and
+unmarshalling of your objects. `@XmlTransformation` can be used to
+create a custom mapping where one or more XML nodes can be used to
+create the value for the Java attribute.
+
+To handle the custom requirements at marshal (write) and unmarshall
+(read) time, `@XmlTransformation` uses instances of
+`org.eclipse.persistence.mappings.transformers` (such as
+`AttributeTransformer` and `FieldTransformer`), providing a
+non-intrusive solution that avoids the need for domain objects to
+implement any 'special' interfaces.
+
+For example, if you wanted to map the following XML to objects and
+combine the values of `DATE` and `TIME` into a `single java.util.Date`
+object, you can use an `@XmlTransformation:`
+
+[source,oac_no_warn]
+----
+<ELEM_B>
+   <B_DATE>20100825</B_DATE>
+   <B_TIME>153000</B_TIME>
+   <NUM>123</NUM>
+   <C_DATE>20100825</C_DATE>
+   <C_TIME>154500</C_TIME>
+</ELEM_B>
+----
+
+ +
+
+[width="100%",cols="<100%",]
+|===
+a|
+image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
+
+Ordinarily, you would use `@XmlAdapter`. However:
+
+* Although the *DATE*/*TIME* pairings are repeated throughout the
+document, the element name changes each time (such as *B_DATE*/*B_TIME*,
+*C_DATE*/*C_TIME*, and so on).
+* Because each pairing is missing a grouping element, you would need to
+adapt the _entire_ *ElemB* class.
+
+Because of these issues, MOXy's transformation mapping is much easier to
+implement:
+
+|===
+
+ +
+
+[#TLJAX430]####[#sthref187]####
+
+*_Example 8-38 Mapping Example_*
+
+[source,oac_no_warn]
+----
+ 
+package example;
+ 
+import java.util.Date;
+ 
+import jakarta.xml.bind.annotation.*;
+import org.eclipse.persistence.oxm.annotations.*;
+ 
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name="ELEM_B")
+public class ElemB {
+ 
+    @XmlTransformation
+    @XmlReadTransformer(transformerClass=DateAttributeTransformer.class)
+    @XmlWriteTransformers({
+        @XmlWriteTransformer(xmlPath="B_DATE/text()", transformerClass=DateFieldTransformer.class),
+        @XmlWriteTransformer(xmlPath="B_TIME/text()", transformerClass=TimeFieldTransformer.class),
+    })
+    private Date bDate;
+ 
+    @XmlElement(name="NUM")
+    private int num;
+ 
+    @XmlTransformation
+    @XmlReadTransformer(transformerClass=DateAttributeTransformer.class)
+    @XmlWriteTransformers({
+        @XmlWriteTransformer(xmlPath="C_DATE/text()", transformerClass=DateFieldTransformer.class),
+        @XmlWriteTransformer(xmlPath="C_TIME/text()", transformerClass=TimeFieldTransformer.class),
+    })
+    private Date cDate;
+ 
+}
+ 
+----
+
+[#TLJAX431]##
+
+[#sthref188]##
+
+=== Using an AttributeTransformer
+
+Use an `AttributeTransformer` to construct the Java attribute value:
+
+[#TLJAX432]####[#sthref189]####
+
+*_Example 8-39 Sample AttributeTransfomer_*
+
+[source,oac_no_warn]
+----
+package example;
+ 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+ 
+import org.eclipse.persistence.internal.helper.DatabaseField;
+import org.eclipse.persistence.mappings.foundation.AbstractTransformationMapping;
+import org.eclipse.persistence.mappings.transformers.AttributeTransformer;
+import org.eclipse.persistence.sessions.Record;
+import org.eclipse.persistence.sessions.Session;
+ 
+public class DateAttributeTransformer implements AttributeTransformer {
+ 
+    private AbstractTransformationMapping mapping;
+    private SimpleDateFormat yyyyMMddHHmmss = new SimpleDateFormat("yyyyMMddHHmmss");
+ 
+    public void initialize(AbstractTransformationMapping mapping) {
+        this.mapping = mapping;
+    }
+ 
+    public Object buildAttributeValue(Record record, Object instance, Session session) {
+        try {
+            String dateString = null;
+            String timeString = null;
+ 
+            for (DatabaseField field : mapping.getFields()) {
+                if (field.getName().contains("DATE")) {
+                    dateString = (String) record.get(field);
+                } else {
+                    timeString = (String) record.get(field);
+                }
+            }
+            return yyyyMMddHHmmss.parseObject(dateString + timeString);
+        } catch(ParseException e) {
+            throw new RuntimeException(e);
+        }
+    }
+ 
+}
+ 
+----
+
+[#TLJAX433]##
+
+[#sthref190]##
+
+=== Using a FieldTransformer
+
+Use a `FieldTransformer` to construct the XML field value from the Java
+object.
+
+Each transformation mapping may have multiple write transformers. In
+this example, you will need two:
+
+* The first write transformer writes the year, month, and day in
+*yyMMdd* format:
++
+[#TLJAX434]####[#sthref191]####
+
+*_Example 8-40 First Write Transformer_*
+
+[source,oac_no_warn]
+----
+package example;
+ 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+ 
+import org.eclipse.persistence.mappings.foundation.AbstractTransformationMapping;
+import org.eclipse.persistence.mappings.transformers.FieldTransformer;
+import org.eclipse.persistence.sessions.Session;
+ 
+public class DateFieldTransformer implements FieldTransformer {
+ 
+    private AbstractTransformationMapping mapping;
+    private SimpleDateFormat yyyyMMdd = new SimpleDateFormat("yyyyMMdd");
+ 
+    public void initialize(AbstractTransformationMapping mapping) {
+        this.mapping = mapping;
+    }
+ 
+    public Object buildFieldValue(Object instance, String xPath, Session session) {
+        Date date = (Date) mapping.getAttributeValueFromObject(instance);
+        return yyyyMMdd.format(date);
+    }
+ 
+}
+----
+* The second write transformer writes out the hour, minutes, and seconds
+in *HHmmss* format.
++
+[#TLJAX435]####[#sthref192]####
+
+*_Example 8-41 Second Write Transformer_*
+
+[source,oac_no_warn]
+----
+package example;
+ 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+ 
+import org.eclipse.persistence.mappings.foundation.AbstractTransformationMapping;
+import org.eclipse.persistence.mappings.transformers.FieldTransformer;
+import org.eclipse.persistence.sessions.Session;
+ 
+public class TimeFieldTransformer implements FieldTransformer {
+ 
+    private AbstractTransformationMapping mapping;
+    private SimpleDateFormat HHmmss = new SimpleDateFormat("HHmmss");
+ 
+    public void initialize(AbstractTransformationMapping mapping) {
+        this.mapping = mapping;
+    }
+ 
+    public Object buildFieldValue(Object instance, String xPath, Session session) {
+        Date date = (Date) mapping.getAttributeValueFromObject(instance);
+        return HHmmss.format(date);
+    }
+ 
+}
+----
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:advanced_concepts006.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:advanced_concepts008.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2013 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

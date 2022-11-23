@@ -1,0 +1,67 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+a|
+Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+
+a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:simple_values004.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:special_schema_types001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#TLJAX291]## [#sthref89]##
+
+== [.secnum]#5# Mapping Special Schema Types
+
+This chapter includes the following sections:
+
+* link:special_schema_types001.htm#BABFCBCF[Mapping Dates and Times]
+* link:special_schema_types002.htm#BABFFEHF[Mapping to a Union Field]
+* link:special_schema_types003.htm#BABHFHFG[Binary Types]
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:simple_values004.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:special_schema_types001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2013 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

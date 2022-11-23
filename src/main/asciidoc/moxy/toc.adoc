@@ -1,0 +1,304 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+a|
+Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+
+a|
+[cols="",]
+|===
+| 
+|===
+
+|===
+
+'''''
+
+[cols="^,",]
+|===
+|link:loe.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+ 
+
+link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##]
+
+ 
+
+link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+
+== Contents
+
+=== link:loe.htm[List of Examples]
+
+=== link:lof.htm[List of Figures]
+
+=== link:title_eclipselink.htm[Title and Copyright Information]
+
+=== link:preface.htm#sthref2[Preface]
+
+* link:preface.htm#sthref3[Audience]
+* link:preface.htm#sthref4[Conventions]
+
+=== link:overview.htm#sthref5[[.secnum]#1# Introduction]
+
+* link:overview001.htm#CJABDGGJ[About EclipseLink MOXy]
+* link:overview002.htm#CJADHHGF[Solving Object-XML Impedance Mismatch]
+* link:overview003.htm#sthref8[About This Documentation]
+** link:overview003.htm#sthref9[Other Resources]
+
+=== link:runtime.htm#sthref10[[.secnum]#2# EclipseLink MOXy Runtime]
+
+* link:runtime001.htm#CACFEGHC[Specifying the EclipseLink Runtime]
+* link:runtime002.htm#CACEJGAI[Bootstrapping]
+** link:runtime002.htm#sthref11[Using the JAXBContext API]
+** link:runtime002.htm#CACGJHHB[Bootstrapping from Classes]
+** link:runtime002.htm#CACGGBJG[Bootstrapping from a Context Path]
+*** link:runtime002.htm#CACJBEFE[Using a `jaxb.index` File]
+*** link:runtime002.htm#CACGECEG[Using an ObjectFactory]
+*** link:runtime002.htm#CACHAFIB[Using MetadataSource]
+** link:runtime002.htm#CACFIEIB[Bootstrapping from EclipseLink XML
+Bindings]
+** link:runtime002.htm#sthref16[Combining Annotated Classes and XML
+Bindings]
+* link:runtime003.htm#CACHCHAE[Using XML Bindings]
+** link:runtime003.htm#sthref17[Understanding the XML Bindings Format]
+** link:runtime003.htm#sthref20[Bootstrapping with XML Bindings]
+** link:runtime003.htm#sthref21[Using XML Bindings with Annotations]
+** link:runtime003.htm#sthref23[Using Multiple Bindings Documents]
+** link:runtime003.htm#sthref26[Understanding Override Rules]
+** link:runtime003.htm#sthref27[Using Complete Metadata]
+** link:runtime003.htm#sthref33[Using Virtual Mappings]
+* link:runtime004.htm#CACDDJHJ[Using MetadataSource]
+** link:runtime004.htm#sthref34[Implementing a MetadataSource]
+** link:runtime004.htm#sthref36[Using an XmlBindings Object]
+** link:runtime004.htm#sthref38[Specifying the MetadataSource]
+** link:runtime004.htm#sthref40[MetadataSource Example]
+** link:runtime004.htm#sthref42[Building XmlBindings Programatically]
+* link:runtime005.htm#CACIIGBD[Generating an XML Schema]
+* link:runtime006.htm#CACCBAFF[Validating Against an XML Schema]
+** link:runtime006.htm#sthref46[Using a ValidationEventHandler]
+** link:runtime006.htm#sthref47[Enabling Validation]
+*** link:runtime006.htm#sthref49[Input (input.xml File)]
+*** link:runtime006.htm#sthref50[Output]
+* link:runtime007.htm#CACHJIHB[Understanding Events]
+** link:runtime007.htm#sthref51[Adding Event Listener Methods on JAXB
+Mapped Objects]
+** link:runtime007.htm#sthref53[Registering Listeners on Marshallers and
+Unmarshallers]
+* link:runtime008.htm#CACGFBFB[Querying Objects by XPath]
+* link:runtime009.htm#CACECFJJ[Binding to an Existing Document]
+
+=== link:type_level.htm#sthref56[[.secnum]#3# Mapping Type Levels]
+
+* link:type_level001.htm#BABEEEEJ[Defining the Default Root Element]
+** link:type_level001.htm#sthref58[Customizing the Default Root Element]
+** link:type_level001.htm#sthref59[Understanding How EclipseLink Uses
+the Default Root Element]
+* link:type_level002.htm#CIHBJDDI[Setting Up Namespace Information]
+** link:type_level002.htm#BABJBJJH[Qualifying at the Package Level]
+** link:type_level002.htm#BABJBFHD[Qualifying at the Type Level]
+** link:type_level002.htm#BABFDCJH[Qualifying at the Field/Property
+Level]
+* link:type_level003.htm#CIHBIFIC[Specifying Inheritance]
+** link:type_level003.htm#BABGHADJ[Using xsi:type]
+** link:type_level003.htm#BABIICIB[Using Substitution Groups]
+** link:type_level003.htm#BABHIBJJ[Using
+@XmlDiscriminatorNode/@XmlDiscriminatorValue]
+
+=== link:simple_values.htm#sthref64[[.secnum]#4# Mapping Simple Values]
+
+* link:simple_values001.htm#CHDHEJHH[Mapping Simple Values]
+** link:simple_values001.htm#CHDGCAGJ[Mapping to an Attribute]
+** link:simple_values001.htm#CHDDCCGG[Mapping to a Text Node]
+*** link:simple_values001.htm#CHDCEJEI[Mapping to a Text Node in a
+Simple Sequence]
+*** link:simple_values001.htm#CHDHJFIB[Mapping to a Text Node in a
+Sub-element]
+*** link:simple_values001.htm#CHDEEABA[Mapping to a Text Node by
+Position]
+*** link:simple_values001.htm#CHDHFDGE[Mapping to a Simple Text Node]
+** link:simple_values001.htm#CHDGEBBJ[Mapping to a Specified Schema
+Type]
+*** link:simple_values001.htm#sthref71[Using Java Type Adapters]
+** link:simple_values001.htm#CHDDBJBE[Mapping with a Simple Type
+Translator]
+* link:simple_values002.htm#CHDHEDHA[Mapping Collections of Simple
+Values]
+** link:simple_values002.htm#CHDEBEAH[Mapping to Text Nodes]
+** link:simple_values002.htm#CHDHHIBD[Mapping to Text Nodes with a
+Grouping Element]
+** link:simple_values002.htm#CHDIHAGJ[Mapping to a List Element]
+** link:simple_values002.htm#CHDDGGJC[Mapping a Collection of
+XmlAttributes or XmlValues]
+* link:simple_values003.htm#CHDICAAI[Multiple Mappings for a Single
+Property]
+** link:simple_values003.htm#sthref80[Example]
+** link:simple_values003.htm#sthref82[XML Output]
+* link:simple_values004.htm#CHDCGAIC[Mapping Enums]
+** link:simple_values004.htm#sthref83[Mapping Enums using Constant
+Names]
+** link:simple_values004.htm#sthref86[Mapping Enums to Custom XML
+Values]
+
+=== link:special_schema_types.htm#sthref89[[.secnum]#5# Mapping Special Schema Types]
+
+* link:special_schema_types001.htm#BABFCBCF[Mapping Dates and Times]
+** link:special_schema_types001.htm#sthref91[Understanding the Generated
+Model]
+** link:special_schema_types001.htm#sthref93[Using a Different Date (or
+Calendar) Property]
+* link:special_schema_types002.htm#BABFFEHF[Mapping to a Union Field]
+** link:special_schema_types002.htm#sthref100[Understanding Conversion
+Order]
+** link:special_schema_types002.htm#sthref101[Customizing Conversion
+Classes]
+* link:special_schema_types003.htm#BABHFHFG[Binary Types]
+** link:special_schema_types003.htm#sthref102[Specifying Binary Formats
+Base64 and Hex]
+** link:special_schema_types003.htm#sthref106[Understanding byte[]
+versus Byte[]]
+** link:special_schema_types003.htm#sthref109[Working with SOAP
+Attachments]
+*** link:special_schema_types003.htm#sthref112[Using
+@XmlInlineBinaryData]
+*** link:special_schema_types003.htm#sthref114[Using @XmlMimeType]
+
+=== link:privately_owned_relations.htm#sthref116[[.secnum]#6# Privately Owned Relationships]
+
+* link:privately_owned_relations001.htm#BABHAJID[Mapping Privately Owned
+One-to-One Relationships]
+** link:privately_owned_relations001.htm#sthref118[Mapping to an
+Element]
+** link:privately_owned_relations001.htm#sthref120[Using EclipseLink's
+@XmlPath Annotation]
+* link:privately_owned_relations002.htm#BABGFHAG[Mapping Privately Owned
+One-to-Many Relationships]
+** link:privately_owned_relations002.htm#sthref125[Mapping to Elements]
+** link:privately_owned_relations002.htm#sthref126[Grouping Elements
+using the @XmlElementWrapper Annotation]
+
+=== link:shared_reference_relations.htm#sthref128[[.secnum]#7# Mapping Shared Reference Relationships]
+
+* link:shared_reference_relations001.htm#BABFGCHE[Understanding Keys and
+Foreign Keys]
+* link:shared_reference_relations002.htm#BABHIHAE[Mapping Single Key
+Relationships]
+** link:shared_reference_relations002.htm#sthref130[Using @XmlList]
+* link:shared_reference_relations003.htm#sthref132[Using the Embedded
+Key Class]
+* link:shared_reference_relations004.htm#BABIIBFI[Mapping Composite Key
+Relationships]
+* link:shared_reference_relations005.htm#BABJFGGA[Mapping Bidirectional
+Relationships]
+** link:shared_reference_relations005.htm#sthref136[See also]
+
+=== link:advanced_concepts.htm#sthref137[[.secnum]#8# Advanced Concepts]
+
+* link:advanced_concepts001.htm#CHDCGFBI[Refreshing Metadata]
+* link:advanced_concepts002.htm#CHDCCCAF[Customizing XML Name
+Conversions]
+** link:advanced_concepts002.htm#sthref139[Using the XMLNameTransformer]
+** link:advanced_concepts002.htm#sthref140[Example Model]
+** link:advanced_concepts002.htm#sthref142[Specifying the Naming
+Algorithm]
+** link:advanced_concepts002.htm#sthref143[XML Output]
+* link:advanced_concepts003.htm#CHDJHCCE[Using Virtual Access Methods]
+** link:advanced_concepts003.htm#sthref144[Configuring Virtual Access
+Methods]
+** link:advanced_concepts003.htm#sthref145[Example]
+** link:advanced_concepts003.htm#sthref147[Using XmlAccessType.FIELD and
+XmlTransient]
+** link:advanced_concepts003.htm#sthref149[Options]
+*** link:advanced_concepts003.htm#CHDBDGHA[Specifying Alternate Accessor
+Methods]
+*** link:advanced_concepts003.htm#CHDJDAJF[Specifying Schema Generation
+Options]
+* link:advanced_concepts004.htm#CHDIHFEE[Using Extensible MOXy]
+** link:advanced_concepts004.htm#sthref158[Using the
+@XmlVirtualAccessMethods Annotation]
+** link:advanced_concepts004.htm#sthref163[Creating Tenant 1]
+** link:advanced_concepts004.htm#sthref165[Creating Tenant 2]
+* link:advanced_concepts005.htm#CHDBFCAA[Mapping Using XPath Predicates]
+** link:advanced_concepts005.htm#sthref169[Mapping with XPath
+Predicates]
+** link:advanced_concepts005.htm#sthref170[Mapping Based on Position]
+** link:advanced_concepts005.htm#sthref174[Mapping Based on an Attribute
+Value]
+** link:advanced_concepts005.htm#sthref177[Creating "Self" Mappings]
+* link:advanced_concepts006.htm#CHDCEDIG[Using an XmlAdapter]
+** link:advanced_concepts006.htm#sthref179[Using java.util.Currency]
+** link:advanced_concepts006.htm#sthref183[Using java.awt.Point]
+** link:advanced_concepts006.htm#sthref185[Specifying Package-Level
+Adapters]
+** link:advanced_concepts006.htm#sthref186[Specifying Class-Level
+@XmlJavaTypeAdapters]
+* link:advanced_concepts007.htm#CHDFFEFF[Using XML Transformations]
+** link:advanced_concepts007.htm#sthref188[Using an
+AttributeTransformer]
+** link:advanced_concepts007.htm#sthref190[Using a FieldTransformer]
+* link:advanced_concepts008.htm#CHDCGCDJ[Generating Java Classes from an
+XML Schema]
+** link:advanced_concepts008.htm#sthref193[Running the JAXB Compiler]
+* link:advanced_concepts009.htm#BGBGAIID[Customizing Generated Mappings]
+
+=== link:dynamic_jaxb.htm#sthref194[[.secnum]#9# Using Dynamic JAXB]
+
+* link:dynamic_jaxb001.htm#BABCDJDF[Understanding Static and Dynamic
+Entities]
+** link:dynamic_jaxb001.htm#BABEGGEF[Using Static MOXy]
+** link:dynamic_jaxb001.htm#BABJEIAF[Using Dynamic MOXy]
+*** link:dynamic_jaxb001.htm#sthref195[Using Dynamic Entities]
+* link:dynamic_jaxb002.htm#BGBGADEE[Specifying the EclipseLink Runtime]
+** link:dynamic_jaxb002.htm#sthref196[Instantiating a
+DynamicJAXBContext]
+* link:dynamic_jaxb003.htm#BGBDCIBC[Bootstrapping from XML Schema (XSD)]
+** link:dynamic_jaxb003.htm#sthref199[Importing Other Schemas /
+EntityResolvers]
+** link:dynamic_jaxb003.htm#sthref200[Customizing Generated Mappings
+with XJC External Binding Customization Files]
+* link:dynamic_jaxb004.htm#BGBGHCHJ[Bootstrapping from EclipseLink
+Metadata (OXM)]
+** link:dynamic_jaxb004.htm#sthref203[Example]
+
+=== link:json.htm#sthref204[[.secnum]#10# Using JSON Documents]
+
+* link:json001.htm#BABGEEFD[Understanding JSON Documents]
+* link:json002.htm#BABCIAHB[Marshalling and Unmarshalling JSON
+Documents]
+* link:json003.htm#BABEADAH[Specifying JSON Bindings]
+** link:json003.htm#sthref205[Specifying JSON Data Types]
+** link:json003.htm#sthref206[Supporting Attributes]
+** link:json003.htm#sthref207[Supporting no Root Element]
+** link:json003.htm#sthref209[Using Namespaces]
+** link:json003.htm#sthref210[Using Collections]
+** link:json003.htm#sthref211[Mapping Root-Level Collections]
+** link:json003.htm#sthref212[Wrapping XML Values]
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="48%",cols=",^100%",]
+|===
+| 
+|link:loe.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[cols="",]
+|===
+| 
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2013 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

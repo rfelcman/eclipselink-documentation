@@ -1,0 +1,67 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+a|
+Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+
+a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:shared_reference_relations.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:shared_reference_relations002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#BABFGCHE]####[#TLJAX344]####
+
+== Understanding Keys and Foreign Keys
+
+EclipseLink supports shared reference keys and foreign keys through:
+
+* Single key
+* Composite Key
+* Embedded Key Class
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:shared_reference_relations.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:shared_reference_relations002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2013 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

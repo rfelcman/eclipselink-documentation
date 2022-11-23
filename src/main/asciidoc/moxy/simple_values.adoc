@@ -1,0 +1,70 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+a|
+Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+
+a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:type_level003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:simple_values001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#TLJAX212]## [#sthref64]##
+
+== [.secnum]#4# Mapping Simple Values
+
+This chapter includes the following sections:
+
+* link:simple_values001.htm#CHDHEJHH[Mapping Simple Values]
+* link:simple_values002.htm#CHDHEDHA[Mapping Collections of Simple
+Values]
+* link:simple_values003.htm#CHDICAAI[Multiple Mappings for a Single
+Property]
+* link:simple_values004.htm#CHDCGAIC[Mapping Enums]
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:type_level003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:simple_values001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2013 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

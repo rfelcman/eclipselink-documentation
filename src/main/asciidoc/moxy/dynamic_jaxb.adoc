@@ -1,0 +1,70 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+a|
+Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+
+a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:advanced_concepts009.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:dynamic_jaxb001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#TLJAX440]## [#sthref194]##
+
+== [.secnum]#9# Using Dynamic JAXB
+
+This chapter includes the following sections:
+
+* link:dynamic_jaxb001.htm#BABCDJDF[Understanding Static and Dynamic
+Entities]
+* link:dynamic_jaxb002.htm#BGBGADEE[Specifying the EclipseLink Runtime]
+* link:dynamic_jaxb003.htm#BGBDCIBC[Bootstrapping from XML Schema (XSD)]
+* link:dynamic_jaxb004.htm#BGBGHCHJ[Bootstrapping from EclipseLink
+Metadata (OXM)]
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:advanced_concepts009.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:dynamic_jaxb001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2013 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

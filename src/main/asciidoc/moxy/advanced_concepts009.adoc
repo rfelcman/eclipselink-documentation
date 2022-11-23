@@ -1,0 +1,116 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+a|
+Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+
+a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:advanced_concepts008.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:dynamic_jaxb.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#BGBGAIID]####[#TLJAX438]####
+
+== Customizing Generated Mappings
+
+When bootstrapping from an XML Schema (or an EclipseLink project from
+`sessions.xml`), you can customize the mappings that EclipseLink
+generates by using your own EclipseLink OXM Bindings file. This file
+contains your additional mappings and allows you to combine OXM with XSD
+bootstrapping. This means that you can use EclipseLink mappings to
+customize an existing XML schema.
+
+This section shows how to override mappings defined in the schema.
+Although the schema defines *addresses* in Canadian format (with
+province and postal code), you can use XML that contains the *address*
+is USA format (with state and zip code).
+
+First, you must create an `eclipselink-oxm.xml` file that contains the
+mapping overrides. In link:#CIHHDDHC[Example 8-42], we modify the XPaths
+for `province` and `postalCode`:
+
+[#CIHHDDHC]####[#TLJAX439]####
+
+*_Example 8-42 Sample eclipselink-oxm.xml File_*
+
+[source,oac_no_warn]
+----
+<?xml version="1.0" encoding="US-ASCII"?>
+<xml-bindings xmlns="http://www.eclipse.org/eclipselink/xsds/persistence/oxm" package-name="example">
+      <java-types>
+        <java-type name="Address">
+            <java-attributes>
+                <xml-element java-attribute="province" xml-path="state/text()"/>
+                <xml-element java-attribute="postalCode" xml-path="zip-code/text()"/>
+            </java-attributes>
+        </java-type>
+    </java-types>
+</xml-bindings>
+ 
+----
+
+When you create a `DynamicJAXBContext`, use the properties argument to
+pass this binding file to the `DynamicJAXBContextFactory` (in addition
+to the Schema):
+
+[source,oac_no_warn]
+----
+ 
+// Load Schema
+InputStream xsdStream = myClassLoader.getSystemResourceAsStream("example/resources/xsd/customer.xsd");
+ 
+// Load OXM with customizations, put into Properties
+InputStream oxmStream = myClassLoader.getSystemResourceAsStream("example/resources/eclipselink/eclipselink-oxm.xml");
+Map<String, Object> props = new HashMap<String, Object>();
+props.put(JAXBContextProperties.OXM_METADATA_SOURCE, oxmStream);
+ 
+// Create Context
+DynamicJAXBContext dContext = DynamicJAXBContextFactory.createContextFromXSD(inputStream, null, myClassLoader, props);
+----
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:advanced_concepts008.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:dynamic_jaxb.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2013 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

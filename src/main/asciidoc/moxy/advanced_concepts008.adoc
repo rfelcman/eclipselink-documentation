@@ -1,0 +1,118 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+a|
+Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+
+a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:advanced_concepts007.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:advanced_concepts009.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#CHDCGCDJ]####[#TLJAX436]####
+
+== Generating Java Classes from an XML Schema
+
+Use the JAXB Compiler to generate Java classes from an XML schema. The
+generated classes will contain JAXB annotations that represent the XML
+binding metadata.
+
+[#TLJAX437]##
+
+[#sthref193]##
+
+=== Running the JAXB Compiler
+
+Use the *.sh* or *.cmd* file to run the JAXB Compiler:
+
+`<ECLIPSELINK_HOME>/eclipselink/bin/jaxb-compiler.sh <source-file.xsd> [-options]`
+
+or
+
+`<ECLIPSELINK_HOME>\eclipselink\bin\jaxb-compiler.cmd <source-file.xsd> [-options]`
+
+The JAXB Compiler supports the following options:
+
+[width="26%",cols="<100%,<",options="header",]
+|===
+|*Option* |*Description*
+|`-nv` |Do not perform _strict_ validation of the input schemas.
+
+|`-extension` |Allow vender-specific extensions; do not strictly follow
+the Compatibility Rules in Appendix E.2 of the JAXB specification
+
+|`-b <file/directory>` a|
+Specify the external binding files to process.
+
+*Note*: Each file must use its own `-b` flag.
+
+|`-d <directory>` |Specify the output directory for the generated files.
+
+|`-p <package>` |Specify the target package.
+
+|`-classpath <arg>` |Specify where to find user class files.
+
+|`-verbose` |Enable additional compiler output, such as informational
+messages.
+
+|`-quiet` |Disable compiler output.
+
+|`-version` |Display the compiler version.
+|===
+
+ +
+
+For example:
+
+`jaxb-compiler.sh -d jaxb-compiler-output config/Customer.xsd`
+
+To display a complete list of compiler options, use:
+
+`jaxb-compiler.sh -help`
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:advanced_concepts007.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:advanced_concepts009.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2013 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

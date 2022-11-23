@@ -1,0 +1,84 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+a|
+Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+
+a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:overview003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:runtime001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#TLJAX117]## [#sthref10]##
+
+== [.secnum]#2# EclipseLink MOXy Runtime
+
+This chapter introduces and describes EclipseLink MOXy. EclipseLink MOXy
+is one implementation of the standard runtime defined by the JAXB
+specification.
+
+To specify EclipseLink MOXy as your JAXB provider:
+
+* Add the JAXB APIs (included in Java SE 6) and `eclipselink.jar` on
+your classpath.
+* Use a `jaxb.properties` file (in the same package as your domain
+classes).
+
+This chapter includes the following sections:
+
+* link:runtime001.htm#CACFEGHC[Specifying the EclipseLink Runtime]
+* link:runtime002.htm#CACEJGAI[Bootstrapping]
+* link:runtime003.htm#CACHCHAE[Using XML Bindings]
+* link:runtime004.htm#CACDDJHJ[Using MetadataSource]
+* link:runtime005.htm#CACIIGBD[Generating an XML Schema]
+* link:runtime006.htm#CACCBAFF[Validating Against an XML Schema]
+* link:runtime007.htm#CACHJIHB[Understanding Events]
+* link:runtime008.htm#CACGFBFB[Querying Objects by XPath]
+* link:runtime009.htm#CACECFJJ[Binding to an Existing Document]
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:overview003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:runtime001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2013 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

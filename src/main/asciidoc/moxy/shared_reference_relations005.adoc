@@ -1,0 +1,169 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+a|
+Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+
+a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:shared_reference_relations004.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:advanced_concepts.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#BABJFGGA]####[#TLJAX358]####
+
+== Mapping Bidirectional Relationships
+
+In order to map bidirectional relationships in EclipseLink MOXy, the
+back-pointer must be annotated as an `@XmlInverseReference`. Without
+this annotation, the cyclic relationship will result in an infinite loop
+during marshalling.
+
+`@XmlInverseReferences` must specify the `mappedBy` attribute, which
+indicates the property on the opposite side of the relationship.
+
+In link:#BABHGBAG[Example 7-11], an `Employee` has a collection of
+`PhoneNumbers`, and each `PhoneNumber` has a back-pointer back to its
+`Employee`:
+
+[#TLJAX359]####[#sthref135]####
+
+*_Example 7-10 Using the @XMlInverseReference Annotation_*
+
+[source,oac_no_warn]
+----
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Employee {
+   private String name;
+   private List<PhoneNumber> phones = new ArrayList<PhoneNumber>();
+   ...
+}
+ 
+@XmlAccessorType(XmlAccessType.FIELD)
+public class PhoneNumber {
+   private String number;
+   @XmlInverseReference(mappedBy="phones")
+   private Employee employee;
+   ...
+}
+ 
+----
+
+link:#BABHGBAG[Example 7-11] shows how to define this mapping in
+EclipseLink's OXM metadata format:
+
+[#BABHGBAG]####[#TLJAX360]####
+
+*_Example 7-11 Sample XML Mapping_*
+
+[source,oac_no_warn]
+----
+...
+<java-type name="Employee">
+   <java-attributes>
+      <xml-element java-attribute="name" type="java.lang.String"/>
+      <xml-element java-attribute="phones" type="PhoneNumber" container-type="java.util.ArrayList"/>
+   </java-attributes>
+</java-type>
+ 
+<java-type name="PhoneNumber">
+   <java-attributes>
+      <xml-element java-attribute="number" type="java.lang.String"/>
+      <xml-inverse-reference java-attribute="employee" type="Employee" mapped-by="phones" />
+   </java-attributes>
+</java-type>
+...
+ 
+In addition, when using @XmlInverseReference, it is not necessary to explicitly set the back-pointer in your Java code; EclipseLink will do this for you automatically:
+----
+
+[source,oac_no_warn]
+----
+Employee emp = new Employee();
+emp.setName("Bob Smith");
+ 
+PhoneNumber p = new PhoneNumber();
+p.setNumber("555-1212");
+ 
+emp.getPhones().add(p);
+ 
+// Not Necessary
+// p.setEmployee(emp);
+ 
+----
+
+`@XmlInverseReference` back-pointers can be used with the following
+types of mappings:
+
+* One-To-One Relationships (see
+link:privately_owned_relations001.htm#BABHAJID["Mapping Privately Owned
+One-to-One Relationships"])
+* One-To-Many Relationships (see
+link:privately_owned_relations002.htm#BABGFHAG["Mapping Privately Owned
+One-to-Many Relationships"])
+* Single Key Relationships (see
+link:shared_reference_relations002.htm#BABHIHAE["Mapping Single Key
+Relationships"])
+* Composite Key Relationships (see
+link:shared_reference_relations004.htm#BABIIBFI["Mapping Composite Key
+Relationships"])
+
+`@XmlInverseReference` can be particularly useful when mapping JPA
+entities to XML (see link:runtime003.htm#CACHCHAE["Using XML Bindings"])
+
+[#TLJAX361]##
+
+[#sthref136]##
+
+=== See also
+
+For more information, see:
+
+* Binding JPA Relationships to XML +
+`http://wiki.eclipse.org/EclipseLink/Examples/MOXy/JPA/Relationships`
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:shared_reference_relations004.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:advanced_concepts.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2013 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

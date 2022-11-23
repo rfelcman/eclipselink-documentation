@@ -1,0 +1,252 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+a|
+Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+
+a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:simple_values003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:special_schema_types.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#CHDCGAIC]####[#TLJAX282]####
+
+== Mapping Enums
+
+Java enums can be mapped to XML using the `@XmlEnum` and `@XmlEnumValue`
+annotations.
+
+[#TLJAX283]##
+
+[#sthref83]##
+
+=== Mapping Enums using Constant Names
+
+The following schema demonstrates an XML enumeration:
+
+[#TLJAX284]####[#sthref84]####
+
+*_Example 4-40 Sample XML Schema_*
+
+[source,oac_no_warn]
+----
+<xs:simpleType name="CustomerType">
+   <xs:restriction base="xs:string"/>
+      <xs:enumeration value="PROMO_CUSTOMER"/>
+      <xs:enumeration value="NEW_CUSTOMER"/>
+      <xs:enumeration value="VIP"/>
+      <xs:enumeration value="NORMAL"/>
+   </xs:restriction>
+</xs:simpleType>
+ 
+----
+
+If your `enum` constant names themselves are sufficient for the XML
+representation, you can simply use the `@XmlEnum` annotation:
+
+[#TLJAX285]####[#sthref85]####
+
+*_Example 4-41 Using the @XmlEnum Annotation_*
+
+[source,oac_no_warn]
+----
+package example;
+ 
+import jakarta.xml.bind.annotation.*;
+ 
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Customer {
+   private CustomerType type = CustomerType.NEW_CUSTOMER;
+ 
+   @XmlEnum(String.class)
+   private enum CustomerType { PROMO_CUSTOMER, NEW_CUSTOMER, VIP, NORMAL }
+ 
+   ...
+}
+ 
+----
+
+link:#CHDHJCBE[Example 4-42] shows how to define this mapping in
+EclipseLink OXM Metadata:
+
+[#CHDHJCBE]####[#TLJAX286]####
+
+*_Example 4-42 Sample XML Mapping_*
+
+[source,oac_no_warn]
+----
+...
+<xml-enums>
+   <xml-enum java-enum="CustomerType" value="java.lang.String">
+      <xml-enum-value java-enum-value="PROMO_CUSTOMER">PROMO_CUSTOMER</xml-enum-value>
+      <xml-enum-value java-enum-value="NEW_CUSTOMER">NEW_CUSTOMER</xml-enum-value>
+      <xml-enum-value java-enum-value="VIP">VIP</xml-enum-value>
+      <xml-enum-value java-enum-value="NORMAL">NORMAL</xml-enum-value>
+   </xml-enum>
+</xml-enums>
+ 
+<java-types>
+   <java-type name="Customer">
+      <xml-root-element name="customer"/>
+      <java-attributes>
+         <xml-element java-attribute="type" type="CustomerType"/>
+      </java-attributes>
+   </java-type>
+</java-types>
+...
+ 
+----
+
+When marshalled to XML, a *Customer* would look like this:
+
+[source,oac_no_warn]
+----
+<customer>
+   <type>NEW_CUSTOMER</type>
+</customer>
+ 
+----
+
+[#TLJAX287]##
+
+[#sthref86]##
+
+=== Mapping Enums to Custom XML Values
+
+Given the following XML schema enumeration:
+
+[#TLJAX288]####[#sthref87]####
+
+*_Example 4-43 Sample XML Schema_*
+
+[source,oac_no_warn]
+----
+<xs:simpleType name="CustomerType">
+   <xs:restriction base="xs:int">
+      <xs:enumeration value="1"/>
+      <xs:enumeration value="2"/>
+      <xs:enumeration value="3"/>
+      <xs:enumeration value="4"/>
+   </xs:restriction>
+</xs:simpleType>
+ 
+----
+
+To model this in Java, the `@XmlEnumValue` annotation is used to provide
+an XML value for each `enum` constant:
+
+[#TLJAX289]####[#sthref88]####
+
+*_Example 4-44 Using the @XmlEnumValue Annotation_*
+
+[source,oac_no_warn]
+----
+package example;
+ 
+import jakarta.xml.bind.annotation.*;
+ 
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Customer {
+ 
+   private CustomerType type = CustomerType.NEW_CUSTOMER;
+ 
+   @XmlEnum(Integer.class)
+   private enum CustomerType { 
+      @XmlEnumValue("1") PROMO_CUSTOMER, 
+      @XmlEnumValue("2") NEW_CUSTOMER, 
+      @XmlEnumValue("3") VIP,
+      @XmlEnumValue("4") NORMAL;
+ 
+      ...
+}
+ 
+----
+
+link:#CHDGHHFE[Example 4-45] shows how to define this mapping in
+EclipseLink OXM Metadata:
+
+[#CHDGHHFE]####[#TLJAX290]####
+
+*_Example 4-45 Sample XML Mapping_*
+
+[source,oac_no_warn]
+----
+...
+<xml-enums>
+   <xml-enum java-enum="CustomerType" value="java.lang.Integer">
+      <xml-enum-value java-enum-value="PROMO_CUSTOMER">1</xml-enum-value>
+      <xml-enum-value java-enum-value="NEW_CUSTOMER">2</xml-enum-value>
+      <xml-enum-value java-enum-value="VIP">3</xml-enum-value>
+      <xml-enum-value java-enum-value="NORMAL">4</xml-enum-value>
+   </xml-enum>
+</xml-enums>
+ 
+<java-types>
+   <java-type name="Customer">
+      <xml-root-element name="customer"/>
+      <java-attributes>
+         <xml-element java-attribute="type" type="CustomerType"/>
+      </java-attributes>
+   </java-type>
+</java-types>
+...
+ 
+----
+
+When marshalled to XML, a new *Customer* would look like this:
+
+[source,oac_no_warn]
+----
+<customer>
+   <type>2</type>
+</customer>
+----
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:simple_values003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:special_schema_types.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2013 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

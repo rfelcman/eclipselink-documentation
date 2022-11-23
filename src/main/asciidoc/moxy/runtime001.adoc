@@ -1,0 +1,87 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+a|
+Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+
+a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:runtime.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:runtime002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#CACFEGHC]####[#TLJAX118]####
+
+== Specifying the EclipseLink Runtime
+
+To use EclipseLink MOXy as your JAXB implementation, identify the
+EclipseLink `JAXBContextFactory` in your `jaxb.properties` file.
+
+. Create a text file named `jaxb.properties`, specifying EclipseLink's
+`JAXBContextFactory` as the factory used to build new `JAXBContexts`:
++
+[source,oac_no_warn]
+----
+jakarta.xml.bind.context.factory=org.eclipse.persistence.jaxb.JAXBContextFactory
+----
+. Copy the file to the same package (directory) in which your model
+classes reside.
+. Use the standard `JAXBContext.newInstance(Class... classesToBeBound)`
+API to create a JAXBContext:
++
+[source,oac_no_warn]
+----
+JAXBContext jaxbContext = JAXBContext.newInstance(Customer.class);
+----
+
+Because you do not need to change any application code, you can easily
+switch between different JAXB implementations.
+
+For more information on different ways to create a `JAXBContext`, see
+link:runtime002.htm#CACEJGAI["Bootstrapping"].
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:runtime.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:runtime002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2013 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

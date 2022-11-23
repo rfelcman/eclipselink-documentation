@@ -1,0 +1,148 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+a|
+Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+
+a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:simple_values002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:simple_values004.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#CHDICAAI]####[#TLJAX276]####
+
+== Multiple Mappings for a Single Property
+
+Standard JAXB can have at most one mapping per Java field. Since
+EclipseLink MOXy 2.3, multiple mappings can be created for a single
+property using OXM metadata, with the caveat that at most one mapping
+will be readable (the rest will be "write-only").
+
+[#TLJAX277]##
+
+[#sthref80]##
+
+=== Example
+
+This example will use the following Java class:
+
+[#TLJAX278]####[#sthref81]####
+
+*_Example 4-37 Sample Java Class_*
+
+[source,oac_no_warn]
+----
+package example;
+ 
+import jakarta.xml.bind.annotation.*;
+ 
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
+public class CustomQuoteRequest {
+ 
+   private int requestId;
+ 
+   private String currencyPairCode;
+ 
+}
+ 
+----
+
+link:#CHDEDBIB[Example 4-38] shows how to define multiple mappings for
+the `currencyPairCode` in EclipseLink's OXM metadata format. Note that
+the second mapping has specified `write-only="true`".
+
+[#CHDEDBIB]####[#TLJAX279]####
+
+*_Example 4-38 Sample XML Schema_*
+
+[source,oac_no_warn]
+----
+...
+<java-type name="CustomQuoteRequest">
+   <xml-root-element/>
+   <java-attributes>
+      <xml-element java-attribute="requestId" name="id"/>
+      <xml-attribute java-attribute="currencyPairCode" xml-path="req/info/instrmt/@sym"/>                            
+      <xml-attribute java-attribute="currencyPairCode" xml-path="req/info/leg/token/@sym" write-only="true"/>           
+   </java-attributes>
+</java-type>
+...
+ 
+----
+
+[#TLJAX280]##
+
+[#sthref82]##
+
+=== XML Output
+
+link:#CHDEIEJF[Example 4-39] shows an example `CustomQuoteRequest`
+marshalled to XML.
+
+[#CHDEIEJF]####[#TLJAX281]####
+
+*_Example 4-39 Resulting XML_*
+
+[source,oac_no_warn]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<customQuoteRequest>
+   <id>881</id>
+   <req>
+      <info>
+         <instrmt sym="CAD/USD"/>
+         <leg>
+            <token sym="CAD/USD"/>
+         </leg>
+      </info>
+   </req>
+</customQuoteRequest>
+----
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:simple_values002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:simple_values004.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2013 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +

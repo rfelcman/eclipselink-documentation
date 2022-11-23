@@ -1,0 +1,75 @@
+[[cse]][#top]##
+
+[width="100%",cols="<50%,>50%",]
+|===
+a|
+Developing JAXB Applications Using EclipseLink MOXy, *Release 4.0* +
+
+a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+'''''
+
+[cols="^,^,",]
+|===
+|link:shared_reference_relations005.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:advanced_concepts001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+| 
+|===
+
+[#TLJAX362]## [#sthref137]##
+
+== [.secnum]#8# Advanced Concepts
+
+This chapter includes the following sections:
+
+* link:advanced_concepts001.htm#CHDCGFBI[Refreshing Metadata]
+* link:advanced_concepts002.htm#CHDCCCAF[Customizing XML Name
+Conversions]
+* link:advanced_concepts003.htm#CHDJHCCE[Using Virtual Access Methods]
+* link:advanced_concepts004.htm#CHDIHFEE[Using Extensible MOXy]
+* link:advanced_concepts005.htm#CHDBFCAA[Mapping Using XPath Predicates]
+* link:advanced_concepts006.htm#CHDCEDIG[Using an XmlAdapter]
+* link:advanced_concepts007.htm#CHDFFEFF[Using XML Transformations]
+* link:advanced_concepts008.htm#CHDCGCDJ[Generating Java Classes from an
+XML Schema]
+* link:advanced_concepts009.htm#BGBGAIID[Customizing Generated Mappings]
+
+'''''
+
+[width="66%",cols="50%,^,>50%",]
+|===
+a|
+[width="96%",cols=",^50%,^50%",]
+|===
+| 
+|link:shared_reference_relations005.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
+|link:advanced_concepts001.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
+|===
+
+|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
+a|
+[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
+|===
+|  |image:../../dcommon/images/contents.png[Go To Table Of
+Contents,width=16,height=16] + | 
+|link:../../[image:../../dcommon/images/search.png[Search] +
+[.mini]##] | 
+|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
+|===
+
+|===
+
+[[copyright]]
+Copyright © 2013 by The Eclipse Foundation under the
+http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
+(EPL)] +
