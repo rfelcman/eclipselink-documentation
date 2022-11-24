@@ -24,21 +24,17 @@ Web service (WSDL, XML schema, `web.xml`, EclipseLink object-relational
 mapping (ORM) and object-XML mapping (OXM) native project XML files, and
 so on).
 
-[#TLDBW120]####[#sthref17]####
+[[sthref17]]
 
 *_Figure 1-3 Contents of WAR File_*
 
-image:img/dbwswarfile.gif[Contents of WAR
-File,title="Contents of WAR File"] +
-link:img_text/dbwswarfile.htm[Description of "Figure 1-3 Contents of WAR
-File"] +
- +
+image:{imagesrelativedir}/dbwswarfile.gif[Contents of WAR File,title="Contents of WAR File"] +
+xref:{imagestextrelativedir}/dbwswarfile.adoc[Description of "Figure 1-3 Contents of WAR File"] +
 
-[#TLDBW121]####[#sthref19]####[#sthref20]##
+[[sthref20]]
 
 *_Table 1-3 EclipseLink DBWS Service .war File Contents_*
 
-[width="44%",cols="<100%,<",options="header",]
 |===
 |*File* |*Description*
 |`web.xml` a|
@@ -85,8 +81,6 @@ See JSR-109 for details (`http://jcp.org/en/jsr/detail?id=109`).
 optional
 |===
 
- +
-
 Note that the files `swaref.xsd` and `web.xml` have names and content
 determined by their roles in Web deployment and cannot be changed.
 
@@ -101,11 +95,7 @@ An alternate deployable JAR file has been verified to work as a JavaSE 6
 `http://wiki.eclipse.org/EclipseLink/Examples/DBWS/AdvancedJavase6Containerless`
 for more information.
 
-[#TLDBW122]##
-
-[#sthref21]##
-
-=== Creating EclipseLink DBWS Services Using the DBWSBuilder Utility
+==== Creating EclipseLink DBWS Services Using the DBWSBuilder Utility
 
 This section describes how to create EclipseLink DBWS services using the
 `DBWSBuilder` utility.
@@ -135,14 +125,14 @@ the following sources:
 * one or more SQL `SELECT` statements;
 * a stored procedure.
 
-[#BABCIEID]####[#TLDBW123]####
+[[BABCIEID]]
 
-==== Creating an EclipseLink DBWS Service from a Database Table
+===== Creating an EclipseLink DBWS Service from a Database Table
 
 You can create an EclipseLink `DBWSBuilder` XML file with a `<table>`
 query operation, as follows:
 
-[#CJAIABED]####[#TLDBW124]####
+[[CJAIABED]]
 
 *_Example 1-5 Sample DBWSBuilder XML File_*
 
@@ -162,17 +152,16 @@ query operation, as follows:
 ----
 
 For more information, see
-link:creating_dbws_services001.htm#CJABFFBE["Creating EclipseLink DBWS
-Service from a Database Table"].
+xref:{relativedir}/creating_dbws_services001.adoc#DBWSCREATE001["Creating EclipseLink DBWS Service from a Database Table"].
 
-[#BABEFADD]####[#TLDBW125]####
+[[BABEFADD]]
 
-==== Creating an EclipseLink DBWS Service from a SQL Statement
+===== Creating an EclipseLink DBWS Service from a SQL Statement
 
 You can create an EclipseLink DBWS builder XML file with a `<sql>` query
 operation, as follows:
 
-[#CJAGDJAI]####[#TLDBW126]####
+[[CJAGDJAI]]
 
 *_Example 1-6 Sample DBWS Builder XML File_*
 
@@ -192,11 +181,7 @@ operation, as follows:
 </dbws-builder>
 ----
 
-[#TLDBW127]##
-
-[#sthref22]##
-
-===== Using Parameter Binding
+====== Using Parameter Binding
 
 The SQL `SELECT` statement for a `<sql>` operation may have parameters
 that must be bound to a datatype from the `eclipselink-dbws-schema.xsd`,
@@ -228,17 +213,16 @@ The argument named *EMPNO* is bound to an `integer` type, while the
 argument named *LAST_NAME* is bound to a `string` type.
 
 For more information, see
-link:creating_dbws_services004.htm#CJAIFBBF["Creating a DBWS Service
-from SQL Statements"].
+xref:{relativedir}/creating_dbws_services004.adoc#DBWSCREATE004["Creating a DBWS Service from SQL Statements"].
 
-[#BABJIGIC]####[#TLDBW128]####
+[[BABJIGIC]]
 
-==== Creating an EclipseLink DBWS Service from a Stored Procedure
+===== Creating an EclipseLink DBWS Service from a Stored Procedure
 
 You can create an EclipseLink DBWS builder XML File with a `<procedure>`
 query operation, as shown in link:#BABBBABC[Example 1-7].
 
-[#BABBBABC]####[#TLDBW129]####
+[[BABBBABC]]
 
 *_Example 1-7 Using a <procedure> Query_*
 
@@ -260,14 +244,9 @@ query operation, as shown in link:#BABBBABC[Example 1-7].
 ----
 
 For more information, see
-link:creating_dbws_services005.htm#CJAGAEFJ["Creating from a Stored
-Procedure"].
+xref:{relativedir}/creating_dbws_services005.adoc#DBWSCREATE005["Creating from a Stored Procedure"].
 
-[#TLDBW130]##
-
-[#sthref23]##
-
-=== Customizing an EclipseLink DBWS Service
+==== Customizing an EclipseLink DBWS Service
 
 There are a number use-cases that require an EclipseLink DBWS Service to
 be customized. The use-cases can be subdivided into the following
@@ -277,17 +256,13 @@ categories:
 * Intermediate – customizing the EclipseLink ORM or OXM projects;
 * Advanced – manually generating all required deployment artifacts.
 
-[#TLDBW131]##
-
-[#sthref24]##
-
-==== Performing Simple Customization
+===== Performing Simple Customization
 
 By default, `DBWSBuilder`-generated `eclipselink-dbws-schema.xsd` file
 derives `<element-tag>` names from the database table metadata, as shown
 in link:#CJADJAED[Example 1-8].
 
-[#CJADJAED]####[#TLDBW132]####
+[[CJADJAED]]
 
 *_Example 1-8 DBWSBuilder-generated eclipselink-dbws-schema.xsd File_*
 
@@ -316,7 +291,7 @@ in link:#CJADJAED[Example 1-8].
 Use the `NamingConventionTransformer` to change an <element> tag to an
 attribute, as shown in link:#CJAHDIFC[Example 1-9].
 
-[#CJAHDIFC]####[#TLDBW133]####
+[[CJAHDIFC]]
 
 *_Example 1-9 Converting to an Attribute_*
 
@@ -340,11 +315,7 @@ For more information, see "Naming Convention for schema elements" in the
 EclipseLink documentation:
 `http://wiki.eclipse.org/EclipseLink/Examples/DBWS/DBWSIntermediateAttribute`.
 
-[#TLDBW134]##
-
-[#sthref25]##
-
-==== Performing Intermediate Customization
+===== Performing Intermediate Customization
 
 The primary reason to use an EclipseLink SessionCustomizer is to enable
 programmatic access to the EclipseLink API. Using this API, you can
@@ -407,11 +378,7 @@ For more information, see "Session Customization" in the EclipseLink
 documentation:
 `http://wiki.eclipse.org/Introduction_to_EclipseLink_Sessions_%28ELUG%29#Session_Customization`.
 
-[#TLDBW135]##
-
-[#sthref26]##
-
-==== Performing Advanced Customization
+===== Performing Advanced Customization
 
 You can customize an EclipseLink DBWS service by creating your own
 `project.xml` and `sessions.xml` files. Using your preferred utility,
@@ -425,14 +392,10 @@ projects.
 
 In this way, you can control all aspects of the relational and XML
 mapping. This approach is best when you want to customize most or all
-details. See link:creating_dbws_services003.htm#CHDEBIHE["Using Existing
+details. See xref:{relativedir}/creating_dbws_services003.adoc#DBWSCREATE003["Using Existing
 EclipseLink ORM and OXM Mappings"] for more information.
 
-[#TLDBW136]##
-
-[#sthref27]##
-
-=== Using DBWSBuilder API
+==== Using DBWSBuilder API
 
 The EclipseLink DBWS design-time utility, `DBWSBuilder`, is a Java
 application that generates EclipseLink DBWS files and assembles them
@@ -454,7 +417,7 @@ the public class `org.eclipse.persistence.tools.dbws.DBWSBuilder` can be
 populated programmatically through property setters (i.e. `setDriver()`,
 `setUrl()`) - table; SQL operations via `addSqlOperation()`.
 
-[#BABBAHFB]####[#TLDBW137]####
+[[BABBAHFB]]
 
 *_Example 1-10 Sample Builder XML File_*
 
@@ -483,20 +446,17 @@ that implements the `org.eclipse.persistence.tools.dbws.DBWSPackager`
 interface. There is a hierarchy of concrete implementations of this
 interface, shown in link:#BABHDFBF[Figure 1-4]:
 
-[#BABHDFBF]####[#TLDBW138]####
+[[BABHDFBF]]
 
 *_Figure 1-4 Hierarchy of Concrete Implementation_*
 
-image:img/dbwspackagehierarchy.gif[Description of Figure 1-4
-follows,title="Description of Figure 1-4 follows"] +
-link:img_text/dbwspackagehierarchy.htm[Description of "Figure 1-4
-Hierarchy of Concrete Implementation"] +
- +
+image:{imagesrelativedir}/dbwspackagehierarchy.gif[Description of Figure 1-4 follows,title="Description of Figure 1-4 follows"] +
+xref:{imagestextrelativedir}/dbwspackagehierarchy.adoc[Description of "Figure 1-4 Hierarchy of Concrete Implementation"] +
 
 The primary responsibility of a `DBWSPackager` is to provide
 `java.io.OutputStream`'s for the output generated by `DBWSBuilder`:
 
-[#TLDBW139]####[#sthref29]####
+[[sthref29]]
 
 *_Example 1-11 Sample DBWSPackager_*
 
@@ -549,33 +509,3 @@ public void build(OutputStream dbwsSchemaStream, OutputStream dbwsSessionsStream
         OutputStream swarefStream, OutputStream webXmlStream, OutputStream wsdlStream,
         OutputStream codeGenProviderStream, OutputStream sourceProviderStream, Logger logger) ...
 ----
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:overview002.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:overview004.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

@@ -35,7 +35,7 @@ located in the `<ECLIPSELINK_HOME>\utils\dbws` directory. The scripts
 are `dbwsbuilder.cmd` for Windows usage, and `dbwsbuilder.sh` for other
 operating systems.
 
-[#TLDBW141]####[#sthref30]####
+[[sthref30]]
 
 *_Example 1-12 DBWSBuilder usage_*
 
@@ -59,43 +59,13 @@ Using `DBWSBuilder`, you can generate an EclipseLink DBWS service from
 the following sources:
 
 * an existing relational database table. See
-link:overview003.htm#BABCIEID["Creating an EclipseLink DBWS Service from
+xref:{relativedir}/overview003.adoc#BABCIEID["Creating an EclipseLink DBWS Service from
 a Database Table"].
 * one or more SQL SELECT statements. See
-link:overview003.htm#BABEFADD["Creating an EclipseLink DBWS Service from
+xref:{relativedir}/overview003.adoc#BABEFADD["Creating an EclipseLink DBWS Service from
 a SQL Statement"].
-* a stored procedure. See link:overview003.htm#BABJIGIC["Creating an
+* a stored procedure. See xref:{relativedir}/overview003.adoc#BABJIGIC["Creating an
 EclipseLink DBWS Service from a Stored Procedure"].
 * a stored function . See
-link:creating_dbws_services006.htm#CJAFGHAH["Creating from a Stored
+xref:{relativedir}/creating_dbws_services006.adoc#DBWSCREATE006["Creating from a Stored
 Function"].
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:overview003.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:creating_dbws_services.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

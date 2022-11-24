@@ -1,36 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*Oracle® Fusion Middleware Developing Persistence Architectures Using
-EclipseLink Database Web Services* +
-*Release 4.0* + a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:creating_dbws_services.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:creating_dbws_services002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-The script content on this page is for navigation purposes only and does
-not alter the content in any way.
-
-[#CJABFFBE]####[#TLDBW143]####
-
-== Creating EclipseLink DBWS Service from a Database Table
+///////////////////////////////////////////////////////////////////////////////
+[[DBWSCREATE001]]
+=== Creating EclipseLink DBWS Service from a Database Table
 
 You can create a web service that exposes a database table's CRUD
 (**C**reate/**R**ead[findByPK and findAll]/**U**pdate/**D**elete)
@@ -57,11 +43,10 @@ document, or handled as binary attachments (`SwaRef` or `MTOM` style).
 link:#CJAFCCCA[Example 2-1] uses the *EMP* table (link:#CJABFAHH[Table
 2-1]) from the Oracle *scott* database schema:
 
-[#TLDBW144]####[#sthref33]####[#CJABFAHH]##
+[[CJABFAHH]]
 
 *_Table 2-1 Sample EMP Table_*
 
-[width="78%",cols="<19%,<15%,<22%,<,<11%,<11%,<11%,<11%",options="header",]
 |===
 |*OWNER* |*TABLE_NAME* |*COLUMN_NAME* |*DATA_TYPE* |*DATA_LENGTH*
 |*DATA_PRECISION* |*DATA_SCALE* |*NULLABLE?*
@@ -82,9 +67,7 @@ link:#CJAFCCCA[Example 2-1] uses the *EMP* table (link:#CJABFAHH[Table
 |SCOTT |EMP |DEPTNO |NUMBER |22 |2 |0 |Y
 |===
 
- +
-
-[#CJAFCCCA]####[#TLDBW145]####
+[[CJAFCCCA]]
 
 *_Example 2-1 Example_*
 
@@ -148,16 +131,12 @@ link:#CJABFAHH[Table 2-1]:
  
 ----
 
-[#TLDBW146]##
-
-[#sthref34]##
-
-=== Generated EclipseLink DBWS service descriptor
+==== Generated EclipseLink DBWS service descriptor
 
 The CRUD operations are illustrated in the generated EclipseLink DBWS
 service descriptor (`eclipselink-dbws.xml`) file, as shown here:
 
-[#TLDBW147]####[#sthref35]####
+[[sthref35]]
 
 *_Example 2-2 Sample CRUD Operations_*
 
@@ -216,11 +195,7 @@ service descriptor (`eclipselink-dbws.xml`) file, as shown here:
  
 ----
 
-[#TLDBW148]##
-
-[#sthref36]##
-
-=== SOAP Messaging
+==== SOAP Messaging
 
 The following SOAP Message invokes the `<findAll_empType`> operation for
 the *emp* DBWS service:
@@ -271,45 +246,3 @@ returning:
   </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ----
-
-'''''
-
- +
-
-Footnote Legend
-
-Footnote 1: Same algorithm documented as part of the SQL/X (a.k.a.
-SQL/XML:2003) specification. +
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:creating_dbws_services.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:creating_dbws_services002.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-Copyright © 1997,
-2014, Oracle and/or its affiliates. All rights reserved.
-link:../../dcommon/html/cpyr.htm[ +
-] a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

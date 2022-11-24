@@ -21,7 +21,7 @@
 Use the `<property>` element in the DBWS Builder XML file to define the
 necessary server properties, as shown in link:#CJAHEECA[Example 1-4]
 
-[#CJAHEECA]##
+[[CJAHEECA]]
 
 *_Example 1-4 Sample DBWS Builder XML file_*
 
@@ -38,17 +38,16 @@ necessary server properties, as shown in link:#CJAHEECA[Example 1-4]
 ...
 ----
 
-See link:overview003.htm#CJAIABED[Example 1-5] and
-link:overview003.htm#CJAGDJAI[Example 1-6] for additional samples of a
+See xref:{relativedir}/overview003.adoc#CJAIABED[Example 1-5] and
+xref:{relativedir}/overview003.adoc#CJAGDJAI[Example 1-6] for additional samples of a
 DBWS Builder XML file.
 
 link:#CJAGGEJF[Table 1-2] defines the valid `<property>` values:
 
-[#sthref16]####[#CJAGGEJF]####
+[[CJAGGEJF]]
 
 *_Table 1-2 DBWS Builder File Properties_*
 
-[width="36%",cols="<100%,<",options="header",]
 |===
 |*Property* |*Description*
 |`projectName` a|
@@ -104,35 +103,3 @@ Location URI value, set in generated WSDL.
 Default = `REPLACE_WITH_ENDPOINT_ADDRESS`
 
 |===
-
- +
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:overview001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:overview003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

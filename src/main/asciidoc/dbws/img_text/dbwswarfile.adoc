@@ -1,3 +1,4 @@
+:nofooter:
 This figure shows the typical contents of an EclipseLink DBWS
 service `.war` file.
 

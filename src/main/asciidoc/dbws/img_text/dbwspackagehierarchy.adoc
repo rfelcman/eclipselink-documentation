@@ -1,3 +1,4 @@
+:nofooter:
 This figure shows the concrete implementations of the `DBWSPackager`
 interface. Both the `JavasePackager` and `WebServicePackager` (which is
 an implementation of the `WebLogicPackager` and `JDevPackger`) implement

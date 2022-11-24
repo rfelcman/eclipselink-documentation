@@ -1,45 +1,28 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*Developing Persistence Architectures Using EclipseLink Database Web
-Services* +
-*Release 4.0* + a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:creating_dbws_services006.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:creating_dbws_services008.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#TLDBW179]##
-
-[#sthref55]##
-
-== Creating from a Stored Procedure with complex PL/SQL arguments
+///////////////////////////////////////////////////////////////////////////////
+[[DBWSCREATE007]]
+=== Creating from a Stored Procedure with complex PL/SQL arguments
 
 With EclipseLink, you can create a DBWS web service from a stored
 procedure that uses complex PL/SQL types as either an `IN`, `OUT`, or
 `IN` `OUT` argument.
 
-[#TLDBW180]##
-
-[#sthref56]##
-
-=== Example
+==== Example
 
 In this example, the following stored procedure is used:
 
@@ -173,33 +156,3 @@ The generated `eclipselink-dbws-schema.xsd` file follows:
    <xsd:element name="SOMEPACKAGE_ARECORD" type="SOMEPACKAGE_ARECORD"/>
 </xsd:schema>
 ----
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:creating_dbws_services006.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:creating_dbws_services008.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

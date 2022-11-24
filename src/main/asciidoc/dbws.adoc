@@ -42,4 +42,10 @@ include::{rootdir}/loe.adoc[]
 :sectnumlevels: 1
 include::{rootdir}/overview.adoc[]
 
+//Creating DBWS Services
+include::{rootdir}/creating_dbws_services.adoc[]
+
+//Advanced Methods of Accessing DBWS Designtime API
+include::{rootdir}/advanced_methods.adoc[]
+
 include::copyright.adoc[]

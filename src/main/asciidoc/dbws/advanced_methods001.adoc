@@ -1,42 +1,28 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*Developing Persistence Architectures Using EclipseLink Database Web
-Services* +
-*Release 4.0* + a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,",]
-|===
-|link:advanced_methods.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#BEIHBEJB]####[#TLDBW187]####
-
-== Using DBWSBuilder with Ant
+///////////////////////////////////////////////////////////////////////////////
+[[DBWSADVANCEDMETHODS001]]
+=== Using DBWSBuilder with Ant
 
 With EclipseLink DBWS, you can invoke the `DBWSBuilder` from Apache Ant
 (`http://ant.apache.org/`) to generate the necessary files, compile, and
 package the application with additional Ant targets.
 
-[#TLDBW188]##
-
-[#sthref60]##
-
-=== Example
+==== Example
 
 This example illustrates how to use Ant to generate a deployable web
 archive. For this example, consider the following file layout:
@@ -64,7 +50,7 @@ _`<example-root>`_ directory. The builder packages the generated
 artifacts into the web archive (`simpletable.war`) in the `stage`
 directory. This `.war` file can then be deployed to WebLogic.
 
-[#BEIEIHFG]####[#TLDBW189]####
+[[BEIEIHFG]]
 
 *_Example 3-1 Sample DBWS Builder File (dbws-builder.xml)_*
 
@@ -84,7 +70,7 @@ directory. This `.war` file can then be deployed to WebLogic.
 </dbws-builder>
 ----
 
-[#BEIFBFFC]####[#TLDBW190]####
+[[BEIFBFFC]]
 
 *_Example 3-2 Sample Build XML File (build.xml)_*
 
@@ -119,7 +105,7 @@ directory. This `.war` file can then be deployed to WebLogic.
 </project>
 ----
 
-[#BEIGCDJG]####[#TLDBW191]####
+[[BEIGCDJG]]
 
 *_Example 3-3 Sample Build Properties File (build.properties)_*
 
@@ -133,32 +119,3 @@ jlib.dir=${basedir}/jlib
 server.platform=wls
 dbws.builder.file=dbws-builder.xml
 ----
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="48%",cols=",^100%",]
-|===
-| 
-|link:advanced_methods.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

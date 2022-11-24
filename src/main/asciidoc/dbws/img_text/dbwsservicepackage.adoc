@@ -1,3 +1,4 @@
+:nofooter:
 This figure shows the typical EclipseLink DBWS service files, when
 packaged in an archive.
 

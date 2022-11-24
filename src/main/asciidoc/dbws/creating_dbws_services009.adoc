@@ -1,58 +1,32 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*Developing Persistence Architectures Using EclipseLink Database Web
-Services* +
-*Release 4.0* + a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:creating_dbws_services008.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:advanced_methods.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#CJADBDFD]####[#TLDBW183]####
-
-== Creating from an Overloaded PL/SQL Stored Procedure
+///////////////////////////////////////////////////////////////////////////////
+[[DBWSCREATE009]]
+=== Creating from an Overloaded PL/SQL Stored Procedure
 
 Starting in release 2.3, EclipseLInk DBWS can create a web service that
 exposes multiple PL/SQL stored procedures. Instead of specifying all the
 stored procedures within the DBWS builder file, you can specify a single
 procedure name and "overload" it with different parameters.
 
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-This feature requires a database, such as Oracle, that supports
+NOTE: This feature requires a database, such as Oracle, that supports
 overloading.
 
-|===
-
- +
-
-[#TLDBW184]##
-
-[#sthref58]##
-
-=== Example
+==== Example
 
 In this example, the stored procedure contains different parameters:
 
@@ -208,33 +182,3 @@ In this example, EclipseLink generates the following
     </wsdl:service>
 </wsdl:definitions>
 ----
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:creating_dbws_services008.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:advanced_methods.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +

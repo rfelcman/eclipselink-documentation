@@ -1,33 +1,22 @@
-[[cse]][#top]##
+///////////////////////////////////////////////////////////////////////////////
 
-[width="100%",cols="<50%,>50%",]
-|===
-|*Developing Persistence Architectures Using EclipseLink Database Web
-Services* +
-*Release 4.0* + a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
+    Copyright (c) 2022 Oracle and/or its affiliates. All rights reserved.
 
-|===
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
 
-'''''
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
 
-[cols="^,^,",]
-|===
-|link:creating_dbws_services001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:creating_dbws_services003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-| 
-|===
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
-[#CJAIJBFJ]####[#TLDBW149]####
-
-== Using an EclipseLink SessionCustomizer
+///////////////////////////////////////////////////////////////////////////////
+[[DBWSCREATE002]]
+=== Using an EclipseLink SessionCustomizer
 
 When using an EclipseLink `SessionCustomizer` with DBWS, you can access
 to the EclipseLink API to retrieve the OR (`object-relational`) or OX
@@ -38,11 +27,7 @@ For more information, see "Session Customization in the EclipseLink
 documentation: +
 `http://wiki.eclipse.org/Introduction_to_EclipseLink_Sessions_%28ELUG%29#Session_Customization`
 
-[#TLDBW150]##
-
-[#sthref37]##
-
-=== Example
+==== Example
 
 This example illustrates how to implement an EclipseLink
 `SessionCustomizer`:
@@ -74,7 +59,7 @@ In the `DBWSBuilder` configuration file, you must use the
 specify if the customization applies to the ORM or ORX project
 (respectively), as shown here:
 
-[#TLDBW151]####[#sthref38]####
+[[sthref38]]
 
 *_Example 2-3 ORM Project_*
 
@@ -89,7 +74,7 @@ specify if the customization applies to the ORM or ORX project
  
 ----
 
-[#TLDBW152]####[#sthref39]####
+[[sthref39]]
 
 *_Example 2-4 ORX Project_*
 
@@ -104,11 +89,7 @@ specify if the customization applies to the ORM or ORX project
  
 ----
 
-[#TLDBW153]##
-
-[#sthref40]##
-
-=== Advanced Customization
+==== Advanced Customization
 
 You can further customize an EclipseLink DBWS service by creating your
 own EclipseLink `project.xml` and `sessions.xml` files. Using your
@@ -128,7 +109,7 @@ In link:#CJADIDDI[Example 2-5], a DBWS service is constructed from
 existing EclipseLink project maps with identical case-sensitive aliases
 (for Descriptors that are common between the projects).
 
-[#CJADIDDI]####[#TLDBW154]####
+[[CJADIDDI]]
 
 *_Example 2-5 Sample DBWS Service_*
 
@@ -153,48 +134,3 @@ existing EclipseLink project maps with identical case-sensitive aliases
 ...
  
 ----
-
- +
-
-[width="100%",cols="<100%",]
-|===
-a|
-image:../../dcommon/images/note_icon.png[Note,width=16,height=16]Note:
-
-When building a DBWS web service in this way (that is, without the
-`DBWSBuilder` Utility) be sure to create all the necessary deployment
-artifacts.
-
-|===
-
- +
-
-'''''
-
-[width="66%",cols="50%,^,>50%",]
-|===
-a|
-[width="96%",cols=",^50%,^50%",]
-|===
-| 
-|link:creating_dbws_services001.htm[image:../../dcommon/images/larrow.png[Previous,width=16,height=16]]
-|link:creating_dbws_services003.htm[image:../../dcommon/images/rarrow.png[Next,width=16,height=16]]
-|===
-
-|http://www.eclipse.org/eclipselink/[image:../../dcommon/images/ellogo.png[EclipseLink,width=150]] +
-a|
-[width="99%",cols="20%,^16%,16%,^16%,16%,^16%",]
-|===
-|  |image:../../dcommon/images/contents.png[Go To Table Of
-Contents,width=16,height=16] + | 
-|link:../../[image:../../dcommon/images/search.png[Search] +
-[.mini]##] | 
-|link:../eclipselink_moxy.pdf[image:../../dcommon/images/pdf_icon.png[PDF]]
-|===
-
-|===
-
-[[copyright]]
-Copyright © 2014 by The Eclipse Foundation under the
-http://www.eclipse.org/org/documents/epl-v10.php[Eclipse Public License
-(EPL)] +
