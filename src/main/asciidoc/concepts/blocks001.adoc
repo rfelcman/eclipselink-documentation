@@ -41,7 +41,7 @@ Persistence API (JPA) Extensions Reference for EclipseLink.
 *_Figure 2-1 EclipseLink Metadata_*
 
 image:{imagesrelativedir}/meta.gif[Description of Figure 2-1 follows,title="Description of Figure 2-1 follows"] +
-xref:{imagestextrelativedir}/meta.htm[Description of "Figure 2-1 EclipseLink Metadata"]
+xref:{imagestextrelativedir}/meta.adoc[Description of "Figure 2-1 EclipseLink Metadata"]
 
 This section describes the following:
 

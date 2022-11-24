@@ -58,7 +58,7 @@ Protected, Weak, and Read-only Caches.]
 *_Figure 8-2 Coordinated Persistence Unit (Session) Caches_*
 
 image:{imagesrelativedir}/cachcord.gif[Description of Figure 8-2 follows,title="Description of Figure 8-2 follows"] +
-xref:{imagestextrelativedir}/cachcord.htm[Description of "Figure 8-2 Coordinated Persistence Unit (Session) Caches"] +
+xref:{imagestextrelativedir}/cachcord.adoc[Description of "Figure 8-2 Coordinated Persistence Unit (Session) Caches"] +
 
 When sessions are distributed, that is, when an application contains
 multiple sessions (in the same JVM, in multiple JVMs, possibly on
